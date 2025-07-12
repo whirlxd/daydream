@@ -337,28 +337,44 @@
 
 	<img src="paper-airplane.png" alt="Paper airplane" class="h-16 absolute z-10" id="paper-airplane">
 
-	<div class="flex flex-col items-center w-max basis-1/2">
-		<div class="bg-[#FFF5FA] border-2 border-[#AA8B83] rounded-2xl text-xl font-serif p-6 w-56 text-center translate-y-8" data-point="1">
-			Sign up for a Daydream event in your city
+	<div class="flex flex-col items-center w-max basis-1/2 z-10">
+		<div class="relative translate-y-8">
+			<img src="/letter-1-front.png" alt="" class="object-contain absolute -bottom-16 -left-13 w-28 h-28">
+			<img src="/letter-1-back.png" alt="" class="object-contain absolute -bottom-16 -left-13 w-28 h-28 -z-10">
+			<div class="bg-[#FFF5FA] border-2 border-[#AA8B83] rounded-2xl text-xl font-serif p-6 w-56 text-center" data-point="1">
+				<span class="font-sans text-[#EEA7CA] font-bold text-[1.3rem] mr-1">#1:</span> Sign up for a Daydream event in your city
+			</div>
 		</div>
 		<img src="/island-1.png" alt="" class="w-72 h-72 object-contain">
 	</div>
 
 	<div class="flex flex-col items-center w-max basis-1/2 translate-y-24">
-		<div class="bg-[#FFF5FA] border-2 border-[#AA8B83] rounded-2xl text-xl font-serif p-6 w-56 text-center translate-y-24" data-point="2">
-			Find a team of other teenagers at Daydream
+		<div class="relative translate-y-24">
+			<img src="/letter-2-front.png" alt="" class="object-contain absolute -bottom-16 -right-13 w-28 h-28">
+			<img src="/letter-2-back.png" alt="" class="object-contain absolute -bottom-16 -right-13 w-28 h-28 -z-10">
+			<div class="bg-[#FFF5FA] border-2 border-[#AA8B83] rounded-2xl text-xl font-serif p-6 w-56 text-center" data-point="2">
+				<span class="font-sans text-[#639DEB] font-bold text-[1.3rem] mr-1">#2:</span> Find a team of other teenagers at Daydream
+			</div>
 		</div>
 		<img src="/island-3.png" alt="" class="w-86 h-86 object-contain">
 	</div>
 	<div class="flex flex-col items-center w-max basis-1/2 -translate-x-12">
-		<div class="bg-[#FFF5FA] border-2 border-[#AA8B83] rounded-2xl text-xl font-serif p-6 w-56 text-center translate-y-8" data-point="3">
-			Start building your game - <u>No experience needed</u>
+		<div class="relative translate-y-8">
+			<img src="/letter-3-front.png" alt="" class="object-contain absolute -bottom-18 left-24 w-28 h-28">
+			<img src="/letter-3-back.png" alt="" class="object-contain absolute -bottom-18 left-24 w-28 h-28 -z-10">
+			<div class="bg-[#FFF5FA] border-2 border-[#AA8B83] rounded-2xl text-xl font-serif p-6 w-56 text-center" data-point="3">
+				<span class="font-sans text-[#AB68E2] font-bold text-[1.3rem] mr-1">#3:</span> Start building your game - <u>No experience needed</u>
+			</div>
 		</div>
 		<img src="/island-2.png" alt="" class="w-72 h-72 object-contain">
 	</div>
 		<div class="flex flex-col items-center w-max basis-1/2 translate-y-30">
-		<div class="bg-[#FFF5FA] border-2 border-[#AA8B83] rounded-2xl text-xl font-serif p-6 w-56 text-center translate-y-24" data-point="4">
-			Attend workshops or talk to one of our mentors for help
+		<div class="relative translate-y-24">
+			<img src="/letter-4-front.png" alt="" class="object-contain absolute -bottom-16 -right-13 w-28 h-28">
+			<img src="/letter-4-back.png" alt="" class="object-contain absolute -bottom-16 -right-13 w-28 h-28 -z-10">
+			<div class="bg-[#FFF5FA] border-2 border-[#AA8B83] rounded-2xl text-xl font-serif p-6 w-56 text-center" data-point="4">
+				<span class="font-sans text-[#F2993E] font-bold text-[1.3rem] mr-1">#4:</span> Attend workshops or talk to one of our mentors for help
+			</div>
 		</div>
 		<img src="/island-4.png" alt="" class="w-88 h-88 object-contain">
 	</div>
