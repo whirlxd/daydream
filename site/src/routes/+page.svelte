@@ -218,15 +218,107 @@
 				   6 * (1 - clampedT) * clampedT * (p2.y - p1.y) + 
 				   3 * Math.pow(clampedT, 2) * (p3.y - p2.y);
 		
-		const angle = Math.atan2(dy, dx) * 180 / Math.PI;
+		let angle = Math.atan2(dy, dx) * 180 / Math.PI;
+		
+		// Keep the plane oriented to follow the curve naturally
+		// Allow flipping but ensure it's always pointing in the direction of travel
 		
 		return { x, y, angle };
+	}
+
+
+
+	let currentAirplaneProgress = 0;
+	let animationFrameId = null;
+	let isFlipped = false;
+
+	function updateAirplanePosition() {
+		const container = document.getElementById("islands-container");
+		const airplane = document.getElementById("paper-airplane");
+		
+		if (!container || !airplane) return;
+		
+		const containerRect = container.getBoundingClientRect();
+		const windowHeight = window.innerHeight;
+		
+		// Calculate scroll progress based on container position
+		// Start animation earlier and extend it longer for full path completion
+		const scrollStart = containerRect.top + window.scrollY - windowHeight * 0.7;
+		const scrollEnd = containerRect.bottom + window.scrollY - windowHeight;
+		const currentScroll = window.scrollY;
+		
+		// Calculate progress (0 to 1)
+		let progress = (currentScroll - scrollStart) / (scrollEnd - scrollStart);
+		progress = Math.max(0, Math.min(1, progress));
+		
+		// Apply ease-in-out curve for smoother animation
+		const easingStrength = 1.0; // 0 = linear, 1 = full ease-in-out
+		const easedProgress = progress * progress * (3 - 2 * progress);
+		progress = progress * (1 - easingStrength) + easedProgress * easingStrength;
+		
+		// Smooth the movement with interpolation and max speed
+		const maxSpeed = 0.001; // Maximum progress change per frame
+		const targetDifference = progress - currentAirplaneProgress;
+		const speedLimitedDifference = Math.sign(targetDifference) * Math.min(Math.abs(targetDifference), maxSpeed);
+		const previousProgress = currentAirplaneProgress;
+		currentAirplaneProgress += speedLimitedDifference;
+		
+		// Determine movement direction
+		const movingForward = currentAirplaneProgress > previousProgress;
+		
+		// Check for point transitions and handle flipping
+		// Point 2 is at ~0.33 progress, Point 3 is at ~0.67 progress
+		const point2Progress = 1/3;
+		const point3Progress = 2/3;
+		
+		if (movingForward) {
+			// Moving forward: flip at point 2, unflip at point 3
+			if (previousProgress < point2Progress && currentAirplaneProgress >= point2Progress) {
+				isFlipped = true;
+			} else if (previousProgress < point3Progress && currentAirplaneProgress >= point3Progress) {
+				isFlipped = false;
+			}
+		} else {
+			// Moving backward: flip at point 3, unflip at point 2
+			if (previousProgress > point3Progress && currentAirplaneProgress <= point3Progress) {
+				isFlipped = true;
+			} else if (previousProgress > point2Progress && currentAirplaneProgress <= point2Progress) {
+				isFlipped = false;
+			}
+		}
+		
+		// Get points for path calculation
+		const points = [];
+		for (let i = 1; i <= 4; i++) {
+			const element = document.querySelector(`[data-point="${i}"]`);
+			if (element) {
+				const rect = element.getBoundingClientRect();
+				points.push({
+					x: rect.left + rect.width / 2 - containerRect.left,
+					y: rect.top + rect.height / 2 - containerRect.top
+				});
+			}
+		}
+		
+		if (points.length > 0) {
+			const airplanePos = getPointAlongPath(points, currentAirplaneProgress);
+			airplane.style.left = `${airplanePos.x}px`;
+			airplane.style.top = `${airplanePos.y}px`;
+			
+			// Apply vertical flip if needed
+			const verticalFlip = isFlipped ? ' scaleY(-1)' : '';
+			airplane.style.transform = `translate(-50%, calc(-50% - 0.5rem)) rotate(${airplanePos.angle}deg)${verticalFlip}`;
+		}
+		
+		// Continue animation if still moving
+		if (Math.abs(progress - currentAirplaneProgress) > 0.001) {
+			animationFrameId = requestAnimationFrame(updateAirplanePosition);
+		}
 	}
 
 	function updatePath() {
 		const container = document.getElementById("islands-container");
 		const pathElement = document.getElementById("dotted-path");
-		const airplane = document.getElementById("paper-airplane");
 		
 		if (!container || !pathElement) return;
 		
@@ -248,25 +340,25 @@
 		const pathData = createSmoothPath(points);
 		pathElement.setAttribute("d", pathData);
 		
-		// Position airplane along path at 10%
-		if (airplane && points.length > 0) {
-			const airplanePos = getPointAlongPath(points, 0.07);
-			airplane.style.left = `${airplanePos.x}px`;
-			airplane.style.top = `${airplanePos.y}px`;
-			airplane.style.transform = `translate(-50%, calc(-50% - 0.5rem)) rotate(${airplanePos.angle}deg)`;
-		}
+		// Update airplane position based on scroll
+		updateAirplanePosition();
 	}
 
 	onMount(() => {
 		// Initial path calculation
 		setTimeout(updatePath, 100);
 		
-		// Update path on window resize
+		// Update on scroll and resize
+		window.addEventListener("scroll", updateAirplanePosition);
 		window.addEventListener("resize", updatePath);
 		
 		// Cleanup
 		return () => {
+			window.removeEventListener("scroll", updateAirplanePosition);
 			window.removeEventListener("resize", updatePath);
+			if (animationFrameId) {
+				cancelAnimationFrame(animationFrameId);
+			}
 		};
 	});
 </script>
@@ -335,7 +427,7 @@
 		<path id="dotted-path" stroke="rgba(255,255,255,0.3)" stroke-width="3" fill="none" stroke-dasharray="8,8" opacity="0.7"></path>
 	</svg>
 
-	<img src="paper-airplane.png" alt="Paper airplane" class="h-16 absolute z-10" id="paper-airplane">
+	<img src="paper-airplane.png" alt="Paper airplane" class="h-16 absolute z-5" id="paper-airplane">
 
 	<div class="flex flex-col items-center w-max basis-1/2 z-10">
 		<div class="relative translate-y-8">
@@ -348,7 +440,7 @@
 		<img src="/island-1.png" alt="" class="w-72 h-72 object-contain">
 	</div>
 
-	<div class="flex flex-col items-center w-max basis-1/2 translate-y-24">
+	<div class="flex flex-col items-center w-max basis-1/2 translate-y-24 z-10">
 		<div class="relative translate-y-24">
 			<img src="/letter-2-front.png" alt="" class="object-contain absolute -bottom-16 -right-13 w-28 h-28">
 			<img src="/letter-2-back.png" alt="" class="object-contain absolute -bottom-16 -right-13 w-28 h-28 -z-10">
@@ -358,7 +450,7 @@
 		</div>
 		<img src="/island-3.png" alt="" class="w-86 h-86 object-contain">
 	</div>
-	<div class="flex flex-col items-center w-max basis-1/2 -translate-x-12">
+	<div class="flex flex-col items-center w-max basis-1/2 -translate-x-12 z-10">
 		<div class="relative translate-y-8">
 			<img src="/letter-3-front.png" alt="" class="object-contain absolute -bottom-18 left-24 w-28 h-28">
 			<img src="/letter-3-back.png" alt="" class="object-contain absolute -bottom-18 left-24 w-28 h-28 -z-10">
@@ -368,7 +460,7 @@
 		</div>
 		<img src="/island-2.png" alt="" class="w-72 h-72 object-contain">
 	</div>
-		<div class="flex flex-col items-center w-max basis-1/2 translate-y-30">
+		<div class="flex flex-col items-center w-max basis-1/2 translate-y-30 z-10">
 		<div class="relative translate-y-24">
 			<img src="/letter-4-front.png" alt="" class="object-contain absolute -bottom-16 -right-13 w-28 h-28">
 			<img src="/letter-4-back.png" alt="" class="object-contain absolute -bottom-16 -right-13 w-28 h-28 -z-10">
