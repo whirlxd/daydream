@@ -1,5 +1,6 @@
-<script>
+<script lang="ts">
 	import { onMount } from "svelte";
+	import Lenis from "lenis";
 
 	function createSmoothPath(points) {
 		if (points.length < 2) return "";
@@ -345,6 +346,11 @@
 	}
 
 	onMount(() => {
+		// smooth scroll
+		const lenis = new Lenis({
+		autoRaf: true,
+		});
+
 		// Initial path calculation
 		setTimeout(updatePath, 100);
 		
@@ -472,4 +478,16 @@
 	</div>
 
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none bg-position-[0_100vh]"></div>
+</div>
+
+<div class="w-full bg-gradient-to-b from-[#FDC5D1] to-[#FAE3C9] items-center justify-center px-32">
+	<div class="relative w-full max-w-3xl mx-auto">
+		<img src="hole.png" alt="" class="w-full h-full max-w-3xl">
+		<iframe 
+			src="https://hackclub.com/map/" 
+			class="absolute top-0 left-0 w-full h-full border-0"
+			style="mask: url('hole.png') no-repeat center; -webkit-mask: url('hole.png') no-repeat center; mask-size: contain; -webkit-mask-size: contain; pointer-events: none;"
+			title="Map">
+		</iframe>
+	</div>
 </div>
