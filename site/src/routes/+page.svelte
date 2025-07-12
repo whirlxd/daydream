@@ -1,14 +1,289 @@
+<script>
+	import { onMount } from "svelte";
+
+	function createSmoothPath(points) {
+		if (points.length < 2) return "";
+		
+		// Create smooth curves that flow horizontally through points
+		const tension = 1.2; // Increased control point distance for smoother curves
+		
+		// Configurable angles for each point (in degrees)
+		// 0 = horizontal, positive = upward slope, negative = downward slope
+		const pointAngles = [-10, -10, -10, 0]; // Last point angle now configurable for approach slope
+		
+		// Generate control points for smooth curves
+		const controlPoints = [];
+		
+		for (let i = 0; i < points.length; i++) {
+			let cp1, cp2;
+			const angleRadians = (pointAngles[i] || 0) * Math.PI / 180; // Convert to radians
+			
+			if (i === 0) {
+				// First point - start flowing at specified angle
+				const next = points[i + 1];
+				const distance = Math.sqrt(Math.pow(next.x - points[i].x, 2) + Math.pow(next.y - points[i].y, 2));
+				
+				// Start at specified angle - extend further
+				const controlDistance = distance * tension * 0.8;
+				
+				cp1 = { x: points[i].x, y: points[i].y };
+				cp2 = { 
+					x: points[i].x + Math.cos(angleRadians) * controlDistance, 
+					y: points[i].y + Math.sin(angleRadians) * controlDistance
+				};
+			} else if (i === points.length - 1) {
+				// Last point - curve out to the right and approach from right-to-left
+				const prev = points[i - 1];
+				const distance = Math.sqrt(Math.pow(points[i].x - prev.x, 2) + Math.pow(points[i].y - prev.y, 2));
+				
+				// Create a wide curve that goes out to the right and comes back
+				const controlDistance = distance * tension * 1.2; // Increased for wider curve
+				
+				// First control point - extend out to the right from the previous point's flow
+				cp1 = { 
+					x: points[i].x + controlDistance * 0.8	, // Go out to the right
+					y: points[i].y - controlDistance * 0.2   // Slight upward curve
+				};
+				
+				// Second control point - approach from the right at the specified angle
+				// Force approach from right side regardless of angle
+				const approachDistance = controlDistance * 0.6;
+				cp2 = { 
+					x: points[i].x + approachDistance, // Always approach from right
+					y: points[i].y + Math.sin(angleRadians) * approachDistance // Apply angle to vertical component
+				};
+			} else {
+				// Middle points - flow at specified angle through the point
+				const prev = points[i - 1];
+				const next = points[i + 1];
+				
+				// Calculate distances for proportional control
+				const prevDistance = Math.sqrt(Math.pow(points[i].x - prev.x, 2) + Math.pow(points[i].y - prev.y, 2));
+				const nextDistance = Math.sqrt(Math.pow(next.x - points[i].x, 2) + Math.pow(next.y - points[i].y, 2));
+				
+				// Determine if we're going left-to-right or right-to-left based on position in sequence
+				const isEven = i % 2 === 0;
+				const flowDirection = isEven ? 1 : -1; // Even indices flow right, odd flow left
+				
+				// Control distances based on adjacent point distances - extend much further
+				const leftControlDistance = prevDistance * tension * 0.7;
+				const rightControlDistance = nextDistance * tension * 0.7;
+				
+				if (flowDirection > 0) {
+					// Flowing left to right at specified angle
+					cp1 = { 
+						x: points[i].x - Math.cos(angleRadians) * leftControlDistance, 
+						y: points[i].y - Math.sin(angleRadians) * leftControlDistance
+					};
+					cp2 = { 
+						x: points[i].x + Math.cos(angleRadians) * rightControlDistance, 
+						y: points[i].y + Math.sin(angleRadians) * rightControlDistance
+					};
+				} else {
+					// Flowing right to left at specified angle (flip direction)
+					cp1 = { 
+						x: points[i].x + Math.cos(angleRadians) * leftControlDistance, 
+						y: points[i].y + Math.sin(angleRadians) * leftControlDistance
+					};
+					cp2 = { 
+						x: points[i].x - Math.cos(angleRadians) * rightControlDistance, 
+						y: points[i].y - Math.sin(angleRadians) * rightControlDistance
+					};
+				}
+			}
+			
+			controlPoints.push({ cp1, cp2 });
+		}
+		
+		// Build the smooth path
+		let path = `M ${points[0].x} ${points[0].y}`;
+		
+		for (let i = 1; i < points.length; i++) {
+			const prevControls = controlPoints[i - 1];
+			const currControls = controlPoints[i];
+			
+			path += ` C ${prevControls.cp2.x} ${prevControls.cp2.y}, ${currControls.cp1.x} ${currControls.cp1.y}, ${points[i].x} ${points[i].y}`;
+		}
+		
+		return path;
+	}
+
+	function getPointAlongPath(points, percentage) {
+		if (points.length < 2) return { x: 0, y: 0, angle: 0 };
+		
+		// Generate the same control points as the path
+		const tension = 1.2;
+		const pointAngles = [-10, -10, -10, 0];
+		const controlPoints = [];
+		
+		for (let i = 0; i < points.length; i++) {
+			let cp1, cp2;
+			const angleRadians = (pointAngles[i] || 0) * Math.PI / 180;
+			
+			if (i === 0) {
+				const next = points[i + 1];
+				const distance = Math.sqrt(Math.pow(next.x - points[i].x, 2) + Math.pow(next.y - points[i].y, 2));
+				const controlDistance = distance * tension * 0.8;
+				
+				cp1 = { x: points[i].x, y: points[i].y };
+				cp2 = { 
+					x: points[i].x + Math.cos(angleRadians) * controlDistance, 
+					y: points[i].y + Math.sin(angleRadians) * controlDistance
+				};
+			} else if (i === points.length - 1) {
+				const prev = points[i - 1];
+				const distance = Math.sqrt(Math.pow(points[i].x - prev.x, 2) + Math.pow(points[i].y - prev.y, 2));
+				const controlDistance = distance * tension * 1.2;
+				
+				cp1 = { 
+					x: points[i].x + controlDistance * 0.8, 
+					y: points[i].y - controlDistance * 0.2
+				};
+				
+				const approachDistance = controlDistance * 0.6;
+				cp2 = { 
+					x: points[i].x + approachDistance, 
+					y: points[i].y + Math.sin(angleRadians) * approachDistance
+				};
+			} else {
+				const prev = points[i - 1];
+				const next = points[i + 1];
+				
+				const prevDistance = Math.sqrt(Math.pow(points[i].x - prev.x, 2) + Math.pow(points[i].y - prev.y, 2));
+				const nextDistance = Math.sqrt(Math.pow(next.x - points[i].x, 2) + Math.pow(next.y - points[i].y, 2));
+				
+				const isEven = i % 2 === 0;
+				const flowDirection = isEven ? 1 : -1;
+				
+				const leftControlDistance = prevDistance * tension * 0.7;
+				const rightControlDistance = nextDistance * tension * 0.7;
+				
+				if (flowDirection > 0) {
+					cp1 = { 
+						x: points[i].x - Math.cos(angleRadians) * leftControlDistance, 
+						y: points[i].y - Math.sin(angleRadians) * leftControlDistance
+					};
+					cp2 = { 
+						x: points[i].x + Math.cos(angleRadians) * rightControlDistance, 
+						y: points[i].y + Math.sin(angleRadians) * rightControlDistance
+					};
+				} else {
+					cp1 = { 
+						x: points[i].x + Math.cos(angleRadians) * leftControlDistance, 
+						y: points[i].y + Math.sin(angleRadians) * leftControlDistance
+					};
+					cp2 = { 
+						x: points[i].x - Math.cos(angleRadians) * rightControlDistance, 
+						y: points[i].y - Math.sin(angleRadians) * rightControlDistance
+					};
+				}
+			}
+			
+			controlPoints.push({ cp1, cp2 });
+		}
+		
+		// Calculate which segment and position within that segment
+		const segmentCount = points.length - 1;
+		const segmentPercentage = percentage * segmentCount;
+		const segmentIndex = Math.floor(segmentPercentage);
+		const t = segmentPercentage - segmentIndex;
+		
+		// Clamp to valid range
+		const clampedIndex = Math.min(segmentIndex, segmentCount - 1);
+		const clampedT = clampedIndex === segmentIndex ? t : 1;
+		
+		// Get the Bézier curve points for this segment
+		const p0 = points[clampedIndex];
+		const p1 = controlPoints[clampedIndex].cp2;
+		const p2 = controlPoints[clampedIndex + 1].cp1;
+		const p3 = points[clampedIndex + 1];
+		
+		// Calculate position on cubic Bézier curve
+		const x = Math.pow(1 - clampedT, 3) * p0.x + 
+				  3 * Math.pow(1 - clampedT, 2) * clampedT * p1.x + 
+				  3 * (1 - clampedT) * Math.pow(clampedT, 2) * p2.x + 
+				  Math.pow(clampedT, 3) * p3.x;
+		
+		const y = Math.pow(1 - clampedT, 3) * p0.y + 
+				  3 * Math.pow(1 - clampedT, 2) * clampedT * p1.y + 
+				  3 * (1 - clampedT) * Math.pow(clampedT, 2) * p2.y + 
+				  Math.pow(clampedT, 3) * p3.y;
+		
+		// Calculate tangent for rotation
+		const dx = 3 * Math.pow(1 - clampedT, 2) * (p1.x - p0.x) + 
+				   6 * (1 - clampedT) * clampedT * (p2.x - p1.x) + 
+				   3 * Math.pow(clampedT, 2) * (p3.x - p2.x);
+		
+		const dy = 3 * Math.pow(1 - clampedT, 2) * (p1.y - p0.y) + 
+				   6 * (1 - clampedT) * clampedT * (p2.y - p1.y) + 
+				   3 * Math.pow(clampedT, 2) * (p3.y - p2.y);
+		
+		const angle = Math.atan2(dy, dx) * 180 / Math.PI;
+		
+		return { x, y, angle };
+	}
+
+	function updatePath() {
+		const container = document.getElementById("islands-container");
+		const pathElement = document.getElementById("dotted-path");
+		const airplane = document.getElementById("paper-airplane");
+		
+		if (!container || !pathElement) return;
+		
+		const containerRect = container.getBoundingClientRect();
+		const points = [];
+		
+		// Get points in order by data-point attribute
+		for (let i = 1; i <= 4; i++) {
+			const element = document.querySelector(`[data-point="${i}"]`);
+			if (element) {
+				const rect = element.getBoundingClientRect();
+				points.push({
+					x: rect.left + rect.width / 2 - containerRect.left,
+					y: rect.top + rect.height / 2 - containerRect.top
+				});
+			}
+		}
+		
+		const pathData = createSmoothPath(points);
+		pathElement.setAttribute("d", pathData);
+		
+		// Position airplane along path at 10%
+		if (airplane && points.length > 0) {
+			const airplanePos = getPointAlongPath(points, 0.07);
+			airplane.style.left = `${airplanePos.x}px`;
+			airplane.style.top = `${airplanePos.y}px`;
+			airplane.style.transform = `translate(-50%, calc(-50% - 0.5rem)) rotate(${airplanePos.angle}deg)`;
+		}
+	}
+
+	onMount(() => {
+		// Initial path calculation
+		setTimeout(updatePath, 100);
+		
+		// Update path on window resize
+		window.addEventListener("resize", updatePath);
+		
+		// Cleanup
+		return () => {
+			window.removeEventListener("resize", updatePath);
+		};
+	});
+</script>
+
 <style>
 	:global(body) {
 		background-color: #CCF4FD;
 	}
 </style>
 
-<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-repeat mix-blend-overlay opacity-30 pointer-events-none"></div>
+<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
 
 <div class="flex flex-col items-center justify-center h-screen text-center bg-gradient-to-b from-[#CCF4FD] to-[#9DACF2] bg-blend-overlay">
 
 	<div class="absolute top-0 left-0 w-full h-full bg-[url(/buildings-top.png)] bg-no-repeat bg-contain pointer-events-none -translate-y-15"></div>
+	<!-- brush texture clipped to buildings -->
+	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-repeat pointer-events-none opacity-100 -translate-y-15 bg-center mix-blend-overlay" style="mask-image: url('/buildings-top.png'); mask-size: contain; mask-repeat: no-repeat; mask-position: center top; -webkit-mask-image: url('/buildings-top.png'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center top;"></div>
 	<div class="inline-block relative">
 		<h2
 			class="text-xl font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent absolute left-[calc(50%+3rem)] -translate-x-1/2 bottom-8 italic"
@@ -50,31 +325,43 @@
 	<img src="/clouds-left.png" alt="" class="absolute left-0 w-5/12 -bottom-4">
 </div>
 
-<div class="flex flex-row flex-wrap w-full h-auto bg-gradient-to-b from-[#9DACF2] to-[#FDC5D1] px-36 pb-30">
+<div class="flex flex-row flex-wrap w-full h-auto bg-gradient-to-b from-[#9DACF2] to-[#FDC5D1] px-36 pb-50 relative" id="islands-container">
+	<img src="/clouds-left-2.png" alt="" class="absolute left-0 w-3/12 top-12">
+	<img src="/clouds-left-3.png" alt="" class="absolute left-0 w-2/12 bottom-32">
+	<img src="/clouds-right-2.png" alt="" class="absolute right-0 w-3/12 bottom-0">
+
+	<!-- SVG Path Overlay -->
+	<svg class="absolute inset-0 w-full h-full pointer-events-none z-0" id="path-svg">
+		<path id="dotted-path" stroke="rgba(255,255,255,0.3)" stroke-width="3" fill="none" stroke-dasharray="8,8" opacity="0.7"></path>
+	</svg>
+
+	<img src="paper-airplane.png" alt="Paper airplane" class="h-16 absolute z-10" id="paper-airplane">
+
 	<div class="flex flex-col items-center w-max basis-1/2">
-		<div class="bg-[#FFF5FA] border-2 border-[#AA8B83] rounded-2xl text-xl font-serif p-6 w-56 text-center translate-y-8">
+		<div class="bg-[#FFF5FA] border-2 border-[#AA8B83] rounded-2xl text-xl font-serif p-6 w-56 text-center translate-y-8" data-point="1">
 			Sign up for a Daydream event in your city
 		</div>
 		<img src="/island-1.png" alt="" class="w-72 h-72 object-contain">
 	</div>
+
 	<div class="flex flex-col items-center w-max basis-1/2 translate-y-24">
-		<div class="bg-[#FFF5FA] border-2 border-[#AA8B83] rounded-2xl text-xl font-serif p-6 w-56 text-center translate-y-24">
+		<div class="bg-[#FFF5FA] border-2 border-[#AA8B83] rounded-2xl text-xl font-serif p-6 w-56 text-center translate-y-24" data-point="2">
 			Find a team of other teenagers at Daydream
 		</div>
 		<img src="/island-3.png" alt="" class="w-86 h-86 object-contain">
 	</div>
 	<div class="flex flex-col items-center w-max basis-1/2 -translate-x-12">
-		<div class="bg-[#FFF5FA] border-2 border-[#AA8B83] rounded-2xl text-xl font-serif p-6 w-56 text-center translate-y-8">
+		<div class="bg-[#FFF5FA] border-2 border-[#AA8B83] rounded-2xl text-xl font-serif p-6 w-56 text-center translate-y-8" data-point="3">
 			Start building your game - <u>No experience needed</u>
 		</div>
 		<img src="/island-2.png" alt="" class="w-72 h-72 object-contain">
 	</div>
 		<div class="flex flex-col items-center w-max basis-1/2 translate-y-30">
-		<div class="bg-[#FFF5FA] border-2 border-[#AA8B83] rounded-2xl text-xl font-serif p-6 w-56 text-center translate-y-24">
+		<div class="bg-[#FFF5FA] border-2 border-[#AA8B83] rounded-2xl text-xl font-serif p-6 w-56 text-center translate-y-24" data-point="4">
 			Attend workshops or talk to one of our mentors for help
 		</div>
 		<img src="/island-4.png" alt="" class="w-88 h-88 object-contain">
 	</div>
-</div>
 
-<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-repeat mix-blend-overlay opacity-30 pointer-events-none"></div>
+	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none bg-position-[0_100vh]"></div>
+</div>
