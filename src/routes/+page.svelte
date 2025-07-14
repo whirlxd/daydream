@@ -396,6 +396,11 @@
 <style>
 	:global(body) {
 		background-color: #CCF4FD;
+		max-width: 100vw;
+		overflow-x: hidden;	
+	}
+	:global(html) {
+		overflow: hidden;
 	}
 </style>
 
