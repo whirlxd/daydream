@@ -562,7 +562,7 @@
 </div>
 <div class="w-full h-64 bg-[#FCEFC5]"></div>
 
-<div class="flex flex-row flex-wrap w-full h-auto bg-gradient-to-b from-[#FCEFC5] to-[#FEC1CF] px-36 pb-50 relative" id="islands-container">
+<div class="flex flex-row flex-wrap w-full h-auto bg-gradient-to-b from-[#FCEFC5] to-[#FEC1CF] px-36 max-md:px-8 pb-50 relative" id="islands-container">
 
 	<img src="/clouds-left-2.png" alt="" class="absolute left-0 w-3/12 top-12">
 	<img src="/clouds-left-3.png" alt="" class="absolute left-0 w-2/12 bottom-32">
@@ -575,52 +575,52 @@
 
 	<img src="paper-airplane.png" alt="Paper airplane" class="h-16 absolute z-10" id="paper-airplane">
 
-	<div class="flex flex-col items-center w-max basis-1/2 z-10">
-		<div class="relative translate-y-8">
+	<div class="flex flex-col items-center w-max basis-1/2 max-md:basis-full max-md:w-full z-10">
+		<div class="relative translate-y-8 max-md:translate-y-4">
 			<img src="/letter-1-front.png" alt="" class="object-contain absolute -bottom-16 -left-13 w-28 h-28">
 			<img src="/letter-1-back.png" alt="" class="object-contain absolute -bottom-16 -left-13 w-28 h-28 -z-10">
-			<div class="bg-[#FFF5FA] border-2 border-[#AA8B83] rounded-2xl text-xl font-serif p-6 w-56 text-center" data-point="1">
+			<div class="bg-[#FFF5FA] border-2 border-[#AA8B83] rounded-2xl text-xl font-serif p-6 w-56 text-center max-md:w-64 max-md:text-lg" data-point="1">
 				<span class="font-sans text-[#E472AB] font-bold text-[1.3rem] mr-1">#1:</span> Find a team of co-organizers
 			</div>
 		</div>
-		<img src="/island-1.png" alt="" class="w-72 h-72 object-contain">
+		<img src="/island-1.png" alt="" class="w-72 h-72 object-contain max-md:w-64 max-md:h-64">
 	</div>
 
-	<div class="flex flex-col items-center w-max basis-1/2 translate-y-24 z-10">
-		<div class="relative translate-y-24">
+	<div class="flex flex-col items-center w-max basis-1/2 max-md:basis-full max-md:w-full translate-y-24 max-md:translate-y-8 z-10">
+		<div class="relative translate-y-24 max-md:translate-y-4">
 			<img src="/letter-2-front.png" alt="" class="object-contain absolute -bottom-16 -right-13 w-28 h-28">
 			<img src="/letter-2-back.png" alt="" class="object-contain absolute -bottom-16 -right-13 w-28 h-28 -z-10">
-			<div class="bg-[#FFF5FA] border-2 border-[#AA8B83] rounded-2xl text-xl font-serif p-6 w-56 text-center" data-point="2">
+			<div class="bg-[#FFF5FA] border-2 border-[#AA8B83] rounded-2xl text-xl font-serif p-6 w-56 text-center max-md:w-64 max-md:text-lg" data-point="2">
 				<span class="font-sans text-[#639DEB] font-bold text-[1.3rem] mr-1">#2:</span> Find a venue to host your hackathon
 			</div>
 		</div>
-		<img src="/island-3.png" alt="" class="w-86 h-86 object-contain">
+		<img src="/island-3.png" alt="" class="w-86 h-86 object-contain max-md:w-64 max-md:h-64">
 	</div>
-	<div class="flex flex-col items-center w-max basis-1/2 -translate-x-12 z-10">
-		<div class="relative translate-y-8">
+	<div class="flex flex-col items-center w-max basis-1/2 max-md:basis-full max-md:w-full -translate-x-12 max-md:translate-x-0 max-md:translate-y-8 z-10">
+		<div class="relative translate-y-8 max-md:translate-y-4">
 			<img src="/letter-3-front.png" alt="" class="object-contain absolute -bottom-18 left-24 w-28 h-28">
 			<img src="/letter-3-back.png" alt="" class="object-contain absolute -bottom-18 left-24 w-28 h-28 -z-10">
-			<div class="bg-[#FFF5FA] border-2 border-[#AA8B83] rounded-2xl text-xl font-serif p-6 w-56 text-center" data-point="3">
+			<div class="bg-[#FFF5FA] border-2 border-[#AA8B83] rounded-2xl text-xl font-serif p-6 w-56 text-center max-md:w-64 max-md:text-lg" data-point="3">
 				<span class="font-sans text-[#AB68E2] font-bold text-[1.3rem] mr-1">#3:</span> Find sponsors to buy merch and prizes
 			</div>
 		</div>
-		<img src="/island-2.png" alt="" class="w-72 h-72 object-contain">
+		<img src="/island-2.png" alt="" class="w-72 h-72 object-contain max-md:w-64 max-md:h-64">
 	</div>
-		<div class="flex flex-col items-center w-max basis-1/2 translate-y-30 z-10">
-		<div class="relative translate-y-24">
+		<div class="flex flex-col items-center w-max basis-1/2 max-md:basis-full max-md:w-full translate-y-30 max-md:translate-y-8 z-10">
+		<div class="relative translate-y-24 max-md:translate-y-4">
 			<img src="/letter-4-front.png" alt="" class="object-contain absolute -bottom-16 -right-13 w-28 h-28">
 			<img src="/letter-4-back.png" alt="" class="object-contain absolute -bottom-16 -right-13 w-28 h-28 -z-10">
-			<div class="bg-[#FFF5FA] border-2 border-[#AA8B83] rounded-2xl text-xl font-serif p-6 w-56 text-center" data-point="4">
+			<div class="bg-[#FFF5FA] border-2 border-[#AA8B83] rounded-2xl text-xl font-serif p-6 w-56 text-center max-md:w-64 max-md:text-lg" data-point="4">
 				<span class="font-sans text-[#F2993E] font-bold text-[1.3rem] mr-1">#4:</span> Buy supplies, order food, and prepare workshops
 			</div>
 		</div>
-		<img src="/island-4.png" alt="" class="w-88 h-88 object-contain">
+		<img src="/island-4.png" alt="" class="w-88 h-88 object-contain max-md:w-64 max-md:h-64">
 	</div>
 
 	<!-- Final Card -->
-	<div class="flex flex-col items-center w-full basis-full translate-y-40 z-20">
+	<div class="flex flex-col items-center w-full basis-full translate-y-40 max-md:translate-y-12 z-20">
 		<div class="relative">
-			<div class="bg-[url('/card-final.png')] bg-contain bg-no-repeat bg-center text-2xl font-serif pt-24 px-8 w-128 h-96 text-center" data-point="5">
+			<div class="bg-[url('/card-final.png')] bg-contain bg-no-repeat bg-center text-2xl font-serif pt-24 px-8 w-128 h-96 text-center max-md:w-80 max-md:h-80 max-md:text-xl max-md:pt-16" data-point="5">
 				<span class="font-sans text-[#F2CC32] font-bold text-[1.5rem] mr-1">#5:</span> Run the game jam!
 			</div>
 		</div>
