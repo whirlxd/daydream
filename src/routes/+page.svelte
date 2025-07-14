@@ -413,7 +413,7 @@
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-repeat pointer-events-none opacity-100 -translate-y-15 bg-center mix-blend-overlay" style="mask-image: url('/buildings-top.png'); mask-size: contain; mask-repeat: no-repeat; mask-position: center top; -webkit-mask-image: url('/buildings-top.png'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center top;"></div>
 	<div class="inline-block relative">
 		<h2
-			class="text-xl font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent absolute left-[calc(50%+4rem)] -translate-x-1/2 bottom-8 italic w-max md:text-lg sm:text-base"
+			class="text-xl font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent absolute left-1/2 max-md:translate-y-4 md:left-[calc(50%+4rem)] -translate-x-1/2 bottom-8 italic w-max md:text-lg sm:text-base"
 		>
 			September 27th & 28th, 2025
 		</h2>
