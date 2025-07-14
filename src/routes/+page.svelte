@@ -399,9 +399,6 @@
 		max-width: 100vw;
 		overflow-x: hidden;	
 	}
-	:global(html) {
-		overflow: hidden;
-	}
 </style>
 
 <svelte:head>
