@@ -407,8 +407,8 @@
 
 <div class="flex flex-col items-center justify-center h-screen text-center bg-gradient-to-b from-[#CCF4FD] to-[#B8D9F8] bg-blend-overlay">
 
-	<div class="absolute top-0 left-0 w-full h-full bg-[url(/buildings-back.png)] bg-no-repeat bg-contain pointer-events-none -translate-y-15"></div>
-	<div class="absolute top-0 left-0 w-full h-full bg-[url(/buildings-front.png)] bg-no-repeat bg-contain pointer-events-none -translate-y-15"></div>
+	<div class="absolute top-0 left-0 w-full h-full bg-[url(/buildings-back.png)] bg-no-repeat bg-contain pointer-events-none lg:-translate-y-15"></div>
+	<div class="absolute top-0 left-0 w-full h-full bg-[url(/buildings-front.png)] bg-no-repeat bg-contain pointer-events-none lg:-translate-y-15"></div>
 	<!-- brush texture clipped to buildings -->
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-repeat pointer-events-none opacity-100 -translate-y-15 bg-center mix-blend-overlay" style="mask-image: url('/buildings-top.png'); mask-size: contain; mask-repeat: no-repeat; mask-position: center top; -webkit-mask-image: url('/buildings-top.png'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center top;"></div>
 	<div class="inline-block relative">
@@ -639,87 +639,87 @@
 				title="Felt Map"
 				referrerpolicy="strict-origin-when-cross-origin">
 			</iframe>
-			<p class="font-sans text-center pt-12 text-[#60574b] z-10000 ">All daydream events are organized by high school students like yourself! <br> <span class="font-bold"><a class="underline hover:text-pink" href="https://forms.hackclub.com/daydream">Sign up</a> to organize now!</span></p>
+			<p class="absolute left-1/2 -translate-x-1/2 font-sans text-center text-2xl pt-12 w-max max-w-[80vh] max-md:max-w-full md:px-12 text-[#60574b] z-10000 ">All daydream events are organized by high school students like yourself! <br> <span class="font-bold"><a class="underline hover:text-pink" href="https://forms.hackclub.com/daydream">Sign up</a> to organize now!</span></p>
 		</div>
 	</div>
 	<div class="max-md:h-96"></div>
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
 </div>
 
-<div class="w-full pb-24 bg-gradient-to-b from-[#FAE3C9] to-[#e99cce] relative flex flex-col items-center justify-center">
+<div class="w-full pb-24 max-md:pt-16 bg-gradient-to-b from-[#FAE3C9] to-[#e99cce] relative flex flex-col items-center justify-center">
 	<img src="faq-clouds.png" alt="" class="w-full">
-	<img src="faq.png" alt="FAQ" class="mb-12 h-24 scale-175">
+	<img src="faq.png" alt="FAQ" class="mb-12 h-24 scale-175 max-md:scale-120">
 
 	<!-- FAQ Grid -->
 	<div class="grid grid-cols-2 gap-8 max-w-6xl px-8 z-10 max-md:grid-cols-1">
 		<!-- FAQ Item 1 -->
 		<div class="relative transform -rotate-2">
-			<img src="window-3.png" alt="window" class="w-full h-full object-contain">
-			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 max-md:px-8 opacity-70">
-				<h3 class="text-xl font-serif font-bold mb-4 max-md:text-lg">Who can participate in Daydream?</h3>
+			<img src="window-3.png" alt="window" class="w-full h-full object-contain max-md:scale-130">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-lg:px-18 max-md:px-2">
+				<h3 class="text-xl font-serif font-bold mb-4 max-md:mb-1 max-md:text-lg">Who can participate in Daydream?</h3>
 				<p class="text-sm max-md:text-xs">All high-school & upper-middle-school aged students are welcome to come!</p>
 			</div>
 		</div>
 
 		<!-- FAQ Item 2 -->
 		<div class="relative transform rotate-1">
-			<img src="window-4.png" alt="window" class="w-full h-full object-contain">
-			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 max-md:px-8 opacity-70">
-				<h3 class="text-xl font-serif font-bold mb-4 max-md:text-lg">Can I organize a Daydream in my city?</h3>
+			<img src="window-4.png" alt="window" class="w-full h-full object-contain max-md:scale-130">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-lg:px-18 max-md:px-2">
+				<h3 class="text-xl font-serif font-bold mb-4 max-md:mb-1 max-md:text-lg">Can I organize a Daydream in my city?</h3>
 				<p class="text-sm max-md:text-xs">Definitely! Contact us via daydream@hackclub.com or join #daydream on slack.</p>
 			</div>
 		</div>
 
 		<!-- FAQ Item 3 -->
 		<div class="relative transform rotate-2">
-			<img src="window-2.png" alt="window" class="w-full h-full object-contain">
-			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 max-md:px-8 opacity-70">
-				<h3 class="text-xl font-serif font-bold mb-4 max-md:text-lg">All this, for free?</h3>
+			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-130">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-lg:px-18 max-md:px-2">
+				<h3 class="text-xl font-serif font-bold mb-4 max-md:mb-1 max-md:text-lg">All this, for free?</h3>
 				<p class="text-sm max-md:text-xs">Yep! Food, swag and good vibes are all included. Plus, if you're joining us from afar, we'll cover the cost of gas or a bus / train ticket.</p>
 			</div>
 		</div>
 
 		<!-- FAQ Item 4 -->
 		<div class="relative transform -rotate-1">
-			<img src="window-1.png" alt="window" class="w-full h-full object-contain">
-			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 max-md:px-8 opacity-70">
-				<h3 class="text-xl font-serif font-bold mb-4 max-md:text-lg">What do I need?</h3>
+			<img src="window-1.png" alt="window" class="w-full h-full object-contain max-md:scale-130">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-lg:px-18 max-md:px-2">
+				<h3 class="text-xl font-serif font-bold mb-4 max-md:mb-1 max-md:text-lg">What do I need?</h3>
 				<p class="text-sm max-md:text-xs">Your laptop, chargers, toiletries, sleeping bags, and an open mind!</p>
 			</div>
 		</div>
 
 		<!-- FAQ Item 5 -->
 		<div class="relative transform rotate-1">
-			<img src="window-4.png" alt="window" class="w-full h-full object-contain">
-			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70">
-				<h3 class="text-xl font-serif font-bold mb-4 max-md:text-lg">What has Hack Club done before?</h3>
+			<img src="window-4.png" alt="window" class="w-full h-full object-contain max-md:scale-130">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-lg:px-18 max-md:px-2">
+				<h3 class="text-xl font-serif font-bold mb-4 max-md:mb-1 max-md:text-lg">What has Hack Club done before?</h3>
 				<p class="text-sm max-md:text-xs">Hack Club has run an overnight hackathon in San Francisco, a Game Jam across 50 cities, a hackathon on a train from Vermont to Los Angeles, and much more!</p>
 			</div>
 		</div>
 
 		<!-- FAQ Item 6 -->
 		<div class="relative transform rotate-1">
-			<img src="window-3.png" alt="window" class="w-full h-full object-contain">
-			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70">
-				<h3 class="text-xl font-serif font-bold mb-4 max-md:text-lg">I'm not good at coding. Can I still participate?</h3>
+			<img src="window-3.png" alt="window" class="w-full h-full object-contain max-md:scale-130">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-lg:px-18 max-md:px-2">
+				<h3 class="text-xl font-serif font-bold mb-4 max-md:mb-1 max-md:text-lg">I'm not good at coding. Can I still participate?</h3>
 				<p class="text-sm max-md:text-xs">This game jam is for all skill levels! We'll have workshops and other events so join us and let's learn together.</p>
 			</div>
 		</div>
 
 		<!-- FAQ Item 7 -->
 		<div class="relative transform -rotate-2">
-			<img src="window-2.png" alt="window" class="w-full h-full object-contain">
-			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70">
-				<h3 class="text-xl font-serif font-bold mb-4 max-md:text-lg">What if my parents are concerned?</h3>
+			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-130">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-lg:px-18 max-md:px-2">
+				<h3 class="text-xl font-serif font-bold mb-4 max-md:mb-1 max-md:text-lg">What if my parents are concerned?</h3>
 				<p class="text-sm max-md:text-xs">We're here to help! You can see our parent guide here, or they can reach out to us at daydream@hackclub.com for questions.</p>
 			</div>
 		</div>
 
 		<!-- FAQ Item 8 -->
 		<div class="relative transform -rotate-1">
-			<img src="window-1.png" alt="window" class="w-full h-full object-contain">
-			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70">
-				<h3 class="text-xl font-serif font-bold mb-4 max-md:text-lg">What can I make at Daydream?</h3>
+			<img src="window-1.png" alt="window" class="w-full h-full object-contain max-md:scale-130">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-lg:px-18 max-md:px-2">
+				<h3 class="text-xl font-serif font-bold mb-4 max-md:mb-1 max-md:text-lg">What can I make at Daydream?</h3>
 				<p class="text-sm max-md:text-xs">ANY type of game based on the theme! Platformer, visual novel, clicker game, etc. Be as creative as possible!</p>
 			</div>
 		</div>
