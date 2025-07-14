@@ -489,7 +489,7 @@
 	<!-- Video Thumbnail Button -->
 	<button
 		on:click={openVideoPopup}
-		class="absolute bottom-8 right-8 max-sm:right-1/2 max-sm:translate-x-1/2 w-40 h-24 rounded overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer group md:w-72 md:h-40 sm:w-40 sm:h-24 animate-hover"
+		class="absolute bottom-8 right-8 max-sm:right-1/2 max-sm:translate-x-1/2 max-sm:translate-y-8 max-sm:scale-150 w-40 h-24 rounded overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer group md:w-72 md:h-40 sm:w-40 sm:h-24 animate-hover"
 	>
 		<img src="thumbnail.png" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
 		<div class="absolute inset-0 bg-[rgba(0,0,0,0.1)] bg-opacity-30 group-hover:bg-opacity-20 transition-colors duration-300 flex items-center justify-center">
