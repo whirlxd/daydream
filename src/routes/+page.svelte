@@ -319,22 +319,12 @@
 			while (normalizedAngle > 180) normalizedAngle -= 360;
 			while (normalizedAngle < -180) normalizedAngle += 360;
 			
-			// Update frame based on rotation angle
-			// Check if plane is within 30 degrees of pointing straight down (90 degrees)
-			const isPointingDown = Math.abs(normalizedAngle - 90) <= 30 || Math.abs(normalizedAngle + 270) <= 30;
+			// Flip plane if angle is outside -90 to 90 degree range (keeps plane right side up)
+			isFlipped = Math.abs(normalizedAngle) > 90;
 			
-			if (isPointingDown) {
-				// Use plane-down sprite and don't flip it
-				(airplane as HTMLImageElement).src = "plane-down.png";
-				airplane.style.transform = `translate(-50%, calc(-50% - 0.5rem)) rotate(${airplanePos.angle}deg)`;
-			} else {
-				// Use normal sprite and apply flip logic
-				(airplane as HTMLImageElement).src = "paper-airplane.png";
-				// Flip plane if angle is outside -90 to 90 degree range (keeps plane right side up)
-				isFlipped = Math.abs(normalizedAngle) > 90;
-				const verticalFlip = isFlipped ? ' scaleY(-1)' : '';
-				airplane.style.transform = `translate(-50%, calc(-50% - 0.5rem)) rotate(${airplanePos.angle}deg)${verticalFlip}`;
-			}
+			// Apply vertical flip if needed
+			const verticalFlip = isFlipped ? ' scaleY(-1)' : '';
+			airplane.style.transform = `translate(-50%, calc(-50% - 0.5rem)) rotate(${airplanePos.angle}deg)${verticalFlip}`;
 		}
 		
 		// Continue animation if still moving
