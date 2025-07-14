@@ -2,7 +2,7 @@
 	import { onMount } from "svelte";
 	import Lenis from "lenis";
 
-	function createSmoothPath(points) {
+	function createSmoothPath(points: Array<{ x: number; y: number }>) {
 		if (points.length < 2) return "";
 		
 		// Create smooth curves that flow horizontally through points
@@ -109,7 +109,7 @@
 		return path;
 	}
 
-	function getPointAlongPath(points, percentage) {
+	function getPointAlongPath(points: Array<{ x: number; y: number }>, percentage: number) {
 		if (points.length < 2) return { x: 0, y: 0, angle: 0 };
 		
 		// Generate the same control points as the path
@@ -230,7 +230,7 @@
 
 
 	let currentAirplaneProgress = 0;
-	let animationFrameId = null;
+	let animationFrameId: number | null = null;
 	let isFlipped = false;
 
 	function updateAirplanePosition() {
@@ -267,26 +267,7 @@
 		// Determine movement direction
 		const movingForward = currentAirplaneProgress > previousProgress;
 		
-		// Check for point transitions and handle flipping
-		// Point 2 is at ~0.33 progress, Point 3 is at ~0.67 progress
-		const point2Progress = 1/3;
-		const point3Progress = 2/3;
-		
-		if (movingForward) {
-			// Moving forward: flip at point 2, unflip at point 3
-			if (previousProgress < point2Progress && currentAirplaneProgress >= point2Progress) {
-				isFlipped = true;
-			} else if (previousProgress < point3Progress && currentAirplaneProgress >= point3Progress) {
-				isFlipped = false;
-			}
-		} else {
-			// Moving backward: flip at point 3, unflip at point 2
-			if (previousProgress > point3Progress && currentAirplaneProgress <= point3Progress) {
-				isFlipped = true;
-			} else if (previousProgress > point2Progress && currentAirplaneProgress <= point2Progress) {
-				isFlipped = false;
-			}
-		}
+
 		
 		// Get points for path calculation
 		const points = [];
@@ -305,6 +286,15 @@
 			const airplanePos = getPointAlongPath(points, currentAirplaneProgress);
 			airplane.style.left = `${airplanePos.x}px`;
 			airplane.style.top = `${airplanePos.y}px`;
+			
+			// Check if rotation angle is greater than 90 degrees (plane is upside down)
+			// Normalize angle to -180 to 180 range
+			let normalizedAngle = airplanePos.angle;
+			while (normalizedAngle > 180) normalizedAngle -= 360;
+			while (normalizedAngle < -180) normalizedAngle += 360;
+			
+			// Flip plane if angle is outside -90 to 90 degree range (keeps plane right side up)
+			isFlipped = Math.abs(normalizedAngle) > 90;
 			
 			// Apply vertical flip if needed
 			const verticalFlip = isFlipped ? ' scaleY(-1)' : '';
@@ -379,7 +369,8 @@
 
 <div class="flex flex-col items-center justify-center h-screen text-center bg-gradient-to-b from-[#CCF4FD] to-[#9DACF2] bg-blend-overlay">
 
-	<div class="absolute top-0 left-0 w-full h-full bg-[url(/buildings-top.png)] bg-no-repeat bg-contain pointer-events-none -translate-y-15"></div>
+	<div class="absolute top-0 left-0 w-full h-full bg-[url(/buildings-back.png)] bg-no-repeat bg-contain pointer-events-none -translate-y-15"></div>
+	<div class="absolute top-0 left-0 w-full h-full bg-[url(/buildings-front.png)] bg-no-repeat bg-contain pointer-events-none -translate-y-15"></div>
 	<!-- brush texture clipped to buildings -->
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-repeat pointer-events-none opacity-100 -translate-y-15 bg-center mix-blend-overlay" style="mask-image: url('/buildings-top.png'); mask-size: contain; mask-repeat: no-repeat; mask-position: center top; -webkit-mask-image: url('/buildings-top.png'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center top;"></div>
 	<div class="inline-block relative">
@@ -480,7 +471,7 @@
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none bg-position-[0_100vh]"></div>
 </div>
 
-<div class="w-full bg-gradient-to-b from-[#FDC5D1] to-[#FAE3C9] items-center justify-center px-32">
+<div class="w-full bg-gradient-to-b from-[#FDC5D1] to-[#FAE3C9] items-center justify-center px-32 relative">
 	<div class="relative w-full max-w-3xl mx-auto">
 		<img src="hole.png" alt="" class="w-full h-full max-w-3xl">
 		<iframe 
@@ -490,4 +481,95 @@
 			title="Map">
 		</iframe>
 	</div>
+	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
+</div>
+
+<div class="w-full py-24 bg-gradient-to-b from-[#FAE3C9] to-[#e99cce] relative flex flex-col items-center justify-center">
+	<img src="faq-clouds.png" alt="" class="w-full">
+	<h1 class="text-9xl font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent mb-12">FAQ</h1>
+
+	<!-- FAQ Grid -->
+	<div class="grid grid-cols-2 gap-8 max-w-6xl px-8 z-10">
+		<!-- FAQ Item 1 -->
+		<div class="relative">
+			<img src="window-1.png" alt="window" class="w-full h-full object-contain">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24">
+				<h3 class="text-xl font-serif font-bold mb-4">Who can participate in Daydream?</h3>
+				<p class="text-sm">All high-school & upper-middle-school aged students are welcome to come!</p>
+			</div>
+		</div>
+
+		<!-- FAQ Item 2 -->
+		<div class="relative">
+			<img src="window-1.png" alt="window" class="w-full h-full object-contain">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24">
+				<h3 class="text-xl font-serif font-bold mb-4">Can I organize a Daydream in my city?</h3>
+				<p class="text-sm">Definitely! Contact us via daydream@hackclub.com or join #daydream on slack.</p>
+			</div>
+		</div>
+
+		<!-- FAQ Item 3 -->
+		<div class="relative">
+			<img src="window-1.png" alt="window" class="w-full h-full object-contain">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24">
+				<h3 class="text-xl font-serif font-bold mb-4">All this, for free?</h3>
+				<p class="text-sm">Yep! Food, swag and good vibes are all included. Plus, if you're joining us from afar, we'll cover the cost of gas or a bus / train ticket.</p>
+			</div>
+		</div>
+
+		<!-- FAQ Item 4 -->
+		<div class="relative">
+			<img src="window-1.png" alt="window" class="w-full h-full object-contain">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24">
+				<h3 class="text-xl font-serif font-bold mb-4">What do I need?</h3>
+				<p class="text-sm">Your laptop, chargers, toiletries, sleeping bags, and an open mind!</p>
+			</div>
+		</div>
+
+		<!-- FAQ Item 5 -->
+		<div class="relative">
+			<img src="window-1.png" alt="window" class="w-full h-full object-contain">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24">
+				<h3 class="text-xl font-serif font-bold mb-4">What has Hack Club done before?</h3>
+				<p class="text-sm">Hack Club has run an overnight hackathon in San Francisco, a Game Jam across 50 cities, a hackathon on a train from Vermont to Los Angeles, and much more!</p>
+			</div>
+		</div>
+
+		<!-- FAQ Item 6 -->
+		<div class="relative">
+			<img src="window-1.png" alt="window" class="w-full h-full object-contain">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24">
+				<h3 class="text-xl font-serif font-bold mb-4">I'm not good at coding. Can I still participate?</h3>
+				<p class="text-sm">This game jam is for all skill levels! We'll have workshops and other events so join us and let's learn together.</p>
+			</div>
+		</div>
+
+		<!-- FAQ Item 7 -->
+		<div class="relative">
+			<img src="window-1.png" alt="window" class="w-full h-full object-contain">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24">
+				<h3 class="text-xl font-serif font-bold mb-4">What if my parents are concerned?</h3>
+				<p class="text-sm">We're here to help! You can see our parent guide here, or they can reach out to us at daydream@hackclub.com for questions.</p>
+			</div>
+		</div>
+
+		<!-- FAQ Item 8 -->
+		<div class="relative">
+			<img src="window-1.png" alt="window" class="w-full h-full object-contain">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24">
+				<h3 class="text-xl font-serif font-bold mb-4">What can I make at Daydream?</h3>
+				<p class="text-sm">ANY type of game based on the theme! Platformer, visual novel, clicker game, etc. Be as creative as possible!</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
+</div>
+
+<div class="w-full bg-white relative -z-10 min-h-80">
+	<div class="absolute w-full h-32 bg-[url('brushstroking.png')] bg-repeat-x z-10 bg-size-[100vw_100vh] mix-blend-overlay -translate-0.5" style="mask-image: url(/footer-clouds.png); mask-size: contain; mask-repeat: repeat-x; -webkit-mask-image: url(/footer-clouds.png); -webkit-mask-size: contain; -webkit-mask-repeat: repeat-x;"></div>
+	<div class="w-full h-32 bg-[#e99cce] z-5" style="mask-image: url(/footer-clouds.png); mask-size: contain; mask-repeat: repeat-x; -webkit-mask-image: url(/footer-clouds.png); -webkit-mask-size: contain; -webkit-mask-repeat: repeat-x;"></div>
+
+	<div class="absolute bottom-2 right-16 h-2/3 aspect-square bg-[url('brushstroking.png')] bg-repeat z-10 bg-size-[100vw_100vh] mix-blend-overlay" style="mask-image: url(/thought-bubbles.png); mask-size: contain; mask-repeat: no-repeat; -webkit-mask-image: url(/thought-bubbles.png); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat;"></div>
+	<div class="absolute bottom-2 right-16 h-2/3 aspect-square bg-[#e99cce]" style="mask-image: url(/thought-bubbles.png); mask-size: contain; mask-repeat: no-repeat; -webkit-mask-image: url(/thought-bubbles.png); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat;"></div>
 </div>
