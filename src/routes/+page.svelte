@@ -562,7 +562,7 @@
 </div>
 <div class="w-full h-64 bg-[#FCEFC5]"></div>
 
-<div class="flex flex-row flex-wrap w-full h-auto bg-gradient-to-b from-[#FCEFC5] to-[#FEC1CF] px-36 max-md:px-8 pb-50 relative" id="islands-container">
+<div class="flex flex-row flex-wrap w-full h-auto bg-gradient-to-b from-[#FCEFC5] to-[#FEC1CF] px-36 max-md:px-8 pb-50 max-sm:pb-24 relative" id="islands-container">
 
 	<img src="/clouds-left-2.png" alt="" class="absolute left-0 w-3/12 top-12">
 	<img src="/clouds-left-3.png" alt="" class="absolute left-0 w-2/12 bottom-32">
@@ -636,15 +636,15 @@
 	<div class="max-md:absolute max-md:left-1/2 max-md:-translate-x-1/2 max-md:z-100">
 		<div class="relative w-full max-w-3xl mx-auto min-w-72 max-md:mx-0">
 			<img src="banner.png" alt="100 Cities Worldwide" class="absolute top-0 left-1/2 -translate-x-1/2 max-md:-translate-y-1/2 z-100 h-48 w-auto z-10 scale-150 saturate-70 brightness-110 object-contain px-4">
-			<img src="hole.png" alt="" class="w-full h-full max-w-3xl">
+			<img src="hole.png" alt="" class="w-full h-full max-w-3xl max-sm:scale-150">
 			<iframe 
 				src="https://felt.com/embed/map/Daydream-Events-pPFQnT34SOq6tYlb2S1IdC?loc=0%2C-73.3%2C1.7z&legend=0&cooperativeGestures=1&link=0&geolocation=0&zoomControls=1&scaleBar=0" 
-				class="absolute top-0 left-0 w-full h-full border-0"
+				class="absolute top-0 left-0 w-full h-full border-0 max-sm:scale-150"
 				style="mask: url('hole.png') no-repeat center; -webkit-mask: url('hole.png') no-repeat center; mask-size: contain; -webkit-mask-size: contain;"
 				title="Felt Map"
 				referrerpolicy="strict-origin-when-cross-origin">
 			</iframe>
-			<p class="absolute left-1/2 -translate-x-1/2 font-sans text-center text-2xl pt-12 w-max max-w-[80vh] max-md:max-w-full md:px-12 text-[#60574b] z-10000 ">All daydream events are organized by high school students like yourself! <br> <span class="font-bold"><a class="underline hover:text-pink" href="https://forms.hackclub.com/daydream">Sign up</a> to organize now!</span></p>
+			<p class="absolute left-1/2 -translate-x-1/2 font-sans text-center text-2xl pt-12 max-sm:pt-24 max-sm:text-xl w-max max-w-[80vh] max-md:max-w-full md:px-12 text-[#60574b] z-10000 ">All daydream events are organized by high school students like yourself! <br> <span class="font-bold"><a class="underline hover:text-pink" href="https://forms.hackclub.com/daydream">Sign up</a> to organize now!</span></p>
 		</div>
 	</div>
 	<div class="max-md:h-96"></div>
