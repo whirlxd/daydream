@@ -651,7 +651,7 @@
 	<img src="faq.png" alt="FAQ" class="mb-12 h-24 scale-175 max-md:scale-120">
 
 	<!-- FAQ Grid -->
-	<div class="grid grid-cols-2 gap-8 max-w-6xl px-8 z-10 max-md:grid-cols-1">
+	<div class="grid grid-cols-2 gap-8 max-w-6xl px-8 z-10 max-md:grid-cols-1 max-md:gap-16">
 		<!-- FAQ Item 1 -->
 		<div class="relative transform -rotate-2">
 			<img src="window-3.png" alt="window" class="w-full h-full object-contain max-md:scale-130">
