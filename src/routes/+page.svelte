@@ -232,7 +232,14 @@
 	let showVideoPopup = false;
 
 	function openVideoPopup() {
-		showVideoPopup = true;
+		// Check if screen is small (mobile/tablet)
+		if (window.innerWidth <= 768) {
+			// Open video directly in new tab for small screens
+			window.open('https://www.youtube.com/watch?v=O44y8TeJrNE', '_blank');
+		} else {
+			// Show popup for larger screens
+			showVideoPopup = true;
+		}
 	}
 
 	function closeVideoPopup() {
@@ -412,7 +419,7 @@
 		</h2>
 		<img src="daydream.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4" />
 	</div>
-	<div class="relative inline-block">
+	<div class="relative inline-block px-4">
 		<h3
 			class="text-3xl italic font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent"
 		>
@@ -430,7 +437,7 @@
 		</h4>
 	</div>
 	
-	<div class="mt-8 flex flex-col items-center gap-3 z-10">
+	<div class="mt-8 flex flex-col items-center gap-3 z-10 max-md:scale-90">
 		<form on:submit={handleFormSubmit} class="rounded-full bg-white border-2 border-dark font-sans p-2 flex flex-row items-center gap-2 shadow-[0_3px_0_0_theme(colors.dark)] focus-within:border-pink focus-within:shadow-[0_3px_0_0_#E472AB] has-[button:active]:border-dark has-[button:active]:shadow-[0_3px_0_0_theme(colors.dark)] has-[button:focus]:border-dark has-[button:focus]:shadow-[0_3px_0_0_theme(colors.dark)]">
 			<input
 				type="email"
@@ -477,7 +484,7 @@
 	<!-- Video Thumbnail Button -->
 	<button
 		on:click={openVideoPopup}
-		class="absolute bottom-8 right-8 w-40 h-24 rounded overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer group md:w-72 md:h-40 sm:w-40 sm:h-24 animate-hover"
+		class="absolute bottom-8 right-8 max-sm:right-1/2 max-sm:translate-x-1/2 w-40 h-24 rounded overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer group md:w-72 md:h-40 sm:w-40 sm:h-24 animate-hover"
 	>
 		<img src="thumbnail.png" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
 		<div class="absolute inset-0 bg-[rgba(0,0,0,0.1)] bg-opacity-30 group-hover:bg-opacity-20 transition-colors duration-300 flex items-center justify-center">
@@ -543,7 +550,10 @@
 		<!-- Intermediate point to the left -->
 		<div class="absolute top-1/2 left-1/4 w-1 h-1 -translate-x-1/2 -translate-y-1/2" data-point="0.5"></div>
 	</div>
-	<img src="gamejam.png" alt="Here's How You Run a Game Jam" class="absolute -bottom-44 left-1/2 -translate-x-1/2 w-2/3 h-auto object-contain z-100 pointer-events-none">
+	<div class="absolute -bottom-44 left-1/2 -translate-x-1/2 w-10/12 lg:max-w-2/3 h-auto object-contain z-100 cursor-text flex flex-row max-md:flex-wrap items-center justify-center align-middle">
+		<img src="gamejam-1.png" alt="Here's How You Organize a" class="flex-shrink min-w-0 object-contain">
+		<img src="gamejam-2.png" alt="Game Jam" class="flex-shrink min-w-0 object-contain">
+	</div>
 </div>
 <div class="w-full h-64 bg-[#FCEFC5]"></div>
 
@@ -619,13 +629,14 @@
 
 <div class="w-full bg-gradient-to-b from-[#FDC5D1] to-[#FAE3C9] items-center justify-center px-32 relative pt-36">
 	<div class="relative w-full max-w-3xl mx-auto">
-		<img src="banner.png" alt="" class="absolute top-0 left-1/2 -translate-x-1/2 h-48 w-auto z-10 scale-150 saturate-70 brightness-110 object-contain px-4">
+		<img src="banner.png" alt="100 Cities Worldwide" class="absolute top-0 left-1/2 -translate-x-1/2 h-48 w-auto z-10 scale-150 saturate-70 brightness-110 object-contain px-4">
 		<img src="hole.png" alt="" class="w-full h-full max-w-3xl">
 		<iframe 
-			src="https://hackclub.com/map/" 
+			src="https://felt.com/embed/map/Daydream-Events-pPFQnT34SOq6tYlb2S1IdC?loc=0%2C-73.3%2C1.7z&legend=0&cooperativeGestures=1&link=0&geolocation=0&zoomControls=1&scaleBar=0" 
 			class="absolute top-0 left-0 w-full h-full border-0"
 			style="mask: url('hole.png') no-repeat center; -webkit-mask: url('hole.png') no-repeat center; mask-size: contain; -webkit-mask-size: contain;"
-			title="Map">
+			title="Felt Map"
+			referrerpolicy="strict-origin-when-cross-origin">
 		</iframe>
 	</div>
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
@@ -636,7 +647,7 @@
 	<img src="faq.png" alt="FAQ" class="mb-12 h-24 scale-175">
 
 	<!-- FAQ Grid -->
-	<div class="grid grid-cols-2 gap-8 max-w-6xl px-8 z-10 max-lg:grid-cols-1">
+	<div class="grid grid-cols-2 gap-8 max-w-6xl px-8 z-10 max-md:grid-cols-1">
 		<!-- FAQ Item 1 -->
 		<div class="relative transform -rotate-2">
 			<img src="window-3.png" alt="window" class="w-full h-full object-contain">
