@@ -28,3 +28,16 @@
   --color-pink: #E472AB;
   --color-pink-dark: #A65A80;
 }
+
+@keyframes hover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-0.5em);
+  }
+}
+
+.animate-hover {
+  animation: hover 2s ease-in-out infinite alternate;
+}

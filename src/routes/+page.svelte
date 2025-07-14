@@ -239,6 +239,25 @@
 		showVideoPopup = false;
 	}
 
+	function handleFormSubmit(event: Event) {
+		event.preventDefault();
+		const form = event.target as HTMLFormElement;
+		const emailInput = form.querySelector('input[name="email"]') as HTMLInputElement;
+		const email = emailInput.value;
+		
+		// Find the hidden form and submit it
+		const hiddenForm = document.getElementById('hidden-signup-form') as HTMLFormElement;
+		const hiddenEmailInput = hiddenForm.querySelector('input[name="email"]') as HTMLInputElement;
+		hiddenEmailInput.value = email;
+		hiddenForm.submit();
+		
+		// Open the Hackclub form with email parameter
+		window.open(`https://forms.hackclub.com/daydream?email=${encodeURIComponent(email)}`, '_blank');
+		
+		// Clear the email input
+		emailInput.value = '';
+	}
+
 	function updateAirplanePosition() {
 		const container = document.getElementById("islands-container");
 		const airplane = document.getElementById("paper-airplane");
@@ -276,7 +295,7 @@
 
 		
 		// Get points for path calculation
-		const points = [];
+		const points: Array<{ x: number; y: number }> = [];
 		const pointIds = ["0", "0.5", "1", "2", "3", "4", "5"];
 		pointIds.forEach(id => {
 			const element = document.querySelector(`[data-point="${id}"]`);
@@ -300,12 +319,22 @@
 			while (normalizedAngle > 180) normalizedAngle -= 360;
 			while (normalizedAngle < -180) normalizedAngle += 360;
 			
-			// Flip plane if angle is outside -90 to 90 degree range (keeps plane right side up)
-			isFlipped = Math.abs(normalizedAngle) > 90;
+			// Update frame based on rotation angle
+			// Check if plane is within 30 degrees of pointing straight down (90 degrees)
+			const isPointingDown = Math.abs(normalizedAngle - 90) <= 30 || Math.abs(normalizedAngle + 270) <= 30;
 			
-			// Apply vertical flip if needed
-			const verticalFlip = isFlipped ? ' scaleY(-1)' : '';
-			airplane.style.transform = `translate(-50%, calc(-50% - 0.5rem)) rotate(${airplanePos.angle}deg)${verticalFlip}`;
+			if (isPointingDown) {
+				// Use plane-down sprite and don't flip it
+				(airplane as HTMLImageElement).src = "plane-down.png";
+				airplane.style.transform = `translate(-50%, calc(-50% - 0.5rem)) rotate(${airplanePos.angle}deg)`;
+			} else {
+				// Use normal sprite and apply flip logic
+				(airplane as HTMLImageElement).src = "paper-airplane.png";
+				// Flip plane if angle is outside -90 to 90 degree range (keeps plane right side up)
+				isFlipped = Math.abs(normalizedAngle) > 90;
+				const verticalFlip = isFlipped ? ' scaleY(-1)' : '';
+				airplane.style.transform = `translate(-50%, calc(-50% - 0.5rem)) rotate(${airplanePos.angle}deg)${verticalFlip}`;
+			}
 		}
 		
 		// Continue animation if still moving
@@ -321,7 +350,7 @@
 		if (!container || !pathElement) return;
 		
 		const containerRect = container.getBoundingClientRect();
-		const points = [];
+		const points: Array<{ x: number; y: number }> = [];
 		
 		// Get points in order by data-point attribute
 		const pointIds = ["0", "0.5", "1", "2", "3", "4", "5"];
@@ -373,6 +402,10 @@
 	}
 </style>
 
+<svelte:head>
+	<title>Daydream</title>
+</svelte:head>
+
 <div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
 
 <div class="flex flex-col items-center justify-center h-screen text-center bg-gradient-to-b from-[#CCF4FD] to-[#B8D9F8] bg-blend-overlay">
@@ -408,26 +441,31 @@
 	</div>
 	
 	<div class="mt-8 flex flex-col items-center gap-3 z-10">
-		<div class="rounded-full bg-white border-2 border-dark font-sans p-2 flex flex-row items-center gap-2 shadow-[0_3px_0_0_theme(colors.dark)] focus-within:border-pink focus-within:shadow-[0_3px_0_0_#E472AB] has-[button:active]:border-dark has-[button:active]:shadow-[0_3px_0_0_theme(colors.dark)] has-[button:focus]:border-dark has-[button:focus]:shadow-[0_3px_0_0_theme(colors.dark)]">
+		<form on:submit={handleFormSubmit} class="rounded-full bg-white border-2 border-dark font-sans p-2 flex flex-row items-center gap-2 shadow-[0_3px_0_0_theme(colors.dark)] focus-within:border-pink focus-within:shadow-[0_3px_0_0_#E472AB] has-[button:active]:border-dark has-[button:active]:shadow-[0_3px_0_0_theme(colors.dark)] has-[button:focus]:border-dark has-[button:focus]:shadow-[0_3px_0_0_theme(colors.dark)]">
 			<input
 				type="email"
+				name="email"
 				placeholder="Enter email to organize Daydream"
 				class="w-80 px-3 py-1 text-dark focus:outline-none"
+				required
 			/>
-			<button class="bg-light h-full px-5 rounded-full border-b-2 border-[#B3866A] cursor-pointer hover:border-b-4 hover:transform hover:-translate-y-0.5 active:border-b-0 active:transform active:translate-y-0.5 focus:outline-none transition-all duration-100">
+			<input type="hidden" name="mailingLists" value="cmd3c94kz0hvz0iwt7ps28cyd" />
+			<button type="submit" class="bg-light h-full px-5 rounded-full border-b-2 border-[#B3866A] cursor-pointer hover:border-b-4 hover:transform hover:-translate-y-0.5 active:border-b-0 active:transform active:translate-y-0.5 focus:outline-none transition-all duration-100">
 				<img src="submit.svg" alt="Go">
 			</button>
-		</div>
-		<button
-			class="w-max px-4 py-2 bg-pink text-white rounded-full border-b-2 border-pink-dark hover:brightness-90 transition-colors font-sans cursor-pointer mx-auto relative overflow-hidden"
+		</form>
+		<a
+			href="https://forms.hackclub.com/daydream-stickers"
+			target="_blank"
+			class="w-max px-4 py-2 bg-pink border-b-2 border-b-pink-dark text-white rounded-full active:transform active:translate-y-0.5 transition-all duration-100 font-sans cursor-pointer mx-auto relative overflow-hidden hover:shadow-[0_2px_0_0_theme(colors.pink.dark)] hover:-translate-y-[2px] active:border-transparent active:shadow-none active:"
 		>
 			Get free stickers
-			<img 
+			<img
 				src="button-clouds.svg" 
 				alt="" 
 				class="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto object-contain pointer-events-none"
 			>
-		</button>
+		</a>
 	</div>
 
 	<!-- <img src="hot-air-balloon.png" alt="" class="absolute w-1/8 right-32 bottom-40 z-20"> -->
@@ -449,12 +487,12 @@
 	<!-- Video Thumbnail Button -->
 	<button
 		on:click={openVideoPopup}
-		class="absolute bottom-8 right-8 w-72 h-40 rounded overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer group md:w-56 md:h-32 sm:w-40 sm:h-24"
+		class="absolute bottom-8 right-8 w-40 h-24 rounded overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer group md:w-72 md:h-40 sm:w-40 sm:h-24 animate-hover"
 	>
 		<img src="thumbnail.png" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
 		<div class="absolute inset-0 bg-[rgba(0,0,0,0.1)] bg-opacity-30 group-hover:bg-opacity-20 transition-colors duration-300 flex items-center justify-center">
-			<div class="w-8 h-8 bg-[rgba(255,255,255,0.5)] bg-opacity-20 rounded-full flex items-center justify-center md:w-6 md:h-6 sm:w-4 sm:h-4">
-				<div class="w-0 h-0 border-l-[8px] border-l-[rgba(255,255,255,0.5)] border-t-[5px] border-t-transparent border-b-[5px] border-b-transparent ml-1 md:border-l-[6px] md:border-t-[4px] md:border-b-[4px] sm:border-l-[4px] sm:border-t-[3px] sm:border-b-[3px]"></div>
+			<div class="scale-150 w-8 h-8 bg-[rgba(255,255,255,0.5)] bg-opacity-20 rounded-full flex items-center justify-center md:w-6 md:h-6 sm:w-4 sm:h-4">
+				<div class="w-0 h-0 border-l-[8px] border-l-[rgba(255,255,255,1)] border-t-[5px] border-t-transparent border-b-[5px] border-b-transparent ml-1 md:border-l-[6px] md:border-t-[4px] md:border-b-[4px] sm:border-l-[4px] sm:border-t-[3px] sm:border-b-[3px]"></div>
 			</div>
 		</div>
 	</button>
@@ -502,7 +540,7 @@
 				</p>
 				
 				<p class="text-center font-bold text-2xl mt-10 text-[#2C3E50]">
-					Check out our video!
+					Check out our <a class="underline hover:text-pink" href="https://www.youtube.com/watch?v=O44y8TeJrNE">video!</a>
 				</p>
 			</div>
 		</div>
@@ -515,6 +553,7 @@
 		<!-- Intermediate point to the left -->
 		<div class="absolute top-1/2 left-1/4 w-1 h-1 -translate-x-1/2 -translate-y-1/2" data-point="0.5"></div>
 	</div>
+	<img src="gamejam.png" alt="Here's How You Run a Game Jam" class="absolute -bottom-44 left-1/2 -translate-x-1/2 w-2/3 h-auto object-contain z-100 pointer-events-none">
 </div>
 <div class="w-full h-64 bg-[#FCEFC5]"></div>
 
@@ -590,7 +629,7 @@
 
 <div class="w-full bg-gradient-to-b from-[#FDC5D1] to-[#FAE3C9] items-center justify-center px-32 relative pt-72">
 	<div class="relative w-full max-w-3xl mx-auto">
-		<img src="banner.png" alt="" class="absolute top-0 left-1/2 -translate-x-1/2 h-24 w-auto z-10 scale-150">
+		<img src="banner.png" alt="" class="absolute top-0 left-1/2 -translate-x-1/2 h-48 w-auto z-10 scale-150">
 		<img src="hole.png" alt="" class="w-full h-full max-w-3xl">
 		<iframe 
 			src="https://hackclub.com/map/" 
@@ -709,6 +748,7 @@
 
 <!-- Video Popup Modal -->
 {#if showVideoPopup}
+	<!-- svelte-ignore a11y_click_events_have_key_events -->
 	<div
 		class="fixed inset-0 bg-[rgba(0,0,0,0.5)] bg-opacity-70 flex items-center justify-center z-50"
 		on:click={closeVideoPopup}
@@ -719,12 +759,13 @@
 		tabindex="-1"
 	>
 		<button
-			class="absolute top-4 right-4 z-10 w-8 h-8 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full flex items-center justify-center text-white text-xl font-bold transition-colors duration-200"
+			class="cursor-pointer absolute top-4 right-4 z-10 w-8 h-8 bg-[rgba(255,255,255,0.2)] hover:bg-opacity-30 rounded-full flex items-center justify-center text-white text-xl font-bold transition-colors duration-200"
 			on:click={closeVideoPopup}
 			aria-label="Close video"
 		>
-			×
+		<span class="-translate-y-0.5">×</span>
 		</button>
+		<!-- svelte-ignore a11y_no_static_element_interactions -->
 		<div
 			class="relative w-[90vw] h-[90vh] max-w-6xl max-h-[80vh] bg-black rounded-lg overflow-hidden"
 			on:click|stopPropagation
@@ -740,3 +781,19 @@
 		</div>
 	</div>
 {/if}
+
+<!-- Hidden form for newsletter signup -->
+<form
+	id="hidden-signup-form"
+	method="post"
+	action="https://app.loops.so/api/newsletter-form/clo3frr4v02f3jv0qqu6hgfqs"
+	target="hidden-iframe"
+	style="display: none;"
+>
+	<input type="email" name="email" required>
+	<input type="hidden" name="mailingLists" value="cmd3c94kz0hvz0iwt7ps28cyd">
+	<button type="submit">Sign up</button>
+</form>
+
+<!-- Hidden iframe to receive form submission -->
+<iframe name="hidden-iframe" style="display: none;"></iframe>
