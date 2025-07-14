@@ -617,9 +617,9 @@
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none bg-position-[0_100vh]"></div>
 </div>
 
-<div class="w-full bg-gradient-to-b from-[#FDC5D1] to-[#FAE3C9] items-center justify-center px-32 relative pt-72">
+<div class="w-full bg-gradient-to-b from-[#FDC5D1] to-[#FAE3C9] items-center justify-center px-32 relative pt-36">
 	<div class="relative w-full max-w-3xl mx-auto">
-		<img src="banner.png" alt="" class="absolute top-0 left-1/2 -translate-x-1/2 h-48 w-auto z-10 scale-150">
+		<img src="banner.png" alt="" class="absolute top-0 left-1/2 -translate-x-1/2 h-48 w-auto z-10 scale-150 saturate-70 brightness-110">
 		<img src="hole.png" alt="" class="w-full h-full max-w-3xl">
 		<iframe 
 			src="https://hackclub.com/map/" 
@@ -631,7 +631,7 @@
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
 </div>
 
-<div class="w-full py-24 bg-gradient-to-b from-[#FAE3C9] to-[#e99cce] relative flex flex-col items-center justify-center">
+<div class="w-full pb-24 bg-gradient-to-b from-[#FAE3C9] to-[#e99cce] relative flex flex-col items-center justify-center">
 	<img src="faq-clouds.png" alt="" class="w-full">
 	<img src="faq.png" alt="FAQ" class="mb-12 h-48">
 
