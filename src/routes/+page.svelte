@@ -410,7 +410,7 @@
 		>
 			September 24th & 25th, 2025
 		</h2>
-		<img src="daydream.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full" />
+		<img src="daydream.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4" />
 	</div>
 	<div class="relative inline-block">
 		<h3
@@ -536,7 +536,7 @@
 		</div>
 	</div>
 
-	<div class="w-full absolute z-30 max-h-64 bottom-0 pointer-events-none">	
+	<div class="w-full absolute z-30 max-h-64 bottom-0 max-lg:translate-y-1/2 pointer-events-none">	
 		<img src="/cloud-cover-1.png" alt="" class="w-full h-full object-contain">
 		<!-- Invisible marker for airplane starting point -->
 		<div class="absolute top-1/2 left-1/2 w-1 h-1 -translate-x-1/2 -translate-y-1/2" data-point="0"></div>
@@ -606,7 +606,7 @@
 	<div class="flex flex-col items-center w-full basis-full translate-y-40 z-20">
 		<div class="relative">
 			<div class="bg-[url('/card-final.png')] bg-contain bg-no-repeat bg-center text-2xl font-serif pt-24 px-8 w-128 h-96 text-center" data-point="5">
-				<span class="font-sans text-[#F2CC32] font-bold text-[1.5rem] mr-1">#5:</span> Run the game jam!!
+				<span class="font-sans text-[#F2CC32] font-bold text-[1.5rem] mr-1">#5:</span> Run the game jam!
 			</div>
 		</div>
 	</div>
@@ -619,7 +619,7 @@
 
 <div class="w-full bg-gradient-to-b from-[#FDC5D1] to-[#FAE3C9] items-center justify-center px-32 relative pt-36">
 	<div class="relative w-full max-w-3xl mx-auto">
-		<img src="banner.png" alt="" class="absolute top-0 left-1/2 -translate-x-1/2 h-48 w-auto z-10 scale-150 saturate-70 brightness-110">
+		<img src="banner.png" alt="" class="absolute top-0 left-1/2 -translate-x-1/2 h-48 w-auto z-10 scale-150 saturate-70 brightness-110 object-contain px-4">
 		<img src="hole.png" alt="" class="w-full h-full max-w-3xl">
 		<iframe 
 			src="https://hackclub.com/map/" 
@@ -636,7 +636,7 @@
 	<img src="faq.png" alt="FAQ" class="mb-12 h-24 scale-175">
 
 	<!-- FAQ Grid -->
-	<div class="grid grid-cols-2 gap-8 max-w-6xl px-8 z-10 sm:grid-cols-1">
+	<div class="grid grid-cols-2 gap-8 max-w-6xl px-8 z-10 max-lg:grid-cols-1">
 		<!-- FAQ Item 1 -->
 		<div class="relative transform -rotate-2">
 			<img src="window-3.png" alt="window" class="w-full h-full object-contain">
