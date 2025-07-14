@@ -415,7 +415,7 @@
 		<h2
 			class="text-xl font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent absolute left-[calc(50%+4rem)] -translate-x-1/2 bottom-8 italic w-max md:text-lg sm:text-base"
 		>
-			September 24th & 25th, 2025
+			September 27th & 28th, 2025
 		</h2>
 		<img src="daydream.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4" />
 	</div>
@@ -628,17 +628,21 @@
 </div>
 
 <div class="w-full bg-gradient-to-b from-[#FDC5D1] to-[#FAE3C9] items-center justify-center px-32 relative pt-36">
-	<div class="relative w-full max-w-3xl mx-auto">
-		<img src="banner.png" alt="100 Cities Worldwide" class="absolute top-0 left-1/2 -translate-x-1/2 h-48 w-auto z-10 scale-150 saturate-70 brightness-110 object-contain px-4">
-		<img src="hole.png" alt="" class="w-full h-full max-w-3xl">
-		<iframe 
-			src="https://felt.com/embed/map/Daydream-Events-pPFQnT34SOq6tYlb2S1IdC?loc=0%2C-73.3%2C1.7z&legend=0&cooperativeGestures=1&link=0&geolocation=0&zoomControls=1&scaleBar=0" 
-			class="absolute top-0 left-0 w-full h-full border-0"
-			style="mask: url('hole.png') no-repeat center; -webkit-mask: url('hole.png') no-repeat center; mask-size: contain; -webkit-mask-size: contain;"
-			title="Felt Map"
-			referrerpolicy="strict-origin-when-cross-origin">
-		</iframe>
+	<div class="max-md:absolute max-md:left-1/2 max-md:-translate-x-1/2 max-md:z-100">
+		<div class="relative w-full max-w-3xl mx-auto min-w-72 max-md:mx-0">
+			<img src="banner.png" alt="100 Cities Worldwide" class="absolute top-0 left-1/2 -translate-x-1/2 max-md:-translate-y-1/2 z-100 h-48 w-auto z-10 scale-150 saturate-70 brightness-110 object-contain px-4">
+			<img src="hole.png" alt="" class="w-full h-full max-w-3xl">
+			<iframe 
+				src="https://felt.com/embed/map/Daydream-Events-pPFQnT34SOq6tYlb2S1IdC?loc=0%2C-73.3%2C1.7z&legend=0&cooperativeGestures=1&link=0&geolocation=0&zoomControls=1&scaleBar=0" 
+				class="absolute top-0 left-0 w-full h-full border-0"
+				style="mask: url('hole.png') no-repeat center; -webkit-mask: url('hole.png') no-repeat center; mask-size: contain; -webkit-mask-size: contain;"
+				title="Felt Map"
+				referrerpolicy="strict-origin-when-cross-origin">
+			</iframe>
+			<p class="font-sans text-center pt-12 text-[#60574b] z-10000 ">All daydream events are organized by high school students like yourself! <br> <span class="font-bold"><a class="underline hover:text-pink" href="https://forms.hackclub.com/daydream">Sign up</a> to organize now!</span></p>
+		</div>
 	</div>
+	<div class="max-md:h-96"></div>
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
 </div>
 
@@ -651,36 +655,36 @@
 		<!-- FAQ Item 1 -->
 		<div class="relative transform -rotate-2">
 			<img src="window-3.png" alt="window" class="w-full h-full object-contain">
-			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70">
-				<h3 class="text-xl font-serif font-bold mb-4">Who can participate in Daydream?</h3>
-				<p class="text-sm">All high-school & upper-middle-school aged students are welcome to come!</p>
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 max-md:px-8 opacity-70">
+				<h3 class="text-xl font-serif font-bold mb-4 max-md:text-lg">Who can participate in Daydream?</h3>
+				<p class="text-sm max-md:text-xs">All high-school & upper-middle-school aged students are welcome to come!</p>
 			</div>
 		</div>
 
 		<!-- FAQ Item 2 -->
 		<div class="relative transform rotate-1">
 			<img src="window-4.png" alt="window" class="w-full h-full object-contain">
-			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70">
-				<h3 class="text-xl font-serif font-bold mb-4">Can I organize a Daydream in my city?</h3>
-				<p class="text-sm">Definitely! Contact us via daydream@hackclub.com or join #daydream on slack.</p>
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 max-md:px-8 opacity-70">
+				<h3 class="text-xl font-serif font-bold mb-4 max-md:text-lg">Can I organize a Daydream in my city?</h3>
+				<p class="text-sm max-md:text-xs">Definitely! Contact us via daydream@hackclub.com or join #daydream on slack.</p>
 			</div>
 		</div>
 
 		<!-- FAQ Item 3 -->
 		<div class="relative transform rotate-2">
 			<img src="window-2.png" alt="window" class="w-full h-full object-contain">
-			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70">
-				<h3 class="text-xl font-serif font-bold mb-4">All this, for free?</h3>
-				<p class="text-sm">Yep! Food, swag and good vibes are all included. Plus, if you're joining us from afar, we'll cover the cost of gas or a bus / train ticket.</p>
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 max-md:px-8 opacity-70">
+				<h3 class="text-xl font-serif font-bold mb-4 max-md:text-lg">All this, for free?</h3>
+				<p class="text-sm max-md:text-xs">Yep! Food, swag and good vibes are all included. Plus, if you're joining us from afar, we'll cover the cost of gas or a bus / train ticket.</p>
 			</div>
 		</div>
 
 		<!-- FAQ Item 4 -->
 		<div class="relative transform -rotate-1">
 			<img src="window-1.png" alt="window" class="w-full h-full object-contain">
-			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70">
-				<h3 class="text-xl font-serif font-bold mb-4">What do I need?</h3>
-				<p class="text-sm">Your laptop, chargers, toiletries, sleeping bags, and an open mind!</p>
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 max-md:px-8 opacity-70">
+				<h3 class="text-xl font-serif font-bold mb-4 max-md:text-lg">What do I need?</h3>
+				<p class="text-sm max-md:text-xs">Your laptop, chargers, toiletries, sleeping bags, and an open mind!</p>
 			</div>
 		</div>
 
@@ -688,8 +692,8 @@
 		<div class="relative transform rotate-1">
 			<img src="window-4.png" alt="window" class="w-full h-full object-contain">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70">
-				<h3 class="text-xl font-serif font-bold mb-4">What has Hack Club done before?</h3>
-				<p class="text-sm">Hack Club has run an overnight hackathon in San Francisco, a Game Jam across 50 cities, a hackathon on a train from Vermont to Los Angeles, and much more!</p>
+				<h3 class="text-xl font-serif font-bold mb-4 max-md:text-lg">What has Hack Club done before?</h3>
+				<p class="text-sm max-md:text-xs">Hack Club has run an overnight hackathon in San Francisco, a Game Jam across 50 cities, a hackathon on a train from Vermont to Los Angeles, and much more!</p>
 			</div>
 		</div>
 
@@ -697,8 +701,8 @@
 		<div class="relative transform rotate-1">
 			<img src="window-3.png" alt="window" class="w-full h-full object-contain">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70">
-				<h3 class="text-xl font-serif font-bold mb-4">I'm not good at coding. Can I still participate?</h3>
-				<p class="text-sm">This game jam is for all skill levels! We'll have workshops and other events so join us and let's learn together.</p>
+				<h3 class="text-xl font-serif font-bold mb-4 max-md:text-lg">I'm not good at coding. Can I still participate?</h3>
+				<p class="text-sm max-md:text-xs">This game jam is for all skill levels! We'll have workshops and other events so join us and let's learn together.</p>
 			</div>
 		</div>
 
@@ -706,8 +710,8 @@
 		<div class="relative transform -rotate-2">
 			<img src="window-2.png" alt="window" class="w-full h-full object-contain">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70">
-				<h3 class="text-xl font-serif font-bold mb-4">What if my parents are concerned?</h3>
-				<p class="text-sm">We're here to help! You can see our parent guide here, or they can reach out to us at daydream@hackclub.com for questions.</p>
+				<h3 class="text-xl font-serif font-bold mb-4 max-md:text-lg">What if my parents are concerned?</h3>
+				<p class="text-sm max-md:text-xs">We're here to help! You can see our parent guide here, or they can reach out to us at daydream@hackclub.com for questions.</p>
 			</div>
 		</div>
 
@@ -715,8 +719,8 @@
 		<div class="relative transform -rotate-1">
 			<img src="window-1.png" alt="window" class="w-full h-full object-contain">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70">
-				<h3 class="text-xl font-serif font-bold mb-4">What can I make at Daydream?</h3>
-				<p class="text-sm">ANY type of game based on the theme! Platformer, visual novel, clicker game, etc. Be as creative as possible!</p>
+				<h3 class="text-xl font-serif font-bold mb-4 max-md:text-lg">What can I make at Daydream?</h3>
+				<p class="text-sm max-md:text-xs">ANY type of game based on the theme! Platformer, visual novel, clicker game, etc. Be as creative as possible!</p>
 			</div>
 		</div>
 	</div>
