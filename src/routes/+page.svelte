@@ -633,10 +633,10 @@
 
 <div class="w-full pb-24 bg-gradient-to-b from-[#FAE3C9] to-[#e99cce] relative flex flex-col items-center justify-center">
 	<img src="faq-clouds.png" alt="" class="w-full">
-	<img src="faq.png" alt="FAQ" class="mb-12 h-48">
+	<img src="faq.png" alt="FAQ" class="mb-12 h-24 scale-175">
 
 	<!-- FAQ Grid -->
-	<div class="grid grid-cols-2 gap-8 max-w-6xl px-8 z-10">
+	<div class="grid grid-cols-2 gap-8 max-w-6xl px-8 z-10 sm:grid-cols-1">
 		<!-- FAQ Item 1 -->
 		<div class="relative transform -rotate-2">
 			<img src="window-3.png" alt="window" class="w-full h-full object-contain">
