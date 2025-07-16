@@ -414,7 +414,7 @@
 		<div class="h-12"></div> 
 		<!-- space for the ship -->
 		<h2
-		class="text-xl font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent absolute left-1/2 max-md:translate-y-4 md:left-[calc(50%+4rem)] -translate-x-1/2 bottom-8 italic w-max md:text-lg sm:text-base"
+		class="text-xl font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent absolute left-1/2 max-sm:translate-y-4 max-sm:mb-0 max-md:-mb-8 md:left-[calc(50%+4rem)] -translate-x-1/2 bottom-8 italic w-max md:text-lg sm:text-base"
 		>
 			September 27th & 28th, 2025
 		</h2>
@@ -654,76 +654,76 @@
 	<img src="faq.png" alt="FAQ" class="mb-12 h-24 scale-175 max-md:scale-120">
 
 	<!-- FAQ Grid -->
-	<div class="grid grid-cols-2 gap-8 max-w-6xl px-8 z-10 max-md:grid-cols-1 max-md:gap-16">
+	<div class="grid grid-cols-2 gap-8 max-w-6xl px-8 z-10 max-[900px]:grid-cols-1 max-md:gap-16">
 		<!-- FAQ Item 1 -->
 		<div class="relative transform -rotate-2">
-			<img src="window-3.png" alt="window" class="w-full h-full object-contain max-md:scale-130">
-			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-lg:px-18 max-md:px-2">
-				<h3 class="text-xl font-serif font-bold mb-4 max-md:mb-1 max-md:text-lg">Who can participate in Daydream?</h3>
-				<p class="text-sm max-md:text-xs">All high-school & upper-middle-school aged students are welcome to come!</p>
-			</div>
+			<img src="window-3.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-lg:px-14 max-xl:px-18">
+				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0">Who can participate in Daydream?</h3>
+				<p class="text-sm">All high-school & upper-middle-school aged students are welcome to come!</p>
+		</div>
 		</div>
 
 		<!-- FAQ Item 2 -->
 		<div class="relative transform rotate-1">
-			<img src="window-4.png" alt="window" class="w-full h-full object-contain max-md:scale-130">
-			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-lg:px-18 max-md:px-2">
-				<h3 class="text-xl font-serif font-bold mb-4 max-md:mb-1 max-md:text-lg">Can I organize a Daydream in my city?</h3>
-				<p class="text-sm max-md:text-xs">Definitely! Contact us via daydream@hackclub.com or join #daydream on slack.</p>
+			<img src="window-4.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-lg:px-14 max-xl:px-18">
+				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0">Can I organize a Daydream in my city?</h3>
+				<p class="text-sm">Definitely! Contact us via daydream@hackclub.com or join #daydream on slack.</p>
 			</div>
 		</div>
 
 		<!-- FAQ Item 3 -->
 		<div class="relative transform rotate-2">
-			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-130">
-			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-lg:px-18 max-md:px-2">
-				<h3 class="text-xl font-serif font-bold mb-4 max-md:mb-1 max-md:text-lg">All this, for free?</h3>
-				<p class="text-sm max-md:text-xs">Yep! Food, swag and good vibes are all included. Plus, if you're joining us from afar, we'll cover the cost of gas or a bus / train ticket.</p>
+			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-lg:px-14 max-xl:px-18">
+				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0">All this, for free?</h3>
+				<p class="text-sm">Yep! Food, swag and good vibes are all included. Plus, if you're joining us from afar, we'll cover the cost of gas or a bus / train ticket.</p>
 			</div>
 		</div>
 
 		<!-- FAQ Item 4 -->
 		<div class="relative transform -rotate-1">
-			<img src="window-1.png" alt="window" class="w-full h-full object-contain max-md:scale-130">
-			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-lg:px-18 max-md:px-2">
-				<h3 class="text-xl font-serif font-bold mb-4 max-md:mb-1 max-md:text-lg">What do I need?</h3>
-				<p class="text-sm max-md:text-xs">Your laptop, chargers, toiletries, sleeping bags, and an open mind!</p>
+			<img src="window-1.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-lg:px-14 max-xl:px-18">
+				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0">What do I need?</h3>
+				<p class="text-sm">Your laptop, chargers, toiletries, sleeping bags, and an open mind!</p>
 			</div>
 		</div>
 
 		<!-- FAQ Item 5 -->
 		<div class="relative transform rotate-1">
-			<img src="window-4.png" alt="window" class="w-full h-full object-contain max-md:scale-130">
-			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-lg:px-18 max-md:px-2">
-				<h3 class="text-xl font-serif font-bold mb-4 max-md:mb-1 max-md:text-lg">What has Hack Club done before?</h3>
-				<p class="text-sm max-md:text-xs">Hack Club has run an overnight hackathon in San Francisco, a Game Jam across 50 cities, a hackathon on a train from Vermont to Los Angeles, and much more!</p>
+			<img src="window-4.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-lg:px-14 max-xl:px-18">
+				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-1">What has Hack Club done before?</h3>
+				<p class="text-sm">Hack Club has run a hackathon in at GitHub HQ, a Game Jam in 50 cities, a hackathon on a train from Vermont to Los Angeles, and more!</p>
 			</div>
 		</div>
 
 		<!-- FAQ Item 6 -->
 		<div class="relative transform rotate-1">
-			<img src="window-3.png" alt="window" class="w-full h-full object-contain max-md:scale-130">
-			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-lg:px-18 max-md:px-2">
-				<h3 class="text-xl font-serif font-bold mb-4 max-md:mb-1 max-md:text-lg">I'm not good at coding. Can I still participate?</h3>
-				<p class="text-sm max-md:text-xs">This game jam is for all skill levels! We'll have workshops and other events so join us and let's learn together.</p>
+			<img src="window-3.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-lg:px-14 max-xl:px-18">
+				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0">I'm not good at coding. Can I still participate?</h3>
+				<p class="text-sm">This game jam is for all skill levels! We'll have workshops and other events so join us and let's learn together.</p>
 			</div>
 		</div>
 
 		<!-- FAQ Item 7 -->
 		<div class="relative transform -rotate-2">
-			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-130">
-			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-lg:px-18 max-md:px-2">
-				<h3 class="text-xl font-serif font-bold mb-4 max-md:mb-1 max-md:text-lg">What if my parents are concerned?</h3>
-				<p class="text-sm max-md:text-xs">We're here to help! You can see our parent guide here, or they can reach out to us at daydream@hackclub.com for questions.</p>
+			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-lg:px-14 max-xl:px-18">
+				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-lg:text-lg">What if my parents are concerned?</h3>
+				<p class="text-sm">We're here to help! You can see our parent guide here, or they can reach out to us at daydream@hackclub.com for questions.</p>
 			</div>
 		</div>
 
 		<!-- FAQ Item 8 -->
 		<div class="relative transform -rotate-1">
-			<img src="window-1.png" alt="window" class="w-full h-full object-contain max-md:scale-130">
-			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-lg:px-18 max-md:px-2">
-				<h3 class="text-xl font-serif font-bold mb-4 max-md:mb-1 max-md:text-lg">What can I make at Daydream?</h3>
-				<p class="text-sm max-md:text-xs">ANY type of game based on the theme! Platformer, visual novel, clicker game, etc. Be as creative as possible!</p>
+			<img src="window-1.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-lg:px-14 max-xl:px-18">
+				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0">What can I make at Daydream?</h3>
+				<p class="text-sm">ANY type of game based on the theme! Platformer, visual novel, clicker game, etc. Be as creative as possible!</p>
 			</div>
 		</div>
 	</div>
