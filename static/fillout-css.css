@@ -31,6 +31,9 @@ h1, h2, h3, h4, h5, h6 {
 #question-container {
   border-radius: 0px;
   background-color: #fffbdf;
+  background-image: url('https://daydream.hackclub.com/letter-texture.png');
+  background-size: 100% auto;
+  background-repeat: repeat-y;
   border: 2px solid #d3b180;
   color: #8B4513;
 }
