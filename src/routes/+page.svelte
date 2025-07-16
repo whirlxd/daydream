@@ -231,6 +231,7 @@
 	let showVideoPopup = false;
 
 	function openVideoPopup() {
+		console.log("HERE")
 		// Check if screen is small (mobile/tablet)
 		if (window.innerWidth <= 768) {
 			// Open video directly in new tab for small screens
@@ -770,7 +771,7 @@
 {#if showVideoPopup}
 	<!-- svelte-ignore a11y_click_events_have_key_events -->
 	<div
-		class="fixed inset-0 bg-[rgba(0,0,0,0.5)] bg-opacity-70 flex items-center justify-center z-50"
+		class="fixed inset-0 bg-[rgba(0,0,0,0.5)] bg-opacity-70 flex items-center justify-center z-12000"
 		on:click={closeVideoPopup}
 		on:keydown={(e) => e.key === 'Escape' && closeVideoPopup()}
 		role="dialog"
