@@ -34,10 +34,11 @@
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-0.5em);
+    transform: translateY(var(--hover));
   }
 }
 
 .animate-hover {
+  --hover: -0.5rem;
   animation: hover 2s ease-in-out infinite alternate;
 }

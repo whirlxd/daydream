@@ -419,7 +419,7 @@
 			September 27th & 28th, 2025
 		</h2>
 		<img src="daydream.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4" />
-		<a href="https://hackclub.com" class="absolute top-0 -right-6">
+		<a href="https://hackclub.com" class="absolute top-0 -right-6 max-sm:right-0 max-sm:scale-80 animate-hover ![animation-delay:0.9s] ![--hover:-0.2rem]">
 			<img src="flag-plane.png" alt="Hack Club" class="h-28">
 		</a>
 	</div>
@@ -488,7 +488,7 @@
 	<!-- Video Thumbnail Button -->
 	<button
 		on:click={openVideoPopup}
-		class="absolute bottom-8 right-8 max-sm:right-1/2 max-sm:translate-x-1/2 max-sm:translate-y-8 max-sm:scale-150 w-40 h-24 rounded overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer group md:w-72 md:h-40 sm:w-40 sm:h-24 animate-hover"
+		class="absolute bottom-8 right-8 max-sm:top-[calc(50%+22rem)] max-sm:left-1/2 max-sm:-translate-x-1/2 max-sm:bottom-auto max-sm:right-auto max-sm:scale-150 w-40 h-24 rounded overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer group md:w-72 md:h-40 sm:w-40 sm:h-24 animate-hover max-sm:![--hover:-0.2rem]"
 	>
 		<img src="thumbnail.png" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
 		<div class="absolute inset-0 bg-[rgba(0,0,0,0.1)] bg-opacity-30 group-hover:bg-opacity-20 transition-colors duration-300 flex items-center justify-center">
@@ -504,8 +504,9 @@
 	<div class="absolute top-0 left-0 w-full h-full -z-50 bg-[#FCEFC5]"></div>
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-30 pointer-events-none -z-40"></div>
 	
-	<div class="relative max-w-4xl mx-auto h-full flex items-start pt-24 px-8">
+	<div class="relative max-w-4xl mx-auto h-full flex items-start pt-24 max-sm:pt-40 px-8">
 		<div class="relative z-20 px-20 pt-20 pb-32 rounded-lg mb-0" style="background-image: url('/letter-top.png'), linear-gradient(to bottom, #FCEFC5 100px, transparent 100px), url('/letter-loop.png'); background-size: 100% auto, 100% auto, 100% auto; background-repeat: no-repeat, no-repeat, repeat-y; background-position: top, top, top; background-attachment: local, local, local;">
+			<div class="absolute bottom-0 left-0 w-full h-24 z-10 pointer-events-none bg-[url('/clouds-loop.png')] bg-repeat-x bg-bottom bg-contain"></div>
 			<h2 class="text-5xl font-serif italic text-[#8B4513] mb-10 relative">
 				Dear Hacker,
 				<img src="/underline.svg" alt="" class="absolute left-0 -bottom-3 w-64 h-auto opacity-70">
@@ -547,11 +548,9 @@
 		</div>
 	</div>
 
-	<div class="w-full absolute z-30 max-h-64 bottom-0 max-lg:translate-y-1/2 pointer-events-none">	
+	<div class="w-full absolute z-30 max-h-64 bottom-0 max-xl:translate-y-1/4 max-lg:translate-y-1/2 pointer-events-none">	
 		<img src="/cloud-cover-1.png" alt="" class="w-full h-full object-contain">
-		<!-- Invisible marker for airplane starting point -->
 		<div class="absolute top-1/2 left-1/2 w-1 h-1 -translate-x-1/2 -translate-y-1/2" data-point="0"></div>
-		<!-- Intermediate point to the left -->
 		<div class="absolute top-1/2 left-1/4 w-1 h-1 -translate-x-1/2 -translate-y-1/2" data-point="0.5"></div>
 	</div>
 	<div class="absolute -bottom-44 left-1/2 -translate-x-1/2 w-10/12 lg:max-w-2/3 h-auto object-contain z-100 cursor-text flex flex-row max-md:flex-wrap items-center justify-center align-middle">
@@ -632,21 +631,21 @@
 </div>
 
 <div class="w-full bg-gradient-to-b from-[#FDC5D1] to-[#FAE3C9] items-center justify-center px-32 relative pt-36">
-	<div class="max-md:absolute max-md:left-1/2 max-md:-translate-x-1/2 max-md:z-100">
+	<div class="max-md:absolute max-md:left-1/2 max-md:-translate-x-1/2 max-md:z-100 max-sm:pt-16">
 		<div class="relative w-full max-w-3xl mx-auto min-w-72 max-md:mx-0">
-			<img src="banner.png" alt="100 Cities Worldwide" class="absolute top-0 left-1/2 -translate-x-1/2 max-md:-translate-y-1/2 h-48 w-auto z-100 scale-150 saturate-70 brightness-110 object-contain px-4">
-			<img src="hole.png" alt="" class="w-full h-full max-w-3xl max-sm:scale-150">
+			<img src="banner.png" alt="100 Cities Worldwide" class="absolute top-0 left-1/2 -translate-x-1/2 max-md:-translate-y-1/2 max-sm:translate-y-[calc(-50%-4rem)] h-48 w-auto z-100 scale-150 saturate-70 brightness-110 object-contain px-4">
+			<img src="hole.png" alt="" class="w-full h-full max-w-3xl max-sm:scale-200 pointer-events-none">
 			<iframe 
 				src="https://felt.com/embed/map/Daydream-Events-pPFQnT34SOq6tYlb2S1IdC?loc=0%2C-73.3%2C1.7z&legend=0&cooperativeGestures=1&link=0&geolocation=0&zoomControls=1&scaleBar=0" 
-				class="absolute top-0 left-0 w-full h-full border-0 max-sm:scale-150"
+				class="absolute top-0 left-0 w-full h-full border-0 max-sm:scale-200"
 				style="mask: url('hole.png') no-repeat center; -webkit-mask: url('hole.png') no-repeat center; mask-size: contain; -webkit-mask-size: contain;"
 				title="Felt Map"
 				referrerpolicy="strict-origin-when-cross-origin">
 			</iframe>
-			<p class="absolute left-1/2 -translate-x-1/2 font-sans text-center text-2xl pt-12 max-sm:pt-24 max-sm:text-xl w-max max-w-[80vh] max-md:max-w-full md:px-12 text-[#60574b] z-10000 ">All daydream events are organized by high school students like yourself! <br> <span class="font-bold"><a class="underline hover:text-pink" href="https://forms.hackclub.com/daydream">Sign up</a> to organize now!</span></p>
+			<p class="absolute left-1/2 -translate-x-1/2 font-sans text-center text-2xl pt-12 max-sm:pt-40 max-sm:text-xl w-max max-w-[80vh] max-md:max-w-full md:px-12 text-[#60574b] z-10000 ">All daydream events are organized by high school students like yourself! <br> <span class="font-bold"><a class="underline hover:text-pink" href="https://forms.hackclub.com/daydream">Sign up</a> to organize now!</span></p>
 		</div>
 	</div>
-	<div class="max-md:h-96"></div>
+	<div class="max-md:h-136"></div>
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
 </div>
 
@@ -732,7 +731,7 @@
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
 </div>
 
-<div class="w-full bg-[#FFFFF8] relative -z-10 min-h-80">
+<div class="w-full bg-[#FFFFF8] relative min-h-80">
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('/noise.png')] bg-repeat opacity-10 pointer-events-none z-0"></div>
 	<div class="opacity-60 absolute w-full h-32 bg-[url('brushstroking.png')] bg-repeat-x z-10 bg-size-[100vw_100vh] mix-blend-overlay" style="mask-image: url(/footer-clouds.png); mask-size: contain; mask-repeat: repeat-x; -webkit-mask-image: url(/footer-clouds.png); -webkit-mask-size: contain; -webkit-mask-repeat: repeat-x;"></div>
 	<div class="w-full h-32 bg-[#e99cce] z-5" style="mask-image: url(/footer-clouds.png); mask-size: contain; mask-repeat: repeat-x; -webkit-mask-image: url(/footer-clouds.png); -webkit-mask-size: contain; -webkit-mask-repeat: repeat-x;"></div>
@@ -741,13 +740,13 @@
 	<div class="absolute bottom-20 left-32 text-center z-20 max-md:bottom-12 max-md:left-8 max-md:right-4 max-md:text-left">
 		<p class="text-gray-700 mb-2">Made with ♡ by teenagers, for teenagers at Hack Club</p>
 		<div class="flex space-x-4 max-md:flex-col max-md:space-x-0 max-md:space-y-2">
-			<a href="https://hackclub.com" class="text-gray-700 hover:text-gray-900 transition-colors ">Hack Club</a>
+			<a href="https://hackclub.com" class="underline text-gray-700 hover:text-gray-900 transition-colors ">Hack Club</a>
 			<span class="text-gray-700 max-md:hidden">・</span>
-			<a href="https://hackclub.com/slack" class="text-gray-700 hover:text-gray-900 transition-colors ">Slack</a>
+			<a href="https://hackclub.com/slack" class="underline text-gray-700 hover:text-gray-900 transition-colors ">Slack</a>
 			<span class="text-gray-700 max-md:hidden">・</span>
-			<a href="https://hackclub.com/clubs" class="text-gray-700 hover:text-gray-900 transition-colors ">Clubs</a>
+			<a href="https://hackclub.com/clubs" class="underline text-gray-700 hover:text-gray-900 transition-colors ">Clubs</a>
 			<span class="text-gray-700 max-md:hidden">・</span>
-			<a href="https://hackclub.com/hackathons" class="text-gray-700 hover:text-gray-900 transition-colors ">Hackathons</a>
+			<a href="https://hackclub.com/hackathons" class="underline text-gray-700 hover:text-gray-900 transition-colors ">Hackathons</a>
 		</div>
 	</div>
 
