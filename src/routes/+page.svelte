@@ -501,6 +501,7 @@
 		<button
 			on:click={openVideoPopup}
 			class="w-40 h-24 rounded overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer group md:w-72 md:h-40 sm:w-40 sm:h-24 animate-hover max-sm:![--hover:-0.2rem]"
+			style="box-shadow: 0 0 20px rgba(228, 114, 171, 0.6), 0 0 40px rgba(228, 114, 171, 0.4), 0 0 60px rgba(228, 114, 171, 0.2);"
 		>
 			<img src="thumbnail.png" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
 			<div class="absolute inset-0 bg-[rgba(0,0,0,0.1)] bg-opacity-30 group-hover:bg-opacity-20 transition-colors duration-300 flex items-center justify-center">
