@@ -109,7 +109,6 @@ h1, h2, h3, h4, h5, h6 {
   --daydream-text-brown: #8B4513;
 }
 
-
 #scrollable-widgets-wrapper {
   background: url('https://daydream.hackclub.com/cloudy-bg-dim.png'), linear-gradient(to bottom, #CCF4FD, #AECDF6);
   background-attachment: local !important;
@@ -117,4 +116,12 @@ h1, h2, h3, h4, h5, h6 {
   background-repeat: no-repeat;
   background-size: contain;
   position: relative;
+}
+
+#undefined-error-sub-label {
+  color: #E472AB;
+}
+
+button {
+  box-shadow: none;
 }
