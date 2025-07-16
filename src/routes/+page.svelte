@@ -414,7 +414,7 @@
 		<div class="h-12"></div> 
 		<!-- space for the ship -->
 		<h2
-		class="text-xl font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent absolute left-1/2 max-sm:translate-y-4 max-sm:mb-0 max-md:-mb-8 md:left-[calc(50%+4rem)] -translate-x-1/2 bottom-8 italic w-max md:text-lg sm:text-base"
+		class="text-xl font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent absolute left-1/2 max-sm:translate-y-4 max-sm:mb-0 max-md:-mb-8 md:left-[calc(50%+4rem)] -translate-x-1/2 bottom-8 italic w-max md:text-lg max-sm:text-lg"
 		>
 			September 27th & 28th, 2025
 		</h2>
@@ -425,7 +425,7 @@
 	</div>
 	<div class="relative inline-block px-4">
 		<h3
-			class="text-3xl italic font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent"
+			class="text-3xl italic font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent w-max max-sm:text-2xl mx-auto"
 		>
 			Game jam for high schoolers
 		</h3>
@@ -435,7 +435,7 @@
 			class="absolute left-1/2 -translate-x-1/2 -mt-1 h-auto scale-115"
 		/>
 		<h4
-			class="text-2xl opacity-90 mt-2 font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent"
+			class="text-2xl opacity-90 mt-2 font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent max-sm:text-xl"
 		>
 			Organized by high schoolers in 100 cities worldwide
 		</h4>
