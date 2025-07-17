@@ -491,7 +491,7 @@
 	<div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[80vh] bg-[url(/cloudy-bg.png)] opacity-30 bg-cover bg-no-repeat bg-top pointer-events-none -z-10"></div>
 	
 	<!-- Video Thumbnail Button Container -->
-	<div class="absolute bottom-8 right-8 max-sm:top-[calc(50%+22rem)] max-sm:left-1/2 max-sm:-translate-x-1/2 max-sm:bottom-auto max-sm:right-auto max-sm:scale-150 z-11000 2xl:scale-150 2xl:origin-bottom-right">
+	<div class="absolute bottom-8 right-8 max-sm:top-[calc(50%+22rem)] max-sm:left-1/2 max-sm:-translate-x-1/2 max-sm:bottom-auto max-sm:right-auto max-sm:scale-150 z-11000 [1750px]:scale-150 2xl:origin-bottom-right">
 		<!-- Click Me Text -->
 		<div class="absolute -top-8 -left-4 text-base font-sans text-[#8B4513] transform -rotate-12 pointer-events-none z-10 max-sm:top-full max-sm:left-1/2 max-sm:-translate-x-1/2 max-sm:rotate-0 max-sm:mt-1 max-sm:text-center max-sm:text-xs animate-hover max-sm:![--hover:-0.2rem]">
 			click me!
