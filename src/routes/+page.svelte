@@ -491,7 +491,7 @@
 	<div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[80vh] bg-[url(/cloudy-bg.png)] opacity-30 bg-cover bg-no-repeat bg-top pointer-events-none -z-10"></div>
 	
 	<!-- Video Thumbnail Button Container -->
-	<div class="absolute bottom-8 right-8 max-sm:top-[calc(50%+22rem)] max-sm:left-1/2 max-sm:-translate-x-1/2 max-sm:bottom-auto max-sm:right-auto max-sm:scale-150 z-11000">
+	<div class="absolute bottom-8 right-8 max-sm:top-[calc(50%+22rem)] max-sm:left-1/2 max-sm:-translate-x-1/2 max-sm:bottom-auto max-sm:right-auto max-sm:scale-150 z-11000 2xl:scale-150 2xl:origin-bottom-right">
 		<!-- Click Me Text -->
 		<div class="absolute -top-8 -left-4 text-base font-sans text-[#8B4513] transform -rotate-12 pointer-events-none z-10 max-sm:top-full max-sm:left-1/2 max-sm:-translate-x-1/2 max-sm:rotate-0 max-sm:mt-1 max-sm:text-center max-sm:text-xs animate-hover max-sm:![--hover:-0.2rem]">
 			click me!
@@ -500,7 +500,7 @@
 		<!-- Video Thumbnail Button -->
 		<button
 			on:click={openVideoPopup}
-			class="w-40 h-24 rounded overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer group md:w-72 md:h-40 sm:w-40 sm:h-24 animate-hover max-sm:![--hover:-0.2rem]"
+			class="w-40 h-24 rounded overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer group lg:w-72 lg:h-40 sm:w-40 sm:h-24 animate-hover max-sm:![--hover:-0.2rem]"
 			style="box-shadow: 0 0 20px #905429"
 		>
 			<img src="thumbnail.png" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
@@ -513,7 +513,7 @@
 	</div>
 </div>
 
-<div class="w-full relative flex items-start justify-center min-h-screen">
+<div class="w-full relative flex items-start justify-center">
 	<!-- background -->
 	<div class="absolute top-0 left-0 w-full h-full -z-50 bg-[#FCEFC5]"></div>
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-30 pointer-events-none -z-40"></div>
@@ -574,7 +574,7 @@
 </div>
 <div class="w-full h-64 bg-[#FCEFC5]"></div>
 
-<div class="flex flex-row flex-wrap w-full h-auto bg-gradient-to-b from-[#FCEFC5] to-[#FEC1CF] px-36 max-md:px-8 pb-50 max-sm:pb-24 relative" id="islands-container">
+<div class="flex flex-row flex-wrap w-full h-auto bg-gradient-to-b from-[#FCEFC5] to-[#FEC1CF] px-36 max-md:px-8 pb-50 max-sm:pb-24 relative xl:pt-12 2xl:pt-48" id="islands-container">
 
 	<img src="/clouds-left-2.png" alt="" class="absolute left-0 w-3/12 top-12">
 	<img src="/clouds-left-3.png" alt="" class="absolute left-0 w-2/12 bottom-32">
