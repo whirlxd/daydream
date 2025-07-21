@@ -246,17 +246,43 @@
 		showVideoPopup = false;
 	}
 
-	function handleFormSubmit(event: Event) {
+	async function handleFormSubmit(event: Event) {
 		event.preventDefault();
 		const form = event.target as HTMLFormElement;
 		const emailInput = form.querySelector('input[name="email"]') as HTMLInputElement;
 		const email = emailInput.value;
 		
-		// Find the hidden form and submit it
-		const hiddenForm = document.getElementById('hidden-signup-form') as HTMLFormElement;
-		const hiddenEmailInput = hiddenForm.querySelector('input[name="email"]') as HTMLInputElement;
-		hiddenEmailInput.value = email;
-		hiddenForm.submit();
+		// Save email to Airtable first (if configured)
+		try {
+			// const apiKey = import.meta.env.VITE_AIRTABLE_API_KEY;
+			// const baseId = import.meta.env.VITE_AIRTABLE_BASE_ID;
+			// const tableName = import.meta.env.VITE_AIRTABLE_TABLE_NAME || 'email_addresses';
+			const apiKey = atob("cGF0UmtKM3UyTld6RVBzRmcuNmVjYzdiOTAyNjIyYThlZDUzYzA5YjM1OGI3ODQ5ZTQ5ZTBjZTkwNDYwN2ZiY2MwMWJiMDczZDAxOGM2NWUwMg")
+			const baseId = atob("YXBwNWQ3cERRMW9iS2FabHM");
+			const tableName = "email_addresses"
+			
+			if (!apiKey || !baseId) {
+				console.log('Airtable not configured - skipping save');
+			} else {
+				await fetch(`https://api.airtable.com/v0/${baseId}/${tableName}`, {
+					method: 'POST',
+					headers: {
+						'Authorization': `Bearer ${apiKey}`,
+						'Content-Type': 'application/json',
+					},
+					body: JSON.stringify({
+						records: [{
+							fields: {
+								email_address: email,
+							}
+						}]
+					})
+				});
+			}
+		} catch (error) {
+			console.warn('Failed to save email:', error);
+			// Continue with form redirect even if Airtable fails
+		}
 		
 		// Open the Hackclub form with email parameter
 		window.open(`https://forms.hackclub.com/daydream?email=${encodeURIComponent(email)}`, '_blank');
@@ -804,19 +830,3 @@
 	</div>
 {/if}
 
-<!-- hidden form for newsletter signup -->
-<form
-	id="hidden-signup-form"
-	method="post"
-	action="https://app.loops.so/api/newsletter-form/clo3frr4v02f3jv0qqu6hgfqs"
-	target="hidden-iframe"
-	style="display: none;"
->
-	<input type="email" name="email" required>
-	<input type="hidden" name="mailingLists" value="cmd3c94kz0hvz0iwt7ps28cyd">
-	<button type="submit">Sign up</button>
-</form>
-
-<!-- hidden iframe to receive form submission -->
-<!-- svelte-ignore a11y_missing_attribute -->
-<iframe name="hidden-iframe" style="display: none;"></iframe>
