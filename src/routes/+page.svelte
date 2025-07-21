@@ -230,6 +230,13 @@
 	let isFlipped = false;
 	let showVideoPopup = false;
 
+	// Particle system
+	let particles: Array<{ id: number; x: number; y: number; opacity: number; rotation: number; velocityY: number; velocityX: number; scale: number }> = [];
+	let particleIdCounter = 0;
+	let particleContainer: HTMLElement;
+	let isTabVisible = true;
+	const particleSpeedScale = 0.6;
+
 	function openVideoPopup() {
 		console.log("HERE")
 		// Check if screen is small (mobile/tablet)
@@ -342,6 +349,56 @@
 		}
 	}
 
+	function createParticle () {
+		if (!particleContainer || !isTabVisible) return;
+		
+		const button = document.querySelector('a[href="https://forms.hackclub.com/daydream-stickers"]');
+		if (!button) return;
+		
+		const buttonRect = button.getBoundingClientRect();
+		const containerRect = particleContainer.getBoundingClientRect();
+		
+		// Spawn particles with 16px inset from edges (about half border radius)
+		const edgeInset = 16;
+		const spawnWidth = buttonRect.width - (edgeInset * 2);
+		const spawnOffset = edgeInset;
+		
+		const particle = {
+			id: particleIdCounter++,
+			x: buttonRect.left - containerRect.left + spawnOffset + Math.random() * spawnWidth,
+			y: buttonRect.top + buttonRect.height / 2 - containerRect.top,
+			opacity: 1,
+			rotation: Math.random() * 360,
+			velocityY: (0.5 + Math.random() * 0.3) * particleSpeedScale,
+			velocityX: 0,
+			scale: 0.7 + Math.random() * 0.5
+		};
+		
+		particles = [...particles, particle];
+	}
+
+	function updateParticles() {
+		if (!isTabVisible) return;
+		
+		particles = particles.map(particle => ({
+			...particle,
+			x: particle.x + particle.velocityX,
+			y: particle.y + particle.velocityY,
+			opacity: particle.opacity - 0.01,
+			rotation: particle.rotation + 2,
+			scale: particle.scale
+		})).filter(particle => particle.opacity > 0);
+	}
+
+	function animateParticles() {
+		updateParticles();
+		requestAnimationFrame(animateParticles);
+	}
+
+	function handleVisibilityChange() {
+		isTabVisible = !document.hidden;
+	}
+
 	function updatePath() {
 		const container = document.getElementById("islands-container");
 		const pathElement = document.getElementById("dotted-path");
@@ -379,10 +436,21 @@
 		window.addEventListener("scroll", updateAirplanePosition);
 		window.addEventListener("resize", updatePath);
 		
+		// Handle tab visibility changes
+		document.addEventListener("visibilitychange", handleVisibilityChange);
+		
+		// Start particle animation
+		animateParticles();
+		
+		// Start particle spawning
+		const particleInterval = setInterval(createParticle, 250);
+		
 		// Cleanup
 		return () => {
 			window.removeEventListener("scroll", updateAirplanePosition);
 			window.removeEventListener("resize", updatePath);
+			document.removeEventListener("visibilitychange", handleVisibilityChange);
+			clearInterval(particleInterval);
 			if (animationFrameId) {
 				cancelAnimationFrame(animationFrameId);
 			}
@@ -475,6 +543,18 @@
 
 	<!-- <img src="hot-air-balloon.png" alt="" class="absolute w-1/8 right-32 bottom-40 z-20"> -->
 	<!-- <img src="hot-air-balloon.png" alt="" class="absolute w-1/12 left-36 bottom-81 z-20"> -->
+
+	<!-- Particle container -->
+	<div bind:this={particleContainer} class="fixed inset-0 pointer-events-none z-0 opacity-70">
+		{#each particles as particle (particle.id)}
+			<img
+				src="particle.png"
+				alt=""
+				class="absolute w-3 h-3 pointer-events-none"
+				style="left: {particle.x}px; top: {particle.y}px; opacity: {particle.opacity}; transform: rotate({particle.rotation}deg) scale({particle.scale});"
+			/>
+		{/each}
+	</div>
 
 	<img src="/clouds-top-middle-bg.svg" alt="" class="absolute left-5/12 -translate-x-1/2 w-7/12 -bottom-24">
 	<div class="absolute left-5/12 -translate-x-1/2 w-7/12 -bottom-24 bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none h-full" style="mask-image: url('/clouds-top-middle-bg.svg'); mask-size: contain; mask-repeat: no-repeat; mask-position: center; -webkit-mask-image: url('/clouds-top-middle-bg.svg'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center;"></div>
