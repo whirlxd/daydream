@@ -593,8 +593,11 @@
 		<div class="relative translate-y-8 max-md:translate-y-4">
 			<img src="/letter-1-front.png" alt="" class="object-contain absolute -bottom-16 -left-13 w-28 h-28">
 			<img src="/letter-1-back.png" alt="" class="object-contain absolute -bottom-16 -left-13 w-28 h-28 -z-10">
-			<div class="bg-[#FFF5FA] border-2 border-[#AA8B83] rounded-2xl text-xl font-serif p-6 w-56 text-center max-md:w-64 max-md:text-lg" data-point="1">
-				<span class="font-sans text-[#E472AB] font-bold text-[1.3rem] mr-1">#1:</span> Find a team of co-organizers
+			<div class="relative w-72 h-48 max-md:w-80 max-md:h-44" data-point="1">
+				<img src="paper1.png" alt="" class="w-full h-full object-contain">
+				<div class="absolute inset-0 justify-center text-center p-6 text-xl font-serif max-md:text-lg text-[#8B4513] inline-block content-center">
+					<span class="font-sans text-[#E472AB] font-bold text-[1.3rem] mr-1">#1:</span> Find a team of co-organizers
+				</div>
 			</div>
 		</div>
 		<img src="/island-1.png" alt="" class="w-72 h-72 object-contain max-md:w-64 max-md:h-64">
@@ -604,8 +607,11 @@
 		<div class="relative translate-y-24 max-md:translate-y-4">
 			<img src="/letter-2-front.png" alt="" class="object-contain absolute -bottom-16 -right-13 w-28 h-28">
 			<img src="/letter-2-back.png" alt="" class="object-contain absolute -bottom-16 -right-13 w-28 h-28 -z-10">
-			<div class="bg-[#FFF5FA] border-2 border-[#AA8B83] rounded-2xl text-xl font-serif p-6 w-56 text-center max-md:w-64 max-md:text-lg" data-point="2">
-				<span class="font-sans text-[#639DEB] font-bold text-[1.3rem] mr-1">#2:</span> Find a venue to host your hackathon
+			<div class="relative w-72 h-48 max-md:w-80 max-md:h-44" data-point="2">
+				<img src="paper2.png" alt="" class="w-full h-full object-contain">
+				<div class="absolute inset-0 justify-center text-center p-6 text-xl font-serif max-md:text-lg text-[#8B4513] inline-block content-center">
+					<span class="font-sans text-[#639DEB] font-bold text-[1.3rem] mr-1">#2:</span> Find a venue to host your hackathon
+				</div>
 			</div>
 		</div>
 		<img src="/island-3.png" alt="" class="w-86 h-86 object-contain max-md:w-64 max-md:h-64">
@@ -614,8 +620,11 @@
 		<div class="relative translate-y-8 max-md:translate-y-4">
 			<img src="/letter-3-front.png" alt="" class="object-contain absolute -bottom-18 left-24 w-28 h-28">
 			<img src="/letter-3-back.png" alt="" class="object-contain absolute -bottom-18 left-24 w-28 h-28 -z-10">
-			<div class="bg-[#FFF5FA] border-2 border-[#AA8B83] rounded-2xl text-xl font-serif p-6 w-56 text-center max-md:w-64 max-md:text-lg" data-point="3">
-				<span class="font-sans text-[#AB68E2] font-bold text-[1.3rem] mr-1">#3:</span> Find sponsors to buy merch and prizes
+			<div class="relative w-72 h-48 max-md:w-80 max-md:h-44" data-point="3">
+				<img src="paper3.png" alt="" class="w-full h-full object-contain">
+				<div class="absolute inset-0 justify-center text-center p-6 text-xl font-serif max-md:text-lg text-[#8B4513] inline-block content-center">
+					<span class="font-sans text-[#AB68E2] font-bold text-[1.3rem] mr-1">#3:</span> Find sponsors to buy merch and prizes
+				</div>
 			</div>
 		</div>
 		<img src="/island-2.png" alt="" class="w-72 h-72 object-contain max-md:w-64 max-md:h-64">
@@ -624,8 +633,11 @@
 		<div class="relative translate-y-24 max-md:translate-y-4">
 			<img src="/letter-4-front.png" alt="" class="object-contain absolute -bottom-16 -right-13 w-28 h-28">
 			<img src="/letter-4-back.png" alt="" class="object-contain absolute -bottom-16 -right-13 w-28 h-28 -z-10">
-			<div class="bg-[#FFF5FA] border-2 border-[#AA8B83] rounded-2xl text-xl font-serif p-6 w-56 text-center max-md:w-64 max-md:text-lg" data-point="4">
-				<span class="font-sans text-[#F2993E] font-bold text-[1.3rem] mr-1">#4:</span> Buy supplies, order food, and prepare workshops
+			<div class="relative w-72 h-48 max-md:w-80 max-md:h-44" data-point="4">
+				<img src="paper4.png" alt="" class="w-full h-full object-contain">
+				<div class="absolute inset-0 justify-center text-center p-6 text-xl font-serif max-md:text-lg text-[#8B4513] inline-block content-center">
+					<span class="font-sans text-[#F2993E] font-bold text-[1.3rem] mr-1">#4:</span> Buy supplies, order food, and prepare workshops
+				</div>
 			</div>
 		</div>
 		<img src="/island-4.png" alt="" class="w-88 h-88 object-contain max-md:w-64 max-md:h-64">
