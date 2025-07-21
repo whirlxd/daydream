@@ -91,7 +91,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-[data-cy="input-component"], div:has(> div > [data-cy="select-value-container"]), .ant-picker {
+[data-cy="input-component"],
+div:has(> div > [data-cy="select-value-container"]),
+.ant-picker,
+#react-select-2-live-region + span + div, .PhoneInputCountry, .PhoneInputInput {
   background-color: #fffef2;
   border-color: rgba(211, 177, 128,0.5);
   border-radius: 0px;
