@@ -135,3 +135,9 @@ button {
 a {
   color: #548abb;
 }
+
+/* make the 'Thank You' text use the header font */
+.fillout-field-thank-you > div > div > div:not(.mt-\[3px\]) p {
+  font-family: 'Expensify New Kansas', ui-serif, serif !important;
+  font-style: italic;
+}
