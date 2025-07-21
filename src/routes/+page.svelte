@@ -1,6 +1,34 @@
 <script lang="ts">
 	import { onMount } from "svelte";
 
+	// Cities where the game jam is happening
+	const cities = `Columbus
+Lisbon 
+Boston
+Giza
+Vancouver
+Houston
+New York City
+Bengaluru
+Tampa
+Auckland
+Omaha
+Phoenix
+Madrid
+Boise
+Ottawa
+Hangzhou
+Islamabad
+London
+Visakhapatnam
+Dubai
+San Francisco
+Minneapolis
+Seattle
+Signapore
+Sydney
+Mumbai`.split("\n")
+
 	function createSmoothPath(points: Array<{ x: number; y: number }>) {
 		if (points.length < 2) return "";
 		
@@ -229,6 +257,9 @@
 	let animationFrameId: number | null = null;
 	let isFlipped = false;
 	let showVideoPopup = false;
+	
+	// Generate ticker text from cities array
+	let tickerText = cities.join(" • ");
 
 	// Particle system
 	let particles: Array<{ id: number; x: number; y: number; opacity: number; rotation: number; velocityY: number; velocityX: number; scale: number }> = [];
@@ -479,6 +510,32 @@
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-30 pointer-events-none"></div>
 
 	<div class="absolute top-0 left-0 w-full h-full bg-[url(/buildings-back.png)] bg-no-repeat bg-contain pointer-events-none lg:-translate-y-15"></div>
+	
+	<!-- Animated text ticker along curvy line -->
+	<div class="absolute top-0 left-0 w-full h-full pointer-events-none lg:-translate-y-35 -translate-y-20 overflow-hidden">
+		<svg width="1280" height="464" viewBox="0 0 1280 464" class="w-full h-full object-contain" xmlns="http://www.w3.org/2000/svg">
+			<defs>
+				<path id="curvy-path" d="M-41 274.995C91.5 229.995 203.5 64.4946 483.5 39.9946C763.5 15.4946 892.5 151.495 1165 196.495C1383 232.495 1462.5 263.828 1475 274.995"/>
+				<mask id="reveal-mask">
+					<rect x="0" y="0" width="0" height="464" fill="white">
+						<animate attributeName="width" values="0;1280" dur="2s" calcMode="spline" keySplines="0.05,0.7,0.3,1" keyTimes="0;1" begin="0.75s" fill="freeze"/>
+					</rect>
+				</mask>
+			</defs>
+			<g mask="url(#reveal-mask)">
+				<!-- Background path stroke -->
+				<path d="M-41 268.495C91.5 223.495 203.5 57.9946 483.5 33.4946C763.5 8.9946 892.5 144.995 1165 189.995C1383 225.995 1462.5 257.328 1475 268.495" 
+					  stroke="#9EE4F2" stroke-width="28" fill="none" stroke-linecap="round"/>
+				<text font-family="sans-serif" font-size="18" fill="#EDFCFF" font-weight="bold">
+					<textPath href="#curvy-path" startOffset="-100%">
+						{Array(2).fill(tickerText).join(" • ")} • 
+						<animate id="ticker-animation" attributeName="startOffset" values="-100%;0%" dur="30s" repeatCount="indefinite"/>
+					</textPath>
+				</text>
+			</g>
+		</svg>
+	</div>
+	
 	<div class="absolute top-0 left-0 w-full h-full bg-[url(/buildings-front.png)] bg-no-repeat bg-contain pointer-events-none lg:-translate-y-15"></div>
 	<!-- brush texture clipped to buildings -->
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat pointer-events-none opacity-100 -translate-y-15 bg-center mix-blend-overlay" style="mask-image: url('/buildings-top.png'); mask-size: contain; mask-repeat: no-repeat; mask-position: center top; -webkit-mask-image: url('/buildings-top.png'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center top;"></div>
@@ -545,7 +602,7 @@
 	<!-- <img src="hot-air-balloon.png" alt="" class="absolute w-1/12 left-36 bottom-81 z-20"> -->
 
 	<!-- Particle container -->
-	<div bind:this={particleContainer} class="fixed inset-0 pointer-events-none z-0 opacity-70">
+	<div bind:this={particleContainer} class="absolute inset-0 pointer-events-none z-0 opacity-70">
 		{#each particles as particle (particle.id)}
 			<img
 				src="particle.png"
