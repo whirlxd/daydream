@@ -46,6 +46,6 @@ export async function POST({ request, getClientAddress }) {
 	} catch (error) {
 		console.error('Error saving email to Airtable:', error);
 		
-		return new Response(null, { status: 200 });
+		return new Response(null, { status: 418 });
 	}
 }

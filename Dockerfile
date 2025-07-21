@@ -13,6 +13,11 @@ RUN npm ci
 # Copy source code
 COPY . .
 
+# Set placeholder environment variables for build
+ENV AIRTABLE_API_KEY=""
+ENV AIRTABLE_BASE_ID=""
+ENV AIRTABLE_TABLE_NAME=""
+
 # Build the application
 RUN npm run build
 
