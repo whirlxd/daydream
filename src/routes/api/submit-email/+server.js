@@ -1,6 +1,6 @@
 import Airtable from 'airtable';
 import { json } from '@sveltejs/kit';
-import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID, AIRTABLE_TABLE_NAME } from '$env/static/private';
+import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID, AIRTABLE_EMAILS_TABLE } from '$env/static/private';
 
 if (!AIRTABLE_API_KEY || !AIRTABLE_BASE_ID) {
 	console.warn('Airtable environment variables not configured, email saving will be skipped');
@@ -30,7 +30,7 @@ export async function POST({ request, getClientAddress }) {
 		
 		let recordId = null;
 		if (base) {
-			const record = await base(AIRTABLE_TABLE_NAME || 'email_addresses').create([
+			const record = await base(AIRTABLE_EMAILS_TABLE || 'email_addresses').create([
 				{
 					fields: {
 						email,
