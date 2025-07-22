@@ -778,7 +778,7 @@ Mumbai`.split("\n")
 				</p>
 				
 				<p class="text-center font-bold text-2xl mt-10 text-[#2C3E50]">
-					Check out our <a class="underline hover:text-pink" href="https://www.youtube.com/watch?v=UxYFVl0R45o">video!</a>
+					Check out our <a class="underline hover:text-pink" href="https://www.youtube.com/watch?v=hNYsNSY7Vz0">video!</a>
 				</p>
 			</div>
 		</div>
@@ -1027,7 +1027,7 @@ Mumbai`.split("\n")
 			on:click|stopPropagation
 		>
 			<iframe
-				src="https://www.youtube.com/embed/UxYFVl0R45o?autoplay=1"
+				src="https://www.youtube.com/embed/hNYsNSY7Vz0?autoplay=1"
 				title="YouTube video player"
 				frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
