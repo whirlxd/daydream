@@ -1,5 +1,8 @@
 <script lang="ts">
 	import { onMount } from "svelte";
+	
+	/** @type {import('./$types').PageData} */
+	export let data;
 
 	// Cities where the game jam is happening
 	const cities = `Columbus
@@ -258,8 +261,19 @@ Mumbai`.split("\n")
 	let isFlipped = false;
 	let showVideoPopup = false;
 	
-	// Generate ticker text from cities array
-	let tickerText = cities.join(" • ");
+	// Generate ticker text from cities array with user's city inserted
+	let tickerText = "";
+	$: {
+		const result: string[] = [];
+		cities.forEach((city, index) => {
+			result.push(city);
+			// Insert user's city after every 12 cities
+			if ((index + 1) % 12 === 0 && data.userCity) {
+				result.push(`<a href="https://example.com"><tspan fill="#f49cc8" style="text-shadow: 0 0 8px #f7d4e6">${data.userCity}?</tspan></a>`);
+			}
+		});
+		tickerText = result.join(" • ");
+	}
 
 	// Particle system
 	let particles: Array<{ id: number; x: number; y: number; opacity: number; rotation: number; velocityY: number; velocityX: number; scale: number }> = [];
@@ -460,6 +474,8 @@ Mumbai`.split("\n")
 	}
 
 	onMount(() => {
+		console.log('User city:', data.userCity);
+		
 		// Initial path calculation
 		setTimeout(updatePath, 100);
 		
@@ -528,7 +544,7 @@ Mumbai`.split("\n")
 					  stroke="#9EE4F2" stroke-width="28" fill="none" stroke-linecap="round"/>
 				<text font-family="sans-serif" font-size="18" fill="#EDFCFF" font-weight="bold">
 					<textPath href="#curvy-path" startOffset="-100%">
-						{Array(2).fill(tickerText).join(" • ")} • 
+						{@html Array(2).fill(tickerText).join(" • ")} • 
 						<animate id="ticker-animation" attributeName="startOffset" values="-100%;0%" dur="30s" repeatCount="indefinite"/>
 					</textPath>
 				</text>
