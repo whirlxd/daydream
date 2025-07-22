@@ -1,12 +1,13 @@
 import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID, GEOCODER_API_KEY } from '$env/static/private';
-import { json } from '@sveltejs/kit';
 
 export const prerender = true;
 
-/** @type {import('./$types').RequestHandler} */
-export async function GET() {
+/** @type {import('./$types').PageServerLoad} */
+export async function load() {
 	if (!AIRTABLE_API_KEY || !AIRTABLE_BASE_ID || !GEOCODER_API_KEY) {
-		return json({ error: 'Missing required environment variables' }, { status: 500 });
+		return {
+			locations: []
+		};
 	}
 
 	try {
@@ -56,9 +57,13 @@ export async function GET() {
 			}
 		}
 
-		return json(locations);
+		return {
+			locations
+		};
 	} catch (error) {
 		console.error('Failed to fetch map data:', error);
-		return json({ error: 'Failed to fetch map data' }, { status: 500 });
+		return {
+			locations: []
+		};
 	}
 }
