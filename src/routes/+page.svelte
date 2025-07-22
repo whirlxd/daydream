@@ -325,6 +325,9 @@ Mumbai`.split("\n")
 		
 		if (!container || !airplane) return;
 		
+		// Create an object to animate progress
+		const planeProgress = { value: 0 };
+		
 		// Get points for path calculation
 		const getPoints = () => {
 			const containerRect = container.getBoundingClientRect();
@@ -343,31 +346,40 @@ Mumbai`.split("\n")
 			return points;
 		};
 
-		// Create animation timeline
+		// Update function that gets called as progress changes
+		const updatePlanePosition = () => {
+			const points = getPoints();
+			if (points.length > 0) {
+				const airplanePos = getPointAlongPath(points, planeProgress.value);
+				
+				gsap.set(airplane, {
+					left: `${airplanePos.x}px`,
+					top: `${airplanePos.y}px`,
+					rotation: airplanePos.angle,
+					scaleY: Math.abs(airplanePos.angle) > 90 ? -1 : 1,
+					transformOrigin: "center center",
+					transform: `translate(-50%, calc(-50% - 0.5rem))`
+				});
+			}
+		};
+
+		// Create animation timeline with actual tween (this makes scrub work!)
 		const tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: container,
-				start: "top 100%",        // Start earlier: when container top hits 90% down viewport
-				end: "bottom 100%",       // End later: when container bottom hits 10% from viewport top
-				scrub: 0.8,              // Faster/more responsive (was 1.2)
-				// markers: true,        // Uncomment to see start/end markers for debugging
-				onUpdate: (self) => {
-					const points = getPoints();
-					if (points.length > 0) {
-						const progress = self.progress;
-						const airplanePos = getPointAlongPath(points, progress);
-						
-						gsap.set(airplane, {
-							left: `${airplanePos.x}px`,
-							top: `${airplanePos.y}px`,
-							rotation: airplanePos.angle,
-							scaleY: Math.abs(airplanePos.angle) > 90 ? -1 : 1,
-							transformOrigin: "center center",
-							transform: `translate(-50%, calc(-50% - 0.5rem))`
-						});
-					}
-				}
+				start: "top 100%",        // When to start
+				end: "bottom 100%",         // When to end
+				scrub: 3,                 // NOW this works! Try 0.5 (fast) to 5 (slow)
+				// markers: true,         // Uncomment to see trigger points
 			}
+		});
+
+		// Animate the progress value - this is what gets "scrubbed"
+		tl.to(planeProgress, {
+			value: 1,
+			duration: 1,              // Duration doesn't matter with scrub
+			ease: "none",            // Linear progression
+			onUpdate: updatePlanePosition
 		});
 
 		return tl;
