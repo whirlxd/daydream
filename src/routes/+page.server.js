@@ -11,7 +11,7 @@ export async function load({ request, getClientAddress }) {
 	if (GEOCODER_API_KEY && userIP) {
 		try {
 			// Call the Hack Club geocoding API
-			const response = await fetch(`https://geocoder.hackclub.com/v1/geoip?ip=71.192.170.130&key=${GEOCODER_API_KEY}`);
+			const response = await fetch(`https://geocoder.hackclub.com/v1/geoip?ip=${userIP}&key=${GEOCODER_API_KEY}`);
 			
 			if (response.ok) {
 				locationData = await response.json();
