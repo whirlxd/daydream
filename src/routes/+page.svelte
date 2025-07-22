@@ -528,8 +528,8 @@ Mumbai`.split("\n")
 	<div class="absolute top-0 left-0 w-full h-full bg-[url(/buildings-back.png)] bg-no-repeat bg-contain pointer-events-none lg:-translate-y-15"></div>
 	
 	<!-- Animated text ticker along curvy line -->
-	<div class="absolute top-0 left-0 w-full h-full pointer-events-none lg:-translate-y-35 -translate-y-20 overflow-hidden hidden lg:block">
-		<svg width="1280" height="464" viewBox="0 0 1280 464" class="w-full h-full object-contain" xmlns="http://www.w3.org/2000/svg">
+	<div class="absolute top-0 left-0 w-full h-full pointer-events-none lg:-translate-y-35 -translate-y-20 overflow-hidden max-sm:hidden">
+		<svg width="1280" height="464" viewBox="0 0 1280 464" class="w-full h-max pt-32 object-contain" xmlns="http://www.w3.org/2000/svg">
 			<defs>
 				<path id="curvy-path" d="M-41 274.995C91.5 229.995 203.5 64.4946 483.5 39.9946C763.5 15.4946 892.5 151.495 1165 196.495C1383 232.495 1462.5 263.828 1475 274.995"/>
 				<mask id="reveal-mask">
