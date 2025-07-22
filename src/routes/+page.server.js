@@ -1,10 +1,9 @@
 import { GEOCODER_API_KEY } from '$env/static/private';
-import { building } from '$app/environment';
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load({ request, getClientAddress }) {
-	// Get user's IP address (skip during prerendering)
-	const userIP = building ? null : getClientAddress();
+	// Get user's IP address
+	const userIP = getClientAddress();
 	
 	
 	let locationData = null;
