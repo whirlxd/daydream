@@ -363,22 +363,22 @@ Mumbai`.split("\n")
 			}
 		};
 
-		// Create animation timeline with actual tween (this makes scrub work!)
+		// Create animation timeline
 		const tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: container,
-				start: "top 100%",        // When to start
-				end: "bottom 100%",         // When to end
-				scrub: 3,                 // NOW this works! Try 0.5 (fast) to 5 (slow)
-				// markers: true,         // Uncomment to see trigger points
+				start: "top 100%",
+				end: "bottom 100%",
+				scrub: 1.5,
+				// markers: true,
 			}
 		});
 
-		// Animate the progress value - this is what gets "scrubbed"
+		// Animate the progress value
 		tl.to(planeProgress, {
 			value: 1,
-			duration: 1,              // Duration doesn't matter with scrub
-			ease: "none",            // Linear progression
+			duration: 1,
+			ease: "none",
 			onUpdate: updatePlanePosition
 		});
 
@@ -467,6 +467,66 @@ Mumbai`.split("\n")
 		// Register GSAP plugins
 		gsap.registerPlugin(ScrollTrigger);
 		
+		// Setup parallax for cloudy background
+		const cloudyBg = document.querySelector('.cloudy-bg-parallax');
+		if (cloudyBg) {
+			gsap.to(cloudyBg, {
+				yPercent: 20,
+				ease: "none",
+				scrollTrigger: {
+					trigger: cloudyBg,
+					start: "bottom bottom",
+					end: "bottom top",
+					scrub: true
+				}
+			});
+		}
+		
+		// Setup parallax for hero UI elements
+		const heroUI = document.querySelector('.hero-ui-parallax');
+		if (heroUI) {
+			gsap.to(heroUI, {
+				yPercent: 8,
+				ease: "none",
+				scrollTrigger: {
+					trigger: heroUI,
+					start: "bottom bottom",
+					end: "bottom top",
+					scrub: true
+				}
+			});
+		}
+		
+		// Setup parallax for back buildings (slower movement)
+		const backBuildings = document.querySelector('.buildings-back-parallax');
+		if (backBuildings) {
+			gsap.to(backBuildings, {
+				yPercent: 20,
+				ease: "none",
+				scrollTrigger: {
+					trigger: backBuildings,
+					start: "bottom bottom",
+					end: "bottom top",
+					scrub: true
+				}
+			});
+		}
+		
+		// Setup parallax for front buildings (faster movement)
+		const frontBuildings = document.querySelector('.buildings-front-parallax');
+		if (frontBuildings) {
+			gsap.to(frontBuildings, {
+				yPercent: 10,
+				ease: "none",
+				scrollTrigger: {
+					trigger: frontBuildings,
+					start: "top top",
+					end: "bottom top",
+					scrub: true
+				}
+			});
+		}
+		
 		// Initial path calculation
 		setTimeout(() => {
 			updatePath();
@@ -519,7 +579,10 @@ Mumbai`.split("\n")
 <div class="flex flex-col items-center justify-center h-screen text-center bg-gradient-to-b from-[#CCF4FD] to-[#B8D9F8] bg-blend-overlay relative">
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-30 pointer-events-none"></div>
 
-	<div class="absolute top-0 left-0 w-full h-full bg-[url(/buildings-back.png)] bg-no-repeat bg-contain pointer-events-none lg:-translate-y-15"></div>
+	<!-- Cloudy Background -->
+	<div class="cloudy-bg-parallax absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[80vh] bg-[url(/cloudy-bg.png)] opacity-30 bg-cover bg-no-repeat bg-top pointer-events-none"></div>
+
+	<div class="buildings-back-parallax absolute top-0 left-0 w-full h-full bg-[url(/buildings-back.png)] bg-no-repeat bg-contain pointer-events-none lg:-translate-y-15"></div>
 	
 	<!-- Animated text ticker along curvy line -->
 	<div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none lg:-translate-y-35 -translate-y-20 overflow-hidden max-md:w-200 max-lg:w-[125%]">
@@ -549,72 +612,74 @@ Mumbai`.split("\n")
 	<!-- brush texture clipped to back buildings -->
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat pointer-events-none opacity-100 lg:-translate-y-15 bg-center mix-blend-overlay" style="mask-image: url('/buildings-back.png'); mask-size: contain; mask-repeat: no-repeat; mask-position: center top; -webkit-mask-image: url('/buildings-back.png'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center top;"></div>
 	
-	<div class="absolute top-0 left-0 w-full h-full bg-[url(/buildings-front.png)] bg-no-repeat bg-contain pointer-events-none lg:-translate-y-15"></div>
+	<div class="buildings-front-parallax absolute top-0 left-0 w-full h-full bg-[url(/buildings-front.png)] bg-no-repeat bg-contain pointer-events-none lg:-translate-y-15"></div>
 	<!-- brush texture clipped to front buildings -->
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat pointer-events-none opacity-100 lg:-translate-y-15 bg-center mix-blend-overlay" style="mask-image: url('/buildings-front.png'); mask-size: contain; mask-repeat: no-repeat; mask-position: center top; -webkit-mask-image: url('/buildings-front.png'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center top;"></div>
-	<div class="inline-block relative">
-		<div class="h-12"></div> 
-		<!-- space for the ship -->
-		<h2
-		class="text-xl font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent absolute left-1/2 max-sm:translate-y-4 max-sm:mb-0 max-md:-mb-8 md:left-[calc(50%+4rem)] -translate-x-1/2 bottom-8 italic w-max md:text-lg max-sm:text-lg"
-		>
-			September 27th & 28th, 2025
-		</h2>
-		<img src="daydream.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4" />
-		<a href="https://hackclub.com" class="absolute top-0 -right-6 max-sm:right-0 max-sm:scale-80 animate-hover ![animation-delay:0.9s] ![--hover:-0.2rem]">
-			<img src="flag-plane.png" alt="Hack Club" class="h-28">
-		</a>
-	</div>
-	<div class="relative inline-block px-4">
-		<h3
-			class="text-3xl italic font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent w-max max-sm:text-2xl mx-auto"
-		>
-			Game jam for high schoolers
-		</h3>
-		<img
-			src="underline.svg"
-			alt=""
-			class="absolute left-1/2 -translate-x-1/2 -mt-1 h-auto scale-115"
-		/>
-		<h4
-			class="text-2xl opacity-90 mt-2 font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent max-sm:text-xl"
-		>
-			Organized by high schoolers in 100 cities worldwide
-		</h4>
-	</div>
-	
-	<div class="mt-8 flex flex-col items-center gap-3 z-10 max-md:scale-90">
-		<form on:submit={handleFormSubmit} class="rounded-full bg-white border-2 border-dark font-sans p-2 flex flex-row items-center gap-2 shadow-[0_3px_0_0_theme(colors.dark)] focus-within:border-pink focus-within:shadow-[0_3px_0_0_#E472AB] has-[button:active]:border-dark has-[button:active]:shadow-[0_3px_0_0_theme(colors.dark)] has-[button:focus]:border-dark has-[button:focus]:shadow-[0_3px_0_0_theme(colors.dark)]">
-			<input
-				type="email"
-				name="email"
-				placeholder="Enter email to organize Daydream"
-				class="w-80 px-3 py-1 text-dark focus:outline-none"
-				required
-			/>
-			<input type="hidden" name="mailingLists" value="cmd3c94kz0hvz0iwt7ps28cyd" />
-			<button type="submit" class="bg-light h-full px-5 rounded-full border-b-2 border-[#B3866A] cursor-pointer hover:border-b-4 hover:transform active:border-b-0 active:transform active:translate-y-0.5 focus:outline-none transition-all duration-100">
-				<img src="submit.svg" alt="Go">
-			</button>
-		</form>
-		<a
-			href="https://forms.hackclub.com/daydream-stickers"
-			target="_blank"
-			class="w-max px-4 py-2 bg-pink border-b-2 border-b-pink-dark text-white rounded-full active:transform active:translate-y-0.5 transition-all duration-100 font-sans cursor-pointer mx-auto relative overflow-visible hover:shadow-[0_2px_0_0_theme(colors.pink.dark)] hover:-translate-y-[2px] active:border-transparent active:shadow-none active:"
-		>
-			Get free stickers
-			<img
-				src="button-clouds.svg" 
-				alt="" 
-				class="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto object-contain pointer-events-none"
+	<div class="hero-ui-parallax flex flex-col items-center justify-center text-center relative z-10 -translate-y-2">
+		<div class="inline-block relative">
+			<div class="h-12"></div> 
+			<!-- space for the ship -->
+			<h2
+			class="text-xl font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent absolute left-1/2 max-sm:translate-y-4 max-sm:mb-0 max-md:-mb-8 md:left-[calc(50%+4rem)] -translate-x-1/2 bottom-8 italic w-max md:text-lg max-sm:text-lg"
 			>
+				September 27th & 28th, 2025
+			</h2>
+			<img src="daydream.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4" />
+			<a href="https://hackclub.com" class="absolute top-0 -right-6 max-sm:right-0 max-sm:scale-80 animate-hover ![animation-delay:0.9s] ![--hover:-0.2rem]">
+				<img src="flag-plane.png" alt="Hack Club" class="h-28">
+			</a>
+		</div>
+		<div class="relative inline-block px-4">
+			<h3
+				class="text-3xl italic font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent w-max max-sm:text-2xl mx-auto"
+			>
+				Game jam for high schoolers
+			</h3>
 			<img
-				src="rock-sticker.png"
+				src="underline.svg"
 				alt=""
-				class="absolute bottom-2 right-3 translate-2/3 w-18 h-18 object-contain pointer-events-none"
-				style="transform: rotate(-15deg);"
+				class="absolute left-1/2 -translate-x-1/2 -mt-1 h-auto scale-115"
+			/>
+			<h4
+				class="text-2xl opacity-90 mt-2 font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent max-sm:text-xl"
 			>
-		</a>
+				Organized by high schoolers in 100 cities worldwide
+			</h4>
+		</div>
+		
+		<div class="mt-8 flex flex-col items-center gap-3 z-10 max-md:scale-90">
+			<form on:submit={handleFormSubmit} class="rounded-full bg-white border-2 border-dark font-sans p-2 flex flex-row items-center gap-2 shadow-[0_3px_0_0_theme(colors.dark)] focus-within:border-pink focus-within:shadow-[0_3px_0_0_#E472AB] has-[button:active]:border-dark has-[button:active]:shadow-[0_3px_0_0_theme(colors.dark)] has-[button:focus]:border-dark has-[button:focus]:shadow-[0_3px_0_0_theme(colors.dark)]">
+				<input
+					type="email"
+					name="email"
+					placeholder="Enter email to organize Daydream"
+					class="w-80 px-3 py-1 text-dark focus:outline-none"
+					required
+				/>
+				<input type="hidden" name="mailingLists" value="cmd3c94kz0hvz0iwt7ps28cyd" />
+				<button type="submit" class="bg-light h-full px-5 rounded-full border-b-2 border-[#B3866A] cursor-pointer hover:border-b-4 hover:transform active:border-b-0 active:transform active:translate-y-0.5 focus:outline-none transition-all duration-100">
+					<img src="submit.svg" alt="Go">
+				</button>
+			</form>
+			<a
+				href="https://forms.hackclub.com/daydream-stickers"
+				target="_blank"
+				class="w-max px-4 py-2 bg-pink border-b-2 border-b-pink-dark text-white rounded-full active:transform active:translate-y-0.5 transition-all duration-100 font-sans cursor-pointer mx-auto relative overflow-visible hover:shadow-[0_2px_0_0_theme(colors.pink.dark)] hover:-translate-y-[2px] active:border-transparent active:shadow-none active:"
+			>
+				Get free stickers
+				<img
+					src="button-clouds.svg" 
+					alt="" 
+					class="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto object-contain pointer-events-none"
+				>
+				<img
+					src="rock-sticker.png"
+					alt=""
+					class="absolute bottom-2 right-3 translate-2/3 w-18 h-18 object-contain pointer-events-none"
+					style="transform: rotate(-15deg);"
+				>
+			</a>
+		</div>
 	</div>
 
 	<!-- <img src="hot-air-balloon.png" alt="" class="absolute w-1/8 right-32 bottom-40 z-20"> -->
@@ -645,8 +710,7 @@ Mumbai`.split("\n")
 	<img src="/clouds-top-right.png" alt="" class="absolute right-0 w-1/2 -bottom-12 translate-y-1/2">
 	<img src="/clouds-top-left.png" alt="" class="absolute left-0 w-3/12 -bottom-12  translate-y-1/2">
 	
-	<!-- Cloudy Background -->
-	<div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[80vh] bg-[url(/cloudy-bg.png)] opacity-30 bg-cover bg-no-repeat bg-top pointer-events-none -z-10"></div>
+
 	
 	<!-- Video Thumbnail Button Container -->
 	<div class="absolute bottom-8 right-8 max-sm:top-[calc(50%+22rem)] max-sm:left-1/2 max-sm:-translate-x-1/2 max-sm:bottom-auto max-sm:right-auto max-sm:scale-150 z-11000 [1750px]:scale-150 2xl:origin-bottom-right">
