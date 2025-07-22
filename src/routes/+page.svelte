@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { onMount } from "svelte";
+	import { gsap } from "gsap";
+	import { ScrollTrigger } from "gsap/ScrollTrigger";
 	
 	/** @type {import('./$types').PageData} */
 	export let data;
@@ -256,9 +258,7 @@ Mumbai`.split("\n")
 
 
 
-	let currentAirplaneProgress = 0;
-	let animationFrameId: number | null = null;
-	let isFlipped = false;
+
 	let showVideoPopup = false;
 	
 	// Generate ticker text from cities array with user's city inserted
@@ -319,79 +319,58 @@ Mumbai`.split("\n")
 		emailInput.value = '';
 	}
 
-	function updateAirplanePosition() {
+	function setupPlaneAnimation() {
 		const container = document.getElementById("islands-container");
 		const airplane = document.getElementById("paper-airplane");
 		
 		if (!container || !airplane) return;
 		
-		const containerRect = container.getBoundingClientRect();
-		const windowHeight = window.innerHeight;
-		
-		// Calculate scroll progress based on container position
-		// Start animation earlier and extend it longer for full path completion
-		const scrollStart = containerRect.top + window.scrollY - windowHeight * 0.7;
-		const scrollEnd = containerRect.bottom + window.scrollY - windowHeight;
-		const currentScroll = window.scrollY;
-		
-		// Calculate progress (0 to 1)
-		let progress = (currentScroll - scrollStart) / (scrollEnd - scrollStart);
-		progress = Math.max(0, Math.min(1, progress));
-		
-		// Apply ease-in-out curve for smoother animation
-		const easingStrength = 1.0; // 0 = linear, 1 = full ease-in-out
-		const easedProgress = progress * progress * (3 - 2 * progress);
-		progress = progress * (1 - easingStrength) + easedProgress * easingStrength;
-		
-		// Smooth the movement with interpolation and max speed
-		const maxSpeed = 0.001; // Maximum progress change per frame
-		const targetDifference = progress - currentAirplaneProgress;
-		const speedLimitedDifference = Math.sign(targetDifference) * Math.min(Math.abs(targetDifference), maxSpeed);
-		const previousProgress = currentAirplaneProgress;
-		currentAirplaneProgress += speedLimitedDifference;
-		
-		// Determine movement direction
-		const movingForward = currentAirplaneProgress > previousProgress;
-		
-
-		
 		// Get points for path calculation
-		const points: Array<{ x: number; y: number }> = [];
-		const pointIds = ["0", "0.5", "1", "2", "3", "4", "5"];
-		pointIds.forEach(id => {
-			const element = document.querySelector(`[data-point="${id}"]`);
-			if (element) {
-				const rect = element.getBoundingClientRect();
-				points.push({
-					x: rect.left + rect.width / 2 - containerRect.left,
-					y: rect.top + rect.height / 2 - containerRect.top
-				});
+		const getPoints = () => {
+			const containerRect = container.getBoundingClientRect();
+			const points: Array<{ x: number; y: number }> = [];
+			const pointIds = ["0", "0.5", "1", "2", "3", "4", "5"];
+			pointIds.forEach(id => {
+				const element = document.querySelector(`[data-point="${id}"]`);
+				if (element) {
+					const rect = element.getBoundingClientRect();
+					points.push({
+						x: rect.left + rect.width / 2 - containerRect.left,
+						y: rect.top + rect.height / 2 - containerRect.top
+					});
+				}
+			});
+			return points;
+		};
+
+		// Create animation timeline
+		const tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: container,
+				start: "top 100%",        // Start earlier: when container top hits 90% down viewport
+				end: "bottom 100%",       // End later: when container bottom hits 10% from viewport top
+				scrub: 0.8,              // Faster/more responsive (was 1.2)
+				// markers: true,        // Uncomment to see start/end markers for debugging
+				onUpdate: (self) => {
+					const points = getPoints();
+					if (points.length > 0) {
+						const progress = self.progress;
+						const airplanePos = getPointAlongPath(points, progress);
+						
+						gsap.set(airplane, {
+							left: `${airplanePos.x}px`,
+							top: `${airplanePos.y}px`,
+							rotation: airplanePos.angle,
+							scaleY: Math.abs(airplanePos.angle) > 90 ? -1 : 1,
+							transformOrigin: "center center",
+							transform: `translate(-50%, calc(-50% - 0.5rem))`
+						});
+					}
+				}
 			}
 		});
-		
-		if (points.length > 0) {
-			const airplanePos = getPointAlongPath(points, currentAirplaneProgress);
-			airplane.style.left = `${airplanePos.x}px`;
-			airplane.style.top = `${airplanePos.y}px`;
-			
-			// Check if rotation angle is greater than 90 degrees (plane is upside down)
-			// Normalize angle to -180 to 180 range
-			let normalizedAngle = airplanePos.angle;
-			while (normalizedAngle > 180) normalizedAngle -= 360;
-			while (normalizedAngle < -180) normalizedAngle += 360;
-			
-			// Flip plane if angle is outside -90 to 90 degree range (keeps plane right side up)
-			isFlipped = Math.abs(normalizedAngle) > 90;
-			
-			// Apply vertical flip if needed
-			const verticalFlip = isFlipped ? ' scaleY(-1)' : '';
-			airplane.style.transform = `translate(-50%, calc(-50% - 0.5rem)) rotate(${airplanePos.angle}deg)${verticalFlip}`;
-		}
-		
-		// Continue animation if still moving
-		if (Math.abs(progress - currentAirplaneProgress) > 0.001) {
-			animationFrameId = requestAnimationFrame(updateAirplanePosition);
-		}
+
+		return tl;
 	}
 
 	function createParticle () {
@@ -468,20 +447,26 @@ Mumbai`.split("\n")
 		
 		const pathData = createSmoothPath(points);
 		pathElement.setAttribute("d", pathData);
-		
-		// Update airplane position based on scroll
-		updateAirplanePosition();
 	}
 
 	onMount(() => {
 		console.log('User city:', data.userCity);
 		
-		// Initial path calculation
-		setTimeout(updatePath, 100);
+		// Register GSAP plugins
+		gsap.registerPlugin(ScrollTrigger);
 		
-		// Update on scroll and resize
-		window.addEventListener("scroll", updateAirplanePosition);
-		window.addEventListener("resize", updatePath);
+		// Initial path calculation
+		setTimeout(() => {
+			updatePath();
+			setupPlaneAnimation();
+		}, 100);
+		
+		// Update on resize
+		const handleResize = () => {
+			updatePath();
+			ScrollTrigger.refresh();
+		};
+		window.addEventListener("resize", handleResize);
 		
 		// Handle tab visibility changes
 		document.addEventListener("visibilitychange", handleVisibilityChange);
@@ -494,13 +479,10 @@ Mumbai`.split("\n")
 		
 		// Cleanup
 		return () => {
-			window.removeEventListener("scroll", updateAirplanePosition);
-			window.removeEventListener("resize", updatePath);
+			window.removeEventListener("resize", handleResize);
 			document.removeEventListener("visibilitychange", handleVisibilityChange);
 			clearInterval(particleInterval);
-			if (animationFrameId) {
-				cancelAnimationFrame(animationFrameId);
-			}
+			ScrollTrigger.getAll().forEach(trigger => trigger.kill());
 		};
 	});
 </script>
