@@ -878,16 +878,16 @@ Mumbai`.split("\n")
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none bg-position-[0_100vh]"></div>
 </div>
 
-<div class="w-full bg-gradient-to-b from-[#FDC5D1] to-[#FAE3C9] items-center justify-center px-32 relative pt-36">
-	<div class="max-md:absolute max-md:left-1/2 max-md:-translate-x-1/2 max-md:z-100 max-sm:pt-16">
-		<div class="relative w-full max-w-5xl mx-auto min-w-72 max-md:mx-0">
-			<img src="banner.png" alt="100 Cities Worldwide" class="absolute top-0 left-1/2 -translate-x-1/2 max-md:-translate-y-1/2 max-sm:translate-y-[calc(-50%-4rem)] h-48 w-auto z-100 scale-150 saturate-70 brightness-110 object-contain px-4 pointer-events-none">
+<div class="w-full bg-gradient-to-b from-[#FDC5D1] to-[#FAE3C9] items-center justify-center px-0 md:px-8 relative pt-36">
+	<div class="w-full max-w-5xl mx-auto px-6 md:px-8">
+		<div class="relative w-full min-w-72">
+			<img src="banner.png" alt="100 Cities Worldwide" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/3 md:-translate-y-[40%] h-48 w-auto z-100 scale-[1.15] md:scale-[1.65] saturate-70 brightness-110 object-contain px-4 pointer-events-none">
 			
 			<!-- Map container with cloudy edges -->
-			<div class="relative w-full h-96 overflow-hidden bg-transparent">
+			<div class="relative w-full h-128 overflow-hidden bg-transparent">
 				<iframe 
 					src="/map"
-					class="w-full h-full border-0"
+					class="w-full h-full border-0 bg-[#acd4e0]"
 					style="
 						mask-image: 
 							linear-gradient(white, white),
@@ -977,10 +977,10 @@ Mumbai`.split("\n")
 				</iframe>
 			</div>
 			
-			<p class="absolute left-1/2 -translate-x-1/2 font-sans text-center text-2xl pt-12 max-sm:pt-40 max-sm:text-xl w-max max-w-[80vh] max-md:max-w-full md:px-12 text-[#60574b] z-10000 ">All daydream events are organized by high school students like yourself! <br> <span class="font-bold"><a class="underline hover:text-pink" href="https://forms.hackclub.com/daydream">Sign up</a> to organize now!</span></p>
+			<p class="text-center font-sans text-2xl pt-12 max-sm:text-xl text-[#60574b] z-10000">All daydream events are organized by high school students like yourself! <br> <span class="font-bold"><a class="underline hover:text-pink" href="https://forms.hackclub.com/daydream">Sign up</a> to organize now!</span></p>
 		</div>
 	</div>
-	<div class="max-md:h-136"></div>
+
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
 </div>
 
