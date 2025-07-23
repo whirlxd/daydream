@@ -884,41 +884,17 @@ Mumbai`.split("\n")
 			<img src="banner.png" alt="100 Cities Worldwide" class="absolute top-0 left-1/2 -translate-x-1/2 max-md:-translate-y-1/2 max-sm:translate-y-[calc(-50%-4rem)] h-48 w-auto z-100 scale-150 saturate-70 brightness-110 object-contain px-4 pointer-events-none">
 			
 			<!-- Map container with cloudy edges -->
-			<div class="relative w-full h-96 overflow-hidden shadow-lg bg-transparent">
+			<div class="relative w-full h-96 overflow-hidden bg-transparent">
 				<iframe 
 					src="/map"
 					class="w-full h-full border-0"
 					style="
-						mask-image: 
-							linear-gradient(white, white),
-							url('/clouds-loop-mask-invert-2.png'),
-							url('/clouds-loop-mask-invert-1.png'),
-							url('/clouds-loop-mask-invert-3.png'),
-							url('/clouds-loop-mask-invert-4.png');
-						mask-position: 
-							center,
-							top left,
-							bottom left,
-							left top,
-							right top;
-						mask-size: 
-							calc(100% - 144px) calc(100% - 144px),
-							auto 72px,
-							auto 72px,
-							72px auto,
-							72px auto;
-						mask-repeat: 
-							no-repeat,
-							repeat-x,
-							repeat-x,
-							repeat-y,
-							repeat-y;
 						-webkit-mask-image: 
 							linear-gradient(white, white),
-							url('/clouds-loop-mask-invert-2.png'),
-							url('/clouds-loop-mask-invert-1.png'),
-							url('/clouds-loop-mask-invert-3.png'),
-							url('/clouds-loop-mask-invert-4.png');
+							url('/clouds-loop-mask-white-2.png'),
+							url('/clouds-loop-mask-white-1.png'),
+							url('/clouds-loop-mask-white-3.png'),
+							url('/clouds-loop-mask-white-4.png');
 						-webkit-mask-position: 
 							center,
 							top left,
@@ -926,7 +902,7 @@ Mumbai`.split("\n")
 							left top,
 							right top;
 						-webkit-mask-size: 
-							calc(100% - 144px) calc(100% - 144px),
+							auto auto,
 							auto 72px,
 							auto 72px,
 							72px auto,
@@ -939,6 +915,7 @@ Mumbai`.split("\n")
 							repeat-y;
 						mask-type: luminance;
 						mask-mode: luminance;
+						mask-composite: exclude, add, add, add, add;
 					"
 					title="Daydream Events Map">
 				</iframe>
