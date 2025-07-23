@@ -891,55 +891,87 @@ Mumbai`.split("\n")
 					style="
 						mask-image: 
 							linear-gradient(white, white),
-							url('/clouds-loop-mask-white-2.png'),
-							url('/clouds-loop-mask-white-1.png'),
-							url('/clouds-loop-mask-white-3.png'),
-							url('/clouds-loop-mask-white-4.png');
+							url('/clouds-loop-mask-2.png'),
+							url('/clouds-loop-mask-1.png'),
+							url('/clouds-loop-mask-3.png'),
+							url('/clouds-loop-mask-4.png'),
+							url('/cloud-corner-1.png'),
+							url('/cloud-corner-2.png'),
+							url('/cloud-corner-3.png'),
+							url('/cloud-corner-4.png');
 						mask-position: 
 							center,
 							top left,
 							bottom left,
 							left top,
-							right top;
+							right top,
+							bottom left,
+							top left,
+							top right,
+							bottom right;
 						mask-size: 
 							auto auto,
 							auto 72px,
 							auto 72px,
 							72px auto,
-							72px auto;
+							72px auto,
+							100px 100px,
+							100px 100px,
+							100px 100px,
+							100px 100px;
 						mask-repeat: 
 							no-repeat,
 							repeat-x,
 							repeat-x,
 							repeat-y,
-							repeat-y;
+							repeat-y,
+							no-repeat,
+							no-repeat,
+							no-repeat,
+							no-repeat;
 						-webkit-mask-image: 
 							linear-gradient(white, white),
-							url('/clouds-loop-mask-white-2.png'),
-							url('/clouds-loop-mask-white-1.png'),
-							url('/clouds-loop-mask-white-3.png'),
-							url('/clouds-loop-mask-white-4.png');
+							url('/clouds-loop-mask-2.png'),
+							url('/clouds-loop-mask-1.png'),
+							url('/clouds-loop-mask-3.png'),
+							url('/clouds-loop-mask-4.png'),
+							url('/cloud-corner-1.png'),
+							url('/cloud-corner-2.png'),
+							url('/cloud-corner-3.png'),
+							url('/cloud-corner-4.png');
 						-webkit-mask-position: 
 							center,
 							top left,
 							bottom left,
 							left top,
-							right top;
+							right top,
+							bottom left,
+							top left,
+							top right,
+							bottom right;
 						-webkit-mask-size: 
 							auto auto,
 							auto 72px,
 							auto 72px,
 							72px auto,
-							72px auto;
+							72px auto,
+							100px 100px,
+							100px 100px,
+							100px 100px,
+							100px 100px;
 						-webkit-mask-repeat: 
 							no-repeat,
 							repeat-x,
 							repeat-x,
 							repeat-y,
-							repeat-y;
+							repeat-y,
+							no-repeat,
+							no-repeat,
+							no-repeat,
+							no-repeat;
 						mask-type: luminance;
 						mask-mode: luminance;
-						mask-composite: exclude, add, add, add, add;
+						mask-composite: exclude, add, add, add, add, add, add, add, add;
 					"
 					title="Daydream Events Map">
 				</iframe>
