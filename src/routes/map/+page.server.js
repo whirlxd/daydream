@@ -29,12 +29,12 @@ export async function load() {
 		// Geocode each event location
 		const locations = [];
 		for (const event of events) {
-			const { city, state, country, event_name } = event.fields;
+			const { location, state, country, event_name } = event.fields;
 			
-			if (!city || !event_name) continue;
+			if (!location || !event_name) continue;
 
 			// Build address string
-			const addressParts = [city, state, country].filter(Boolean);
+			const addressParts = [location, state, country].filter(Boolean);
 			const address = addressParts.join(', ');
 
 			try {
@@ -47,7 +47,7 @@ export async function load() {
 						lat: geocodeData.lat,
 						lng: geocodeData.lng,
 						event_name,
-						city,
+						city: location,
 						state,
 						country
 					});
