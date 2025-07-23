@@ -880,15 +880,70 @@ Mumbai`.split("\n")
 
 <div class="w-full bg-gradient-to-b from-[#FDC5D1] to-[#FAE3C9] items-center justify-center px-32 relative pt-36">
 	<div class="max-md:absolute max-md:left-1/2 max-md:-translate-x-1/2 max-md:z-100 max-sm:pt-16">
-		<div class="relative w-full max-w-3xl mx-auto min-w-72 max-md:mx-0">
+		<div class="relative w-full max-w-5xl mx-auto min-w-72 max-md:mx-0">
 			<img src="banner.png" alt="100 Cities Worldwide" class="absolute top-0 left-1/2 -translate-x-1/2 max-md:-translate-y-1/2 max-sm:translate-y-[calc(-50%-4rem)] h-48 w-auto z-100 scale-150 saturate-70 brightness-110 object-contain px-4 pointer-events-none">
-			<img src="hole.png" alt="" class="w-full h-full max-w-3xl max-sm:scale-200 pointer-events-none">
-			<iframe 
-				src="/map"
-				class="absolute top-0 left-0 w-full h-full border-0 max-sm:scale-200"
-				style="mask: url('hole.png') no-repeat center; -webkit-mask: url('hole.png') no-repeat center; mask-size: contain; -webkit-mask-size: contain;"
-				title="Daydream Events Map">
-			</iframe>
+			
+			<!-- Map container with cloudy edges -->
+			<div class="relative w-full h-96 overflow-hidden shadow-lg bg-transparent">
+				<iframe 
+					src="/map"
+					class="w-full h-full border-0"
+					style="
+						mask-image: 
+							linear-gradient(white, white),
+							url('/clouds-loop-mask-invert-2.png'),
+							url('/clouds-loop-mask-invert-1.png'),
+							url('/clouds-loop-mask-invert-3.png'),
+							url('/clouds-loop-mask-invert-4.png');
+						mask-position: 
+							center,
+							top left,
+							bottom left,
+							left top,
+							right top;
+						mask-size: 
+							calc(100% - 144px) calc(100% - 144px),
+							auto 72px,
+							auto 72px,
+							72px auto,
+							72px auto;
+						mask-repeat: 
+							no-repeat,
+							repeat-x,
+							repeat-x,
+							repeat-y,
+							repeat-y;
+						-webkit-mask-image: 
+							linear-gradient(white, white),
+							url('/clouds-loop-mask-invert-2.png'),
+							url('/clouds-loop-mask-invert-1.png'),
+							url('/clouds-loop-mask-invert-3.png'),
+							url('/clouds-loop-mask-invert-4.png');
+						-webkit-mask-position: 
+							center,
+							top left,
+							bottom left,
+							left top,
+							right top;
+						-webkit-mask-size: 
+							calc(100% - 144px) calc(100% - 144px),
+							auto 72px,
+							auto 72px,
+							72px auto,
+							72px auto;
+						-webkit-mask-repeat: 
+							no-repeat,
+							repeat-x,
+							repeat-x,
+							repeat-y,
+							repeat-y;
+						mask-type: luminance;
+						mask-mode: luminance;
+					"
+					title="Daydream Events Map">
+				</iframe>
+			</div>
+			
 			<p class="absolute left-1/2 -translate-x-1/2 font-sans text-center text-2xl pt-12 max-sm:pt-40 max-sm:text-xl w-max max-w-[80vh] max-md:max-w-full md:px-12 text-[#60574b] z-10000 ">All daydream events are organized by high school students like yourself! <br> <span class="font-bold"><a class="underline hover:text-pink" href="https://forms.hackclub.com/daydream">Sign up</a> to organize now!</span></p>
 		</div>
 	</div>
