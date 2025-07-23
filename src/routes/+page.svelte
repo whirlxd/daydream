@@ -889,6 +889,30 @@ Mumbai`.split("\n")
 					src="/map"
 					class="w-full h-full border-0"
 					style="
+						mask-image: 
+							linear-gradient(white, white),
+							url('/clouds-loop-mask-white-2.png'),
+							url('/clouds-loop-mask-white-1.png'),
+							url('/clouds-loop-mask-white-3.png'),
+							url('/clouds-loop-mask-white-4.png');
+						mask-position: 
+							center,
+							top left,
+							bottom left,
+							left top,
+							right top;
+						mask-size: 
+							auto auto,
+							auto 72px,
+							auto 72px,
+							72px auto,
+							72px auto;
+						mask-repeat: 
+							no-repeat,
+							repeat-x,
+							repeat-x,
+							repeat-y,
+							repeat-y;
 						-webkit-mask-image: 
 							linear-gradient(white, white),
 							url('/clouds-loop-mask-white-2.png'),
