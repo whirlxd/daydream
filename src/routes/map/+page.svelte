@@ -24,7 +24,8 @@
 			
 			// Add tile layer
 			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-				attribution: '© OpenStreetMap contributors'
+				attribution: '© OpenStreetMap contributors',
+				detectRetina: true
 			}).addTo(map);
 			
 			// Create custom icon using map-flag.png
