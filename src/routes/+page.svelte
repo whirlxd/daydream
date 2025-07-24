@@ -388,7 +388,18 @@ Mumbai`.split("\n")
 	function createParticle () {
 		if (!particleContainer || !isTabVisible) return;
 		
-		const button = document.querySelector('a[href="https://forms.hackclub.com/daydream-stickers"]');
+		// Find the visible button - mobile first, then desktop
+		const buttons = document.querySelectorAll('a[href="https://forms.hackclub.com/daydream-stickers"]');
+		let button = null;
+		
+		for (const btn of buttons) {
+			const styles = window.getComputedStyle(btn);
+			if (styles.display !== 'none') {
+				button = btn;
+				break;
+			}
+		}
+		
 		if (!button) return;
 		
 		const buttonRect = button.getBoundingClientRect();
@@ -665,7 +676,7 @@ Mumbai`.split("\n")
 			<a
 				href="https://forms.hackclub.com/daydream-stickers"
 				target="_blank"
-				class="w-max px-4 py-2 bg-pink border-b-2 border-b-pink-dark text-white rounded-full active:transform active:translate-y-0.5 transition-all duration-100 font-sans cursor-pointer mx-auto relative overflow-visible hover:shadow-[0_2px_0_0_theme(colors.pink.dark)] hover:-translate-y-[2px] active:border-transparent active:shadow-none active:"
+				class="w-max px-4 py-2 bg-pink border-b-2 border-b-pink-dark text-white rounded-full active:transform active:translate-y-0.5 transition-all duration-100 font-sans cursor-pointer mx-auto relative overflow-visible hover:shadow-[0_2px_0_0_theme(colors.pink.dark)] hover:-translate-y-[2px] active:border-transparent active:shadow-none active: mt-4 md:hidden"
 			>
 				Get free stickers
 				<img
@@ -687,7 +698,7 @@ Mumbai`.split("\n")
 	<!-- <img src="hot-air-balloon.png" alt="" class="absolute w-1/12 left-36 bottom-81 z-20"> -->
 
 	<!-- Particle container -->
-	<div bind:this={particleContainer} class="absolute inset-0 pointer-events-none z-0 opacity-70">
+	<div bind:this={particleContainer} class="absolute inset-0 pointer-events-none z-40 opacity-70">
 		{#each particles as particle (particle.id)}
 			<img
 				src="particle.png"
@@ -698,6 +709,8 @@ Mumbai`.split("\n")
 		{/each}
 	</div>
 
+
+
 	<img src="/clouds-top-middle-bg.svg" alt="" class="absolute left-5/12 -translate-x-1/2 w-7/12 -bottom-24">
 	<div class="absolute left-5/12 -translate-x-1/2 w-7/12 -bottom-24 bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none h-full" style="mask-image: url('/clouds-top-middle-bg.svg'); mask-size: contain; mask-repeat: no-repeat; mask-position: center; -webkit-mask-image: url('/clouds-top-middle-bg.svg'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center;"></div>
 	
@@ -707,9 +720,9 @@ Mumbai`.split("\n")
 	<img src="/clouds-top-left-bg.svg" alt="" class="absolute left-0 w-3/12 -bottom-12  translate-y-1/2">
 	<div class="absolute left-0 w-3/12 -bottom-12 translate-y-1/2 bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none h-full" style="mask-image: url('/clouds-top-left-bg.svg'); mask-size: contain; mask-repeat: no-repeat; mask-position: center; -webkit-mask-image: url('/clouds-top-left-bg.svg'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center;"></div>
 	
-	<img src="/clouds-top-middle.png" alt="" class="absolute left-5/12 -translate-x-1/2 w-7/12 -bottom-24 z-20">
-	<img src="/clouds-top-right.png" alt="" class="absolute right-0 w-1/2 -bottom-12 translate-y-1/2 z-20">
-	<img src="/clouds-top-left.png" alt="" class="absolute left-0 w-3/12 -bottom-12  translate-y-1/2 z-20">
+	<img src="/clouds-top-middle.png" alt="" class="absolute left-5/12 -translate-x-1/2 w-7/12 -bottom-24 z-20 pointer-events-none">
+	<img src="/clouds-top-right.png" alt="" class="absolute right-0 w-1/2 -bottom-12 translate-y-1/2 z-20 pointer-events-none">
+	<img src="/clouds-top-left.png" alt="" class="absolute left-0 w-3/12 -bottom-12  translate-y-1/2 z-20 pointer-events-none">
 	
 
 	
@@ -734,6 +747,26 @@ Mumbai`.split("\n")
 			</div>
 		</button>
 	</div>
+
+	<!-- Desktop stickers button (bottom left) -->
+	<a
+		href="https://forms.hackclub.com/daydream-stickers"
+		target="_blank"
+		class="hidden md:block absolute bottom-16 left-16 z-50 w-max px-4 py-2 bg-pink border-b-2 border-b-pink-dark text-white rounded-full active:transform active:translate-y-0.5 transition-all duration-100 font-sans cursor-pointer overflow-visible hover:shadow-[0_2px_0_0_theme(colors.pink.dark)] hover:-translate-y-[2px] active:border-transparent active:shadow-none"
+	>
+		Get free stickers
+		<img
+			src="button-clouds.svg" 
+			alt="" 
+			class="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto object-contain pointer-events-none"
+		>
+		<img
+			src="rock-sticker.png"
+			alt=""
+			class="absolute bottom-2 right-3 translate-2/3 w-18 h-18 object-contain pointer-events-none"
+			style="transform: rotate(-15deg);"
+		>
+	</a>
 </div>
 
 <div class="w-full relative flex items-start justify-center">
@@ -799,9 +832,9 @@ Mumbai`.split("\n")
 
 <div class="flex flex-row flex-wrap w-full h-auto bg-gradient-to-b from-[#FCEFC5] to-[#FEC1CF] px-36 max-md:px-8 pb-50 max-sm:pb-24 relative xl:pt-12 2xl:pt-48" id="islands-container">
 
-	<img src="/clouds-left-2.png" alt="" class="absolute left-0 w-3/12 top-12">
-	<img src="/clouds-left-3.png" alt="" class="absolute left-0 w-2/12 bottom-32">
-	<img src="/clouds-right-2.png" alt="" class="absolute right-0 w-3/12 bottom-0">
+	<img src="/clouds-left-2.png" alt="" class="absolute left-0 w-3/12 top-12 pointer-events-none">
+	<img src="/clouds-left-3.png" alt="" class="absolute left-0 w-2/12 bottom-32 pointer-events-none">
+	<img src="/clouds-right-2.png" alt="" class="absolute right-0 w-3/12 bottom-0 pointer-events-none">
 
 	<!-- SVG Path Overlay -->
 	<svg class="absolute inset-0 w-full h-full pointer-events-none z-0" id="path-svg">
@@ -879,21 +912,109 @@ Mumbai`.split("\n")
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none bg-position-[0_100vh]"></div>
 </div>
 
-<div class="w-full bg-gradient-to-b from-[#FDC5D1] to-[#FAE3C9] items-center justify-center px-32 relative pt-36">
-	<div class="max-md:absolute max-md:left-1/2 max-md:-translate-x-1/2 max-md:z-100 max-sm:pt-16">
-		<div class="relative w-full max-w-3xl mx-auto min-w-72 max-md:mx-0">
-			<img src="banner.png" alt="100 Cities Worldwide" class="absolute top-0 left-1/2 -translate-x-1/2 max-md:-translate-y-1/2 max-sm:translate-y-[calc(-50%-4rem)] h-48 w-auto z-100 scale-150 saturate-70 brightness-110 object-contain px-4 pointer-events-none">
-			<img src="hole.png" alt="" class="w-full h-full max-w-3xl max-sm:scale-200 pointer-events-none">
-			<iframe 
-				src="/map"
-				class="absolute top-0 left-0 w-full h-full border-0 max-sm:scale-200"
-				style="mask: url('hole.png') no-repeat center; -webkit-mask: url('hole.png') no-repeat center; mask-size: contain; -webkit-mask-size: contain;"
-				title="Daydream Events Map">
-			</iframe>
-			<p class="absolute left-1/2 -translate-x-1/2 font-sans text-center text-2xl pt-12 max-sm:pt-40 max-sm:text-xl w-max max-w-[80vh] max-md:max-w-full md:px-12 text-[#60574b] z-10000 ">All daydream events are organized by high school students like yourself! <br> <span class="font-bold"><a class="underline hover:text-pink" href="https://forms.hackclub.com/daydream">Sign up</a> to organize now!</span></p>
+<div class="w-full bg-gradient-to-b from-[#FDC5D1] to-[#FAE3C9] items-center justify-center px-0 md:px-8 relative pt-36">
+	<div class="w-full max-w-5xl lg:max-w-6xl mx-auto px-2 md:px-8">
+		<div class="relative w-full min-w-72">
+			<img src="banner.png" alt="100 Cities Worldwide" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/3 md:-translate-y-[40%] h-48 w-auto z-100 scale-[1.15] md:scale-[1.65] saturate-70 brightness-110 object-contain px-4 pointer-events-none">
+			
+			<!-- Map container with cloudy edges -->
+			<div class="relative w-full h-156 overflow-hidden bg-transparent">
+				<iframe 
+					src="/map"
+					class="w-full h-full border-0 bg-[#acd4e0]"
+					style="
+						mask-image: 
+							linear-gradient(white, white),
+							url('/clouds-loop-mask-2.png'),
+							url('/clouds-loop-mask-1.png'),
+							url('/clouds-loop-mask-3.png'),
+							url('/clouds-loop-mask-4.png'),
+							url('/cloud-corner-1.png'),
+							url('/cloud-corner-2.png'),
+							url('/cloud-corner-3.png'),
+							url('/cloud-corner-4.png');
+						mask-position: 
+							center,
+							top left,
+							bottom left,
+							left top,
+							right top,
+							bottom left,
+							top left,
+							top right,
+							bottom right;
+						mask-size: 
+							auto auto,
+							auto 72px,
+							auto 72px,
+							72px auto,
+							72px auto,
+							100px 100px,
+							100px 100px,
+							100px 100px,
+							100px 100px;
+						mask-repeat: 
+							no-repeat,
+							repeat-x,
+							repeat-x,
+							repeat-y,
+							repeat-y,
+							no-repeat,
+							no-repeat,
+							no-repeat,
+							no-repeat;
+						-webkit-mask-image: 
+							linear-gradient(white, white),
+							url('/clouds-loop-mask-2.png'),
+							url('/clouds-loop-mask-1.png'),
+							url('/clouds-loop-mask-3.png'),
+							url('/clouds-loop-mask-4.png'),
+							url('/cloud-corner-1.png'),
+							url('/cloud-corner-2.png'),
+							url('/cloud-corner-3.png'),
+							url('/cloud-corner-4.png');
+						-webkit-mask-position: 
+							center,
+							top left,
+							bottom left,
+							left top,
+							right top,
+							bottom left,
+							top left,
+							top right,
+							bottom right;
+						-webkit-mask-size: 
+							auto auto,
+							auto 72px,
+							auto 72px,
+							72px auto,
+							72px auto,
+							100px 100px,
+							100px 100px,
+							100px 100px,
+							100px 100px;
+						-webkit-mask-repeat: 
+							no-repeat,
+							repeat-x,
+							repeat-x,
+							repeat-y,
+							repeat-y,
+							no-repeat,
+							no-repeat,
+							no-repeat,
+							no-repeat;
+						mask-type: luminance;
+						mask-mode: luminance;
+						mask-composite: exclude, add, add, add, add, add, add, add, add;
+					"
+					title="Daydream Events Map">
+				</iframe>
+			</div>
+			
+			<p class="text-center font-sans text-2xl pt-12 max-sm:text-xl text-[#60574b] z-10000">All daydream events are organized by high school students like yourself! <br> <span class="font-bold"><a class="underline hover:text-pink" href="https://forms.hackclub.com/daydream">Sign up</a> to organize now!</span></p>
 		</div>
 	</div>
-	<div class="max-md:h-136"></div>
+
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
 </div>
 
