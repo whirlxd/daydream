@@ -388,7 +388,18 @@ Mumbai`.split("\n")
 	function createParticle () {
 		if (!particleContainer || !isTabVisible) return;
 		
-		const button = document.querySelector('a[href="https://forms.hackclub.com/daydream-stickers"]');
+		// Find the visible button - mobile first, then desktop
+		const buttons = document.querySelectorAll('a[href="https://forms.hackclub.com/daydream-stickers"]');
+		let button = null;
+		
+		for (const btn of buttons) {
+			const styles = window.getComputedStyle(btn);
+			if (styles.display !== 'none') {
+				button = btn;
+				break;
+			}
+		}
+		
 		if (!button) return;
 		
 		const buttonRect = button.getBoundingClientRect();
@@ -664,7 +675,7 @@ Mumbai`.split("\n")
 			<a
 				href="https://forms.hackclub.com/daydream-stickers"
 				target="_blank"
-				class="w-max px-4 py-2 bg-pink border-b-2 border-b-pink-dark text-white rounded-full active:transform active:translate-y-0.5 transition-all duration-100 font-sans cursor-pointer mx-auto relative overflow-visible hover:shadow-[0_2px_0_0_theme(colors.pink.dark)] hover:-translate-y-[2px] active:border-transparent active:shadow-none active:"
+				class="w-max px-4 py-2 bg-pink border-b-2 border-b-pink-dark text-white rounded-full active:transform active:translate-y-0.5 transition-all duration-100 font-sans cursor-pointer mx-auto relative overflow-visible hover:shadow-[0_2px_0_0_theme(colors.pink.dark)] hover:-translate-y-[2px] active:border-transparent active:shadow-none active: mt-4 md:hidden"
 			>
 				Get free stickers
 				<img
@@ -686,7 +697,7 @@ Mumbai`.split("\n")
 	<!-- <img src="hot-air-balloon.png" alt="" class="absolute w-1/12 left-36 bottom-81 z-20"> -->
 
 	<!-- Particle container -->
-	<div bind:this={particleContainer} class="absolute inset-0 pointer-events-none z-0 opacity-70">
+	<div bind:this={particleContainer} class="absolute inset-0 pointer-events-none z-40 opacity-70">
 		{#each particles as particle (particle.id)}
 			<img
 				src="particle.png"
@@ -696,6 +707,8 @@ Mumbai`.split("\n")
 			/>
 		{/each}
 	</div>
+
+
 
 	<img src="/clouds-top-middle-bg.svg" alt="" class="absolute left-5/12 -translate-x-1/2 w-7/12 -bottom-24">
 	<div class="absolute left-5/12 -translate-x-1/2 w-7/12 -bottom-24 bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none h-full" style="mask-image: url('/clouds-top-middle-bg.svg'); mask-size: contain; mask-repeat: no-repeat; mask-position: center; -webkit-mask-image: url('/clouds-top-middle-bg.svg'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center;"></div>
@@ -733,6 +746,26 @@ Mumbai`.split("\n")
 			</div>
 		</button>
 	</div>
+
+	<!-- Desktop stickers button (bottom left) -->
+	<a
+		href="https://forms.hackclub.com/daydream-stickers"
+		target="_blank"
+		class="hidden md:block absolute bottom-16 left-16 z-50 w-max px-4 py-2 bg-pink border-b-2 border-b-pink-dark text-white rounded-full active:transform active:translate-y-0.5 transition-all duration-100 font-sans cursor-pointer overflow-visible hover:shadow-[0_2px_0_0_theme(colors.pink.dark)] hover:-translate-y-[2px] active:border-transparent active:shadow-none"
+	>
+		Get free stickers
+		<img
+			src="button-clouds.svg" 
+			alt="" 
+			class="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto object-contain pointer-events-none"
+		>
+		<img
+			src="rock-sticker.png"
+			alt=""
+			class="absolute bottom-2 right-3 translate-2/3 w-18 h-18 object-contain pointer-events-none"
+			style="transform: rotate(-15deg);"
+		>
+	</a>
 </div>
 
 <div class="w-full relative flex items-start justify-center">
