@@ -349,6 +349,7 @@
 		color: #78531D !important;
 		font-family: 'Atkinson Hyperlegible', system-ui, sans-serif !important;
 		backdrop-filter: blur(8px) !important;
+		display: none !important;
 	}
 	
 	:global(.leaflet-control-attribution a) {

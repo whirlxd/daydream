@@ -879,12 +879,12 @@ Mumbai`.split("\n")
 </div>
 
 <div class="w-full bg-gradient-to-b from-[#FDC5D1] to-[#FAE3C9] items-center justify-center px-0 md:px-8 relative pt-36">
-	<div class="w-full max-w-5xl mx-auto px-6 md:px-8">
+	<div class="w-full max-w-5xl lg:max-w-6xl mx-auto px-2 md:px-8">
 		<div class="relative w-full min-w-72">
 			<img src="banner.png" alt="100 Cities Worldwide" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/3 md:-translate-y-[40%] h-48 w-auto z-100 scale-[1.15] md:scale-[1.65] saturate-70 brightness-110 object-contain px-4 pointer-events-none">
 			
 			<!-- Map container with cloudy edges -->
-			<div class="relative w-full h-128 overflow-hidden bg-transparent">
+			<div class="relative w-full h-156 overflow-hidden bg-transparent">
 				<iframe 
 					src="/map"
 					class="w-full h-full border-0 bg-[#acd4e0]"
