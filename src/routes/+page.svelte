@@ -818,19 +818,19 @@ Mumbai`.split("\n")
 		</div>
 	</div>
 
-	<div class="w-full absolute z-30 max-h-64 bottom-0 max-xl:translate-y-1/4 max-lg:translate-y-1/2 pointer-events-none">	
-		<img src="/cloud-cover-1.png" alt="" class="w-full h-full object-contain">
+	<div class="w-full absolute z-30 max-h-64 bottom-0 max-2xl:translate-y-1/4 max-lg:translate-y-1/2 pointer-events-none">	
+		<img src="/cloud-cover-1.png" alt="" class="w-full h-full object-contain min-[2048px]:hidden">
 		<div class="absolute top-1/2 left-1/2 w-1 h-1 -translate-x-1/2 -translate-y-1/2" data-point="0"></div>
 		<div class="absolute top-1/2 left-1/4 w-1 h-1 -translate-x-1/2 -translate-y-1/2" data-point="0.5"></div>
 	</div>
-	<div class="absolute -bottom-44 left-1/2 -translate-x-1/2 w-10/12 h-auto object-contain z-100 cursor-text flex flex-row max-md:flex-wrap items-center justify-center align-middle max-w-5xl">
+	<div class="absolute -bottom-44 left-1/2 -translate-x-1/2 w-10/12 h-auto object-contain z-100 cursor-text flex flex-row max-lg:flex-wrap md:translate-y-0 max-lg:translate-y-1/5 items-center justify-center align-middle max-w-5xl">
 		<img src="gamejam-1.png" alt="Here's How You Organize a" class="flex-shrink min-w-0 object-contain">
 		<img src="gamejam-2.png" alt="Game Jam" class="flex-shrink min-w-0 object-contain">
 	</div>
 </div>
 <div class="w-full h-64 bg-[#FCEFC5]"></div>
 
-<div class="flex flex-row flex-wrap w-full h-auto bg-gradient-to-b from-[#FCEFC5] to-[#FEC1CF] px-36 max-md:px-8 pb-50 max-sm:pb-24 relative xl:pt-12 2xl:pt-48" id="islands-container">
+<div class="flex flex-row flex-wrap w-full h-auto bg-gradient-to-b from-[#FCEFC5] to-[#FEC1CF] px-36 max-md:px-8 pb-50 max-sm:pb-24 relative" id="islands-container">
 
 	<img src="/clouds-left-2.png" alt="" class="absolute left-0 w-3/12 top-12 pointer-events-none">
 	<img src="/clouds-left-3.png" alt="" class="absolute left-0 w-2/12 bottom-32 pointer-events-none">
