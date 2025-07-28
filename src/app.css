@@ -1,6 +1,7 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 @import '@fontsource/atkinson-hyperlegible';
+@import '@fontsource/jersey-15';
 
 @font-face {
   font-family: 'Expensify New Kansas';
@@ -21,6 +22,7 @@
 @theme {
   --font-sans: 'Atkinson Hyperlegible', ui-sans-serif, sans-serif;
   --font-serif: 'Expensify New Kansas', ui-serif, serif;
+  --font-pixel: 'Jersey 15', monospace;
   --color-gradient-daydream: linear-gradient(to bottom, #487DAB, #3F709A);
   --color-daydream: #44DBC8;
   --color-daydream-hover: #3CC2AF;
