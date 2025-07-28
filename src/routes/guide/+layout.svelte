@@ -33,11 +33,11 @@
 
 <div class="min-h-screen bg-gradient-to-b from-[#CCF4FD] to-[#cce7fd] relative overflow-hidden">
 	<!-- Brushstroke texture overlay -->
-	<div bind:this={cloudBg} class="absolute inset-0 bg-[url('cloud-texture-bg.png')] bg-size-[50vw_50vh] bg-repeat pointer-events-none opacity-20"></div>
+	<div bind:this={cloudBg} class="absolute inset-0 bg-[url('cloud-texture-bg.png')] bg-size-[50vh_auto] bg-repeat pointer-events-none opacity-20"></div>
 	<div class="absolute inset-0 bg-[url('brushstroking.png')] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
 	
 	<GuideSidebar />
-	<div class="ml-90 prose prose-lg max-w-4xl mx-auto px-16 pl-24 py-16 prose-h1:font-serif prose-h1:not-first:mt-16 text-guide-text prose-bold relative z-10">
+	<div class="lg:ml-90 prose prose-lg max-w-4xl mx-auto px-4 lg:px-16 lg:pl-24 py-16 prose-h1:font-serif prose-h1:not-first:mt-16 text-guide-text prose-bold relative z-10">
 		<slot />
 	</div>
 </div>
