@@ -37,7 +37,7 @@
 	<div class="absolute inset-0 bg-[url('brushstroking.png')] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
 	
 	<GuideSidebar />
-	<div class="ml-90 prose prose-lg max-w-4xl mx-auto px-16 pl-24 py-16 prose-h1:font-serif prose-h1:mt-16 text-guide-text prose-bold relative z-10">
+	<div class="ml-90 prose prose-lg max-w-4xl mx-auto px-16 pl-24 py-16 prose-h1:font-serif prose-h1:not-first:mt-16 text-guide-text prose-bold relative z-10">
 		<slot />
 	</div>
 </div>
