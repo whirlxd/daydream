@@ -1,0 +1,88 @@
+# Venue
+
+Without a venue, you don’t have a hackathon. You *need* a venue. Lock in.
+
+## Part One: Making a List
+
+Make a long, long list of potential venues. You’ll need to reach out to twenty venues to find one that says yes, but if you want to run the best hackathon you can, I’d recommend challenging yourself to reach out to as many as possible\! A dream venue is:
+
+- **Roomy** \- Whatever space you find should be big enough to host attendees\! This might seem pretty apparent, but don’t forget: food is messy, so you might want a separate space for meals; if you’re hosting an overnight event you need *at least* two sleeping areas for gender separation; and if people are going to sleep, they’ll need enough space to lie down in a place where the lights can turn off\!  
+- **Welcoming** \- \[they should be excited to support all the teenagers, mention anecdote of google wanting 1:2 chaperone ratio\]  
+- **Overnight** \[find a better one-word here\]  
+- **Cool** \[maybe a better word for having the right vibe\]
+
+Here are a bunch of good ideas you can add to your list – use Google Maps to find nearby options within a 30-minute to 1-hour radius\!
+
+- **Makerspaces** \- Makerspaces are amazing sites for hackathons. They’re almost always welcoming, they often have multiple rooms, and they can sometimes even provide hardware or marketing for your event.  
+- **Startup Spaces** \- These fall into a similar bucket as makerspaces. They’re usually supportive of the mission and much less risk-averse than larger corporations. Startups also often have fancier offices with multiple comfortable rooms.  
+- **Corporate Offices**  
+- **Public Libraries**  
+- **Schools & Universities** \- be careful, these initially sound like a good option but schools have more restrictions around having minors overnight. If you get lucky, you might find a university that would be willing to provide a space overnight for free, though\!
+
+**Venue requirements:**
+
+- Audio/Visual (TV or projector, speakers, etc)  
+- Power strips  
+- Open space for sleeping, working, etc  
+- 2 separate *gender separated* sleeping rooms
+
+## Part Two: Reaching Out
+
+Once you have your mega-list of spaces, you need to reach out to them. This step can make or break your chances, so here’s how to do it right:
+
+## Step \#1: Finding the Contact
+
+Try not to use generic email addresses (ex: info@xyz). Find employees / COOs / people of seniority. Going through website portals is very finicky. Do not assume you’ll get to actual people directly, assume your message will go into the void.
+
+Tools to find emails: 
+
+1. [LinkedIn](http://linkedin.com): Use this to find people\!   
+2. [Apollo.io](http://Apollo.io) : Find email addresses of the people you find on LinkedIn\!  
+3. [rocketreach.co](http://rocketreach.co): Another tool to find emails
+
+## Step \#2: Writing the Email
+
+🛑**DO NOT:**
+
+* **USE CHATGPT** (to write the WHOLE thing. Maybe use it to correct grammar)
+
+* **Be overly professional.** It’s stupid. It’s useless. You’re not on LinkedIn, don’t pretend to be. Be respectful, but be enthusiastic, youthful. 
+
+* **MASS EMAIL.** It will get you NOWHERE. People can tell when it’s a mass email and you don’t care. You will send 1000+ emails (like I did) with NO answer. Ten customized emails is a million times better than a thousand mass emails.  
+
+✅**DO:** 
+
+* **KILL YOUR WORDS**. Be concise. Everything can be shorter, I promise you.   
+  * Everyone hates reading. Even the CEO of LinkedIn. The greatest email advice you’ll ever get is this: **GET TO THE POINT.**   
+  * Ask yourself:   
+    * **Does this word actually serve a purpose?** Or is it here to make me seem “smart”?  (PS: No, “building a community of like-minded adolescents with a shared passion for computer science” does not make you seem smart. It makes you seem AI-generated.)   
+    * **Do they care?**   
+* **CUSTOMIZE\!\!** To the EXACT recipient (research *who* you’re emailing). Customize the prospectus. Customize the email. 
+
+\> If you can, you should go to a workshop about writing effective emails & get feedback on your email before sending it\! We’ll hold a couple to get you guys started.
+
+Example: 
+
+| Hi \[contact name\],  I’m RenRan, a 17-year-old high school student from Ottawa. This \[month\], I’m organizing Ottawa’s first all-girls high school hackathon\!  July 5-6, we're running JPEG, a 25hr coding event for 70+ teens. JPEG is affiliated with Hack Club, the "world's largest open source community of teenagers who love to code and build stuff".Learning to code through hackathons helped me make some of my best memories—and friends. But there are very few opportunities for high schoolers in Ottawa, let alone girls, to attend these social coding events.  Impact Hub is incredible. Especially your Compassionate Community program and the Cartier Women's initiative in recognizing women entrepreneurs.  Our event has everything—but a venue. We’re wondering if Impact Hub Ottawa could donate your space to us overnight July 5-6?  I’d love to jump on a call to answer any questions or iron out details\!  Warmly,  RenRan Sun (she/her)  renran@hackclub.com  613-710-4270 |
+| :---- |
+
+## Step \#4: Choose-your-adventure
+
+### If you get a “yes\!” …Now what? 
+
+Be nice to them, maybe they’ll host another event in the future\!
+
+### If you get a “sorry we can’t…” 
+
+Ask for monetary donations, food, supplies, or mentors.   
+They answered, which means congrats\! They care\! 
+
+### If you get ghosted: **Follow. Up.** 
+
+Follow-up every 3-5 business days\! Reach out to another employee\! Call them\! 
+
+Email their \*shivers\* general email. 
+
+Being relentless is what gets you a good venue. 
+
+BUT **do not** SPAM THEM or Hack Club might end up blacklisted. 

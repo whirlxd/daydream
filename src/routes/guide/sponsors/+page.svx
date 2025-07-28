@@ -1,0 +1,93 @@
+# Sponsorship 
+
+Welcome to the trenches of sponsorship. You’ll likely send a ridiculous number of emails over the next two months. No worries\! We got your back. 
+
+*Note: This resource heavily draws upon Karthik’s resource here. We highly recommend you check it out\!* 
+
+More ✨Awesome✨resources:  
+
+1) Everything you need in one video: [Meginar: Learn how to secure high school hackathon sponsorship\!](https://www.youtube.com/watch?v=tOmXzA4reTY) It’s two hours but definitely worth your time. 
+
+If you’re too lazy… 
+
+## OVERALL TIPS (applicable for everything): 
+
+The one secret to emailing ANYONE you’ll need: **be concise**. 
+
+No one likes to read. Including teachers. Kill filler words, get rid of unnecessarily long words.  
+
+This is NOT an English Essay. Shorter → Better. 
+
+*DON’T BE TOO LINKEDIN-PILLED\!\!* Be put together and presentable, but not *too* professional. If they support teens, they’ll want to see your energy & enthusiasm.  
+
+## Before: Making a budget 
+
+[This](https://docs.google.com/spreadsheets/d/1udOaDK_OYa_b8Y8myCHOrXVHrf6H45vZqmqqbhkiUBA/edit?usp=sharing) is a template budget you can make a copy of and use for your Daydream event (everyone thank Afonso). Keep track of *every single* item you plan to buy for your event, and make sure you update it after you make purchases (especially if taxes raise the cost).
+
+Search up snack prices on Walmart and Costco (the example Costco list on the sheets has good examples of what and what not to buy), and make sure the price per person doesn’t get too high (buying VitaminWater for every partcipant is probably not the best use of Hack Club’s emergency funding).
+
+Keep track of how much you’re spending per unit and per person. If a 36-pack of chips costs $50, each bag of chip costs \~$1.4, which is pretty good. This unit price helps keep things in perspective—and helps you decide what to keep and what to nix.
+
+## Step \#1: Finding Companies
+
+Start small. One of the biggest mistakes first-time hackathon organizers make is to cold email the biggest companies they can think of (intel, microsoft, etc). This won’t work 99% of the time *unless* you have a good contact. 
+
+Chances are, there are a ton of local companies you’ve never heard of that would be more than happy to sponsor and have a surprising amount of money to spare. It also doesn’t just have to be tech companies\! Reach out to restaurants, small businesses, bakeries, and community-oriented businesses (though they are more likely to give you an in-kind sponsorship like food or groceries). 
+
+1. Companies you have connections to \- Start here\! (Parents’ work, your job, your friends’ work, etc. Every adult you know works at a company, use it.)   
+2. Companies that align with your mission \- If your event is about coding education, find edtech companies   
+3. Companies in your area \- Don't be scared\! CEOs are people too. You’ll have a better chance with decently-higher up people, so maybe don’t contact all the CEOs in San Francisco. Linkedin is great for finding names for the mid-range of important people.  
+4. Previous sponsors of similar events \- Look at Devpost, MLH, and even something like your school boosters
+
+## Step \#2: Write your Prospectus 
+
+A prospectus is a 2-4 page document that essentially contains everything a sponsor needs to know about your event and why/how they should support it. 
+
+Here are a couple of great examples\! Don’t copy them word-for-word, customize them: 
+
+* [JPEG Prospectus](https://docs.google.com/document/d/1SyD8_maE8fcCnpWJYi_KvgZu_86I_voAuLtH_ipl64g/edit?usp=sharing)  
+* [Hack the Nest](http://hackthenest.org/prospectus.pdf)  
+* [Hack TJ](https://hacktj.org/sponsorship12_0.pdf)  
+* [Los Altos Hacks Prospectus](https://www.losaltoshacks.com/sponsors)  
+* [Bitcamp](https://bit.camp/sponsor)
+
+Note: We’re a 501(c)(3) nonprofit organization\! **US companies** have tax-reduction benefits. 
+
+## Step \#3: Make a video (Optional\!)
+
+A video works SUPER well for sponsors and outreach\! Make a general video telling YOUR story. 
+
+Check out Daydream’s [**Intro Video**](https://www.youtube.com/watch?v=hNYsNSY7Vz0): ([We're Hosting The Largest High School Game Jam](https://www.youtube.com/watch?v=hNYsNSY7Vz0))    
+Here’s the script: [JPEG Video Script](https://docs.google.com/document/d/1KuW16mt3QFQdMPcC_4x5r1lJfALGky-pdE_mssGmVJw/edit?usp=sharing) 
+
+DM [@renran sun](https://hackclub.slack.com/archives/D096V6RDJ9E) if you’d like any advice with writing a script\! 
+
+## Step \#4: Write an email template. 
+
+| Subject: 100+ Teenage Hackers in City? Hi \[First Name of Employee from company\], I’m First Name, a 17-year-old student from City. I’m also organizing City’s \[what makes your Daydream special, ex: first 24 hour\] hackathon.   September 27-28, we’re organizing [Daydream](https://daydream.hackclub.com/) \[City\], a 24-hour high school hackathon for 100 teens at \[Venue\]. Daydream is dreamed up by Hack Club, a global coding nonprofit supported by Dell and GitHub.  Learning to code through hackathons helped me make some of my best memories—and friends. It changed my life, and I want to bring that experience to more students\!  \[Company\] is incredible. \[IMPORTANT\! Why are you emailing this company? Be personal but 1-2 sentences. Ex: Your \[product\] changed the way we use xyz.\]  I'd love to send you more information or schedule a call if you're interested. Let me know what you need and what time, and I'll make it happen\!   [Renran Sun](mailto:renran@hackclub.com)  \[phone number\] P-S: If you are the wrong person to reach out to, I apologize. It’d be great if you could direct me to the right department/person\!  |
+| :---- |
+
+## Step \#5: Email\! 
+
+Send the prospectus/sponsorship package for the 2nd email\!  
+
+## Step \#6: Follow-Up 
+
+It is pretty common to get ghosted but being persistent can help a lot\! Keep it Short ‘n Sweet. 
+
+Reply to the original email thread OR send a new email. Here’s an example. 
+
+| Hi Kyle,   Just saw the podcast at Fullscript with Youth Ottawa and wanted to quickly follow up\!  Please let me know if you have any questions. I'd love to jump in a call and discuss details/constraints\! If Fullscript can't host us, no worries.  Thank you again for your consideration,  RenRan |
+| :---- |
+
+## Step \#7: Repeat 
+
+## Extra: Tips & Advice
+
+Make the highest tier up to half of your budget. **The lowest tier should be a significant contribution.** 
+
+FOLLOW-UP QUICKLY
+
+Generally, do not take useless in-kinds that sound fancy but are useless and spammy in reality (“we’ll give you $50,000 in coupons to LawnMowingUltraPlus if you put our logo on everything”). WE WANT COLD HARD CASH\!\!\!\!
+
+## 

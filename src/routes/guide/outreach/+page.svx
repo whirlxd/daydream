@@ -1,0 +1,95 @@
+# Outreach
+
+Outreach is an IMPORTANT part of hackathons. No participants → No game jam. But how do you reach the ✨right people? ✨
+
+**NOTE:** Only \~50-55% of sign-ups show up. The amount of people who sign the waiver will be closer to your actual attendance number. Be sure to send out waivers and waiver reminders often (and like 3 times the day before the event)
+
+## STEP \#1: Email teachers 
+
+1) Use google maps to find schools within a 30 mile radius and then visit their websites.   
+2) Search for a staff/faculty directory and email literally all of them (or all tech teachers\!).   
+3) Make the email applicable (for them). 
+
+*Ex: Math teachers – game physics and vectors. Art teachers – designing sprites in [aseprite](https://www.aseprite.org/).* GUIDANCE COUNSELORS can be great\! 
+
+Tip: Try to use “hackathon” instead of “game jam.” Most people know what a hackathon is but have NO idea what a game jam is. 
+
+Here’s an email template\!
+
+| Hi Susanne, I’m RenRan, a 17-year-old OCDSB student. I’m also organizing Ottawa’s first all-girls hackathon\!  July 5-6th, we’re organizing JPEG, a 25-hour high school hackathon for 70+ girls at Carleton University. JPEG is affiliated with Hack Club, a global nonprofit supported by Dell and GitHub.  Learning to code through hackathons helped me make some of my best memories—and friends. But, there are very few opportunities for high schoolers in Ottawa, let alone girls. That’s why we’re reaching out.  You’re my friend’s favorite physics teacher at Nepean HS\! Would you be open to helping us reach more students by posting a quick classroom post with our website ([jpeg.hackclub.com](http://jpeg.hackclub.com)) and/or showing [this video](https://drive.google.com/file/d/1Vbwb6L_aXmthB7Q3Jhid-NV00fSxb3PC/view?usp=sharing) to your classes?  I've attached our Parent Guide and Poster below for more info\!  RenRan [renran@hackclub.com](mailto:renran@hackclub.com)   |
+| :---- |
+
+No video? Here’s another one\! 
+
+| Subject: High school hackathon in Boston – Interested? Hi \[First Name of Teacher\] I’m Sofia, a junior at \[high school\], and I’m running a 24-hour hackathon on November 23\.  Learning to code through hackathons *literally* changed my life. I’ve made some of my best memories and friends, and I want to change students' lives in Boston too. I'd love for your students at \[school\] to attend. Would you be open to forwarding the following email to them? Hey Coders and Artists\! I’m Sofia, a junior in high school. This year, I’m running a hackathon called Counterspell Boston.  November 23-24, at the Microsoft NERD Center, you’ll have 24 hours to create a game from scratch. Check out [this video](https://youtu.be/3J1Rz-3N1WQ?si=gHZdM9WiMi4R1pVj) from another game jam\!  Everything is free, including food, merch, and lodging. No prior experience needed.   We would love for you to [sign up](https://forms.hackclub.com/t/sdMpoL7wK9us?city=rec0fAxwvWTwRv5M3)\! Check out [our website](https://counterspell.hackclub.com/boston/) for more info.  See you there, The Counterspell Boston Team ![][image1] |
+| :---- |
+
+EXTRA TIP: If your Director of Education has an email blast, ask them to include your event\! JPEG was included in our DOE’s monthly newsletter. 
+
+## Step \#2: Email Local Organizations
+
+How many Hack Clubbers are part of FIRST Robotics? VEX? Other hackathons? 
+
+Reach out by shooting a quick DM or emailing local organizations / community groups asking if they could help you advertise\! 
+
+For example: 
+
+* FIRST Robotics Team   
+* Previous high school hackathon organizers (ask for email list)   
+* CS Clubs  
+* Student Council   
+* Local libraries / Community Centers 
+
+… Or any youth groups\!
+
+## Step \#3: Instagram / Discord / Social Media
+
+It is a truth universally acknowledged that Gen Z (and Gen Alpha) are glued to their screens. Use that to your advantage. 
+
+1. Make a 1st post. Here’s an example from Counterspell Ottawa\! 
+
+2. Follow people.   
+   1. Go to schools, robotics teams, CS clubs, etc’s instagrams   
+   2. Follow their followers.  
+   3. Rinse, repeat. 
+
+3. Post regularly. Ex:  
+   1. What to bring   
+   2. FAQ  
+   3. Is it beginner-friendly? (Yes, it is)  
+   4. Teams of three 
+
+Use Canva or Figma to make posts (it doesn’t matter – just post regularly)\!
+
+## Step \#4: Parent Groups 
+
+“Mom, can I go to an overnight event?” sounds like you’re going to rob a bank. But if it’s your parents’ idea… It goes from A Bad Influence to the Bestest Educational Idea Ever ™ 
+
+Doing this step right will get you 30% to 40% of your sign-ups (ESPECIALLY if your city hasn’t had many hackathons before). 
+
+**Use the parent emails in the sign-up form**. Email all parents 3 weeks before the hackathon to remind them the event is happening, email them a week before the hackathon to remind them to sign their child’s waiver, and ask them to tell *other* parents so you can spread the word. 
+
+They’re parents, so they have sympathy towards kids (especially since they’re a parent of teenagers). Use it.
+
+You may ask: “Dev, how do I do this?” And the answer is: “I’m not your dad.” 
+
+Because this is where parents can help. A LOT. 
+
+1. Ask your parents if they can post a short bit in Facebook Groups / WeChat / Whatsapp / etc. 
+
+Example post: 
+
+| Your child interested in coding? July 5-6th, we're organizing a 25hrs ALL-GIRLS high school coding event for 70+ teens at Carleton University. The event is open to teens 14-18y old. They'll get to: Get into teams of three and create a game from scratch overnight. Have fun\! Everything is free, including meals, snacks, drinks, T-Shirts and more. Learn to code: developers there to help out\! For more information and sign up: [https://jpeg.hackclub.com/](https://jpeg.hackclub.com/?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExNFVaTFZnUWVnSnNYUklGaAEe5awJMsuG_ACRnFEvdD8WewAGe_ZLEj60V6kG1zuhUvC4Fq5IiXCAGTu9Aac_aem_7FQsjqEsCGOvpgdqYJneMg) Your child doesn't need any previous experience; all they'll need to bring is a laptop, a charger, toiletries, and a sleeping bag. |
+| :---- |
+
+2. If they say no, post it yourself\!  
+
+## Step \#5: Physical Poster
+
+Finally: yes, people still touch grass. They do go outside. 
+
+Put physical posters up in schools (ask your friends). Put them on poles (with permission). Put them in gyms. 
+
+Customize this template\! 
+
+[image1]: <data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJMAAABKCAYAAAC/1GbyAAAJTklEQVR4Xu2df3AU5RnHbf+y02n/UHI5kssPgUAEokCRJBhTMnXUaaFTWjqK1F8IinakJiWjrToUxrbSAhFRaacpzfBLwo8CVRATU6WOZay2QTsVbTtUqECLQ01JIe1f233u7t199vvu3u3d7V7uyPOZ+Q53z/P+ePZ9v+ztLZtwySWCIAiCIAiCIAiCIAiCIAiCIAjCxUppaUWHKSMDDZWWljfgOMIIJRqtnIQm6bx6vvHP6x41jJYfaLowa6WxavJcNJWlSKS8EecQRgjKBGiaTLV72l2asUy14nwXG5FIxQ0YG5GYmz0YhJHcdGV5jcNYZWVlE3D+YidxbLF1GB+R0GJcMfoKzQhBi5vK/Jv8L6yj2DCP44I6HswFSugTBEQkEhuV8qykwHgO2vO5hcxYleewpkKH/6UgRaMV38Q2gcImuw9zhYSqEzc8rkd22mYauKDnd/0uZ6PxTcHaConLL4+V81rfm9lufND0cH7qpjVeseLxgl8oqu3Dpu9qmxwXkiqPOdKfPjSM1i163EV8o0aNqijDOocLXhfJrWbsEzh8nZubv5C/iTPAbYEcQrxytz6bui/mUsj5ERjX97HuMDHne4fPX+VxLdlSNSV/++lczQS8SGw/HFAd99S0aAtliXPhf9457Nf/gTM/7ym9jQ+BqUJZN/OabQvOMbF8vFYLitqZ10obcLxQcK6mE1b4R9gvX5hz76cacJEc8otXv8f3Jf5c+6J3G+KxXXoedOvYazVjMfWY3w6XRKPREvv4Sj9txsZGIpXXm/mtLn0c6qibp81pPN9vGO3P6fGWhJn4eoaKc7V0Dh7s4QdzBvuHjZobF8nSzjewZHcGh5z9zv83EX//dOI98XSvs40bOH8a7TU/DseMHqOZwo/W1n1NG88hBPMt7mdNVElJdRTXPSuwHi+OHHmbF/AHHCcsaD5cIM8F3ZHCWF796PUtzyRet27V88Q7f7dfYx7HzZdwfqLrN3o7D6m9xPXOCbsqf6xb97TD1ThekKg5cCEc4vD47DXeOYy90O/dBuOY/+Hzei4sEWf/Y78meA7beyi0vbOryoyhoSGHqcaPn7QNx84VGret9gZtMSwt3WwX9ORBZ27OWjtH8JwXKv/a+3oMpdjQp+eCEs6voNfLtiVeL/65HVc5D33cvDw8IxHOSrKjtvYqh7FMXY/zZIo5xtG0Z6WHtttFYO70gHuO7il5odq4xVCK23+aeP+XfyTev3lMb6v0JXa2xLGwrYrzb6fYl/OdHYk//+1y0zap5N6cx7UODGdFuXHy5Ek0FekWnNMPqj8uiG9xvOIItln1gj4utsExsZ3S19c72/G2BBkN+2C77/0y8X7NAfc8fdvk75O6qXp6fC0jkdhXcZ0Dxa4oWPr6fo2mInXi/G6Y7T6Rk5FIiu2H9dizL+sxAmM4phLdj3ID23EpvtJhGAs2ONsrvPp4xfqPO/M8l5Ra+2g0NgPXOXDsCsLjpZd60VSWsB5C5bTFzVUKtxhde2AM+2Oe88XVeju3PhhPlVOmTdUWYW1TrXEoYC1hoA6qs3OjFevu3sVN9QqviWIrJ82JL8jRmcuMtxtbPZ+kzFkKt5jXHXE3sA2KWPgzPc7Hw7hbLt17U7Vl9rNZfF1Dx64mHOiAJkyow7BFb2+fOvDDqiZmMl86P2ulvgl+NPfJRBFLfuGMc7DPw93OnIKeXMC2OKa6WEcpMI45+uZIbGMf3SC1JnRXne9zXrCrDR51YOno7z8Sb0f1qD5YJ1JaGqs3251FY5HomW9c5Ix0j30GtVA5xbnktyYOjsNFvPFXPU76c/KbIMZ5Xw7mTTVW1FnHj2uVN7DOoNi5c7cvIym4GbBGv5h9f4LGIm2depu2+GmlzgLEqY8TsT1v2THVju46Y8xNqdrQvwli7v4uvZ2H2LEuxDXJK/ZRBgsd3I03zsZwSnI1E2Ke6pehsUi4Gb6l8Bt3a7N8t57jeQ4+AQHix4THPixg/UGwdGlbYtMyJOyFiUQq3+Mb4PUMUMZSYJxr8+t2Ow6OQSzdpPdnOmJ+IWFr9Uk8zmHDeRTBQAe5ePF9GE7JwMCAUV1dY1RWjj2LNYaBWWMPNxbpj41t2sb50vqexEFgHIVk8FFGOnXdI7ze4f1IcwOPL1eeeOLHGZ2VasZdaWlmYzN//ybWGiZmzZ1orkU1s7QNHQ7xmkpKKpuw9oIBNzdX1EGno7fnZcs4yPHjJ+JxrDVf0MNraCzSmnTPFwWo3zd8C0wU0DNHYYIbmSt+jESQWdqXPYRhC2U0rHc4MI/py2gspeUTZ2tGyFbr6uZp42MtBQ1uYi7cffe9vsy0edMWx8cbqa213dFmz559BWMmJBaLfcr8pvgWbryXxpWNNT5fdXX8kd722puMFRPnGPUVk7V2SpddNu6zOGdR4NjBHKGFqKqqwXBKXn31kGWoHd32z7+tX/9MwZopFaNHVzRHo7FNaJA02ojjFCVsX3OGFiZT1ILitVMhfcwJPnHsYA68++7RrM104MDBuHGmTZ0Rjy25934xUjECe5s16gzjF7xmctFcrFUocHCTs4WMdOedizCsMXXKNZZhfvv6YSs+edIUORsVO2yfc8LPWalu8tS4YegpATeUybBGoUjADc0WP2ZSZvnRqtWYshAzFTG4mdng9/5SY0MTXhdhEzFTMYObmQ2ZXnzz2wFoKDFTEePYySwhY0yb1oBhT6h9NFoZN86hQ69ZcblmKnLYHmcNmWPjxi4Mu9LVtdk6iynzPPbocv7R9xmsUSgSYK+zgsxx6tRpDLuC10xcWJtQZOBmZ4Of66Xtz3Vbpvl2m/2PunTXOxkvx9qEIoPtd9akM9Pq1R1xw3xjwR2YiqMMhbUJRQZubDaQmU6cYL/DCFBnpL17f4UpCzHTRUC6s4ofaIz582/HsMXg4CA+kmssXrTE0SYZvwbrE4oIdc9nzJhax+Zmgt/7THJ/aQRgbnCD2mg/pkD6+l5J26+6eny8Dc1Hxqmfca2VU+bCuoQixtzsB7mpOjo8fnWMC9R+//7kT6YCDzzwoBoz/n+9mca5in/kiZEucripSPX1TegRB9OnN7qenY4d+5saYx/OIUYagZhGOIfmIt188wLjzJmPLOOouLqBydrehmMKQhzTHJk8MH8p9hcEQRAEQRAEQRAEQRAEQRAEQRCEEcj/AUsLr6AQaZsLAAAAAElFTkSuQmCC>

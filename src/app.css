@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@plugin '@tailwindcss/typography';
 @import '@fontsource/atkinson-hyperlegible';
 
 @font-face {
@@ -27,6 +28,19 @@
   --color-light: #FCF7C4;
   --color-pink: #E472AB;
   --color-pink-dark: #A65A80;
+}
+
+.prose {
+  --tw-prose-body: #15314a;
+  --tw-prose-headings: #214769;
+  --tw-prose-links: var(--color-pink);
+  --tw-prose-bold: var(--tw-prose-body);
+  --tw-prose-td-borders: rgba(47, 94, 136, 0.5);
+  --tw-prose-th-borders: rgba(47, 94, 136, 0.5);
+  --tw-prose-bullets: var(--color-pink)
+}
+.prose h1 {
+  color: #2f5e88;
 }
 
 @keyframes hover {
