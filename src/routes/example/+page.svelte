@@ -1255,8 +1255,56 @@ Mumbai`.split("\n")
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
 	
 	<!-- Macintosh Section -->
-	<div class="w-full flex justify-center py-16 px-8 mt-24">
-		<div class="bg-[#061E2D] text-[#D1E3EE] rounded-3xl p-8 md:p-12 relative overflow-hidden max-w-4xl">
+	<div class="w-full flex justify-center py-16 px-8 mt-24 pb-[clamp(232px,29vw,464px)]">
+		<div class="bg-[#061E2D] text-[#D1E3EE] rounded-3xl p-8 md:p-12 relative overflow-visible max-w-4xl" style="
+			border-image: url('/macintosh.png') 128 91 464 91; 
+			border-image-slice: 128 91 464 91; 
+			border-image-width: clamp(64px, 8vw, 128px) clamp(45px, 6vw, 91px) clamp(232px, 29vw, 464px) clamp(45px, 6vw, 91px); 
+			border-image-outset: clamp(64px, 8vw, 128px) clamp(45px, 6vw, 91px) clamp(232px, 29vw, 464px) clamp(45px, 6vw, 91px); 
+			border-image-repeat: stretch; 
+			border-style: solid;
+		">
+			<!-- Hack Club logo on border -->
+			<img 
+				src="/macintosh-hc-logo.png" 
+				alt="Hack Club logo" 
+				class="absolute w-12 h-12 pointer-events-none z-20" 
+				style="
+					bottom: calc(-1 * clamp(232px, 29vw, 464px) + 8rem);
+					left: 5%;
+				"
+			>
+			
+			<!-- Brushstroke overlay on border -->
+			<div 
+				class="absolute pointer-events-none z-25" 
+				style="
+					top: calc(-1 * clamp(64px, 8vw, 128px));
+					left: calc(-1 * clamp(45px, 6vw, 91px));
+					right: calc(-1 * clamp(45px, 6vw, 91px));
+					bottom: calc(-1 * clamp(232px, 29vw, 464px));
+					background-image: url('/brushstroking.png');
+					background-size: 100vw 100vh;
+					background-repeat: repeat;
+					mix-blend-mode: overlay;
+					opacity: 0.6;
+				"
+			></div>
+			
+			<!-- Keyboard image -->
+			<img 
+				src="/macintosh-keyboard.png" 
+				alt="Macintosh keyboard" 
+				class="absolute pointer-events-none z-30" 
+				style="
+					bottom: calc(-1 * clamp(232px, 29vw, 464px) - 10px - clamp(0px, 14vw, 180px));
+					left: 50%;
+					transform: translateX(-50%);
+					width: 175%;
+					max-width: none;
+				"
+			>
+			
 			<!-- Scanlines effect -->
 			<div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-transparent bg-[length:100%_6px] bg-repeat-y pointer-events-none opacity-30"></div>
 			

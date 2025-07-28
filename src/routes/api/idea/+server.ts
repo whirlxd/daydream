@@ -11,7 +11,7 @@ GAME TYPE: ${randomElements.gameType}
 THEME: ${randomElements.theme}
 SETTING: ${randomElements.setting}
 
-Turn these three elements into a single sentence game idea. Start with "A [game type] where you..." and keep it simple and clear. Use normal words, no fancy language.`;
+Turn these three elements into a single sentence game idea. Start with "A [game type] where you..." or "An [game type] where you..." and keep it simple and clear. Use normal words, no fancy language.`;
 
 		const response = await fetch('https://ai.hackclub.com/chat/completions', {
 			method: 'POST',
