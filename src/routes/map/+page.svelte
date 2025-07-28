@@ -241,7 +241,10 @@
 				document.head.appendChild(link);
 				
 				// Initialize map
-				map = L.map(mapContainer).setView([20, 0], 2);
+				map = L.map(mapContainer, {
+					minZoom: 2,
+					maxZoom: 18
+				}).setView([20, 0], 2);
 				
 				// Add tile layer with custom styling
 				L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
