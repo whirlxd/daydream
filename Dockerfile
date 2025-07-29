@@ -1,6 +1,9 @@
 # Use Node.js LTS version
 FROM node:20-alpine
 
+# Install curl
+RUN apk add --no-cache curl
+
 # Set the working directory
 WORKDIR /app
 
