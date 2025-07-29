@@ -1237,7 +1237,7 @@ Mumbai`.split("\n")
 					background-size: 100vw 100vh;
 					background-repeat: repeat;
 					mix-blend-mode: overlay;
-					opacity: 0.6;
+					opacity: 0.4;
 				"
 			></div>
 			
