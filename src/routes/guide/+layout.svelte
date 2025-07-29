@@ -24,6 +24,20 @@
 	});
 </script>
 
+<svelte:head>
+	<title>Daydream: An Organizer's Guide to Hackathons</title>
+	<meta name="description" content="A complete guide to organizing an amazing hackathon, from logistics and venue planning to sponsor outreach and day-of coordination. Everything you need to create transformative experiences for your community." />
+	<meta name="keywords" content="hackathon, organizing, guide, planning, logistics, venue, sponsors, outreach, community, events" />
+	<meta property="og:title" content="Daydream: An Organizer's Guide to Hackathons" />
+	<meta property="og:description" content="A complete guide to organizing an amazing hackathon, from logistics and venue planning to sponsor outreach and day-of coordination. Everything you need to create transformative experiences for your community." />
+	<meta property="og:image" content="/og-image.png" />
+	<meta property="og:type" content="website" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Daydream: An Organizer's Guide to Hackathons" />
+	<meta name="twitter:description" content="A complete guide to organizing an amazing hackathon, from logistics and venue planning to sponsor outreach and day-of coordination. Everything you need to create transformative experiences for your community." />
+	<meta name="twitter:image" content="/og-image.png" />
+</svelte:head>
+
 <style>
 	/* for overscroll */
 	:global(body, html) {
