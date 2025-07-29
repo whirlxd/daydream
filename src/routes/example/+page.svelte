@@ -1205,9 +1205,9 @@ Mumbai`.split("\n")
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
 	
 	<!-- Macintosh Section -->
-	<div class="w-full flex justify-center py-16 px-8 mt-24 pb-[clamp(232px,29vw,464px)]">
+	<div class="w-full flex justify-center py-16 px-8 mt-24 pb-[clamp(232px,29vw,464px)] max-sm:w-[120vw] max-sm:-translate-x-[10vw]">
 		<div class="bg-[#c5c2b1] p-4 relative max-w-4xl" style="border-radius: calc(1.5rem + 1rem);">
-			<div class="bg-[#061E2D] text-[#D1E3EE] rounded-3xl py-16 px-8 md:px-18 relative overflow-visible" style="
+			<div class="bg-[#061E2D] text-[#D1E3EE] rounded-3xl py-18 md:py-16 px-10 md:px-18 relative overflow-visible" style="
 			border-image: url('/macintosh.png') 128 91 464 91; 
 			border-image-slice: 128 91 464 91; 
 			border-image-width: clamp(64px, 8vw, 128px) clamp(45px, 6vw, 91px) clamp(232px, 29vw, 464px) clamp(45px, 6vw, 91px); 
