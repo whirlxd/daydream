@@ -1206,7 +1206,7 @@ Mumbai`.split("\n")
 	
 	<!-- Macintosh Section -->
 	<div class="w-full flex justify-center py-16 px-8 mt-24 pb-[clamp(232px,29vw,464px)]">
-		<div class="bg-[#061E2D] text-[#D1E3EE] rounded-3xl p-8 md:p-12 relative overflow-visible max-w-4xl" style="
+		<div class="bg-[#c5c2b1] text-[#D1E3EE] p-8 md:p-12 relative overflow-visible max-w-4xl" style="
 			border-image: url('/macintosh.png') 128 91 464 91; 
 			border-image-slice: 128 91 464 91; 
 			border-image-width: clamp(64px, 8vw, 128px) clamp(45px, 6vw, 91px) clamp(232px, 29vw, 464px) clamp(45px, 6vw, 91px); 
@@ -1259,8 +1259,9 @@ Mumbai`.split("\n")
 			<div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-transparent bg-[length:100%_6px] bg-repeat-y pointer-events-none opacity-30"></div>
 			
 			<!-- Rounded container -->
+			<div class="bg-[#061E2D] rounded-3xl p-8 md:p-12 relative">
 				<!-- Scanlines inside container -->
-				<div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-transparent bg-[length:100%_8px] bg-repeat-y pointer-events-none opacity-20"></div>
+				<div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-transparent bg-[length:100%_8px] bg-repeat-y pointer-events-none opacity-20 rounded-3xl"></div>
 				
 				<div class="space-y-8 max-sm:space-y-4 relative z-10">
 					<!-- Title -->
@@ -1327,6 +1328,7 @@ Mumbai`.split("\n")
 						</div>
 					</div>
 				</div>
+			</div>
 		</div>
 	</div>
 </div>
