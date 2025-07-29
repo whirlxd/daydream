@@ -41,11 +41,11 @@
 <style>
 	/* for overscroll */
 	:global(body, html) {
-		background: #CCF4FD;
+		background: #e6faff;
 	}
 </style>
 
-<div class="min-h-screen bg-gradient-to-b from-[#CCF4FD] to-[#cce7fd] relative overflow-hidden">
+<div class="min-h-screen bg-gradient-to-b from-[#def6fc] to-[#deeefc] relative overflow-hidden">
 	<!-- Brushstroke texture overlay -->
 	<div bind:this={cloudBg} class="absolute inset-0 bg-[url('/cloud-texture-bg.png')] bg-size-[auto_50vh] bg-repeat pointer-events-none opacity-20"></div>
 	<div class="absolute inset-0 bg-[url('/brushstroking.png')] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
