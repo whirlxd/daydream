@@ -16,18 +16,18 @@ Outreach is an IMPORTANT part of hackathons. No participants → No game jam. Bu
 
 Tip: Try to use “hackathon” instead of “game jam.” Most people know what a hackathon is but not a game jam. 
 
-Here’s an email template\!
+Here's an email template\!
 
 <div class="notebook">
 Hi Susanne,
 
-I’m RenRan, a 17-year-old OCDSB student. I’m also organizing Ottawa’s first all-girls hackathon! 
+I'm RenRan, a 17-year-old OCDSB student. I'm also organizing Ottawa's first all-girls hackathon! 
 
-July 5-6th, we’re organizing JPEG, a <strong>25-hour high school hackathon for 70+ girls at Carleton University.</strong> JPEG is affiliated with Hack Club, a global nonprofit supported by Dell and GitHub. 
+July 5-6th, we're organizing JPEG, a <strong>25-hour high school hackathon for 70+ girls at Carleton University.</strong> JPEG is affiliated with Hack Club, a global nonprofit supported by Dell and GitHub. 
 
-Learning to code through hackathons helped me make some of my best memories—and friends. But, there are very few opportunities for high schoolers in Ottawa, let alone girls. That’s why we’re reaching out. 
+Learning to code through hackathons helped me make some of my best memories—and friends. But, there are very few opportunities for high schoolers in Ottawa, let alone girls. That's why we're reaching out. 
 
-You’re my friend’s favorite physics teacher at Nepean HS! Would you be open to helping us reach more students by <strong>posting a quick classroom post with our website (<a href="https://jpeg.hackclub.com">jpeg.hackclub.com</a>)</strong> and/or <strong>showing <a href="https://drive.google.com/file/d/1Vbwb6L_aXmthB7Q3Jhid-NV00fSxb3PC/view?usp=sharing">this video</a> to your classes?</strong>
+You're my friend's favorite physics teacher at Nepean HS! Would you be open to helping us reach more students by <strong>posting a quick classroom post with our website (<a href="https://jpeg.hackclub.com">jpeg.hackclub.com</a>)</strong> and/or <strong>showing <a href="https://drive.google.com/file/d/1Vbwb6L_aXmthB7Q3Jhid-NV00fSxb3PC/view?usp=sharing">this video</a> to your classes?</strong>
 
 I've attached our Parent Guide and Poster below for more info!
 
@@ -38,24 +38,24 @@ I've attached our Parent Guide and Poster below for more info!
 </small>
 </div>
 
-No video? Here’s another one\! 
+No video? Here's another one\! 
 
 <div class="notebook">
 <i>Subject: High school hackathon in Boston – Interested?</i>
 
 Hi [First Name of Teacher]
 
-I’m Sofia, a junior at [high school], and I’m running a 24-hour hackathon on November 23. 
+I'm Sofia, a junior at [high school], and I'm running a 24-hour hackathon on November 23. 
 
-Learning to code through hackathons <i>literally</i> changed my life. I’ve made some of my best memories and friends, and I want to change students' lives in Boston too. 
+Learning to code through hackathons <i>literally</i> changed my life. I've made some of my best memories and friends, and I want to change students' lives in Boston too. 
 
 I'd love for your students at [school] to attend. Would you be open to forwarding the following email to them?
 
 Hey <span style="color: #ff4186; font-weight: bold">Coders</span> and <span style="color: #3bcbebff; font-weight: bold">Artists</span>!
 
-I’m Sofia, a junior in high school. This year, I’m running a hackathon called <strong>Counterspell Boston.</strong> 
+I'm Sofia, a junior in high school. This year, I'm running a hackathon called <strong>Counterspell Boston.</strong> 
 
-<strong>November 23-24</strong>, at the Microsoft NERD Center, you’ll have 24 hours to <strong>create a game</strong> from scratch. Check out <a href="https://youtu.be/3J1Rz-3N1WQ">this video</a> from another game jam! 
+<strong>November 23-24</strong>, at the Microsoft NERD Center, you'll have 24 hours to <strong>create a game</strong> from scratch. Check out <a href="https://youtu.be/3J1Rz-3N1WQ">this video</a> from another game jam! 
 
 Everything is <strong>free</strong>, including food, merch, and lodging. No prior experience needed. 
 
@@ -89,12 +89,12 @@ For example:
 
 It is a truth universally acknowledged that Gen Z (and Gen Alpha) are glued to their screens. Use that to your advantage. 
 
-1. Make a 1st post. Here’s an example from Counterspell Ottawa\!   
+1. Make a 1st post. Here's an example from Counterspell Ottawa\!   
 
 <img src="/guide/counterspell-poster.png" width="250" alt="" style="margin-inline: auto; rotate: 2deg; --hover: 0.15rem" class="animate-hover">
 
 2. Follow people.   
-   * Go to schools, robotics teams, CS clubs, etc’s instagrams   
+   * Go to schools, robotics teams, CS clubs, etc's instagrams   
    * Follow their followers.  
    * Rinse, repeat. 
 
@@ -104,15 +104,15 @@ It is a truth universally acknowledged that Gen Z (and Gen Alpha) are glued to t
    * Is it beginner-friendly? (Yes, it is)  
    * Teams of three 
 
-Use Canva or Figma to make posts (it doesn’t matter – just post regularly)\!
+Use Canva or Figma to make posts (it doesn't matter – just post regularly)\!
 
 ## Step \#4: Reach the Parents 
 
-“Mom, can I go to an overnight event?” sounds like you’re about to rob a bank. But if it’s your parents’ idea… It goes from A Bad Influence to the Bestest Educational Idea Ever ™ 
+“Mom, can I go to an overnight event?” sounds like you're about to rob a bank. But if it's your parents' idea… It goes from A Bad Influence to the Bestest Educational Idea Ever ™ 
 
-Doing this step right will get you 30% to 40% of your sign-ups (ESPECIALLY if your city hasn’t had many hackathons before). 
+Doing this step right will get you 30% to 40% of your sign-ups (ESPECIALLY if your city hasn't had many hackathons before). 
 
-You may ask: “Dev, how do I do this?” And the answer is: “I’m not your dad.” 
+You may ask: “Dev, how do I do this?” And the answer is: “I'm not your dad.” 
 
 Because this is where parents can help. A LOT. Ask your parents if they can post a short bit in Facebook Groups / WeChat / Whatsapp / etc. 
 

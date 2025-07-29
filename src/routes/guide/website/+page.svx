@@ -1,6 +1,6 @@
 # **Your Daydream Website ☀️**
 
-Your daydream needs its own website. This might be one of the only technical aspects you’ll need when organizing your hackathon – and day-of mentoring. 
+Your daydream needs its own website. This might be one of the only technical aspects you'll need when organizing your hackathon – and day-of mentoring. 
 
 Now… on to how to make your site\!
 
