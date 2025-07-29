@@ -1,12 +1,30 @@
 import adapter from '@sveltejs/adapter-node';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
-import { mdsvex } from 'mdsvex';
+import { mdsvex, escapeSvelte } from 'mdsvex';
+import { createHighlighter } from 'shiki';
+
+// shiki config for the guide
+const shikiTheme = "min-light"
+const shikiHighlighter = await createHighlighter({
+	themes: [shikiTheme],
+	langs: ["javascript", "bash"],
+})
+
+/** @type {import('mdsvex').MdsvexOptions} */
+const mdsvexOptions = {
+	highlight: {
+		highlighter: async (code, lang = 'text') => {
+			const html = escapeSvelte(shikiHighlighter.codeToHtml(code, { lang, theme: shikiTheme }));
+			return `{@html \`${html}\` }`;
+		}
+	},
+}
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://svelte.dev/docs/kit/integrations
 	// for more information about preprocessors
-	preprocess: [vitePreprocess(), mdsvex()],
+	preprocess: [vitePreprocess(), mdsvex(mdsvexOptions)],
 
 	extensions: ['.svelte', '.svx'],
 

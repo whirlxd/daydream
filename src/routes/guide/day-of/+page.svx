@@ -1,19 +1,30 @@
-# Day-Of
+## And… Action! 🎬
 
-## Step \#1: Run of Show 
+Congrats\! Hours staring at screens, late nights answering emails, worsening dark circles… You’ve now made it. 
 
-A run of show is a fleshed-out schedule *for organizers* that detail everything that’s happening before, during, and after the hackathon in each room. You can check out the run of show for Assemble [here](https://docs.google.com/spreadsheets/d/1yzOWtqHE9J9zVvyj6X0cs0AGMFE4TH2jPIh_np9LWRg/edit?usp=sharing) and for Scrapyard Columbus [here](https://docs.google.com/spreadsheets/d/1Lvtz6dF1KCmgVFp2D4B9jL6W1okyHak4ZEsGKH81lu4/edit?usp=sharing).
+But… To make your Daydream the best event possible, here are <u>THE&nbsp;THREE&nbsp;LAWS&nbsp;for&nbsp;Organizers</u>™. 
 
-## Step \#2: Submit Projects\! 
+### **Law \#1: Be 100x your usual friendliness. 😄**
 
-PLEASE make this clear at the OPENING CEREMONY
+We all know that one barista or server. Or ridiculously extroverted person. Today, YOU are *them*. 
 
-All teams need a SHIPPED project. But… What is a “Shipped” Project? 
+Put their needs above yours. Get to know at least 10 new people. Constantly ask for their progress.
 
-| YES ✅ | NO ❌ |
-| :---- | :---- |
-| 1\. Published on [itch.io](http://itch.io) 2\. Playable on someone else’s computer     | Youtube Video Link  A private game (not public) Google Drive Link (yes, this happens) Website Local host link  |
+You may ask: “How would I start a convo without being weird?” Don’t worry, I *gotchu*. ✨ Here are some ideas: 
 
-i.e. The games are NOT youtube videos. They shouldn’t need Java Development Kits (JDK).  
+* Ask to take a polaroid/photo of the team  
+* Ask about their project → To film them later.   
+* Ask if they want to brainstorm / need help / how they like it so far
 
-It is on **you** as the point of contact if people do not ship. We chose you to run a good event, and this is how we measure if you do a good job. We want to see incredible projects from all over the world, and this is your chance to make that happen.  
+### **Law \#2: NO phone in front of participants.**   
+You know that awkward moment when someone you want to talk to is glued to their phone?
+
+Yes. Exactly. Participants need to feel like you’re approachable. So… DO NOT use your phone in front of them. Or any electronics (laptops, Ipad, etc.) It makes you look busy or unavailable or worse– uninterested. 
+
+Run to the washrooms. Hide behind a table. I don’t care. PHONES in POCKETS. Always. 
+
+### **Law \#3: Take Breaks**
+
+You’re human. You will burn out. Take 10 min breaks in the organizer’s room, sleep 4-8 hours if it’s a 24 hour event. 
+
+The event depends on you running smoothly. But no one’s Superman. We need you rested and ready. Your teammates have your back.   

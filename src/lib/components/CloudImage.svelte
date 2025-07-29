@@ -3,7 +3,7 @@
   export let alt: string = '';
 </script>
 
-<div class="cloud-wrapper">
+<div class="cloud-wrapper max-sm:w-[120vw] max-sm:-translate-x-[calc(1rem+10vw)]">
   <img {src} {alt} />
 </div>
 
@@ -96,11 +96,13 @@
     mask-type: luminance;
     mask-mode: luminance;
     mask-composite: exclude, add, add, add, add, add, add, add, add;
+    height: 100%;
   }
   
   img {
     max-width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: contain;
     display: block;
     margin: 0;
   }
