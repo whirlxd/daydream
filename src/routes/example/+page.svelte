@@ -775,7 +775,7 @@ Mumbai`.split("\n")
 			<h4
 				class="text-2xl opacity-90 mt-2 font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent max-sm:text-xl"
 			>
-				Organized by Teenagers in {eventLocation}
+				Organized by Teenagers in {@html eventLocation.replaceAll(" ", "&nbsp;")}
 			</h4>
 		</div>
 		
@@ -1206,7 +1206,8 @@ Mumbai`.split("\n")
 	
 	<!-- Macintosh Section -->
 	<div class="w-full flex justify-center py-16 px-8 mt-24 pb-[clamp(232px,29vw,464px)]">
-		<div class="bg-[#c5c2b1] text-[#D1E3EE] p-8 md:p-12 relative overflow-visible max-w-4xl" style="
+		<div class="bg-[#c5c2b1] p-4 relative max-w-4xl" style="border-radius: calc(1.5rem + 1rem);">
+			<div class="bg-[#061E2D] text-[#D1E3EE] rounded-3xl py-16 px-8 md:px-18 relative overflow-visible" style="
 			border-image: url('/macintosh.png') 128 91 464 91; 
 			border-image-slice: 128 91 464 91; 
 			border-image-width: clamp(64px, 8vw, 128px) clamp(45px, 6vw, 91px) clamp(232px, 29vw, 464px) clamp(45px, 6vw, 91px); 
@@ -1214,6 +1215,9 @@ Mumbai`.split("\n")
 			border-image-repeat: stretch; 
 			border-style: solid;
 		">
+			<!-- frame around content -->
+			<div class="absolute inset-0 bg-[url(/macintosh-frame.png)] bg-size-[100%_100%]"></div>
+
 			<!-- Hack Club logo on border -->
 			<img 
 				src="/macintosh-hc-logo.png" 
@@ -1245,7 +1249,7 @@ Mumbai`.split("\n")
 			<img 
 				src="/macintosh-keyboard.png" 
 				alt="Macintosh keyboard" 
-				class="absolute pointer-events-none z-30" 
+				class="absolute pointer-events-none z-30 max-sm:!w-[250%]" 
 				style="
 					bottom: calc(-1 * clamp(232px, 29vw, 464px) - 10px - clamp(0px, 14vw, 180px));
 					left: 50%;
@@ -1259,9 +1263,8 @@ Mumbai`.split("\n")
 			<div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-transparent bg-[length:100%_6px] bg-repeat-y pointer-events-none opacity-30"></div>
 			
 			<!-- Rounded container -->
-			<div class="bg-[#061E2D] rounded-3xl p-8 md:p-12 relative">
 				<!-- Scanlines inside container -->
-				<div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-transparent bg-[length:100%_8px] bg-repeat-y pointer-events-none opacity-20 rounded-3xl"></div>
+				<div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-transparent bg-[length:100%_8px] bg-repeat-y pointer-events-none opacity-20"></div>
 				
 				<div class="space-y-8 max-sm:space-y-4 relative z-10">
 					<!-- Title -->
