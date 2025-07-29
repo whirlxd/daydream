@@ -722,6 +722,35 @@ Mumbai`.split("\n")
 	:global(html) {
 		overflow-x: hidden;
 	}
+	
+	/* Minimal scrollbar styling */
+	.idea-output-box::-webkit-scrollbar {
+		width: 8px;
+	}
+	
+	.idea-output-box::-webkit-scrollbar-track {
+		background: transparent;
+	}
+	
+	.idea-output-box::-webkit-scrollbar-thumb {
+		background-color: #d1e3ee;
+		border-radius: 0;
+		border: none;
+	}
+	
+	.idea-output-box::-webkit-scrollbar-thumb:hover {
+		background-color: #d1e3ee;
+	}
+	
+	.idea-output-box::-webkit-scrollbar-corner {
+		background: transparent;
+	}
+	
+	/* Firefox scrollbar styling */
+	.idea-output-box {
+		scrollbar-width: auto;
+		scrollbar-color: #d1e3ee transparent;
+	}
 </style>
 
 
@@ -1448,7 +1477,7 @@ Mumbai`.split("\n")
 						</div>
 						
 						<div class="flex-1">
-							<div class="border-2 border-[#D1E3EE] p-6 min-h-40 w-full flex items-center">
+							<div class="border-2 border-[#D1E3EE] p-6 min-h-40 max-h-40 w-full flex items-start overflow-y-auto idea-output-box">
 								{#if ideaText}
 									<p class="font-pixel text-xl md:text-2xl text-[#D1E3EE] w-full">
 										{ideaText}{#if isTyping}<span class="animate-pulse">|</span>{/if}
