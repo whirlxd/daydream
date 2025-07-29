@@ -581,10 +581,40 @@ Mumbai`.split("\n")
 	}
 </style>
 
+
 <svelte:head>
-	<title>Daydream</title>
+	<title>Daydream - Teen Game Jam by Hack Club</title>
+	<meta name="description" content="Join Daydream, the worldwide teen-led game jam by Hack Club! 4,000+ hackers building games in 100+ cities. Sign up to organize or participate in your city." />
+	<meta name="keywords" content="game jam, hackathon, teen coding, Hack Club, game development, teen programming, high school coding" />
+	
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://daydream.hackclub.com" />
+	<meta property="og:title" content="Daydream - Teen Game Jam by Hack Club" />
+	<meta property="og:description" content="Join Daydream, the worldwide teen-led game jam by Hack Club! 4,000+ hackers building games in 100+ cities. Sign up to organize or participate in your city." />
+	<meta property="og:image" content="https://daydream.hackclub.com/og-image.png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:site_name" content="Daydream" />
+	
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content="https://daydream.hackclub.com" />
+	<meta property="twitter:title" content="Daydream - Teen Game Jam by Hack Club" />
+	<meta property="twitter:description" content="Join Daydream, the worldwide teen-led game jam by Hack Club! 4,000+ hackers building games in 100+ cities. Sign up to organize or participate in your city." />
+	<meta property="twitter:image" content="https://daydream.hackclub.com/og-image.png" />
+	<meta property="twitter:creator" content="@hackclub" />
+	<meta property="twitter:site" content="@hackclub" />
+	
+	<!-- Additional SEO -->
+	<meta name="robots" content="index, follow" />
+	<meta name="author" content="Hack Club" />
+	<link rel="canonical" href="https://daydream.hackclub.com" />
+	
+	<!-- Analytics -->
 	<script defer data-domain="daydream.hackclub.com" src="https://plausible.io/js/script.js"></script>
 </svelte:head>
+
 
 <div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
 
