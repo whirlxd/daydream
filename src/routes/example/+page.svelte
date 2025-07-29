@@ -10,7 +10,9 @@
 	const eventName = "Example";
 	const eventLocation = "Example City";
 	const eventAddress = "1600 Pennsylvania Avenue, Washington, DC 20500";
-	const directionsURL = "https://www.google.com/maps/search/1600+pennsylvania+avenue/" // This is optional!
+	// These two are optional
+	const directionsURL = "https://www.google.com/maps/search/1600+pennsylvania+avenue/"
+	const contactLink = "mailto:example@daydream.hackclub.com"
 	
 	// Sponsors Configuration
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
@@ -1122,10 +1124,12 @@ Mumbai`.split("\n")
 						{/if}
 					{/if}
 					
-					<!-- Call to action for sponsors -->
-					<div class="mt-8 text-center">
-						<p class="text-lg text-[#335969]">Want to sponsor Daydream {eventName}? <a href="mailto:sponsors@hackclub.com" class="underline hover:text-[#477783] transition-colors">Get in touch</a></p>
-					</div>
+					{#if contactLink}
+						<!-- Call to action for sponsors -->
+						<div class="mt-8 text-center">
+							<p class="text-lg text-[#335969]">Want to sponsor Daydream {eventName}? <a href={contactLink} class="underline hover:text-[#477783] transition-colors">Get in touch</a></p>
+						</div>
+					{/if}
 				</div>
 			</div>
 			
