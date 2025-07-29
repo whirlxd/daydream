@@ -14,6 +14,8 @@
 	// Configuration - Put your information here!
 	const eventName = "Example";
 	const eventLocation = "Example City";
+	const eventAddress = "1600 Pennsylvania Avenue, Washington, DC 20500";
+	const directionsURL = "https://www.google.com/maps/search/1600+pennsylvania+avenue/" // This is optional!
 	
 	// Sponsors Configuration
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
@@ -1197,7 +1199,7 @@ Mumbai`.split("\n")
 			<!-- Map container with cloudy edges -->
 			<div class="relative w-full h-156 overflow-hidden bg-transparent">
 				<iframe 
-					src="/map"
+					src="/event-map?location={encodeURIComponent(eventAddress)}"
 					class="w-full h-full border-0 bg-[#acd4e0]"
 					style="
 						mask-image: 
@@ -1288,14 +1290,20 @@ Mumbai`.split("\n")
 				</iframe>
 			</div>
 			
-			<p class="text-center font-sans text-2xl pt-12 max-sm:text-xl text-[#60574b] z-10000">All daydream events are organized by high school students like yourself! <br> <span class="font-bold"><a class="underline hover:text-pink" href="https://forms.hackclub.com/daydream">Sign up</a> to organize now!</span></p>
+			<p class="text-center font-sans text-2xl pt-12 max-sm:text-xl text-[#60574b] z-10000">
+				{#if directionsURL}
+					Daydream {eventName} is taking place at <a class="underline text-pink" href={directionsURL}>{eventAddress}</a>!
+				{:else}
+					Daydream {eventName} is taking place at <span class="underline">{eventAddress}</span>!
+				{/if}
+			</p>
 		</div>
 	</div>
 
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
 	
 	<!-- Macintosh Section -->
-	<div class="w-full flex justify-center py-16 px-8 mt-24 pb-[clamp(232px,29vw,464px)] max-sm:w-[120vw] max-sm:-translate-x-[10vw]">
+	<div class="w-full flex justify-center py-16 px-8 mt-48 pb-[clamp(232px,29vw,464px)] max-sm:w-[120vw] max-sm:-translate-x-[10vw]">
 		<div class="bg-[#c5c2b1] p-4 relative max-w-4xl" style="border-radius: calc(1.5rem + 1rem);">
 			<div class="bg-[#061E2D] text-[#D1E3EE] rounded-3xl py-18 md:py-16 px-10 md:px-18 relative overflow-visible" style="
 			border-image: url('/macintosh.png') 128 91 464 91; 
