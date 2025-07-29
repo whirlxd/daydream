@@ -44,7 +44,7 @@
 .prose h1 {
   color: #2f5e88;
   position: relative;
-  width: max-content;
+  width: fit-content;
 }
 .prose h1::after {
   content: "";
