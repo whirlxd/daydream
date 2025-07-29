@@ -2,6 +2,7 @@
 	import { onMount } from "svelte";
 	import { gsap } from "gsap";
 	import { ScrollTrigger } from "gsap/ScrollTrigger";
+	import ParticipantSignUp from "$lib/components/ParticipantSignUp.svelte";
 	
 	/**
 	 * This is the template site! Create a copy of this folder (src/routes/example)
@@ -333,26 +334,7 @@ Mumbai`.split("\n")
 		showVideoPopup = false;
 	}
 
-	function handleFormSubmit(event: Event) {
-		event.preventDefault();
-		const form = event.target as HTMLFormElement;
-		const emailInput = form.querySelector('input[name="email"]') as HTMLInputElement;
-		const email = emailInput.value;
-		
-		fetch('/api/submit-email', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify({ email })
-		}).catch(error => {
-			console.warn('Failed to save email:', error);
-		});
-		
-		window.open(`https://forms.hackclub.com/daydream?email=${encodeURIComponent(email)}`, '_blank');
-		
-		emailInput.value = '';
-	}
+
 
 	async function typeText(text: string) {
 		isTyping = true;
@@ -797,39 +779,7 @@ Mumbai`.split("\n")
 			</h4>
 		</div>
 		
-		<div class="mt-8 flex flex-col items-center gap-3 z-5 max-md:scale-90">
-			<form on:submit={handleFormSubmit} class="rounded-full bg-white border-2 border-dark font-sans p-2 flex flex-row items-center gap-2 shadow-[0_3px_0_0_theme(colors.dark)] focus-within:border-pink focus-within:shadow-[0_3px_0_0_#E472AB] has-[button:active]:border-dark has-[button:active]:shadow-[0_3px_0_0_theme(colors.dark)] has-[button:focus]:border-dark has-[button:focus]:shadow-[0_3px_0_0_theme(colors.dark)]">
-				<input
-					type="email"
-					name="email"
-					placeholder="Enter email to sign up"
-					class="w-80 px-3 py-1 text-dark focus:outline-none"
-					required
-				/>
-				<input type="hidden" name="mailingLists" value="cmd3c94kz0hvz0iwt7ps28cyd" />
-				<button type="submit" class="bg-light h-full px-5 rounded-full border-b-2 border-[#B3866A] cursor-pointer hover:border-b-4 hover:transform active:border-b-0 active:transform active:translate-y-0.5 focus:outline-none transition-all duration-100">
-					<img src="submit.svg" alt="Go">
-				</button>
-			</form>
-			<a
-				href="https://forms.hackclub.com/daydream-stickers"
-				target="_blank"
-				class="w-max px-4 py-2 bg-pink border-b-2 border-b-pink-dark text-white rounded-full active:transform active:translate-y-0.5 transition-all duration-100 font-sans cursor-pointer mx-auto relative overflow-visible hover:shadow-[0_2px_0_0_theme(colors.pink.dark)] hover:-translate-y-[2px] active:border-transparent active:shadow-none active: mt-4 md:hidden"
-			>
-				Get free stickers
-				<img
-					src="button-clouds.svg" 
-					alt="" 
-					class="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto object-contain pointer-events-none"
-				>
-				<img
-					src="rock-sticker.png"
-					alt=""
-					class="absolute bottom-2 right-3 translate-2/3 w-18 h-18 object-contain pointer-events-none"
-					style="transform: rotate(-15deg);"
-				>
-			</a>
-		</div>
+		<ParticipantSignUp />
 	</div>
 
 	<!-- <img src="hot-air-balloon.png" alt="" class="absolute w-1/8 right-32 bottom-40 z-20"> -->
