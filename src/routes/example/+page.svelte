@@ -11,7 +11,7 @@
 	const eventLocation = "Example City";
 	const eventAddress = "1600 Pennsylvania Avenue, Washington, DC 20500";
 	// These two are optional
-	const directionsURL = "https://www.google.com/maps/search/1600+pennsylvania+avenue/"
+	const directionsURL = "https://www.google.com/maps/search/1600+pennsylvania+avenue+washington+dc/"
 	const contactLink = "mailto:example@daydream.hackclub.com"
 	
 	// Sponsors Configuration
