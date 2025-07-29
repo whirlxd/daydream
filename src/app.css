@@ -78,12 +78,19 @@
 }
 
 /* for the guide */
-
 .notebook {
   @apply bg-white bg-clip-padding p-8 mt-8;
   border-top: 64px solid transparent;
   border-image: url('/guide/notebook-border.png') 72 round;
 }
+@media (width < 750px) or (1024px < width < 1250px) {
+  .scroll-table {
+    border: 1px solid var(--prose-border);
+    border-radius: 4px;
+    padding-inline: 1rem;
+  }
+}
+
 
 @keyframes hover {
   0% {

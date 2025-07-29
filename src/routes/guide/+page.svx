@@ -191,11 +191,17 @@ Organizing Daydream is going to be one of the hardest things you've done so far.
 
 That being said, Hack Club HQ is not organizing this event directly. We will do everything we can to help you have great ownership, but we expect you to take ownership of your event, be proactive, reach out to us when you need support and be an equally reliable partner. 
 
+<div class="overflow-x-scroll min-w-0 scroll-table">
+  <div class="min-w-[700px]">
+
 | Contact method | Expected response time | When to use? |
 | :---- | :---- | :---- |
 | [\#daydream](https://hackclub.slack.com/archives/C094GLLH2RX) in the Hack Club Slack | 24 hours or sooner | Any general questions\! Especially helpful for things that other organizers can answer for you. |
 | Email [daydream@hackclub.com](mailto:daydream@hackclub.com) | 48 hours (Guaranteed response) | Anything that is high priority, involves personal information, or cannot be discussed publicly |
 | Request a 30 minute call with a Daydream mentor (maximum of two calls a month) | You can usually book a call 3-4 days in advance\! | For more complicated situations that need context, or when you need advice from someone experienced in different situations\! |
+
+  </div>
+</div>
 
 ### **I need help.**
 
