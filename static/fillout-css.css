@@ -5,7 +5,7 @@
 
 /* Define the Daydream fonts */
 @font-face {
-  font-family: 'Expensify New Kansas';
+  font-family: 'Daydream New';
   font-display: swap;
   src: url('https://daydream.hackclub.com/fonts/serif.woff') format('woff');
   font-weight: 400;
@@ -13,7 +13,7 @@
 }
 
 @font-face {
-  font-family: 'Expensify New Kansas';
+  font-family: 'Daydream New';
   font-display: swap;
   src: url('https://daydream.hackclub.com/fonts/serif-italic.woff') format('woff');
   font-weight: 400;
@@ -22,7 +22,7 @@
 
 /* Apply serif font to all headers */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Expensify New Kansas', ui-serif, serif !important;
+  font-family: 'Daydream New', ui-serif, serif !important;
   color: #833710;
   font-style: italic;
 }
@@ -144,7 +144,7 @@ a {
 
 /* make the 'Thank You' text use the header font */
 .fillout-field-thank-you > div > div > div:not(.mt-\[3px\]) p {
-  font-family: 'Expensify New Kansas', ui-serif, serif !important;
+  font-family: 'Daydream New', ui-serif, serif !important;
   font-style: italic;
 }
 
