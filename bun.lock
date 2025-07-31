@@ -5,6 +5,7 @@
       "name": "site",
       "dependencies": {
         "@fontsource/atkinson-hyperlegible": "^5.2.6",
+        "@fontsource/jersey-15": "^5.2.6",
         "@sveltejs/adapter-node": "^5.2.13",
         "@sveltejs/adapter-static": "^3.0.8",
         "@tailwindcss/typography": "^0.5.16",
@@ -92,6 +93,8 @@
     "@esbuild/win32-x64": ["@esbuild/win32-x64@0.25.6", "", { "os": "win32", "cpu": "x64" }, "sha512-NgJPHHbEpLQgDH2MjQu90pzW/5vvXIZ7KOnPyNBm92A6WgZ/7b6fJyUBjoumLqeOQQGqY2QjQxRo97ah4Sj0cA=="],
 
     "@fontsource/atkinson-hyperlegible": ["@fontsource/atkinson-hyperlegible@5.2.6", "", {}, "sha512-Kfh6/UlHhotKuv4Oi9PXQIsmzwbtJIR442sSJnEHsO7TDZaDczK8cY0AlTNOB0XMDZj1j35nAlgbi2HZCdNg/Q=="],
+
+    "@fontsource/jersey-15": ["@fontsource/jersey-15@5.2.6", "", {}, "sha512-3zkkEnu91esusWLqAK/AN1uc6jNtWT8idfO0UfYLqNlbMBKkbbiIVXtq6UbQsyegxnmRMppVV1J2t1zrJ36VgA=="],
 
     "@isaacs/fs-minipass": ["@isaacs/fs-minipass@4.0.1", "", { "dependencies": { "minipass": "^7.0.4" } }, "sha512-wgm9Ehl2jpeqP3zw/7mo3kRHFp5MEDhqAdwy1fTGkHAwnkGOVsgpvQhL8B5n1qlb01jV3n/bI0ZfZp5lWA1k4w=="],
 
