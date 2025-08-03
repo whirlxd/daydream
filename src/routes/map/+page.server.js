@@ -29,13 +29,13 @@ export async function load() {
 		// Geocode each event location
 		const locations = [];
 		for (const event of events) {
-			const { location, state, country, event_name } = event.fields;
+			const { location, state, country, event_name, address_override } = event.fields;
 			
 			if (!location || !event_name) continue;
 
-			// Build address string
-			const addressParts = [location, state, country].filter(Boolean);
-			const address = addressParts.join(', ');
+			// Use address_override if set, otherwise build address string
+			const address = address_override || [location, state, country].filter(Boolean).join(', ');
+			console.log(`${event_name}: ${address}`)
 
 			try {
 				const geocodeUrl = `https://geocoder.hackclub.com/v1/geocode?address=${encodeURIComponent(address)}&key=${GEOCODER_API_KEY}`;
