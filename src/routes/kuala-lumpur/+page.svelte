@@ -4,8 +4,6 @@
 	import { ScrollTrigger } from "gsap/ScrollTrigger";
 	
 	// Event Configuration
-	const EVENT_NAME = "Daydream";
-	const EVENT_LOCATION = "Kuala Lumpur";
 	const EVENT_NAME = "Example";
 	const EVENT_LOCATION = "Example City";
 
@@ -1030,4 +1028,3 @@ Mumbai`.split("\n")
 		</div>
 	</div>
 {/if}
-
