@@ -4,8 +4,8 @@
 	import { ScrollTrigger } from "gsap/ScrollTrigger";
 	
 	// Event Configuration
-	const EVENT_NAME = "Example";
-	const EVENT_LOCATION = "Example City";
+	const EVENT_NAME = "Daydream";
+	const EVENT_LOCATION = "Kuala Lumput";
 
 	// Cities where the game jam is happening
 	const cities = `Columbus
@@ -31,8 +31,9 @@ Dubai
 San Francisco
 Minneapolis
 Seattle
-Signapore
+Singapore
 Sydney
+Washington
 Mumbai`.split("\n")
 
 	function createSmoothPath(points: Array<{ x: number; y: number }>) {
