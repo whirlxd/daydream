@@ -924,7 +924,7 @@ Mumbai`.split("\n")
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-30 pointer-events-none -z-40"></div>
 	
 	<div class="relative max-w-4xl mx-auto h-full flex items-start pt-24 max-sm:pt-40 px-8 max-sm:px-2">
-		<div class="relative z-20 px-20 pt-20 pb-32 rounded-lg mb-0 max-sm:px-18" style="background-image: url('/letter-top.png'), linear-gradient(to bottom, #FCEFC5 100px, transparent 100px), url('/letter-loop.png'); background-size: 100% auto, 100% auto, 100% auto; background-repeat: no-repeat, no-repeat, repeat-y; background-position: top, top, top; background-attachment: local, local, local;">
+		<div class="relative z-20 px-20 pt-20 pb-52 rounded-lg mb-0 max-sm:px-18" style="background-image: url('/letter-top.png'), linear-gradient(to bottom, #FCEFC5 100px, transparent 100px), url('/letter-loop.png'); background-size: 100% auto, 100% auto, 100% auto; background-repeat: no-repeat, no-repeat, repeat-y; background-position: top, top, top; background-attachment: local, local, local;">
 			<div class="absolute bottom-0 left-0 w-full h-24 z-10 pointer-events-none bg-[url('/clouds-loop.png')] bg-repeat-x bg-bottom bg-contain"></div>
 			<h2 class="text-5xl font-serif italic text-[#8B4513] mb-10 relative">
 				Dear Hacker,
@@ -958,10 +958,6 @@ Mumbai`.split("\n")
 					Our goal is to get <span class="font-bold">4,000 Hack Clubbers</span> to make projects they're proud of 
 					through Daydream, and we're giving out over <span class="font-bold">$120k in funding</span> to organizers 
 					like you!
-				</p>
-				
-				<p class="text-center font-bold text-2xl mt-10 text-[#2C3E50]">
-					Check out our <a class="underline hover:text-pink" href="https://www.youtube.com/watch?v=hNYsNSY7Vz0">video!</a>
 				</p>
 			</div>
 		</div>
@@ -1176,7 +1172,7 @@ Mumbai`.split("\n")
 	</div>
 	
 	<div class="relative w-10/12 h-auto object-contain cursor-text flex flex-row max-lg:flex-wrap md:translate-y-0 max-lg:translate-y-1/5 items-center justify-center align-middle max-w-5xl z-50">
-		<img src="gamejam-1-alt.png" alt="Here's How You Crush a" class="flex-shrink min-w-0 object-contain">
+		<img src="gamejam-1-alt.png" alt="Here's How You Win a" class="flex-shrink min-w-0 object-contain">
 		<img src="gamejam-2.png" alt="Game Jam" class="flex-shrink min-w-0 object-contain">
 	</div>
 </div>
@@ -1215,7 +1211,7 @@ Mumbai`.split("\n")
 			<div class="relative w-72 h-40 max-md:w-80 animate-hover ![--hover:-0.15rem] ![animation-delay:0.3s] z-20" data-point="2">
 				<img src="paper2.png" alt="" class="w-full h-full object-contain">
 				<div class="absolute inset-0 justify-center text-center p-6 text-xl font-serif max-md:text-lg text-[#8B4513] inline-block content-center">
-					<span class="font-sans text-[#639DEB] font-bold text-[1.3rem] mr-1">#2:</span> Find a team of other teenagers at the event
+					<span class="font-sans text-[#639DEB] font-bold text-[1.3rem] mr-1">#2:</span> Attend a workshop and learn about game development
 				</div>
 			</div>
 		</div>
@@ -1228,7 +1224,7 @@ Mumbai`.split("\n")
 			<div class="relative w-72 h-40 max-md:w-80 animate-hover ![--hover:-0.15rem] ![animation-delay:1.4s] z-20" data-point="3">
 				<img src="paper3.png" alt="" class="w-full h-full object-contain">
 				<div class="absolute inset-0 justify-center text-center p-6 text-xl font-serif max-md:text-lg text-[#8B4513] inline-block content-center">
-					<span class="font-sans text-[#AB68E2] font-bold text-[1.3rem] mr-1">#3:</span> Start building your game - <em>no experience needed</em>
+					<span class="font-sans text-[#AB68E2] font-bold text-[1.3rem] mr-1">#3:</span> Find a team of other teenagers at the event
 				</div>
 			</div>
 		</div>
@@ -1241,7 +1237,7 @@ Mumbai`.split("\n")
 			<div class="relative w-72 h-40 max-md:w-80 animate-hover ![--hover:-0.15rem] ![animation-delay:2.3s] z-20" data-point="4">
 				<img src="paper4.png" alt="" class="w-full h-full object-contain">
 				<div class="absolute inset-0 justify-center text-center p-6 text-xl font-serif max-md:text-lg text-[#8B4513] inline-block content-center">
-					<span class="font-sans text-[#F2993E] font-bold text-[1.3rem] mr-1">#4:</span> Attend workshops or talk to one of our mentors for help
+					<span class="font-sans text-[#F2993E] font-bold text-[1.3rem] mr-1">#4:</span> Start building your game - <em>no experience needed</em>
 				</div>
 			</div>
 		</div>
@@ -1266,7 +1262,7 @@ Mumbai`.split("\n")
 <div class="w-full bg-gradient-to-b from-[#FDC5D1] to-[#FAE3C9] items-center justify-center px-0 md:px-8 relative pt-36">
 	<div class="w-full max-w-5xl lg:max-w-6xl mx-auto px-2 md:px-8">
 		<div class="relative w-full min-w-72">
-			<img src="banner.png" alt="100 Cities Worldwide" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/3 md:-translate-y-[40%] h-48 w-auto z-100 scale-[1.15] md:scale-[1.65] saturate-70 brightness-110 object-contain px-4 pointer-events-none">
+			<img src="banner-city.png" alt="Find a Daydream Near You" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/3 md:-translate-y-[40%] h-48 w-auto z-100 scale-[1.15] md:scale-[1.65] saturate-70 brightness-110 object-contain px-4 pointer-events-none">
 			
 			<!-- Map container with cloudy edges -->
 			<div class="relative w-full h-156 overflow-hidden bg-transparent">
@@ -1437,35 +1433,34 @@ Mumbai`.split("\n")
 				<div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-transparent bg-[length:100%_8px] bg-repeat-y pointer-events-none opacity-20"></div>
 				
 				<div class="space-y-8 max-sm:space-y-4 relative z-10">
-					<!-- Title -->
 					<h2 class="text-5xl md:text-6xl lg:text-7xl font-pixel leading-tight">
 						What will you <img src="/dream-pixel.png" alt="Dream?" class="h-[0.75em] font-serif italic [image-rendering:pixelated] inline align-middle -translate-y-1.5">
 					</h2>
 					
-					<!-- Subtitle -->
 					<p class="text-xl md:text-2xl opacity-90 font-pixel">
-						Deven's body here Lorem Ipsum Dolor Sit Amet
+						You can make any game you want as long as it can be deployed on itch.io! All games made must be deployed and available online for other participants to play and experience. We will only accept itch.io submission links.
+						<br>
+						<br>
+						Here are some cool projects from past hackathons to get you inspired:
 					</p>
 					
-					<!-- List -->
-					<ul class="space-y-4 font-pixel text-xl md:text-2xl">
+					<ul class="space-y-2 font-pixel text-xl md:text-2xl">
 						<li class="flex items-start">
 							<span class="mr-4">•</span>
-							<span class="underline">List item One</span>
+							<a href="https://bucketfish.itch.io/remedy-renemy" target="_blank" class="underline mr-2">Remedy Renemy</a>by Tongyu and Kai Ling
 						</li>
 						<li class="flex items-start">
 							<span class="mr-4">•</span>
-							<span class="underline">List thing two</span>
+							<a href="https://nanomars.itch.io/not-an-idle" target="_blank" class="underline">Not an Idle</a> by Armand
 						</li>
 						<li class="flex items-start">
 							<span class="mr-4">•</span>
-							<span class="underline">List thing three</span>
+							<a href="https://juanes10201.itch.io/speedtickers" target="_blank" class="underline">SPEEDTICKERS</a> by Agustin
 						</li>
 					</ul>
 					
-					<!-- Description -->
 					<p class="text-xl md:text-2xl opacity-90 font-pixel leading-relaxed">
-						There's some more text down here, an entire sentence in fact. There's a lot of content in this box.
+						We'll have workshops and activities before Daydream to help you learn game development using Godot! 
 					</p>
 					
 					<!-- Bottom section with input -->
