@@ -39,7 +39,7 @@
 				{ event: "Workshop 1", time: "2:00 PM" },
 				{ event: "Activity 1", time: "4:00 PM" },
 				{ event: "Workshop 2", time: "4:00 PM" },
-				{ event: "Closing ceremony", time: "5:00 PM" }
+				{ event: "Closing ceremony", time: "5:00 PM" },
 				{ event: "Voting", time: "6:00 PM" },
 			]
 		},
