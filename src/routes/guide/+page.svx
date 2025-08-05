@@ -80,9 +80,9 @@ The PoC will get a link to your Daydream event's HCB org, and an onboarding vide
 
 ### **4\) Get a custom email**
 
-Want a [city@daydream.hackclub.com](mailto:city@daydream.hackclub.com) email? Fill out this form\! This is a shared account that the team can use to send out communications to attendees (especially for quest 
+Want a [city@daydream.hackclub.com](mailto:city@daydream.hackclub.com) email? This will be coming to event PoCs soonTM! This is a shared Google Workspace account that the team can use to send out mass, personalized communications to attendees, and should be the contact email listed on your website so people can ask you questions.
 
-(also, it's kind of awesome) 
+(it's kind of awesome. Google Workspace ftw) 
 
 <CloudImage src="/guide/email.png" />
 
