@@ -927,38 +927,22 @@ Mumbai`.split("\n")
 		<div class="relative z-20 px-20 pt-20 pb-52 rounded-lg mb-0 max-sm:px-18" style="background-image: url('/letter-top.png'), linear-gradient(to bottom, #FCEFC5 100px, transparent 100px), url('/letter-loop.png'); background-size: 100% auto, 100% auto, 100% auto; background-repeat: no-repeat, no-repeat, repeat-y; background-position: top, top, top; background-attachment: local, local, local;">
 			<div class="absolute bottom-0 left-0 w-full h-24 z-10 pointer-events-none bg-[url('/clouds-loop.png')] bg-repeat-x bg-bottom bg-contain"></div>
 			<h2 class="text-5xl font-serif italic text-[#8B4513] mb-10 relative">
-				Dear Hacker,
+				Dear Hackers, Musicians, and Artist,
 				<img src="/underline.svg" alt="" class="absolute left-0 -bottom-3 w-64 h-auto opacity-70">
 			</h2>
 			
 			<div class="text-[#8B4513] font-serif text-xl leading-relaxed space-y-8">
-				<p>
-					Hackathons are <em class="italic font-bold">magical</em>. You've probably felt it before: staying up all night 
-					with your friends, building something that actually works, finally meeting 
-					everyone whose code you've admired. That rush when your code compiles at 3:00 am 
-					and suddenly your wild idea becomes real.
-				</p>
-				
-				<p class="font-bold text-2xl">
-					Hack Club wants you to organize a hackathon.
-				</p>
-				
-				<p>
-					We want more hackers than ever from all over the world to have this life 
-					changing experience, and we want your help in making that happen.
-				</p>
-				
-				<p>
-					Sign up to organize a Daydream event in your city! All of our hackathons are 
-					teen-led. You do not need to have any previous experience, and Hack Club 
-					will provide you with funding and coaching.
-				</p>
-				
-				<p>
-					Our goal is to get <span class="font-bold">4,000 Hack Clubbers</span> to make projects they're proud of 
-					through Daydream, and we're giving out over <span class="font-bold">$120k in funding</span> to organizers 
-					like you!
-				</p>
+				<p>Welcome to Hack Club's newest adventure. This fall we invite you to join us for Daydream, the world's biggest Game Jam happening simultaneously in 100 cities.</p>
+
+				<p class="font-bold text-2xl">Hack Club wants you to make a game this fall.</p>
+
+				<p>Don't consider yourself a game dev? No problem - we have tons of online and in-person workshops for you to make your first game! </p>
+
+				<p>This fall, we invite you to learn something new, make something you're really proud of, meet new friends, and go on an incredible adventure together.</p>
+
+				<p class="mb-2">With love,</p>
+
+				<p class="italic text-2xl opacity-85">Augie and Renran from Hack Club HQ</p>
 			</div>
 		</div>
 	</div>
