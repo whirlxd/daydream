@@ -26,9 +26,9 @@
 		{ image: "/example/logo7.png", name: "Sponsor 7", url: "https://example7.com" }
 	];
 	
-	// Schedule Configuration - You don't need to use this schedule, this is just an example!
-	const scheduleData = {
-		saturday: {
+	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
+	const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [
+		{
 			title: "Saturday, September 27th",
 			items: [
 				{ event: "Doors open", time: "11:00 AM" },
@@ -43,7 +43,7 @@
 				{ event: "Midnight surprise", time: "12:00 AM" }
 			]
 		},
-		sunday: {
+		{
 			title: "Sunday, September 28th",
 			items: [
 				{ event: "Breakfast", time: "8:00 AM" },
@@ -51,7 +51,7 @@
 				{ event: "Closing ceremony", time: "12:00 PM" }
 			]
 		}
-	};
+	];
 
 	
 	import { onMount } from "svelte";
@@ -960,43 +960,25 @@ Mumbai`.split("\n")
 				
 				<!-- Schedule Content -->
 				<div class="relative z-10">
-					<!-- Saturday Section -->
-					<div class="mb-8 bg-white/50 py-6 -mx-8">
-						<h3 class="text-2xl font-sans font-bold text-[#335969] mb-6 text-center px-8 max-sm:text-xl max-sm:px-4">
-							{scheduleData.saturday.title}
-						</h3>
-						
-						<div class="max-w-xl mx-auto px-4">
-							{#each scheduleData.saturday.items as item, index}
-								<div class="flex items-center justify-between py-2">
-									<span class="text-lg font-sans text-[#477783]">{item.event}</span>
-									<span class="text-lg font-sans text-[#477783]">{item.time}</span>
-								</div>
-								{#if index < scheduleData.saturday.items.length - 1}
-									<div class="h-[2px] bg-white/30"></div>
-								{/if}
-							{/each}
+					{#each scheduleData as day, dayIndex}
+						<div class="bg-white/50 py-6 -mx-8 {dayIndex < scheduleData.length - 1 ? 'mb-8' : ''}">
+							<h3 class="text-2xl font-sans font-bold text-[#335969] mb-6 text-center px-8 max-sm:text-xl max-sm:px-4">
+								{day.title}
+							</h3>
+							
+							<div class="max-w-xl mx-auto px-4">
+								{#each day.items as item, index}
+									<div class="flex items-center justify-between py-2">
+										<span class="text-lg font-sans text-[#477783]">{item.event}</span>
+										<span class="text-lg font-sans text-[#477783]">{item.time}</span>
+									</div>
+									{#if index < day.items.length - 1}
+										<div class="h-[2px] bg-white/30"></div>
+									{/if}
+								{/each}
+							</div>
 						</div>
-					</div>
-					
-					<!-- Sunday Section -->
-					<div class="bg-white/50 py-6 -mx-8">
-						<h3 class="text-2xl font-sans font-bold text-[#335969] mb-6 text-center px-8 max-sm:text-xl max-sm:px-4">
-							{scheduleData.sunday.title}
-						</h3>
-						
-						<div class="max-w-xl mx-auto px-4">
-							{#each scheduleData.sunday.items as item, index}
-								<div class="flex items-center justify-between py-2">
-									<span class="text-lg font-sans text-[#477783]">{item.event}</span>
-									<span class="text-lg font-sans text-[#477783]">{item.time}</span>
-								</div>
-								{#if index < scheduleData.sunday.items.length - 1}
-									<div class="h-[2px] bg-white/30"></div>
-								{/if}
-							{/each}
-						</div>
-					</div>
+					{/each}
 				</div>
 			</div>
 			
