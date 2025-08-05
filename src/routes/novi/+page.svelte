@@ -9,7 +9,7 @@
 	// Configuration - Put your information here!
 	const eventName = "Daydream Novi";
 	const eventLocation = "Novi";
-	const eventAddress = "Venue not secured yet";
+	const eventAddress = null;
 	// These two are optional
 	const directionsURL = "https://www.google.com/maps/search/1600+pennsylvania+avenue+washington+dc/"
 	const contactLink = "mailto:example@daydream.hackclub.com"
@@ -1225,7 +1225,7 @@ Mumbai`.split("\n")
 			<!-- Map container with cloudy edges -->
 			<div class="relative w-full h-156 overflow-hidden bg-transparent">
 				<iframe 
-					src="/event-map?location={encodeURIComponent(eventAddress)}"
+					src={eventAddress ? "/event-map?location={encodeURIComponent(eventAddress)}" : "/map"}
 					class="w-full h-full border-0 bg-[#acd4e0]"
 					style="
 						mask-image: 
@@ -1316,13 +1316,15 @@ Mumbai`.split("\n")
 				</iframe>
 			</div>
 			
-			<p class="text-center font-sans text-2xl pt-12 max-sm:text-xl text-[#60574b] z-10000">
-				{#if directionsURL}
-					Daydream {eventName} is taking place at <a class="underline text-pink" href={directionsURL}>{eventAddress}</a>!
-				{:else}
-					Daydream {eventName} is taking place at <span class="underline">{eventAddress}</span>!
-				{/if}
-			</p>
+			{#if eventAddress}
+				<p class="text-center font-sans text-2xl pt-12 max-sm:text-xl text-[#60574b] z-10000">
+					{#if directionsURL}
+						Daydream {eventName} is taking place at <a class="underline text-pink" href={directionsURL}>{eventAddress}</a>!
+					{:else}
+						Daydream {eventName} is taking place at <span class="underline">{eventAddress}</span>!
+					{/if}
+				</p>
+			{/if}
 		</div>
 	</div>
 
