@@ -7,9 +7,9 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Example";
-	const eventLocation = "Example City";
-	const eventAddress = "1600 Pennsylvania Avenue, Washington, DC 20500";
+	const eventName = "Daydream Novi";
+	const eventLocation = "Novi";
+	const eventAddress = "Venue not secured yet";
 	// These two are optional
 	const directionsURL = "https://www.google.com/maps/search/1600+pennsylvania+avenue+washington+dc/"
 	const contactLink = "mailto:example@daydream.hackclub.com"
@@ -31,26 +31,18 @@
 		saturday: {
 			title: "Saturday, September 27th",
 			items: [
-				{ event: "Doors open", time: "11:00 AM" },
-				{ event: "Opening ceremony", time: "12:00 PM" },
+				{ event: "Doors open", time: "7:00 AM" },
+				{ event: "Breakfast", time: "7:15 AM" },
+				{ event: "Opening ceremony", time: "8:00 PM" },
+				{ event: "Start working on your project!", time: "10:00 PM" },
 				{ event: "Lunch", time: "12:30 PM" },
-				{ event: "Start working on your project!", time: "1:00 PM" },
 				{ event: "Workshop 1", time: "2:00 PM" },
 				{ event: "Activity 1", time: "4:00 PM" },
 				{ event: "Workshop 2", time: "4:00 PM" },
-				{ event: "Dinner", time: "6:00 PM" },
-				{ event: "Lightning talks", time: "8:00 PM" },
-				{ event: "Midnight surprise", time: "12:00 AM" }
+				{ event: "Closing ceremony", time: "5:00 PM" }
+				{ event: "Voting", time: "6:00 PM" },
 			]
 		},
-		sunday: {
-			title: "Sunday, September 28th",
-			items: [
-				{ event: "Breakfast", time: "8:00 AM" },
-				{ event: "Demos!", time: "10:30 AM" },
-				{ event: "Closing ceremony", time: "12:00 PM" }
-			]
-		}
 	};
 
 	
