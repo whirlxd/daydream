@@ -1,6 +1,10 @@
 <script lang="ts">
+	import { page } from '$app/stores';
+	
 	let submitted = false;
 	let fadeOut = false;
+	
+	$: city = $page.url.pathname.split('/')[1] || '';
 	
 	function handleFormSubmit(event: Event) {
 		event.preventDefault();
@@ -13,7 +17,7 @@
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			body: JSON.stringify({ email })
+			body: JSON.stringify({ email, city })
 		}).catch(error => {
 			console.warn('Failed to save email:', error);
 		});
