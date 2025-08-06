@@ -1,3 +1,4 @@
+
 <script lang="ts">
 	/**
 	 * This is the template site! Create a copy of this folder (src/routes/example)
@@ -9,9 +10,9 @@
 	// Configuration - Put your information here!
 	const eventName = "Daydream";
 	const eventLocation = "Kuala Lumpur";
-	const eventAddress = "TBA";
+	const eventAddress = "TBA"; // Leave this empty if you don't want an address
 	// These two are optional
-	const contactLink = "mailto:example@daydream.hackclub.com"
+	const contactLink = "Coming Soon!"
 	
 	// Sponsors Configuration
 	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
@@ -25,9 +26,9 @@
 		{ image: "/example/logo7.png", name: "Sponsor 7", url: "https://example7.com" }
 	];
 	
-	// Schedule Configuration - You don't need to use this schedule, this is just an example!
-	const scheduleData = {
-		saturday: {
+	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
+	const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [
+		{
 			title: "Saturday, September 27th",
 			items: [
 				{ event: "Doors open", time: "8:00 AM" },
@@ -41,7 +42,6 @@
 				{ event: "Doors close", time: "8:00 PM" },
 			]
 		},
-		sunday: {
 			title: "Sunday, September 28th",
 			items: [
 				{ event: "Doors open", time: "8:00 AM" },
@@ -58,7 +58,7 @@
 				{ event: "Doors close", time: "8:00 PM" },
 			]
 		}
-	};
+	];
 
 	
 	import { onMount } from "svelte";
@@ -967,43 +967,25 @@ Mumbai`.split("\n")
 				
 				<!-- Schedule Content -->
 				<div class="relative z-10">
-					<!-- Saturday Section -->
-					<div class="mb-8 bg-white/50 py-6 -mx-8">
-						<h3 class="text-2xl font-sans font-bold text-[#335969] mb-6 text-center px-8 max-sm:text-xl max-sm:px-4">
-							{scheduleData.saturday.title}
-						</h3>
-						
-						<div class="max-w-xl mx-auto px-4">
-							{#each scheduleData.saturday.items as item, index}
-								<div class="flex items-center justify-between py-2">
-									<span class="text-lg font-sans text-[#477783]">{item.event}</span>
-									<span class="text-lg font-sans text-[#477783]">{item.time}</span>
-								</div>
-								{#if index < scheduleData.saturday.items.length - 1}
-									<div class="h-[2px] bg-white/30"></div>
-								{/if}
-							{/each}
+					{#each scheduleData as day, dayIndex}
+						<div class="bg-white/50 py-6 -mx-8 {dayIndex < scheduleData.length - 1 ? 'mb-8' : ''}">
+							<h3 class="text-2xl font-sans font-bold text-[#335969] mb-6 text-center px-8 max-sm:text-xl max-sm:px-4">
+								{day.title}
+							</h3>
+							
+							<div class="max-w-xl mx-auto px-4">
+								{#each day.items as item, index}
+									<div class="flex items-center justify-between py-2">
+										<span class="text-lg font-sans text-[#477783]">{item.event}</span>
+										<span class="text-lg font-sans text-[#477783]">{item.time}</span>
+									</div>
+									{#if index < day.items.length - 1}
+										<div class="h-[2px] bg-white/30"></div>
+									{/if}
+								{/each}
+							</div>
 						</div>
-					</div>
-					
-					<!-- Sunday Section -->
-					<div class="bg-white/50 py-6 -mx-8">
-						<h3 class="text-2xl font-sans font-bold text-[#335969] mb-6 text-center px-8 max-sm:text-xl max-sm:px-4">
-							{scheduleData.sunday.title}
-						</h3>
-						
-						<div class="max-w-xl mx-auto px-4">
-							{#each scheduleData.sunday.items as item, index}
-								<div class="flex items-center justify-between py-2">
-									<span class="text-lg font-sans text-[#477783]">{item.event}</span>
-									<span class="text-lg font-sans text-[#477783]">{item.time}</span>
-								</div>
-								{#if index < scheduleData.sunday.items.length - 1}
-									<div class="h-[2px] bg-white/30"></div>
-								{/if}
-							{/each}
-						</div>
-					</div>
+					{/each}
 				</div>
 			</div>
 			
@@ -1237,7 +1219,7 @@ Mumbai`.split("\n")
 			<!-- Map container with cloudy edges -->
 			<div class="relative w-full h-156 overflow-hidden bg-transparent">
 				<iframe 
-					src="/event-map?location={encodeURIComponent(eventAddress)}"
+					src={eventAddress ? "/event-map?location={encodeURIComponent(eventAddress)}" : "/map"}
 					class="w-full h-full border-0 bg-[#acd4e0]"
 					style="
 						mask-image: 
@@ -1328,13 +1310,15 @@ Mumbai`.split("\n")
 				</iframe>
 			</div>
 			
-			<p class="text-center font-sans text-2xl pt-12 max-sm:text-xl text-[#60574b] z-10000">
-				{#if directionsURL}
-					Daydream {eventName} is taking place at <a class="underline text-pink" href={directionsURL}>{eventAddress}</a>!
-				{:else}
-					Daydream {eventName} is taking place at <span class="underline">{eventAddress}</span>!
-				{/if}
-			</p>
+			{#if eventAddress}
+				<p class="text-center font-sans text-2xl pt-12 max-sm:text-xl text-[#60574b] z-10000">
+					{#if directionsURL}
+						Daydream {eventName} is taking place at <a class="underline text-pink" href={directionsURL}>{eventAddress}</a>!
+					{:else}
+						Daydream {eventName} is taking place at <span class="underline">{eventAddress}</span>!
+					{/if}
+				</p>
+			{/if}
 		</div>
 	</div>
 
@@ -1491,8 +1475,8 @@ Mumbai`.split("\n")
 		<div class="relative transform rotate-1">
 			<img src="window-4.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">What if I have questions?</h3>
-				<p class="text-sm">Contact us via daydream@hackclub.com or join #daydream on slack.</p>
+				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">Can I organize a Daydream in my city?</h3>
+				<p class="text-sm">Definitely! Contact us via daydream@hackclub.com or join #daydream on slack.</p>
 			</div>
 		</div>
 
