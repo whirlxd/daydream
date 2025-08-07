@@ -7,7 +7,7 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Daydream DC";
+	const eventName = "DC";
 	const eventLocation = "Washington DC";
 	const eventAddress = ""; // Leave this empty if you don't want an address
 	// These two are optional
@@ -32,34 +32,22 @@
 		}
 	}
 
-	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
-	const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [
-		{
-			title: "Saturday, September 27th",
-			items: [
-				{ event: "Doors open", time: "11:00 AM" },
-				{ event: "Opening ceremony", time: "12:00 PM" },
-				{ event: "Lunch", time: "12:30 PM" },
-				{ event: "Start working on your project!", time: "1:00 PM" },
-				{ event: "Workshop 1", time: "2:00 PM" },
-				{ event: "Activity 1", time: "4:00 PM" },
-				{ event: "Workshop 2", time: "4:00 PM" },
-				{ event: "Dinner", time: "6:00 PM" },
-				{ event: "Lightning talks", time: "8:00 PM" },
-				{ event: "Midnight surprise", time: "12:00 AM" }
-			]
-		},
-		{
-			title: "Sunday, September 28th",
-			items: [
-				{ event: "Breakfast", time: "8:00 AM" },
-				{ event: "Demos!", time: "10:30 AM" },
-				{ event: "Closing ceremony", time: "12:00 PM" }
-			]
-		}
-	];
+	let scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [];
+	let scheduleLoading = true;
 
-	
+	async function fetchScheduleData() {
+		try {
+			const response = await fetch('https://raw.githubusercontent.com/Kaympe20/daydream-dc-config/refs/heads/main/schedule.json');
+			const data = await response.json();
+			scheduleData = data;
+		} catch (error) {
+			console.error('Failed to fetch schedule:', error);
+			scheduleData= [];
+		} finally {
+			scheduleLoading = false;
+		}
+	}
+
 	import { onMount } from "svelte";
 	import { gsap } from "gsap";
 	import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -632,6 +620,8 @@ Mumbai`.split("\n")
 			fetchSponsors();
 		}
 
+		fetchScheduleData();
+
 		console.log('User city:', data.userCity);
 		
 		// Register GSAP plugins
@@ -975,25 +965,31 @@ Mumbai`.split("\n")
 				
 				<!-- Schedule Content -->
 				<div class="relative z-10">
-					{#each scheduleData as day, dayIndex}
-						<div class="bg-white/50 py-6 -mx-8 {dayIndex < scheduleData.length - 1 ? 'mb-8' : ''}">
-							<h3 class="text-2xl font-sans font-bold text-[#335969] mb-6 text-center px-8 max-sm:text-xl max-sm:px-4">
-								{day.title}
-							</h3>
-							
-							<div class="max-w-xl mx-auto px-4">
-								{#each day.items as item, index}
-									<div class="flex items-center justify-between py-2">
-										<span class="text-lg font-sans text-[#477783]">{item.event}</span>
-										<span class="text-lg font-sans text-[#477783]">{item.time}</span>
-									</div>
-									{#if index < day.items.length - 1}
-										<div class="h-[2px] bg-white/30"></div>
-									{/if}
-								{/each}
+					{#if scheduleLoading}
+						<div class="flex justify-center items-center min-h-40">
+                            <p class="text-lg text-[#335969]">Loading schedule...</p>
+                        </div>
+					{:else}
+						{#each scheduleData as day, dayIndex}
+							<div class="bg-white/50 py-6 -mx-8 {dayIndex < scheduleData.length - 1 ? 'mb-8' : ''}">
+								<h3 class="text-2xl font-sans font-bold text-[#335969] mb-6 text-center px-8 max-sm:text-xl max-sm:px-4">
+									{day.title}
+								</h3>
+								
+								<div class="max-w-xl mx-auto px-4">
+									{#each day.items as item, index}
+										<div class="flex items-center justify-between py-2">
+											<span class="text-lg font-sans text-[#477783]">{item.event}</span>
+											<span class="text-lg font-sans text-[#477783]">{item.time}</span>
+										</div>
+										{#if index < day.items.length - 1}
+											<div class="h-[2px] bg-white/30"></div>
+										{/if}
+									{/each}
+								</div>
 							</div>
-						</div>
-					{/each}
+						{/each}
+					{/if}
 				</div>
 			</div>
 			
