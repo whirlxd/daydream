@@ -7,12 +7,12 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Daydream Novi";
+	const eventName = "Novi";
 	const eventLocation = "Novi";
 	const eventAddress = null;
 	// These two are optional
 	const directionsURL = "https://www.google.com/maps/search/1600+pennsylvania+avenue+washington+dc/"
-	const contactLink = "mailto:example@daydream.hackclub.com"
+	const contactLink = "mailto:anahitamayekar03@gmail.com"
 	
 	// Sponsors Configuration
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
@@ -32,15 +32,15 @@
 			title: "Saturday, September 27th",
 			items: [
 				{ event: "Doors open", time: "7:00 AM" },
-				{ event: "Breakfast", time: "7:15 AM" },
-				{ event: "Opening ceremony", time: "8:00 PM" },
-				{ event: "Start working on your project!", time: "10:00 PM" },
+				{ event: "Breakfast", time: "7:05 AM" },
+				{ event: "Opening ceremony", time: "7:30 PM" },
+				{ event: "Start working on your project!", time: "8:00 PM" },
+				{ event: "Workshop 1", time: "8:30 PM" },
 				{ event: "Lunch", time: "12:30 PM" },
-				{ event: "Workshop 1", time: "2:00 PM" },
-				{ event: "Activity 1", time: "4:00 PM" },
-				{ event: "Workshop 2", time: "4:00 PM" },
-				{ event: "Closing ceremony", time: "5:00 PM" },
-				{ event: "Voting", time: "6:00 PM" },
+				{ event: "Workshop 2", time: "1:00 PM" },
+				{ event: "Activity 1", time: "3:00 PM" },
+				{ event: "Closing ceremony", time: "4:00 PM" },
+				{ event: "Voting", time: "5:00 PM" },
 			]
 		},
 	];
@@ -841,7 +841,7 @@ Mumbai`.split("\n")
 			<h3
 				class="text-3xl italic font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent w-max max-sm:text-2xl mx-auto"
 			>
-				Game jam for high schoolers
+				Game jam for high & middle schoolers
 			</h3>
 			<img
 				src="underline.svg"
@@ -1505,7 +1505,7 @@ Mumbai`.split("\n")
 			<img src="window-1.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
 				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">What do I need?</h3>
-				<p class="text-sm">Your laptop, chargers, toiletries, sleeping bags, and an open mind!</p>
+				<p class="text-sm">Your laptop, charger, and an open mind!</p>
 			</div>
 		</div>
 
@@ -1532,7 +1532,7 @@ Mumbai`.split("\n")
 			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
 				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">What if my parents are concerned?</h3>
-				<p class="text-sm">We're here to help! You can see our parent guide here, or they can reach out to us at daydream@hackclub.com for questions.</p>
+				<p class="text-sm">We're here to help! You can see our parent guide here, or they can reach out to us at anahitamayekar03@gmail.com or daydream@hackclub.com for questions.</p>
 			</div>
 		</div>
 
