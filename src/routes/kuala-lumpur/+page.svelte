@@ -8,11 +8,12 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Daydream";
+	const eventName = "KL";
 	const eventLocation = "Kuala Lumpur";
-	const eventAddress = "TBA"; // Leave this empty if you don't want an address
+	const eventAddress = ""; // Leave this empty if you don't want an address
 	// These two are optional
 	const contactLink = "Coming Soon!"
+	const directionsURL = "";
 	
 	// Sponsors Configuration
 	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
@@ -42,6 +43,7 @@
 				{ event: "Doors close", time: "8:00 PM" },
 			]
 		},
+		{
 			title: "Sunday, September 28th",
 			items: [
 				{ event: "Doors open", time: "8:00 AM" },
@@ -819,7 +821,7 @@ Mumbai`.split("\n")
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat pointer-events-none opacity-100 lg:-translate-y-15 bg-center mix-blend-overlay" style="mask-image: url('/buildings-front.png'); mask-size: contain; mask-repeat: no-repeat; mask-position: center top; -webkit-mask-image: url('/buildings-front.png'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center top;"></div>
 	<div class="hero-ui-parallax flex flex-col items-center justify-center text-center relative z-5 -translate-y-2">
 		<div class="inline-block relative">
-			<div class="h-12"></div> 
+			<div class="h-16"></div> 
 			<!-- space for the ship -->
 			<h2
 			class="text-xl font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent absolute left-1/2 max-sm:translate-y-4 max-sm:mb-0 max-md:-mb-8 md:left-[calc(50%+4rem)] -translate-x-1/2 bottom-8 italic w-max md:text-lg max-sm:text-lg"
