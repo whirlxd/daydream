@@ -1,6 +1,6 @@
 import Airtable from 'airtable';
 import { json } from '@sveltejs/kit';
-import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID, AIRTABLE_EMAILS_TABLE } from '$env/static/private';
+import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID, AIRTABLE_RSVPS_TABLE } from '$env/static/private';
 
 if (!AIRTABLE_API_KEY || !AIRTABLE_BASE_ID) {
 	console.warn('Airtable environment variables not configured, email saving will be skipped');
@@ -14,7 +14,7 @@ const base = AIRTABLE_API_KEY && AIRTABLE_BASE_ID
 
 export async function POST({ request, getClientAddress }) {
 	try {
-		const { email } = await request.json();
+		const { email, city } = await request.json();
 		
 		if (!email) {
 			return json({ error: 'Email is required' }, { status: 400 });
@@ -29,11 +29,12 @@ export async function POST({ request, getClientAddress }) {
 		const ip = request.headers.get('x-forwarded-for')?.split(',')[0] || getClientAddress();
 		
 		if (base) {
-			await base(AIRTABLE_EMAILS_TABLE || 'email_addresses').create([
+			await base(AIRTABLE_RSVPS_TABLE || 'participant_rsvps').create([
 				{
 					fields: {
 						email,
 						ip,
+						city,
 					}
 				}
 			]);
