@@ -1048,9 +1048,9 @@ Mumbai`.split("\n")
                                 <!-- Tier Section -->
                                 <div class="mb-8 rounded-lg p-6 {
                                     tierData.tier === 'partner' ? 'bg-blue-500/20' :
-                                    tierData.tier === 'gold' ? 'bg-yellow-500/20' :
-                                    tierData.tier === 'silver' ? 'bg-gray-400/20' :
-                                    tierData.tier === 'bronze' ? 'bg-orange-600/20' :
+                                    tierData.tier === 'gold' ? 'bg-yellow-500/30' :
+                                    tierData.tier === 'silver' ? 'bg-gray-400/30' :
+                                    tierData.tier === 'bronze' ? 'bg-orange-600/30' :
                                     'bg-white/20'
                                 }">
                                     <h3 class="text-2xl font-sans font-bold text-[#335969] mb-4 text-center capitalize">
@@ -1074,7 +1074,7 @@ Mumbai`.split("\n")
 												<img 
 													src={sponsor.logo} 
 													alt={sponsor.name} 
-													class="max-w-full max-h-[90%] object-contain mb-2"
+													class="max-w-full max-h-[80px] object-contain mb-2"
 												>
 												<h4 class="text-center text-lg font-sans text-[#335969]">
 													{sponsor.name}
