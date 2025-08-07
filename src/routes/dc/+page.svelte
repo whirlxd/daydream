@@ -380,7 +380,7 @@ Mumbai`.split("\n")
 		
 		isTyping = false;
 	}
-
+/*
 	async function fetchIdea(): Promise<string> {
 		let attempt = 0;
 		const maxAttempts = 5;
@@ -471,6 +471,8 @@ Mumbai`.split("\n")
 		// Start typing animation with the fetched idea
 		await typeText(fetchResult);
 	}
+*/
+
 
 	function setupPlaneAnimation() {
 		const container = document.getElementById("islands-container");
@@ -738,6 +740,8 @@ Mumbai`.split("\n")
 	}
 	
 	/* Minimal scrollbar styling */
+
+	/*
 	.idea-output-box::-webkit-scrollbar {
 		width: 8px;
 	}
@@ -760,11 +764,12 @@ Mumbai`.split("\n")
 		background: transparent;
 	}
 	
-	/* Firefox scrollbar styling */
+	// Firefox scrollbar styling
 	.idea-output-box {
 		scrollbar-width: auto;
 		scrollbar-color: #d1e3ee transparent;
 	}
+	*/
 </style>
 
 
@@ -1436,7 +1441,7 @@ Mumbai`.split("\n")
 					</p>
 					
 					<!-- Bottom section with input -->
-					<div class="flex flex-col md:flex-row md:items-end gap-10 pt-8">
+					<!-- <div class="flex flex-col md:flex-row md:items-end gap-10 pt-8">
 						<div>
 							<h3 class="text-3xl md:text-4xl font-pixel mb-4">Stuck?</h3>
 							<button 
@@ -1466,7 +1471,7 @@ Mumbai`.split("\n")
 								{/if}
 							</div>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
