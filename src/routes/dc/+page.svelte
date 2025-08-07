@@ -12,7 +12,7 @@
 	const eventAddress = ""; // Leave this empty if you don't want an address
 	// These two are optional
 	const directionsURL = "https://www.google.com/maps/search/washington+dc/"
-	const contactLink = "mailto:example@daydream.hackclub.com"
+	const contactLink = "mailto:katec@hackclub.com" //stand-in until official emails are rele
 	
 	// Sponsors Configuration
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
