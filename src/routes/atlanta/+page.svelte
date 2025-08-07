@@ -8,6 +8,9 @@
 	const eventLocation = "Atlanta";
 	const eventAddress = "---";
 	const directionsURL = "---"
+
+	const sponsorsEnabled = false; // for now
+
 	const scheduleData = {
     saturday: {
         title: "Saturday, September 27th",
