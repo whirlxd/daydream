@@ -11,6 +11,7 @@
 
 	const sponsorsEnabled = false; // for now
 
+	// schedule not final
 	const scheduleData = {
     saturday: {
         title: "Saturday, September 27th",
