@@ -1066,7 +1066,7 @@ Mumbai`.split("\n")
                                             <a 
 												href={sponsor.link} 
 												class="bg-white/40 rounded-lg p-4 w-full {
-													tierData.tier === 'partner' ? 'h-32' : 'h-20'
+													tierData.tier === 'partner' ? 'h-32' : 'h-fit'
 												} flex flex-col items-center justify-center hover:bg-white/60 transition-colors" 
 												target="_blank" 
 												rel="noopener noreferrer"
