@@ -8,7 +8,7 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "KL";
+	const eventName = "Daydream";
 	const eventLocation = "Kuala Lumpur";
 	const eventAddress = ""; // Leave this empty if you don't want an address
 	// These two are optional
