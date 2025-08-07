@@ -1094,7 +1094,7 @@ Mumbai`.split("\n")
                     {#if contactLink}
                         <!-- Call to action for sponsors -->
                         <div class="mt-8 text-center">
-                            <p class="text-lg text-[#335969]">Want to sponsor Daydream {eventName}? <a href={contactLink} class="underline hover:text-[#477783] transition-colors">Get in touch</a></p>
+                            <p class="text-lg text-[#335969]">Want to sponsor Daydream {eventName}? <a href={contactLink} class="underline hover:text-[#477783] transition-colors">Get in touch</a> or <a href=https://raw.githubusercontent.com/Kaympe20/daydream-dc-config/refs/heads/main/changeable-assets/Daydream%20DC%20Prospectus.pdf class="underline hover:text-[#477783] transition-colors" target="_blank">See our prospectus</a></p>
                         </div>
                     {/if}
                 </div>
