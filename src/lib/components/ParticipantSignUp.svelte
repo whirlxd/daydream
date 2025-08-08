@@ -22,22 +22,22 @@
 			console.warn('Failed to save email:', error);
 		});
 		
-		window.location.href = `https://forms.fillout.com/t/wABjdnkgLWus?email=${encodeURIComponent(email)}`;
-		
-		submitted = true;
-		
-		// Clear the input box while the green overlay is showing
-		emailInput.value = '';
-		
-		setTimeout(() => {
-			fadeOut = true;
-		}, 1500);
-		
-		// Reset to original position after fade out completes
-		setTimeout(() => {
-			submitted = false;
-			fadeOut = false;
-		}, 1500 + 500);
+		if (city === 'suceava') {
+			window.location.href = `https://forms.fillout.com/t/wABjdnkgLWus?email=${encodeURIComponent(email)}`;
+		} else {
+			submitted = true;
+			
+			emailInput.value = '';
+			
+			setTimeout(() => {
+				fadeOut = true;
+			}, 1500);
+			
+			setTimeout(() => {
+				submitted = false;
+				fadeOut = false;
+			}, 1500 + 500);
+		}
 	}
 </script>
 
