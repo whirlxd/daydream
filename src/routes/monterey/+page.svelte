@@ -7,15 +7,15 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Example";
-	const eventLocation = "Example City";
-	const eventAddress = "1600 Pennsylvania Avenue, Washington, DC 20500"; // Leave this empty if you don't want an address
+	const eventName = "Daydream Monterey";
+	const eventLocation = "Monterey";
+	const eventAddress = ""; // Leave this empty if you don't want an address
 	// These two are optional
-	const directionsURL = "https://www.google.com/maps/search/1600+pennsylvania+avenue+washington+dc/"
-	const contactLink = "mailto:example@daydream.hackclub.com"
+//	const directionsURL = "https://www.google.com/maps/search/1600+pennsylvania+avenue+washington+dc/"
+//	const contactLink = "mailto:example@daydream.hackclub.com"
 	
 	// Sponsors Configuration
-	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
+	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
 	const sponsors = [
 		{ image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
 		{ image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
