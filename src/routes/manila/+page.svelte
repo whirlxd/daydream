@@ -1,9 +1,11 @@
+<script>
+// Configuration 
 const eventName = "Daydream";
-const eventLocation = "TBA";
+const eventLocation = "Manila";
 const eventAddress = "TBA";
 // These two are optional
-//const directionsURL = "https://www.google.com/maps/search/1600+pennsylvania+avenue+washington+dc/"
-const contactLink = "mailto:example@daydream.hackclub.com"
+// const directionsURL = "https://www.google.com/maps/search/1600+pennsylvania+avenue+washington+dc/"
+// const contactLink = "mailto:example@daydream.hackclub.com"
 
 // Sponsors Configuration
 const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
@@ -43,3 +45,4 @@ const scheduleData = {
         ]
     }
 };
+</script>
