@@ -21,22 +21,22 @@
 		}).catch(error => {
 			console.warn('Failed to save email:', error);
 		});
+
+		submitted = true;
 		
+		emailInput.value = '';
+		
+		setTimeout(() => {
+			fadeOut = true;
+		}, 1500);
+		
+		setTimeout(() => {
+			submitted = false;
+			fadeOut = false;
+		}, 1500 + 500);
+
 		if (city === 'suceava') {
 			window.location.href = `https://forms.fillout.com/t/wABjdnkgLWus?email=${encodeURIComponent(email)}`;
-		} else {
-			submitted = true;
-			
-			emailInput.value = '';
-			
-			setTimeout(() => {
-				fadeOut = true;
-			}, 1500);
-			
-			setTimeout(() => {
-				submitted = false;
-				fadeOut = false;
-			}, 1500 + 500);
 		}
 	}
 </script>
