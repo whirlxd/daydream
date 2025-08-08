@@ -22,6 +22,8 @@
 			console.warn('Failed to save email:', error);
 		});
 		
+		window.location.href = `https://forms.fillout.com/t/wABjdnkgLWus?email=${encodeURIComponent(email)}`;
+		
 		submitted = true;
 		
 		// Clear the input box while the green overlay is showing
