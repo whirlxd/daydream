@@ -17,7 +17,7 @@
 	// Sponsors Configuration
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "/jakarta/twbn-logo-turquoise-transparent.png", name: "Twibbonize", url: "https://example1.com" }
+		{ image: "/jakarta/twbn-logo-turquoise-transparent.png", name: "Twibbonize", url: "https://twibbonize.com" }
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
