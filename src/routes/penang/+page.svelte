@@ -68,7 +68,7 @@ San Francisco
 Minneapolis
 Seattle
 Singapore
-Malaysia
+Kuala Lumpur
 Sydney
 Mumbai`.split("\n")
 
