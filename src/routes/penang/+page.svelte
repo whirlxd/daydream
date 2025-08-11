@@ -39,13 +39,11 @@
 	/** @type {import('./$types').PageData} */
 	export let data;
 	
-	// Get current URL for dynamic metadata
 	$: currentUrl = `https://daydream.hackclub.com${$page.url.pathname}`;
 	$: pageTitle = `${eventName} - Game Jam in ${eventLocation}`;
 	$: pageDescription = `Join Daydream ${eventName} in ${eventLocation}! A teen-led game jam where you'll build amazing games with other high schoolers. Food, workshops, and prizes included!`;
 	$: pageKeywords = `game jam, hackathon, teen coding, Hack Club, game development, ${eventLocation}, ${eventName}`;
 
-	// Cities where the game jam is happening
 	const cities = `Columbus
 Lisbon 
 Boston
@@ -69,7 +67,8 @@ Dubai
 San Francisco
 Minneapolis
 Seattle
-Signapore
+Singapore
+Malaysia
 Sydney
 Mumbai`.split("\n")
 
