@@ -35,7 +35,6 @@
 	import ParticipantSignUp from "$lib/components/ParticipantSignUp.svelte";
 	import { page } from '$app/stores';
 	
-=======
 	
 	/** @type {import('./$types').PageData} */
 	export let data;
@@ -45,13 +44,10 @@
 	$: pageTitle = `Daydream ${eventName} - ${eventLocation} Game Jam`;
 	$: pageDescription = `Join Daydream ${eventName} in ${eventLocation}! A teen-led game jam where you'll build amazing games with other high schoolers. Food, workshops, and prizes included!`;
 	$: pageKeywords = `game jam, hackathon, teen coding, Hack Club, game development, ${eventLocation}, ${eventName}`;
->>>>>>> b072260b57270d28ada26123f7a7c73b5f81c085:src/routes/example/+page.svelte
-
-	const sponsorsEnabled = false; // for now
 
 	// schedule not final
-	const scheduleData = {
-    saturday: {
+	const scheduleData = [
+    {
         title: "Saturday, September 27th",
         items: [
             { event: "Doors open", time: "11:00 AM" },
@@ -66,7 +62,7 @@
             { event: "Midnight surprise", time: "12:00 AM" }
         ]
     },
-    sunday: {
+    {
         title: "Sunday, September 28th",
         items: [
             { event: "Breakfast", time: "8:00 AM" },
@@ -74,7 +70,7 @@
             { event: "Closing ceremony", time: "12:00 PM" }
         ]
     }
-};
+];
 	// Cities where the game jam is happening
 	const cities = `Columbus
 Lisbon 
