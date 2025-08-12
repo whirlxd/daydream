@@ -7,15 +7,15 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Example";
-	const eventLocation = "Example City";
-	const eventAddress = "1600 Pennsylvania Avenue, Washington, DC 20500"; // Leave this empty if you don't want an address
+	const eventName = "Atlanta Hackathon/Game Jam";
+	const eventLocation = "Atlanta";
+	const eventAddress = "TBD"; // Leave this empty if you don't want an address
 	// These two are optional
-	const directionsURL = "https://www.google.com/maps/search/1600+pennsylvania+avenue+washington+dc/"
-	const contactLink = "mailto:example@daydream.hackclub.com"
+	const directionsURL = "TBD"
+	const contactLink = "loganpeterson@hackclub.app"
 	
 	// Sponsors Configuration
-	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
+	const sponsorsEnabled = false; // false for now...
 	const sponsors = [
 		{ image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
 		{ image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
@@ -26,33 +26,6 @@
 		{ image: "/example/logo7.png", name: "Sponsor 7", url: "https://example7.com" }
 	];
 	
-	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
-	const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [
-		{
-			title: "Saturday, September 27th",
-			items: [
-				{ event: "Doors open", time: "11:00 AM" },
-				{ event: "Opening ceremony", time: "12:00 PM" },
-				{ event: "Lunch", time: "12:30 PM" },
-				{ event: "Start working on your project!", time: "1:00 PM" },
-				{ event: "Workshop 1", time: "2:00 PM" },
-				{ event: "Activity 1", time: "4:00 PM" },
-				{ event: "Workshop 2", time: "4:00 PM" },
-				{ event: "Dinner", time: "6:00 PM" },
-				{ event: "Lightning talks", time: "8:00 PM" },
-				{ event: "Midnight surprise", time: "12:00 AM" }
-			]
-		},
-		{
-			title: "Sunday, September 28th",
-			items: [
-				{ event: "Breakfast", time: "8:00 AM" },
-				{ event: "Demos!", time: "10:30 AM" },
-				{ event: "Closing ceremony", time: "12:00 PM" }
-			]
-		}
-	];
-
 	
 	import { onMount } from "svelte";
 	import { gsap } from "gsap";
@@ -72,6 +45,32 @@
 	$: pageDescription = `Join Daydream ${eventName} in ${eventLocation}! A teen-led game jam where you'll build amazing games with other high schoolers. Food, workshops, and prizes included!`;
 	$: pageKeywords = `game jam, hackathon, teen coding, Hack Club, game development, ${eventLocation}, ${eventName}`;
 
+	// schedule not final
+	const scheduleData = [
+    {
+        title: "Saturday, September 27th",
+        items: [
+            { event: "Doors open", time: "11:00 AM" },
+            { event: "Opening ceremony", time: "12:00 PM" },
+            { event: "Lunch", time: "12:30 PM" },
+            { event: "Start working on your project!", time: "1:00 PM" },
+            { event: "Workshop 1", time: "2:00 PM" },
+            { event: "Activity 1", time: "4:00 PM" },
+            { event: "Workshop 2", time: "4:00 PM" },
+            { event: "Dinner", time: "6:00 PM" },
+            { event: "Lightning talks", time: "8:00 PM" },
+            { event: "Midnight surprise", time: "12:00 AM" }
+        ]
+    },
+    {
+        title: "Sunday, September 28th",
+        items: [
+            { event: "Breakfast", time: "8:00 AM" },
+            { event: "Demos!", time: "10:30 AM" },
+            { event: "Closing ceremony", time: "12:00 PM" }
+        ]
+    }
+];
 	// Cities where the game jam is happening
 	const cities = `Columbus
 Lisbon 
