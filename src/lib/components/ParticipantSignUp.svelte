@@ -26,11 +26,6 @@
 		
 		// Clear the input box while the green overlay is showing
 		emailInput.value = '';
-
-		if (city.toLowerCase() == "jakarta") {
-			document.location.href = `https://daydreamjakarta.fillout.com/rsvp?email=${encodeURIComponent(email)}`;
-			return;
-		}
 		
 		setTimeout(() => {
 			fadeOut = true;
