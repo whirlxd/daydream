@@ -68,7 +68,8 @@
 	$: pageKeywords = `game jam, hackathon, teen coding, Hack Club, game development, ${eventLocation}, ${eventName}`;
 
 	// Cities where the game jam is happening
-	const cities = `Columbus
+	const cities = `Sydney
+Columbus
 Lisbon 
 Boston
 Giza
@@ -92,7 +93,6 @@ San Francisco
 Minneapolis
 Seattle
 Signapore
-Sydney
 Mumbai`.split("\n")
 
 	function createSmoothPath(points: Array<{ x: number; y: number }>) {
