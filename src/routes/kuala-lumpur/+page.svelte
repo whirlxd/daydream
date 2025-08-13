@@ -30,7 +30,7 @@
 				{ event: "Opening ceremony", time: "8:30 AM" },
 				{ event: "Start working on your project!", time: "9:00 AM" },
 				{ event: "Workshop 1", time: "TBA" },
-				{ event: "Lunch", time: "12:00 PM" },
+				{ event: "Lunc", time: "12:00 PM" },
 				{ event: "Workshop 2", time: "TBA" },
 				{ event: "Dinner", time: "6:00 PM" },
 				{ event: "Lightning talks and packing up", time: "7:45 PM" },
