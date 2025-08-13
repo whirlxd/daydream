@@ -3,13 +3,13 @@
 	
 	let submitted = false;
 	let fadeOut = false;
-	export let event = "";
+	export let eventName = "";
 	
-	$: if (!event) {
+	$: if (!eventName) {
 		let slug = $page.url.pathname.split('/')[1] || '';
-		event = "Daydream " + slug.charAt(0).toUpperCase() + slug.slice(1).replace("-", " ");
+		eventName = slug.charAt(0).toUpperCase() + slug.slice(1).replace("-", " ");
 	}
-	
+
 	function handleFormSubmit(event: Event) {
 		event.preventDefault();
 		const form = event.target as HTMLFormElement;
@@ -21,7 +21,7 @@
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			body: JSON.stringify({ email, city: event })
+			body: JSON.stringify({ email, city: "Daydream " + eventName })
 		}).catch(error => {
 			console.warn('Failed to save email:', error);
 		});
