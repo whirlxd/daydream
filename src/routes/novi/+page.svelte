@@ -7,7 +7,7 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Daydream Novi";
+	const eventName = "Novi";
 	const eventLocation = "Novi";
 	const eventAddress = null;
 	// These two are optional

@@ -7,7 +7,7 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Daydream Ottawa"; // The name of your event
+	const eventName = "Ottawa"; // The name of your event
 	const eventLocation = "Ottawa";
 	const eventAddress = "4000 Innovation DrKanata, ON K2K 3K1"; // Leave this empty if you don't want an address
 	// These two are optional

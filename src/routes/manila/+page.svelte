@@ -1,5 +1,5 @@
 <script lang="ts">
-	const eventName = "Daydream Manila";
+	const eventName = "Manila";
 	const eventLocation = "Manila";
 	const eventAddress = ""; // Leave this empty if you don't want an address
 	// These two are optional
