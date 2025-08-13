@@ -7,7 +7,7 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Daydream Busan";
+	const eventName = "Busan";
 	const eventLocation = "Busan";
 	const eventAddress = "부산외국인학교, 부산광역시 해운대구 대천로67번길 45 우편번호 49094"; // Leave this empty if you don't want an address
 	// These two are optional
@@ -843,7 +843,7 @@ Mumbai`.split("\n")
 			</h4>
 		</div>
 		
-		<ParticipantSignUp />
+		<ParticipantSignUp {eventName} />
 	</div>
 
 	<!-- <img src="hot-air-balloon.png" alt="" class="absolute w-1/8 right-32 bottom-40 z-20"> -->
