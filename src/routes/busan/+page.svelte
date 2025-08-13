@@ -12,10 +12,10 @@
 	const eventAddress = "부산외국인학교, 부산광역시 해운대구 대천로67번길 45 우편번호 49094"; // Leave this empty if you don't want an address
 	// These two are optional
 	const directionsURL = "https://naver.me/GG7XqWuy"
-	const contactLink = "mailto:example@daydream.hackclub.com"
+	const contactLink = ""
 	
 	// Sponsors Configuration
-	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
+	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
 	const sponsors = [
 		{ image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
 		{ image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
@@ -1568,10 +1568,3 @@ Mumbai`.split("\n")
 		</div>
 	</div>
 {/if}
-
-
-
-
-git add .  
-git commit -m "Add Busan event page"  
-git push
