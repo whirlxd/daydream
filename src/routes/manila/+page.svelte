@@ -1,19 +1,10 @@
-
 <script lang="ts">
-	/**
-	 * This is the template site! Create a copy of this folder (src/routes/example)
-	 * and rename it to whatever you want your URL to be.
-	 * 
-	 * Then, configure the event name, location, and schedule below:
-	 */
-
-	// Configuration - Put your information here!
-	const eventName = "KL";
-	const eventLocation = "Kuala Lumpur";
+	const eventName = "Daydream Manila";
+	const eventLocation = "Manila";
 	const eventAddress = ""; // Leave this empty if you don't want an address
 	// These two are optional
-	const contactLink = "Coming Soon!"
-	const directionsURL = "";
+	const directionsURL = ""
+	const contactLink = "" //
 	
 	// Sponsors Configuration
 	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
@@ -32,32 +23,24 @@
 		{
 			title: "Saturday, September 27th",
 			items: [
-				{ event: "Doors open", time: "8:00 AM" },
-				{ event: "Opening ceremony", time: "8:30 AM" },
-				{ event: "Start working on your project!", time: "9:00 AM" },
-				{ event: "Workshop 1", time: "TBA" },
-				{ event: "Lunch", time: "12:00 PM" },
-				{ event: "Workshop 2", time: "TBA" },
+				{ event: "Doors open", time: "11:00 AM" },
+				{ event: "Opening ceremony", time: "12:00 PM" },
+				{ event: "Lunch", time: "12:30 PM" },
+				{ event: "Start working on your project!", time: "1:00 PM" },
+				{ event: "Workshop 1", time: "2:00 PM" },
+				{ event: "Activity 1", time: "4:00 PM" },
+				{ event: "Workshop 2", time: "4:00 PM" },
 				{ event: "Dinner", time: "6:00 PM" },
-				{ event: "Lightning talks and packing up", time: "7:45 PM" },
-				{ event: "Doors close", time: "8:00 PM" },
+				{ event: "Lightning talks", time: "8:00 PM" },
+				{ event: "Midnight surprise", time: "12:00 AM" }
 			]
 		},
 		{
 			title: "Sunday, September 28th",
 			items: [
-				{ event: "Doors open", time: "8:00 AM" },
-				{ event: "Brief statement", time: "8:30 AM" },
-				{ event: "Start working on your project!", time: "9:00 AM" },
-				{ event: "Workshop 1", time: "TBA" },
-				{ event: "Lunch", time: "12:00 PM" },
-				{ event: "Workshop 2", time: "TBA" },
-				{ event: "Dinner", time: "6:00 PM" },
-				{ event: "Voting starts", time: "6:30 PM" },
-				{ event: "Voting ends", time: "7:00 PM" },
-				{ event: "Winners announced & SWAG distribution", time: "7:15 PM" },
-				{ event: "Closing statements", time: "7:15 PM" },
-				{ event: "Doors close", time: "8:00 PM" },
+				{ event: "Breakfast", time: "8:00 AM" },
+				{ event: "Demos!", time: "10:30 AM" },
+				{ event: "Closing ceremony", time: "12:00 PM" }
 			]
 		}
 	];
@@ -77,8 +60,8 @@
 	
 	// Get current URL for dynamic metadata
 	$: currentUrl = `https://daydream.hackclub.com${$page.url.pathname}`;
-	$: pageTitle = `Daydream ${eventName} - ${eventLocation} Game Jam`;
-	$: pageDescription = `Join Daydream ${eventName} in ${eventLocation}! A teen-led game jam where you'll build amazing games with other high schoolers. Food, workshops, and prizes included!`;
+	$: pageTitle = `${eventName} - ${eventLocation} Game Jam`;
+	$: pageDescription = `Join ${eventName} in ${eventLocation}! A teen-led game jam where you'll build amazing games with other high schoolers. Food, workshops, and prizes included!`;
 	$: pageKeywords = `game jam, hackathon, teen coding, Hack Club, game development, ${eventLocation}, ${eventName}`;
 
 	// Cities where the game jam is happening
@@ -821,14 +804,14 @@ Mumbai`.split("\n")
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat pointer-events-none opacity-100 lg:-translate-y-15 bg-center mix-blend-overlay" style="mask-image: url('/buildings-front.png'); mask-size: contain; mask-repeat: no-repeat; mask-position: center top; -webkit-mask-image: url('/buildings-front.png'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center top;"></div>
 	<div class="hero-ui-parallax flex flex-col items-center justify-center text-center relative z-5 -translate-y-2">
 		<div class="inline-block relative">
-			<div class="h-16"></div> 
+			<div class="h-12"></div> 
 			<!-- space for the ship -->
 			<h2
 			class="text-xl font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent absolute left-1/2 max-sm:translate-y-4 max-sm:mb-0 max-md:-mb-8 md:left-[calc(50%+4rem)] -translate-x-1/2 bottom-8 italic w-max md:text-lg max-sm:text-lg"
 			>
 				September 27th & 28th, 2025
 			</h2>
-			<img src="daydreamkl.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4" />
+			<img src="daydream.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4" />
 			<a href="https://hackclub.com" class="absolute top-0 -right-6 max-sm:right-0 max-sm:scale-80 animate-hover ![animation-delay:0.9s] ![--hover:-0.2rem]">
 				<img src="flag-plane.png" alt="Hack Club" class="h-28">
 			</a>
@@ -1474,20 +1457,20 @@ Mumbai`.split("\n")
 		</div>
 
 		<!-- FAQ Item 2 -->
-		<div class="relative transform rotate-1">
+		<!--<div class="relative transform rotate-1">
 			<img src="window-4.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
 				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">Can I organize a Daydream in my city?</h3>
 				<p class="text-sm">Definitely! Contact us via daydream@hackclub.com or join #daydream on slack.</p>
 			</div>
-		</div>
+		</div>-->
 
 		<!-- FAQ Item 3 -->
 		<div class="relative transform rotate-2">
 			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
 				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">All this, for free?</h3>
-				<p class="text-sm">Yep! Food, swag and good vibes are all included. Plus, if you're joining us from afar, we'll cover the cost of gas or a bus / train ticket.</p>
+				<p class="text-sm">Yep! Food, swag and good vibes are all included.<!-- Plus, if you're joining us from afar, we'll cover the cost of gas or a bus / train ticket.--></p>
 			</div>
 		</div>
 
@@ -1496,7 +1479,7 @@ Mumbai`.split("\n")
 			<img src="window-1.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
 				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">What do I need?</h3>
-				<p class="text-sm">Your laptop, chargers, toiletries, sleeping bags, and an open mind!</p>
+				<p class="text-sm">Your laptop, chargers, toiletries, sleeping bags, and a creative mind!</p>
 			</div>
 		</div>
 
@@ -1577,3 +1560,4 @@ Mumbai`.split("\n")
 		</div>
 	</div>
 {/if}
+
