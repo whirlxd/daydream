@@ -19,7 +19,7 @@
 	const sponsors = [
 		{ image: "/st-aug/code-ninjas.png", name: "Code Ninjas World Golf", url: "https://www.codeninjas.com/fl-world-golf-village" },
 		{ image: "/st-aug/jukebox.png", name: "Juxebox", url: "https://www.jukeboxprint.com/custom-stickers" },
-		{ image: "/st-aug/barracoders", name: "Barracoders", url: "https://barracoders.com" },
+		{ image: "/st-aug/barracoders.png", name: "Barracoders", url: "https://barracoders.com" },
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
