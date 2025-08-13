@@ -10,7 +10,9 @@
 <style>
   .cloud-wrapper {
     background: white;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
     padding: 48px;
     mask-image: 

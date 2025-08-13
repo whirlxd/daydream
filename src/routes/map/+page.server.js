@@ -11,31 +11,37 @@ export async function load() {
 	}
 
 	try {
-		// Fetch approved events from Airtable
-		const airtableUrl = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/events?filterByFormula={triage_status}="Approved"`;
-		const airtableResponse = await fetch(airtableUrl, {
-			headers: {
-				'Authorization': `Bearer ${AIRTABLE_API_KEY}`
+		// Fetch all approved events from Airtable with pagination
+		const events = [];
+		let offset = null;
+		
+		do {
+			const airtableUrl = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/events?filterByFormula={triage_status}="Approved"${offset ? `&offset=${offset}` : ''}`;
+			const airtableResponse = await fetch(airtableUrl, {
+				headers: {
+					'Authorization': `Bearer ${AIRTABLE_API_KEY}`
+				}
+			});
+
+			if (!airtableResponse.ok) {
+				throw new Error(`Airtable API error: ${airtableResponse.status}`);
 			}
-		});
 
-		if (!airtableResponse.ok) {
-			throw new Error(`Airtable API error: ${airtableResponse.status}`);
-		}
-
-		const airtableData = await airtableResponse.json();
-		const events = airtableData.records;
+			const airtableData = await airtableResponse.json();
+			events.push(...airtableData.records);
+			offset = airtableData.offset;
+		} while (offset);
 
 		// Geocode each event location
 		const locations = [];
 		for (const event of events) {
-			const { location, state, country, event_name } = event.fields;
+			const { location, state, country, event_name, address_override } = event.fields;
 			
 			if (!location || !event_name) continue;
 
-			// Build address string
-			const addressParts = [location, state, country].filter(Boolean);
-			const address = addressParts.join(', ');
+			// Use address_override if set, otherwise build address string
+			const address = address_override || [location, state, country].filter(Boolean).join(', ');
+			console.log(`${event_name}: ${address}`)
 
 			try {
 				const geocodeUrl = `https://geocoder.hackclub.com/v1/geocode?address=${encodeURIComponent(address)}&key=${GEOCODER_API_KEY}`;
