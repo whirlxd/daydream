@@ -17,6 +17,15 @@
 	const sponsors = [
 
 	];
+
+	// Partners Configuration
+	const partnersEnabled = true; // Set to false to hide the entire partners section
+	const partners: Array<{ name: string; url: string; image: string }> = [
+		// { name: "Partner Name", url: "https://partner.example", image: "/taiwan/partner-logo.png" }
+	];
+
+	// Derived UI state for partners section
+	const hasPartners = partners.length > 0;
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
 	const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [
@@ -409,23 +418,43 @@ Mumbai`.split("\n")
 				const data = await response.json();
 				const englishIdea: string = data.idea;
 
-				// Translate to Traditional Chinese via secure backend endpoint
-				try {
-					const tRes = await fetch('/taiwan/translate', {
-						method: 'POST',
-						headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-						body: JSON.stringify({ text: englishIdea })
-					});
+                // Translate to Traditional Chinese directly via external API (client-side)
+                try {
+                    const systemPrompt =
+                        'You are a strict translator to Traditional Chinese (Taiwan).\n' +
+                        '- Output ONLY the translation in Traditional Chinese, no explanations.\n' +
+                        '- Preserve meaning and keep it concise as one sentence.\n' +
+                        '- Keep game terms simple and beginner-friendly.\n' +
+                        '- Do not add punctuation or emojis beyond what is natural.\n' +
+                        '- If input is already Traditional Chinese, return it unchanged.';
 
-					if (tRes.ok) {
-						const tData = await tRes.json();
-						if (tData?.text && typeof tData.text === 'string') {
-							return tData.text as string;
-						}
-					}
-				} catch (e) {
-					// Swallow translation errors, fall back to default zh-TW sample
-				}
+                    const userPrompt = `Translate the following to Traditional Chinese (Taiwan).\n\nText:\n\"\"\"${englishIdea}\"\"\"`;
+
+                    const aiRes = await fetch('https://ai.hackclub.com/chat/completions', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            messages: [
+                                { role: 'system', content: systemPrompt },
+                                { role: 'user', content: userPrompt }
+                            ]
+                        })
+                    });
+
+                    if (aiRes.ok) {
+                        const aiData = await aiRes.json();
+                        let translated: string = aiData.choices?.[0]?.message?.content?.trim() ?? '';
+                        // Cleanup any hidden tags or quotes
+                        translated = translated.replace(/<think>[\s\S]*?<\/think>/g, '').trim();
+                        translated = translated.replace(/^\s*["]|["]\s*$/g, '').trim();
+                        translated = translated.replace(/^\s*[']|[']\s*$/g, '').trim();
+                        if (translated) {
+                            return translated;
+                        }
+                    }
+                } catch (e) {
+                    // Ignore translation errors, will fallback below
+                }
 
 				// As a last resort, return the English idea (better than nothing)
 				return englishIdea;
@@ -1048,6 +1077,8 @@ Mumbai`.split("\n")
 <div class="w-full bg-gradient-to-b from-[#FCEFC5] via-[#FAE3C9] to-[#FCEFC5] relative py-20 px-8 -mb-8">
     <!-- Background texture -->
     <div class="absolute inset-0 bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-30 pointer-events-none"></div>
+    <!-- Top soft fade to remove hard seam under previous billboard -->
+    <div class="absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-[#FCEFC5] to-transparent pointer-events-none z-10"></div>
     
     <!-- Decorative clouds -->
     <img src="/clouds-left-2.png" alt="" class="absolute left-0 w-2/12 top-12 pointer-events-none opacity-60 z-0">
@@ -1208,6 +1239,55 @@ Mumbai`.split("\n")
         </div>
     </div>
 </div>
+
+{#if partnersEnabled}
+<!-- Partners Section (cleaned) -->
+<div class={`w-full relative ${hasPartners ? 'py-16 md:py-20' : 'py-12'} px-6 md:px-8 bg-[#FCEFC5] overflow-hidden`}>
+    <!-- Subtle paper texture only -->
+    <div class="absolute inset-0 bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat opacity-20 mix-blend-overlay pointer-events-none"></div>
+    <!-- Soft top fade for seam -->
+    <div class="absolute top-0 left-0 w-full h-10 bg-gradient-to-b from-[#FCEFC5] to-transparent pointer-events-none"></div>
+
+    <div class="w-full max-w-6xl mx-auto relative z-10">
+        <!-- Section Header -->
+        <div class="text-center {hasPartners ? 'mb-8 md:mb-10' : 'mb-4'}">
+            <div class="relative inline-block px-2">
+                <h2 class="text-[2rem] md:text-4xl font-serif font-semibold bg-gradient-to-b from-[#8B4513] to-[#6E3D15] bg-clip-text text-transparent tracking-wide">
+                    合作夥伴
+                </h2>
+                <img src="/underline.svg" alt="" class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-44 md:w-56 h-auto opacity-80" />
+                <p class="text-sm md:text-base font-serif text-[#705e4f] mt-6 opacity-85 tracking-wide leading-relaxed">
+                    和我們一起，讓 {eventName} 發生
+                </p>
+            </div>
+        </div>
+
+        {#if hasPartners}
+            <!-- Partners Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 justify-items-center">
+                {#each partners as partner}
+                    <a href={partner.url} target="_blank" rel="noopener noreferrer"
+                       class="group w-full h-16 sm:h-20 md:h-24 bg-white/70 hover:bg-white transition-colors rounded-xl border border-[#E8E1D0] flex items-center justify-center p-3 shadow-[0_1px_0_rgba(0,0,0,0.05)] hover:shadow-md">
+                        <img src={partner.image} alt={partner.name} class="max-h-full max-w-full object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-200 grayscale group-hover:grayscale-0" />
+                    </a>
+                {/each}
+            </div>
+        {/if}
+
+        {#if contactLink}
+            <div class="{hasPartners ? 'mt-10' : 'mt-4'} text-center">
+                <p class="text-base md:text-lg text-[#335969]">
+                    想與 {eventName} 合作？
+                    <a href={contactLink} class="underline hover:text-[#477783] transition-colors">來信洽談</a>
+                </p>
+            </div>
+        {/if}
+    </div>
+
+    <!-- Soft bottom fade to next section -->
+    <div class="absolute bottom-0 left-0 w-full h-14 bg-gradient-to-t from-[#FCEFC5] to-transparent pointer-events-none"></div>
+</div>
+{/if}
 
 <!-- Schedule Container -->
 <div class="w-full bg-[#FCEFC5] pt-24 pb-16 px-8 flex justify-center">
@@ -1384,6 +1464,8 @@ Mumbai`.split("\n")
 </div>
 {/if}
 
+
+
 <!-- Gamejam Text Section -->
 <div class="w-full bg-[#FCEFC5] flex justify-center py-16 relative overflow-hidden max-h-[400px]">
 	<!-- Cloud backdrop for gamejam text -->
@@ -1392,10 +1474,14 @@ Mumbai`.split("\n")
 				<div class="absolute top-1/2 left-1/2 w-1 h-1 -translate-x-1/2 -translate-y-1/2" data-point="0"></div>
 		<div class="absolute top-1/2 left-1/4 w-1 h-1 -translate-x-1/2 -translate-y-1/2" data-point="0.5"></div>
 	</div>
+	<!-- Top fade to avoid banding between sections -->
+	<div class="absolute top-0 left-0 w-full h-14 bg-gradient-to-b from-[#FCEFC5] to-transparent pointer-events-none z-10"></div>
 	
-	<div class="relative w-10/12 h-auto object-contain cursor-text flex flex-row max-lg:flex-wrap md:translate-y-0 max-lg:translate-y-1/5 items-center justify-center align-middle max-w-5xl z-50">
-		<img src="gamejam-1-alt.png" alt="Here's How You Win a" class="flex-shrink min-w-0 object-contain">
-		<img src="gamejam-2.png" alt="Game Jam" class="flex-shrink min-w-0 object-contain">
+	<div class="relative w-10/12 h-auto cursor-text flex items-center justify-center text-center md:translate-y-0 max-lg:translate-y-1/5 max-w-5xl z-50">
+		<h2 class="text-4xl md:text-5xl lg:text-6xl font-serif tracking-wide leading-tight">
+			<span class="bg-gradient-to-b from-[#8B4513] to-[#6E3D15] bg-clip-text text-transparent">這樣贏下一場</span>
+			<span class="mx-2 bg-gradient-to-b from-[#E472AB] to-[#DB5DA2] bg-clip-text text-transparent">Game Jam</span>
+		</h2>
 	</div>
 </div>
 
@@ -1736,8 +1822,8 @@ Mumbai`.split("\n")
 		<div class="relative transform -rotate-2">
 			<img src="window-3.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-				<h3 class="text-lg md:text-xl font-serif font-bold mb-4 max-lg:mb-2 max-md:text-base leading-relaxed tracking-wide">誰可以參加 Daydream？</h3>
-				<p class="text-sm md:text-base leading-relaxed tracking-wide">歡迎高中生與國中高年級同學報名！</p>
+                <h3 class="text-lg md:text-xl font-serif font-bold mb-4 max-lg:mb-2 max-md:text-base leading-relaxed tracking-wide">誰可以參加 Daydream？</h3>
+                <p class="text-sm md:text-base leading-relaxed tracking-wide">高中職、專科 1–3 年級，以及符合資格的實驗教育同學皆可參加（實驗教育請帶證明）。</p>
 		</div>
 		</div>
 
@@ -1745,8 +1831,8 @@ Mumbai`.split("\n")
 		<div class="relative transform rotate-1">
 			<img src="window-4.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-				<h3 class="text-lg md:text-xl font-serif font-bold mb-4 max-lg:mb-2 max-md:text-base leading-relaxed tracking-wide">我可以在我的城市組織 Daydream 嗎？</h3>
-				<p class="text-sm md:text-base leading-relaxed tracking-wide">當然可以！來信 daydream@hackclub.com，或加入 Slack 的 #daydream 頻道。</p>
+                <h3 class="text-lg md:text-xl font-serif font-bold mb-4 max-lg:mb-2 max-md:text-base leading-relaxed tracking-wide">怎麼報名？</h3>
+                <p class="text-sm md:text-base leading-relaxed tracking-wide">報名尚未開放；先在上方留下 email RSVP，開放時第一時間通知。名額有限，先卡位！</p>
 			</div>
 		</div>
 
@@ -1755,7 +1841,7 @@ Mumbai`.split("\n")
 			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
 				<h3 class="text-lg md:text-xl font-serif font-bold mb-4 max-lg:mb-2 max-md:text-base leading-relaxed tracking-wide">全部都免費嗎？</h3>
-				<p class="text-sm md:text-base leading-relaxed tracking-wide">沒錯！食物、周邊與好心情我們都準備好了。若你從外縣市前來，我們也會補助油錢或公車／火車票。</p>
+				<p class="text-sm md:text-base leading-relaxed tracking-wide">沒錯！食物、周邊與好心情我們都準備好了。</p>
 			</div>
 		</div>
 
@@ -1772,8 +1858,8 @@ Mumbai`.split("\n")
 		<div class="relative transform rotate-1">
 			<img src="window-4.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-				<h3 class="text-lg md:text-xl font-serif font-bold mb-4 max-lg:mb-2 max-md:text-base leading-relaxed tracking-wide">Hack Club 以前做過什麼？</h3>
-				<p class="text-sm md:text-base leading-relaxed tracking-wide">我們在 GitHub 總部辦過黑客松、在 50 座城市辦過遊戲創作營、甚至在從佛蒙特到洛杉磯的火車上也辦過黑客松，還有更多瘋狂又有趣的事！</p>
+                <h3 class="text-lg md:text-xl font-serif font-bold mb-4 max-lg:mb-2 max-md:text-base leading-relaxed tracking-wide">Hack Club 以前做過什麼？</h3>
+                <p class="text-sm md:text-base leading-relaxed tracking-wide">在 GitHub 總部、50+ 城市，甚至跨州火車上都辦過活動。更多瘋狂又有趣的企劃等你探索！</p>
 			</div>
 		</div>
 
@@ -1790,8 +1876,8 @@ Mumbai`.split("\n")
 		<div class="relative transform -rotate-2">
 			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-				<h3 class="text-lg md:text-xl font-serif font-bold mb-4 max-lg:mb-2 max-md:text-base leading-relaxed tracking-wide">家長有疑慮怎麼辦？</h3>
-				<p class="text-sm md:text-base leading-relaxed tracking-wide">別擔心！可先參考我們的家長指南，或請家長直接寫信到 daydream@hackclub.com 詢問。</p>
+                <h3 class="text-lg md:text-xl font-serif font-bold mb-4 max-lg:mb-2 max-md:text-base leading-relaxed tracking-wide">家長有疑慮怎麼辦？</h3>
+                <p class="text-sm md:text-base leading-relaxed tracking-wide">家長有問題？寫信到 <a class="underline" href="mailto:official@hackit.tw">official@hackit.tw</a>，我們很樂意說明。</p>
 			</div>
 		</div>
 
