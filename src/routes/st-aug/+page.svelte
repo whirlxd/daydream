@@ -7,7 +7,7 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "St. Aug";
+	const eventName = "St. Augustine";
 	const eventLocation = "Saint Augustine, FL";
 	const eventAddress = ""; // Leave this empty if you don't want an address
 	// These two are optional
