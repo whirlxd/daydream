@@ -911,7 +911,7 @@ Mumbai`.split("\n")
 			</h2>
 			
 			<div class="text-[#8B4513] font-serif text-xl leading-relaxed space-y-8">
-				<p>Bine ați venit la cea mai nouă aventură Hack Club. În această toamnă vă invităm să ni vă alăturați pentru @am, cel mai mare Game Jam din lume care se desfășoară simultan în 100 de orașe.</p>
+				<p>Bine ați venit la cea mai nouă aventură Hack Club. În această toamnă vă invităm să ni vă alăturați pentru Daydream, cel mai mare Game Jam din lume care se desfășoară simultan în 100 de orașe.</p>
 
 				<p class="font-bold text-2xl">Hack Club vrea să faci un joc în această toamnă.</p>
 
