@@ -5,6 +5,7 @@
 	const directionsURL = "https://www.google.com/maps/place/PSC@Heritage+(Penang+Science+Cluster)/@5.4153623,100.3397381,17z/data=!3m1!4b1!4m6!3m5!1s0x304ac38e9e1ad7e9:0xdb5c3a2cdee5013c!8m2!3d5.415357!4d100.342313!16s%2Fg%2F11clvx6mkl?entry=ttu&g_ep=EgoyMDI1MDgwNi4wIKXMDSoASAFQAw%3D%3D"
 	const contactLink = "mailto:info@daydreampenang.com"
 	
+	const signupLink = "https://forms.hackclub.com/daydream-rsvp"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	const sponsorsEnabled = true; 
 	const sponsors = [
 		{ image: "https://storage.jukeboxprint.com/s/images/jukebox-logo.svg", name: "Jukebox", url: "https://www.jukeboxprint.com/custom-stickers" }
@@ -1137,7 +1138,7 @@ Mumbai`.split("\n")
 			<div class="relative w-72 h-40 max-md:w-80 animate-hover ![--hover:-0.15rem] ![animation-delay:1.7s] z-20" data-point="1">
 				<img src="paper1.png" alt="" class="w-full h-full object-contain">
 				<div class="absolute inset-0 justify-center text-center p-6 text-xl font-serif max-md:text-lg text-[#8B4513] inline-block content-center">
-					<span class="font-sans text-[#E472AB] font-bold text-[1.3rem] mr-1">#1:</span> <a href="https://example.com" class="underline">Sign up</a> for Daydream {eventName}
+					<span class="font-sans text-[#E472AB] font-bold text-[1.3rem] mr-1">#1:</span> <a href={signupLink} class="underline">Sign up</a> for Daydream {eventName}
 				</div>
 			</div>
 		</div>
