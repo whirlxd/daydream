@@ -9,9 +9,9 @@
 	// Configuration - Put your information here!
 	const eventName = "Boston";
 	const eventLocation = "Boston";
-	const eventAddress = "" // "1600 Pennsylvania Avenue, Washington, DC 20500"; // Leave this empty if you don't want an address
+	const eventAddress = "Microsoft NERD Center, 1 Memorial Dr, Cambridge, MA 02142" // Leave this empty if you don't want an address
 	// These two are optional
-	const directionsURL = "" // "https://www.google.com/maps/search/1600+pennsylvania+avenue+washington+dc/"
+	const directionsURL = "https://www.google.com/maps/place/Microsoft+New+England+Research+and+Development+Center/@42.3614256,-71.0837841,17z/data=!4m6!3m5!1s0x89e370a423d61825:0x58516248462c99eb!8m2!3d42.3614256!4d-71.0812092!16s%2Fg%2F1tfx5xkv?entry=ttu&g_ep=EgoyMDI1MDgxMS4wIKXMDSoASAFQAw%3D%3D"
 	const contactLink = "mailto:boston@daydream.hackclub.com"
 	
 	// Sponsors Configuration
