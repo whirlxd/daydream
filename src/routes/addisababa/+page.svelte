@@ -7,7 +7,7 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Clash of Code";
+	const eventName = "Addis Ababa";
 	const eventLocation = "Addis Ababa";
 	const eventAddress = "Abrehot Library, Addis Ababa, Ethiopia"; // Leave this empty if you don't want an address
 	// These two are optional
