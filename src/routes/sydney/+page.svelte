@@ -7,7 +7,7 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Daydream";
+	const eventName = "Sydney";
 	const eventLocation = "Sydney";
 	const eventAddress = "Sydney NSW 2000";
 	// These two are optional
@@ -65,7 +65,7 @@
 	$: currentUrl = `https://daydream.hackclub.com${$page.url.pathname}`;
 	$: pageTitle = `Daydream ${eventName} - ${eventLocation} Game Jam`;
 	$: pageDescription = `Join Daydream ${eventName} in ${eventLocation}! A teen-led game jam where you'll build amazing games with other high schoolers. Food, workshops, and prizes included!`;
-	$: pageKeywords = `game jam, hackathon, teen coding, Hack Club, game development, ${eventLocation}, ${eventName}`;
+	$: pageKeywords = `game jam, hackathon, teen coding, Hack Club, game development, ${eventLocation}, ${eventName}, competition, events, school holidays`;
 
 	// Cities where the game jam is happening
 	const cities = `Sydney
@@ -1455,7 +1455,7 @@ Mumbai`.split("\n")
 			<img src="window-3.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
 				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">Who can participate in Daydream?</h3>
-				<p class="text-sm">All high-school & upper-middle-school aged students are welcome to come!</p>
+				<p class="text-sm">All high-school & upper-primary-school aged students are welcome to come!</p>
 		</div>
 		</div>
 
