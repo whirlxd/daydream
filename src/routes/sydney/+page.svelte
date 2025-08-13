@@ -17,8 +17,7 @@
 	// Sponsors Configuration
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "/assets/xyz.png", name: ".xyz", url: "https://gen.xyz" },
-		{ image: "/example/logo2.png", name: "Become A Sponsor!", url: "mailto:sydney@daydream.hackclub.com" }
+		{ image: "/sydney/xyz.png", name: ".xyz", url: "https://gen.xyz" },
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
