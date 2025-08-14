@@ -8,7 +8,7 @@
 
 	// Configuration - Put your information here!
 	const eventName = "Srinagar"; // This should be the name of your event WITHOUT "Daydream" at the start
-	const eventLocation = "";
+	const eventLocation = "Srinagar";
 	const eventAddress = ""; // Leave this empty if you don't want an address
 	const signupLink = "https://forms.hackclub.com/daydream-rsvp?event=recpMytdpOvW33V3L"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
@@ -16,14 +16,14 @@
 	const contactLink = ""
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
-		const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
+	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
 		{ image: "https://storage.jukeboxprint.com/s/images/jukebox-logo.svg", name: "Jukebox", url: "https://www.jukeboxprint.com/custom-stickers" },
 	];
 	
 	// Schedule Configuration - You don't need to use this schedule, this is just an example!
-	const scheduleData = {
-		saturday: {
+	const scheduleData = [
+		{
 			title: "Saturday, September 27th",
 			items: [
 				{ event: "Doors open", time: "08:00 AM" },
@@ -36,7 +36,7 @@
 				{ event: "Wrap up", time: "06:00 PM" }
 			]
 		},
-		sunday: {
+		{
 			title: "Sunday, September 28th",
 			items: [
 				{ event: "Doors open", time: "08:00 AM" },
@@ -50,7 +50,7 @@
 				{ event: "Wrap up", time: "06:00 PM" }
 			]
 		}
-	};
+	];
 
 
 	
@@ -1054,7 +1054,7 @@ Mumbai`.split("\n")
 						{:else}
 							<!-- Single row for 4 or fewer sponsors -->
 							<div class="flex justify-center">
-								<div class="grid gap-8 items-center justify-items-center max-w-4xl {sponsors.length === 1 ? 'grid-cols-1' : sponsors.length === 2 ? 'grid-cols-1 md:grid-cols-2' : sponsors.length === 3 ? 'grid-cols-2 md:grid-cols-3' : 'grid-cols-2 md:grid-cols-4'}">
+								<div class="grid gap-8 items-center justify-items-center w-full max-w-4xl {sponsors.length === 1 ? 'grid-cols-1' : sponsors.length === 2 ? 'grid-cols-1 md:grid-cols-2' : sponsors.length === 3 ? 'grid-cols-2 md:grid-cols-3' : 'grid-cols-2 md:grid-cols-4'}">
 									{#each sponsors as sponsor}
 										<a href={sponsor.url} class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors" target="_blank" rel="noopener noreferrer">
 											<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain">
