@@ -7,23 +7,18 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Daydream Jakarta";
+	const eventName = "Jakarta";
 	const eventLocation = "Jakarta";
 	const eventAddress = ""; // Leave this empty if you don't want an address
 	// These two are optional
 	const directionsURL = ""
-	const contactLink = "" // "mailto:jakarta@daydream.hackclub.com"
+	const contactLink = "dave@dave9123.me" // "mailto:jakarta@daydream.hackclub.com"
 	
 	// Sponsors Configuration
-	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
+	const signupLink = "https://forms.hackclub.com/daydream-rsvp"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
-		{ image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
-		{ image: "/example/logo3.png", name: "Sponsor 3", url: "https://example3.com" },
-		{ image: "/example/logo4.png", name: "Sponsor 4", url: "https://example4.com" },
-		{ image: "/example/logo5.png", name: "Sponsor 5", url: "https://example5.com" },
-		{ image: "/example/logo6.png", name: "Sponsor 6", url: "https://example6.com" },
-		{ image: "/example/logo7.png", name: "Sponsor 7", url: "https://example7.com" }
+		{ image: "/jakarta/twbn-logo-turquoise-transparent.png", name: "Twibbonize", url: "https://twibbonize.com" }
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
@@ -842,7 +837,7 @@ Mumbai`.split("\n")
 			</h4>
 		</div>
 		
-		<ParticipantSignUp />
+		<ParticipantSignUp {eventName} />
 	</div>
 
 	<!-- <img src="hot-air-balloon.png" alt="" class="absolute w-1/8 right-32 bottom-40 z-20"> -->
@@ -1068,7 +1063,7 @@ Mumbai`.split("\n")
 					{#if contactLink}
 						<!-- Call to action for sponsors -->
 						<div class="mt-8 text-center">
-							<p class="text-lg text-[#335969]">Want to sponsor Daydream {eventName}? <a href={contactLink} class="underline hover:text-[#477783] transition-colors">Get in touch</a></p>
+							<p class="text-lg text-[#335969]">Want to sponsor Daydream {eventName}? <a href={`mailto:${contactLink}`} class="underline hover:text-[#477783] transition-colors">Get in touch</a></p>
 						</div>
 					{/if}
 				</div>
@@ -1142,7 +1137,7 @@ Mumbai`.split("\n")
 			<div class="relative w-72 h-40 max-md:w-80 animate-hover ![--hover:-0.15rem] ![animation-delay:1.7s] z-20" data-point="1">
 				<img src="paper1.png" alt="" class="w-full h-full object-contain">
 				<div class="absolute inset-0 justify-center text-center p-6 text-xl font-serif max-md:text-lg text-[#8B4513] inline-block content-center">
-					<span class="font-sans text-[#E472AB] font-bold text-[1.3rem] mr-1">#1:</span> <a href="https://example.com" class="underline">Sign up</a> for Daydream {eventName}
+					<span class="font-sans text-[#E472AB] font-bold text-[1.3rem] mr-1">#1:</span> <a href="https://daydreamjakarta.fillout.com/rsvp" class="underline">Sign up</a> for Daydream {eventName}
 				</div>
 			</div>
 		</div>
@@ -1212,7 +1207,7 @@ Mumbai`.split("\n")
 			<!-- Map container with cloudy edges -->
 			<div class="relative w-full h-156 overflow-hidden bg-transparent">
 				<iframe 
-					src={eventAddress ? "/event-map?location={encodeURIComponent(eventAddress)}" : "/map"}
+					src={eventAddress ? "/event-map?location=" + encodeURIComponent(eventAddress) : "/map"}
 					class="w-full h-full border-0 bg-[#acd4e0]"
 					style="
 						mask-image: 
