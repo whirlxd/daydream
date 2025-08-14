@@ -8,7 +8,7 @@
 
 	// Configuration - Put your information here!
 	const eventName = "Srinagar"; // This should be the name of your event WITHOUT "Daydream" at the start
-	const eventLocation = "To be decided.";
+	const eventLocation = "";
 	const eventAddress = ""; // Leave this empty if you don't want an address
 	const signupLink = "https://forms.hackclub.com/daydream-rsvp?event=recpMytdpOvW33V3L"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
