@@ -7,15 +7,16 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Daydream Nyíregyháza";
+	const eventName = "Nyíregyháza"; // This should be the name of your event WITHOUT "Daydream" at the start
 	const eventLocation = "Nyíregyháza";
-	const eventAddress = ""; // Leave this empty if you don't want an address
-	// These two are optional
-	const directionsURL = ""
+	const eventAddress = "4400 Nyíregyháza, Városmajor utca 4."; // Leave this empty if you don't want an address
+	const signupLink = "https://forms.hackclub.com/daydream-rsvp?event=recONaORxdf8jspJ2"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	// These two are optional-- leave them empty if you don't have anything!
+	const directionsURL = "https://maps.app.goo.gl/Ws2S4MYtHm2npJuZ7"
 	const contactLink = ""
 	
-	// Sponsors Configuration
-	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
+	// Sponsors Configuration - disable this if you don't have any sponsors to display!
+	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
 	const sponsors = [
 		{ image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
 		{ image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
@@ -32,7 +33,7 @@
 			title: "Saturday, September 27th",
 			items: [
 				{ event: "To be announced", time: "0:00 AM" },
-				]
+			]
 		},
 		{
 			title: "Sunday, September 28th",
@@ -87,8 +88,7 @@ Minneapolis
 Seattle
 Signapore
 Sydney
-Mumbai
-Nyíregyháza`.split("\n")
+Mumbai`.split("\n")
 
 	function createSmoothPath(points: Array<{ x: number; y: number }>) {
 		if (points.length < 2) return "";
@@ -832,7 +832,7 @@ Nyíregyháza`.split("\n")
 			</h4>
 		</div>
 		
-		<ParticipantSignUp />
+		<ParticipantSignUp {eventName} />
 	</div>
 
 	<!-- <img src="hot-air-balloon.png" alt="" class="absolute w-1/8 right-32 bottom-40 z-20"> -->
@@ -1132,7 +1132,7 @@ Nyíregyháza`.split("\n")
 			<div class="relative w-72 h-40 max-md:w-80 animate-hover ![--hover:-0.15rem] ![animation-delay:1.7s] z-20" data-point="1">
 				<img src="paper1.png" alt="" class="w-full h-full object-contain">
 				<div class="absolute inset-0 justify-center text-center p-6 text-xl font-serif max-md:text-lg text-[#8B4513] inline-block content-center">
-					<span class="font-sans text-[#E472AB] font-bold text-[1.3rem] mr-1">#1:</span> <a href="https://example.com" class="underline">Sign up</a> for Daydream {eventName}
+					<span class="font-sans text-[#E472AB] font-bold text-[1.3rem] mr-1">#1:</span> <a href={signupLink} class="underline">Sign up</a> for Daydream {eventName}
 				</div>
 			</div>
 		</div>
@@ -1202,7 +1202,7 @@ Nyíregyháza`.split("\n")
 			<!-- Map container with cloudy edges -->
 			<div class="relative w-full h-156 overflow-hidden bg-transparent">
 				<iframe 
-					src={eventAddress ? "/event-map?location={encodeURIComponent(eventAddress)}" : "/map"}
+					src={eventAddress ? "/event-map?location=" + encodeURIComponent(eventAddress) : "/map"}
 					class="w-full h-full border-0 bg-[#acd4e0]"
 					style="
 						mask-image: 
