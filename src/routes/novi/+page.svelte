@@ -1094,7 +1094,7 @@ Mumbai`.split("\n")
 								Want to sponsor Daydream {eventName}? 
 								<a href={contactLink} class="underline hover:text-[#477783] transition-colors">anahitamayekar03@gmail.com</a>
 								<br />
-								Check out the <a href="https://drive.google.com/file/d/1DnbMB199lX7NinPTCL5qFqobPK9xL7NA/view?usp=sharing" class="underline hover:text-[#477783] transition-colors">Prospectus</a> for Daydream Novi.
+								Check out the <a href="https://drive.google.com/file/d/1yxHtyJjwG5ospCClwJ_3-712z3gyDztn/view?usp=sharing" class="underline hover:text-[#477783] transition-colors">Prospectus</a> for Daydream Novi.
 							</p>
 						</div>
 					{/if}
