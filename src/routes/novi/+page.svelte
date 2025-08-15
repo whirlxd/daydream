@@ -1078,6 +1078,15 @@ Mumbai`.split("\n")
 						{/if}
 					{/if}
 					
+					<!-- Jukebox requirement -->
+    				<div class="mt-6 text-center">
+        				<img src="/novi/jukebox.png" alt="Jukebox Logo" class="mx-auto mb-2 max-w-[200px]" />
+        				<p class="text-lg text-[#335969]">
+            				Big shoutout to Jukebox for our
+            				<a href="https://www.jukeboxprint.com/custom-stickers" class="underline">custom stickers</a>!
+        				</p>
+    				</div>
+
 					{#if contactLink}
 						<!-- Call to action for sponsors -->
 						<div class="mt-8 text-center">
