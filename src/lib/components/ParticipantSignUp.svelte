@@ -3,9 +3,13 @@
 	
 	let submitted = false;
 	let fadeOut = false;
+	export let eventName = "";
 	
-	$: city = $page.url.pathname.split('/')[1] || '';
-	
+	$: if (!eventName) {
+		let slug = $page.url.pathname.split('/')[1] || '';
+		eventName = slug.charAt(0).toUpperCase() + slug.slice(1).replace("-", " ");
+	}
+
 	function handleFormSubmit(event: Event) {
 		event.preventDefault();
 		const form = event.target as HTMLFormElement;
@@ -17,7 +21,7 @@
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			body: JSON.stringify({ email, city })
+			body: JSON.stringify({ email, city: "Daydream " + eventName })
 		}).catch(error => {
 			console.warn('Failed to save email:', error);
 		});
@@ -34,10 +38,6 @@
 			submitted = false;
 			fadeOut = false;
 		}, 1500 + 500);
-
-		if (city === 'suceava') {
-			window.location.href = `https://forms.fillout.com/t/wABjdnkgLWus?email=${encodeURIComponent(email)}`;
-		}
 	}
 </script>
 
