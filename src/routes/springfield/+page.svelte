@@ -8,11 +8,11 @@
 
 	// Configuration - Put your information here!
 	const eventName = "Springfield"; // This should be the name of your event WITHOUT "Daydream" at the start
-	const eventLocation = "The Library Center";
-	const eventAddress = "1600 Pennsylvania Avenue, Washington, DC 20500"; // Leave this empty if you don't want an address
+	const eventLocation = "Springfield, Missouri";
+	const eventAddress = "The Library Center"; // Leave this empty if you don't want an address
 	const signupLink = "https://forms.hackclub.com/daydream-rsvp"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
-	const directionsURL = "https://www.google.com/maps/search/1600+pennsylvania+avenue+washington+dc/"
+	const directionsURL = "https://www.google.com/maps/place/the+library+center/"
 	const contactLink = "mailto:example@daydream.hackclub.com"
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
