@@ -9,10 +9,10 @@
 	// Configuration - Put your information here!
 	const eventName = "Daydream Stockholm";
 	const eventLocation = "Stockholm";
-	const eventAddress = "Adress är ej vald än; // Leave this empty if you don't want an address
+	const eventAddress = "Adressen är ej vald än; // Leave this empty if you don't want an address
 	// These two are optional
-	const directionsURL = "https://www.google.com/maps/search/1600+pennsylvania+avenue+washington+dc/"
-	const contactLink = "mailto:example@daydream.hackclub.com"
+	//const directionsURL = "https://www.google.com/maps/search/1600+pennsylvania+avenue+washington+dc/"
+	const contactLink = "mailto:allan.ortegren@icloud.com"
 	
 	// Sponsors Configuration
 	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
@@ -29,24 +29,21 @@
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
 	const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [
 		{
-			title: "Söndag, September 27th",
+			title: "Lördag, 27:e september",
 			items: [
-				{ event: "Dörrarna öppnas", time: "11:00" },
-				{ event: "Välkomsttal", time: "12:00" },
-				{ event: "Lunch", time: "12:30 PM" },
-				{ event: "Börja med ditt projekt!", time: "13:00" },
-				{ event: "Workshop 1", time: "14:00" },
-				{ event: "Aktivitet 1", time: "16:00" },
-				{ event: "Workshop 2", time: "4:00 PM" },
-				{ event: "Middag", time: "6:00 PM" }
+				{ event: "Dörrarna öppnas", time: "14:00" },
+				{ event: "välkomstpresentation", time: "15:00" },
+				{ event: "Börja göra spel!!!", time: "15:20" },
+				{ event: "Middag", time: "19:30" },
 			]
 		},
 		{
-			title: "Sunday, September 28th",
+			title: "Söndag, September 28th",
 			items: [
 				{ event: "Frukost", time: "8:00" },
 				{ event: "Uppvisningar!", time: "10:30" },
-				{ event: "Prisutdelning", time: "12:00" }
+				{ event: "Avslutning och Prisutdelning!", time: "11:30" }
+				{ event: "Dörrarna stängs", time: "12:15" }
 			]
 		}
 	];
