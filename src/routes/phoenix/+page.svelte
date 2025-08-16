@@ -7,15 +7,15 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Miami";
-	const eventLocation = "Miami";
+	const eventName = "Phoenix"; // This should be the name of your event WITHOUT "Daydream" at the start
+	const eventLocation = "Phoenix";
 	const eventAddress = ""; // Leave this empty if you don't want an address
-	// These two are optional
+	const signupLink = "https://forms.hackclub.com/daydream-rsvp?event=recvUAUk1y7P7RQb7"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = ""
-	const contactLink = "mailto:miami@daydream.hackclub.com"
+	const contactLink = "mailto:example@daydream.hackclub.com"
 	
-	// Sponsors Configuration
-	const signupLink = "https://forms.hackclub.com/daydream-rsvp?event=recbYBNEWgDH7grEM"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
 	const sponsors = [
 		{ image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
@@ -30,28 +30,26 @@
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
 	const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [
 		{
-			title: "Saturday, September 27th",
+			title: "Saturday, September 27th (Tenative)",
 			items: [
 				{ event: "Doors open", time: "11:00 AM" },
 				{ event: "Opening ceremony", time: "12:00 PM" },
 				{ event: "Lunch", time: "12:30 PM" },
 				{ event: "Start working on your project!", time: "1:00 PM" },
-				{ event: "Team Formation session", time: "2:00 PM" },
-				{ event: "Project Brainstorm session", time: "4:00 PM" },
-				{ event: "Godot Workshop", time: "4:00 PM" },
+				{ event: "Workshop 1", time: "2:00 PM" },
+				{ event: "Activity 1", time: "4:00 PM" },
+				{ event: "Workshop 2", time: "4:00 PM" },
 				{ event: "Dinner", time: "6:00 PM" },
-				{ event: "Github Workshop", time: "7:00 PM" }
+				{ event: "Lightning talks", time: "8:00 PM" },
+				{ event: "Midnight surprise", time: "12:00 AM" }
 			]
 		},
 		{
-			title: "Sunday, September 28th",
+			title: "Sunday, September 28th (Tenative)",
 			items: [
-				{ event: "Doors open", time: "7:00 AM" },
 				{ event: "Breakfast", time: "8:00 AM" },
-				{ event: "Workshop 3", time: "10:30 AM" },
-				{ event: "Lunch", time: "2:00 AM" },
-				{ event: "Demos!", time: "4:00 AM" },
-				{ event: "Closing ceremony", time: "7:00 PM" }
+				{ event: "Demos!", time: "10:30 AM" },
+				{ event: "Closing ceremony", time: "12:00 PM" }
 			]
 		}
 	];
@@ -101,7 +99,6 @@ Minneapolis
 Seattle
 Signapore
 Sydney
-Miami
 Mumbai`.split("\n")
 
 	function createSmoothPath(points: Array<{ x: number; y: number }>) {
