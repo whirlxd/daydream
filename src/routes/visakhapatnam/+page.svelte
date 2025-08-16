@@ -7,22 +7,17 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Miami";
-	const eventLocation = "Miami";
-	const eventAddress = ""; // Leave this empty if you don't want an address
-	// These two are optional
-	const directionsURL = ""
-	const contactLink = "mailto:miami@daydream.hackclub.com"
+	const eventName = "Visakhapatnam"; // This should be the name of your event WITHOUT "Daydream" at the start
+	const eventLocation = "Visakhapatnam";
+	const eventAddress = "Nakkavanipalem, Satyam Junction, Kranthi Nagar, Visakhapatnam, Andhra Pradesh, PINCODE - 530018"; // Leave this empty if you don't want an address
+	const signupLink = "https://forms.hackclub.com/daydream-rsvp?event=recjpsL9BukMsKYdj"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	// These two are optional-- leave them empty if you don't have anything!
+	const directionsURL = "https://www.google.com/maps/place/Sri+Sarada+Vidya+Nilayam/@17.7356181,83.3112517,17z/data=!3m1!4b1!4m6!3m5!1s0x3a394352705cab4f:0x2382a9f5ea33a411!8m2!3d17.7356181!4d83.3138266!16s%2Fg%2F11j0k036y0?entry=ttu&g_ep=EgoyMDI1MDgxMS4wIKXMDSoASAFQAw%3D%3D"
+	const contactLink = "mailto:visakhapatnam@daydream.hackclub.com"
 	
-	// Sponsors Configuration
-
-	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
-
-	const signupLink = "https://forms.hackclub.com/daydream-rsvp?event=recbYBNEWgDH7grEM"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
-
+	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
-	// const sponsors = [
-
+	const sponsors = [
 		{ image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
 		{ image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
 		{ image: "/example/logo3.png", name: "Sponsor 3", url: "https://example3.com" },
@@ -37,26 +32,14 @@
 		{
 			title: "Saturday, September 27th",
 			items: [
-				{ event: "Doors open", time: "11:00 AM" },
-				{ event: "Opening ceremony", time: "12:00 PM" },
-				{ event: "Lunch", time: "12:30 PM" },
-				{ event: "Start working on your project!", time: "1:00 PM" },
-				{ event: "Team Formation session", time: "2:00 PM" },
-				{ event: "Project Brainstorm session", time: "4:00 PM" },
-				{ event: "Godot Workshop", time: "4:00 PM" },
-				{ event: "Dinner", time: "6:00 PM" },
-				{ event: "Github Workshop", time: "7:00 PM" }
-			]
-		},
-		{
-			title: "Sunday, September 28th",
-			items: [
-				{ event: "Doors open", time: "7:00 AM" },
-				{ event: "Breakfast", time: "8:00 AM" },
-				{ event: "Workshop 3", time: "10:30 AM" },
-				{ event: "Lunch", time: "2:00 AM" },
-				{ event: "Demos!", time: "4:00 AM" },
-				{ event: "Closing ceremony", time: "7:00 PM" }
+				{ event: "Doors open", time: "8:30 AM" },
+				{ event: "Opening ceremony", time: "9:00 AM" },
+				{ event: "Start working on your project!", time: "9:45 PM" },
+				{ event: "Lunch", time: "1:00 PM" },
+				{ event: "Workshop 1", time: "2:00 PM" },
+				{ event: "Submission", time: "6:30 PM" },
+				{ event: "Swag giveaway (merches and stickers !)", time: "8:00 PM" },
+				{ event: "Dinner", time: "8:00 PM" },
 			]
 		}
 	];
@@ -106,7 +89,6 @@ Minneapolis
 Seattle
 Signapore
 Sydney
-Miami
 Mumbai`.split("\n")
 
 	function createSmoothPath(points: Array<{ x: number; y: number }>) {
