@@ -17,7 +17,7 @@
 	const contactLink = "mailto:daydreambudhanilkantha@gmail.com"
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
-	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
+	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
 	const sponsors = [
 		{ image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
 		{ image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
@@ -1571,4 +1571,5 @@ Mumbai`.split("\n")
 		</div>
 	</div>
 {/if}
+
 
