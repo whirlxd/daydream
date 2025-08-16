@@ -7,7 +7,7 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Hackathon"; // This should be the name of your event WITHOUT "Daydream" at the start
+	const eventName = "Charlotte"; // This should be the name of your event WITHOUT "Daydream" at the start
 	const eventLocation = "Charlotte";
 	const eventAddress = "TBD"; // Leave this empty if you don't want an address
 	const signupLink = "https://forms.hackclub.com/daydream-rsvp?event=rec1SyZV1FrigMBfG"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
