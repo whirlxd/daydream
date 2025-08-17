@@ -1,11 +1,12 @@
 <script lang="ts">
 	// Configuration - Put your information here!
-	const eventName = "Daydream Taiwan";
+	const eventName = "Taiwan";
+	const signupLink = "https://forms.hackclub.com/daydream-rsvp?event=recbXuFkkf752iPIq";
 	const eventLocation = "TBD";
 	const eventAddress = "";
-	
+
 	// These two are optional
-	const directionsURL = "https://www.google.com/maps/search/1600+pennsylvania+avenue+washington+dc/"
+	const directionsURL = ""
 	const contactLink = "mailto:business@hackit.tw"
 	
 	// External links for org intros
@@ -15,7 +16,7 @@
 	// Sponsors Configuration
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-
+	    { image: "/taiwan/logos/Jukebox.png", name: "Jukebox", url: "https://www.jukeboxprint.com/" },
 	];
 
 	// Partners Configuration
@@ -32,15 +33,25 @@
 		{
 			title: "星期六，2025年9月27日",
 			items: [
-				{ event: "開始報到", time: "上午 9:00" },
-				{ event: "開幕式", time: "下午 10:00" }
+				{ event: "開始報到", time: "09:30 ~ 10:00" },
+				{ event: "開幕式", time: "10:00 ~ 10:30" },
+				{ event: "組隊時間", time: "10:30 ~ 11:00" },
+				{ event: "入門工作彷", time: "11:00 ~ 11:30" },
+				{ event: "午餐時間", time: "11:30" },
+				{ event: "導師諮詢", time: "12:30 ~ 18:00" },
+				{ event: "晚餐時間", time: "18:00" },
+				{ event: "宵夜/夜間活動", time: "21:30" }
 			]
 		},
 		{
 			title: "星期日，2025年9月28日",
 			items: [
-				{ event: "展覽時間", time: "下午 15:00" },
-				{ event: "閉幕式", time: "下午 17:00" }
+				{ event: "早餐時間", time: "07:30" },
+				{ event: "導師諮詢", time: "10:00 ~ 14:00" },
+				{ event: "午餐時間", time: "13:00" },
+				{ event: "展覽準備", time: "13:00 ~ 14:00" },
+				{ event: "展覽/票選時間", time: "14:00 ~ 17:00" },
+				{ event: "頒獎/閉幕時間", time: "17:00 ~ 17:45" }
 			]
 		}
 	];
@@ -54,15 +65,18 @@
 	import ParticipantSignUp from "$lib/components/ParticipantSignUp.svelte";
 	import { page } from '$app/stores';
 	
+	// derived selection for HackIt modal
+	$: selectedHackIt = hackItActivities.find(a => a.youtubeId === selectedHackItVideoId) ?? null;
+	
 	
 	/** @type {import('./$types').PageData} */
 	export let data;
 	
 	// Get current URL for dynamic metadata
 	$: currentUrl = `https://daydream.hackclub.com${$page.url.pathname}`;
-	$: pageTitle = `${eventName}`;
-	$: pageDescription = `Join ${eventName} in ${eventLocation}! A teen-led game jam where you'll build amazing games with other high schoolers. Food, workshops, and prizes included!`;
-	$: pageKeywords = `game jam, hackathon, teen coding, Hack Club, game development, ${eventLocation}, ${eventName}`;
+	$: pageTitle = `Daydream ${eventName}`;
+	$: pageDescription = `加入由 Hack Club 舉辦的全球青少年黑客松 Daydream 活動！一場由青少年主導的遊戲黑客松，和其他高中生一起打造精彩遊戲。提供餐點、工作坊與獎品！`;
+	$: pageKeywords = `game jam, 遊戲創作, hackathon, 黑客松, 青少年程式, Hack Club, 遊戲開發, ${eventLocation}, ${eventName}`;
 
 	// Cities where the game jam is happening
 	const cities = `Columbus
@@ -321,6 +335,9 @@ Mumbai`.split("\n")
 	// Hack Club activities modal state
 	let showActivitiesPopup = false;
 	let selectedVideoId: string | null = null;
+	// HackIt activities modal state
+	let showHackItPopup = false;
+	let selectedHackItVideoId: string | null = null;
 
 	// Featured Hack Club activities with videos
 	const hackClubActivities: Array<{ title: string; youtubeId: string }> = [
@@ -328,6 +345,22 @@ Mumbai`.split("\n")
 		{ title: "太平洋山脊步道七天徒步：來自九國的 30 名青少年一起設計客製化 PCB", youtubeId: "ufMUJ9D1fi8" },
 		{ title: "兩個月遊戲開發，並在上海舉辦七天的遊戲展示咖啡館", youtubeId: "SiDWvGPl0z0" },
 		{ title: "全球最長的黑客松：在橫跨美國的火車上舉行", youtubeId: "2BID8_pGuqA" }
+	];
+
+	// Featured HackIt activities with videos and descriptions
+	const hackItActivities: Array<{ title: string; youtubeId: string; description: string }> = [
+		{
+			title: "Scrapyard Taiwan",
+			youtubeId: "v1i74QsB7xk",
+			description:
+				"由 Hack Club 在全球各地發起的 Scrapyard 黑客松活動，在台灣由 HackIt 於 2025 年 3/15、3/16 在三民高中舉辦兩天一夜的跨夜黑客松，主題是 'Build Stupid Thing, Get Stupid Thing'。這 32 小時，我們一起衝刺、熬夜、發瘋，從零到一把腦中的點子變成真實作品。影片記錄的不只是畫面，而是屬於我們的勇氣、汗水和笑聲。指導單位：新北市政府教育局；主辦單位：HackIt；協辦單位：Hack Club、台灣微課程發展協會、新北市立三民高級中學。"
+		},
+		{
+			title: "第五屆中學生黑客松子賽事",
+			youtubeId: "kCxiyOSYkwk",
+			description:
+				"（HackIt 協助舉辦）國教署、高雄市教育局、高雄女中、台灣微課程發展協會、台灣微軟共同舉辦，HackIt 協助辦理。活動於 2025 年 7 月 18、19 日在高雄女中舉行兩天一夜的跨夜黑客松。指導單位：教育部國民及學前教育署、高雄市政府教育局、新興科技教育遠距示範服務計畫辦公室；主辦單位：高雄市立高雄女子高級中學；協辦單位：Microsoft 微軟、台灣微課程發展協會。"
+		}
 	];
 
 	// More projects/initiatives
@@ -377,6 +410,15 @@ Mumbai`.split("\n")
 
 	function closeActivitiesPopup() {
 		showActivitiesPopup = false;
+	}
+
+	function openHackItPopup() {
+		selectedHackItVideoId = hackItActivities[0]?.youtubeId ?? null;
+		showHackItPopup = true;
+	}
+
+	function closeHackItPopup() {
+		showHackItPopup = false;
 	}
 
 
@@ -974,14 +1016,26 @@ Mumbai`.split("\n")
 				class="absolute left-1/2 -translate-x-1/2 -mt-1 h-auto scale-115"
 			/>
 			<h4
-				class="text-xl md:text-2xl opacity-90 mt-4 font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent max-sm:text-lg tracking-wide leading-relaxed"
+				class="text-xl md:text-2xl opacity-90 mt-4 font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent max-sm:text-base tracking-wide leading-relaxed max-sm:leading-normal break-words whitespace-normal text-center"
 			>
-				青少年組織，為青少年舉辦的遊戲黑客松<br class="hidden sm:block">
+				青少年組織，為青少年舉辦的遊戲黑客松<br>
 				在{@html eventLocation.replaceAll(" ", "&nbsp;")}舉行
 			</h4>
 		</div>
 		
-		<ParticipantSignUp />
+		<ParticipantSignUp {eventName} />
+		<div class="mt-4">
+			<a
+				href="https://go.hackit.tw/daydream-taiwan-guild"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="inline-block px-6 py-3 max-sm:px-4 max-sm:py-2 max-sm:text-sm bg-[#D1E3EE] border-b-4 border-[#B8D3E0] text-[#061E2D] rounded-full 
+					font-sans font-medium tracking-wide max-sm:tracking-normal transform hover:-translate-y-1 hover:shadow-lg 
+					active:translate-y-0 active:border-b-2 transition-all duration-150"
+			>
+				了解更多
+			</a>
+		</div>
 	</div>
 
 	<!-- <img src="hot-air-balloon.png" alt="" class="absolute w-1/8 right-32 bottom-40 z-20"> -->
@@ -1042,17 +1096,17 @@ Mumbai`.split("\n")
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-30 pointer-events-none -z-40"></div>
 	
 	<div class="relative max-w-4xl mx-auto h-full flex items-start pt-24 max-sm:pt-40 px-8 max-sm:px-2">
-		<div class="relative z-20 px-20 pt-20 pb-52 rounded-lg mb-0 max-sm:px-18" style="background-image: url('/letter-top.png'), linear-gradient(to bottom, #FCEFC5 100px, transparent 100px), url('/letter-loop.png'); background-size: 100% auto, 100% auto, 100% auto; background-repeat: no-repeat, no-repeat, repeat-y; background-position: top, top, top; background-attachment: local, local, local;">
+		<div class="relative z-20 px-12 md:px-20 max-sm:px-6 pt-20 pb-52 rounded-lg mb-0" style="background-image: url('/letter-top.png'), linear-gradient(to bottom, #FCEFC5 100px, transparent 100px), url('/letter-loop.png'); background-size: 100% auto, 100% auto, 100% auto; background-repeat: no-repeat, no-repeat, repeat-y; background-position: top, top, top; background-attachment: local, local, local;">
 			<div class="absolute bottom-0 left-0 w-full h-24 z-10 pointer-events-none bg-[url('/clouds-loop.png')] bg-repeat-x bg-bottom bg-contain"></div>
-			<h2 class="text-3xl md:text-4xl lg:text-5xl font-serif text-[#8B4513] mb-12 relative tracking-wide leading-tight font-semibold whitespace-nowrap">
-				親愛的駭客、音樂家和藝術家們，
+			<h2 class="text-3xl md:text-4xl lg:text-5xl max-sm:text-2xl font-serif text-[#8B4513] mb-12 relative tracking-wide leading-tight font-semibold break-words">
+				親愛的駭客、創作者和藝術家們，
 				<img src="/underline.svg" alt="" class="absolute left-0 -bottom-3 w-full max-w-md h-auto opacity-70">
 			</h2>
 			
-			<div class="text-[#8B4513] font-serif text-lg md:text-xl leading-loose space-y-6 tracking-wide">
+			<div class="text-[#8B4513] font-serif text-base md:text-xl leading-loose space-y-6 tracking-wide max-sm:tracking-normal">
 				<p class="leading-loose">嘿，歡迎加入 Hack Club 的全新冒險！今年秋天，我們誠摯地邀請你一起參加 Daydream——一場在全球 100 座城市同時展開、熱鬧又瘋狂的遊戲創作派對。</p>
 
-				<p class="font-bold text-xl md:text-2xl leading-loose tracking-wider">這個秋天，我們想親眼看見你做出屬於自己的遊戲。</p>
+				<p class="font-bold text-lg md:text-2xl leading-loose tracking-wider max-sm:tracking-normal">這個秋天，我們想親眼看見你做出屬於自己的遊戲。</p>
 
 				<p class="leading-loose">還沒做過遊戲也沒關係。我們準備了線上與實體的工作坊，會從零開始一步步陪你上手，把腦中的點子變成能玩的作品。</p>
 
@@ -1154,13 +1208,21 @@ Mumbai`.split("\n")
                         </div>
 
                         <!-- CTA Button -->
-                        <div class="text-center">
+                        <div class="text-center flex flex-col sm:flex-row gap-3 justify-center">
                             <a href={hackItMoreLink} target="_blank" rel="noopener noreferrer"
-                               class="inline-block px-6 py-3 bg-pink border-b-4 border-pink-dark text-white rounded-full 
-                                      font-sans font-medium tracking-wide transform hover:-translate-y-1 hover:shadow-lg 
+                               class="inline-block px-6 py-3 max-sm:px-4 max-sm:py-2 max-sm:text-sm bg-pink border-b-4 border-pink-dark text-white rounded-full 
+                                      font-sans font-medium tracking-wide max-sm:tracking-normal transform hover:-translate-y-1 hover:shadow-lg 
                                       active:translate-y-0 active:border-b-2 transition-all duration-150">
                                 了解更多 HackIt
                             </a>
+                            <button
+                               class="inline-block px-6 py-3 max-sm:px-4 max-sm:py-2 max-sm:text-sm bg-[#D1E3EE] border-b-4 border-[#B8D3E0] text-[#061E2D] rounded-full 
+                                      font-sans font-medium tracking-wide max-sm:tracking-normal transform hover:-translate-y-1 hover:shadow-lg 
+                                      active:translate-y-0 active:border-b-2 transition-all duration-150"
+                               on:click={openHackItPopup}
+                            >
+                                ▶ 查看過去成果
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -1219,14 +1281,14 @@ Mumbai`.split("\n")
                         <!-- CTA Buttons -->
                         <div class="flex flex-col sm:flex-row gap-3 justify-center">
                             <a href={hackClubMoreLink} target="_blank" rel="noopener noreferrer"
-                               class="inline-block px-6 py-3 bg-[#639DEB] border-b-4 border-[#335969] text-white rounded-full 
-                                      font-sans font-medium tracking-wide transform hover:-translate-y-1 hover:shadow-lg 
+                               class="inline-block px-6 py-3 max-sm:px-4 max-sm:py-2 max-sm:text-sm bg-[#639DEB] border-b-4 border-[#335969] text-white rounded-full 
+                                      font-sans font-medium tracking-wide max-sm:tracking-normal transform hover:-translate-y-1 hover:shadow-lg 
                                       active:translate-y-0 active:border-b-2 transition-all duration-150 text-center">
                                 了解更多
                             </a>
                             <button
-                               class="inline-block px-6 py-3 bg-[#D1E3EE] border-b-4 border-[#B8D3E0] text-[#061E2D] rounded-full 
-                                      font-sans font-medium tracking-wide transform hover:-translate-y-1 hover:shadow-lg 
+                               class="inline-block px-6 py-3 max-sm:px-4 max-sm:py-2 max-sm:text-sm bg-[#D1E3EE] border-b-4 border-[#B8D3E0] text-[#061E2D] rounded-full 
+                                      font-sans font-medium tracking-wide max-sm:tracking-normal transform hover:-translate-y-1 hover:shadow-lg 
                                       active:translate-y-0 active:border-b-2 transition-all duration-150"
                                on:click={openActivitiesPopup}
                             >
@@ -1289,6 +1351,87 @@ Mumbai`.split("\n")
 </div>
 {/if}
 
+
+<!-- HackIt Activities Modal -->
+{#if showHackItPopup}
+	<!-- svelte-ignore a11y_click_events_have_key_events -->
+	<div
+		class="fixed inset-0 bg-[rgba(0,0,0,0.5)] bg-opacity-70 flex items-center justify-center z-[12001]"
+		on:click={closeHackItPopup}
+		on:keydown={(e) => e.key === 'Escape' && closeHackItPopup()}
+		role="dialog"
+		aria-modal="true"
+		aria-label="HackIt Activities"
+		tabindex="-1"
+	>
+		<button
+			class="cursor-pointer absolute top-4 right-4 z-10 w-8 h-8 bg-[rgba(255,255,255,0.2)] hover:bg-opacity-30 rounded-full flex items-center justify-center text-white text-xl font-bold transition-colors duration-200"
+			on:click={closeHackItPopup}
+			aria-label="Close activities"
+		>
+			<span class="-translate-y-0.5">×</span>
+		</button>
+		<!-- svelte-ignore a11y_no_static_element_interactions -->
+		<div
+			class="relative w-[92vw] max-w-6xl max-h-[90vh] overflow-y-auto bg-[#FEFDF8] rounded-2xl border-4 border-[#E8E1D0] shadow-xl"
+			on:click|stopPropagation
+		>
+			<!-- Subtle paper texture overlay -->
+			<div class="absolute inset-0 bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat opacity-15 pointer-events-none"></div>
+			<!-- Header -->
+			<div class="px-6 md:px-8 py-4 bg-[#F7F2E3] border-b-2 border-[#E8E1D0] relative">
+				<h3 class="text-xl md:text-2xl font-serif font-bold text-[#335969] text-center tracking-wide">HackIt 過去的活動</h3>
+				<img src="/underline.svg" alt="" class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-40 h-auto opacity-60" />
+			</div>
+
+			<!-- Content -->
+			<div class="grid grid-cols-1 lg:grid-cols-3 gap-0 relative">
+				<!-- Activities list -->
+				<div class="lg:col-span-1 p-5 md:p-6 bg-white/60 border-r-2 border-[#E8E1D0] max-h-[70vh] overflow-y-auto">
+					<ul class="space-y-3">
+						{#each hackItActivities as act}
+							<li>
+								<button
+									class="w-full text-left px-4 py-3 rounded-xl bg-white hover:bg-[#F7F2E3] border-2 border-[#E8E1D0] transition-colors tracking-wide text-[#335969]"
+									on:click={() => selectedHackItVideoId = act.youtubeId}
+								>
+									{act.title}
+								</button>
+							</li>
+						{/each}
+					</ul>
+				</div>
+
+				<!-- Video player + description -->
+				<div class="lg:col-span-2 p-4 md:p-6 bg-transparent">
+					<div class="relative w-full aspect-video rounded-xl overflow-hidden border-2 border-[#E8E1D0] shadow-lg bg-black">
+						{#if selectedHackItVideoId}
+							<iframe
+								src={`https://www.youtube.com/embed/${selectedHackItVideoId}?autoplay=1`}
+								title="HackIt activity video"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								allowfullscreen
+								class="w-full h-full"
+							></iframe>
+						{:else}
+							<div class="w-full h-full flex items-center justify-center text-white/80 font-sans">選擇左側活動以播放影片</div>
+						{/if}
+					</div>
+
+					<!-- Description -->
+					{#if selectedHackIt}
+						<div class="mt-6 pt-4 border-t border-[#E8E1D0]">
+							<h4 class="text-[#335969] font-sans font-medium mb-2">活動介紹</h4>
+							<p class="text-[#335969]/90 leading-relaxed tracking-wide">{selectedHackIt.description}</p>
+						</div>
+					{/if}
+				</div>
+			</div>
+		</div>
+	</div>
+{/if}
+
 <!-- Schedule Container -->
 <div class="w-full bg-[#FCEFC5] pt-24 pb-16 px-8 flex justify-center">
 	<div class="relative max-w-4xl w-full">
@@ -1319,15 +1462,15 @@ Mumbai`.split("\n")
 				<div class="relative z-10">
 					{#each scheduleData as day, dayIndex}
 						<div class="bg-white/50 py-6 -mx-8 {dayIndex < scheduleData.length - 1 ? 'mb-8' : ''}">
-							<h3 class="text-xl md:text-2xl font-sans font-bold text-[#335969] mb-6 text-center px-8 max-sm:text-lg max-sm:px-4 tracking-wide">
+							<h3 class="text-xl md:text-2xl font-sans font-bold text-[#335969] mb-6 text-center px-8 max-sm:text-base max-sm:px-4 tracking-wide max-sm:tracking-normal">
 								{day.title}
 							</h3>
 							
-							<div class="max-w-xl mx-auto px-4">
+							<div class="max-w-xl mx-auto px-4 max-sm:px-2">
 								{#each day.items as item, index}
-									<div class="flex items-center justify-between py-3">
-										<span class="text-base md:text-lg font-sans text-[#477783] tracking-wide">{item.event}</span>
-										<span class="text-base md:text-lg font-sans text-[#477783] tracking-wide">{item.time}</span>
+									<div class="flex items-center justify-between py-3 max-sm:py-2 max-sm:flex-col max-sm:gap-1">
+										<span class="text-base md:text-lg max-sm:text-sm font-sans text-[#477783] tracking-wide max-sm:tracking-normal max-sm:text-center">{item.event}</span>
+										<span class="text-base md:text-lg max-sm:text-xs font-sans text-[#477783] tracking-wide max-sm:tracking-normal max-sm:opacity-75">{item.time}</span>
 									</div>
 									{#if index < day.items.length - 1}
 										<div class="h-[2px] bg-white/30"></div>
@@ -1467,7 +1610,7 @@ Mumbai`.split("\n")
 
 
 <!-- Gamejam Text Section -->
-<div class="w-full bg-[#FCEFC5] flex justify-center py-16 relative overflow-hidden max-h-[400px]">
+<div class="w-full bg-[#FCEFC5] flex justify-center py-16 relative overflow-visible">
 	<!-- Cloud backdrop for gamejam text -->
 	<div class="absolute inset-0 w-full h-full pointer-events-none z-1">	
 		<img src="/cloud-cover-1.png" alt="" class="w-full h-full object-cover">
@@ -1503,10 +1646,10 @@ Mumbai`.split("\n")
 			<img src="/letter-1-front.png" alt="" class="object-contain absolute -bottom-16 -left-13 w-28 h-28 animate-hover ![--hover:-0.25rem] ![animation-delay:0.7s] z-20">
 			<img src="/letter-1-back.png" alt="" class="object-contain absolute -bottom-16 -left-13 w-28 h-28 animate-hover ![--hover:-0.25rem] ![animation-delay:0.7s] z-10">
 			<div class="relative w-72 h-40 max-md:w-80 animate-hover ![--hover:-0.15rem] ![animation-delay:1.7s] z-20" data-point="1">
-									<img src="paper1.png" alt="" class="w-full h-full object-contain">
-					<div class="absolute inset-0 justify-center text-center p-6 text-lg md:text-xl font-serif max-md:text-base text-[#8B4513] inline-block content-center leading-relaxed tracking-wide">
-						<span class="font-sans text-[#E472AB] font-bold text-xl md:text-[1.3rem] mr-1">#1:</span> <a href="https://example.com" class="underline">報名參加</a> {eventName}
-					</div>
+				<img src="paper1.png" alt="" class="w-full h-full object-contain">
+				<div class="absolute inset-0 justify-center text-center p-6 text-xl font-serif max-md:text-lg text-[#8B4513] inline-block content-center">
+					<span class="font-sans text-[#E472AB] font-bold text-[1.3rem] mr-1">#1:</span> <a href={signupLink} class="underline">報名</a> Daydream {eventName}
+				</div>
 			</div>
 		</div>
 		<img src="/island-1.png" alt="" class="w-72 h-72 object-contain max-md:w-64 max-md:h-64 animate-hover ![--hover:-0.25rem] ![animation-delay:0.8s] z-0">
@@ -1518,8 +1661,8 @@ Mumbai`.split("\n")
 			<img src="/letter-2-back.png" alt="" class="object-contain absolute -bottom-16 -right-13 w-28 h-28 animate-hover ![--hover:-0.25rem] ![animation-delay:1.1s] z-10">
 			<div class="relative w-72 h-40 max-md:w-80 animate-hover ![--hover:-0.15rem] ![animation-delay:0.3s] z-20" data-point="2">
 				<img src="paper2.png" alt="" class="w-full h-full object-contain">
-				<div class="absolute inset-0 justify-center text-center p-6 text-lg md:text-xl font-serif max-md:text-base text-[#8B4513] inline-block content-center leading-relaxed tracking-wide">
-											<span class="font-sans text-[#639DEB] font-bold text-xl md:text-[1.3rem] mr-1">#2:</span> 參加工作坊，學習遊戲開發
+				<div class="absolute inset-0 justify-center text-center p-6 text-lg md:text-xl font-serif max-md:text-base max-sm:text-sm text-[#8B4513] inline-block content-center leading-relaxed tracking-wide max-sm:tracking-normal max-sm:p-4">
+											<span class="font-sans text-[#639DEB] font-bold text-xl md:text-[1.3rem] max-sm:text-lg mr-1">#2:</span> 參加工作坊，學習遊戲開發
 				</div>
 			</div>
 		</div>
@@ -1531,8 +1674,8 @@ Mumbai`.split("\n")
 			<img src="/letter-3-back.png" alt="" class="object-contain absolute -bottom-18 left-24 w-28 h-28 animate-hover ![--hover:-0.25rem] ![animation-delay:0.9s] z-10">
 			<div class="relative w-72 h-40 max-md:w-80 animate-hover ![--hover:-0.15rem] ![animation-delay:1.4s] z-20" data-point="3">
 				<img src="paper3.png" alt="" class="w-full h-full object-contain">
-				<div class="absolute inset-0 justify-center text-center p-6 text-lg md:text-xl font-serif max-md:text-base text-[#8B4513] inline-block content-center leading-relaxed tracking-wide">
-											<span class="font-sans text-[#AB68E2] font-bold text-xl md:text-[1.3rem] mr-1">#3:</span> 在現場和其他同學組隊
+				<div class="absolute inset-0 justify-center text-center p-6 text-lg md:text-xl font-serif max-md:text-base max-sm:text-sm text-[#8B4513] inline-block content-center leading-relaxed tracking-wide max-sm:tracking-normal max-sm:p-4">
+											<span class="font-sans text-[#AB68E2] font-bold text-xl md:text-[1.3rem] max-sm:text-lg mr-1">#3:</span> 在現場和其他同學組隊
 				</div>
 			</div>
 		</div>
@@ -1544,8 +1687,8 @@ Mumbai`.split("\n")
 			<img src="/letter-4-back.png" alt="" class="object-contain absolute -bottom-16 -right-13 w-28 h-28 animate-hover ![--hover:-0.25rem] ![animation-delay:1.6s] z-10">
 			<div class="relative w-72 h-40 max-md:w-80 animate-hover ![--hover:-0.15rem] ![animation-delay:2.3s] z-20" data-point="4">
 				<img src="paper4.png" alt="" class="w-full h-full object-contain">
-				<div class="absolute inset-0 justify-center text-center p-6 text-lg md:text-xl font-serif max-md:text-base text-[#8B4513] inline-block content-center leading-relaxed tracking-wide">
-											<span class="font-sans text-[#F2993E] font-bold text-xl md:text-[1.3rem] mr-1">#4:</span> 開始動手做遊戲——<em>不需任何經驗</em>
+				<div class="absolute inset-0 justify-center text-center p-6 text-lg md:text-xl font-serif max-md:text-base max-sm:text-sm text-[#8B4513] inline-block content-center leading-relaxed tracking-wide max-sm:tracking-normal max-sm:p-4">
+											<span class="font-sans text-[#F2993E] font-bold text-xl md:text-[1.3rem] max-sm:text-lg mr-1">#4:</span> 開始動手做遊戲——<em>不需任何經驗</em>
 				</div>
 			</div>
 		</div>
@@ -1555,8 +1698,8 @@ Mumbai`.split("\n")
 	<!-- Final Card -->
 	<div class="flex flex-col items-center w-full basis-full translate-y-40 max-md:translate-y-12 z-20">
 		<div class="relative">
-			<div class="bg-[url('/card-final.png')] bg-contain bg-no-repeat bg-center text-xl md:text-2xl font-serif pt-24 px-8 w-128 h-96 text-center max-md:w-80 max-md:h-80 max-md:text-lg max-md:pt-16 animate-hover ![--hover:-0.15rem] ![animation-delay:1.9s] leading-relaxed tracking-wide" data-point="5">
-										<span class="font-sans text-[#F2CC32] font-bold text-2xl md:text-[1.5rem] mr-1">#5:</span> 把你的作品分享給全世界！
+			<div class="bg-[url('/card-final.png')] bg-contain bg-no-repeat bg-center text-xl md:text-2xl font-serif pt-24 px-8 w-128 h-96 text-center max-md:w-80 max-md:h-80 max-md:text-lg max-sm:text-base max-md:pt-16 max-sm:pt-12 max-sm:px-6 animate-hover ![--hover:-0.15rem] ![animation-delay:1.9s] leading-relaxed tracking-wide max-sm:tracking-normal" data-point="5">
+										<span class="font-sans text-[#F2CC32] font-bold text-2xl md:text-[1.5rem] max-sm:text-xl mr-1">#5:</span> 把你的作品分享給全世界！
 			</div>
 		</div>
 	</div>
@@ -1575,7 +1718,7 @@ Mumbai`.split("\n")
 			<!-- Map container with cloudy edges -->
 			<div class="relative w-full h-156 overflow-hidden bg-transparent">
 				<iframe 
-					src={eventAddress ? "/event-map?location={encodeURIComponent(eventAddress)}" : "/map"}
+					src={eventAddress ? "/event-map?location=" + encodeURIComponent(eventAddress) : "/map"}
 					class="w-full h-full border-0 bg-[#acd4e0]"
 					style="
 						mask-image: 
@@ -1743,42 +1886,42 @@ Mumbai`.split("\n")
 				<div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-transparent bg-[length:100%_8px] bg-repeat-y pointer-events-none opacity-20"></div>
 				
 				<div class="space-y-8 max-sm:space-y-4 relative z-10">
-					<h2 class="text-4xl md:text-5xl lg:text-6xl font-pixel leading-tight tracking-wider whitespace-nowrap">
+					<h2 class="text-4xl md:text-5xl lg:text-6xl max-sm:text-2xl font-pixel leading-tight tracking-wider max-sm:tracking-normal max-sm:leading-relaxed">
 						你想<img src="/taiwan/dream-pixel.png" alt="Dream" class="h-[0.75em] font-serif italic [image-rendering:pixelated] inline align-middle -translate-y-1.5 mx-[0.1em]">出什麼遊戲？
 					</h2>
 					
-					<p class="text-lg md:text-xl opacity-90 font-pixel leading-loose tracking-wide">
+					<p class="text-lg md:text-xl max-sm:text-base opacity-90 font-pixel leading-loose tracking-wide max-sm:tracking-normal">
 						只要能發佈在 itch.io 上，想做什麼遊戲都可以！作品需要上架，讓大家能在線上體驗與遊玩。我們只接受 itch.io 的提交連結。
 						<br>
 						<br>
 						下面列出幾個過去黑客松的超酷作品，給你一些靈感：
 					</p>
 					
-					<ul class="space-y-3 font-pixel text-lg md:text-xl">
-						<li class="flex items-start leading-loose">
+					<ul class="space-y-3 font-pixel text-lg md:text-xl max-sm:text-sm">
+						<li class="flex items-start leading-loose max-sm:leading-relaxed">
 							<span class="mr-4">•</span>
 							<a href="https://bucketfish.itch.io/remedy-renemy" target="_blank" class="underline mr-2">Remedy Renemy</a>由 Tongyu 和 Kai Ling 製作
 						</li>
-						<li class="flex items-start leading-loose">
+						<li class="flex items-start leading-loose max-sm:leading-relaxed">
 							<span class="mr-4">•</span>
 							<a href="https://nanomars.itch.io/not-an-idle" target="_blank" class="underline mr-2">Not an Idle</a> 由 Armand 製作
 						</li>
-						<li class="flex items-start leading-loose">
+						<li class="flex items-start leading-loose max-sm:leading-relaxed">
 							<span class="mr-4">•</span>
 							<a href="https://juanes10201.itch.io/speedtickers" target="_blank" class="underline mr-2">SPEEDTICKERS</a> 由 Agustin 製作
 						</li>
 					</ul>
 					
-					<p class="text-lg md:text-xl opacity-90 font-pixel leading-loose tracking-wide">
+					<p class="text-lg md:text-xl max-sm:text-base opacity-90 font-pixel leading-loose tracking-wide max-sm:tracking-normal">
 						Daydream 開跑前，我們會舉辦工作坊與活動，陪你用 Godot 入門做遊戲！
 					</p>
 					
 					<!-- Bottom section with input -->
-					<div class="flex flex-col md:flex-row md:items-end gap-10 pt-8">
+					<div class="flex flex-col md:flex-row md:items-end gap-10 max-sm:gap-6 pt-8">
 						<div>
-							<h3 class="text-2xl md:text-3xl font-pixel mb-4 tracking-wider">卡住了嗎？</h3>
+							<h3 class="text-2xl md:text-3xl max-sm:text-xl font-pixel mb-4 tracking-wider max-sm:tracking-normal">卡住了嗎？</h3>
 															<button 
-									class="bg-[#D1E3EE] text-[#061E2D] px-6 py-3 font-pixel text-lg md:text-xl hover:bg-[#B8D3E0] cursor-pointer max-sm:w-full tracking-wide font-medium"
+									class="bg-[#D1E3EE] text-[#061E2D] px-6 py-3 max-sm:px-4 max-sm:py-2 font-pixel text-lg md:text-xl max-sm:text-base hover:bg-[#B8D3E0] cursor-pointer max-sm:w-full tracking-wide max-sm:tracking-normal font-medium"
 									on:click={dreamIdea}
 								>
 									幫我想個點子
@@ -1786,9 +1929,9 @@ Mumbai`.split("\n")
 						</div>
 						
 						<div class="flex-1">
-							<div class="border-2 border-[#D1E3EE] p-6 min-h-40 max-h-40 w-full flex items-start overflow-y-auto idea-output-box">
+							<div class="border-2 border-[#D1E3EE] p-6 max-sm:p-4 min-h-40 max-h-40 max-sm:min-h-32 max-sm:max-h-32 w-full flex items-start overflow-y-auto idea-output-box">
 								{#if ideaText}
-									<p class="font-pixel text-lg md:text-xl text-[#D1E3EE] w-full leading-loose tracking-wide">
+									<p class="font-pixel text-lg md:text-xl max-sm:text-sm text-[#D1E3EE] w-full leading-loose tracking-wide max-sm:tracking-normal">
 										{ideaText}{#if isTyping}<span class="animate-pulse">|</span>{/if}
 									</p>
 								{:else if showDice}
@@ -1797,7 +1940,7 @@ Mumbai`.split("\n")
 											<img 
 												src="/dice/dice-{diceNumber}.png" 
 												alt="Dice showing {diceNumber}"
-												class="h-24 w-24 object-contain flex-shrink-0 max-w-[30%] [image-rendering:pixelated]"
+												class="h-24 w-24 max-sm:h-16 max-sm:w-16 object-contain flex-shrink-0 max-w-[30%] [image-rendering:pixelated]"
 											/>
 										{/each}
 									</div>
@@ -1820,73 +1963,73 @@ Mumbai`.split("\n")
 	<div class="grid grid-cols-2 gap-8 max-w-6xl px-8 z-10 max-[900px]:grid-cols-1 max-md:gap-16">
 		<!-- FAQ Item 1 -->
 		<div class="relative transform -rotate-2">
-			<img src="window-3.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
-			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-                <h3 class="text-lg md:text-xl font-serif font-bold mb-4 max-lg:mb-2 max-md:text-base leading-relaxed tracking-wide">誰可以參加 Daydream？</h3>
-                <p class="text-sm md:text-base leading-relaxed tracking-wide">高中職、專科 1–3 年級，以及符合資格的實驗教育同學皆可參加（實驗教育請帶證明）。</p>
+			<img src="window-3.png" alt="window" class="w-full h-full object-contain max-md:scale-110 max-xl:scale-110 max-lg:scale-115 max-sm:scale-130">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-4 max-lg:px-14 max-xl:px-18 max-sm:top-[18%] max-sm:bottom-[18%] max-sm:left-[14%] max-sm:right-[14%]">
+                <h3 class="text-lg md:text-xl font-serif font-bold mb-4 max-lg:mb-2 max-md:text-sm max-sm:text-xs max-sm:mb-2 leading-relaxed tracking-wide max-sm:tracking-normal">誰可以參加 Daydream？</h3>
+                <p class="text-sm md:text-base max-sm:text-xs max-sm:leading-tight leading-relaxed tracking-wide max-sm:tracking-normal">全臺國高中生皆可參與（包含專科 1–3 年級、實驗教育之青少年；國中生亦可）。</p>
 		</div>
 		</div>
 
 		<!-- FAQ Item 2 -->
 		<div class="relative transform rotate-1">
-			<img src="window-4.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
-			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-                <h3 class="text-lg md:text-xl font-serif font-bold mb-4 max-lg:mb-2 max-md:text-base leading-relaxed tracking-wide">怎麼報名？</h3>
-                <p class="text-sm md:text-base leading-relaxed tracking-wide">報名尚未開放；先在上方留下 email RSVP，開放時第一時間通知。名額有限，先卡位！</p>
+			<img src="window-4.png" alt="window" class="w-full h-full object-contain max-md:scale-110 max-xl:scale-110 max-lg:scale-115 max-sm:scale-130">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-4 max-lg:px-14 max-xl:px-18 max-sm:top-[18%] max-sm:bottom-[18%] max-sm:left-[14%] max-sm:right-[14%]">
+                <h3 class="text-lg md:text-xl font-serif font-bold mb-4 max-lg:mb-2 max-md:text-sm max-sm:text-xs max-sm:mb-2 leading-relaxed tracking-wide max-sm:tracking-normal">怎麼報名？</h3>
+                <p class="text-sm md:text-base max-sm:text-xs max-sm:leading-tight leading-relaxed tracking-wide max-sm:tracking-normal">報名尚未開放；先在上方留下 email RSVP，開放時第一時間通知。名額有限，先卡位！</p>
 			</div>
 		</div>
 
 		<!-- FAQ Item 3 -->
 		<div class="relative transform rotate-2">
-			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
-			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-				<h3 class="text-lg md:text-xl font-serif font-bold mb-4 max-lg:mb-2 max-md:text-base leading-relaxed tracking-wide">全部都免費嗎？</h3>
-				<p class="text-sm md:text-base leading-relaxed tracking-wide">沒錯！食物、周邊與好心情我們都準備好了。</p>
+			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-110 max-xl:scale-110 max-lg:scale-115 max-sm:scale-130">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-sm:mx-0 max-sm:px-4 max-lg:px-14 max-xl:px-18 max-sm:top-[18%] max-sm:bottom-[18%] max-sm:left-[14%] max-sm:right-[14%]">
+				<h3 class="text-lg md:text-xl font-serif font-bold mb-4 max-lg:mb-2 max-md:text-sm max-sm:text-xs max-sm:mb-2 leading-relaxed tracking-wide max-sm:tracking-normal">全部都免費嗎？</h3>
+				<p class="text-sm md:text-base max-sm:text-xs max-sm:leading-tight leading-relaxed tracking-wide max-sm:tracking-normal">沒錯！食物、周邊與好心情我們都準備好了。同時我們也提供交通報銷！請查看 <a href="https://go.hackit.tw/j44k" target="_blank" rel="noopener noreferrer" class="underline">https://go.hackit.tw/j44k</a> 看更多資訊！</p>
 			</div>
 		</div>
 
 		<!-- FAQ Item 4 -->
 		<div class="relative transform -rotate-1">
-			<img src="window-1.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
-			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-				<h3 class="text-lg md:text-xl font-serif font-bold mb-4 max-lg:mb-2 max-md:text-base leading-relaxed tracking-wide">要帶什麼？</h3>
-				<p class="text-sm md:text-base leading-relaxed tracking-wide">筆電、充電器、盥洗用品、睡袋，還有一顆開放的心！</p>
+			<img src="window-1.png" alt="window" class="w-full h-full object-contain max-md:scale-110 max-xl:scale-110 max-lg:scale-115 max-sm:scale-130">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-4 max-lg:px-14 max-xl:px-18 max-sm:top-[18%] max-sm:bottom-[18%] max-sm:left-[14%] max-sm:right-[14%]">
+				<h3 class="text-lg md:text-xl font-serif font-bold mb-4 max-lg:mb-2 max-md:text-sm max-sm:text-xs max-sm:mb-2 leading-relaxed tracking-wide max-sm:tracking-normal">要帶什麼？</h3>
+				<p class="text-sm md:text-base max-sm:text-xs max-sm:leading-tight leading-relaxed tracking-wide max-sm:tracking-normal">筆電、充電器、盥洗用品、睡袋，還有一顆開放的心！</p>
 			</div>
 		</div>
 
 		<!-- FAQ Item 5 -->
 		<div class="relative transform rotate-1">
-			<img src="window-4.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
-			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-                <h3 class="text-lg md:text-xl font-serif font-bold mb-4 max-lg:mb-2 max-md:text-base leading-relaxed tracking-wide">Hack Club 以前做過什麼？</h3>
-                <p class="text-sm md:text-base leading-relaxed tracking-wide">在 GitHub 總部、50+ 城市，甚至跨州火車上都辦過活動。更多瘋狂又有趣的企劃等你探索！</p>
+			<img src="window-4.png" alt="window" class="w-full h-full object-contain max-md:scale-110 max-xl:scale-110 max-lg:scale-115 max-sm:scale-130">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-4 max-lg:px-14 max-xl:px-18 max-sm:top-[18%] max-sm:bottom-[18%] max-sm:left-[14%] max-sm:right-[14%]">
+                <h3 class="text-lg md:text-xl font-serif font-bold mb-4 max-lg:mb-2 max-md:text-sm max-sm:text-xs max-sm:mb-2 leading-relaxed tracking-wide max-sm:tracking-normal">Hack Club 以前做過什麼？</h3>
+                <p class="text-sm md:text-base max-sm:text-xs max-sm:leading-tight leading-relaxed tracking-wide max-sm:tracking-normal">在 GitHub 總部、50+ 城市，甚至跨州火車上都辦過活動。更多瘋狂又有趣的企劃等你探索！</p>
 			</div>
 		</div>
 
 		<!-- FAQ Item 6 -->
 		<div class="relative transform rotate-1">
-			<img src="window-3.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
-			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-				<h3 class="text-lg md:text-xl font-serif font-bold mb-4 max-lg:mb-2 max-md:text-base leading-relaxed tracking-wide">不太會寫程式也可以參加嗎？</h3>
-				<p class="text-sm md:text-base leading-relaxed tracking-wide">當然可以！這場 Game Jam 歡迎各種程度的同學。我們會有工作坊與活動，陪你一路學到會。</p>
+			<img src="window-3.png" alt="window" class="w-full h-full object-contain max-md:scale-110 max-xl:scale-110 max-lg:scale-115 max-sm:scale-130">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-4 max-lg:px-14 max-xl:px-18 max-sm:top-[18%] max-sm:bottom-[18%] max-sm:left-[14%] max-sm:right-[14%]">
+				<h3 class="text-lg md:text-xl font-serif font-bold mb-4 max-lg:mb-2 max-md:text-sm max-sm:text-xs max-sm:mb-2 leading-relaxed tracking-wide max-sm:tracking-normal">不太會寫程式也可以參加嗎？</h3>
+				<p class="text-sm md:text-base max-sm:text-xs max-sm:leading-tight leading-relaxed tracking-wide max-sm:tracking-normal">當然可以！這場 Game Jam 歡迎各種程度的同學。我們會有工作坊與活動，陪你一路學到會。</p>
 			</div>
 		</div>
 
 		<!-- FAQ Item 7 -->
 		<div class="relative transform -rotate-2">
-			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
-			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-                <h3 class="text-lg md:text-xl font-serif font-bold mb-4 max-lg:mb-2 max-md:text-base leading-relaxed tracking-wide">家長有疑慮怎麼辦？</h3>
-                <p class="text-sm md:text-base leading-relaxed tracking-wide">家長有問題？寫信到 <a class="underline" href="mailto:official@hackit.tw">official@hackit.tw</a>，我們很樂意說明。</p>
+			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-110 max-xl:scale-110 max-lg:scale-115 max-sm:scale-130">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-4 max-lg:px-14 max-xl:px-18 max-sm:top-[18%] max-sm:bottom-[18%] max-sm:left-[14%] max-sm:right-[14%]">
+                <h3 class="text-lg md:text-xl font-serif font-bold mb-4 max-lg:mb-2 max-md:text-sm max-sm:text-xs max-sm:mb-2 leading-relaxed tracking-wide max-sm:tracking-normal">家長有疑慮怎麼辦？</h3>
+                <p class="text-sm md:text-base max-sm:text-xs max-sm:leading-tight leading-relaxed tracking-wide max-sm:tracking-normal">家長有問題？寫信到 <a class="underline" href="mailto:official@hackit.tw">official@hackit.tw</a>，我們很樂意說明。</p>
 			</div>
 		</div>
 
 		<!-- FAQ Item 8 -->
 		<div class="relative transform -rotate-1">
-			<img src="window-1.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
-			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-				<h3 class="text-lg md:text-xl font-serif font-bold mb-4 max-lg:mb-2 max-md:text-base leading-relaxed tracking-wide">在 Daydream 可以做什麼？</h3>
-				<p class="text-sm md:text-base leading-relaxed tracking-wide">任何符合主題的遊戲都行：平台、視覺小說、點擊遊戲……盡情發揮創意！</p>
+			<img src="window-1.png" alt="window" class="w-full h-full object-contain max-md:scale-110 max-xl:scale-110 max-lg:scale-115 max-sm:scale-130">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-sm:mx-0 max-sm:px-4 max-lg:px-14 max-xl:px-18 max-sm:top-[18%] max-sm:bottom-[18%] max-sm:left-[14%] max-sm:right-[14%]">
+				<h3 class="text-lg md:text-xl font-serif font-bold mb-4 max-lg:mb-2 max-md:text-sm max-sm:text-xs max-sm:mb-2 leading-relaxed tracking-wide max-sm:tracking-normal">在 Daydream 可以做什麼？</h3>
+				<p class="text-sm md:text-base max-sm:text-xs max-sm:leading-tight leading-relaxed tracking-wide max-sm:tracking-normal">任何符合主題的遊戲都行：平台、視覺小說、點擊遊戲……盡情發揮創意！</p>
 			</div>
 		</div>
 	</div>
@@ -1908,18 +2051,18 @@ Mumbai`.split("\n")
 		aria-label="Hack Club Activities"
 		tabindex="-1"
 	>
-		<button
-			class="cursor-pointer absolute top-4 right-4 z-10 w-8 h-8 bg-[rgba(255,255,255,0.2)] hover:bg-opacity-30 rounded-full flex items-center justify-center text-white text-xl font-bold transition-colors duration-200"
-			on:click={closeActivitiesPopup}
-			aria-label="Close activities"
-		>
-		<span class="-translate-y-0.5">×</span>
-		</button>
 		<!-- svelte-ignore a11y_no_static_element_interactions -->
 		<div
-			class="relative w-[92vw] max-w-6xl bg-[#FEFDF8] rounded-2xl border-4 border-[#E8E1D0] shadow-xl overflow-hidden"
+			class="relative w-[92vw] max-w-6xl max-h-[90vh] overflow-y-auto bg-[#FEFDF8] rounded-2xl border-4 border-[#E8E1D0] shadow-xl"
 			on:click|stopPropagation
 		>
+			<button
+				class="cursor-pointer absolute top-2 right-2 md:-top-4 md:-right-4 z-20 w-8 h-8 bg-white/80 md:bg-white/20 hover:bg-white/90 md:hover:bg-white/30 rounded-full flex items-center justify-center text-[#335969] md:text-white text-xl font-bold transition-colors duration-200"
+				on:click={closeActivitiesPopup}
+				aria-label="Close activities"
+			>
+				<span class="-translate-y-0.5">×</span>
+			</button>
 			<!-- Subtle paper texture overlay -->
 			<div class="absolute inset-0 bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat opacity-15 pointer-events-none"></div>
 			<!-- Header -->
@@ -1931,7 +2074,7 @@ Mumbai`.split("\n")
 			<!-- Content -->
 			<div class="grid grid-cols-1 lg:grid-cols-3 gap-0 relative">
 				<!-- Activities list -->
-				<div class="lg:col-span-1 p-5 md:p-6 bg-white/60 border-r-2 border-[#E8E1D0] max-h-[70vh] overflow-y-auto">
+				<div class="lg:col-span-1 p-5 md:p-6 bg-white/60 lg:border-r-2 border-b-2 lg:border-b-0 border-[#E8E1D0] max-h-[70vh] overflow-y-auto">
 					<ul class="space-y-3">
 						{#each hackClubActivities as act, i}
 							<li>
