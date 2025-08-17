@@ -7,16 +7,16 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Springfield"; // This should be the name of your event WITHOUT "Daydream" at the start
+	const eventName = "Missouri"; // This should be the name of your event WITHOUT "Daydream" at the start
 	const eventLocation = "Springfield, Missouri";
-	const eventAddress = "The Library Center"; // Leave this empty if you don't want an address
-	const signupLink = "https://forms.hackclub.com/daydream-rsvp"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	const eventAddress = "The Library Center, 4653 S Campbell Ave, Springfield, MO 65810"; // Leave this empty if you don't want an address
+	const signupLink = "https://forms.hackclub.com/daydream-rsvp?event=recukCDrvwSE2bU26"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
-	const directionsURL = "https://www.google.com/maps/place/the+library+center/"
-	const contactLink = "mailto:example@daydream.hackclub.com"
+	const directionsURL = ""
+	const contactLink = "mailto:missouri@daydream.hackclub.com"
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
-	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
+	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
 	const sponsors = [
 		{ image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
 		{ image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
@@ -32,24 +32,26 @@
 		{
 			title: "Saturday, September 27th",
 			items: [
-				{ event: "Doors open", time: "11:00 AM" },
-				{ event: "Opening ceremony", time: "12:00 PM" },
+				{ event: "Doors open", time: "9:00 AM" },
+				{ event: "Opening ceremony", time: "9:30 AM" },
+				{ event: "Start working on your project!", time: "10:00 AM" },
+				{ event: "Workshop 1", time: "11:00 AM" },
 				{ event: "Lunch", time: "12:30 PM" },
-				{ event: "Start working on your project!", time: "1:00 PM" },
-				{ event: "Workshop 1", time: "2:00 PM" },
-				{ event: "Activity 1", time: "4:00 PM" },
-				{ event: "Workshop 2", time: "4:00 PM" },
+				{ event: "Workshop 2", time: "3:00 PM" },
 				{ event: "Dinner", time: "6:00 PM" },
-				{ event: "Lightning talks", time: "8:00 PM" },
-				{ event: "Midnight surprise", time: "12:00 AM" }
+				{ event: "Go home and rest", time: "8:00 PM" },
 			]
 		},
 		{
 			title: "Sunday, September 28th",
 			items: [
-				{ event: "Breakfast", time: "8:00 AM" },
-				{ event: "Demos!", time: "10:30 AM" },
-				{ event: "Closing ceremony", time: "12:00 PM" }
+				{ event: "Doors open", time: "8:00 AM" },
+				{ event: "Breakfast", time: "8:30 AM" },
+				{ event: "Workshop 3", time: "11:00 AM" },
+				{ event: "Lunch", time: "12:30 AM" },
+				{ event: "Submissions close!", time: "4:00 PM" },
+				{ event: "Demos!", time: "4:30 PM" },
+				{ event: "Closing ceremony", time: "6:00 PM" }
 			]
 		}
 	];
@@ -815,12 +817,12 @@ Mumbai`.split("\n")
 		<div class="inline-block relative">
 			<div class="h-12"></div> 
 			<!-- space for the ship -->
-			<h2
+			<!-- <h2
 			class="text-xl font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent absolute left-1/2 max-sm:translate-y-4 max-sm:mb-0 max-md:-mb-8 md:left-[calc(50%+4rem)] -translate-x-1/2 bottom-8 italic w-max md:text-lg max-sm:text-lg"
 			>
 				September 27th & 28th, 2025
-			</h2>
-			<img src="daydream.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4" />
+			</h2> -->
+			<img src="missouri/daydreammo.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4" />
 			<a href="https://hackclub.com" class="absolute top-0 -right-6 max-sm:right-0 max-sm:scale-80 animate-hover ![animation-delay:0.9s] ![--hover:-0.2rem]">
 				<img src="flag-plane.png" alt="Hack Club" class="h-28">
 			</a>
@@ -873,7 +875,7 @@ Mumbai`.split("\n")
 	<div class="absolute left-0 w-3/12 -bottom-12 translate-y-1/2 bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none h-full" style="mask-image: url('/clouds-top-left-bg.svg'); mask-size: contain; mask-repeat: no-repeat; mask-position: center; -webkit-mask-image: url('/clouds-top-left-bg.svg'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center;"></div>
 	
 	<img src="/clouds-top-middle.png" alt="" class="absolute left-5/12 -translate-x-1/2 w-7/12 -bottom-24 z-20 pointer-events-none">
-	<img src="/clouds-top-right.png" alt="" class="absolute right-0 w-1/2 -bottom-12 translate-y-1/2 z-20 pointer-events-none">
+	<img src="/clouds-top-right.png" alt="" class="absolute right-0 w-1/2 -bottom-12 translate-y-1/2 z-10 pointer-events-none">
 	<img src="/clouds-top-left.png" alt="" class="absolute left-0 w-3/12 -bottom-12  translate-y-1/2 z-20 pointer-events-none">
 	
 
@@ -902,214 +904,42 @@ Mumbai`.split("\n")
 	<!-- background -->
 	<div class="absolute top-0 left-0 w-full h-full -z-50 bg-[#FCEFC5]"></div>
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-30 pointer-events-none -z-40"></div>
+
+</div>
+
+<div class="w-full relative flex items-start justify-center">
+	<!-- background -->
+	<div class="absolute top-0 left-0 w-full h-full -z-50 bg-[#FCEFC5]"></div>
+	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-30 pointer-events-none -z-40"></div>
 	
-	<div class="relative max-w-4xl mx-auto h-full flex items-start pt-24 max-sm:pt-40 px-8 max-sm:px-2">
+	<div class="relative max-w-4xl mx-auto h-full flex items-start pt-14 max-sm:pt-40 px-8 max-sm:px-2">
 		<div class="relative z-20 px-20 pt-20 pb-52 rounded-lg mb-0 max-sm:px-18" style="background-image: url('/letter-top.png'), linear-gradient(to bottom, #FCEFC5 100px, transparent 100px), url('/letter-loop.png'); background-size: 100% auto, 100% auto, 100% auto; background-repeat: no-repeat, no-repeat, repeat-y; background-position: top, top, top; background-attachment: local, local, local;">
 			<div class="absolute bottom-0 left-0 w-full h-24 z-10 pointer-events-none bg-[url('/clouds-loop.png')] bg-repeat-x bg-bottom bg-contain"></div>
 			<h2 class="text-5xl font-serif italic text-[#8B4513] mb-10 relative">
-				Dear Hackers, Musicians, and Artist,
+				What is Daydream Missouri?
 				<img src="/underline.svg" alt="" class="absolute left-0 -bottom-3 w-64 h-auto opacity-70">
 			</h2>
 			
 			<div class="text-[#8B4513] font-serif text-xl leading-relaxed space-y-8">
-				<p>Welcome to Hack Club's newest adventure. This fall we invite you to join us for Daydream, the world's biggest Game Jam happening simultaneously in 100 cities.</p>
+				<p>This fall we invite you to join us for Daydream, the world's biggest game jam happening simultaneously in 100 cities, hosted by Hack Club. And there's one being hosted right in Springfield Missouri, welcoming everyone around the area.</p>
 
-				<p class="font-bold text-2xl">Hack Club wants you to make a game this fall.</p>
+				<p>This two day coding event invites you and your friends to come and create your own original game for cool prizes! Food and snacks are provided!</p>
 
-				<p>Don't consider yourself a game dev? No problem - we have tons of online and in-person workshops for you to make your first game! </p>
+				<p>Don't consider yourself a game dev? No problem - we have tons of online and in-person workshops for guiding you to make your first game! </p>
 
-				<p>This fall, we invite you to learn something new, make something you're really proud of, meet new friends, and go on an incredible adventure together.</p>
-
-				<p class="mb-2">With love,</p>
-
-				<p class="italic text-2xl opacity-85">Augie and Renran from Hack Club HQ</p>
+				<p>On September 27th and 28th, come to Location TBD to learn something new, make something you're really proud of, meet new friends, and go on an incredible adventure together.</p>
 			</div>
 		</div>
 	</div>
 
-	<div class="w-full absolute z-30 max-h-64 bottom-0 max-2xl:translate-y-1/4 max-lg:translate-y-1/2 pointer-events-none">	
+	<div class="w-full absolute z-10 max-h-64 bottom-0 max-2xl:translate-y-1/4 max-lg:translate-y-1/2 pointer-events-none">	
 		<img src="/cloud-cover-1.png" alt="" class="w-full h-full object-contain min-[2048px]:hidden">
 	</div>
 
 </div>
 
-<!-- Schedule Container -->
-<div class="w-full bg-[#FCEFC5] py-16 px-8 flex justify-center">
-	<div class="relative max-w-4xl w-full">
-		<!-- Billboard Container -->
-		<div class="relative bg-[#f0f9ff] border-[10px] border-b-[16px] border-[#888896] rounded-lg rounded-b-xl mx-auto z-40">
-			<!-- Billboard Lights (top) -->
-			<img 
-				src="/billboard-lights.png" 
-				alt="" 
-				class="absolute top-0 left-0 w-full h-auto object-contain pointer-events-none z-10 -translate-y-[calc(100%+9px)]"
-			>
-			
-			<!-- Header Section -->
-			<div class="w-full bg-[url('/billboard-bg-texture.png')] bg-contain bg-repeat py-6 relative" style="border-bottom: 8px solid #B4B4C5;">
-				<h2 class="text-4xl font-serif text-[#F0F0FF] text-center">
-					Schedule
-				</h2>
-				<!-- Brush texture overlay for header -->
-				<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
-			</div>
-			
-			<!-- Main Content Area -->
-			<div class="relative bg-gradient-to-b from-[#CCF4FD] to-[#AECDF6] px-8 pt-8 pb-16">
-				<!-- Brush texture overlay for content -->
-				<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
-				
-				<!-- Schedule Content -->
-				<div class="relative z-10">
-					{#each scheduleData as day, dayIndex}
-						<div class="bg-white/50 py-6 -mx-8 {dayIndex < scheduleData.length - 1 ? 'mb-8' : ''}">
-							<h3 class="text-2xl font-sans font-bold text-[#335969] mb-6 text-center px-8 max-sm:text-xl max-sm:px-4">
-								{day.title}
-							</h3>
-							
-							<div class="max-w-xl mx-auto px-4">
-								{#each day.items as item, index}
-									<div class="flex items-center justify-between py-2">
-										<span class="text-lg font-sans text-[#477783]">{item.event}</span>
-										<span class="text-lg font-sans text-[#477783]">{item.time}</span>
-									</div>
-									{#if index < day.items.length - 1}
-										<div class="h-[2px] bg-white/30"></div>
-									{/if}
-								{/each}
-							</div>
-						</div>
-					{/each}
-				</div>
-			</div>
-			
-			<!-- Billboard Bars (bottom) -->
-			<div 
-				class="absolute bottom-0 -left-[5px] w-[calc(100%+10px)] h-6 bg-[url('/billboard-bars.png')] bg-repeat-x bg-contain bg-center pointer-events-none z-10 border-[#9898a7] border-x-[6px]"
-			></div>
-		</div>
-		
-		<!-- Billboard Pillars -->
-		<div 
-			class="absolute top-1/2 left-[15%] w-[10vw] max-w-12 -bottom-12 bg-[url('/billboard-pillar.png')] bg-repeat-y pointer-events-none bg-contain"
-			style="box-shadow: inset 0 8px 12px -6px rgba(0, 0, 0, 0.1);"
-		>
-			<div class="absolute bottom-0 left-0 w-full h-auto bg-[url('/clouds-loop.png')] bg-no-repeat bg-contain bg-bottom pointer-events-none aspect-[2/1]"></div>
-		</div>
-		<div 
-			class="absolute top-1/2 right-[15%] w-[10vw] max-w-12 -bottom-12 bg-[url('/billboard-pillar.png')] bg-repeat-y pointer-events-none bg-contain"
-			style="box-shadow: inset 0 8px 12px -6px rgba(0, 0, 0, 0.1);"
-		>
-			<div class="absolute bottom-0 left-0 w-full h-auto bg-[url('/clouds-loop.png')] bg-no-repeat bg-contain bg-bottom pointer-events-none aspect-[2/1]"></div>
-		</div>
-	</div>
-</div>
-
-{#if sponsorsEnabled}
-<!-- Second Billboard Section -->
-<div class="w-full bg-[#FCEFC5] pb-16 pt-6 px-8 flex justify-center">
-	<div class="relative max-w-4xl w-full">
-		<!-- Billboard Container -->
-		<div class="relative bg-[#f0f9ff] border-[10px] border-b-[16px] border-[#888896] rounded-lg rounded-b-xl mx-auto z-40">
-			<!-- Header Section -->
-			<div class="w-full bg-[url('/billboard-bg-texture.png')] bg-contain bg-repeat py-6 relative" style="border-bottom: 8px solid #B4B4C5;">
-				<h2 class="text-4xl font-serif text-[#F0F0FF] text-center">
-					Sponsors
-				</h2>
-				<!-- Brush texture overlay for header -->
-				<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
-			</div>
-			
-			<!-- Main Content Area -->
-			<div class="relative bg-gradient-to-b from-[#CCF4FD] to-[#AECDF6] px-8 pt-8 pb-16">
-				<!-- Brush texture overlay for content -->
-				<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
-				
-				<!-- Sponsors Grid -->
-				<div class="relative z-10 min-h-40">
-					{#if sponsors.length > 0}
-						<!-- First row (up to 4 sponsors) -->
-						{#if sponsors.length > 4}
-							<div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center mb-8">
-								{#each sponsors.slice(0, 4) as sponsor}
-									<a href={sponsor.url} class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors" target="_blank" rel="noopener noreferrer">
-										<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain">
-									</a>
-								{/each}
-							</div>
-							
-							<!-- Second row (remaining sponsors, centered) -->
-							{#if sponsors.length > 4}
-								<div class="flex justify-center">
-									<div class="grid grid-cols-2 md:grid-cols-3 gap-8 items-center justify-items-center max-w-2xl">
-										{#each sponsors.slice(4) as sponsor, index}
-											<a href={sponsor.url} 
-												class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors {sponsors.slice(4).length === 3 && index === 2 ? 'md:col-span-1 col-span-2 max-w-xs mx-auto' : ''}" 
-												target="_blank" rel="noopener noreferrer">
-												<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain">
-											</a>
-										{/each}
-									</div>
-								</div>
-							{/if}
-						{:else}
-							<!-- Single row for 4 or fewer sponsors -->
-							<div class="flex justify-center">
-								<div class="grid gap-8 items-center justify-items-center max-w-4xl {sponsors.length === 1 ? 'grid-cols-1' : sponsors.length === 2 ? 'grid-cols-1 md:grid-cols-2' : sponsors.length === 3 ? 'grid-cols-2 md:grid-cols-3' : 'grid-cols-2 md:grid-cols-4'}">
-									{#each sponsors as sponsor}
-										<a href={sponsor.url} class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors" target="_blank" rel="noopener noreferrer">
-											<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain">
-										</a>
-									{/each}
-								</div>
-							</div>
-						{/if}
-					{/if}
-					
-					{#if contactLink}
-						<!-- Call to action for sponsors -->
-						<div class="mt-8 text-center">
-							<p class="text-lg text-[#335969]">Want to sponsor Daydream {eventName}? <a href={contactLink} class="underline hover:text-[#477783] transition-colors">Get in touch</a></p>
-						</div>
-					{/if}
-				</div>
-			</div>
-			
-			<!-- Billboard Bars (bottom) -->
-			<div 
-				class="absolute bottom-0 -left-[5px] w-[calc(100%+10px)] h-6 bg-[url('/billboard-bars.png')] bg-repeat-x bg-contain bg-center pointer-events-none z-10 border-[#9898a7] border-x-[6px]"
-			></div>
-		</div>
-		
-		<!-- Connecting Pillars to First Billboard -->
-		<div 
-			class="absolute top-0 left-[15%] w-[10vw] max-w-12 h-32 bg-[url('/billboard-pillar.png')] bg-repeat-y pointer-events-none bg-contain -translate-y-32"
-			style="box-shadow: inset 0 8px 12px -6px rgba(0, 0, 0, 0.1);"
-		></div>
-		<div 
-			class="absolute top-0 right-[15%] w-[10vw] max-w-12 h-32 bg-[url('/billboard-pillar.png')] bg-repeat-y pointer-events-none bg-contain -translate-y-32"
-			style="box-shadow: inset 0 8px 12px -6px rgba(0, 0, 0, 0.1);"
-		></div>
-		
-		<!-- Billboard Pillars (extending down from bottom) -->
-		<div 
-			class="absolute bottom-0 left-[15%] w-[10vw] max-w-12 h-24 bg-[url('/billboard-pillar.png')] bg-repeat-y pointer-events-none bg-contain translate-y-24"
-			style="box-shadow: inset 0 8px 12px -6px rgba(0, 0, 0, 0.1);"
-		>
-			<div class="absolute bottom-0 left-0 w-full h-auto bg-[url('/clouds-loop.png')] bg-no-repeat bg-contain bg-bottom pointer-events-none aspect-[2/1]"></div>
-		</div>
-		<div 
-			class="absolute bottom-0 right-[15%] w-[10vw] max-w-12 h-24 bg-[url('/billboard-pillar.png')] bg-repeat-y pointer-events-none bg-contain translate-y-24"
-			style="box-shadow: inset 0 8px 12px -6px rgba(0, 0, 0, 0.1);"
-		>
-			<div class="absolute bottom-0 left-0 w-full h-auto bg-[url('/clouds-loop.png')] bg-no-repeat bg-contain bg-bottom pointer-events-none aspect-[2/1]"></div>
-		</div>
-	</div>
-</div>
-{/if}
-
 <!-- Gamejam Text Section -->
-<div class="w-full bg-[#FCEFC5] flex justify-center py-16 relative overflow-hidden max-h-[400px]">
+<div class="w-full bg-[#FCEFC5] flex justify-center py-16 pt-30 relative overflow-hidden max-h-[400px]">
 	<!-- Cloud backdrop for gamejam text -->
 	<div class="absolute inset-0 w-full h-full pointer-events-none z-1">	
 		<img src="/cloud-cover-1.png" alt="" class="w-full h-full object-cover">
@@ -1130,8 +960,8 @@ Mumbai`.split("\n")
 	<img src="/clouds-right-2.png" alt="" class="absolute right-0 w-3/12 bottom-0 pointer-events-none">
 
 	<!-- SVG Path Overlay -->
-	<svg class="absolute inset-0 w-full h-full pointer-events-none z-0" id="path-svg">
-		<path id="dotted-path" stroke="rgba(255,255,255,0.5)" stroke-width="3" fill="none" stroke-dasharray="8,8" opacity="0.7"></path>
+	<svg class="absolute inset-0 w-full h-full pointer-events-none z-10" id="path-svg">
+		<path id="dotted-path" stroke="rgba(255,255,255,0.8)" stroke-width="3" fill="none" stroke-dasharray="8,8" opacity="0.7"></path>
 	</svg>
 
 	<img src="paper-airplane.png" alt="Paper airplane" class="h-16 absolute" id="paper-airplane">
@@ -1203,124 +1033,14 @@ Mumbai`.split("\n")
 	<img src="/clouds-pink-right.png" alt="" class="absolute right-0 w-5/12 bottom-0 translate-y-32 z-50 pointer-events-none">
 
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none bg-position-[0_100vh]"></div>
+	
 </div>
 
 <div class="w-full bg-gradient-to-b from-[#FDC5D1] to-[#FAE3C9] items-center justify-center px-0 md:px-8 relative pt-36">
-	<div class="w-full max-w-5xl lg:max-w-6xl mx-auto px-2 md:px-8">
-		<div class="relative w-full min-w-72">
-			<img src="banner-city.png" alt="Find a Daydream Near You" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/3 md:-translate-y-[40%] h-48 w-auto z-100 scale-[1.15] md:scale-[1.65] saturate-70 brightness-110 object-contain px-4 pointer-events-none">
-			
-			<!-- Map container with cloudy edges -->
-			<div class="relative w-full h-156 overflow-hidden bg-transparent">
-				<iframe 
-					src={eventAddress ? "/event-map?location=" + encodeURIComponent(eventAddress) : "/map"}
-					class="w-full h-full border-0 bg-[#acd4e0]"
-					style="
-						mask-image: 
-							linear-gradient(white, white),
-							url('/clouds-loop-mask-2.png'),
-							url('/clouds-loop-mask-1.png'),
-							url('/clouds-loop-mask-3.png'),
-							url('/clouds-loop-mask-4.png'),
-							url('/cloud-corner-1.png'),
-							url('/cloud-corner-2.png'),
-							url('/cloud-corner-3.png'),
-							url('/cloud-corner-4.png');
-						mask-position: 
-							center,
-							top left,
-							bottom left,
-							left top,
-							right top,
-							bottom left,
-							top left,
-							top right,
-							bottom right;
-						mask-size: 
-							auto auto,
-							auto 72px,
-							auto 72px,
-							72px auto,
-							72px auto,
-							100px 100px,
-							100px 100px,
-							100px 100px,
-							100px 100px;
-						mask-repeat: 
-							no-repeat,
-							repeat-x,
-							repeat-x,
-							repeat-y,
-							repeat-y,
-							no-repeat,
-							no-repeat,
-							no-repeat,
-							no-repeat;
-						-webkit-mask-image: 
-							linear-gradient(white, white),
-							url('/clouds-loop-mask-2.png'),
-							url('/clouds-loop-mask-1.png'),
-							url('/clouds-loop-mask-3.png'),
-							url('/clouds-loop-mask-4.png'),
-							url('/cloud-corner-1.png'),
-							url('/cloud-corner-2.png'),
-							url('/cloud-corner-3.png'),
-							url('/cloud-corner-4.png');
-						-webkit-mask-position: 
-							center,
-							top left,
-							bottom left,
-							left top,
-							right top,
-							bottom left,
-							top left,
-							top right,
-							bottom right;
-						-webkit-mask-size: 
-							auto auto,
-							auto 72px,
-							auto 72px,
-							72px auto,
-							72px auto,
-							100px 100px,
-							100px 100px,
-							100px 100px,
-							100px 100px;
-						-webkit-mask-repeat: 
-							no-repeat,
-							repeat-x,
-							repeat-x,
-							repeat-y,
-							repeat-y,
-							no-repeat,
-							no-repeat,
-							no-repeat,
-							no-repeat;
-						mask-type: luminance;
-						mask-mode: luminance;
-						mask-composite: exclude, add, add, add, add, add, add, add, add;
-					"
-					title="Daydream Events Map">
-				</iframe>
-			</div>
-			
-			{#if eventAddress}
-				<p class="text-center font-sans text-2xl pt-12 max-sm:text-xl text-[#60574b] z-10000">
-					{#if directionsURL}
-						Daydream {eventName} is taking place at <a class="underline text-pink" href={directionsURL}>{eventAddress}</a>!
-					{:else}
-						Daydream {eventName} is taking place at <span class="underline">{eventAddress}</span>!
-					{/if}
-				</p>
-			{/if}
-		</div>
-	</div>
-
-	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
 	
 	<!-- Macintosh Section -->
-	<div class="w-full flex justify-center py-16 px-8 mt-48 pb-[clamp(232px,29vw,464px)] max-sm:w-[120vw] max-sm:-translate-x-[10vw]">
-		<div class="bg-[#c5c2b1] p-4 relative max-w-4xl" style="border-radius: calc(1.5rem + 1rem);">
+	<div class="w-full flex justify-center py-0 px-8 mt-30 pb-[clamp(232px,29vw,464px)] max-sm:w-[120vw] max-sm:-translate-x-[10vw]">
+		<div class="bg-[#c5c2b1] p-0 relative max-w-4xl" style="border-radius: calc(1.5rem + 1rem);">
 			<div class="bg-[#061E2D] text-[#D1E3EE] rounded-3xl py-18 md:py-16 px-10 md:px-18 relative overflow-visible" style="
 			border-image: url('/macintosh.png') 128 91 464 91; 
 			border-image-slice: 128 91 464 91; 
@@ -1449,6 +1169,169 @@ Mumbai`.split("\n")
 	</div>
 </div>
 
+<!-- Schedule Container -->
+<div class="w-full bg-[#FAE3C9] py-0 px-8 flex justify-center">
+	
+	
+	<div class="relative max-w-4xl w-full">
+		<!-- Billboard Container -->
+		<div class="relative bg-[#f0f9ff] border-[10px] border-b-[16px] border-[#888896] rounded-lg rounded-b-xl mt-100 mb-20 mx-auto z-40">
+			<!-- Billboard Lights (top) -->
+			<img 
+				src="/billboard-lights.png" 
+				alt="" 
+				class="absolute top-0 left-0 w-full h-auto object-contain pointer-events-none z-10 -translate-y-[calc(100%+9px)]"
+			>
+			
+			<!-- Header Section -->
+			<div class="w-full bg-[url('/billboard-bg-texture.png')] bg-contain bg-repeat py-6 relative" style="border-bottom: 8px solid #B4B4C5;">
+				<h2 class="text-4xl font-serif text-[#F0F0FF] text-center">
+					Schedule
+				</h2>
+				<!-- Brush texture overlay for header -->
+				<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
+			</div>
+			
+			<!-- Main Content Area -->
+			<div class="relative bg-gradient-to-b from-[#CCF4FD] to-[#AECDF6] px-8 pt-8 pb-16">
+				<!-- Brush texture overlay for content -->
+				<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
+				
+				<!-- Schedule Content -->
+				<div class="relative z-10">
+					{#each scheduleData as day, dayIndex}
+						<div class="bg-white/50 py-6 -mx-8 {dayIndex < scheduleData.length - 1 ? 'mb-8' : ''}">
+							<h3 class="text-2xl font-sans font-bold text-[#335969] mb-6 text-center px-8 max-sm:text-xl max-sm:px-4">
+								{day.title}
+							</h3>
+							
+							<div class="max-w-xl mx-auto px-4">
+								{#each day.items as item, index}
+									<div class="flex items-center justify-between py-2">
+										<span class="text-lg font-sans text-[#477783]">{item.event}</span>
+										<span class="text-lg font-sans text-[#477783]">{item.time}</span>
+									</div>
+									{#if index < day.items.length - 1}
+										<div class="h-[2px] bg-white/30"></div>
+									{/if}
+								{/each}
+							</div>
+						</div>
+					{/each}
+				</div>
+			</div>
+			
+			<!-- Billboard Bars (bottom) -->
+			<div 
+				class="absolute bottom-0 -left-[5px] w-[calc(100%+10px)] h-6 bg-[url('/billboard-bars.png')] bg-repeat-x bg-contain bg-center pointer-events-none z-10 border-[#9898a7] border-x-[6px]"
+			></div>
+		</div>
+		
+	</div>
+</div>
+
+{#if sponsorsEnabled}
+<!-- Second Billboard Section -->
+<div class="w-full bg-[#FAE3C9] pb-16 pt-0 px-8 flex justify-center">
+	<div class="relative max-w-4xl w-full">
+		<!-- Billboard Container -->
+		<div class="relative bg-[#f0f9ff] border-[10px] border-b-[16px] border-[#888896] rounded-lg rounded-b-xl mx-auto z-40">
+			<!-- Header Section -->
+			<div class="w-full bg-[url('/billboard-bg-texture.png')] bg-contain bg-repeat py-6 relative" style="border-bottom: 8px solid #B4B4C5;">
+				<h2 class="text-4xl font-serif text-[#F0F0FF] text-center">
+					Sponsors
+				</h2>
+				<!-- Brush texture overlay for header -->
+				<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
+			</div>
+			
+			<!-- Main Content Area -->
+			<div class="relative bg-gradient-to-b from-[#CCF4FD] to-[#AECDF6] px-8 pt-8 pb-16">
+				<!-- Brush texture overlay for content -->
+				<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
+				
+				<!-- Sponsors Grid -->
+				<div class="relative z-10 min-h-40">
+					{#if sponsors.length > 0}
+						<!-- First row (up to 4 sponsors) -->
+						{#if sponsors.length > 4}
+							<div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center mb-8">
+								{#each sponsors.slice(0, 4) as sponsor}
+									<a href={sponsor.url} class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors" target="_blank" rel="noopener noreferrer">
+										<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain">
+									</a>
+								{/each}
+							</div>
+							
+							<!-- Second row (remaining sponsors, centered) -->
+							{#if sponsors.length > 4}
+								<div class="flex justify-center">
+									<div class="grid grid-cols-2 md:grid-cols-3 gap-8 items-center justify-items-center max-w-2xl">
+										{#each sponsors.slice(4) as sponsor, index}
+											<a href={sponsor.url} 
+												class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors {sponsors.slice(4).length === 3 && index === 2 ? 'md:col-span-1 col-span-2 max-w-xs mx-auto' : ''}" 
+												target="_blank" rel="noopener noreferrer">
+												<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain">
+											</a>
+										{/each}
+									</div>
+								</div>
+							{/if}
+						{:else}
+							<!-- Single row for 4 or fewer sponsors -->
+							<div class="flex justify-center">
+								<div class="grid gap-8 items-center justify-items-center max-w-4xl {sponsors.length === 1 ? 'grid-cols-1' : sponsors.length === 2 ? 'grid-cols-1 md:grid-cols-2' : sponsors.length === 3 ? 'grid-cols-2 md:grid-cols-3' : 'grid-cols-2 md:grid-cols-4'}">
+									{#each sponsors as sponsor}
+										<a href={sponsor.url} class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors" target="_blank" rel="noopener noreferrer">
+											<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain">
+										</a>
+									{/each}
+								</div>
+							</div>
+						{/if}
+					{/if}
+					
+					{#if contactLink}
+						<!-- Call to action for sponsors -->
+						<div class="mt-8 text-center">
+							<p class="text-lg text-[#335969]">Want to sponsor Daydream {eventName}? <a href={contactLink} class="underline hover:text-[#477783] transition-colors">Get in touch</a></p>
+						</div>
+					{/if}
+				</div>
+			</div>
+			
+			<!-- Billboard Bars (bottom) -->
+			<div 
+				class="absolute bottom-0 -left-[5px] w-[calc(100%+10px)] h-6 bg-[url('/billboard-bars.png')] bg-repeat-x bg-contain bg-center pointer-events-none z-10 border-[#9898a7] border-x-[6px]"
+			></div>
+		</div>
+		
+		<!-- Connecting Pillars to First Billboard -->
+		<div 
+			class="absolute top-0 left-[15%] w-[10vw] max-w-12 h-32 bg-[url('/billboard-pillar.png')] bg-repeat-y pointer-events-none bg-contain -translate-y-32"
+			style="box-shadow: inset 0 8px 12px -6px rgba(0, 0, 0, 0.1);"
+		></div>
+		<div 
+			class="absolute top-0 right-[15%] w-[10vw] max-w-12 h-32 bg-[url('/billboard-pillar.png')] bg-repeat-y pointer-events-none bg-contain -translate-y-32"
+			style="box-shadow: inset 0 8px 12px -6px rgba(0, 0, 0, 0.1);"
+		></div>
+		
+		<!-- Billboard Pillars (extending down from bottom) -->
+		<div 
+			class="absolute bottom-0 left-[15%] w-[10vw] max-w-12 h-24 bg-[url('/billboard-pillar.png')] bg-repeat-y pointer-events-none bg-contain translate-y-24"
+			style="box-shadow: inset 0 8px 12px -6px rgba(0, 0, 0, 0.1);"
+		>
+			<div class="absolute bottom-0 left-0 w-full h-auto bg-[url('/clouds-loop.png')] bg-no-repeat bg-contain bg-bottom pointer-events-none aspect-[2/1]"></div>
+		</div>
+		<div 
+			class="absolute bottom-0 right-[15%] w-[10vw] max-w-12 h-24 bg-[url('/billboard-pillar.png')] bg-repeat-y pointer-events-none bg-contain translate-y-24"
+			style="box-shadow: inset 0 8px 12px -6px rgba(0, 0, 0, 0.1);"
+		>
+			<div class="absolute bottom-0 left-0 w-full h-auto bg-[url('/clouds-loop.png')] bg-no-repeat bg-contain bg-bottom pointer-events-none aspect-[2/1]"></div>
+		</div>
+	</div>
+</div>
+{/if}
 
 <div class="w-full pb-24 max-md:pt-16 bg-gradient-to-b from-[#FAE3C9] to-[#e99cce] relative flex flex-col items-center justify-center">
 	<img src="faq-clouds.png" alt="" class="w-full">
@@ -1469,8 +1352,8 @@ Mumbai`.split("\n")
 		<div class="relative transform rotate-1">
 			<img src="window-4.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">Can I organize a Daydream in my city?</h3>
-				<p class="text-sm">Definitely! Contact us via daydream@hackclub.com or join #daydream on slack.</p>
+				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">What is Daydream Missouri?</h3>
+				<p class="text-sm">A game coding competition over the course of 2 days taking place at TBD.</p>
 			</div>
 		</div>
 
@@ -1488,7 +1371,7 @@ Mumbai`.split("\n")
 			<img src="window-1.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
 				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">What do I need?</h3>
-				<p class="text-sm">Your laptop, chargers, toiletries, sleeping bags, and an open mind!</p>
+				<p class="text-sm">Your laptop, chargers, and an open mind!</p>
 			</div>
 		</div>
 
