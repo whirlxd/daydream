@@ -11,7 +11,7 @@
 	const eventLocation = "Dallas";
 	const eventAddress = "TBD"; // Leave this empty if you don't want an address
 	// These two are optional
-	const directionsURL = "TBD"
+	const directionsURL = "" // Add a google maps link here once you have an address
 	const contactLink = ""
 	
 	// Sponsors Configuration
