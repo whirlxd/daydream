@@ -13,7 +13,7 @@
 	const signupLink = "https://forms.hackclub.com/daydream-rsvp"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything
 	const directionsURL = "https://www.google.com/maps/search/1600+pennsylvania+avenue+washington+dc/"
-	const contactLink = "mailto:example@daydream.hackclub.com"
+	// const contactLink = "mailto:example@daydream.hackclub.com"
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
