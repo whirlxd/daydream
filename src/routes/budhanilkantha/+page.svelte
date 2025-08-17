@@ -8,12 +8,12 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Daydream Budhanilkantha"; // This should be the name of your event WITHOUT "Daydream" at the start
+	const eventName = "Budhanilkantha"; // This should be the name of your event WITHOUT "Daydream" at the start
 	const eventLocation = "Budhanilkantha";
-	const eventAddress = "1600 Pennsylvania Avenue, Washington, DC 20500"; // Leave this empty if you don't want an address
+	const eventAddress = ""; // Leave this empty if you don't want an address
 	const signupLink = "https://forms.hackclub.com/daydream-rsvp?event=recFysC3dUvGqj3bX"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
-	const directionsURL = "https://www.google.com/maps/search/1600+pennsylvania+avenue+washington+dc/"
+	const directionsURL = "" // "https://www.google.com/maps/search/1600+pennsylvania+avenue+washington+dc/"
 	const contactLink = "mailto:daydreambudhanilkantha@gmail.com"
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
