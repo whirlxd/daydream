@@ -9,14 +9,14 @@
 	// Configuration - Put your information here!
 	const eventName = "Springfield"; // This should be the name of your event WITHOUT "Daydream" at the start
 	const eventLocation = "Springfield, Missouri";
-	const eventAddress = "The Library Center"; // Leave this empty if you don't want an address
+	const eventAddress = "The Library Center, 4653 S Campbell Ave, Springfield, MO 65810"; // Leave this empty if you don't want an address
 	const signupLink = "https://forms.hackclub.com/daydream-rsvp"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
-	const directionsURL = "https://www.google.com/maps/place/the+library+center/"
-	const contactLink = "mailto:example@daydream.hackclub.com"
+	const directionsURL = "https://www.google.com/maps/place/The+Library+Center/@37.1302587,-93.3009499,17z/data=!3m1!4b1!4m6!3m5!1s0x87cf64f8eec285b3:0xb8b24dc170a26f6!8m2!3d37.1302545!4d-93.298375!16s%2Fm%2F0jb4s7r?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D"
+	const contactLink = "mailto:springfield@daydream.hackclub.com"
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
-	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
+	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
 	const sponsors = [
 		{ image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
 		{ image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
