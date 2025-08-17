@@ -917,7 +917,7 @@ Mumbai`.split("\n")
 			<h4
 				class="text-2xl opacity-90 mt-2 font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent max-sm:text-xl"
 			>
-				{currentLanguage === 'tr' ? 'Diyarbakır\'da Gençler Tarafından Düzenleniyor' : 'Organized by Teenagers in ' + eventLocation.replaceAll(" ", "&nbsp;")}
+				{currentLanguage === 'tr' ? 'Diyarbakır\'da Gençler Tarafından Düzenleniyor' : 'Organized by Teenagers in ' + eventLocation}
 			</h4>
 		</div>
 		
