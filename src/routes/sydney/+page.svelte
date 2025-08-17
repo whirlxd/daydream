@@ -911,7 +911,7 @@ Mumbai`.split("\n")
 			<div class="text-[#8B4513] font-serif text-xl leading-relaxed space-y-8">
 				<p>Welcome to Hack Club's newest adventure. This fall we invite you to join us for Daydream, the world's biggest Game Jam happening simultaneously in 100 cities.</p>
 
-				<p class="font-bold text-2xl">Hack Club wants you to make a game this fall.</p>
+				<p class="font-bold text-2xl">Hack Club wants you to make a game this spring.</p>
 
 				<p>Don't consider yourself a game dev? No problem - we have tons of online and in-person workshops for you to make your first game! </p>
 
