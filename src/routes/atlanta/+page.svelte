@@ -7,7 +7,7 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Daydream Atlanta";
+	const eventName = "Atlanta";
 	const eventLocation = "Atlanta";
 	const eventAddress = ""; // Leave this empty if you don't want an address
 	// These two are optional
@@ -819,7 +819,7 @@ Mumbai`.split("\n")
 			>
 				September 27th & 28th, 2025
 			</h2>
-			<img src="daydreamatl.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4" />
+			<img src="atlanta/daydreamatl.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4" />
 			<a href="https://hackclub.com" class="absolute top-0 -right-6 max-sm:right-0 max-sm:scale-80 animate-hover ![animation-delay:0.9s] ![--hover:-0.2rem]">
 				<img src="flag-plane.png" alt="Hack Club" class="h-28">
 			</a>
