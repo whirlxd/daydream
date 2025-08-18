@@ -16,7 +16,7 @@
 	
 	// Sponsors Configuration
 	const signupLink = "https://forms.hackclub.com/daydream-rsvp?event=recv184IchLIW0Y72"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
-	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
+	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
 	const sponsors = [
 		{ image: "/sydney/xyz.png", name: ".xyz", url: "https://gen.xyz" },
 		{ image: "/sydney/jlcpcb.png", name: "jlcpcb", url: "https://jlcpcb.com/" },
