@@ -10,6 +10,7 @@
 	const eventName = "Addis Ababa";
 	const eventLocation = "Addis Ababa";
 	const eventAddress = "Abrehot Library, Addis Ababa, Ethiopia"; // Leave this empty if you don't want an address
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional
 	const directionsURL = "https://www.google.com/maps/place/Abrehot+Library/@9.0304294,38.7600361,17z/data=!3m1!4b1!4m6!3m5!1s0x164b856cccf9da43:0xcb92a857309700c0!8m2!3d9.0304294!4d38.762611!16s%2Fg%2F11rn0cb9_x?entry=ttu&g_ep=EgoyMDI1MDgxMS4wIKXMDSoASAFQAw%3D%3D"
 	const contactLink = "mailto:addisababa@daydream.hackclub.com"
@@ -1140,7 +1141,7 @@ Mumbai`.split("\n")
 			<div class="relative w-72 h-40 max-md:w-80 animate-hover ![--hover:-0.15rem] ![animation-delay:1.7s] z-20" data-point="1">
 				<img src="paper1.png" alt="" class="w-full h-full object-contain">
 				<div class="absolute inset-0 justify-center text-center p-6 text-xl font-serif max-md:text-lg text-[#8B4513] inline-block content-center">
-					<span class="font-sans text-[#E472AB] font-bold text-[1.3rem] mr-1">#1:</span> <a href="https://example.com" class="underline">Sign up</a> for Daydream {eventName}
+					<span class="font-sans text-[#E472AB] font-bold text-[1.3rem] mr-1">#1:</span> <a href={signupLink} class="underline">Sign up</a> for Daydream {eventName}
 				</div>
 			</div>
 		</div>
