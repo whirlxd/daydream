@@ -10,7 +10,7 @@
 	const eventName = "Visakhapatnam"; // This should be the name of your event WITHOUT "Daydream" at the start
 	const eventLocation = "Visakhapatnam";
 	const eventAddress = "Nakkavanipalem, Satyam Junction, Kranthi Nagar, Visakhapatnam, Andhra Pradesh, PINCODE - 530018"; // Leave this empty if you don't want an address
-	const signupLink = "https://forms.hackclub.com/daydream-rsvp?event=recjpsL9BukMsKYdj"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recjpsL9BukMsKYdj"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = "https://www.google.com/maps/place/Sri+Sarada+Vidya+Nilayam/@17.7356181,83.3112517,17z/data=!3m1!4b1!4m6!3m5!1s0x3a394352705cab4f:0x2382a9f5ea33a411!8m2!3d17.7356181!4d83.3138266!16s%2Fg%2F11j0k036y0?entry=ttu&g_ep=EgoyMDI1MDgxMS4wIKXMDSoASAFQAw%3D%3D"
 	const contactLink = "mailto:visakhapatnam@daydream.hackclub.com"

@@ -1,7 +1,7 @@
 <script lang="ts">
 	// Configuration - Put your information here!
 	const eventName = "Taiwan";
-	const signupLink = "https://forms.hackclub.com/daydream-rsvp?event=recbXuFkkf752iPIq";
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recbXuFkkf752iPIq";
 	const eventLocation = "TBD";
 	const eventAddress = "";
 
