@@ -75,8 +75,8 @@
 	// Get current URL for dynamic metadata
 	$: currentUrl = `https://daydream.hackclub.com${$page.url.pathname}`;
 	$: pageTitle = `Daydream ${eventName}`;
-	$: pageDescription = `加入由 Hack Club 舉辦的全球青少年黑客松 Daydream 活動！一場由青少年主導的遊戲黑客松，和其他高中生一起打造精彩遊戲。提供餐點、工作坊與獎品！`;
-	$: pageKeywords = `game jam, 遊戲創作, hackathon, 黑客松, 青少年程式, Hack Club, 遊戲開發, ${eventLocation}, ${eventName}`;
+	$: pageDescription = `加入由 Hack Club 舉辦的全球青少年黑客松 Daydream 活動！一場由青少年主導的遊戲黑客松，和其他青少年一起在 32 小時做出你人生的第一個遊戲。提供免費餐點、入門工作坊與獎品！`;
+	$: pageKeywords = `game jam, 遊戲創作, hackathon, 黑客松, 青少年程式, Hack Club, HackIt, 遊戲開發, ${eventLocation}, ${eventName}`;
 
 	// Cities where the game jam is happening
 	const cities = `Columbus
@@ -1364,18 +1364,18 @@ Mumbai`.split("\n")
 		aria-label="HackIt Activities"
 		tabindex="-1"
 	>
-		<button
-			class="cursor-pointer absolute top-4 right-4 z-10 w-8 h-8 bg-[rgba(255,255,255,0.2)] hover:bg-opacity-30 rounded-full flex items-center justify-center text-white text-xl font-bold transition-colors duration-200"
-			on:click={closeHackItPopup}
-			aria-label="Close activities"
-		>
-			<span class="-translate-y-0.5">×</span>
-		</button>
 		<!-- svelte-ignore a11y_no_static_element_interactions -->
 		<div
-			class="relative w-[92vw] max-w-6xl max-h-[90vh] overflow-y-auto bg-[#FEFDF8] rounded-2xl border-4 border-[#E8E1D0] shadow-xl"
+			class="relative w-[92vw] max-w-6xl max-h-[90vh] overflow-y-auto overflow-x-hidden bg-[#FEFDF8] rounded-2xl border-4 border-[#E8E1D0] shadow-xl"
 			on:click|stopPropagation
 		>
+			<button
+				class="cursor-pointer absolute top-2 right-2 md:top-3 md:right-3 z-20 w-8 h-8 bg-white/80 md:bg-white/20 hover:bg-white/90 md:hover:bg-white/30 rounded-full flex items-center justify-center text-[#335969] md:text-white text-xl font-bold transition-colors duration-200"
+				on:click={closeHackItPopup}
+				aria-label="Close activities"
+			>
+				<span class="-translate-y-0.5">×</span>
+			</button>
 			<!-- Subtle paper texture overlay -->
 			<div class="absolute inset-0 bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat opacity-15 pointer-events-none"></div>
 			<!-- Header -->
@@ -1385,9 +1385,9 @@ Mumbai`.split("\n")
 			</div>
 
 			<!-- Content -->
-			<div class="grid grid-cols-1 lg:grid-cols-3 gap-0 relative">
+			<div class="grid grid-cols-1 lg:grid-cols-3 gap-0 relative overflow-x-hidden bg-[#F7F2E3]">
 				<!-- Activities list -->
-				<div class="lg:col-span-1 p-5 md:p-6 bg-white/60 border-r-2 border-[#E8E1D0] max-h-[70vh] overflow-y-auto">
+				<div class="lg:col-span-1 p-5 md:p-6 bg-white/60 border-r-2 border-[#E8E1D0]">
 					<ul class="space-y-3">
 						{#each hackItActivities as act}
 							<li>
@@ -1403,7 +1403,7 @@ Mumbai`.split("\n")
 				</div>
 
 				<!-- Video player + description -->
-				<div class="lg:col-span-2 p-4 md:p-6 bg-transparent lg:bg-transparent bg-white/60">
+				<div class="lg:col-span-2 p-4 md:p-6 bg-[#F7F2E3]">
 					<div class="relative w-full aspect-video rounded-xl overflow-hidden border-2 border-[#E8E1D0] shadow-lg bg-black">
 						{#if selectedHackItVideoId}
 							<iframe
@@ -2053,11 +2053,11 @@ Mumbai`.split("\n")
 	>
 		<!-- svelte-ignore a11y_no_static_element_interactions -->
 		<div
-			class="relative w-[92vw] max-w-6xl max-h-[90vh] overflow-y-auto bg-[#FEFDF8] rounded-2xl border-4 border-[#E8E1D0] shadow-xl"
+			class="relative w-[92vw] max-w-6xl max-h-[90vh] overflow-y-auto overflow-x-hidden bg-[#FEFDF8] rounded-2xl border-4 border-[#E8E1D0] shadow-xl"
 			on:click|stopPropagation
 		>
 			<button
-				class="cursor-pointer absolute top-2 right-2 md:-top-4 md:-right-4 z-20 w-8 h-8 bg-white/80 md:bg-white/20 hover:bg-white/90 md:hover:bg-white/30 rounded-full flex items-center justify-center text-[#335969] md:text-white text-xl font-bold transition-colors duration-200"
+				class="cursor-pointer absolute top-2 right-2 md:top-3 md:right-3 z-20 w-8 h-8 bg-white/80 md:bg-white/20 hover:bg-white/90 md:hover:bg-white/30 rounded-full flex items-center justify-center text-[#335969] md:text-white text-xl font-bold transition-colors duration-200"
 				on:click={closeActivitiesPopup}
 				aria-label="Close activities"
 			>
@@ -2072,9 +2072,9 @@ Mumbai`.split("\n")
 			</div>
 
 			<!-- Content -->
-			<div class="grid grid-cols-1 lg:grid-cols-3 gap-0 relative">
+			<div class="grid grid-cols-1 lg:grid-cols-3 gap-0 relative overflow-x-hidden bg-[#F7F2E3]">
 				<!-- Activities list -->
-				<div class="lg:col-span-1 p-5 md:p-6 bg-white/60 lg:border-r-2 border-b-2 lg:border-b-0 border-[#E8E1D0] max-h-[70vh] overflow-y-auto">
+				<div class="lg:col-span-1 p-5 md:p-6 bg-white/60 lg:border-r-2 border-b-2 lg:border-b-0 border-[#E8E1D0]">
 					<ul class="space-y-3">
 						{#each hackClubActivities as act, i}
 							<li>
@@ -2090,7 +2090,7 @@ Mumbai`.split("\n")
 				</div>
 
 				<!-- Video player -->
-				<div class="lg:col-span-2 p-4 md:p-6 bg-transparent lg:bg-transparent bg-white/60">
+				<div class="lg:col-span-2 p-4 md:p-6 bg-[#F7F2E3]">
 					<div class="relative w-full aspect-video rounded-xl overflow-hidden border-2 border-[#E8E1D0] shadow-lg bg-black">
 						{#if selectedVideoId}
 							<iframe
