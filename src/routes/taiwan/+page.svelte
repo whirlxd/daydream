@@ -7,7 +7,7 @@
 
 	// These two are optional
 	const directionsURL = ""
-	const contactLink = "mailto:business@hackit.tw"
+	const contactLink = "mailto:Business@daydream.hackit.tw"
 	
 	// External links for org intros
 	const hackItMoreLink = "https://www.hackit.tw";
@@ -35,9 +35,9 @@
 			items: [
 				{ event: "開始報到", time: "09:30 ~ 10:00" },
 				{ event: "開幕式", time: "10:00 ~ 10:30" },
-				{ event: "組隊時間", time: "10:30 ~ 11:00" },
-				{ event: "入門工作彷", time: "11:00 ~ 11:30" },
-				{ event: "午餐時間", time: "11:30" },
+				{ event: "組隊時間", time: "10:30 ~ 11:20" },
+				{ event: "入門工作彷", time: "11:20 ~ 11:50" },
+				{ event: "午餐時間", time: "11:50" },
 				{ event: "導師諮詢", time: "12:30 ~ 18:00" },
 				{ event: "晚餐時間", time: "18:00" },
 				{ event: "宵夜/夜間活動", time: "21:30" }
@@ -49,9 +49,9 @@
 				{ event: "早餐時間", time: "07:30" },
 				{ event: "導師諮詢", time: "10:00 ~ 14:00" },
 				{ event: "午餐時間", time: "13:00" },
-				{ event: "展覽準備", time: "13:00 ~ 14:00" },
-				{ event: "展覽/票選時間", time: "14:00 ~ 17:00" },
-				{ event: "頒獎/閉幕時間", time: "17:00 ~ 17:45" }
+				{ event: "展覽準備", time: "13:00 ~ 13:45" },
+				{ event: "展覽/票選時間", time: "13:45 ~ 16:45" },
+				{ event: "頒獎/閉幕時間", time: "16:45 ~ 17:45" }
 			]
 		}
 	];
@@ -2020,7 +2020,7 @@ Mumbai`.split("\n")
 			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-110 max-xl:scale-110 max-lg:scale-115 max-sm:scale-130">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-4 max-lg:px-14 max-xl:px-18 max-sm:top-[18%] max-sm:bottom-[18%] max-sm:left-[14%] max-sm:right-[14%]">
                 <h3 class="text-lg md:text-xl font-serif font-bold mb-4 max-lg:mb-2 max-md:text-sm max-sm:text-xs max-sm:mb-2 leading-relaxed tracking-wide max-sm:tracking-normal">家長有疑慮怎麼辦？</h3>
-                <p class="text-sm md:text-base max-sm:text-xs max-sm:leading-tight leading-relaxed tracking-wide max-sm:tracking-normal">家長有問題？寫信到 <a class="underline" href="mailto:official@hackit.tw">official@hackit.tw</a>，我們很樂意說明。</p>
+                <p class="text-sm md:text-base max-sm:text-xs max-sm:leading-tight leading-relaxed tracking-wide max-sm:tracking-normal">家長有問題？寫信到 <a class="underline" href="mailto:contact@daydream.hackit.tw">contact@daydream.hackit.tw</a>，我們很樂意說明。</p>
 			</div>
 		</div>
 
