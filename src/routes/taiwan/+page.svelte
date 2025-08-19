@@ -10,7 +10,7 @@
 	const contactLink = "mailto:business@hackit.tw"
 	
 	// External links for org intros
-	const hackItMoreLink = "https://hackit.tw";
+	const hackItMoreLink = "https://www.hackit.tw";
 	const hackClubMoreLink = "https://hackclub.com";
 	
 	// Sponsors Configuration
@@ -990,7 +990,7 @@ Mumbai`.split("\n")
 	<div class="buildings-front-parallax absolute top-0 left-0 w-full h-full bg-[url(/buildings-front.png)] bg-no-repeat bg-contain pointer-events-none lg:-translate-y-15"></div>
 	<!-- brush texture clipped to front buildings -->
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat pointer-events-none opacity-100 lg:-translate-y-15 bg-center mix-blend-overlay" style="mask-image: url('/buildings-front.png'); mask-size: contain; mask-repeat: no-repeat; mask-position: center top; -webkit-mask-image: url('/buildings-front.png'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center top;"></div>
-	<div class="hero-ui-parallax flex flex-col items-center justify-center text-center relative z-5 -translate-y-2">
+	<div class="hero-ui-parallax flex flex-col items-center justify-center text-center relative z-30 -translate-y-2">
 		<div class="inline-block relative">
 			<div class="h-12"></div> 
 			<!-- space for the ship -->
@@ -1013,7 +1013,7 @@ Mumbai`.split("\n")
 			<img
 				src="underline.svg"
 				alt=""
-				class="absolute left-1/2 -translate-x-1/2 -mt-1 h-auto scale-115"
+				class="absolute left-1/2 -translate-x-1/2 -mt-1 h-auto scale-11	5"
 			/>
 			<h4
 				class="text-xl md:text-2xl opacity-90 mt-4 font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent max-sm:text-base tracking-wide leading-relaxed max-sm:leading-normal break-words whitespace-normal text-center"
@@ -1403,7 +1403,7 @@ Mumbai`.split("\n")
 				</div>
 
 				<!-- Video player + description -->
-				<div class="lg:col-span-2 p-4 md:p-6 bg-transparent">
+				<div class="lg:col-span-2 p-4 md:p-6 bg-transparent lg:bg-transparent bg-white/60">
 					<div class="relative w-full aspect-video rounded-xl overflow-hidden border-2 border-[#E8E1D0] shadow-lg bg-black">
 						{#if selectedHackItVideoId}
 							<iframe
@@ -2090,7 +2090,7 @@ Mumbai`.split("\n")
 				</div>
 
 				<!-- Video player -->
-				<div class="lg:col-span-2 p-4 md:p-6 bg-transparent">
+				<div class="lg:col-span-2 p-4 md:p-6 bg-transparent lg:bg-transparent bg-white/60">
 					<div class="relative w-full aspect-video rounded-xl overflow-hidden border-2 border-[#E8E1D0] shadow-lg bg-black">
 						{#if selectedVideoId}
 							<iframe
