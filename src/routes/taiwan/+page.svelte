@@ -1319,7 +1319,7 @@ Mumbai`.split("\n")
                 </h2>
                 <img src="/underline.svg" alt="" class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-44 md:w-56 h-auto opacity-80" />
                 <p class="text-sm md:text-base font-serif text-[#705e4f] mt-6 opacity-85 tracking-wide leading-relaxed">
-                    和我們一起，讓 {eventName} 發生
+                    和我們一起，讓 Daydream {eventName} 發生
                 </p>
             </div>
         </div>
@@ -1339,7 +1339,7 @@ Mumbai`.split("\n")
         {#if contactLink}
             <div class="{hasPartners ? 'mt-10' : 'mt-4'} text-center">
                 <p class="text-base md:text-lg text-[#335969]">
-                    想與 {eventName} 合作？
+                    想與 Daydream {eventName} 合作？
                     <a href={contactLink} class="underline hover:text-[#477783] transition-colors">來信洽談</a>
                 </p>
             </div>
@@ -1568,7 +1568,7 @@ Mumbai`.split("\n")
 					{#if contactLink}
 						<!-- Call to action for sponsors -->
 						<div class="mt-8 text-center">
-							<p class="text-lg text-[#335969]">想贊助 {eventName}？<a href={contactLink} class="underline hover:text-[#477783] transition-colors">來信洽談</a></p>
+							<p class="text-lg text-[#335969]">想贊助 Daydream {eventName}？<a href={contactLink} class="underline hover:text-[#477783] transition-colors">來信洽談</a></p>
 						</div>
 					{/if}
 				</div>
@@ -1886,7 +1886,7 @@ Mumbai`.split("\n")
 				<div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-transparent bg-[length:100%_8px] bg-repeat-y pointer-events-none opacity-20"></div>
 				
 				<div class="space-y-8 max-sm:space-y-4 relative z-10">
-					<h2 class="text-4xl md:text-5xl lg:text-6xl max-sm:text-2xl font-pixel leading-tight tracking-wider max-sm:tracking-normal max-sm:leading-relaxed">
+					<h2 class="text-4xl md:text-5xl lg:text-6xl max-sm:text-2xl font-pixel leading-tight tracking-wider max-sm:tracking-normal max-sm:leading-relaxed md:whitespace-nowrap">
 						你想<img src="/taiwan/dream-pixel.png" alt="Dream" class="h-[0.75em] font-serif italic [image-rendering:pixelated] inline align-middle -translate-y-1.5 mx-[0.1em]">出什麼遊戲？
 					</h2>
 					
