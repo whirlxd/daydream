@@ -7,11 +7,11 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Daydream Stockholm";
+	const eventName = "Stockholm";
 	const eventLocation = "Stockholm";
-	const eventAddress = "Adressen är ej vald än; // Leave this empty if you don't want an address
+	const eventAddress = "Adressen är ej vald än"; // Leave this empty if you don't want an address
 	// These two are optional
-	//const directionsURL = "https://www.google.com/maps/search/1600+pennsylvania+avenue+washington+dc/"
+	const directionsURL = ""
 	const contactLink = "mailto:allan.ortegren@icloud.com"
 	
 	// Sponsors Configuration
@@ -31,7 +31,7 @@
 				{ event: "Lunch", time: "12:15" },
 				{ event: "Fortsättning av spel", time: "13:00" },
 				{ event: "Middag", time: "19:30" },
-				{ event: "Avslutning för idag!", time: "22:20" }
+				{ event: "Avslutning för idag!", time: "22:20" },
 				{ event: "Dörrarna stängs", time: "22:45" }
 			]
 		},
@@ -43,7 +43,7 @@
 				{ event: "Lunch", time: "12:15" },
 				{ event: "Fortsättning av spel", time: "13:00" },
 				{ event: "Middag", time: "19:30" },
-				{ event: "Avslutning och Prisutdelning!", time: "22:00" }
+				{ event: "Avslutning och Prisutdelning!", time: "22:00" },
 				{ event: "Dörrarna stängs", time: "22:45" }
 			]
 		}
@@ -838,7 +838,7 @@ Mumbai`.split("\n")
 			</h4>
 		</div>
 		
-		<ParticipantSignUp />
+		<ParticipantSignUp {eventName} />
 	</div>
 
 	<!-- <img src="hot-air-balloon.png" alt="" class="absolute w-1/8 right-32 bottom-40 z-20"> -->
