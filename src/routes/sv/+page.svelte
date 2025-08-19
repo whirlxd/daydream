@@ -280,7 +280,7 @@ Roblox`.split('\n');
 	});
 </script>
 
-<svelte:window bind:scrollY bind:innerHeight />
+<!-- <svelte:window bind:scrollY bind:innerHeight /> -->
 
 <svelte:head>
 	<title>Daydream Silicon Valley - Game Jam Paradise | September 27-28, 2025</title>
@@ -455,14 +455,14 @@ Roblox`.split('\n');
 			<div class="h-6 sm:h-12"></div>
 			<!-- space for the ship -->
 			<h2
-				class="text-base sm:text-lg md:text-xl font-serif bg-gradient-to-r from-[#487DAB] via-[#5A8DBD] to-[#44DBC8] bg-clip-text text-transparent absolute left-1/2 max-sm:translate-y-2 max-sm:mb-0 max-md:-mb-6 md:left-[calc(50%+4rem)] -translate-x-1/2 bottom-6 sm:bottom-8 italic w-max animate-in-date transition-all duration-300 hover:scale-105 hover:brightness-110"
+				class="text-base sm:text-lg md:text-xl font-serif bg-gradient-to-r from-[#487DAB] via-[#5A8DBD] to-[#44DBC8] bg-clip-text text-transparent absolute left-1/2 max-sm:translate-y-2 max-sm:mb-0 max-md:-mb-8 md:left-[calc(50%+4rem)] -translate-x-1/2 bottom-6 sm:bottom-8 italic w-max animate-in-date transition-all duration-300 hover:scale-105 hover:brightness-110"
 			>
 				September 27th & 28th, 2025
 			</h2>
 			<img
 				src="daydream.png"
 				alt="Daydream"
-				class="h-24 sm:h-32 md:h-40 mb-4 sm:mb-6 w-auto object-contain max-w-full px-2 sm:px-4 animate-in-logo transition-all duration-500 hover:scale-110 hover:drop-shadow-2xl cursor-pointer"
+				class="h-24 sm:h-32 md:h-40 mb-13 sm:mb-6 w-auto object-contain max-w-full px-2 sm:px-4 animate-in-logo transition-all duration-500 hover:scale-110 hover:drop-shadow-2xl cursor-pointer"
 			/>
 			<a
 				href="https://hackclub.com"
@@ -547,9 +547,8 @@ Roblox`.split('\n');
 			<p
 				class="text-lg sm:text-xl md:text-2xl text-[#8B4513] font-serif max-w-4xl mx-auto leading-relaxed mb-8 sm:mb-10 md:mb-12 px-4"
 			>
-				Whether you’re a beginner or experienced in programming-
-		we’ll have workshops, resources and mentors throughout the 24 hours to help you with your project.
-
+				Whether you’re a beginner or experienced in programming- we’ll have workshops, resources and
+				mentors throughout the 24 hours to help you with your project.
 			</p>
 		</div>
 
@@ -557,7 +556,7 @@ Roblox`.split('\n');
 		<div class="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 mb-12 sm:mb-16 md:mb-20">
 			<!-- Industry Access -->
 			<div
-				class="relative transform rotate-1 scroll-reveal transition-all duration-200 hover:scale-102 hover:shadow-lg cursor-pointer"
+				class="relative transform rotate-1 scroll-reveal transition-all duration-200 hover:scale-102 cursor-pointer"
 			>
 				<div
 					class="bg-gradient-to-br from-white via-[#FCFEFF] to-[#F8FDFF] rounded-2xl md:rounded-3xl border-2 border-[#E8F4FD] p-6 sm:p-8 md:p-10 shadow-lg transition-all duration-300 hover:border-[#44DBC8]/50 hover:bg-gradient-to-br hover:from-[#F8FDFF] hover:to-white"
@@ -578,7 +577,7 @@ Roblox`.split('\n');
 
 			<!-- Dreamy Environment -->
 			<div
-				class="relative transform -rotate-1 scroll-reveal transition-all duration-200 hover:scale-102 hover:shadow-lg cursor-pointer"
+				class="relative transform -rotate-1 scroll-reveal transition-all duration-200 hover:scale-102 cursor-pointer"
 			>
 				<div
 					class="bg-gradient-to-br from-[#F8FDFF] via-white to-[#F0F8FE] rounded-2xl md:rounded-3xl border-2 border-[#E8F4FD] p-6 sm:p-8 md:p-10 shadow-lg transition-all duration-300 hover:border-[#44DBC8]/50 hover:bg-gradient-to-br hover:from-white hover:to-[#F8FDFF]"
@@ -590,8 +589,9 @@ Roblox`.split('\n');
 						Valley Innovation Space
 					</h3>
 					<p class="text-[#487DAB] text-base sm:text-lg leading-relaxed">
-						Daydream is a beginner friendly game jam for high schoolers happening in 100+ cities simultaneously where
-						artists, musicians, and coders get together to build apps and games, and see
+						Daydream is a beginner friendly game jam for high schoolers happening in 100+ cities
+						simultaneously where artists, musicians, and coders get together to build apps and
+						games, and see
 						<span class="font-semibold text-[#44DBC8]"
 							>Silicon Valley's biggest game jam prize pool.</span
 						>
@@ -649,7 +649,7 @@ Roblox`.split('\n');
 
 			<div class="text-center mb-8 sm:mb-10 md:mb-12">
 				<h2
-					class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif italic bg-gradient-to-r from-[#487DAB] to-[#5A8DBD] bg-clip-text text-transparent mb-3 md:mb-4"
+					class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif italic bg-gradient-to-r from-[#487DAB] to-[#5A8DBD] bg-clip-text text-transparent mb-3 md:mb-4 mt-5 sm:mt-3 md:mt-0"
 				>
 					Dear Game Creator,
 				</h2>
@@ -670,9 +670,8 @@ Roblox`.split('\n');
 				</p>
 
 				<p>
-					Whether you’re a beginner or experienced in programming- we’ll have workshops, resources and mentors throughout the 24 hours to help you with your project.
-
-					>
+					Whether you’re a beginner or experienced in programming- we’ll have workshops, resources
+					and mentors throughout the 24 hours to help you with your project. >
 				</p>
 
 				<p>
@@ -741,7 +740,7 @@ Roblox`.split('\n');
 		<!-- Dreamy Stats -->
 		<div class="grid md:grid-cols-3 gap-6 sm:gap-8">
 			<div
-				class="text-center transform rotate-1 scroll-reveal transition-all duration-200 hover:scale-105 hover:shadow-lg cursor-pointer"
+				class="text-center transform rotate-1 scroll-reveal transition-all duration-200 hover:scale-105 cursor-pointer"
 			>
 				<div
 					class="bg-gradient-to-br from-white via-[#FCFEFF] to-[#F8FDFF] rounded-2xl md:rounded-3xl border-2 border-[#E8F4FD] p-6 sm:p-8 shadow-lg transition-all duration-300 hover:border-[#44DBC8]/50"
@@ -751,7 +750,7 @@ Roblox`.split('\n');
 				</div>
 			</div>
 			<div
-				class="text-center transform -rotate-1 scroll-reveal transition-all duration-200 hover:scale-105 hover:shadow-lg cursor-pointer"
+				class="text-center transform -rotate-1 scroll-reveal transition-all duration-200 hover:scale-105 cursor-pointer"
 			>
 				<div
 					class="bg-gradient-to-br from-[#F8FDFF] via-white to-[#F0F8FE] rounded-2xl md:rounded-3xl border-2 border-[#E8F4FD] p-6 sm:p-8 shadow-lg transition-all duration-300 hover:border-[#44DBC8]/50"
@@ -761,7 +760,7 @@ Roblox`.split('\n');
 				</div>
 			</div>
 			<div
-				class="text-center transform rotate-2 scroll-reveal transition-all duration-200 hover:scale-105 hover:shadow-lg cursor-pointer"
+				class="text-center transform rotate-2 scroll-reveal transition-all duration-200 hover:scale-105 cursor-pointer"
 			>
 				<div
 					class="bg-gradient-to-br from-[#FCFEFF] via-white to-[#F5FBFF] rounded-2xl md:rounded-3xl border-2 border-[#E8F4FD] p-6 sm:p-8 shadow-lg transition-all duration-300 hover:border-[#44DBC8]/50"
@@ -1040,7 +1039,7 @@ Roblox`.split('\n');
 		</p>
 		<nav aria-label="Footer navigation">
 			<div
-				class="flex justify-center space-x-4 sm:space-x-6 max-md:flex-col max-md:space-x-0 max-md:space-y-3"
+				class="flex justify-center space-x-4 max-md:flex-col max-md:space-x-0 max-md:space-y-3"
 			>
 				<a
 					href="https://hackclub.com"
