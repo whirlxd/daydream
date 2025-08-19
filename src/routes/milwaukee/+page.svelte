@@ -8,8 +8,8 @@
 
 	// Configuration - Put your information here!
 	const eventName = "Milwaukee"; // This should be the name of your event WITHOUT "Daydream" at the start
-	const eventLocation = "Milwaukee Youth Arts Center";
-	const eventAddress = "325 W. Walnut St., Milwaukee, WI 53212"; // Leave this empty if you don't want an address
+	const eventLocation = "Milwaukee";
+	const eventAddress = "Milwaukee Youth Arts Center, 325 W. Walnut St., Milwaukee, WI 53212"; // Leave this empty if you don't want an address
 	const signupLink = "https://forms.hackclub.com/daydream-rsvp?event=recL3BvxoCPzbRIYR"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = ""
@@ -32,25 +32,33 @@
 		{
 			title: "Saturday, September 27th",
 			items: [
-				{ event: "Doors open", time: "8:30 AM" },
-				{ event: "Checkin and get Situated", time: "8:30 AM"},
-				{ event: "Opening ceremony", time: "9:00 AM" },
-				{ event: "Start working on your project!", time: "10:00 AM" },
-				{ event: "Lunch", time: "12:30 PM" },
-				{ event: "Workshop?", time: "2:00 PM" },
-				{ event: "Activity?", time: "4:00 PM" },
-				{ event: "Workshop ?", time: "4:00 PM" },
-				{ event: "Dinner", time: "6:00 PM" },
+				{ event: "Soft Landing + Checkin", time: "8:30 AM" },
+				{ event: "Opening Words", time: "9:00 AM"},
+				{ event: "Start working on your project!", time: "9:30 AM" },
+				{ event: "Lunch and Social Time", time: "12:30 PM" },
+				{ event: "Dedicated Work Time", time: "1:00 PM" },
+				{ event: "Workshop? - TBD", time: "2:00 PM" },
+				{ event: "Workshop? - TBD", time: "4:00 PM" },
+				{ event: "Dinner", time: "7:30 PM" },
 				{ event: "Organizer Yap Session", time: "8:00 PM" },
-				{ event: "Midnight surprise - it's new year's somewhere", time: "12:00 AM" }
+				{ event: "More Work Time", time: "8:15 PM" },
+				{ event: "GO TO SLEEP", time: "11:00 PM" }
 			]
 		},
 		{
 			title: "Sunday, September 28th",
 			items: [
-				{ event: "Breakfast", time: "8:00 AM" },
-				{ event: "Demos!", time: "10:30 AM" },
-				{ event: "Closing ceremony", time: "12:00 PM" }
+				{ event: "Wakeup Calls", time: "8:00 AM" },
+				{ event: "Breakfast", time: "8:30 AM" },
+				{ event: "Work Time", time: "9:00 AM" },
+				{ event: "Lunch", time: "12:30 PM" },
+				{ event: "Work Time!", time: "1 PM" },
+				{ event: "Workshop? - TBD", time: "2:00 PM" },
+				{ event: "Dinner", time: "7:00 PM" },
+				{ event: "Finishing Touches", time: "7:30 PM" },
+				{ event: "Demos", time: "8:00 PM" },
+				{ event: "Closing", time: "9:30 pm"},
+				{ event: "Pack up and go home!", time: "10:00 PM" }
 			]
 		}
 	];
