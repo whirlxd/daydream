@@ -826,42 +826,6 @@ Mumbai`.split('\n');
 		alt=""
 		class="absolute left-0 w-3/12 -bottom-12 translate-y-1/2 z-20"
 	/>
-
-	<!-- Video Thumbnail Button Container -->
-	<div
-		class="absolute bottom-8 right-8 max-sm:top-[calc(50%+22rem)] max-sm:left-1/2 max-sm:-translate-x-1/2 max-sm:bottom-auto max-sm:right-auto max-sm:scale-150 z-11000 [1750px]:scale-150 2xl:origin-bottom-right"
-	>
-		<!-- Click Me Text -->
-		<div
-			class="absolute -top-8 -left-4 text-base font-sans text-[#8B4513] transform -rotate-12 pointer-events-none z-10 max-sm:top-full max-sm:left-1/2 max-sm:-translate-x-1/2 max-sm:rotate-0 max-sm:mt-1 max-sm:text-center max-sm:text-xs animate-hover max-sm:![--hover:-0.2rem]"
-		>
-			click me!
-		</div>
-
-		<!-- Video Thumbnail Button -->
-		<button
-			on:click={openVideoPopup}
-			class="w-40 h-24 rounded overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer group lg:w-72 lg:h-40 sm:w-40 sm:h-24 animate-hover max-sm:![--hover:-0.2rem]"
-			style="box-shadow: 0 0 20px #905429"
-		>
-			<img
-				src="/thumbnail.png"
-				alt=""
-				class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-			/>
-			<div
-				class="absolute inset-0 bg-[rgba(0,0,0,0.1)] bg-opacity-30 group-hover:bg-opacity-20 transition-colors duration-300 flex items-center justify-center"
-			>
-				<div
-					class="scale-150 w-8 h-8 bg-[rgba(255,255,255,0.5)] bg-opacity-20 rounded-full flex items-center justify-center md:w-6 md:h-6 sm:w-4 sm:h-4"
-				>
-					<div
-						class="w-0 h-0 border-l-[8px] border-l-[rgba(255,255,255,1)] border-t-[5px] border-t-transparent border-b-[5px] border-b-transparent ml-1 md:border-l-[6px] md:border-t-[4px] md:border-b-[4px] sm:border-l-[4px] sm:border-t-[3px] sm:border-b-[3px]"
-					></div>
-				</div>
-			</div>
-		</button>
-	</div>
 </div>
 
 <div class="w-full relative flex items-start justify-center">
@@ -882,7 +846,7 @@ Mumbai`.split('\n');
 				class="absolute bottom-0 left-0 w-full h-24 z-10 pointer-events-none bg-[url('/clouds-loop.png')] bg-repeat-x bg-bottom bg-contain"
 			></div>
 			<h2 class="text-5xl font-serif italic text-[#8B4513] mb-10 relative">
-				Welcome to {EVENT_NAME}!
+				Dear Hackers, Musicians, and Artists,
 				<img
 					src="/underline.svg"
 					alt=""
@@ -891,20 +855,17 @@ Mumbai`.split('\n');
 			</h2>
 
 			<div class="text-[#8B4513] font-serif text-xl leading-relaxed space-y-8">
-				<p>
-					This September 27th-28th, we are running <strong>{EVENT_NAME}</strong>, a 24-hour game jam
-					where 200 of the Bay Area's brightest young minds will gather to create incredible video
-					games from scratch.
-				</p>
-				<p>
-					Daydream is a beginner-friendly event designed for high schoolers. It's a space where
-					coders, artists, designers, and musicians collaborate in a whirlwind of creativity.
-				</p>
-				<p>
-					We're so excited to be hosted at the stunning global headquarters of <strong
-						>Cloudflare</strong
-					>. Get ready to build your dream game in one of San Francisco's most innovative spaces!
-				</p>
+				<p>Welcome to Hack Club's newest adventure. This fall we invite you to join us for Daydream, the world's biggest Game Jam happening simultaneously in 100 cities.</p>
+
+				<p class="font-bold text-2xl">Hack Club wants you to make a game this fall.</p>
+
+				<p>Don't consider yourself a game dev? No problem - we have tons of online and in-person workshops for you to make your first game! </p>
+
+				<p>This fall, we invite you to learn something new, make something you're really proud of, meet new friends, and go on an incredible adventure together.</p>
+
+				<p class="mb-2">With love,</p>
+
+				<p class="italic text-2xl opacity-85">Augie and Renran from Hack Club HQ</p>
 			</div>
 		</div>
 	</div>
