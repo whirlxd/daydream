@@ -7,10 +7,10 @@
 
 	// These two are optional
 	const directionsURL = ""
-	const contactLink = "mailto:business@hackit.tw"
+	const contactLink = "mailto:Business@daydream.hackit.tw"
 	
 	// External links for org intros
-	const hackItMoreLink = "https://hackit.tw";
+	const hackItMoreLink = "https://www.hackit.tw";
 	const hackClubMoreLink = "https://hackclub.com";
 	
 	// Sponsors Configuration
@@ -35,9 +35,9 @@
 			items: [
 				{ event: "開始報到", time: "09:30 ~ 10:00" },
 				{ event: "開幕式", time: "10:00 ~ 10:30" },
-				{ event: "組隊時間", time: "10:30 ~ 11:00" },
-				{ event: "入門工作彷", time: "11:00 ~ 11:30" },
-				{ event: "午餐時間", time: "11:30" },
+				{ event: "組隊時間", time: "10:30 ~ 11:20" },
+				{ event: "入門工作彷", time: "11:20 ~ 11:50" },
+				{ event: "午餐時間", time: "11:50" },
 				{ event: "導師諮詢", time: "12:30 ~ 18:00" },
 				{ event: "晚餐時間", time: "18:00" },
 				{ event: "宵夜/夜間活動", time: "21:30" }
@@ -49,9 +49,9 @@
 				{ event: "早餐時間", time: "07:30" },
 				{ event: "導師諮詢", time: "10:00 ~ 14:00" },
 				{ event: "午餐時間", time: "13:00" },
-				{ event: "展覽準備", time: "13:00 ~ 14:00" },
-				{ event: "展覽/票選時間", time: "14:00 ~ 17:00" },
-				{ event: "頒獎/閉幕時間", time: "17:00 ~ 17:45" }
+				{ event: "展覽準備", time: "13:00 ~ 13:45" },
+				{ event: "展覽/票選時間", time: "13:45 ~ 16:45" },
+				{ event: "頒獎/閉幕時間", time: "16:45 ~ 17:45" }
 			]
 		}
 	];
@@ -75,8 +75,8 @@
 	// Get current URL for dynamic metadata
 	$: currentUrl = `https://daydream.hackclub.com${$page.url.pathname}`;
 	$: pageTitle = `Daydream ${eventName}`;
-	$: pageDescription = `加入由 Hack Club 舉辦的全球青少年黑客松 Daydream 活動！一場由青少年主導的遊戲黑客松，和其他高中生一起打造精彩遊戲。提供餐點、工作坊與獎品！`;
-	$: pageKeywords = `game jam, 遊戲創作, hackathon, 黑客松, 青少年程式, Hack Club, 遊戲開發, ${eventLocation}, ${eventName}`;
+	$: pageDescription = `加入由 Hack Club 舉辦的全球青少年黑客松 Daydream 活動！一場由青少年主導的遊戲黑客松，和其他青少年一起在 32 小時做出你人生的第一個遊戲。提供免費餐點、入門工作坊與獎品！`;
+	$: pageKeywords = `game jam, 遊戲創作, hackathon, 黑客松, 青少年程式, Hack Club, HackIt, 遊戲開發, ${eventLocation}, ${eventName}`;
 
 	// Cities where the game jam is happening
 	const cities = `Columbus
@@ -990,7 +990,7 @@ Mumbai`.split("\n")
 	<div class="buildings-front-parallax absolute top-0 left-0 w-full h-full bg-[url(/buildings-front.png)] bg-no-repeat bg-contain pointer-events-none lg:-translate-y-15"></div>
 	<!-- brush texture clipped to front buildings -->
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat pointer-events-none opacity-100 lg:-translate-y-15 bg-center mix-blend-overlay" style="mask-image: url('/buildings-front.png'); mask-size: contain; mask-repeat: no-repeat; mask-position: center top; -webkit-mask-image: url('/buildings-front.png'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center top;"></div>
-	<div class="hero-ui-parallax flex flex-col items-center justify-center text-center relative z-5 -translate-y-2">
+	<div class="hero-ui-parallax flex flex-col items-center justify-center text-center relative z-30 -translate-y-2">
 		<div class="inline-block relative">
 			<div class="h-12"></div> 
 			<!-- space for the ship -->
@@ -1013,7 +1013,7 @@ Mumbai`.split("\n")
 			<img
 				src="underline.svg"
 				alt=""
-				class="absolute left-1/2 -translate-x-1/2 -mt-1 h-auto scale-115"
+				class="absolute left-1/2 -translate-x-1/2 -mt-1 h-auto scale-11	5"
 			/>
 			<h4
 				class="text-xl md:text-2xl opacity-90 mt-4 font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent max-sm:text-base tracking-wide leading-relaxed max-sm:leading-normal break-words whitespace-normal text-center"
@@ -1319,7 +1319,7 @@ Mumbai`.split("\n")
                 </h2>
                 <img src="/underline.svg" alt="" class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-44 md:w-56 h-auto opacity-80" />
                 <p class="text-sm md:text-base font-serif text-[#705e4f] mt-6 opacity-85 tracking-wide leading-relaxed">
-                    和我們一起，讓 {eventName} 發生
+                    和我們一起，讓 Daydream {eventName} 發生
                 </p>
             </div>
         </div>
@@ -1339,7 +1339,7 @@ Mumbai`.split("\n")
         {#if contactLink}
             <div class="{hasPartners ? 'mt-10' : 'mt-4'} text-center">
                 <p class="text-base md:text-lg text-[#335969]">
-                    想與 {eventName} 合作？
+                    想與 Daydream {eventName} 合作？
                     <a href={contactLink} class="underline hover:text-[#477783] transition-colors">來信洽談</a>
                 </p>
             </div>
@@ -1364,18 +1364,18 @@ Mumbai`.split("\n")
 		aria-label="HackIt Activities"
 		tabindex="-1"
 	>
-		<button
-			class="cursor-pointer absolute top-4 right-4 z-10 w-8 h-8 bg-[rgba(255,255,255,0.2)] hover:bg-opacity-30 rounded-full flex items-center justify-center text-white text-xl font-bold transition-colors duration-200"
-			on:click={closeHackItPopup}
-			aria-label="Close activities"
-		>
-			<span class="-translate-y-0.5">×</span>
-		</button>
 		<!-- svelte-ignore a11y_no_static_element_interactions -->
 		<div
-			class="relative w-[92vw] max-w-6xl max-h-[90vh] overflow-y-auto bg-[#FEFDF8] rounded-2xl border-4 border-[#E8E1D0] shadow-xl"
+			class="relative w-[92vw] max-w-6xl max-h-[90vh] overflow-y-auto overflow-x-hidden bg-[#FEFDF8] rounded-2xl border-4 border-[#E8E1D0] shadow-xl"
 			on:click|stopPropagation
 		>
+			<button
+				class="cursor-pointer absolute top-2 right-2 md:top-3 md:right-3 z-20 w-8 h-8 bg-white/80 md:bg-white/20 hover:bg-white/90 md:hover:bg-white/30 rounded-full flex items-center justify-center text-[#335969] md:text-white text-xl font-bold transition-colors duration-200"
+				on:click={closeHackItPopup}
+				aria-label="Close activities"
+			>
+				<span class="-translate-y-0.5">×</span>
+			</button>
 			<!-- Subtle paper texture overlay -->
 			<div class="absolute inset-0 bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat opacity-15 pointer-events-none"></div>
 			<!-- Header -->
@@ -1385,9 +1385,9 @@ Mumbai`.split("\n")
 			</div>
 
 			<!-- Content -->
-			<div class="grid grid-cols-1 lg:grid-cols-3 gap-0 relative">
+			<div class="grid grid-cols-1 lg:grid-cols-3 gap-0 relative overflow-x-hidden bg-[#F7F2E3]">
 				<!-- Activities list -->
-				<div class="lg:col-span-1 p-5 md:p-6 bg-white/60 border-r-2 border-[#E8E1D0] max-h-[70vh] overflow-y-auto">
+				<div class="lg:col-span-1 p-5 md:p-6 bg-white/60 border-r-2 border-[#E8E1D0]">
 					<ul class="space-y-3">
 						{#each hackItActivities as act}
 							<li>
@@ -1403,7 +1403,7 @@ Mumbai`.split("\n")
 				</div>
 
 				<!-- Video player + description -->
-				<div class="lg:col-span-2 p-4 md:p-6 bg-transparent">
+				<div class="lg:col-span-2 p-4 md:p-6 bg-[#F7F2E3]">
 					<div class="relative w-full aspect-video rounded-xl overflow-hidden border-2 border-[#E8E1D0] shadow-lg bg-black">
 						{#if selectedHackItVideoId}
 							<iframe
@@ -1568,7 +1568,7 @@ Mumbai`.split("\n")
 					{#if contactLink}
 						<!-- Call to action for sponsors -->
 						<div class="mt-8 text-center">
-							<p class="text-lg text-[#335969]">想贊助 {eventName}？<a href={contactLink} class="underline hover:text-[#477783] transition-colors">來信洽談</a></p>
+							<p class="text-lg text-[#335969]">想贊助 Daydream {eventName}？<a href={contactLink} class="underline hover:text-[#477783] transition-colors">來信洽談</a></p>
 						</div>
 					{/if}
 				</div>
@@ -1886,7 +1886,7 @@ Mumbai`.split("\n")
 				<div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-transparent bg-[length:100%_8px] bg-repeat-y pointer-events-none opacity-20"></div>
 				
 				<div class="space-y-8 max-sm:space-y-4 relative z-10">
-					<h2 class="text-4xl md:text-5xl lg:text-6xl max-sm:text-2xl font-pixel leading-tight tracking-wider max-sm:tracking-normal max-sm:leading-relaxed">
+					<h2 class="text-4xl md:text-5xl lg:text-6xl max-sm:text-2xl font-pixel leading-tight tracking-wider max-sm:tracking-normal max-sm:leading-relaxed md:whitespace-nowrap">
 						你想<img src="/taiwan/dream-pixel.png" alt="Dream" class="h-[0.75em] font-serif italic [image-rendering:pixelated] inline align-middle -translate-y-1.5 mx-[0.1em]">出什麼遊戲？
 					</h2>
 					
@@ -2020,7 +2020,7 @@ Mumbai`.split("\n")
 			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-110 max-xl:scale-110 max-lg:scale-115 max-sm:scale-130">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-4 max-lg:px-14 max-xl:px-18 max-sm:top-[18%] max-sm:bottom-[18%] max-sm:left-[14%] max-sm:right-[14%]">
                 <h3 class="text-lg md:text-xl font-serif font-bold mb-4 max-lg:mb-2 max-md:text-sm max-sm:text-xs max-sm:mb-2 leading-relaxed tracking-wide max-sm:tracking-normal">家長有疑慮怎麼辦？</h3>
-                <p class="text-sm md:text-base max-sm:text-xs max-sm:leading-tight leading-relaxed tracking-wide max-sm:tracking-normal">家長有問題？寫信到 <a class="underline" href="mailto:official@hackit.tw">official@hackit.tw</a>，我們很樂意說明。</p>
+                <p class="text-sm md:text-base max-sm:text-xs max-sm:leading-tight leading-relaxed tracking-wide max-sm:tracking-normal">家長有問題？寫信到 <a class="underline" href="mailto:contact@daydream.hackit.tw">contact@daydream.hackit.tw</a>，我們很樂意說明。</p>
 			</div>
 		</div>
 
@@ -2053,11 +2053,11 @@ Mumbai`.split("\n")
 	>
 		<!-- svelte-ignore a11y_no_static_element_interactions -->
 		<div
-			class="relative w-[92vw] max-w-6xl max-h-[90vh] overflow-y-auto bg-[#FEFDF8] rounded-2xl border-4 border-[#E8E1D0] shadow-xl"
+			class="relative w-[92vw] max-w-6xl max-h-[90vh] overflow-y-auto overflow-x-hidden bg-[#FEFDF8] rounded-2xl border-4 border-[#E8E1D0] shadow-xl"
 			on:click|stopPropagation
 		>
 			<button
-				class="cursor-pointer absolute top-2 right-2 md:-top-4 md:-right-4 z-20 w-8 h-8 bg-white/80 md:bg-white/20 hover:bg-white/90 md:hover:bg-white/30 rounded-full flex items-center justify-center text-[#335969] md:text-white text-xl font-bold transition-colors duration-200"
+				class="cursor-pointer absolute top-2 right-2 md:top-3 md:right-3 z-20 w-8 h-8 bg-white/80 md:bg-white/20 hover:bg-white/90 md:hover:bg-white/30 rounded-full flex items-center justify-center text-[#335969] md:text-white text-xl font-bold transition-colors duration-200"
 				on:click={closeActivitiesPopup}
 				aria-label="Close activities"
 			>
@@ -2072,9 +2072,9 @@ Mumbai`.split("\n")
 			</div>
 
 			<!-- Content -->
-			<div class="grid grid-cols-1 lg:grid-cols-3 gap-0 relative">
+			<div class="grid grid-cols-1 lg:grid-cols-3 gap-0 relative overflow-x-hidden bg-[#F7F2E3]">
 				<!-- Activities list -->
-				<div class="lg:col-span-1 p-5 md:p-6 bg-white/60 lg:border-r-2 border-b-2 lg:border-b-0 border-[#E8E1D0] max-h-[70vh] overflow-y-auto">
+				<div class="lg:col-span-1 p-5 md:p-6 bg-white/60 lg:border-r-2 border-b-2 lg:border-b-0 border-[#E8E1D0]">
 					<ul class="space-y-3">
 						{#each hackClubActivities as act, i}
 							<li>
@@ -2090,7 +2090,7 @@ Mumbai`.split("\n")
 				</div>
 
 				<!-- Video player -->
-				<div class="lg:col-span-2 p-4 md:p-6 bg-transparent">
+				<div class="lg:col-span-2 p-4 md:p-6 bg-[#F7F2E3]">
 					<div class="relative w-full aspect-video rounded-xl overflow-hidden border-2 border-[#E8E1D0] shadow-lg bg-black">
 						{#if selectedVideoId}
 							<iframe
