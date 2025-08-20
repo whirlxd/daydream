@@ -1,4 +1,6 @@
 import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID, GEOCODER_API_KEY } from '$env/static/private';
+import { readdir } from 'fs/promises';
+import { join } from 'path';
 
 export const prerender = true;
 
@@ -11,13 +13,17 @@ export async function load() {
 	}
 
 	try {
+		// Get all existing route directories to check which pages exist
+		const routesPath = join(process.cwd(), 'src', 'routes');
+		const existingRoutes = await readdir(routesPath);
+		
 		// Fetch all approved events from Airtable with pagination
 		const events = [];
 		let offset = null;
 		
 		do {
-			const airtableUrl = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/events?filterByFormula={triage_status}="Approved"${offset ? `&offset=${offset}` : ''}`;
-			const airtableResponse = await fetch(airtableUrl, {
+			const airtableUrl: string = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/events?filterByFormula={triage_status}="Approved"${offset ? `&offset=${offset}` : ''}`;
+			const airtableResponse: Response = await fetch(airtableUrl, {
 				headers: {
 					'Authorization': `Bearer ${AIRTABLE_API_KEY}`
 				}
@@ -27,7 +33,7 @@ export async function load() {
 				throw new Error(`Airtable API error: ${airtableResponse.status}`);
 			}
 
-			const airtableData = await airtableResponse.json();
+			const airtableData: any = await airtableResponse.json();
 			events.push(...airtableData.records);
 			offset = airtableData.offset;
 		} while (offset);
@@ -35,13 +41,13 @@ export async function load() {
 		// Geocode each event location
 		const locations = [];
 		for (const event of events) {
-			const { location, state, country, event_name, address_override } = event.fields;
+			const { location, state, country, event_name, address_override, slug } = event.fields;
 			
 			if (!location || !event_name) continue;
 
 			// Use address_override if set, otherwise build address string
 			const address = address_override || [location, state, country].filter(Boolean).join(', ');
-			console.log(`${event_name}: ${address}`)
+			console.log(`${event_name} [${slug}]: ${address}`)
 
 			try {
 				const geocodeUrl = `https://geocoder.hackclub.com/v1/geocode?address=${encodeURIComponent(address)}&key=${GEOCODER_API_KEY}`;
@@ -49,14 +55,19 @@ export async function load() {
 
 				if (geocodeResponse.ok) {
 					const geocodeData = await geocodeResponse.json();
+					// Check if a page exists for this slug
+					const hasPage = slug && existingRoutes.includes(slug);
+					
 					locations.push({
-						lat: geocodeData.lat,
-						lng: geocodeData.lng,
-						event_name,
-						city: location,
-						state,
-						country
-					});
+					lat: geocodeData.lat,
+					lng: geocodeData.lng,
+					event_name,
+					city: location,
+					state,
+					country,
+					slug,
+					hasPage
+				});
 				}
 			} catch (error) {
 				console.error(`Failed to geocode ${address}:`, error);

@@ -573,6 +573,13 @@ Mumbai`.split("\n")
 	onMount(() => {
 		console.log('User city:', data.userCity);
 		
+		// Listen for navigation messages from iframe
+		window.addEventListener('message', (event) => {
+			if (event.data && event.data.type === 'navigate' && event.data.slug) {
+				window.location.href = `/${event.data.slug}`;
+			}
+		});
+		
 		// Register GSAP plugins
 		gsap.registerPlugin(ScrollTrigger);
 		
@@ -1313,7 +1320,7 @@ Mumbai`.split("\n")
 			<img src="window-4.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
 				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">Can I organize a Daydream in my city?</h3>
-				<p class="text-sm">Definitely! Contact us via daydream@hackclub.com or join #daydream on the <Tooltip content="You'll get an invite in your email after you sign up!">Hack Club slack.</Tooltip></p>
+				<span class="text-sm">Definitely! Contact us via daydream@hackclub.com or join #daydream on the <Tooltip content="You'll get an invite in your email after you sign up!">Hack Club slack.</Tooltip></span>
 			</div>
 		</div>
 
