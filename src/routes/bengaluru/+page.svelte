@@ -18,9 +18,7 @@
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "/Bengaluru/xyz.png", name: ".xyz", url: "https://gen.xyz" },
-		{ image: "/Bengaluru/yubico.svg", name: "Yubico", url: "https://www.yubico.com" },
-		{ image: "/Bengaluru/cc.webp", name: "CodeCrafters", url: "https://codecrafters.io/" },
+		// { image: "", name: "", url: "" },
 		
 	];
 	
