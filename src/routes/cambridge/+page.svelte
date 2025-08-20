@@ -10,6 +10,7 @@
 	const eventName = "Cambridge";
 	const eventLocation = "Cambridge";
 	const eventAddress = "37 Hills Rd, Cambridge CB2 1NT"; // Leave this empty if you don't want an address
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional
 	const directionsURL = "https://www.google.com/maps/place/Raspberry+Pi+Foundation/@52.1966209,0.1281369,17z/data=!3m1!4b1!4m6!3m5!1s0x47d870831b2fd0b5:0xf3176a3ca4b18b5f!8m2!3d52.1966209!4d0.1307118!16s%2Fm%2F0j62fvl?entry=ttu&g_ep=EgoyMDI1MDgxMi4wIKXMDSoASAFQAw%3D%3D"
 	const contactLink = "delana@youthacks.org"
@@ -17,7 +18,7 @@
 	// Sponsors Configuration
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "src/routes/cambridge/images/rpilogo.png", name: "The Raspberry Pi Foundation", url: "https://www.raspberrypi.org/" },
+		{ image: "/cambridge/rpilogo.png", name: "The Raspberry Pi Foundation", url: "https://www.raspberrypi.org/" },
 		{ image: "https://assets.hackclub.com/icon-rounded.png", name: "Hack Club", url: "https://hackclub.com/" }
 	];
 	
@@ -85,7 +86,7 @@ Dubai
 San Francisco
 Minneapolis
 Seattle
-Signapore
+Singapore
 Sydney
 Mumbai`.split("\n")
 
@@ -831,7 +832,7 @@ Mumbai`.split("\n")
 			</h4>
 		</div>
 		
-		<ParticipantSignUp />
+		<ParticipantSignUp {eventName} />
 	</div>
 
 	<!-- <img src="hot-air-balloon.png" alt="" class="absolute w-1/8 right-32 bottom-40 z-20"> -->
@@ -1134,7 +1135,7 @@ Mumbai`.split("\n")
 			<div class="relative w-72 h-40 max-md:w-80 animate-hover ![--hover:-0.15rem] ![animation-delay:1.7s] z-20" data-point="1">
 				<img src="paper1.png" alt="" class="w-full h-full object-contain">
 				<div class="absolute inset-0 justify-center text-center p-6 text-xl font-serif max-md:text-lg text-[#8B4513] inline-block content-center">
-					<span class="font-sans text-[#E472AB] font-bold text-[1.3rem] mr-1">#1:</span> <a href="https://example.com" class="underline">Sign up</a> for Daydream {eventName}
+					<span class="font-sans text-[#E472AB] font-bold text-[1.3rem] mr-1">#1:</span> <a href={signupLink} class="underline">Sign up</a> for Daydream {eventName}
 				</div>
 			</div>
 		</div>
