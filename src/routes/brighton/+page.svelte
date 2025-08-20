@@ -7,18 +7,18 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Cambridge";
-	const eventLocation = "Cambridge";
-	const eventAddress = "37 Hills Rd, Cambridge CB2 1NT"; // Leave this empty if you don't want an address
+	const eventName = "Brighton";
+	const eventLocation = "Brighton";
+	const eventAddress = ""; // Leave this empty if you don't want an address
 	// These two are optional
-	const directionsURL = "https://www.google.com/maps/place/Raspberry+Pi+Foundation/@52.1966209,0.1281369,17z/data=!3m1!4b1!4m6!3m5!1s0x47d870831b2fd0b5:0xf3176a3ca4b18b5f!8m2!3d52.1966209!4d0.1307118!16s%2Fm%2F0j62fvl?entry=ttu&g_ep=EgoyMDI1MDgxMi4wIKXMDSoASAFQAw%3D%3D"
-	const contactLink = "delana@youthacks.org"
+	// const directionsURL = ""
+	// const contactLink = ""
 	
 	// Sponsors Configuration
-	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
+	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "src/routes/cambridge/images/rpilogo.png", name: "The Raspberry Pi Foundation", url: "https://www.raspberrypi.org/" },
-		{ image: "https://assets.hackclub.com/icon-rounded.png", name: "Hack Club", url: "https://hackclub.com/" }
+		// { image: "src/routes/cambridge/images/rpilogo.png", name: "The Raspberry Pi Foundation", url: "https://www.raspberrypi.org/" },
+		// { image: "https://assets.hackclub.com/icon-rounded.png", name: "Hack Club", url: "https://hackclub.com/" }
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
