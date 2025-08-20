@@ -16,13 +16,8 @@
 	const contactLink = "dfw.daydream@gmail.com"
 	
 	// Sponsors Configuration
-<<<<<<< HEAD
-	const signupLink = "https://forms.hackclub.com/daydream-rsvp?event=recHbKhhA5VWAH7Lg"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
-	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
-=======
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recHbKhhA5VWAH7Lg"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
-	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
->>>>>>> d1618e2e8290fa2c110be033892f453d863eb179
+	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
 		{ image: "https://storage.jukeboxprint.com/s/images/jukebox-meta-im.png", name: "Jukebox Print", url: "https://jukeboxprint.com/custom-stickers" },
 	];
@@ -77,7 +72,6 @@
 	$: pageKeywords = `game jam, hackathon, teen coding, Hack Club, game development, ${eventLocation}, ${eventName}`;
 
 	// Cities where the game jam is happening
-<<<<<<< HEAD
 	const cities = `Toronto  
 Mumbai  
 Madrid  
@@ -120,34 +114,6 @@ Auckland
 Karachi  
 Beijing  
 Lagos`.split("\n")
-=======
-	const cities = `Columbus
-Lisbon 
-Boston
-Giza
-Vancouver
-Houston
-New York City
-Bengaluru
-Tampa
-Auckland
-Omaha
-Phoenix
-Madrid
-Boise
-Ottawa
-Hangzhou
-Islamabad
-London
-Visakhapatnam
-Dubai
-San Francisco
-Minneapolis
-Seattle
-Singapore
-Sydney
-Mumbai`.split("\n")
->>>>>>> d1618e2e8290fa2c110be033892f453d863eb179
 
 	function createSmoothPath(points: Array<{ x: number; y: number }>) {
 		if (points.length < 2) return "";
