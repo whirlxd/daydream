@@ -96,7 +96,7 @@ San Francisco
 Minneapolis
 Charlotte
 Seattle
-Signapore
+Singapore
 Sydney
 Mumbai`.split("\n")
 
