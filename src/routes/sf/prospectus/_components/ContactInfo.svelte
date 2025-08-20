@@ -6,10 +6,10 @@
 		</p>
 		<div class="pt-8">
 			<p class="text-lg">To discuss sponsorship opportunities, please reach out to:</p>
-			<p class="mt-2 text-2xl font-bold">Ruiyu Liu</p>
+			<p class="mt-2 text-2xl font-bold">Mohamad Mortada</p>
 			<p class="mt-1 text-xl font-bold">
-				<a href="mailto:hi@byteatatime.dev" class="text-[#E472AB] hover:underline">
-					hi@byteatatime.dev
+				<a href="mailto:mohamad@hackclub.com" class="text-[#E472AB] hover:underline">
+					mohamad@hackclub.com
 				</a>
 			</p>
 		</div>
