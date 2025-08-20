@@ -1,3 +1,6 @@
 export const redirects = {
-    "Dubai": "dubai",
+    "addisababa": "addis-ababa",
+    "dallas-fortworth": "dfw",
+    "Delhi": "delhi",
+    "Pokhara": "pokhara",
 }
