@@ -35,15 +35,15 @@
 		{
 			title: "Saturday, September 27th",
 			items: [
-				{ event: "Doors open", time: "11:00 AM" },
-				{ event: "Opening ceremony", time: "12:00 PM" },
+				{ event: "Doors open", time: "7:00 AM" },
+				{ event: "Opening ceremony", time: "8:00 AM" },
+				{ event: "Team Formation session", time: "8:30 AM" },
+				{ event: "Start working on your project!", time: "9:00 AM" },
 				{ event: "Lunch", time: "12:30 PM" },
-				{ event: "Start working on your project!", time: "1:00 PM" },
-				{ event: "Team Formation session", time: "2:00 PM" },
-				{ event: "Project Brainstorm session", time: "4:00 PM" },
+				{ event: "Pygame Workshop", time: "3:00 PM" },
 				{ event: "Godot Workshop", time: "4:00 PM" },
-				{ event: "Dinner", time: "6:00 PM" },
-				{ event: "Github Workshop", time: "7:00 PM" }
+				{ event: "Dinner", time: "5:00 PM" },
+				{ event: "Github Workshop", time: "6:00 PM" }
 			]
 		},
 		{
@@ -51,10 +51,10 @@
 			items: [
 				{ event: "Doors open", time: "7:00 AM" },
 				{ event: "Breakfast", time: "8:00 AM" },
-				{ event: "Workshop 3", time: "10:30 AM" },
-				{ event: "Lunch", time: "2:00 AM" },
-				{ event: "Demos!", time: "4:00 AM" },
-				{ event: "Closing ceremony", time: "7:00 PM" }
+				{ event: "Wrap Up Projects!", time: "10:30 AM" },
+				{ event: "Lunch", time: "1:00 PM" },
+				{ event: "Demos!", time: "4:00 PM" },
+				{ event: "Closing ceremony", time: "6:30 PM" }
 			]
 		}
 	];
@@ -1531,6 +1531,14 @@ Mumbai`.split("\n")
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
 				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">What can I make at Daydream?</h3>
 				<p class="text-sm">ANY type of game based on the theme! Platformer, visual novel, clicker game, etc. Be as creative as possible!</p>
+			</div>
+		</div>
+		<!-- FAQ Item 9 -->
+		<div class="relative transform rotate-1">
+			<img src="window-4.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
+				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">Is this the final schedule?</h3>
+				<p class="text-sm">Unfortunately no, please make sure to check up on the website as the schedule is currently very tentative. Contact miami@daydream.hackclub.com for any concerns or questions. </p>
 			</div>
 		</div>
 	</div>
