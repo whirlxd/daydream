@@ -38,6 +38,7 @@
     on:mouseenter={handleMouseEnter}
     on:mouseleave={handleMouseLeave}
     on:click={handleClick}
+    on:keydown={handleClick}
   >
     <slot />
   </span>
