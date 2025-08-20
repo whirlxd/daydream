@@ -31,7 +31,8 @@
 	const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [
 		{
 			title: "Saturday, September 27th",
-			items: [
+			items:[]
+			/* items: [
 				{ event: "Doors open", time: "11:00 AM" },
 				{ event: "Opening ceremony", time: "12:00 PM" },
 				{ event: "Lunch", time: "12:30 PM" },
@@ -42,15 +43,17 @@
 				{ event: "Dinner", time: "6:00 PM" },
 				{ event: "Lightning talks", time: "8:00 PM" },
 				{ event: "Midnight surprise", time: "12:00 AM" }
-			]
+			] */
 		},
 		{
 			title: "Sunday, September 28th",
+			items:[]
+			/*
 			items: [
 				{ event: "Breakfast", time: "8:00 AM" },
 				{ event: "Demos!", time: "10:30 AM" },
 				{ event: "Closing ceremony", time: "12:00 PM" }
-			]
+			] */
 		}
 	];
 
@@ -993,7 +996,7 @@ Mumbai`.split("\n")
 			<!-- Header Section -->
 			<div class="w-full bg-[url('/billboard-bg-texture.png')] bg-contain bg-repeat py-6 relative" style="border-bottom: 8px solid #B4B4C5;">
 				<h2 class="text-4xl font-serif text-[#F0F0FF] text-center">
-					Schedule
+					Schedule... coming soon!
 				</h2>
 				<!-- Brush texture overlay for header -->
 				<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
