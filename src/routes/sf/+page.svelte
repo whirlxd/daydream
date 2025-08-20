@@ -688,7 +688,7 @@ Mumbai`.split('\n');
 		style="mask-image: url('/buildings-front.png'); mask-size: contain; mask-repeat: no-repeat; mask-position: center top; -webkit-mask-image: url('/buildings-front.png'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center top;"
 	></div>
 	<div
-		class="hero-ui-parallax flex flex-col items-center justify-center text-center relative z-5 -translate-y-2"
+		class="hero-ui-parallax flex flex-col items-center justify-center text-center relative z-30 -translate-y-2"
 	>
 		<div class="inline-block relative">
 			<div class="h-12"></div>
@@ -728,7 +728,7 @@ Mumbai`.split('\n');
 			</h4>
 		</div>
 
-		<div class="mt-8 flex flex-col items-center gap-3 z-5 max-md:scale-90">
+		<div class="mt-8 flex flex-col items-center gap-3 max-md:scale-90">
 			<form
 				on:submit={handleFormSubmit}
 				class="rounded-full bg-white border-2 border-dark font-sans p-2 flex flex-row items-center gap-2 shadow-[0_3px_0_0_theme(colors.dark)] focus-within:border-pink focus-within:shadow-[0_3px_0_0_#E472AB] has-[button:active]:border-dark has-[button:active]:shadow-[0_3px_0_0_theme(colors.dark)] has-[button:focus]:border-dark has-[button:focus]:shadow-[0_3px_0_0_theme(colors.dark)]"

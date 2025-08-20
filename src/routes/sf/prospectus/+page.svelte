@@ -16,7 +16,7 @@
 <div class="page w-full bg-gradient-to-b from-[#CCF4FD] to-[#FAE3C9] py-12 px-4 sm:px-8">
 	<PageBackground />
 
-	<section class="mx-auto max-w-4xl font-serif text-[#3a2a1a] mt-40">
+	<section class="mx-auto max-w-4xl font-serif text-[#3a2a1a] mt-40 z-10 relative">
 		<div class="flex items-center justify-center no-print">
 			<img src="/daydream.png" alt="Daydream" class="h-24" />
 		</div>
