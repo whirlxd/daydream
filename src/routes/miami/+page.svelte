@@ -36,12 +36,12 @@
 			title: "Saturday, September 27th",
 			items: [
 				{ event: "Doors open", time: "7:00 AM" },
-				{ event: "Opening ceremony", time: "8:00 PM" },
-				{ event: "Team Formation session", time: "8:30 PM" },
-				{ event: "Start working on your project!", time: "9:00 PM" },
+				{ event: "Opening ceremony", time: "8:00 AM" },
+				{ event: "Team Formation session", time: "8:30 AM" },
+				{ event: "Start working on your project!", time: "9:00 AM" },
 				{ event: "Lunch", time: "12:30 PM" },
 				{ event: "Pygame Workshop", time: "3:00 PM" },
-				{ event: "Godot Workshop", time: "4:00 PM" }
+				{ event: "Godot Workshop", time: "4:00 PM" },
 				{ event: "Dinner", time: "5:00 PM" },
 				{ event: "Github Workshop", time: "6:00 PM" }
 			]
@@ -52,8 +52,8 @@
 				{ event: "Doors open", time: "7:00 AM" },
 				{ event: "Breakfast", time: "8:00 AM" },
 				{ event: "Wrap Up Projects!", time: "10:30 AM" },
-				{ event: "Lunch", time: "1:00 AM" },
-				{ event: "Demos!", time: "4:00 AM" },
+				{ event: "Lunch", time: "1:00 PM" },
+				{ event: "Demos!", time: "4:00 PM" },
 				{ event: "Closing ceremony", time: "6:30 PM" }
 			]
 		}
