@@ -18,7 +18,7 @@
 
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 
-	const signupLink = "https://forms.hackclub.com/daydream-rsvp?event=recbYBNEWgDH7grEM"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recbYBNEWgDH7grEM"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 
 	const sponsors = [
 		// { image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
@@ -102,7 +102,7 @@ Dubai
 San Francisco
 Minneapolis
 Seattle
-Signapore
+Singapore
 Sydney
 Miami
 Mumbai`.split("\n")
