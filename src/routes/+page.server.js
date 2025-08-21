@@ -1,12 +1,13 @@
 import { GEOCODER_API_KEY } from '$env/static/private';
+import { loadAndGeocodeEvents, calculateDistance } from '$lib/events';
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load({ request, getClientAddress }) {
 	// Get user's IP address
 	const userIP = getClientAddress();
 	
-	
 	let locationData = null;
+	let nearestEvent = null;
 	
 	if (GEOCODER_API_KEY && userIP) {
 		try {
@@ -15,6 +16,32 @@ export async function load({ request, getClientAddress }) {
 			
 			if (response.ok) {
 				locationData = await response.json();
+				
+				// If we have user coordinates, find nearest event
+				if (locationData?.lat && locationData?.lng) {
+					const events = await loadAndGeocodeEvents();
+					let minDistance = Infinity;
+					let closest = null;
+					
+					for (const event of events) {
+						const distance = calculateDistance(
+							locationData.lat, 
+							locationData.lng, 
+							event.lat, 
+							event.lng
+						);
+						
+						if (distance < minDistance) {
+							minDistance = distance;
+							closest = { ...event, distance };
+						}
+					}
+					
+					// Only show event if within 50 miles
+					if (closest && closest.distance <= 50) {
+						nearestEvent = closest;
+					}
+				}
 			}
 		} catch (error) {
 			console.error('Failed to fetch location data:', error);
@@ -22,6 +49,7 @@ export async function load({ request, getClientAddress }) {
 	}
 
 	return {
-		userCity: locationData?.city
+		userCity: locationData?.city,
+		nearestEvent
 	};
 }
