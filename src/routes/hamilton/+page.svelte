@@ -1,4 +1,3 @@
-https://forms.hackclub.com/daydream-sign-up?event=rec2hrHzbHwmzR2Wi?email=
 <script lang="ts">
 	/**
 	 * This is the template site! Create a copy of this folder (src/routes/example)
