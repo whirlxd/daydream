@@ -717,7 +717,7 @@ Mumbai`.split("\n")
 
 
 <svelte:head>
-	<title>{pageTitle}</title>
+	<title>Daydream</title>
 	<meta name="description" content={pageDescription} />
 	<meta name="keywords" content={pageKeywords} />
 	
@@ -1160,9 +1160,11 @@ Mumbai`.split("\n")
 				</iframe>
 			</div>
 			
-			<!-- <p class="text-center font-sans text-2xl pt-12 max-sm:text-xl text-[#60574b] z-10000">
-				It looks like you're only 5.1 miles away from <a href="/">Daydream Example</a>! 
-			</p> -->
+			{#if data.nearestEvent}
+				<p class="text-center font-sans text-2xl pt-12 max-sm:text-xl text-[#60574b] z-10000">
+					It looks like you're only {data.nearestEvent.distance.toFixed(1)} miles away from {#if data.nearestEvent.hasPage}<a href="/{data.nearestEvent.slug}" class="underline">{data.nearestEvent.event_name}</a>{:else}<span class="underline">{data.nearestEvent.event_name}</span>{/if}! 
+				</p>
+			{/if}
 		</div>
 	</div>
 
