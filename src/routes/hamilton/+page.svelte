@@ -68,7 +68,7 @@ https://forms.hackclub.com/daydream-sign-up?event=rec2hrHzbHwmzR2Wi?email=
 	import { ScrollTrigger } from "gsap/ScrollTrigger";
 	import Ticker from "$lib/components/Ticker.svelte";
 	import Footer from "$lib/components/Footer.svelte";
-	import ParticipantSignUp from "$lib/components/ParticipantSignUp.svelte";
+	import ParticipantSignUp from "$lib/components/hamilton/ParticipantSignUp.svelte";
 	import { page } from '$app/stores';
 	
 	
@@ -1577,4 +1577,3 @@ Mumbai`.split("\n")
 		</div>
 	</div>
 {/if}
-
