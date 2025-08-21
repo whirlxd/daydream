@@ -13,13 +13,16 @@
 	const eventAddress = "Dallas Makerspace: 1825 Monetary Ln Ste 104, Carrollton, TX 75006"; // Leave this empty if you don't want an address
 	// These two are optional
 	const directionsURL = "https://www.google.com/maps/place/Dallas+Makerspace/@32.9410971,-96.9089827,17z/data=!3m1!4b1!4m6!3m5!1s0x864c1fd805ad40af:0x6f562f9ff01bbebb!8m2!3d32.9410971!4d-96.9064078!16s%2Fg%2F1tnpldfj?entry=ttu&g_ep=EgoyMDI1MDgxNy4wIKXMDSoASAFQAw%3D%3D" // Add a google maps link here once you have an address
-	const contactLink = "dfw.daydream@gmail.com"
+	const contactLink = "mailto:DFW.DayDream@gmail.com"
 	
 	// Sponsors Configuration
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recHbKhhA5VWAH7Lg"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "https://storage.jukeboxprint.com/s/images/jukebox-meta-im.png", name: "Jukebox Print", url: "https://jukeboxprint.com/custom-stickers" },
+		{ 	
+			image: "https://storage.jukeboxprint.com/s/images/jukebox-meta-im.png", name: "Jukebox Print", url: "https://jukeboxprint.com/custom-stickers" 
+			image: "https://dallasmakerspace.org/w/images/2/2c/PNG_Logo_Coral.png", name: "Dallas Makerspace", url: "https://dallasmakerspace.org/"
+		},
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
