@@ -513,7 +513,7 @@ Roblox`.split('\n');
 			
 			<div class="flex gap-8 items-center justify-center">
 				<a
-				href="https://discord.gg/F6JtCnFF"
+				href="https://discord.gg/jzkM8G6Qp9"
 				target="_blank"
 				rel="noopener noreferrer"
 				aria-label="Join the Discord Server (opens in new tab)"
