@@ -571,7 +571,6 @@ Mumbai`.split("\n")
 	}
 
 	onMount(() => {
-		console.log('User city:', data.userCity);
 		
 		// Listen for navigation messages from iframe
 		window.addEventListener('message', (event) => {
