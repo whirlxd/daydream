@@ -19,7 +19,7 @@
 	// Sponsors Configuration
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "jukebox.png", name: "Sponsor 1", url: "ttps://www.jukeboxprint.com/custom-stickers" },
+		{ image: "/kuala-lumpur/jukebox.png", name: "Jukebox", url: "ttps://www.jukeboxprint.com/custom-stickers" },
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
@@ -1062,7 +1062,7 @@ Mumbai`.split("\n")
 							<div class="flex justify-center">
 								<div class="grid gap-8 items-center justify-items-center max-w-4xl {sponsors.length === 1 ? 'grid-cols-1' : sponsors.length === 2 ? 'grid-cols-1 md:grid-cols-2' : sponsors.length === 3 ? 'grid-cols-2 md:grid-cols-3' : 'grid-cols-2 md:grid-cols-4'}">
 									{#each sponsors as sponsor}
-										{#if sponsor.name === "Sponsor 1"}
+										{#if sponsor.name === "Jukebox"}
 											<div class="bg-white/20 rounded-lg p-1 w-full flex-col items-center justify-center hover:bg-white/40 transition-colors text-center">
 												<p class="mb-4 text-black text-base">
 													Hey! So you want to know where we're getting our amazing <a href="https://www.jukeboxprint.com/custom-stickers">custom stickers</a> from? Jukebox, of course!
@@ -1070,7 +1070,7 @@ Mumbai`.split("\n")
 												<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-20 object-contain">
 											</div>
 										{:else}
-											<a href={sponsoe.url} class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors" target="_blank" rel="noopener norefferer">
+											<a href={sponsor.url} class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors" target="_blank" rel="noopener norefferer">
 												<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain">
 											</a>
 										{/if}												
