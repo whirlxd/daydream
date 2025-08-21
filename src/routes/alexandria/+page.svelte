@@ -12,14 +12,14 @@
 	const eventAddress = "TBD"; // Leave this empty if you don't want an address
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=rec7aH0mYLpLLLlov"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
-	const directionsURL = "https://www.google.com/maps/search/1600+pennsylvania+avenue+washington+dc/"
-	const contactLink = "mailto:example@daydream.hackclub.com"
+	const directionsURL = "" // ex: https://www.google.com/maps/search/1600+pennsylvania+avenue+washington+dc/
+	const contactLink = "" // ex: mailto:example@daydream.hackclub.com
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "https://github.com/mahmoud-altahan/pics/blob/main/WhatsApp%20Image%202025-08-20%20at%2023.55.37_0991b03d.jpg", name: "Revivals Egypt", url: "https://example1.com" },
-		{ image: "https://github.com/mahmoud-altahan/pics/blob/main/WhatsApp%20Image%202025-08-20%20at%2023.55.51_47cbbb67.jpg", name: "Green Alexandria", url: "https://example2.com" },
+		{ image: "https://github.com/mahmoud-altahan/pics/blob/main/WhatsApp%20Image%202025-08-20%20at%2023.55.37_0991b03d.jpg?raw=true", name: "Revivals Egypt"}, // Add a url field if you have a link
+		{ image: "https://github.com/mahmoud-altahan/pics/blob/main/WhatsApp%20Image%202025-08-20%20at%2023.55.51_47cbbb67.jpg?raw=true", name: "Green Alexandria"}, // Add a url field if you have a link
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
@@ -92,7 +92,7 @@ Dubai
 San Francisco
 Minneapolis
 Seattle
-Signapore
+Singapore
 Sydney
 Mumbai`.split("\n")
 
