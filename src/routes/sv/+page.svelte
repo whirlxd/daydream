@@ -8,8 +8,11 @@
 
 	// Silicon Valley landmarks and tech companies
 
-import discordSymbol from "./Discord-Symbol-Black.svg";
-import InstagramSymbol from "./Instagram_Glyph_Black.svg";
+import discordSymbol from "./images/Discord-Symbol-Black.svg";
+import instagramSymbol from "./images/Instagram_Glyph_Black.svg";
+
+import vercelLogo from "./images/vercel-logotype-light.svg";
+import frameworkLogo from "./images/Framework_Computer_logo.svg";
 
 const cities = `Minecraft
 Fortnite
@@ -523,7 +526,7 @@ Roblox`.split('\n');
 				rel="noopener noreferrer"
 				aria-label="Follow us on Instagram (opens in new tab)"
 				>
-					<img src={InstagramSymbol} alt="Instagram" class="hover:scale-110 transition-all duration-300 active:border-b-0 active:translate-y-1 hover:brightness-110 hover:rotate-1 hover:-translate-y-1 w-11">
+					<img src={instagramSymbol} alt="Instagram" class="hover:scale-110 transition-all duration-300 active:border-b-0 active:translate-y-1 hover:brightness-110 hover:rotate-1 hover:-translate-y-1 w-11">
 				</a>
 			</div>
 		</div>
@@ -960,16 +963,22 @@ Roblox`.split('\n');
 
 		<!-- Sponsors Grid - Currently Empty for Future Logos -->
 		<div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mb-12 sm:mb-14 md:mb-16">
-			<div
-				class="bg-white/20 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-8 h-24 sm:h-28 md:h-32 flex items-center justify-center border border-white/30"
-			>
-				<div class="text-white/60 font-serif italic text-xs sm:text-sm">🎮 Coming Soon</div>
-			</div>
-			<div
-				class="bg-white/20 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-8 h-24 sm:h-28 md:h-32 flex items-center justify-center border border-white/30"
-			>
-				<div class="text-white/60 font-serif italic text-xs sm:text-sm">🎮 Coming Soon</div>
-			</div>
+			<a href="https://vercel.com">
+				<div
+					class="bg-white/60 backdrop-blur-sm rounded-2xl p-6 sm:p-8 md:p-8 h-24 sm:h-28 md:h-32 flex items-center justify-center border border-white/30 hover:scale-110 transition-all duration-300 active:translate-y-1 hover:brightness-110 hover:-translate-y-1"
+				>
+					<img src={vercelLogo} alt="Vercel Logo">
+				</div>
+			</a>
+			
+			<a href="https://frame.work/">
+				<div
+					class="bg-white/60 backdrop-blur-sm rounded-2xl p-2 sm:p-3 md:p-4 h-24 sm:h-28 md:h-32 flex items-center justify-center border border-white/30 hover:scale-110 transition-all duration-300 active:translate-y-1 hover:brightness-110  hover:-translate-y-1"
+				>
+					<img src={frameworkLogo} alt="Framework Logo">
+				</div>
+			</a>
+			
 			<div
 				class="bg-white/20 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-8 h-24 sm:h-28 md:h-32 flex items-center justify-center border border-white/30"
 			>
