@@ -34,8 +34,8 @@
 				{ event: "Lunch,", time: "12:00 PM" },
 				{ event: "Workshop 2", time: "TBA" },
 				{ event: "Dinner", time: "6:00 PM" },
-				{ event: "Lightning talks and packing up", time: "7:45 PM" },
-				{ event: "Doors close", time: "8:00 PM" },
+				{ event: "Lightning talks and packing up", time: "6:45 PM" },
+				{ event: "Doors close", time: "7:00 PM" },
 			]
 		},
 		{
@@ -47,12 +47,12 @@
 				{ event: "Workshop 1", time: "TBA" },
 				{ event: "Lunch", time: "12:00 PM" },
 				{ event: "Workshop 2", time: "TBA" },
-				{ event: "Dinner", time: "6:00 PM" },
-				{ event: "Voting starts", time: "6:30 PM" },
-				{ event: "Voting ends", time: "7:00 PM" },
-				{ event: "Winners announced & SWAG distribution", time: "7:15 PM" },
-				{ event: "Closing statements", time: "7:15 PM" },
-				{ event: "Doors close", time: "8:00 PM" },
+				{ event: "Voting starts", time: "5:00 PM" },
+				{ event: "Voting ends", time: "5:30 PM" },
+				{ event: "Dinner", time: "5:45 PM" },
+				{ event: "Winners announced & SWAG distribution", time: "6:15 PM" },
+				{ event: "Closing statements", time: "6:30 PM" },
+				{ event: "Doors close", time: "7:00 PM" },
 			]
 		}
 	];
