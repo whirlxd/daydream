@@ -15,6 +15,7 @@
 	const contactLink = "mailto:hello@suceavahacks.org"
 
 	// Sponsors Configuration
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
 	const sponsors = [
 		{ image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
@@ -96,7 +97,7 @@ Dubai
 San Francisco
 Minneapolis
 Seattle
-Signapore
+Singapore
 Sydney
 Mumbai`.split("\n")
 
@@ -842,7 +843,7 @@ Mumbai`.split("\n")
 			</h4>
 		</div>
 		
-		<ParticipantSignUp />
+		<ParticipantSignUp {eventName} />
 	</div>
 
 	<!-- <img src="hot-air-balloon.png" alt="" class="absolute w-1/8 right-32 bottom-40 z-20"> -->
@@ -911,7 +912,7 @@ Mumbai`.split("\n")
 			</h2>
 			
 			<div class="text-[#8B4513] font-serif text-xl leading-relaxed space-y-8">
-				<p>Bine ați venit la cea mai nouă aventură Hack Club. În această toamnă vă invităm să ni vă alăturați pentru @am, cel mai mare Game Jam din lume care se desfășoară simultan în 100 de orașe.</p>
+				<p>Bine ați venit la cea mai nouă aventură Hack Club. În această toamnă vă invităm să ni vă alăturați pentru Daydream, cel mai mare Game Jam din lume care se desfășoară simultan în 100 de orașe.</p>
 
 				<p class="font-bold text-2xl">Hack Club vrea să faci un joc în această toamnă.</p>
 
@@ -1142,7 +1143,7 @@ Mumbai`.split("\n")
 			<div class="relative w-72 h-40 max-md:w-80 animate-hover ![--hover:-0.15rem] ![animation-delay:1.7s] z-20" data-point="1">
 				<img src="paper1.png" alt="" class="w-full h-full object-contain">
 				<div class="absolute inset-0 justify-center text-center p-6 text-xl font-serif max-md:text-lg text-[#8B4513] inline-block content-center">
-					<span class="font-sans text-[#E472AB] font-bold text-[1.3rem] mr-1">#1:</span> <a href="https://example.com" class="underline">Înscrie-te</a> la Daydream {eventName}
+					<span class="font-sans text-[#E472AB] font-bold text-[1.3rem] mr-1">#1:</span> <a href={signupLink} class="underline">Înscrie-te</a> la Daydream {eventName}
 				</div>
 			</div>
 		</div>

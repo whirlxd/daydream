@@ -7,7 +7,7 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Daydream Jakarta";
+	const eventName = "Jakarta";
 	const eventLocation = "Jakarta";
 	const eventAddress = ""; // Leave this empty if you don't want an address
 	// These two are optional
@@ -15,6 +15,7 @@
 	const contactLink = "dave@dave9123.me" // "mailto:jakarta@daydream.hackclub.com"
 	
 	// Sponsors Configuration
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
 		{ image: "/jakarta/twbn-logo-turquoise-transparent.png", name: "Twibbonize", url: "https://twibbonize.com" }
@@ -836,7 +837,7 @@ Mumbai`.split("\n")
 			</h4>
 		</div>
 		
-		<ParticipantSignUp />
+		<ParticipantSignUp {eventName} />
 	</div>
 
 	<!-- <img src="hot-air-balloon.png" alt="" class="absolute w-1/8 right-32 bottom-40 z-20"> -->

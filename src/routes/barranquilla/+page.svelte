@@ -7,7 +7,7 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Daydream Barranquilla";
+	const eventName = "Barranquilla";
 	const eventLocation = "Barranquilla";
 	const eventAddress = ""; // Leave this empty if you don't want an address
 	// These two are optional
@@ -15,6 +15,7 @@
 		const contactLink = "mailto:barranquilla@daydream.hackclub.com"
 	
 	// Sponsors Configuration
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
 		{ image: "https://storage.jukeboxprint.com/s/images/jukebox-meta-im.png", name: "Jukebox Print", url: "https://jukeboxprint.com/custom-stickers" },
@@ -73,7 +74,7 @@ Dubai
 San Francisco
 Minneapolis
 Seattle
-Signapore
+Singapore
 Sydney
 Mumbai`.split("\n")
 
@@ -819,7 +820,7 @@ Mumbai`.split("\n")
 			</h4>
 		</div>
 		
-		<ParticipantSignUp />
+		<ParticipantSignUp {eventName} />
 	</div>
 
 	<!-- <img src="hot-air-balloon.png" alt="" class="absolute w-1/8 right-32 bottom-40 z-20"> -->
@@ -1042,12 +1043,10 @@ Mumbai`.split("\n")
 						{/if}
 					{/if}
 					
-					{#if contactLink}
-						<!-- Call to action for sponsors -->
-						<div class="mt-8 text-center">
-							<p class="text-lg text-[#335969]">Want to sponsor Daydream {eventName}? <a href={contactLink} class="underline hover:text-[#477783] transition-colors">Get in touch</a></p>
-						</div>
-					{/if}
+					<!-- Call to action for sponsors -->
+					<div class="mt-8 text-center">
+						<p class="text-lg text-[#335969]">¡Un gran agradecimiento a Jukebox por nuestras <a href="https://jukeboxprint.com/custom-stickers" class="underline hover:text-[#477783] transition-colors" target="_blank" rel="noopener noreferrer">pegatinas personalizadas</a>! <br> ¿Quieres patrocinar Daydream {eventName}? <a href={contactLink} class="underline hover:text-[#477783] transition-colors">Ponte en contacto</a></p>
+					</div>
 				</div>
 			</div>
 			
@@ -1119,7 +1118,7 @@ Mumbai`.split("\n")
 			<div class="relative w-72 h-40 max-md:w-80 animate-hover ![--hover:-0.15rem] ![animation-delay:1.7s] z-20" data-point="1">
 				<img src="paper1.png" alt="" class="w-full h-full object-contain">
 				<div class="absolute inset-0 justify-center text-center p-6 text-xl font-serif max-md:text-lg text-[#8B4513] inline-block content-center">
-					<span class="font-sans text-[#E472AB] font-bold text-[1.3rem] mr-1">#1:</span> <a href="https://example.com" class="underline">Regístrate</a> en Daydream {eventName}
+					<span class="font-sans text-[#E472AB] font-bold text-[1.3rem] mr-1">#1:</span> <a href={signupLink} class="underline">Regístrate</a> en Daydream {eventName}
 				</div>
 			</div>
 		</div>
