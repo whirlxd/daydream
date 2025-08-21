@@ -7,55 +7,48 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Miami";
-	const eventLocation = "Miami";
-	const eventAddress = ""; // Leave this empty if you don't want an address
+	const eventName = "DFW (Dallas-Fortworth)";
+	const eventLocation = "Dallas";
+
+	const eventAddress = "Dallas Makerspace: 1825 Monetary Ln Ste 104, Carrollton, TX 75006"; // Leave this empty if you don't want an address
 	// These two are optional
-	const directionsURL = ""
-	const contactLink = "mailto:miami@daydream.hackclub.com"
+	const directionsURL = "https://www.google.com/maps/place/Dallas+Makerspace/@32.9410971,-96.9089827,17z/data=!3m1!4b1!4m6!3m5!1s0x864c1fd805ad40af:0x6f562f9ff01bbebb!8m2!3d32.9410971!4d-96.9064078!16s%2Fg%2F1tnpldfj?entry=ttu&g_ep=EgoyMDI1MDgxNy4wIKXMDSoASAFQAw%3D%3D" // Add a google maps link here once you have an address
+	const contactLink = "mailto:dfw.daydream@gmail.com"
 	
 	// Sponsors Configuration
-
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recHbKhhA5VWAH7Lg"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
-
-	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recbYBNEWgDH7grEM"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
-
 	const sponsors = [
-		// { image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
-		// { image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
-		// { image: "/example/logo3.png", name: "Sponsor 3", url: "https://example3.com" },
-		// { image: "/example/logo4.png", name: "Sponsor 4", url: "https://example4.com" },
-		// { image: "/example/logo5.png", name: "Sponsor 5", url: "https://example5.com" },
-		// { image: "/example/logo6.png", name: "Sponsor 6", url: "https://example6.com" },
-		// { image: "/example/logo7.png", name: "Sponsor 7", url: "https://example7.com" }
+		{ image: "https://storage.jukeboxprint.com/s/images/jukebox-meta-im.png", name: "Jukebox Print", url: "https://jukeboxprint.com/custom-stickers" },
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
 	const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [
 		{
 			title: "Saturday, September 27th",
-			items: [
-				{ event: "Doors open", time: "7:00 AM" },
-				{ event: "Opening ceremony", time: "8:00 AM" },
-				{ event: "Team Formation session", time: "8:30 AM" },
-				{ event: "Start working on your project!", time: "9:00 AM" },
+			items:[]
+			/* items: [
+				{ event: "Doors open", time: "11:00 AM" },
+				{ event: "Opening ceremony", time: "12:00 PM" },
 				{ event: "Lunch", time: "12:30 PM" },
-				{ event: "Pygame Workshop", time: "3:00 PM" },
-				{ event: "Godot Workshop", time: "4:00 PM" },
-				{ event: "Dinner", time: "5:00 PM" },
-				{ event: "Github Workshop", time: "6:00 PM" }
-			]
+				{ event: "Start working on your project!", time: "1:00 PM" },
+				{ event: "Workshop 1", time: "2:00 PM" },
+				{ event: "Activity 1", time: "4:00 PM" },
+				{ event: "Workshop 2", time: "4:00 PM" },
+				{ event: "Dinner", time: "6:00 PM" },
+				{ event: "Lightning talks", time: "8:00 PM" },
+				{ event: "Midnight surprise", time: "12:00 AM" }
+			] */
 		},
 		{
 			title: "Sunday, September 28th",
+			items:[]
+			/*
 			items: [
-				{ event: "Doors open", time: "7:00 AM" },
 				{ event: "Breakfast", time: "8:00 AM" },
-				{ event: "Wrap Up Projects!", time: "10:30 AM" },
-				{ event: "Lunch", time: "1:00 PM" },
-				{ event: "Demos!", time: "4:00 PM" },
-				{ event: "Closing ceremony", time: "6:30 PM" }
-			]
+				{ event: "Demos!", time: "10:30 AM" },
+				{ event: "Closing ceremony", time: "12:00 PM" }
+			] */
 		}
 	];
 
@@ -79,33 +72,48 @@
 	$: pageKeywords = `game jam, hackathon, teen coding, Hack Club, game development, ${eventLocation}, ${eventName}`;
 
 	// Cities where the game jam is happening
-	const cities = `Columbus
-Lisbon 
-Boston
-Giza
-Vancouver
-Houston
-New York City
-Bengaluru
-Tampa
-Auckland
-Omaha
-Phoenix
-Madrid
-Boise
-Ottawa
-Hangzhou
-Islamabad
-London
-Visakhapatnam
-Dubai
-San Francisco
-Minneapolis
-Seattle
-Singapore
-Sydney
-Miami
-Mumbai`.split("\n")
+	const cities = `Toronto  
+Mumbai  
+Madrid  
+San Francisco  
+Phoenix  
+Kathmandu  
+Dallas-Fortworth ♡
+Boise  
+Casablanca  
+London  
+Islamabad  
+Seattle  
+Boston  
+Tokyo  
+Minneapolis  
+Cairo  
+New York City  
+Lisbon  
+Jakarta  
+Ottawa  
+Dubai  
+São Paulo  
+Vancouver  
+Giza  
+Columbus  
+Singapore  
+Manila  
+Warsaw  
+Houston  
+Istanbul  
+Hangzhou  
+Bengaluru  
+Moscow  
+Delhi  
+Sydney  
+Tampa  
+Budapest  
+Visakhapatnam  
+Auckland  
+Karachi  
+Beijing  
+Lagos`.split("\n")
 
 	function createSmoothPath(points: Array<{ x: number; y: number }>) {
 		if (points.length < 2) return "";
@@ -913,22 +921,22 @@ Mumbai`.split("\n")
 		<div class="relative z-20 px-20 pt-20 pb-52 rounded-lg mb-0 max-sm:px-18" style="background-image: url('/letter-top.png'), linear-gradient(to bottom, #FCEFC5 100px, transparent 100px), url('/letter-loop.png'); background-size: 100% auto, 100% auto, 100% auto; background-repeat: no-repeat, no-repeat, repeat-y; background-position: top, top, top; background-attachment: local, local, local;">
 			<div class="absolute bottom-0 left-0 w-full h-24 z-10 pointer-events-none bg-[url('/clouds-loop.png')] bg-repeat-x bg-bottom bg-contain"></div>
 			<h2 class="text-5xl font-serif italic text-[#8B4513] mb-10 relative">
-				Dear Hackers, Musicians, and Artist,
+				Dear Hackers, Musicians, and Artists,
 				<img src="/underline.svg" alt="" class="absolute left-0 -bottom-3 w-64 h-auto opacity-70">
 			</h2>
 			
 			<div class="text-[#8B4513] font-serif text-xl leading-relaxed space-y-8">
-				<p>Welcome to Hack Club's newest adventure. This fall we invite you to join us for Daydream, the world's biggest Game Jam happening simultaneously in 100 cities.</p>
+				<p>Welcome to Hack Club's newest adventure! This autumn, we invite you to join us for Daydream: the world's biggest Game Jam happening simultaneously in 100 cities.</p>
 
 				<p class="font-bold text-2xl">Hack Club wants you to make a game this fall.</p>
 
-				<p>Don't consider yourself a game dev? No problem - we have tons of online and in-person workshops for you to make your first game! </p>
+				<p>Don't consider yourself a game developer? No problem - we'll have workshops for you at Daydream to help you make your first game! </p>
 
 				<p>This fall, we invite you to learn something new, make something you're really proud of, meet new friends, and go on an incredible adventure together.</p>
 
 				<p class="mb-2">With love,</p>
 
-				<p class="italic text-2xl opacity-85">Augie and Renran from Hack Club HQ</p>
+				<p class="italic text-2xl opacity-85">The Daydream DFW Organizing Team</p>
 			</div>
 		</div>
 	</div>
@@ -954,7 +962,7 @@ Mumbai`.split("\n")
 			<!-- Header Section -->
 			<div class="w-full bg-[url('/billboard-bg-texture.png')] bg-contain bg-repeat py-6 relative" style="border-bottom: 8px solid #B4B4C5;">
 				<h2 class="text-4xl font-serif text-[#F0F0FF] text-center">
-					Schedule
+					Schedule... coming soon!
 				</h2>
 				<!-- Brush texture overlay for header -->
 				<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
@@ -1075,6 +1083,7 @@ Mumbai`.split("\n")
 					{#if contactLink}
 						<!-- Call to action for sponsors -->
 						<div class="mt-8 text-center">
+							<p class="text-lg text-[#335969]">Big shout-out to Jukebox for our <a href="https://jukeboxprint.com/custom-stickers" class="underline hover:text-[#477783] transition-colors" target="_blank" rel="noopener noreferrer">custom stickers</a>!</p>
 							<p class="text-lg text-[#335969]">Want to sponsor Daydream {eventName}? <a href={contactLink} class="underline hover:text-[#477783] transition-colors">Get in touch</a></p>
 						</div>
 					{/if}
@@ -1219,7 +1228,7 @@ Mumbai`.split("\n")
 			<!-- Map container with cloudy edges -->
 			<div class="relative w-full h-156 overflow-hidden bg-transparent">
 				<iframe 
-					src={eventAddress ? "/event-map?location=" + encodeURIComponent(eventAddress) : "/map"}
+					src={"/map"}
 					class="w-full h-full border-0 bg-[#acd4e0]"
 					style="
 						mask-image: 
@@ -1521,7 +1530,7 @@ Mumbai`.split("\n")
 			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
 				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">What if my parents are concerned?</h3>
-				<p class="text-sm">We're here to help! You can see our parent guide here, or they can reach out to us at daydream@hackclub.com for questions.</p>
+				<p class="text-sm">We're here to help! You can see our parent guide here, or they can reach out to us at dfw.daydream@gmail.com for questions.</p>
 			</div>
 		</div>
 
@@ -1531,14 +1540,6 @@ Mumbai`.split("\n")
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
 				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">What can I make at Daydream?</h3>
 				<p class="text-sm">ANY type of game based on the theme! Platformer, visual novel, clicker game, etc. Be as creative as possible!</p>
-			</div>
-		</div>
-		<!-- FAQ Item 9 -->
-		<div class="relative transform rotate-1">
-			<img src="window-4.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
-			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">Is this the final schedule?</h3>
-				<p class="text-sm">Unfortunately no, please make sure to check up on the website as the schedule is currently very tentative. Contact miami@daydream.hackclub.com for any concerns or questions. </p>
 			</div>
 		</div>
 	</div>
@@ -1583,4 +1584,3 @@ Mumbai`.split("\n")
 		</div>
 	</div>
 {/if}
-

@@ -7,27 +7,24 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Miami";
-	const eventLocation = "Miami";
-	const eventAddress = ""; // Leave this empty if you don't want an address
-	// These two are optional
+	const eventName = "Milwaukee"; // This should be the name of your event WITHOUT "Daydream" at the start
+	const eventLocation = "Milwaukee";
+	const eventAddress = "Milwaukee Youth Arts Center, 325 W. Walnut St., Milwaukee, WI 53212"; // Leave this empty if you don't want an address
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recL3BvxoCPzbRIYR"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = ""
-	const contactLink = "mailto:miami@daydream.hackclub.com"
+	const contactLink = "mailto:daydreammilwaukee@gmail.com"
 	
-	// Sponsors Configuration
-
-	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
-
-	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recbYBNEWgDH7grEM"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
-
+	// Sponsors Configuration - disable this if you don't have any sponsors to display!
+	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		// { image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
-		// { image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
-		// { image: "/example/logo3.png", name: "Sponsor 3", url: "https://example3.com" },
-		// { image: "/example/logo4.png", name: "Sponsor 4", url: "https://example4.com" },
-		// { image: "/example/logo5.png", name: "Sponsor 5", url: "https://example5.com" },
-		// { image: "/example/logo6.png", name: "Sponsor 6", url: "https://example6.com" },
-		// { image: "/example/logo7.png", name: "Sponsor 7", url: "https://example7.com" }
+		{ image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
+		{ image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
+		{ image: "/example/logo3.png", name: "Sponsor 3", url: "https://example3.com" },
+		{ image: "/example/logo4.png", name: "Sponsor 4", url: "https://example4.com" },
+		{ image: "/example/logo5.png", name: "Sponsor 5", url: "https://example5.com" },
+		{ image: "/example/logo6.png", name: "Sponsor 6", url: "https://example6.com" },
+		{ image: "/example/logo7.png", name: "Sponsor 7", url: "https://example7.com" }
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
@@ -35,26 +32,33 @@
 		{
 			title: "Saturday, September 27th",
 			items: [
-				{ event: "Doors open", time: "7:00 AM" },
-				{ event: "Opening ceremony", time: "8:00 AM" },
-				{ event: "Team Formation session", time: "8:30 AM" },
-				{ event: "Start working on your project!", time: "9:00 AM" },
-				{ event: "Lunch", time: "12:30 PM" },
-				{ event: "Pygame Workshop", time: "3:00 PM" },
-				{ event: "Godot Workshop", time: "4:00 PM" },
-				{ event: "Dinner", time: "5:00 PM" },
-				{ event: "Github Workshop", time: "6:00 PM" }
+				{ event: "Soft Landing + Checkin", time: "8:30 AM" },
+				{ event: "Opening Words", time: "9:00 AM"},
+				{ event: "Start working on your project!", time: "9:30 AM" },
+				{ event: "Lunch and Social Time", time: "12:30 PM" },
+				{ event: "Dedicated Work Time", time: "1:00 PM" },
+				{ event: "Workshop? - TBD", time: "2:00 PM" },
+				{ event: "Workshop? - TBD", time: "4:00 PM" },
+				{ event: "Dinner", time: "7:30 PM" },
+				{ event: "Organizer Yap Session", time: "8:00 PM" },
+				{ event: "More Work Time", time: "8:15 PM" },
+				{ event: "GO TO SLEEP", time: "11:00 PM" }
 			]
 		},
 		{
 			title: "Sunday, September 28th",
 			items: [
-				{ event: "Doors open", time: "7:00 AM" },
-				{ event: "Breakfast", time: "8:00 AM" },
-				{ event: "Wrap Up Projects!", time: "10:30 AM" },
-				{ event: "Lunch", time: "1:00 PM" },
-				{ event: "Demos!", time: "4:00 PM" },
-				{ event: "Closing ceremony", time: "6:30 PM" }
+				{ event: "Wakeup Calls", time: "8:00 AM" },
+				{ event: "Breakfast", time: "8:30 AM" },
+				{ event: "Work Time", time: "9:00 AM" },
+				{ event: "Lunch", time: "12:30 PM" },
+				{ event: "Work Time!", time: "1 PM" },
+				{ event: "Workshop? - TBD", time: "2:00 PM" },
+				{ event: "Dinner", time: "7:00 PM" },
+				{ event: "Finishing Touches", time: "7:30 PM" },
+				{ event: "Demos", time: "8:00 PM" },
+				{ event: "Closing", time: "9:30 pm"},
+				{ event: "Pack up and go home!", time: "10:00 PM" }
 			]
 		}
 	];
@@ -75,8 +79,8 @@
 	// Get current URL for dynamic metadata
 	$: currentUrl = `https://daydream.hackclub.com${$page.url.pathname}`;
 	$: pageTitle = `Daydream ${eventName} - ${eventLocation} Game Jam`;
-	$: pageDescription = `Join Daydream ${eventName} in ${eventLocation}! A teen-led game jam where you'll build amazing games with other high schoolers. Food, workshops, and prizes included!`;
-	$: pageKeywords = `game jam, hackathon, teen coding, Hack Club, game development, ${eventLocation}, ${eventName}`;
+	$: pageDescription = `Join Daydream ${eventName} in ${eventLocation}! A student-led game jam where you'll build amazing games with other high schoolers. Food, workshops, and prizes included!`;
+	$: pageKeywords = `game jam, hackathon, student coding, teen coding, Hack Club, game development, ${eventLocation}, ${eventName}`;
 
 	// Cities where the game jam is happening
 	const cities = `Columbus
@@ -102,9 +106,8 @@ Dubai
 San Francisco
 Minneapolis
 Seattle
-Singapore
+Signapore
 Sydney
-Miami
 Mumbai`.split("\n")
 
 	function createSmoothPath(points: Array<{ x: number; y: number }>) {
@@ -845,7 +848,7 @@ Mumbai`.split("\n")
 			<h4
 				class="text-2xl opacity-90 mt-2 font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent max-sm:text-xl"
 			>
-				Organized by Teenagers in {@html eventLocation.replaceAll(" ", "&nbsp;")}
+				Organized by Students in {@html eventLocation.replaceAll(" ", "&nbsp;")}
 			</h4>
 		</div>
 		
@@ -1531,14 +1534,6 @@ Mumbai`.split("\n")
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
 				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">What can I make at Daydream?</h3>
 				<p class="text-sm">ANY type of game based on the theme! Platformer, visual novel, clicker game, etc. Be as creative as possible!</p>
-			</div>
-		</div>
-		<!-- FAQ Item 9 -->
-		<div class="relative transform rotate-1">
-			<img src="window-4.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
-			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">Is this the final schedule?</h3>
-				<p class="text-sm">Unfortunately no, please make sure to check up on the website as the schedule is currently very tentative. Contact miami@daydream.hackclub.com for any concerns or questions. </p>
 			</div>
 		</div>
 	</div>
