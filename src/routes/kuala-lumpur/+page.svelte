@@ -14,7 +14,7 @@
 	// These two are optional
 	const contactLink = "Coming Soon!"
 	const directionsURL = "";
-	const signupLink = "https://forms.hackclub.com/daydream-sign-up"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recbJ3NcnXWY89RAe"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	
 	// Sponsors Configuration
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
@@ -1064,7 +1064,16 @@ Mumbai`.split("\n")
 									{#each sponsors as sponsor}
 										{#if sponsor.name === "Sponsor 1"}
 											<div class="bg-white/20 rounded-lg p-1 w-full flex-col items-center justify-center hover:bg-white/40 transition-colors text-center">
-												
+												<p class="mb-4 text-black text-base">
+													Hey! So you want to know where we're getting our amazing <a href="https://www.jukeboxprint.com/custom-stickers">custom stickers</a> from? Jukebox, of course!
+												</p>
+												<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-20 object-contain">
+											</div>
+										{:else}
+											<a href={sponsoe.url} class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors" target="_blank" rel="noopener norefferer">
+												<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain">
+											</a>
+										{/if}												
 									{/each}
 								</div>
 							</div>
