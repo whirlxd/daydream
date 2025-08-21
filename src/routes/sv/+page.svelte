@@ -8,6 +8,9 @@
 
 	// Silicon Valley landmarks and tech companies
 
+import discordSymbol from "./Discord-Symbol-Black.svg";
+import InstagramSymbol from "./Instagram_Glyph_Black.svg";
+
 const cities = `Minecraft
 Fortnite
 Valorant
@@ -489,27 +492,40 @@ Roblox`.split('\n');
 				Calling all coders, artists, musicians and gamers!
 			</h4>
 			<div class="text-sm sm:text-base md:text-lg font-semibold text-[#44DBC8] mt-2 opacity-90">
-				$15,000+ Prize Pool • Industry Mentors • Cutting-Edge Tech
+				$35,000+ Prize Pool • Industry Mentors • Cutting-Edge Tech
 			</div>
 		</div>
 
 		<div class="mt-8 sm:mt-12 flex flex-col items-center gap-6 sm:gap-8 z-5 animate-in-cta">
 			<!-- Primary CTA -->
 			<a
-				href="https://forms.hackclub.com/daydream"
+			href="https://forms.hackclub.com/daydream-rsvp?event=recro0X4uHS1vxztZm"
+			target="_blank"
+			rel="noopener noreferrer"
+			class="bg-gradient-to-r from-[#44DBC8] to-[#52E4D1] text-white text-base sm:text-lg md:text-xl font-bold py-3 sm:py-4 md:py-5 px-6 sm:px-8 md:px-12 rounded-full hover:shadow-2xl hover:scale-110 transition-all duration-300 border-b-4 border-[#3CC2AF] active:border-b-0 active:translate-y-1 hover:from-[#487DAB] hover:to-[#5A8DBD] focus:outline-none focus:ring-4 focus:ring-[#44DBC8]/50 hover:brightness-110 hover:rotate-1 hover:-translate-y-1"
+			aria-label="Register for Daydream Silicon Valley Game Jam (opens in new tab)"
+			>
+				Register Now
+			</a>
+			
+			<div class="flex gap-8 items-center justify-center">
+				<a
+				href="https://discord.gg/F6JtCnFF"
 				target="_blank"
 				rel="noopener noreferrer"
-				class="bg-gradient-to-r from-[#44DBC8] to-[#52E4D1] text-white text-base sm:text-lg md:text-xl font-bold py-3 sm:py-4 md:py-5 px-6 sm:px-8 md:px-12 rounded-full hover:shadow-2xl hover:scale-110 transition-all duration-300 border-b-4 border-[#3CC2AF] active:border-b-0 active:translate-y-1 hover:from-[#487DAB] hover:to-[#5A8DBD] focus:outline-none focus:ring-4 focus:ring-[#44DBC8]/50 hover:brightness-110 hover:rotate-1 hover:-translate-y-1"
-				aria-label="Register for Daydream Silicon Valley Game Jam (opens in new tab)"
-			>
-				Join Silicon Valley's Epic Game Jam ($15K+ Prizes!)
-			</a>
-
-			<p
-				class="text-xs sm:text-sm text-[#487DAB] text-center max-w-sm sm:max-w-md font-serif italic animate-in-tagline transition-all duration-300 hover:scale-105 hover:text-[#44DBC8] cursor-default px-4"
-			>
-				HackClub's beginner friendly game jam✨
-			</p>
+				aria-label="Join the Discord Server (opens in new tab)"
+				>
+					<img src={discordSymbol} alt="Discord" class="hover:scale-110 transition-all duration-300 active:border-b-0 active:translate-y-1 hover:brightness-110 hover:rotate-1 hover:-translate-y-1 w-11">
+				</a>
+				<a
+				href="https://www.instagram.com/daydream_siliconvalley/"
+				target="_blank"
+				rel="noopener noreferrer"
+				aria-label="Follow us on Instagram (opens in new tab)"
+				>
+					<img src={InstagramSymbol} alt="Instagram" class="hover:scale-110 transition-all duration-300 active:border-b-0 active:translate-y-1 hover:brightness-110 hover:rotate-1 hover:-translate-y-1 w-11">
+				</a>
+			</div>
 		</div>
 	</div>
 
@@ -531,7 +547,7 @@ Roblox`.split('\n');
 </div>
 
 <!-- Game Creation Experience Section -->
-<div class="w-full bg-gradient-to-b from-[#FAFCFF] to-[#F5FBFF] py-16 sm:py-24 md:py-32 relative">
+<div class="w-full bg-gradient-to-b from-[#FAFCFF] to-[#F5FBFF] py- sm:py-24 md:py-32 relative">
 	<div
 		class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-20 pointer-events-none"
 		style="transform: translateY({parallaxOffset * 0.3}px)"
@@ -540,7 +556,7 @@ Roblox`.split('\n');
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 		<div class="text-center mb-12 sm:mb-16 md:mb-20 scroll-reveal">
 			<h2
-				class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif italic bg-gradient-to-r from-[#487DAB] via-[#5A8DBD] to-[#44DBC8] bg-clip-text text-transparent mb-6 md:mb-8"
+				class="text-3xl sm:text-4xl md:text-5xl font-serif italic bg-gradient-to-r from-[#487DAB] via-[#5A8DBD] to-[#44DBC8] bg-clip-text text-transparent mb-6 md:mb-8"
 			>
 				Hackathon Magic: Make Games, Meet Cool People
 			</h2>
@@ -570,7 +586,6 @@ Roblox`.split('\n');
 					<p class="text-[#487DAB] text-base sm:text-lg leading-relaxed">
 						Since HackClub's start in 2014, we have been hosting several beginner-friendly
 						hackathons a year for high school coders and makers.
-						<span class="font-semibold text-[#44DBC8]">Compete for $15K+ in prizes!</span>
 					</p>
 				</div>
 			</div>
@@ -591,10 +606,7 @@ Roblox`.split('\n');
 					<p class="text-[#487DAB] text-base sm:text-lg leading-relaxed">
 						Daydream is a beginner friendly game jam for high schoolers happening in 100+ cities
 						simultaneously where artists, musicians, and coders get together to build apps and
-						games, and see
-						<span class="font-semibold text-[#44DBC8]"
-							>Silicon Valley's biggest game jam prize pool.</span
-						>
+						games.
 					</p>
 				</div>
 			</div>
@@ -613,7 +625,7 @@ Roblox`.split('\n');
 				<div
 					class="text-lg sm:text-xl md:text-2xl font-bold text-[#44DBC8] mb-3 md:mb-4 opacity-90"
 				>
-					$15,000+ Prize Pool
+					$35,000+ Prize Pool
 				</div>
 				<p
 					class="text-base sm:text-lg md:text-xl text-[#487DAB] opacity-90 max-w-4xl mx-auto leading-relaxed px-4"
@@ -640,16 +652,9 @@ Roblox`.split('\n');
 		<div
 			class="bg-gradient-to-br from-white via-[#FCFEFF] to-[#F5FBFF] rounded-2xl md:rounded-3xl border-2 border-[#E8F4FD] p-6 sm:p-10 md:p-16 shadow-lg relative overflow-hidden scroll-reveal"
 		>
-			<!-- Dreamy Badge -->
-			<div
-				class="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 bg-gradient-to-r from-[#44DBC8] to-[#52E4D1] text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-bold"
-			>
-				✨ $15K+ PRIZES
-			</div>
-
 			<div class="text-center mb-8 sm:mb-10 md:mb-12">
 				<h2
-					class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif italic bg-gradient-to-r from-[#487DAB] to-[#5A8DBD] bg-clip-text text-transparent mb-3 md:mb-4 mt-5 sm:mt-3 md:mt-0"
+					class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif italic bg-gradient-to-r from-[#487DAB] to-[#5A8DBD] bg-clip-text text-transparent mb-3 md:mb-4"
 				>
 					Dear Game Creator,
 				</h2>
@@ -671,7 +676,7 @@ Roblox`.split('\n');
 
 				<p>
 					Whether you’re a beginner or experienced in programming- we’ll have workshops, resources
-					and mentors throughout the 24 hours to help you with your project. >
+					and mentors throughout the 24 hours to help you with your project.
 				</p>
 
 				<p>
@@ -685,11 +690,11 @@ Roblox`.split('\n');
 
 			<div class="text-center mt-8 sm:mt-10 md:mt-12">
 				<a
-					href="https://forms.hackclub.com/daydream"
+					href="https://forms.hackclub.com/daydream-rsvp?event=recro0X4uHS1vxztZ"
 					target="_blank"
 					class="inline-block bg-gradient-to-r from-[#44DBC8] to-[#52E4D1] text-white text-base sm:text-lg md:text-xl font-bold py-3 sm:py-4 px-6 sm:px-8 md:px-12 rounded-full hover:shadow-2xl hover:scale-110 transition-all duration-300 border-b-4 border-[#3CC2AF] active:border-b-0 active:translate-y-1 hover:from-[#487DAB] hover:to-[#5A8DBD] hover:brightness-110 hover:rotate-1 hover:-translate-y-1"
 				>
-					Join the Silicon Valley Dream ($15K+ Prizes)
+					Join the Silicon Valley Dream
 				</a>
 			</div>
 		</div>
@@ -714,29 +719,6 @@ Roblox`.split('\n');
 				Join talented young creators in Silicon Valley's High School Game Jam.
 			</p>
 		</div>
-
-		<!-- Registration CTA -->
-		<div
-			class="bg-gradient-to-br from-white via-[#FCFEFF] to-[#F8FDFF] rounded-2xl md:rounded-3xl border-2 border-[#E8F4FD] p-6 sm:p-10 md:p-16 shadow-lg text-center mb-12 sm:mb-14 md:mb-16 scroll-reveal"
-		>
-			<h3 class="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-[#487DAB] mb-4 md:mb-6">
-				Join Silicon Valley's Game Jam
-			</h3>
-			<p class="text-base sm:text-lg md:text-xl text-[#487DAB] mb-6 md:mb-8 max-w-2xl mx-auto px-4">
-				Ready to code like a Silicon Valley legend? Join us for 14 hours of innovation, epic prizes,
-				and game dev magic in the heart of tech's birthplace.
-			</p>
-			<a
-				href="https://forms.hackclub.com/daydream"
-				target="_blank"
-				rel="noopener noreferrer"
-				class="inline-block bg-gradient-to-r from-[#44DBC8] to-[#52E4D1] text-white text-base sm:text-lg md:text-xl font-bold py-3 sm:py-4 px-6 sm:px-8 md:px-12 rounded-full hover:shadow-2xl hover:scale-110 transition-all duration-300 hover:from-[#487DAB] hover:to-[#5A8DBD] focus:outline-none focus:ring-4 focus:ring-[#44DBC8]/50 hover:brightness-110 hover:rotate-1 hover:-translate-y-1"
-				aria-label="Register for Daydream Silicon Valley Game Jam (opens in new tab)"
-			>
-				Win Big at Silicon Valley's Epic Game Jam
-			</a>
-		</div>
-
 		<!-- Dreamy Stats -->
 		<div class="grid md:grid-cols-3 gap-6 sm:gap-8">
 			<div
@@ -755,7 +737,7 @@ Roblox`.split('\n');
 				<div
 					class="bg-gradient-to-br from-[#F8FDFF] via-white to-[#F0F8FE] rounded-2xl md:rounded-3xl border-2 border-[#E8F4FD] p-6 sm:p-8 shadow-lg transition-all duration-300 hover:border-[#44DBC8]/50"
 				>
-					<div class="text-2xl sm:text-3xl font-bold text-[#44DBC8] mb-2">$15K+</div>
+					<div class="text-2xl sm:text-3xl font-bold text-[#44DBC8] mb-2">$35K+</div>
 					<p class="text-[#487DAB] text-sm sm:text-base">Prize pool awaiting dreamers</p>
 				</div>
 			</div>
@@ -916,7 +898,7 @@ Roblox`.split('\n');
 			<h2
 				class="text-3xl sm:text-4xl md:text-5xl font-serif italic bg-gradient-to-r from-[#487DAB] to-[#5A8DBD] bg-clip-text text-transparent mb-4 md:mb-6"
 			>
-				$15,000+ Prize Pool ✨
+				$35,000+ Prize Pool ✨
 			</h2>
 			<p
 				class="text-base sm:text-lg text-[#487DAB]/80 font-serif max-w-2xl mx-auto leading-relaxed px-4"
@@ -972,8 +954,7 @@ Roblox`.split('\n');
 				Sponsor Magic ✨
 			</h2>
 			<p class="text-base sm:text-lg md:text-xl text-white/90 font-serif max-w-3xl mx-auto px-4">
-				Join us in creating Silicon Valley's most dreamy game development experience with a $15K+
-				prize pool
+				Join us in creating Silicon Valley's best game development experience
 			</p>
 		</div>
 
@@ -1006,7 +987,7 @@ Roblox`.split('\n');
 				Want to craft something magical for the next generation of game creators?
 			</p>
 			<p class="text-lg sm:text-xl font-semibold text-white mb-6 sm:mb-8 px-4">
-				Help us power a $15,000+ prize pool and Silicon Valley's premier game jam ✨
+				Help us power a $35,000+ prize pool and Silicon Valley's premier game jam ✨
 			</p>
 			<a
 				href="mailto:sponsors@hackclub.com"
@@ -1047,7 +1028,7 @@ Roblox`.split('\n');
 					>Hack Club</a
 				>
 				<a
-					href="https://forms.hackclub.com/daydream"
+					href="https://forms.hackclub.com/daydream-rsvp?event=recro0X4uHS1vxztZ"
 					class="underline text-gray-700 hover:text-[#44DBC8] transition-all duration-300 font-serif focus:outline-none focus:ring-2 focus:ring-[#44DBC8]/50 rounded hover:scale-105 text-sm sm:text-base"
 					>Join the Jam</a
 				>
