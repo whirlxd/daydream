@@ -9,7 +9,7 @@
 	// Configuration - Put your information here!
 	const eventName = "Milwaukee"; // This should be the name of your event WITHOUT "Daydream" at the start
 	const eventLocation = "Milwaukee";
-	const eventAddress = "Milwaukee Youth Arts Center, 325 W. Walnut St., Milwaukee, WI 53212"; // Leave this empty if you don't want an address
+	const eventAddress = ""; // Leave this empty if you don't want an address
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recL3BvxoCPzbRIYR"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = ""
