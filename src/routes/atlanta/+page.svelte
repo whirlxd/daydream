@@ -15,7 +15,7 @@
 	const contactLink = "loganpeterson@hackclub.app"
 	
 	// Sponsors Configuration
-	const signupLink = "https://forms.hackclub.com/daydream-rsvp"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	const sponsorsEnabled = false; // false for now...
 	const sponsors = [
 		{ image: "jukebox.png", name: "Jukebox Prints!", url: "https://www.jukeboxprint.com/custom-stickers" },
@@ -96,7 +96,7 @@ Dubai
 San Francisco
 Minneapolis
 Seattle
-Signapore
+Singapore
 Sydney
 Mumbai`.split("\n")
 
