@@ -7,8 +7,8 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "DFW (Dallas-Fortworth)";
-	const eventLocation = "Dallas";
+	const eventName = "DFW";
+	const eventLocation = "Dallas-Fortworth";
 
 	const eventAddress = "Dallas Makerspace: 1825 Monetary Ln Ste 104, Carrollton, TX 75006"; // Leave this empty if you don't want an address
 	// These two are optional
@@ -62,7 +62,7 @@
 	import { ScrollTrigger } from "gsap/ScrollTrigger";
 	import Ticker from "$lib/components/Ticker.svelte";
 	import Footer from "$lib/components/Footer.svelte";
-	import ParticipantSignUp from "$lib/components/ParticipantSignUp.svelte";
+	import ParticipantSignUp from "./dfwSignUp.svelte";
 	import { page } from '$app/stores';
 	
 	
