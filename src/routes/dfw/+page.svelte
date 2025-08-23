@@ -13,6 +13,7 @@
 	const eventAddress = "Dallas Makerspace: 1825 Monetary Ln Ste 104, Carrollton, TX 75006"; // Leave this empty if you don't want an address
 	// These two are optional
 	const directionsURL = "https://www.google.com/maps/place/Dallas+Makerspace/@32.9410971,-96.9089827,17z/data=!3m1!4b1!4m6!3m5!1s0x864c1fd805ad40af:0x6f562f9ff01bbebb!8m2!3d32.9410971!4d-96.9064078!16s%2Fg%2F1tnpldfj?entry=ttu&g_ep=EgoyMDI1MDgxNy4wIKXMDSoASAFQAw%3D%3D" // Add a google maps link here once you have an address
+
 	const contactLink = "mailto:dfw@daydream.hackclub.com"
 	
 	// Sponsors Configuration
