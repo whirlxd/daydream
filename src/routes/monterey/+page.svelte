@@ -13,7 +13,7 @@
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recRJjpziF5cMuByP"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional
 //	const directionsURL = "https://www.google.com/maps/search/1600+pennsylvania+avenue+washington+dc/"
-	const contactLink = "mailto:shayanbahrainy@gmail.com"
+	const contactLink = "mailto:monterey@daydream.hackclub.com"
 	
 	// Sponsors Configuration
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
