@@ -10,10 +10,10 @@
 	const eventName = "Red Sea"; // This should be the name of your event WITHOUT "Daydream" at the start
 	const eventLocation = "Red Sea City";
 	const eventAddress = "South Valley University Hurghada Branch, Ras Ghareb - Hurghada Rd, Red Sea Governorate"; // Leave this empty if you don't want an address
-	const signupLink = "https://forms.hackclub.com/daydream-sign-up"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recfLqydkliPcUYoe"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = "https://maps.app.goo.gl/frKTnS8kkmSts9sH6"
-	const contactLink = "mailto:redsea@daydream.hackclub.com"
+	const contactLink = "mailto:redsea.stem.hackclub@gmail.com"
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
@@ -1323,17 +1323,6 @@ Red Sea`.split("\n")
 		">
 			<!-- frame around content -->
 			<div class="absolute inset-0 bg-[url(/macintosh-frame.png)] bg-size-[100%_100%]"></div>
-
-			<!-- Hack Club logo on border -->
-			<img 
-				src="/macintosh-hc-logo.png" 
-				alt="Hack Club logo" 
-				class="absolute w-12 h-12 pointer-events-none z-20" 
-				style="
-					bottom: calc(-1 * clamp(232px, 29vw, 464px) + 8rem);
-					left: 5%;
-				"
-			>
 			
 			<!-- Brushstroke overlay on border -->
 			<div 
