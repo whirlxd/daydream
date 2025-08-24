@@ -8,7 +8,7 @@
 
 	// Configuration - Put your information here!
 	const eventName = "Hamilton";
-	const eventLocation = "Saints Studio";
+	const eventLocation = "Hamilton";
 	const eventAddress = "12 Barton St Level 2, Waterdown, ON L0R 2H0, Canada"; // Leave this empty if you don't want an address
 	// These two are optional
 	const directionsURL = "https://www.google.com/maps/place/Hamilton,+ON/"
@@ -846,7 +846,7 @@ Mumbai`.split("\n")
 			<h4
 				class="text-2xl opacity-90 mt-2 font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent max-sm:text-xl"
 			>
-				 Organized by Teenagers in Hamilton <!-- {@html eventLocation.replaceAll(" ", "&nbsp;")} -->
+				 Organized by Teenagers in  {@html eventLocation.replaceAll(" ", "&nbsp;")}
 			</h4>
 		</div>
 		
