@@ -13,7 +13,7 @@
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional
 	const directionsURL = "https://www.google.com/maps/place/Raspberry+Pi+Foundation/@52.1966209,0.1281369,17z/data=!3m1!4b1!4m6!3m5!1s0x47d870831b2fd0b5:0xf3176a3ca4b18b5f!8m2!3d52.1966209!4d0.1307118!16s%2Fm%2F0j62fvl?entry=ttu&g_ep=EgoyMDI1MDgxMi4wIKXMDSoASAFQAw%3D%3D"
-	const contactLink = "delana@youthacks.org"
+	const contactLink = "mailto:delana@youthacks.org"
 	
 	// Sponsors Configuration
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section

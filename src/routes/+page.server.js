@@ -1,8 +1,12 @@
-import { GEOCODER_API_KEY } from '$env/static/private';
+import { GEOCODER_API_KEY, STATIC_PREVIEW } from '$env/static/private';
 import { loadAndGeocodeEvents, calculateDistance } from '$lib/events';
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load({ request, getClientAddress }) {
+	if (STATIC_PREVIEW === "true") return {
+		nearestEvent: null
+	}
+
 	// Get user's IP address
 	const userIP = getClientAddress();
 	
@@ -49,7 +53,6 @@ export async function load({ request, getClientAddress }) {
 	}
 
 	return {
-		userCity: locationData?.city,
 		nearestEvent
 	};
 }
