@@ -74,7 +74,7 @@
 	$: pageKeywords = `game jam, hackathon, teen coding, Hack Club, game development, ${eventLocation}, ${eventName}`;
 
 	// Cities where the game jam is happening
-	const cities = `Biratnagar
+	const cities = `Columbus
 Lisbon 
 Boston
 Giza
