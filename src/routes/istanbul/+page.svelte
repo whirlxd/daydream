@@ -13,7 +13,7 @@
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recnoHfNqKMYJ0hKO"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = "https://maps.app.goo.gl/Vs1J8BiKM7NAS7J2A" // Leave empty for now
-	const contactLink = "mailto:diyarbakir@daydream.hackclub.com"
+	const contactLink = "mailto:istanbul@daydream.hackclub.com"
 	
 	// Language support
 	let currentLanguage = "tr"; // Default to Turkish
