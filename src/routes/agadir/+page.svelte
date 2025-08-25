@@ -32,11 +32,10 @@
 		{
 			title: "Saturday, September 27th",
 			items: [
-				{ event: "Doors open", time: "12:40 PM" },
-				{ event: "Opening ceremony", time: "1:00 PM" },
-				{ event: "Lunch", time: "1:40 PM" },
-				{ event: "Start working on your project!", time: "2:10 PM" },
-				{ event: "Workshop 1", time: "3:10 PM" },
+				{ event: "Opening ceremony", time: "8:40 AM" },
+				{ event: "Start working on your project!", time: "9:00 AM" },
+				{ event: "Workshop 1", time: "12:00 PM" },
+				{ event: "Lunch", time: "3:10 PM" },
 				{ event: "Workshop 2", time: "4:10 PM" },
 				{ event: "Dinner", time: "6:30 PM" },
 				{ event: "Doors closing", time: "7:00 PM" }
