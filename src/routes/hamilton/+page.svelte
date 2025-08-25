@@ -11,7 +11,7 @@
 	const eventLocation = "Hamilton";
 	const eventAddress = "12 Barton St Level 2, Waterdown, ON L0R 2H0, Canada"; // Leave this empty if you don't want an address
 	// These two are optional
-	const directionsURL = "https://www.google.com/maps/place/Hamilton,+ON/"
+	const directionsURL = "https://www.google.com/maps/place/12+Barton+St+Level+2,+Waterdown,+ON+L0R+2H0/"
 	const contactLink = "mailto:hamilton@daydream.hackclub.com"
 	
 		// Sponsors Configuration
