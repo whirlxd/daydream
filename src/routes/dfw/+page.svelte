@@ -7,19 +7,22 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "DFW (Dallas-Fortworth)";
-	const eventLocation = "Dallas";
+	const eventName = "DFW";
+	const eventLocation = "Dallas-Fortworth";
 
 	const eventAddress = "Dallas Makerspace: 1825 Monetary Ln Ste 104, Carrollton, TX 75006"; // Leave this empty if you don't want an address
 	// These two are optional
 	const directionsURL = "https://www.google.com/maps/place/Dallas+Makerspace/@32.9410971,-96.9089827,17z/data=!3m1!4b1!4m6!3m5!1s0x864c1fd805ad40af:0x6f562f9ff01bbebb!8m2!3d32.9410971!4d-96.9064078!16s%2Fg%2F1tnpldfj?entry=ttu&g_ep=EgoyMDI1MDgxNy4wIKXMDSoASAFQAw%3D%3D" // Add a google maps link here once you have an address
-	const contactLink = "mailto:dfw.daydream@gmail.com"
+
+	const contactLink = "mailto:dfw@daydream.hackclub.com"
 	
 	// Sponsors Configuration
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recHbKhhA5VWAH7Lg"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "https://storage.jukeboxprint.com/s/images/jukebox-meta-im.png", name: "Jukebox Print", url: "https://jukeboxprint.com/custom-stickers" },
+		{image: "https://storage.jukeboxprint.com/s/images/jukebox-meta-im.png", name: "Jukebox Print", url: "https://jukeboxprint.com/custom-stickers"},
+		{image: "https://dallasmakerspace.org/w/images/2/2c/PNG_Logo_Coral.png", name: "Dallas Makerspace", url: "https://dallasmakerspace.org/"},
+		{image: "https://drstich.com/wp-content/uploads/2018/11/logo-1.png", name: "Bailey Orthodontics", url: "https://drstich.com/"}
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
@@ -28,15 +31,12 @@
 			title: "Saturday, September 27th",
 			items:[]
 			/* items: [
-				{ event: "Doors open", time: "11:00 AM" },
-				{ event: "Opening ceremony", time: "12:00 PM" },
+				{ event: "Doors open", time: "9:00 AM" },
+				{ event: "Opening ceremony", time: "10:00 AM" },
+				{ event: "Start working on your project!", time: "10:30 PM" },
+				{ event: "Workshop", time: "11:30 AM" },
 				{ event: "Lunch", time: "12:30 PM" },
-				{ event: "Start working on your project!", time: "1:00 PM" },
-				{ event: "Workshop 1", time: "2:00 PM" },
-				{ event: "Activity 1", time: "4:00 PM" },
-				{ event: "Workshop 2", time: "4:00 PM" },
-				{ event: "Dinner", time: "6:00 PM" },
-				{ event: "Lightning talks", time: "8:00 PM" },
+				{ event: "Dinner", time: "7:00 PM" },
 				{ event: "Midnight surprise", time: "12:00 AM" }
 			] */
 		},
@@ -45,9 +45,10 @@
 			items:[]
 			/*
 			items: [
-				{ event: "Breakfast", time: "8:00 AM" },
-				{ event: "Demos!", time: "10:30 AM" },
-				{ event: "Closing ceremony", time: "12:00 PM" }
+				{ event: "Breakfast", time: "7:00 AM" },
+				{ event: "Hacking ends", time: "8:00 AM"}
+				{ event: "Showcase!", time: "9:00 AM" },
+				{ event: "Closing ceremony", time: "10:30 PM" }
 			] */
 		}
 	];
@@ -1485,7 +1486,7 @@ Lagos`.split("\n")
 			<img src="window-4.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
 				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">Can I organize a Daydream in my city?</h3>
-				<p class="text-sm">Definitely! Contact us via daydream@hackclub.com or join #daydream on slack.</p>
+				<p class="text-sm">Definitely! Contact us via dfw@daydream.hackclub.com, follow us on Instagram @dfw.daydream, or join #daydream on slack.</p>
 			</div>
 		</div>
 
@@ -1530,7 +1531,7 @@ Lagos`.split("\n")
 			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
 				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">What if my parents are concerned?</h3>
-				<p class="text-sm">We're here to help! You can see our parent guide here, or they can reach out to us at dfw.daydream@gmail.com for questions.</p>
+				<p class="text-sm">We're here to help! You can see our parent guide here, or they can reach out to us at dfw@daydream.hackclub.com for questions.</p>
 			</div>
 		</div>
 
