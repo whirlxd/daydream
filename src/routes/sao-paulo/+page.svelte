@@ -12,6 +12,7 @@
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
 		{ image: "/sao-paulo/codelab.png", name: "USP CodeLab", url: "https://codelab.ime.usp.br/#/" },
+        { image: "/sao-paulo/hacksp.png", name: "Hack SP", url: "https://hacksp.org" },
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
