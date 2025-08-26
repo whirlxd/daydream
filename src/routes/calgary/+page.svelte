@@ -33,21 +33,32 @@
 				{ event: 'Doors open', time: '11:00 AM' },
 				{ event: 'Opening ceremony', time: '12:00 PM' },
 				{ event: 'Lunch', time: '12:30 PM' },
-				{ event: 'Start working on your project!', time: '1:00 PM' },
-				{ event: 'Workshop 1', time: '2:00 PM' },
-				{ event: 'Activity 1', time: '4:00 PM' },
+				{ event: 'Start Projects', time: '1:00 PM' },
+				{ event: 'Workshop 1', time: '1:00 PM' },
+				{ event: 'Break', time: '3:00 PM' },
+				{ event: 'End of Workshop 1', time: '3:00 PM' },
+				{ event: 'Continue working on Projects', time: '4:00 PM' },
 				{ event: 'Workshop 2', time: '4:00 PM' },
-				{ event: 'Dinner', time: '6:00 PM' },
-				{ event: 'Lightning talks', time: '8:00 PM' },
-				{ event: 'Midnight surprise', time: '12:00 AM' }
+				{ event: 'Dinner Time!', time: '6:00 PM' },
+				{ event: 'Keep Working!', time: '7:00 PM' },
+				{ event: 'Fun Activities and games and sharing your progress ig', time: '9:00 PM' }
 			]
 		},
 		{
 			title: 'Sunday, September 28th',
 			items: [
-				{ event: 'Breakfast', time: '8:00 AM' },
-				{ event: 'Demos!', time: '10:30 AM' },
-				{ event: 'Closing ceremony', time: '12:00 PM' }
+				{ event: 'Doors open', time: '11:00 AM' },
+				{ event: 'Opening talk', time: '12:00 PM' },
+				{ event: 'Lunch', time: '12:30 PM' },
+				{ event: 'Continue working on Projects', time: '1:00 PM' },
+				{ event: 'Break', time: '3:00 PM' },
+				{ event: 'Workshop 3', time: '4:00 PM' },
+				{ event: 'Dinner Time!', time: '6:00 PM' },
+				{ event: 'Continue working on Projects', time: '7:00 PM' },
+				{ event: 'Submit Projects for Voting', time: '9:00 PM' },
+				{ event: 'Voting!', time: '10:00 PM' },
+				{ event: 'Ending Ceremony', time: '10:30 PM' },
+				{ event: 'Final Goodbyes', time: '11:00 PM' }
 			]
 		}
 	];
