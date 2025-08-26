@@ -29,8 +29,7 @@
 	const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [
 		{
 			title: "Saturday, September 27th",
-			items:[]
-			/* items: [
+			items: [
 				{ event: "Doors open", time: "9:00 AM" },
 				{ event: "Opening ceremony", time: "10:00 AM" },
 				{ event: "Start working on your project!", time: "10:30 PM" },
@@ -38,18 +37,16 @@
 				{ event: "Lunch", time: "12:30 PM" },
 				{ event: "Dinner", time: "7:00 PM" },
 				{ event: "Midnight surprise", time: "12:00 AM" }
-			] */
+			]
 		},
 		{
 			title: "Sunday, September 28th",
-			items:[]
-			/*
 			items: [
 				{ event: "Breakfast", time: "7:00 AM" },
 				{ event: "Hacking ends", time: "8:00 AM"}
 				{ event: "Showcase!", time: "9:00 AM" },
 				{ event: "Closing ceremony", time: "10:30 PM" }
-			] */
+			]
 		}
 	];
 
