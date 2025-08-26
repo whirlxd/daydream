@@ -7,18 +7,23 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Helsinki";
-	const eventLocation = "Helsinki";
-	const eventAddress = ""; // Leave this empty if you don't want an address
-	const signupLink = "https://forms.hackclub.com/daydream-sign-up"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	const eventName = "Hamilton";
+	const eventLocation = "Hamilton";
+	const eventAddress = "12 Barton St Level 2, Waterdown, ON L0R 2H0, Canada"; // Leave this empty if you don't want an address
 	// These two are optional
-	const directionsURL = "";
-	const contactLink = "mailto:helsinki@daydream.hackclub.com"
+	const directionsURL = "https://www.google.com/maps/place/12+Barton+St+Level+2,+Waterdown,+ON+L0R+2H0/"
+	const contactLink = "mailto:hamilton@daydream.hackclub.com"
 	
-	// Sponsors Configuration
-	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
+		// Sponsors Configuration
+        const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "/helsinki/supercell.png", name: "Supercell", url: "https://supercell.com" },
+		{ image: "/hamilton/sponsors/saints.png", name: "Saints Studio (Venue)", url: "https://saintsstudio.ca" },
+		//{ image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
+		//{ image: "/example/logo3.png", name: "Sponsor 3", url: "https://example3.com" },
+		//{ image: "/example/logo4.png", name: "Sponsor 4", url: "https://example4.com" },
+		//{ image: "/example/logo5.png", name: "Sponsor 5", url: "https://example5.com" },
+		//{ image: "/example/logo6.png", name: "Sponsor 6", url: "https://example6.com" },
+		//{ image: "/example/logo7.png", name: "Sponsor 7", url: "https://example7.com" }
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
@@ -26,24 +31,32 @@
 		{
 			title: "Saturday, September 27th",
 			items: [
-				{ event: "Doors open", time: "11:00" },
-				{ event: "Opening ceremony", time: "12:00" },
-				{ event: "Lunch", time: "13:00" },
-				{ event: "Start working on your project!", time: "13:00" },
-				//{ event: "Workshop 1", time: "14:00" },
-				//{ event: "Activity 1", time: "16:00" },
-				//{ event: "Workshop 2", time: "16:00" },
-				{ event: "Dinner", time: "18:00" },
-				//{ event: "Lightning talks", time: "20:00" },
-				{ event: "Midnight surprise", time: "00:00" }
+				{ event: "Registration opens", time: "10:00 AM" },
+				{ event: "Doors open", time: "12:00 PM" },
+				{ event: "Opening ceremony", time: "1:00 PM" },
+				{ event: "Team Formation", time: "1:30 PM" },
+				{ event: "Start working on your project!", time: "1:30 PM" },
+				{ event: "Workshop 1", time: "1:45 PM" },
+				{ event: "Activity 1", time: "3:00 PM" },
+				{ event: "Workshop 2", time: "4:00 PM" },
+				{ event: "Dinner", time: "5:30 PM" },
+				{ event: "Activity 2", time: "6:00 PM" },
+				{ event: "Workshop 3", time: "7:30 PM" },
+				{ event: "Activity 3", time: "8:30 PM" },
+				{ event: "Activity 4", time: "9:30 PM" },
+				{ event: "Quiet Time", time: "10:30 PM" }
 			]
 		},
 		{
 			title: "Sunday, September 28th",
 			items: [
-				{ event: "Breakfast", time: "08:00" },
-				{ event: "Demos!", time: "12:30" },
-				{ event: "Closing ceremony", time: "15:00" }
+				{ event: "Wake Up!", time: "7:00 AM" },
+				{ event: "Breakfast", time: "7:30 AM" },
+				{ event: "Project Deadline", time: "10:00 AM" },
+				{ event: "Voting", time: "10:15 AM" },
+				{ event: "Winner Announcement/Closing Ceremony", time: "11:00 AM" },
+				{ event: "Cleanup", time: "11:30 AM" },
+				{ event: "Goodbye!", time: "12:00 PM" }
 			]
 		}
 	];
@@ -54,7 +67,7 @@
 	import { ScrollTrigger } from "gsap/ScrollTrigger";
 	import Ticker from "$lib/components/Ticker.svelte";
 	import Footer from "$lib/components/Footer.svelte";
-	import ParticipantSignUp from "$lib/components/ParticipantSignUp.svelte";
+	import ParticipantSignUp from "$lib/components/hamilton/ParticipantSignUp.svelte";
 	import { page } from '$app/stores';
 	
 	
@@ -68,8 +81,7 @@
 	$: pageKeywords = `game jam, hackathon, teen coding, Hack Club, game development, ${eventLocation}, ${eventName}`;
 
 	// Cities where the game jam is happening
-	const cities = `Helsinki
-Columbus
+	const cities = `Columbus
 Lisbon 
 Boston
 Giza
@@ -92,7 +104,7 @@ Dubai
 San Francisco
 Minneapolis
 Seattle
-Singapore
+Signapore
 Sydney
 Mumbai`.split("\n")
 
@@ -815,7 +827,7 @@ Mumbai`.split("\n")
 			>
 				September 27th & 28th, 2025
 			</h2>
-			<img src="daydream.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4" />
+			<img src="hamilton/daydream.png" alt="Daydream" class="h-40 mb-6 mt-6 w-auto object-contain max-w-full px-4" />
 			<a href="https://hackclub.com" class="absolute top-0 -right-6 max-sm:right-0 max-sm:scale-80 animate-hover ![animation-delay:0.9s] ![--hover:-0.2rem]">
 				<img src="flag-plane.png" alt="Hack Club" class="h-28">
 			</a>
@@ -834,11 +846,11 @@ Mumbai`.split("\n")
 			<h4
 				class="text-2xl opacity-90 mt-2 font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent max-sm:text-xl"
 			>
-				Organized by Teenagers in {@html eventLocation.replaceAll(" ", "&nbsp;")}
+				 Organized by Teenagers in  {@html eventLocation.replaceAll(" ", "&nbsp;")}
 			</h4>
 		</div>
 		
-		<ParticipantSignUp {eventName} />
+		<ParticipantSignUp />
 	</div>
 
 	<!-- <img src="hot-air-balloon.png" alt="" class="absolute w-1/8 right-32 bottom-40 z-20"> -->
@@ -1027,7 +1039,7 @@ Mumbai`.split("\n")
 						{#if sponsors.length > 4}
 							<div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center mb-8">
 								{#each sponsors.slice(0, 4) as sponsor}
-									<a href={sponsor.url} class="bg-white/20 rounded-lg p-4 w-full h-32 flex items-center justify-center hover:bg-white/40 transition-colors" target="_blank" rel="noopener noreferrer">
+									<a href={sponsor.url} class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors" target="_blank" rel="noopener noreferrer">
 										<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain">
 									</a>
 								{/each}
@@ -1039,7 +1051,7 @@ Mumbai`.split("\n")
 									<div class="grid grid-cols-2 md:grid-cols-3 gap-8 items-center justify-items-center max-w-2xl">
 										{#each sponsors.slice(4) as sponsor, index}
 											<a href={sponsor.url} 
-												class="bg-white/20 rounded-lg p-4 w-full h-32 flex items-center justify-center hover:bg-white/40 transition-colors {sponsors.slice(4).length === 3 && index === 2 ? 'md:col-span-1 col-span-2 max-w-xs mx-auto' : ''}" 
+												class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors {sponsors.slice(4).length === 3 && index === 2 ? 'md:col-span-1 col-span-2 max-w-xs mx-auto' : ''}" 
 												target="_blank" rel="noopener noreferrer">
 												<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain">
 											</a>
@@ -1052,7 +1064,7 @@ Mumbai`.split("\n")
 							<div class="flex justify-center">
 								<div class="grid gap-8 items-center justify-items-center max-w-4xl {sponsors.length === 1 ? 'grid-cols-1' : sponsors.length === 2 ? 'grid-cols-1 md:grid-cols-2' : sponsors.length === 3 ? 'grid-cols-2 md:grid-cols-3' : 'grid-cols-2 md:grid-cols-4'}">
 									{#each sponsors as sponsor}
-										<a href={sponsor.url} class="bg-white/20 rounded-lg p-4 w-full h-32 flex items-center justify-center hover:bg-white/40 transition-colors" target="_blank" rel="noopener noreferrer">
+										<a href={sponsor.url} class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors" target="_blank" rel="noopener noreferrer">
 											<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain">
 										</a>
 									{/each}
@@ -1138,7 +1150,7 @@ Mumbai`.split("\n")
 			<div class="relative w-72 h-40 max-md:w-80 animate-hover ![--hover:-0.15rem] ![animation-delay:1.7s] z-20" data-point="1">
 				<img src="paper1.png" alt="" class="w-full h-full object-contain">
 				<div class="absolute inset-0 justify-center text-center p-6 text-xl font-serif max-md:text-lg text-[#8B4513] inline-block content-center">
-					<span class="font-sans text-[#E472AB] font-bold text-[1.3rem] mr-1">#1:</span> <a href={signupLink} class="underline">Sign up</a> for Daydream {eventName}
+					<span class="font-sans text-[#E472AB] font-bold text-[1.3rem] mr-1">#1:</span> <a href="https://forms.hackclub.com/daydream-sign-up?event=rec2hrHzbHwmzR2Wi" class="underline">Sign up</a> for Daydream {eventName}
 				</div>
 			</div>
 		</div>
@@ -1564,4 +1576,3 @@ Mumbai`.split("\n")
 		</div>
 	</div>
 {/if}
-

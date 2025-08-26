@@ -7,43 +7,49 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Helsinki";
-	const eventLocation = "Helsinki";
-	const eventAddress = ""; // Leave this empty if you don't want an address
-	const signupLink = "https://forms.hackclub.com/daydream-sign-up"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
-	// These two are optional
-	const directionsURL = "";
-	const contactLink = "mailto:helsinki@daydream.hackclub.com"
+	const eventName = "Auckland"; // This should be the name of your event WITHOUT "Daydream" at the start
+	const eventLocation = "Auckland City";
+	const eventAddress = "GRIDAkl 101 Pakenham Street West, Auckland Central, Auckland 1010"; // Leave this empty if you don't want an address
+	const signupLink = "https://forms.hackclub.com/daydream-rsvp"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	// These two are optional-- leave them empty if you don't have anything!
+	const directionsURL = "https://maps.app.goo.gl/95N5DRUNNLNFm6RG6"
+	const contactLink = "mailto:auckland@daydream.hackclub.com"
 	
-	// Sponsors Configuration
-	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
+	// Sponsors Configuration - disable this if you don't have any sponsors to display!
+	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "/helsinki/supercell.png", name: "Supercell", url: "https://supercell.com" },
+		{ image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
+		{ image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
+		{ image: "/example/logo3.png", name: "Sponsor 3", url: "https://example3.com" },
+		{ image: "/example/logo4.png", name: "Sponsor 4", url: "https://example4.com" },
+		{ image: "/example/logo5.png", name: "Sponsor 5", url: "https://example5.com" },
+		{ image: "/example/logo6.png", name: "Sponsor 6", url: "https://example6.com" },
+		{ image: "/example/logo7.png", name: "Sponsor 7", url: "https://example7.com" }
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
 	const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [
 		{
-			title: "Saturday, September 27th",
+			title: "Saturday, September 27th TO BE CONFIRMED",
 			items: [
-				{ event: "Doors open", time: "11:00" },
-				{ event: "Opening ceremony", time: "12:00" },
-				{ event: "Lunch", time: "13:00" },
-				{ event: "Start working on your project!", time: "13:00" },
-				//{ event: "Workshop 1", time: "14:00" },
-				//{ event: "Activity 1", time: "16:00" },
-				//{ event: "Workshop 2", time: "16:00" },
-				{ event: "Dinner", time: "18:00" },
-				//{ event: "Lightning talks", time: "20:00" },
-				{ event: "Midnight surprise", time: "00:00" }
+				{ event: "Doors open", time: "11:00 AM" },
+				{ event: "Opening ceremony", time: "12:00 PM" },
+				{ event: "Lunch", time: "12:30 PM" },
+				{ event: "Start working on your project!", time: "1:00 PM" },
+				{ event: "Workshop 1", time: "2:00 PM" },
+				{ event: "Activity 1", time: "4:00 PM" },
+				{ event: "Workshop 2", time: "4:00 PM" },
+				{ event: "Dinner", time: "6:00 PM" },
+				{ event: "Lightning talks", time: "8:00 PM" },
+				{ event: "Midnight surprise", time: "12:00 AM" }
 			]
 		},
 		{
-			title: "Sunday, September 28th",
+			title: "Sunday, September 28th TO BE CONFIRMED",
 			items: [
-				{ event: "Breakfast", time: "08:00" },
-				{ event: "Demos!", time: "12:30" },
-				{ event: "Closing ceremony", time: "15:00" }
+				{ event: "Breakfast", time: "8:00 AM" },
+				{ event: "Demos!", time: "10:30 AM" },
+				{ event: "Closing ceremony", time: "12:00 PM" }
 			]
 		}
 	];
@@ -68,8 +74,7 @@
 	$: pageKeywords = `game jam, hackathon, teen coding, Hack Club, game development, ${eventLocation}, ${eventName}`;
 
 	// Cities where the game jam is happening
-	const cities = `Helsinki
-Columbus
+	const cities = `Columbus
 Lisbon 
 Boston
 Giza
@@ -92,7 +97,7 @@ Dubai
 San Francisco
 Minneapolis
 Seattle
-Singapore
+Signapore
 Sydney
 Mumbai`.split("\n")
 
@@ -1027,7 +1032,7 @@ Mumbai`.split("\n")
 						{#if sponsors.length > 4}
 							<div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center mb-8">
 								{#each sponsors.slice(0, 4) as sponsor}
-									<a href={sponsor.url} class="bg-white/20 rounded-lg p-4 w-full h-32 flex items-center justify-center hover:bg-white/40 transition-colors" target="_blank" rel="noopener noreferrer">
+									<a href={sponsor.url} class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors" target="_blank" rel="noopener noreferrer">
 										<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain">
 									</a>
 								{/each}
@@ -1039,7 +1044,7 @@ Mumbai`.split("\n")
 									<div class="grid grid-cols-2 md:grid-cols-3 gap-8 items-center justify-items-center max-w-2xl">
 										{#each sponsors.slice(4) as sponsor, index}
 											<a href={sponsor.url} 
-												class="bg-white/20 rounded-lg p-4 w-full h-32 flex items-center justify-center hover:bg-white/40 transition-colors {sponsors.slice(4).length === 3 && index === 2 ? 'md:col-span-1 col-span-2 max-w-xs mx-auto' : ''}" 
+												class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors {sponsors.slice(4).length === 3 && index === 2 ? 'md:col-span-1 col-span-2 max-w-xs mx-auto' : ''}" 
 												target="_blank" rel="noopener noreferrer">
 												<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain">
 											</a>
@@ -1052,7 +1057,7 @@ Mumbai`.split("\n")
 							<div class="flex justify-center">
 								<div class="grid gap-8 items-center justify-items-center max-w-4xl {sponsors.length === 1 ? 'grid-cols-1' : sponsors.length === 2 ? 'grid-cols-1 md:grid-cols-2' : sponsors.length === 3 ? 'grid-cols-2 md:grid-cols-3' : 'grid-cols-2 md:grid-cols-4'}">
 									{#each sponsors as sponsor}
-										<a href={sponsor.url} class="bg-white/20 rounded-lg p-4 w-full h-32 flex items-center justify-center hover:bg-white/40 transition-colors" target="_blank" rel="noopener noreferrer">
+										<a href={sponsor.url} class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors" target="_blank" rel="noopener noreferrer">
 											<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain">
 										</a>
 									{/each}
