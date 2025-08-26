@@ -20,8 +20,9 @@
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recHbKhhA5VWAH7Lg"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ 	
-			image: "https://storage.jukeboxprint.com/s/images/jukebox-meta-im.png", name: "Jukebox Print", url: "https://jukeboxprint.com/custom-stickers" 
+			image: "https://storage.jukeboxprint.com/s/images/jukebox-meta-im.png", name: "Jukebox Print", url: "https://jukeboxprint.com/custom-stickers"
+		},
+		{
 			image: "https://dallasmakerspace.org/w/images/2/2c/PNG_Logo_Coral.png", name: "Dallas Makerspace", url: "https://dallasmakerspace.org/"
 			image: "https://drstich.com/wp-content/uploads/2018/11/logo-1.png", name: "Bailey Orthodontics", url: "https://drstich.com/"
 
