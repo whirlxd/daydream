@@ -41,7 +41,8 @@
 				{ event: 'Workshop 2', time: '4:00 PM' },
 				{ event: 'Dinner Time!', time: '6:00 PM' },
 				{ event: 'Keep Working!', time: '7:00 PM' },
-				{ event: 'Fun Activities, Games, and Sharing your progress!', time: '9:00 PM' }
+				{ event: 'Fun Activities, Games, and Sharing your progress!', time: '9:00 PM' },
+				{ event: 'Goodbyes', time: '11:00 PM' }
 			]
 		},
 		{
