@@ -810,12 +810,12 @@ Mumbai`.split('\n');
 	></div>
 
 	<div
-		class="buildings-front-parallax absolute top-0 left-0 w-full h-full bg-[url(seattle/banner.svg)] bg-no-repeat bg-contain pointer-events-none lg:-translate-y-28"
+		class="buildings-front-parallax absolute top-0 left-0 w-full h-full bg-[url(/seattle/banner.svg)] bg-no-repeat bg-contain pointer-events-none lg:-translate-y-28"
 	></div>
 	<!-- brush texture clipped to front buildings -->
 	<div
 		class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat pointer-events-none opacity-100 lg:-translate-y-15 bg-center mix-blend-overlay"
-		style="mask-image: url('seattle/banner.svg'); mask-size: contain; mask-repeat: no-repeat; mask-position: center top; -webkit-mask-image: url('seattle/banner.svg'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center top;"
+		style="mask-image: url('/seattle/banner.svg'); mask-size: contain; mask-repeat: no-repeat; mask-position: center top; -webkit-mask-image: url('/seattle/banner.svg'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center top;"
 	></div>
 	<div
 		class="hero-ui-parallax flex flex-col items-center justify-center text-center relative z-5 -translate-y-20 min-w-full"
@@ -829,7 +829,7 @@ Mumbai`.split('\n');
 				September 27th & 28th, 2025
 			</h2>
 			<img
-				src="seattle/daydream.svg"
+				src="/seattle/daydream.svg"
 				alt="Daydream"
 				class="mb-9 w-auto h-48 object-contain max-w-full py-4"
 			/>
