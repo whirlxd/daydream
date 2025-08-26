@@ -43,7 +43,7 @@
 			title: "Sunday, September 28th",
 			items: [
 				{ event: "Breakfast", time: "7:00 AM" },
-				{ event: "Hacking ends", time: "8:00 AM"}
+				{ event: "Hacking ends", time: "8:00 AM"},
 				{ event: "Showcase!", time: "9:00 AM" },
 				{ event: "Closing ceremony", time: "10:30 PM" }
 			]
