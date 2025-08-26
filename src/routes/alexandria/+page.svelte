@@ -13,13 +13,12 @@
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=rec7aH0mYLpLLLlov"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = "" // ex: https://www.google.com/maps/search/1600+pennsylvania+avenue+washington+dc/
-	const contactLink = "" // ex: mailto:example@daydream.hackclub.com
+	const contactLink = "mailto:alexandria@daydream.hackclub.com" // ex: mailto:example@daydream.hackclub.com
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
-	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
+	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
 	const sponsors = [
 		{ image: "https://github.com/mahmoud-altahan/pics/blob/main/WhatsApp%20Image%202025-08-20%20at%2023.55.37_0991b03d.jpg?raw=true", name: "Revivals Egypt"}, // Add a url field if you have a link
-		{ image: "https://github.com/mahmoud-altahan/pics/blob/main/WhatsApp%20Image%202025-08-20%20at%2023.55.51_47cbbb67.jpg?raw=true", name: "Green Alexandria"}, // Add a url field if you have a link
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
@@ -27,27 +26,29 @@
 		{
 			title: "Saturday, September 27th",
 			items: [
-				{ event: "Doors Open", time: "11:00 AM" },
-				{ event: "Opening ceremony", time: "12:00 PM" },
-				{ event: "Lunch", time: "12:30 PM" },
-				{ event: "Start Working on Your Project!", time: "1:00 PM" },
-				{ event: "Welcome to Godot (Basics Workshop)", time: "2:00 PM" },
-				{ event: "Creative Gamedev Pathways (Track A - with Mentor)", time: "4:00 PM" },
-				{ event: "Casual Games Workshop (Track B - Self-paced)", time: "4:00 PM" },
-				{ event: "Dinner", time: "6:00 PM" },
-				{ event: "Lightning talks", time: "8:00 PM" },
-                { event: "Shipping Guide", time: "8:30 PM" },
-				{ event: "Night Surprise", time: "9:00 PM" }
+				{ event: "Doors Open", time: "10:00 AM" },
+				{ event: "Opening ceremony", time: "11:00 AM" },
+				{ event: "Icebreaker & Team Formation", time: "11:30 AM" },
+				{ event: "Workshop: Welcome to Godot (optional for advanced)", time: "12:00 PM" },
+				{ event: "Workshop: How to Finish a Game in 1 Day", time: "1:30 PM" },
+				{ event: "Lunch break & Networking", time: "2:30 PM" },
+				{ event: "Work on your game!", time: "3:30 PM" },
+				{ event: "Mini Check-in", time: "6:30 PM" },
+				{ event: "Keep Working", time: "7:00 PM" },
+                { event: "Shipping Guide", time: "8:00 PM" },
+				{ event: "First Day Closing", time: "9:00 PM" }
 			]
 		},
 		{
 			title: "Sunday, September 28th",
 			items: [
-                { event: "Doors Open", time: "11:00 AM" },
-				{ event: "Brunch", time: "11:30 AM" },
-                { event: "Continue Projects", time: "12:00 PM" },
-				{ event: "Demos!", time: "2:30 PM" },
-				{ event: "Closing ceremony", time: "3:30 PM" }
+                { event: "Doors Open", time: "10:00 AM" },
+				{ event: "Workshop: Debugging & Polish", time: "10:30 AM" },
+                { event: "Brunch!", time: "11:30 AM" },
+				{ event: "Workshop: Publishing on itch.io", time: "12:30 PM" },
+                { event: "Submission Deadline", time: "3:00 PM" },
+                { event: "Playtesting Arcade", time: "3:30 PM" },
+				{ event: "Closing ceremony & Awards", time: "5:00 PM" }
 			]
 		}
 	];
@@ -905,7 +906,7 @@ Mumbai`.split("\n")
 		<div class="relative z-20 px-20 pt-20 pb-52 rounded-lg mb-0 max-sm:px-18" style="background-image: url('/letter-top.png'), linear-gradient(to bottom, #FCEFC5 100px, transparent 100px), url('/letter-loop.png'); background-size: 100% auto, 100% auto, 100% auto; background-repeat: no-repeat, no-repeat, repeat-y; background-position: top, top, top; background-attachment: local, local, local;">
 			<div class="absolute bottom-0 left-0 w-full h-24 z-10 pointer-events-none bg-[url('/clouds-loop.png')] bg-repeat-x bg-bottom bg-contain"></div>
 			<h2 class="text-5xl font-serif italic text-[#8B4513] mb-10 relative">
-				Dear Hackers, Musicians, and Artist,
+				Dear Hackers, Musicians, and Artists,
 				<img src="/underline.svg" alt="" class="absolute left-0 -bottom-3 w-64 h-auto opacity-70">
 			</h2>
 			
