@@ -10,7 +10,7 @@
 	const eventName = "Giza"; // This should be the name of your event WITHOUT "Daydream" at the start
 	const eventLocation = "Giza";
 	const eventAddress = ""; // Leave this empty if you don't want an address
-	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recwOvVold5Ybx181"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	const signupLink = "https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = ""
 	const contactLink = "mailto:karimwael2811@gmail.com"
@@ -49,7 +49,6 @@
 	
 	import { onMount } from "svelte";
 	import { gsap } from "gsap";
-	import { ScrollTrigger } from "gsap/ScrollTrigger";
 	import Ticker from "$lib/components/Ticker.svelte";
 	import Footer from "$lib/components/Footer.svelte";
 	import ParticipantSignUp from "$lib/components/ParticipantSignUp.svelte";
@@ -612,8 +611,11 @@ Mumbai`.split("\n")
 		pathElement.setAttribute("d", pathData);
 	}
 
-	onMount(() => {
+	onMount(async () => {
 		console.log('User city:', data.userCity);
+		
+		// Dynamically import ScrollTrigger for client-side only
+		const { ScrollTrigger } = await import('gsap/dist/ScrollTrigger');
 		
 		// Register GSAP plugins
 		gsap.registerPlugin(ScrollTrigger);
@@ -808,7 +810,7 @@ Mumbai`.split("\n")
 			<div class="h-12"></div> 
 			<!-- space for the ship -->
 			<h2
-			class="text-xl font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent absolute left-1/2 max-sm:translate-y-4 max-sm:mb-0 max-md:-mb-8 md:left-[calc(50%+4rem)] -translate-x-1/2 bottom-20 italic w-max md:text-lg max-sm:text-lg"
+			class="text-xl font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent absolute left-1/2 max-sm:translate-y-8 max-sm:left-1/2 max-sm:bottom-12 max-md:bottom-16 md:left-[calc(50%+6rem)] -translate-x-1/2 bottom-28 italic w-max md:text-lg max-sm:text-base"
 			>
 				September 27th, 2025
 			</h2>
