@@ -9,7 +9,7 @@
 	// Configuration - Put your information here!
 	const eventName = "Alexandria"; // This should be the name of your event WITHOUT "Daydream" at the start
 	const eventLocation = "Alexandria, Egypt";
-	const eventAddress = "TBD"; // Leave this empty if you don't want an address
+	const eventAddress = ""; // Leave this empty if you don't want an address
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=rec7aH0mYLpLLLlov"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = "" // ex: https://www.google.com/maps/search/1600+pennsylvania+avenue+washington+dc/
@@ -27,24 +27,27 @@
 		{
 			title: "Saturday, September 27th",
 			items: [
-				{ event: "Doors open", time: "11:00 AM" },
+				{ event: "Doors Open", time: "11:00 AM" },
 				{ event: "Opening ceremony", time: "12:00 PM" },
 				{ event: "Lunch", time: "12:30 PM" },
-				{ event: "Start working on your project!", time: "1:00 PM" },
-				{ event: "Workshop 1", time: "2:00 PM" },
-				{ event: "Activity 1", time: "4:00 PM" },
-				{ event: "Workshop 2", time: "4:00 PM" },
+				{ event: "Start Working on Your Project!", time: "1:00 PM" },
+				{ event: "Welcome to Godot (Basics Workshop)", time: "2:00 PM" },
+				{ event: "Creative Gamedev Pathways (Track A - with Mentor)", time: "4:00 PM" },
+				{ event: "Casual Games Workshop (Track B - Self-paced)", time: "4:00 PM" },
 				{ event: "Dinner", time: "6:00 PM" },
 				{ event: "Lightning talks", time: "8:00 PM" },
-				{ event: "Midnight surprise", time: "12:00 AM" }
+                { event: "Shipping Guide", time: "8:30 PM" },
+				{ event: "Night Surprise", time: "9:00 PM" }
 			]
 		},
 		{
 			title: "Sunday, September 28th",
 			items: [
-				{ event: "Breakfast", time: "8:00 AM" },
-				{ event: "Demos!", time: "10:30 AM" },
-				{ event: "Closing ceremony", time: "12:00 PM" }
+                { event: "Doors Open", time: "11:00 AM" },
+				{ event: "Brunch", time: "11:30 AM" },
+                { event: "Continue Projects", time: "12:00 PM" },
+				{ event: "Demos!", time: "2:30 PM" },
+				{ event: "Closing ceremony", time: "3:30 PM" }
 			]
 		}
 	];
