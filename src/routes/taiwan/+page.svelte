@@ -1315,7 +1315,7 @@ Mumbai`.split("\n")
         <!-- Section Header -->
         <div class="text-center {hasPartners ? 'mb-8 md:mb-10' : 'mb-4'}">
             <div class="relative inline-block px-2">
-                <h2 class="text-[2rem] md:text-4xl font-serif font-semibold bg-gradient-to-b from-[#8B4513] to-[#6E3D15] bg-clip-text text-transparent tracking-wide">
+                <h2 class="text-[2.25rem] md:text-5xl font-serif font-semibold bg-gradient-to-b from-[#8B4513] to-[#6E3D15] bg-clip-text text-transparent tracking-wide">
                     合作夥伴
                 </h2>
                 <img src="/underline.svg" alt="" class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-44 md:w-56 h-auto opacity-80" />
@@ -1327,11 +1327,11 @@ Mumbai`.split("\n")
 
         {#if hasPartners}
             <!-- Partners Grid -->
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 justify-items-center">
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-8 justify-items-center">
                 {#each partners as partner}
                     <a href={partner.url} target="_blank" rel="noopener noreferrer"
-                       class="group w-full h-16 sm:h-20 md:h-24 bg-white/70 hover:bg-white transition-colors rounded-xl border border-[#E8E1D0] flex items-center justify-center p-3 shadow-[0_1px_0_rgba(0,0,0,0.05)] hover:shadow-md">
-                        <img src={partner.image} alt={partner.name} class="max-h-full max-w-full object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-200 grayscale group-hover:grayscale-0" />
+                       class="group w-full h-24 sm:h-28 md:h-36 bg-white/90 hover:bg-white rounded-2xl border border-[#E8E1D0] flex items-center justify-center p-4 md:p-6 shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.12)] transition-all duration-200 transform hover:-translate-y-0.5">
+                        <img src={partner.image} alt={partner.name} class="max-h-full max-w-full object-contain opacity-100 transition-opacity duration-200" />
                     </a>
                 {/each}
             </div>
