@@ -1327,11 +1327,11 @@ Mumbai`.split("\n")
 
         {#if hasPartners}
             <!-- Partners Grid -->
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-8 justify-items-center">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-10 justify-items-center">
                 {#each partners as partner}
                     <a href={partner.url} target="_blank" rel="noopener noreferrer"
-                       class="group w-full h-24 sm:h-28 md:h-36 bg-white/90 hover:bg-white rounded-2xl border border-[#E8E1D0] flex items-center justify-center p-4 md:p-6 shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.12)] transition-all duration-200 transform hover:-translate-y-0.5">
-                        <img src={partner.image} alt={partner.name} class="max-h-full max-w-full object-contain opacity-100 transition-opacity duration-200" />
+                       class="group w-[min(22rem,90vw)] md:w-80 lg:w-96 h-44 md:h-56 lg:h-64 bg-white/95 hover:bg-white rounded-2xl border border-[#E8E1D0] flex items-center justify-center p-3 md:p-4 shadow-[0_6px_16px_rgba(0,0,0,0.08)] hover:shadow-[0_10px_24px_rgba(0,0,0,0.12)] transition-all duration-200 transform hover:-translate-y-1">
+                        <img src={partner.image} alt={partner.name} class="h-[85%] w-auto object-contain opacity-100 transition-opacity duration-200" />
                     </a>
                 {/each}
             </div>
