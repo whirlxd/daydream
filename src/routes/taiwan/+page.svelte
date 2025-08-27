@@ -22,7 +22,8 @@
 	// Partners Configuration
 	const partnersEnabled = true; // Set to false to hide the entire partners section
 	const partners: Array<{ name: string; url: string; image: string }> = [
-		// { name: "Partner Name", url: "https://partner.example", image: "/taiwan/partner-logo.png" }
+		{ name: "TCS（新北市TCS探索未來國際實驗教育機構）", url: "https://www.tcs-experimental.tw/?utm_source=daydream", image: "/taiwan/logos/New%20TCS%20Logo.png" },
+		{ name: "台灣微課程發展協會", url: "https://www.tmla.at.tw/?utm_source=daydream", image: "/taiwan/logos/微課程logo.(外框).180.png" }
 	];
 
 	// Derived UI state for partners section
