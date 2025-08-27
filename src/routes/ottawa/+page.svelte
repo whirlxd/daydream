@@ -9,9 +9,9 @@
 	// Configuration - Put your information here!
 	const eventName = "Ottawa"; // The name of your event
 	const eventLocation = "Ottawa";
-	const eventAddress = "TBD"; // Leave this empty if you don't want an address
+	const eventAddress = ""; // Leave this empty if you don't want an address
 	// These two are optional
-	const directionsURL = "https://daydream.hackclub.com/ottawa"
+	const directionsURL = ""
 	const contactLink = "mailto:ottawa@daydream.hackclub.com"
 
 	// Sponsors Configuration
@@ -19,12 +19,6 @@
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
 		{ image: "/ottawa/fociLogo.png", name: "FOCI Solutions", url: "https://www.focisolutions.com/" },
-		{ image: "/ottawa/sponsorLogo/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
-		{ image: "/ottawa/sponsorLogo/logo3.png", name: "Sponsor 3", url: "https://example3.com" },
-		{ image: "/ottawa/sponsorLogo/logo4.png", name: "Sponsor 4", url: "https://example4.com" },
-		{ image: "/ottawa/sponsorLogo/logo5.png", name: "Sponsor 5", url: "https://example5.com" },
-		{ image: "/ottawa/sponsorLogo/logo6.png", name: "Sponsor 6", url: "https://example6.com" },
-		{ image: "/ottawa/sponsorLogo/logo7.png", name: "Sponsor 7", url: "https://example7.com" }
 	];
 		// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
 	const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [
