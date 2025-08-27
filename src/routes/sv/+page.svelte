@@ -376,7 +376,7 @@ Roblox`.split('\n');
 
 	<!-- Cloudy Background -->
 	<div
-		class="cloudy-bg-parallax absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[60vh] sm:h-[80vh] bg-[url(/cloudy-bg.png)] opacity-30 bg-cover bg-no-repeat bg-top pointer-events-none"
+		class="cloudy-bg-parallax absolute bottom-0 w-full h-[60vh] sm:h-[80vh] bg-[url(/cloudy-bg.png)] opacity-30 bg-cover bg-no-repeat bg-top pointer-events-none"
 	></div>
 
 	<div
@@ -550,7 +550,7 @@ Roblox`.split('\n');
 </div>
 
 <!-- Game Creation Experience Section -->
-<div class="w-full bg-gradient-to-b from-[#FAFCFF] to-[#F5FBFF] py- sm:py-24 md:py-32 relative">
+<div class="w-full bg-gradient-to-b from-[#FAFCFF] to-[#F5FBFF] py-16 sm:py-24 md:py-32 relative">
 	<div
 		class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-20 pointer-events-none"
 		style="transform: translateY({parallaxOffset * 0.3}px)"
@@ -841,7 +841,7 @@ Roblox`.split('\n');
 
 		<!-- FAQ Item 6 -->
 		<div
-			class="bg-gradient-to-br from-[#FCFEFF] via-white to-[#F5FBFF] rounded-2xl border-2 border-[#E8F4FD] p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 scroll-reveal"
+			class="bg-gradient-to-br from-[#f3f9fd] via-[#F0F8FE] to-[#e6f1fa] rounded-2xl border-2 border-[#E8F4FD] p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 scroll-reveal"
 		>
 			<h3 class="text-lg sm:text-xl font-serif font-bold text-[#487DAB] mb-3">
 				Any special rewards?
@@ -855,7 +855,7 @@ Roblox`.split('\n');
 
 		<!-- FAQ Item 7 -->
 		<div
-			class="bg-gradient-to-br from-[#F0FFFE] via-[#FCFEFF] to-[#F8FDFF] rounded-2xl border-2 border-[#E8F4FD] p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 scroll-reveal"
+			class="bg-gradient-to-br from-[#F5FBFF] via-[#F0F8FE] to-[#E8F4FD] rounded-2xl border-2 border-[#E8F4FD] p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 scroll-reveal"
 		>
 			<h3 class="text-lg sm:text-xl font-serif font-bold text-[#487DAB] mb-3">
 				I'm new to game dev. Can I still join?
