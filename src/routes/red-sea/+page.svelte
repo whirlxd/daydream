@@ -1047,7 +1047,7 @@ Red Sea`.split("\n")
 		</div>
 		
 		<div class="relative z-30">
-			<ParticipantSignUp {eventName} />
+			<ParticipantSignUp {signupLink} {eventName} />
 		</div>
 	</div>
 

@@ -53,6 +53,8 @@ export async function loadAndGeocodeEvents(): Promise<EventLocation[]> {
 		return cachedEvents;
 	}
 
+	console.log("Geocoding all events")
+
 	try {
 		// Get all existing route directories to check which pages exist
 		const routesPath = join(process.cwd(), 'src', 'routes');
