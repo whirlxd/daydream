@@ -822,7 +822,7 @@ Mumbai`.split("\n")
 			>
 				September 27th & 28th, 2025
 			</h2> -->
-			<img src="missouri/daydreammo.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4" />
+			<img src="missouri/logo.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4" />
 			<a href="https://hackclub.com" class="absolute top-0 -right-6 max-sm:right-0 max-sm:scale-80 animate-hover ![animation-delay:0.9s] ![--hover:-0.2rem]">
 				<img src="flag-plane.png" alt="Hack Club" class="h-28">
 			</a>
@@ -833,15 +833,15 @@ Mumbai`.split("\n")
 			>
 				Coding event for high schoolers
 			</h3>
-			<img
-				src="underline.svg"
-				alt=""
-				class="absolute left-1/2 -translate-x-1/2 -mt-1 h-auto scale-115"
-			/>
 			<h4
 				class="text-2xl opacity-90 mt-2 font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent max-sm:text-xl"
 			>
 				Organized by Teenagers in {@html eventLocation.replaceAll(" ", "&nbsp;")}
+			</h4>
+			<h4
+				class="text-2xl opacity-90 mt-2 font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent max-sm:text-xl"
+			>
+				Taking place at <a class="underline text-pink" href={directionsURL}>{eventAddress}</a>!
 			</h4>
 		</div>
 		
@@ -913,7 +913,7 @@ Mumbai`.split("\n")
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-30 pointer-events-none -z-40"></div>
 	
 	<div class="relative max-w-4xl mx-auto h-full flex items-start pt-14 max-sm:pt-40 px-8 max-sm:px-2">
-		<div class="relative z-20 px-20 pt-20 pb-52 rounded-lg mb-0 max-sm:px-18" style="background-image: url('/letter-top.png'), linear-gradient(to bottom, #FCEFC5 100px, transparent 100px), url('/letter-loop.png'); background-size: 100% auto, 100% auto, 100% auto; background-repeat: no-repeat, no-repeat, repeat-y; background-position: top, top, top; background-attachment: local, local, local;">
+		<div class="relative z-20 px-20 pt-20 pb-28 rounded-lg mb-0 max-sm:px-18" style="background-image: url('/letter-top.png'), linear-gradient(to bottom, #FCEFC5 100px, transparent 100px), url('/letter-loop.png'); background-size: 100% auto, 100% auto, 100% auto; background-repeat: no-repeat, no-repeat, repeat-y; background-position: top, top, top; background-attachment: local, local, local;">
 			<div class="absolute bottom-0 left-0 w-full h-24 z-10 pointer-events-none bg-[url('/clouds-loop.png')] bg-repeat-x bg-bottom bg-contain"></div>
 			<h2 class="text-5xl font-serif italic text-[#8B4513] mb-10 relative">
 				What is Daydream Missouri?
@@ -1226,16 +1226,6 @@ Mumbai`.split("\n")
 				class="absolute bottom-0 -left-[5px] w-[calc(100%+10px)] h-6 bg-[url('/billboard-bars.png')] bg-repeat-x bg-contain bg-center pointer-events-none z-10 border-[#9898a7] border-x-[6px]"
 			></div>
 		</div>
-		
-		{#if eventAddress}
-			<p class="text-center font-sans text-2xl pt-2 max-sm:text-xl text-[#60574b] z-10000">
-				{#if directionsURL}
-					Daydream {eventName} is taking place at <a class="underline text-pink" href={directionsURL}>{eventAddress}</a>!
-				{:else}
-					Daydream {eventName} is taking place at <span class="underline">{eventAddress}</span>!
-				{/if}
-			</p>
-		{/if}
 	</div>
 </div>
 
@@ -1343,7 +1333,7 @@ Mumbai`.split("\n")
 </div>
 {/if}
 
-<div class="w-full pb-24 max-md:pt-16 bg-gradient-to-b from-[#FAE3C9] to-[#e99cce] relative flex flex-col items-center justify-center">
+<div class="w-full pb-24 max-md:pt-6 bg-gradient-to-b from-[#FAE3C9] to-[#e99cce] relative flex flex-col items-center justify-center">
 	<img src="faq-clouds.png" alt="" class="w-full">
 	<img src="faq.png" alt="FAQ" class="mb-12 h-24 scale-175 max-md:scale-120">
 
@@ -1381,7 +1371,7 @@ Mumbai`.split("\n")
 			<img src="window-1.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
 				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">What do I need?</h3>
-				<p class="text-sm">Your laptop, chargers, and an open mind!</p>
+				<p class="text-sm">Your laptop, chargers, and an open mind! Meals, snacks and drinks are provided.</p>
 			</div>
 		</div>
 

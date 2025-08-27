@@ -23,7 +23,7 @@
 
 
 
-<div class="mt-8 flex flex-col items-center gap-3 z-5 max-md:scale-90">
+<div class="mt-8 flex flex-col items-center gap-3 z-5 max-md:scale-90 mb-10">
 	<div class="relative rounded-full overflow-hidden" style="padding: 2px 2px 5px 2px;">
 		<form on:submit={handleFormSubmit} class="rounded-full bg-white border-2 border-dark font-sans p-2 flex flex-row items-center gap-2 shadow-[0_3px_0_0_theme(colors.dark)] focus-within:border-pink focus-within:shadow-[0_3px_0_0_#E472AB] has-[button:active]:border-dark has-[button:active]:shadow-[0_3px_0_0_theme(colors.dark)] has-[button:focus]:border-dark has-[button:focus]:shadow-[0_3px_0_0_theme(colors.dark)]">
 			<input
