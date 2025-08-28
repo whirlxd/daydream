@@ -12,6 +12,7 @@ interface EventFields {
 }
 
 interface AirtableRecord {
+	id: string;
 	fields: EventFields;
 }
 
@@ -42,6 +43,13 @@ export interface EventLocationWithDistance extends EventLocation {
 
 // Cache to avoid multiple geocoding during build
 let cachedEvents: EventLocation[] | null = null;
+
+// Airtable client for updating records
+import Airtable from 'airtable';
+let airtableBase: any = null;
+if (AIRTABLE_API_KEY && AIRTABLE_BASE_ID) {
+	airtableBase = new Airtable({ apiKey: AIRTABLE_API_KEY }).base(AIRTABLE_BASE_ID);
+}
 
 export async function loadAndGeocodeEvents(): Promise<EventLocation[]> {
 	if (cachedEvents) {
@@ -81,8 +89,10 @@ export async function loadAndGeocodeEvents(): Promise<EventLocation[]> {
 			offset = airtableData.offset || null;
 		} while (offset);
 
-		// Geocode each event location
+		// Geocode each event location and update Airtable
 		const locations: EventLocation[] = [];
+		const updatePromises: Promise<void>[] = [];
+		
 		for (const event of events) {
 			const { location, state, country, event_name, address_override, slug } = event.fields;
 			
@@ -101,6 +111,21 @@ export async function loadAndGeocodeEvents(): Promise<EventLocation[]> {
 					// Check if a page exists for this slug
 					const hasPage = slug ? existingRoutes.includes(slug) : false;
 					
+					// Update Airtable record with has_website field if it differs from hasPage
+					if (airtableBase && slug && hasPage) {
+						const updatePromise = airtableBase('events').update([
+							{
+								id: event.id,
+								fields: {
+									has_website: true
+								}
+							}
+						]).catch((error: any) => {
+							console.error(`Failed to update has_website for ${slug}:`, error);
+						});
+						updatePromises.push(updatePromise);
+					}
+					
 					locations.push({
 						lat: geocodeData.lat,
 						lng: geocodeData.lng,
@@ -115,6 +140,12 @@ export async function loadAndGeocodeEvents(): Promise<EventLocation[]> {
 			} catch (error) {
 				console.error(`Failed to geocode ${address}:`, error);
 			}
+		}
+		
+		// Wait for all Airtable updates to complete
+		if (updatePromises.length > 0) {
+			console.log(`Updating ${updatePromises.length} events with has_website=true`);
+			await Promise.allSettled(updatePromises);
 		}
 
 		cachedEvents = locations;
