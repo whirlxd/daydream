@@ -45,8 +45,8 @@
 		{
 			title: "Sunday, September 28th",
 			items: [
-				{ event: "Doors open", time: "8:00 AM" },
-				{ event: "Breakfast", time: "8:30 AM" },
+				{ event: "Doors open", time: "9:00 AM" },
+				{ event: "Breakfast", time: "9:30 AM" },
 				{ event: "Workshop 3", time: "11:00 AM" },
 				{ event: "Lunch", time: "12:30 AM" },
 				{ event: "Submissions close!", time: "4:00 PM" },
@@ -923,7 +923,7 @@ Mumbai`.split("\n")
 			<div class="text-[#8B4513] font-serif text-xl leading-relaxed space-y-8">
 				<p>This fall we invite you to join us for Daydream, the world's biggest game jam happening simultaneously in 100 cities, hosted by Hack Club. And there's one being hosted right in Springfield Missouri, welcoming everyone around the area.</p>
 
-				<p>This two day coding event invites you and your friends to come and create your own original game for cool prizes! Food and snacks are provided!</p>
+				<p>This two day coding event invites you and your friends to come, compete, and create your own original game for cool prizes! Food and snacks are provided!</p>
 
 				<p>Don't consider yourself a game dev? No problem - we have tons of workshops for guiding you to make your first game! </p>
 
@@ -1000,7 +1000,7 @@ Mumbai`.split("\n")
 			<div class="relative w-72 h-40 max-md:w-80 animate-hover ![--hover:-0.15rem] ![animation-delay:1.4s] z-20" data-point="3">
 				<img src="paper3.png" alt="" class="w-full h-full object-contain">
 				<div class="absolute inset-0 justify-center text-center p-6 text-xl font-serif max-md:text-lg text-[#8B4513] inline-block content-center">
-					<span class="font-sans text-[#AB68E2] font-bold text-[1.3rem] mr-1">#3:</span> Find a team of other teenagers at the event
+					<span class="font-sans text-[#AB68E2] font-bold text-[1.3rem] mr-1">#3:</span> Find a team of up to 3 teenagers to work together
 				</div>
 			</div>
 		</div>
@@ -1188,6 +1188,9 @@ Mumbai`.split("\n")
 				<h2 class="text-4xl font-serif text-[#F0F0FF] text-center">
 					Schedule
 				</h2>
+				<h3 class="text-l font-sans text-[#F0F0FF] text-center px-8 max-sm:text-xl max-sm:px-4">
+					* Participants are not required (but are recommended) to be present for the entirety of the event *
+				</h3>
 				<!-- Brush texture overlay for header -->
 				<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
 			</div>
@@ -1371,7 +1374,7 @@ Mumbai`.split("\n")
 			<img src="window-1.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
 				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">What do I need?</h3>
-				<p class="text-sm">Your laptop, chargers, and an open mind! Meals, snacks and drinks are provided.</p>
+				<p class="text-sm">Your laptop, chargers, and an open mind! School-issued Chromebooks are not recommended.</p>
 			</div>
 		</div>
 
