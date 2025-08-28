@@ -10,7 +10,7 @@
 	const eventName = "Diyarbakır"; // This should be the name of your event WITHOUT "Daydream" at the start
 	const eventLocation = "Diyarbakır, Turkey";
 	const eventAddress = "Sezai Karakoç Kültür ve Kongre Merkezi, Diyarbakır, Turkey"; // Leave this empty if you don't want an address
-	const signupLink = "https://forms.hackclub.com/daydream-rsvp"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recL4Af3iSDhpGjjO"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = "https://www.google.com/maps/place/Diyarbak%C4%B1r+Sezai+Karako%C3%A7+K%C3%BClt%C3%BCr+ve+Kongre+Merkezi/@37.9120599,40.221391,17z/data=!3m1!4b1!4m6!3m5!1s0x4075203170ae3cf5:0x21de09b4a477e3de!8m2!3d37.9120599!4d40.2239659!16s%2Fg%2F11c5896nfk?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D" // Google Maps link
 	const contactLink = "mailto:diyarbakir@daydream.hackclub.com"
@@ -1254,11 +1254,11 @@ Mumbai`.split("\n")
 							<!-- Single row for 4 or fewer sponsors -->
 							<div class="flex justify-center">
 								<div class="grid gap-8 items-center justify-items-center max-w-4xl {sponsors.length === 1 ? 'grid-cols-1' : sponsors.length === 2 ? 'grid-cols-1 md:grid-cols-2' : sponsors.length === 3 ? 'grid-cols-2 md:grid-cols-3' : 'grid-cols-2 md:grid-cols-4'}">
-																	{#each sponsors as sponsor}
+									{#each sponsors as sponsor}
 									<a href={sponsor.url} class="bg-white/20 rounded-full p-6 w-32 h-32 flex items-center justify-center hover:bg-white/40 transition-colors" target="_blank" rel="noopener noreferrer">
 										<img src={sponsor.image} alt={sponsor.name} class="w-20 h-20 object-contain rounded-full">
-									</a>
-								{/each}
+										</a>
+									{/each}
 								</div>
 							</div>
 						{/if}
