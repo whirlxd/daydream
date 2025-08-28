@@ -9,7 +9,7 @@
 	// Configuration - Put your information here!
 	const eventName = "Lahore"; // This should be the name of your event WITHOUT "Daydream" at the start
 	const eventLocation = "Lahore";
-	const eventAddress = "Imperial International School & College, 20 Q, 2 Sardar Suleiman Naqai Road, Gulberg, Lahore"; // Leave this empty if you don't want an address
+	const eventAddress = "Imperial International School & College, Gulberg, Lahore"; // Leave this empty if you don't want an address
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=rec9k7Pg1vLu1Bx9G"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = "https://maps.app.goo.gl/FtogZ8hFT6F5U1727"
