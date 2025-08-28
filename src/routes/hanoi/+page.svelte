@@ -32,7 +32,10 @@
 		{
 			title: "Saturday, September 27th",
 			items: [
-				{ event: "Doors open", time: "10:00 AM" },
+				{ event: "Doors & Check-in open", time: "08:00" },
+				{ event: "Opening", time: "09:00" },
+				{ event: "Event starts", time: "09:30" },
+				{ event: "Workshop 1", time: "10:30" },
 			]
 		},
 		{
