@@ -829,7 +829,7 @@ Mumbai`.split("\n")
 				Organized by Teenagers in {@html eventLocation.replaceAll(" ", "&nbsp;")}
 			</h4>
 		</div>
-		
+		<a href="{signupLink}">Sign Up Now</a>
 		<ParticipantSignUp {signupLink} {eventName} />
 	</div>
 
