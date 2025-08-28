@@ -1330,8 +1330,9 @@ Mumbai`.split("\n")
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-10 justify-items-center">
                 {#each partners as partner}
                     <a href={partner.url} target="_blank" rel="noopener noreferrer"
-                       class="group w-[min(22rem,90vw)] md:w-80 lg:w-96 h-44 md:h-56 lg:h-64 bg-white/95 hover:bg-white rounded-2xl border border-[#E8E1D0] flex items-center justify-center p-3 md:p-4 shadow-[0_6px_16px_rgba(0,0,0,0.08)] hover:shadow-[0_10px_24px_rgba(0,0,0,0.12)] transition-all duration-200 transform hover:-translate-y-1">
-                        <img src={partner.image} alt={partner.name} class="h-[85%] w-auto object-contain opacity-100 transition-opacity duration-200" />
+                       class="group w-[min(22rem,90vw)] md:w-80 lg:w-96 h-52 md:h-64 lg:h-72 bg-white/95 hover:bg-white rounded-2xl border border-[#E8E1D0] flex flex-col items-center justify-center p-4 md:p-5 shadow-[0_6px_16px_rgba(0,0,0,0.08)] hover:shadow-[0_10px_24px_rgba(0,0,0,0.12)] transition-all duration-200 transform hover:-translate-y-1 text-center">
+                        <img src={partner.image} alt={partner.name} class="h-[70%] w-auto object-contain opacity-100 transition-opacity duration-200" />
+                        <span class="mt-2 text-sm md:text-base font-serif text-[#335969] tracking-wide">{partner.name}</span>
                     </a>
                 {/each}
             </div>
