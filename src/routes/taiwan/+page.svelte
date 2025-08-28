@@ -2,7 +2,7 @@
 	// Configuration - Put your information here!
 	const eventName = "Taiwan";
 	const signupLink = "https://forms.hackclub.com/daydream-rsvp?event=recbXuFkkf752iPIq";
-	const eventLocation = "TBD";
+	const eventLocation = "TCS（臺師大林口校區）";
 	const eventAddress = "";
 
 	// These two are optional
