@@ -10,7 +10,7 @@
 	const eventName = "Hà Nội"; // This should be the name of your event WITHOUT "Daydream" at the start
 	const eventLocation = "Hà Nội";
 	const eventAddress = ""; // Leave this empty if you don't want an address
-	const signupLink = "https://forms.hackclub.com/daydream-sign-up"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recZacyVminexDndA"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = ""
 	const contactLink = "mailto:hanoi@daydream.hackclub.com"
