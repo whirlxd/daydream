@@ -10,7 +10,7 @@
 	const eventName = "Jhansi"; // This should be the name of your event WITHOUT "Daydream" at the start
 	const eventLocation = "Jhansi";
 	const eventAddress = "RISE Incubator,Nagar Nigam ,Jhansi"; // Leave this empty if you don't want an address
-	const signupLink = "https://daydreamjhansi.fillout.com/register"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = "https://maps.app.goo.gl/rbcoBJeBCyFi7sG17"
 	const contactLink = "mailto:jhansi@daydream.hackclub.com"
@@ -18,7 +18,8 @@
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "/jhansi/tranza.png", name: "Tranza", url: "https://www.tranza.live/" }
+		{ image: "/jhansi/tranza.png", name: "Tranza", url: "https://www.tranza.live/" },
+		{ image: "/jhansi/FOSS.png", name: "FOSS", url: "https://fossunited.org/" }
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
@@ -27,15 +28,15 @@
 			title: "Saturday, September 27th",
 			items: [
 				{ event: "Doors Open & Check-in", time: "9:00 AM" },
-				{ event: "Opening ceremony", time: "9:30 PM" },
-				{ event: "LunchIcebreaker ", time: "10:00 PM" },
-				{ event: "Intensive Workshop (Part 1)", time: "11:00 PM" },
+				{ event: "Opening ceremony", time: "9:30 AM" },
+				{ event: "LunchIcebreaker ", time: "10:00 AM" },
+				{ event: "Intensive Workshop (Part 1)", time: "11:00 AM" },
 				{ event: "Lunch", time: "1:00 PM" },
 				{ event: "Intensive Workshop (Part 2)", time: "2:00 PM" },
 				{ event: "Start working on your project!", time: "4:00 PM" },
 				{ event: " More Snacks and Fun", time: "6:00 PM" },
 				{ event: "Day 1 Showcase", time: "8:00 PM" },
-				{ event: "Doors Close for Day 1", time: "9:00 AM" },
+				{ event: "Doors Close for Day 1", time: "9:00 PM" },
 			]
 		},
 		{
