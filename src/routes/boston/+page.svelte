@@ -18,13 +18,12 @@
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recFq8OHZBogqb5Ym"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "/boston/jukebox.jpg", name: "Jukebox", url: "https://www.jukeboxprint.com/custom-stickers",
+		{ image: "/boston/jukebox-logo.svg", name: "Jukebox", url: "https://www.jukeboxprint.com/custom-stickers",
 			text: `<p class="text-lg text-[#335969] text-center">
              Big shoutout to Jukebox for our
              <a href="https://www.jukeboxprint.com/custom-stickers"
                 class="underline hover:text-[#477783] transition-colors">
-               custom stickers!
-             </a>
+               custom stickers</a>!
            </p>`		},
 	];
 	
