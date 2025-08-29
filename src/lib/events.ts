@@ -52,6 +52,11 @@ if (AIRTABLE_API_KEY && AIRTABLE_BASE_ID) {
 }
 
 export async function loadAndGeocodeEvents(): Promise<EventLocation[]> {
+	// do nothing if the API keys aren't set
+	if (!AIRTABLE_API_KEY || !AIRTABLE_BASE_ID || !GEOCODER_API_KEY) {
+		return [];
+	}
+	
 	if (cachedEvents) {
 		return cachedEvents;
 	}
