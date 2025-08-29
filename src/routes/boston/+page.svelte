@@ -23,7 +23,7 @@
              Big shoutout to Jukebox for our
              <a href="https://www.jukeboxprint.com/custom-stickers"
                 class="underline hover:text-[#477783] transition-colors">
-               amazing stickers!
+               custom stickers!
              </a>
            </p>`		},
 	];
