@@ -21,10 +21,10 @@ This fall, we invite you to learn something new, make something you're really pr
 
 With love,
 
-> The Daydream Team
+*The Daydream Team*
 
 ---
 
-Trying to make a website? Click [here](https://daydream.hackclub.com/guide/website).
+> Trying to make a website? Click [here](https://daydream.hackclub.com/guide/website).
 
-Looking for the Organizing Guide? You can find that [here](https://daydream.hackclub.com/guide).
+> Looking for the Organizing Guide? You can find that [here](https://daydream.hackclub.com/guide).
