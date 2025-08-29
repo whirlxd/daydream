@@ -7,114 +7,35 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Diyarbakır"; // This should be the name of your event WITHOUT "Daydream" at the start
-	const eventLocation = "Diyarbakır, Turkey";
-	const eventAddress = "Sezai Karakoç Kültür ve Kongre Merkezi, Diyarbakır, Turkey"; // Leave this empty if you don't want an address
-	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recL4Af3iSDhpGjjO"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	const eventName = "Folsom"; // This should be the name of your event WITHOUT "Daydream" at the start
+	const eventLocation = "Folsom";
+	const eventAddress = ""; // Leave this empty if you don't want an address
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recOxChAWEI1DiTaT"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
-	const directionsURL = "https://www.google.com/maps/place/Diyarbak%C4%B1r+Sezai+Karako%C3%A7+K%C3%BClt%C3%BCr+ve+Kongre+Merkezi/@37.9120599,40.221391,17z/data=!3m1!4b1!4m6!3m5!1s0x4075203170ae3cf5:0x21de09b4a477e3de!8m2!3d37.9120599!4d40.2239659!16s%2Fg%2F11c5896nfk?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D" // Google Maps link
-	const contactLink = "mailto:diyarbakir@daydream.hackclub.com"
-	
-	// Language support
-	let currentLanguage = "tr"; // Default to Turkish
-	const languages = {
-		tr: {
-			title: "Daydream Diyarbakır - Oyun Jam",
-			description: "Diyarbakır'da Daydream'e katılın! Lise öğrencileriyle birlikte harika oyunlar yaratacağınız, gençler tarafından yönetilen bir oyun jam. Yemek, workshop'lar ve ödüller dahil!",
-			keywords: "oyun jam, hackathon, genç kodlama, Hack Club, oyun geliştirme, Diyarbakır",
-			hero: {
-				title: "Diyarbakır'da Oyun Yaratın",
-				subtitle: "Lise öğrencileri için oyun geliştirme etkinliği",
-				cta: "Şimdi Kayıt Ol"
-			},
-			schedule: {
-				title: "Program",
-				day1: "Cumartesi, 27 Eylül",
-				day2: "Pazar, 28 Eylül"
-			},
-			events: {
-				doorsOpen: "Kapılar açılıyor",
-				openingCeremony: "Açılış töreni",
-				lunch: "Öğle yemeği",
-				startProject: "Projeniz üzerinde çalışmaya başlayın!",
-				workshop1: "Workshop 1",
-				activity1: "Aktivite 1",
-				workshop2: "Workshop 2",
-				dinner: "Akşam yemeği",
-				lightningTalks: "Hızlı konuşmalar",
-				midnightSurprise: "Gece yarısı sürprizi",
-				breakfast: "Kahvaltı",
-				demos: "Demo'lar!",
-				closingCeremony: "Kapanış töreni"
-			}
-		},
-		en: {
-			title: "Daydream Diyarbakır - Game Jam",
-			description: "Join Daydream in Diyarbakır! A teen-led game jam where you'll build amazing games with other high schoolers. Food, workshops, and prizes included!",
-			keywords: "game jam, hackathon, teen coding, Hack Club, game development, Diyarbakır",
-			hero: {
-				title: "Create Games in Diyarbakır",
-				subtitle: "Game development event for high school students",
-				cta: "Register Now"
-			},
-			schedule: {
-				title: "Schedule",
-				day1: "Saturday, September 27th",
-				day2: "Sunday, September 28th"
-			},
-			events: {
-				doorsOpen: "Doors open",
-				openingCeremony: "Opening ceremony",
-				lunch: "Lunch",
-				startProject: "Start working on your project!",
-				workshop1: "Workshop 1",
-				activity1: "Activity 1",
-				workshop2: "Workshop 2",
-				dinner: "Dinner",
-				lightningTalks: "Lightning talks",
-				midnightSurprise: "Midnight surprise",
-				breakfast: "Breakfast",
-				demos: "Demos!",
-				closingCeremony: "Closing ceremony"
-			}
-		}
-	};
-	
-	$: t = languages[currentLanguage];
+	const directionsURL = ""
+	const contactLink = ""
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
-	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
+	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "https://yt3.googleusercontent.com/ytc/AIdro_kzEvXwNcqCsQ_mdTLXzi22k4-7buXfhnNgyVTr6tTdy-4=s900-c-k-c0x00ffffff-no-rj", name: "Diyarbakır Büyükşehir Belediyesi", url: "https://www.diyarbakir.bel.tr/" },
-		{ image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpXYApFppV9KT67es-Ncj5aLtH5KqO1nWNdQ&s", name: "Kayapınar Belediyesi", url: "https://kayapinar.bel.tr/" },
-		{ image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa6SblZVpsU5im1SPzNW9dqDSNeciWwr8sBQ&s", name: "Yenişehir Belediyesi", url: "https://www.diyarbakiryenisehir.bel.tr/" }
+		{ image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
+		{ image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
+		{ image: "/example/logo3.png", name: "Sponsor 3", url: "https://example3.com" },
+		{ image: "/example/logo4.png", name: "Sponsor 4", url: "https://example4.com" },
+		{ image: "/example/logo5.png", name: "Sponsor 5", url: "https://example5.com" },
+		{ image: "/example/logo6.png", name: "Sponsor 6", url: "https://example6.com" },
+		{ image: "/example/logo7.png", name: "Sponsor 7", url: "https://example7.com" }
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
-	$: scheduleData = [
+	const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [
 		{
-			title: t.schedule.day1,
+			title: "Saturday, September 27th",
 			items: [
-				{ event: t.events.doorsOpen, time: "11:00" },
-				{ event: t.events.openingCeremony, time: "12:00" },
-				{ event: t.events.lunch, time: "12:30" },
-				{ event: t.events.startProject, time: "13:00" },
-				{ event: t.events.workshop1, time: "14:00" },
-				{ event: t.events.activity1, time: "16:00" },
-				{ event: t.events.workshop2, time: "16:00" },
-				{ event: t.events.dinner, time: "18:00" },
-				{ event: t.events.lightningTalks, time: "20:00" },
-				{ event: t.events.midnightSurprise, time: "00:00" }
+				{ event: "TBD" },
 			]
 		},
-		{
-			title: t.schedule.day2,
-			items: [
-				{ event: t.events.breakfast, time: "08:00" },
-				{ event: t.events.demos, time: "10:30" },
-				{ event: t.events.closingCeremony, time: "12:00" }
-			]
-		}
+	
 	];
 
 	
@@ -132,9 +53,9 @@
 	
 	// Get current URL for dynamic metadata
 	$: currentUrl = `https://daydream.hackclub.com${$page.url.pathname}`;
-	$: pageTitle = t.title;
-	$: pageDescription = t.description;
-	$: pageKeywords = t.keywords;
+	$: pageTitle = `Daydream ${eventName} - ${eventLocation} Game Jam`;
+	$: pageDescription = `Join Daydream ${eventName} in ${eventLocation}! A teen-led game jam where you'll build amazing games with other high schoolers. Food, workshops, and prizes included!`;
+	$: pageKeywords = `game jam, hackathon, teen coding, Hack Club, game development, ${eventLocation}, ${eventName}`;
 
 	// Cities where the game jam is happening
 	const cities = `Columbus
@@ -160,7 +81,7 @@ Dubai
 San Francisco
 Minneapolis
 Seattle
-Signapore
+Singapore
 Sydney
 Mumbai`.split("\n")
 
@@ -457,133 +378,18 @@ Mumbai`.split("\n")
 						throw new Error(`Server error: ${response.status}`);
 					} else {
 						// Don't retry on non-500 errors
-						return currentLanguage === 'tr' ? "Nasıl bir oyun yapmak istersin? Gizemli bir dünyada sihirli kristalleri toplayarak dünyayı kurtarmaya ne dersin?" : "How about a game where you collect magical crystals to save a mysterious floating world?";
+						return "How about a game where you collect magical crystals to save a mysterious floating world?";
 					}
 				}
 				
 				const data = await response.json();
-				// If API returns English and user wants Turkish, translate it
-				if (currentLanguage === 'tr' && data.idea) {
-					console.log('API returned idea:', data.idea); // Debug için
-					// Simple translation for common game ideas
-					const englishIdea = data.idea.toLowerCase();
-					
-					// Platform & Movement Games
-					if (englishIdea.includes('platformer') || englishIdea.includes('jump') || englishIdea.includes('climb')) {
-						return "Bir platform oyunu yapmaya ne dersin? Karakterin zıplayarak engelleri aşsın ve yükseklere çıksın!";
-					} 
-					// Puzzle & Brain Games
-					else if (englishIdea.includes('puzzle') || englishIdea.includes('brain') || englishIdea.includes('logic')) {
-						return "Bir bulmaca oyunu yapmaya ne dersin? Oyuncuları düşündüren zorluklar ve mantık oyunları!";
-					} 
-					// Adventure & Exploration Games
-					else if (englishIdea.includes('adventure') || englishIdea.includes('explore') || englishIdea.includes('discover')) {
-						return "Bir macera oyunu yapmaya ne dersin? Gizemli dünyalarda keşif yap ve sırları çöz!";
-					} 
-					// Racing & Speed Games
-					else if (englishIdea.includes('racing') || englishIdea.includes('speed') || englishIdea.includes('fast')) {
-						return "Bir yarış oyunu yapmaya ne dersin? Hızlı arabalar, heyecanlı yarışlar ve rekor kırma!";
-					} 
-					// Collection & Resource Games
-					else if (englishIdea.includes('collect') || englishIdea.includes('gather') || englishIdea.includes('resource')) {
-						return "Bir toplama oyunu yapmaya ne dersin? Oyuncular nesneleri toplasın, puan kazansın ve koleksiyon yapsın!";
-					} 
-					// Rescue & Hero Games
-					else if (englishIdea.includes('save') || englishIdea.includes('rescue') || englishIdea.includes('hero')) {
-						return "Bir kurtarma oyunu yapmaya ne dersin? Karakterin dünyayı, canlıları veya değerli şeyleri kurtarsın!";
-					} 
-					// World & Planet Games
-					else if (englishIdea.includes('world') || englishIdea.includes('planet') || englishIdea.includes('universe')) {
-						return "Bir dünya keşif oyunu yapmaya ne dersin? Oyuncular yeni yerler keşfetsin ve farklı gezegenlerde macera yaşasın!";
-					} 
-					// Magic & Fantasy Games
-					else if (englishIdea.includes('magic') || englishIdea.includes('spell') || englishIdea.includes('fantasy')) {
-						return "Bir sihir oyunu yapmaya ne dersin? Karakterin büyüler yapsın, düşmanları yenmeye çalışsın ve sihirli güçler kazansın!";
-					}
-					// Fighting & Combat Games
-					else if (englishIdea.includes('fight') || englishIdea.includes('battle') || englishIdea.includes('combat')) {
-						return "Bir dövüş oyunu yapmaya ne dersin? Karakterin güçlü düşmanlarla savaşsın ve zafer kazansın!";
-					}
-					// Stealth & Sneak Games
-					else if (englishIdea.includes('stealth') || englishIdea.includes('sneak') || englishIdea.includes('hide')) {
-						return "Bir gizlenme oyunu yapmaya ne dersin? Karakterin düşmanlardan saklansın ve gizlice görevleri tamamlasın!";
-					}
-					// Building & Construction Games
-					else if (englishIdea.includes('build') || englishIdea.includes('construct') || englishIdea.includes('create')) {
-						return "Bir inşa oyunu yapmaya ne dersin? Oyuncular kendi dünyalarını inşa etsin ve yaratıcılıklarını göstersin!";
-					}
-					// Music & Rhythm Games
-					else if (englishIdea.includes('music') || englishIdea.includes('rhythm') || englishIdea.includes('beat')) {
-						return "Bir müzik oyunu yapmaya ne dersin? Oyuncular ritim tutsun, müzik yapsın ve dans etsin!";
-					}
-					// Survival & Horror Games
-					else if (englishIdea.includes('survival') || englishIdea.includes('horror') || englishIdea.includes('scary')) {
-						return "Bir hayatta kalma oyunu yapmaya ne dersin? Karakterin tehlikeli durumlarda hayatta kalmaya çalışsın!";
-					}
-					// Simulation & Life Games
-					else if (englishIdea.includes('simulation') || englishIdea.includes('life') || englishIdea.includes('sim')) {
-						return "Bir simülasyon oyunu yapmaya ne dersin? Gerçek hayatı simüle et ve farklı deneyimler yaşa!";
-					}
-					// Strategy & Tactics Games
-					else if (englishIdea.includes('strategy') || englishIdea.includes('tactics') || englishIdea.includes('plan')) {
-						return "Bir strateji oyunu yapmaya ne dersin? Akıllı planlar yap ve düşmanları yenmek için taktikler geliştir!";
-					}
-					// Sports & Athletic Games
-					else if (englishIdea.includes('sport') || englishIdea.includes('athletic') || englishIdea.includes('ball')) {
-						return "Bir spor oyunu yapmaya ne dersin? Takım oyunları, yarışlar ve atletik beceriler!";
-					}
-					// Time & Clock Games
-					else if (englishIdea.includes('time') || englishIdea.includes('clock') || englishIdea.includes('timer')) {
-						return "Bir zaman oyunu yapmaya ne dersin? Oyuncular zamanla yarışsın ve hızlı kararlar versin!";
-					}
-					// Color & Pattern Games
-					else if (englishIdea.includes('color') || englishIdea.includes('pattern') || englishIdea.includes('match')) {
-						return "Bir renk oyunu yapmaya ne dersin? Oyuncular renkleri eşleştirsin ve güzel desenler oluştursun!";
-					}
-					// Number & Math Games
-					else if (englishIdea.includes('number') || englishIdea.includes('math') || englishIdea.includes('calculate')) {
-						return "Bir matematik oyunu yapmaya ne dersin? Sayıları kullanarak eğlenceli bulmacalar çöz!";
-					}
-					// Word & Language Games
-					else if (englishIdea.includes('word') || englishIdea.includes('language') || englishIdea.includes('letter')) {
-						return "Bir kelime oyunu yapmaya ne dersin? Harflerle oyna ve anlamlı kelimeler oluştur!";
-					}
-					// Arcade & Flying Games
-					else if (englishIdea.includes('arcade') || englishIdea.includes('plane') || englishIdea.includes('fly') || englishIdea.includes('sky') || englishIdea.includes('rooftop') || englishIdea.includes('antenna') || englishIdea.includes('crane')) {
-						return "Bir arcade oyunu yapmaya ne dersin? Küçük bir uçağı yönlendir ve çatılardan kaçınarak gökyüzüne ulaş!";
-					}
-					// Insect & Collection Games
-					else if (englishIdea.includes('insect') || englishIdea.includes('bug') || englishIdea.includes('circus') || englishIdea.includes('beetle') || englishIdea.includes('firefly') || englishIdea.includes('grasshopper') || englishIdea.includes('jar') || englishIdea.includes('tent') || englishIdea.includes('stall')) {
-						return "Bir böcek toplama oyunu yapmaya ne dersin? Sirkte böcekleri yakala, ateş böcekleri ve çekirgeleri topla!";
-					}
-					// Shooting & Defense Games
-					else if (englishIdea.includes('shooting') || englishIdea.includes('shoot') || englishIdea.includes('defend') || englishIdea.includes('workshop') || englishIdea.includes('invading') || englishIdea.includes('kitchen')) {
-						return "Bir savunma oyunu yapmaya ne dersin? Mutfağını koru ve istilacı yiyecekleri vur!";
-					}
-					// Shrinking & Escape Games
-					else if (englishIdea.includes('shrinking') || englishIdea.includes('shrink') || englishIdea.includes('escape') || englishIdea.includes('carnival') || englishIdea.includes('monster') || englishIdea.includes('disappear') || englishIdea.includes('trap') || englishIdea.includes('caught')) {
-						return "Bir kaçış oyunu yapmaya ne dersin? Canavarlardan kaç ve yavaşça küçülen alandan kurtul!";
-					}
-					// Food & Kitchen Games
-					else if (englishIdea.includes('food') || englishIdea.includes('kitchen') || englishIdea.includes('cook') || englishIdea.includes('workshop') || englishIdea.includes('stall') || englishIdea.includes('performance')) {
-						return "Bir mutfak oyunu yapmaya ne dersin? Yiyeceklerle oyna ve lezzetli tarifler yap!";
-					}
-					// Monster & Horror Games
-					else if (englishIdea.includes('monster') || englishIdea.includes('scary') || englishIdea.includes('fear') || englishIdea.includes('dark') || englishIdea.includes('run') || englishIdea.includes('caught')) {
-						return "Bir korku oyunu yapmaya ne dersin? Canavarlardan kaç ve karanlık yerlerde hayatta kalmaya çalış!";
-					}
-					// Default response for any other ideas
-					else {
-						return "Harika bir oyun fikri! Bu fikri geliştirerek kendi oyununu yapabilirsin. Yaratıcı ol ve eğlenceli hale getir!";
-					}
-				}
 				return data.idea;
 			} catch (error) {
 				attempt++;
 				console.warn(`Attempt ${attempt} failed:`, error);
 				
 				if (attempt >= maxAttempts) {
-					return currentLanguage === 'tr' ? "Nasıl bir oyun yapmak istersin? Gizemli bir dünyada sihirli kristalleri toplayarak dünyayı kurtarmaya ne dersin?" : "How about a game where you collect magical crystals to save a mysterious floating world?";
+					return "How about a game where you collect magical crystals to save a mysterious floating world?";
 				}
 				
 				// Wait before retrying
@@ -591,7 +397,7 @@ Mumbai`.split("\n")
 			}
 		}
 		
-		return currentLanguage === 'tr' ? "Nasıl bir oyun yapmak istersin? Gizemli bir dünyada sihirli kristalleri toplayarak dünyayı kurtarmaya ne dersin?" : "How about a game where you collect magical crystals to save a mysterious floating world?";
+		return "How about a game where you collect magical crystals to save a mysterious floating world?";
 	}
 
 	async function dreamIdea() {
@@ -989,17 +795,6 @@ Mumbai`.split("\n")
 	<div class="buildings-front-parallax absolute top-0 left-0 w-full h-full bg-[url(/buildings-front.png)] bg-no-repeat bg-contain pointer-events-none lg:-translate-y-15"></div>
 	<!-- brush texture clipped to front buildings -->
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat pointer-events-none opacity-100 lg:-translate-y-15 bg-center mix-blend-overlay" style="mask-image: url('/buildings-front.png'); mask-size: contain; mask-repeat: no-repeat; mask-position: center top; -webkit-mask-image: url('/buildings-front.png'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center top;"></div>
-	<!-- Language Switcher -->
-	<div class="absolute top-4 right-4 z-50">
-		<button 
-			on:click={() => currentLanguage = currentLanguage === 'tr' ? 'en' : 'tr'}
-			class="bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-4 py-2 text-sm font-medium text-white hover:bg-white/30 transition-all duration-200 flex items-center gap-2"
-		>
-			<span>{currentLanguage === 'tr' ? '🇹🇷' : '🇺🇸'}</span>
-			<span>{currentLanguage === 'tr' ? 'Türkçe' : 'English'}</span>
-		</button>
-	</div>
-
 	<div class="hero-ui-parallax flex flex-col items-center justify-center text-center relative z-5 -translate-y-2">
 		<div class="inline-block relative">
 			<div class="h-12"></div> 
@@ -1007,7 +802,7 @@ Mumbai`.split("\n")
 			<h2
 			class="text-xl font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent absolute left-1/2 max-sm:translate-y-4 max-sm:mb-0 max-md:-mb-8 md:left-[calc(50%+4rem)] -translate-x-1/2 bottom-8 italic w-max md:text-lg max-sm:text-lg"
 			>
-				{currentLanguage === 'tr' ? '27 & 28 Eylül, 2025' : 'September 27th & 28th, 2025'}
+				September 27th & 28th, 2025
 			</h2>
 			<img src="daydream.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4" />
 			<a href="https://hackclub.com" class="absolute top-0 -right-6 max-sm:right-0 max-sm:scale-80 animate-hover ![animation-delay:0.9s] ![--hover:-0.2rem]">
@@ -1018,7 +813,7 @@ Mumbai`.split("\n")
 			<h3
 				class="text-3xl italic font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent w-max max-sm:text-2xl mx-auto"
 			>
-				{currentLanguage === 'tr' ? 'Lise öğrencileri için oyun jam' : 'Game jam for high schoolers'}
+				Game jam for high schoolers
 			</h3>
 			<img
 				src="underline.svg"
@@ -1028,20 +823,11 @@ Mumbai`.split("\n")
 			<h4
 				class="text-2xl opacity-90 mt-2 font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent max-sm:text-xl"
 			>
-				{currentLanguage === 'tr' ? 'Diyarbakır\'da Gençler Tarafından Düzenleniyor' : 'Organized by Teenagers in ' + eventLocation}
+				Organized by Teenagers in {@html eventLocation.replaceAll(" ", "&nbsp;")}
 			</h4>
 		</div>
 		
-		<!-- Custom RSVP Button for Diyarbakır -->
-		<div class="mt-8 flex flex-col items-center gap-3 z-5 max-md:scale-90">
-			<a 
-				href={signupLink}
-				target="_blank"
-				class="relative rounded-full overflow-hidden bg-white border-2 border-dark font-sans p-4 px-8 text-dark hover:bg-pink hover:text-white transition-all duration-200 shadow-[0_3px_0_0_theme(colors.dark)] hover:shadow-[0_3px_0_0_#E472AB] hover:-translate-y-1"
-			>
-				{currentLanguage === 'tr' ? 'Kayıt Olun!' : 'Register Now!'}
-			</a>
-		</div>
+		<ParticipantSignUp {signupLink} {eventName} />
 	</div>
 
 	<!-- <img src="hot-air-balloon.png" alt="" class="absolute w-1/8 right-32 bottom-40 z-20"> -->
@@ -1105,22 +891,22 @@ Mumbai`.split("\n")
 		<div class="relative z-20 px-20 pt-20 pb-52 rounded-lg mb-0 max-sm:px-18" style="background-image: url('/letter-top.png'), linear-gradient(to bottom, #FCEFC5 100px, transparent 100px), url('/letter-loop.png'); background-size: 100% auto, 100% auto, 100% auto; background-repeat: no-repeat, no-repeat, repeat-y; background-position: top, top, top; background-attachment: local, local, local;">
 			<div class="absolute bottom-0 left-0 w-full h-24 z-10 pointer-events-none bg-[url('/clouds-loop.png')] bg-repeat-x bg-bottom bg-contain"></div>
 			<h2 class="text-5xl font-serif italic text-[#8B4513] mb-10 relative">
-				{currentLanguage === 'tr' ? 'Sevgili Hacker\'lar, Müzisyenler ve Sanatçılar,' : 'Dear Hackers, Musicians, and Artist,'}
+				Dear Hackers, Musicians, and Artists,
 				<img src="/underline.svg" alt="" class="absolute left-0 -bottom-3 w-64 h-auto opacity-70">
 			</h2>
 			
 			<div class="text-[#8B4513] font-serif text-xl leading-relaxed space-y-8">
-				<p>{currentLanguage === 'tr' ? 'Hack Club\'ın en yeni macerasına hoş geldiniz. Bu sonbahar sizi 100 şehirde aynı anda gerçekleşen dünyanın en büyük Oyun Jam\'i Daydream\'e katılmaya davet ediyoruz.' : 'Welcome to Hack Club\'s newest adventure. This fall we invite you to join us for Daydream, the world\'s biggest Game Jam happening simultaneously in 100 cities.'}</p>
+				<p>Welcome to Hack Club's newest adventure. This fall we invite you to join us for Daydream, the world's biggest Game Jam happening simultaneously in 100 cities.</p>
 
-				<p class="font-bold text-2xl">{currentLanguage === 'tr' ? 'Hack Club bu sonbahar bir oyun yapmanızı istiyor.' : 'Hack Club wants you to make a game this fall.'}</p>
+				<p class="font-bold text-2xl">Hack Club wants you to make a game this fall.</p>
 
-				<p>{currentLanguage === 'tr' ? 'Kendinizi oyun geliştirici olarak görmüyor musunuz? Sorun değil - ilk oyununuzu yapmanız için tonlarca online ve yüz yüze workshop\'umuz var!' : 'Don\'t consider yourself a game dev? No problem - we have tons of online and in-person workshops for you to make your first game!'}</p>
+				<p>Don't consider yourself a game dev? No problem - we have tons of online and in-person workshops for you to make your first game! </p>
 
-				<p>{currentLanguage === 'tr' ? 'Bu sonbahar, sizi yeni bir şey öğrenmeye, gerçekten gurur duyacağınız bir şey yapmaya, yeni arkadaşlar edinmeye ve birlikte inanılmaz bir maceraya çıkmaya davet ediyoruz.' : 'This fall, we invite you to learn something new, make something you\'re really proud of, meet new friends, and go on an incredible adventure together.'}</p>
+				<p>This fall, we invite you to learn something new, make something you're really proud of, meet new friends, and go on an incredible adventure together.</p>
 
-				<p class="mb-2">{currentLanguage === 'tr' ? 'Sevgiyle,' : 'With love,'}</p>
+				<p class="mb-2">With love,</p>
 
-				<p class="italic text-2xl opacity-85">{currentLanguage === 'tr' ? 'Hack Club Merkezi\'nden Augie ve Renran' : 'Augie and Renran from Hack Club HQ'}</p>
+				<p class="italic text-2xl opacity-85">Augie and Renran from Hack Club HQ</p>
 			</div>
 		</div>
 	</div>
@@ -1146,7 +932,7 @@ Mumbai`.split("\n")
 			<!-- Header Section -->
 			<div class="w-full bg-[url('/billboard-bg-texture.png')] bg-contain bg-repeat py-6 relative" style="border-bottom: 8px solid #B4B4C5;">
 				<h2 class="text-4xl font-serif text-[#F0F0FF] text-center">
-					{currentLanguage === 'tr' ? 'Program' : 'Schedule'}
+					Schedule
 				</h2>
 				<!-- Brush texture overlay for header -->
 				<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
@@ -1212,7 +998,7 @@ Mumbai`.split("\n")
 			<!-- Header Section -->
 			<div class="w-full bg-[url('/billboard-bg-texture.png')] bg-contain bg-repeat py-6 relative" style="border-bottom: 8px solid #B4B4C5;">
 				<h2 class="text-4xl font-serif text-[#F0F0FF] text-center">
-					{currentLanguage === 'tr' ? 'Sponsorlar' : 'Sponsors'}
+					Sponsors
 				</h2>
 				<!-- Brush texture overlay for header -->
 				<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
@@ -1230,8 +1016,8 @@ Mumbai`.split("\n")
 						{#if sponsors.length > 4}
 							<div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center mb-8">
 								{#each sponsors.slice(0, 4) as sponsor}
-									<a href={sponsor.url} class="bg-white/20 rounded-full p-6 w-32 h-32 flex items-center justify-center hover:bg-white/40 transition-colors" target="_blank" rel="noopener noreferrer">
-										<img src={sponsor.image} alt={sponsor.name} class="w-20 h-20 object-contain rounded-full">
+									<a href={sponsor.url} class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors" target="_blank" rel="noopener noreferrer">
+										<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain">
 									</a>
 								{/each}
 							</div>
@@ -1242,9 +1028,9 @@ Mumbai`.split("\n")
 									<div class="grid grid-cols-2 md:grid-cols-3 gap-8 items-center justify-items-center max-w-2xl">
 										{#each sponsors.slice(4) as sponsor, index}
 											<a href={sponsor.url} 
-												class="bg-white/20 rounded-full p-6 w-32 h-32 flex items-center justify-center hover:bg-white/40 transition-colors {sponsors.slice(4).length === 3 && index === 2 ? 'md:col-span-1 col-span-2 max-w-xs mx-auto' : ''}" 
+												class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors {sponsors.slice(4).length === 3 && index === 2 ? 'md:col-span-1 col-span-2 max-w-xs mx-auto' : ''}" 
 												target="_blank" rel="noopener noreferrer">
-												<img src={sponsor.image} alt={sponsor.name} class="w-20 h-20 object-contain rounded-full">
+												<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain">
 											</a>
 										{/each}
 									</div>
@@ -1255,8 +1041,8 @@ Mumbai`.split("\n")
 							<div class="flex justify-center">
 								<div class="grid gap-8 items-center justify-items-center max-w-4xl {sponsors.length === 1 ? 'grid-cols-1' : sponsors.length === 2 ? 'grid-cols-1 md:grid-cols-2' : sponsors.length === 3 ? 'grid-cols-2 md:grid-cols-3' : 'grid-cols-2 md:grid-cols-4'}">
 									{#each sponsors as sponsor}
-									<a href={sponsor.url} class="bg-white/20 rounded-full p-6 w-32 h-32 flex items-center justify-center hover:bg-white/40 transition-colors" target="_blank" rel="noopener noreferrer">
-										<img src={sponsor.image} alt={sponsor.name} class="w-20 h-20 object-contain rounded-full">
+										<a href={sponsor.url} class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors" target="_blank" rel="noopener noreferrer">
+											<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain">
 										</a>
 									{/each}
 								</div>
@@ -1267,7 +1053,7 @@ Mumbai`.split("\n")
 					{#if contactLink}
 						<!-- Call to action for sponsors -->
 						<div class="mt-8 text-center">
-							<p class="text-lg text-[#335969]">{currentLanguage === 'tr' ? 'Daydream ' + eventName + ' için sponsor olmak ister misiniz?' : 'Want to sponsor Daydream ' + eventName + '?'} <a href={contactLink} class="underline hover:text-[#477783] transition-colors">{currentLanguage === 'tr' ? 'İletişime geçin' : 'Get in touch'}</a></p>
+							<p class="text-lg text-[#335969]">Want to sponsor Daydream {eventName}? <a href={contactLink} class="underline hover:text-[#477783] transition-colors">Get in touch</a></p>
 						</div>
 					{/if}
 				</div>
@@ -1341,7 +1127,7 @@ Mumbai`.split("\n")
 			<div class="relative w-72 h-40 max-md:w-80 animate-hover ![--hover:-0.15rem] ![animation-delay:1.7s] z-20" data-point="1">
 				<img src="paper1.png" alt="" class="w-full h-full object-contain">
 				<div class="absolute inset-0 justify-center text-center p-6 text-xl font-serif max-md:text-lg text-[#8B4513] inline-block content-center">
-					<span class="font-sans text-[#E472AB] font-bold text-[1.3rem] mr-1">#1:</span> <a href={signupLink} class="underline">{currentLanguage === 'tr' ? 'Kayıt ol' : 'Sign up'}</a> {currentLanguage === 'tr' ? 'Daydream' : 'for Daydream'} {eventName}
+					<span class="font-sans text-[#E472AB] font-bold text-[1.3rem] mr-1">#1:</span> <a href={signupLink} class="underline">Sign up</a> for Daydream {eventName}
 				</div>
 			</div>
 		</div>
@@ -1355,7 +1141,7 @@ Mumbai`.split("\n")
 			<div class="relative w-72 h-40 max-md:w-80 animate-hover ![--hover:-0.15rem] ![animation-delay:0.3s] z-20" data-point="2">
 				<img src="paper2.png" alt="" class="w-full h-full object-contain">
 				<div class="absolute inset-0 justify-center text-center p-6 text-xl font-serif max-md:text-lg text-[#8B4513] inline-block content-center">
-					<span class="font-sans text-[#639DEB] font-bold text-[1.3rem] mr-1">#2:</span> {currentLanguage === 'tr' ? 'Bir workshop\'a katılın ve oyun geliştirme hakkında bilgi edinin' : 'Attend a workshop and learn about game development'}
+					<span class="font-sans text-[#639DEB] font-bold text-[1.3rem] mr-1">#2:</span> Attend a workshop and learn about game development
 				</div>
 			</div>
 		</div>
@@ -1368,7 +1154,7 @@ Mumbai`.split("\n")
 			<div class="relative w-72 h-40 max-md:w-80 animate-hover ![--hover:-0.15rem] ![animation-delay:1.4s] z-20" data-point="3">
 				<img src="paper3.png" alt="" class="w-full h-full object-contain">
 				<div class="absolute inset-0 justify-center text-center p-6 text-xl font-serif max-md:text-lg text-[#8B4513] inline-block content-center">
-					<span class="font-sans text-[#AB68E2] font-bold text-[1.3rem] mr-1">#3:</span> {currentLanguage === 'tr' ? 'Etkinlikte diğer gençlerden bir ekip bulun' : 'Find a team of other teenagers at the event'}
+					<span class="font-sans text-[#AB68E2] font-bold text-[1.3rem] mr-1">#3:</span> Find a team of other teenagers at the event
 				</div>
 			</div>
 		</div>
@@ -1381,7 +1167,7 @@ Mumbai`.split("\n")
 			<div class="relative w-72 h-40 max-md:w-80 animate-hover ![--hover:-0.15rem] ![animation-delay:2.3s] z-20" data-point="4">
 				<img src="paper4.png" alt="" class="w-full h-full object-contain">
 				<div class="absolute inset-0 justify-center text-center p-6 text-xl font-serif max-md:text-lg text-[#8B4513] inline-block content-center">
-					<span class="font-sans text-[#F2993E] font-bold text-[1.3rem] mr-1">#4:</span> {currentLanguage === 'tr' ? 'Oyununuzu yapmaya başlayın - ' : 'Start building your game - '}<em>{currentLanguage === 'tr' ? 'deneyim gerekmez' : 'no experience needed'}</em>
+					<span class="font-sans text-[#F2993E] font-bold text-[1.3rem] mr-1">#4:</span> Start building your game - <em>no experience needed</em>
 				</div>
 			</div>
 		</div>
@@ -1392,7 +1178,7 @@ Mumbai`.split("\n")
 	<div class="flex flex-col items-center w-full basis-full translate-y-40 max-md:translate-y-12 z-20">
 		<div class="relative">
 			<div class="bg-[url('/card-final.png')] bg-contain bg-no-repeat bg-center text-2xl font-serif pt-24 px-8 w-128 h-96 text-center max-md:w-80 max-md:h-80 max-md:text-xl max-md:pt-16 animate-hover ![--hover:-0.15rem] ![animation-delay:1.9s]" data-point="5">
-				<span class="font-sans text-[#F2CC32] font-bold text-[1.5rem] mr-1">#5:</span> {currentLanguage === 'tr' ? 'Yaptığınız şeyi dünyayla paylaşın!' : 'Share what you made with the world!'}
+				<span class="font-sans text-[#F2CC32] font-bold text-[1.5rem] mr-1">#5:</span> Share what you made with the world!
 			</div>
 		</div>
 	</div>
@@ -1411,7 +1197,7 @@ Mumbai`.split("\n")
 			<!-- Map container with cloudy edges -->
 			<div class="relative w-full h-156 overflow-hidden bg-transparent">
 				<iframe 
-					src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Sezai+Karakoç+Kültür+ve+Kongre+Merkezi,Diyarbakır,Turkey&zoom=14"
+					src={eventAddress ? "/event-map?location=" + encodeURIComponent(eventAddress) : "/map"}
 					class="w-full h-full border-0 bg-[#acd4e0]"
 					style="
 						mask-image: 
@@ -1580,14 +1366,14 @@ Mumbai`.split("\n")
 				
 				<div class="space-y-8 max-sm:space-y-4 relative z-10">
 					<h2 class="text-5xl md:text-6xl lg:text-7xl font-pixel leading-tight">
-						{currentLanguage === 'tr' ? 'Ne ' : 'What will you '}<img src="/dream-pixel.png" alt="Dream?" class="h-[0.75em] font-serif italic [image-rendering:pixelated] inline align-middle -translate-y-1.5">{currentLanguage === 'tr' ? ' yapacaksın?' : ''}
+						What will you <img src="/dream-pixel.png" alt="Dream?" class="h-[0.75em] font-serif italic [image-rendering:pixelated] inline align-middle -translate-y-1.5">
 					</h2>
 					
 					<p class="text-xl md:text-2xl opacity-90 font-pixel">
-						{currentLanguage === 'tr' ? 'itch.io\'da yayınlanabilen istediğiniz herhangi bir oyunu yapabilirsiniz! Yapılan tüm oyunlar yayınlanmalı ve diğer katılımcıların oynayıp deneyimleyebilmesi için çevrimiçi olarak mevcut olmalıdır. Sadece itch.io gönderim linklerini kabul edeceğiz.' : 'You can make any game you want as long as it can be deployed on itch.io! All games made must be deployed and available online for other participants to play and experience. We will only accept itch.io submission links.'}
+						You can make any game you want as long as it can be deployed on itch.io! All games made must be deployed and available online for other participants to play and experience. We will only accept itch.io submission links.
 						<br>
 						<br>
-						{currentLanguage === 'tr' ? 'İşte sizi ilhamlandırmak için geçmiş hackathon\'lardan bazı harika projeler:' : 'Here are some cool projects from past hackathons to get you inspired:'}
+						Here are some cool projects from past hackathons to get you inspired:
 					</p>
 					
 					<ul class="space-y-2 font-pixel text-xl md:text-2xl">
@@ -1606,18 +1392,18 @@ Mumbai`.split("\n")
 					</ul>
 					
 					<p class="text-xl md:text-2xl opacity-90 font-pixel leading-relaxed">
-						{currentLanguage === 'tr' ? 'Daydream\'den önce Godot kullanarak oyun geliştirmeyi öğrenmenize yardımcı olacak workshop\'lar ve aktiviteler olacak!' : 'We\'ll have workshops and activities before Daydream to help you learn game development using Godot!'}
+						We'll have workshops and activities before Daydream to help you learn game development using Godot! 
 					</p>
 					
 					<!-- Bottom section with input -->
 					<div class="flex flex-col md:flex-row md:items-end gap-10 pt-8">
 						<div>
-							<h3 class="text-3xl md:text-4xl font-pixel mb-4">{currentLanguage === 'tr' ? 'Takıldınız mı?' : 'Stuck?'}</h3>
+							<h3 class="text-3xl md:text-4xl font-pixel mb-4">Stuck?</h3>
 							<button 
 								class="bg-[#D1E3EE] text-[#061E2D] px-8 py-4 font-pixel text-xl md:text-2xl hover:bg-[#B8D3E0] cursor-pointer max-sm:w-full"
 								on:click={dreamIdea}
 							>
-								{currentLanguage === 'tr' ? 'Benim için bir fikir hayal et' : 'Dream an idea for me'}
+								Dream an idea for me
 							</button>
 						</div>
 						
@@ -1658,19 +1444,26 @@ Mumbai`.split("\n")
 		<div class="relative transform -rotate-2">
 			<img src="window-3.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">{currentLanguage === 'tr' ? 'Daydream\'e kimler katılabilir?' : 'Who can participate in Daydream?'}</h3>
-				<p class="text-sm">{currentLanguage === 'tr' ? 'Tüm lise ve üst ortaokul yaşındaki öğrenciler katılmaya davetlidir!' : 'All high-school & upper-middle-school aged students are welcome to come!'}</p>
+				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">Who can participate in Daydream?</h3>
+				<p class="text-sm">All high-school & upper-middle-school aged students are welcome to come!</p>
 		</div>
 		</div>
 
-
+		<!-- FAQ Item 2 -->
+		<div class="relative transform rotate-1">
+			<img src="window-4.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
+				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">Can I organize a Daydream in my city?</h3>
+				<p class="text-sm">Definitely! Contact us via daydream@hackclub.com or join #daydream on slack.</p>
+			</div>
+		</div>
 
 		<!-- FAQ Item 3 -->
 		<div class="relative transform rotate-2">
 			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">{currentLanguage === 'tr' ? 'Bunların hepsi ücretsiz mi?' : 'All this, for free?'}</h3>
-				<p class="text-sm">{currentLanguage === 'tr' ? 'Evet! Yemek, hediyeler ve güzel atmosfer dahil.' : 'Yep! Food, swag and good vibes are all included.'}</p>
+				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">All this, for free?</h3>
+				<p class="text-sm">Yep! Food, swag and good vibes are all included. Plus, if you're joining us from afar, we'll cover the cost of gas or a bus / train ticket.</p>
 			</div>
 		</div>
 
@@ -1678,8 +1471,8 @@ Mumbai`.split("\n")
 		<div class="relative transform -rotate-1">
 			<img src="window-1.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">{currentLanguage === 'tr' ? 'Neye ihtiyacım var?' : 'What do I need?'}</h3>
-				<p class="text-sm">{currentLanguage === 'tr' ? 'Laptop\'unuz, şarj cihazları, tuvalet malzemeleri, uyku tulumları ve açık bir zihin!' : 'Your laptop, chargers, toiletries, sleeping bags, and an open mind!'}</p>
+				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">What do I need?</h3>
+				<p class="text-sm">Your laptop, chargers, toiletries, sleeping bags, and an open mind!</p>
 			</div>
 		</div>
 
@@ -1687,8 +1480,8 @@ Mumbai`.split("\n")
 		<div class="relative transform rotate-1">
 			<img src="window-4.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-1 max-md:text-base">{currentLanguage === 'tr' ? 'Hack Club daha önce ne yaptı?' : 'What has Hack Club done before?'}</h3>
-				<p class="text-sm">{currentLanguage === 'tr' ? 'Hack Club, GitHub merkezinde hackathon, 50 şehirde Oyun Jam, Vermont\'tan Los Angeles\'a tren üzerinde hackathon ve daha fazlasını düzenledi!' : 'Hack Club has run a hackathon in at GitHub HQ, a Game Jam in 50 cities, a hackathon on a train from Vermont to Los Angeles, and more!'}</p>
+				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-1 max-md:text-base">What has Hack Club done before?</h3>
+				<p class="text-sm">Hack Club has run a hackathon in at GitHub HQ, a Game Jam in 50 cities, a hackathon on a train from Vermont to Los Angeles, and more!</p>
 			</div>
 		</div>
 
@@ -1696,8 +1489,8 @@ Mumbai`.split("\n")
 		<div class="relative transform rotate-1">
 			<img src="window-3.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">{currentLanguage === 'tr' ? 'Kodlama konusunda iyi değilim. Yine de katılabilir miyim?' : 'I\'m not good at coding. Can I still participate?'}</h3>
-				<p class="text-sm">{currentLanguage === 'tr' ? 'Bu oyun jam tüm seviyeler için! Workshop\'lar ve diğer etkinlikler olacak, bize katılın ve birlikte öğrenelim.' : 'This game jam is for all skill levels! We\'ll have workshops and other events so join us and let\'s learn together.'}</p>
+				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">I'm not good at coding. Can I still participate?</h3>
+				<p class="text-sm">This game jam is for all skill levels! We'll have workshops and other events so join us and let's learn together.</p>
 			</div>
 		</div>
 
@@ -1705,8 +1498,8 @@ Mumbai`.split("\n")
 		<div class="relative transform -rotate-2">
 			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">{currentLanguage === 'tr' ? 'Ebeveynlerim endişelenirse ne olur?' : 'What if my parents are concerned?'}</h3>
-				<p class="text-sm">{currentLanguage === 'tr' ? 'Size yardım etmek için buradayız! Ebeveyn rehberimizi burada görebilirsiniz veya sorular için daydream@hackclub.com adresinden bize ulaşabilirler.' : 'We\'re here to help! You can see our parent guide here, or they can reach out to us at daydream@hackclub.com for questions.'}</p>
+				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">What if my parents are concerned?</h3>
+				<p class="text-sm">We're here to help! You can see our parent guide here, or they can reach out to us at daydream@hackclub.com for questions.</p>
 			</div>
 		</div>
 
@@ -1714,8 +1507,8 @@ Mumbai`.split("\n")
 		<div class="relative transform -rotate-1">
 			<img src="window-1.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">{currentLanguage === 'tr' ? 'Daydream\'de ne yapabilirim?' : 'What can I make at Daydream?'}</h3>
-				<p class="text-sm">{currentLanguage === 'tr' ? 'Temaya dayalı HERHANGİ bir oyun türü! Platform oyunu, görsel roman, tıklama oyunu, vb. Mümkün olduğunca yaratıcı olun!' : 'ANY type of game based on the theme! Platformer, visual novel, clicker game, etc. Be as creative as possible!'}</p>
+				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">What can I make at Daydream?</h3>
+				<p class="text-sm">ANY type of game based on the theme! Platformer, visual novel, clicker game, etc. Be as creative as possible!</p>
 			</div>
 		</div>
 	</div>
