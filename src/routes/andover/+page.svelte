@@ -39,7 +39,7 @@
 				{ event: "Continue working", time: "1:00 PM" },
                 { event: "Spikeball Competition", time: "2:00 PM" },
 				{ event: "Dinner", time: "6:00 PM" },
-				{ event: "Closing ceremony", time: 6:30 PM" },
+				{ event: "Closing ceremony", time: "6:30 PM" },
                 { event: "Day 1 ends", time: "7:00 PM" }
 			]
 		},
