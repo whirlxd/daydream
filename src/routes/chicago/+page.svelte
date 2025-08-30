@@ -7,13 +7,13 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Andover"; // This should be the name of your event WITHOUT "Daydream" at the start
-	const eventLocation = "Andover";
-	const eventAddress = "Phillips Academy(TBD)"; // Leave this empty if you don't want an address
-	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recnliSU84ibxwFSG"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	const eventName = "Chicago"; // This should be the name of your event WITHOUT "Daydream" at the start
+	const eventLocation = "Chicago";
+	const eventAddress = ""; // Leave this empty if you don't want an address
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = ""
-	const contactLink = "mailto:example@daydream.hackclub.com"
+	const contactLink = ""
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
@@ -32,27 +32,24 @@
 		{
 			title: "Saturday, September 27th",
 			items: [
-				{ event: "Check in", time: "10:00 AM" },
-				{ event: "Opening ceremony 1", time: "10:30 AM" },
-				{ event: "Start working!", time: "10:45 AM" },
-				{ event: "Lunch", time: "12:00 PM" },
-				{ event: "Continue working", time: "1:00 PM" },
-                { event: "Spikeball Competition", time: "2:00 PM" },
+				{ event: "Doors open", time: "11:00 AM" },
+				{ event: "Opening ceremony", time: "12:00 PM" },
+				{ event: "Lunch", time: "12:30 PM" },
+				{ event: "Start working on your project!", time: "1:00 PM" },
+				{ event: "Workshop 1", time: "2:00 PM" },
+				{ event: "Activity 1", time: "4:00 PM" },
+				{ event: "Workshop 2", time: "4:00 PM" },
 				{ event: "Dinner", time: "6:00 PM" },
-				{ event: "Closing ceremony", time: "6:30 PM" },
-                { event: "Day 1 ends", time: "7:00 PM" }
+				{ event: "Lightning talks", time: "8:00 PM" },
+				{ event: "Midnight surprise", time: "12:00 AM" }
 			]
 		},
 		{
 			title: "Sunday, September 28th",
 			items: [
-				{ event: "Check in", time: "10:00 AM" },
-				{ event: "Opening ceremony 2", time: "10:30 AM" },
-				{ event: "Start working!", time: "10:45 AM" },
-				{ event: "Lunch", time: "12:00 PM" },
-				{ event: "Continue working", time: "1:00 PM" },
-                { event: "Hacking ends", time: "3:30 PM" },
-                { event: "Day 2 ends", time: "4:30 PM" }
+				{ event: "Breakfast", time: "8:00 AM" },
+				{ event: "Demos!", time: "10:30 AM" },
+				{ event: "Closing ceremony", time: "12:00 PM" }
 			]
 		}
 	];
@@ -77,7 +74,8 @@
 	$: pageKeywords = `game jam, hackathon, teen coding, Hack Club, game development, ${eventLocation}, ${eventName}`;
 
 	// Cities where the game jam is happening
-	const cities = `Columbus
+	const cities = `Chicago
+	Columbus
 Lisbon 
 Boston
 Giza
@@ -910,7 +908,7 @@ Mumbai`.split("\n")
 		<div class="relative z-20 px-20 pt-20 pb-52 rounded-lg mb-0 max-sm:px-18" style="background-image: url('/letter-top.png'), linear-gradient(to bottom, #FCEFC5 100px, transparent 100px), url('/letter-loop.png'); background-size: 100% auto, 100% auto, 100% auto; background-repeat: no-repeat, no-repeat, repeat-y; background-position: top, top, top; background-attachment: local, local, local;">
 			<div class="absolute bottom-0 left-0 w-full h-24 z-10 pointer-events-none bg-[url('/clouds-loop.png')] bg-repeat-x bg-bottom bg-contain"></div>
 			<h2 class="text-5xl font-serif italic text-[#8B4513] mb-10 relative">
-				Dear Hackers, Musicians, and Artist,
+				Dear Hackers, Musicians, and Artists,
 				<img src="/underline.svg" alt="" class="absolute left-0 -bottom-3 w-64 h-auto opacity-70">
 			</h2>
 			

@@ -7,24 +7,19 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Andover"; // This should be the name of your event WITHOUT "Daydream" at the start
-	const eventLocation = "Andover";
-	const eventAddress = "Phillips Academy(TBD)"; // Leave this empty if you don't want an address
-	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recnliSU84ibxwFSG"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	const eventName = "Jhansi"; // This should be the name of your event WITHOUT "Daydream" at the start
+	const eventLocation = "Jhansi";
+	const eventAddress = "RISE Incubator,Nagar Nigam ,Jhansi"; // Leave this empty if you don't want an address
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
-	const directionsURL = ""
-	const contactLink = "mailto:example@daydream.hackclub.com"
+	const directionsURL = "https://maps.app.goo.gl/rbcoBJeBCyFi7sG17"
+	const contactLink = "mailto:jhansi@daydream.hackclub.com"
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
-	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
+	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
-		{ image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
-		{ image: "/example/logo3.png", name: "Sponsor 3", url: "https://example3.com" },
-		{ image: "/example/logo4.png", name: "Sponsor 4", url: "https://example4.com" },
-		{ image: "/example/logo5.png", name: "Sponsor 5", url: "https://example5.com" },
-		{ image: "/example/logo6.png", name: "Sponsor 6", url: "https://example6.com" },
-		{ image: "/example/logo7.png", name: "Sponsor 7", url: "https://example7.com" }
+		{ image: "/jhansi/tranza.png", name: "Tranza", url: "https://www.tranza.live/" },
+		{ image: "/jhansi/FOSS.png", name: "FOSS", url: "https://fossunited.org/" }
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
@@ -32,27 +27,30 @@
 		{
 			title: "Saturday, September 27th",
 			items: [
-				{ event: "Check in", time: "10:00 AM" },
-				{ event: "Opening ceremony 1", time: "10:30 AM" },
-				{ event: "Start working!", time: "10:45 AM" },
-				{ event: "Lunch", time: "12:00 PM" },
-				{ event: "Continue working", time: "1:00 PM" },
-                { event: "Spikeball Competition", time: "2:00 PM" },
-				{ event: "Dinner", time: "6:00 PM" },
-				{ event: "Closing ceremony", time: "6:30 PM" },
-                { event: "Day 1 ends", time: "7:00 PM" }
+				{ event: "Doors Open & Check-in", time: "9:00 AM" },
+				{ event: "Opening ceremony", time: "9:30 AM" },
+				{ event: "LunchIcebreaker ", time: "10:00 AM" },
+				{ event: "Intensive Workshop (Part 1)", time: "11:00 AM" },
+				{ event: "Lunch", time: "1:00 PM" },
+				{ event: "Intensive Workshop (Part 2)", time: "2:00 PM" },
+				{ event: "Start working on your project!", time: "4:00 PM" },
+				{ event: " More Snacks and Fun", time: "6:00 PM" },
+				{ event: "Day 1 Showcase", time: "8:00 PM" },
+				{ event: "Doors Close for Day 1", time: "9:00 PM" },
 			]
 		},
 		{
 			title: "Sunday, September 28th",
 			items: [
-				{ event: "Check in", time: "10:00 AM" },
-				{ event: "Opening ceremony 2", time: "10:30 AM" },
-				{ event: "Start working!", time: "10:45 AM" },
-				{ event: "Lunch", time: "12:00 PM" },
-				{ event: "Continue working", time: "1:00 PM" },
-                { event: "Hacking ends", time: "3:30 PM" },
-                { event: "Day 2 ends", time: "4:30 PM" }
+				{ event: "Doors Open", time: "9:00 AM" },
+				{ event: "Final Hacking Session", time: "10:00 AM" },
+				{ event: "Lunch", time: "1:00 PM" },
+				{ event: "Project Submissions Deadline", time: "5:00 PM" },
+				{ event: "Project Showcase", time: "6:00 PM" },
+				{ event: "Merch Distribution & Voting period", time: "6:30 PM" },
+				{ event: "Closing Ceremony & Prize Distribution", time: "7:00 PM" },
+				{ event: "Some more snacks and goodbyes", time: "8:00 PM" },
+				{ event: "Event Concludes", time: "9:00 PM" }
 			]
 		}
 	];
@@ -846,7 +844,7 @@ Mumbai`.split("\n")
 			</h4>
 		</div>
 		
-		<ParticipantSignUp {signupLink} {eventName} />
+		<ParticipantSignUp {eventName} />
 	</div>
 
 	<!-- <img src="hot-air-balloon.png" alt="" class="absolute w-1/8 right-32 bottom-40 z-20"> -->

@@ -1,30 +1,22 @@
 <script lang="ts">
-	/**
-	 * This is the template site! Create a copy of this folder (src/routes/example)
-	 * and rename it to whatever you want your URL to be.
-	 * 
-	 * Then, configure the event name, location, and schedule below:
-	 */
-
-	// Configuration - Put your information here!
-	const eventName = "Valencia"; // This should be the name of your event WITHOUT "Daydream" at the start
+	// Configuration
+	const eventName = "Valencia";
 	const eventLocation = "Valencia";
-	const eventAddress = ""; // Leave this empty if you don't want an address
-	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recPq4lURkQWbmJFY&lang=es"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
-	// These two are optional-- leave them empty if you don't have anything!
-	const directionsURL = "https://www.google.com/maps/search/1600+pennsylvania+avenue+washington+dc/"
+	const eventAddress = "";
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recPq4lURkQWbmJFY&lang=es";
+	const directionsURL = ""
 	const contactLink = "mailto:valencia@daydream.hackclub.com"
 	const sponsorLink = "https://hcb.hackclub.com/donations/start/daydream-valencia"
 	
-	// Sponsors Configuration - disable this if you don't have any sponsors to display!
-	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
+	// Sponsors Configuration
+	const sponsorsEnabled = true;
 	const sponsors = [
 		{ image: "/valencia/avast.png", name: "AVAST", url: "https://asociacion-avast.org/" },
 		{ image: "/valencia/jukebox.png", name: "Jukeboxprint", url: "https://jukeboxprint.com" },
 		{ image: "/valencia/nix.png", name: "Nix Media", url: "https://nixmedia.studio" },
 	];
 	
-	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
+	// Schedule Configuration
 	const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [
 		{
 			title: "Sabado, 27 de Septiembre",
@@ -75,7 +67,7 @@
 	$: pageKeywords = `game jam, hackathon, teen coding, Hack Club, game development, ${eventLocation}, ${eventName}`;
 
 	// Cities where the game jam is happening
-	const cities = `Columbus
+	const cities = `Valencia
 Lisbon 
 Boston
 Giza
@@ -86,6 +78,7 @@ Bengaluru
 Tampa
 Auckland
 Omaha
+Valencia
 Phoenix
 Madrid
 Boise
@@ -96,6 +89,7 @@ London
 Visakhapatnam
 Dubai
 San Francisco
+Valencia
 Minneapolis
 Seattle
 Singapore
@@ -1105,6 +1099,13 @@ Mumbai`.split("\n")
 		>
 			<div class="absolute bottom-0 left-0 w-full h-auto bg-[url('/clouds-loop.png')] bg-no-repeat bg-contain bg-bottom pointer-events-none aspect-[2/1]"></div>
 		</div>
+	</div>
+</div>
+
+<!-- Jukebox Shoutout -->
+<div class="w-full bg-[#FCEFC5] pt-12 pb-8 px-8">
+	<div class="max-w-4xl mx-auto text-center">
+		<p class="text-2xl text-[#335969] font-semibold">¡Un gran agradecimiento a Jukebox por nuestros <a href="https://jukeboxprint.com" class="underline hover:text-[#477783] transition-colors" target="_blank" rel="noopener noreferrer">stickers personalizados</a>!</p>
 	</div>
 </div>
 {/if}
