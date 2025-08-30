@@ -3,14 +3,14 @@
 	import { contactLink, eventName } from '../data';
 
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
-	const sponsors = [
-		{ image: '/example/logo1.png', name: 'Sponsor 1', url: 'https://example1.com' },
-		{ image: '/example/logo2.png', name: 'Sponsor 2', url: 'https://example2.com' },
-		{ image: '/example/logo3.png', name: 'Sponsor 3', url: 'https://example3.com' },
-		{ image: '/example/logo4.png', name: 'Sponsor 4', url: 'https://example4.com' },
-		{ image: '/example/logo5.png', name: 'Sponsor 5', url: 'https://example5.com' },
-		{ image: '/example/logo6.png', name: 'Sponsor 6', url: 'https://example6.com' },
-		{ image: '/example/logo7.png', name: 'Sponsor 7', url: 'https://example7.com' }
+	const sponsors: { image: string; name: string; url: string }[] = [
+		// { image: '/example/logo1.png', name: 'Sponsor 1', url: 'https://example1.com' },
+		// { image: '/example/logo2.png', name: 'Sponsor 2', url: 'https://example2.com' },
+		// { image: '/example/logo3.png', name: 'Sponsor 3', url: 'https://example3.com' },
+		// { image: '/example/logo4.png', name: 'Sponsor 4', url: 'https://example4.com' },
+		// { image: '/example/logo5.png', name: 'Sponsor 5', url: 'https://example5.com' },
+		// { image: '/example/logo6.png', name: 'Sponsor 6', url: 'https://example6.com' },
+		// { image: '/example/logo7.png', name: 'Sponsor 7', url: 'https://example7.com' }
 	];
 </script>
 
@@ -39,7 +39,7 @@
 						class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
 
 					<!-- Sponsors Grid -->
-					<div class="relative z-10 min-h-40">
+					<div class="relative z-10">
 						{#if sponsors.length > 0}
 							<!-- First row (up to 4 sponsors) -->
 							{#if sponsors.length > 4}
