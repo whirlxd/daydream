@@ -7,57 +7,43 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = 'Kathmandu'; // This should be the name of your event WITHOUT "Daydream" at the start
-	const eventLocation = 'Kathmandu';
-	const eventAddress =
-		'GoldenGate Auditorium, GoldenGate International College, Battisputali, Kathmandu 44600'; // Leave this empty if you don't want an address
-	const signupLink = 'https://forms.hackclub.com/daydream-sign-up?event=recBc5MQQXPWjJudx'; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	const eventName = 'Oshkosh'; // This should be the name of your event WITHOUT "Daydream" at the start
+	const eventLocation = 'Oshkosh';
+	const eventAddress = 'TBD'; // Leave this empty if you don't want an address
+	const signupLink = 'https://forms.hackclub.com/daydream-sign-up?event=recCDbzlSPGdFZy4d'; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
-	const directionsURL = 'https://maps.app.goo.gl/LjoHQVdt3s5n6zJ78';
-	const contactLink = 'mailto:kathmandu@daydream.hackclub.com';
+	const directionsURL = '';
+	const contactLink = 'mailto:oshkosh@daydream.hackclub.com';
 
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{
-			image: '/kathmandu/ggic.jpg',
-			name: 'GoldenGate International College',
-			url: 'http://sec.goldengateintl.com/'
-		},
-		{
-			image: '/kathmandu/ggsrc.jpg',
-			name: 'GoldenGate Science & Robotics Club',
-			url: 'https://www.ggsrclub.com/'
-		},
-		{
-			image: '/kathmandu/jukebox-logo.svg',
-			name: 'JukeBox',
-			url: 'https://www.jukeboxprint.com/custom-stickers'
-		}
+		// { image: '/example/logo1.png', name: 'Sponsor 1', url: 'https://example1.com' },
 	];
 
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
 	const scheduleData: { title: string; items: { event: string; time: string }[] }[] = [
 		{
-			title: 'Friday, September 26th',
+			title: 'Saturday, September 27th',
 			items: [
-				{ event: 'Doors open', time: '9:00 AM' },
-				{ event: 'Opening ceremony', time: '10:00 AM' },
-				{ event: 'Lunch', time: '10:30 AM' },
-				{ event: 'Start working on your project!', time: '11:00 AM' },
-				{ event: 'Workshop 1', time: '12:00 PM' },
-				{ event: 'Activity 1', time: '2:00 PM' },
-				{ event: 'Snacks', time: '4:00 PM' },
-				{ event: 'Lightning talks', time: '4:30 PM' },
-				{ event: 'End of Day 1', time: '5:00 PM' }
+				{ event: 'Doors open', time: '11:00 AM' },
+				{ event: 'Opening ceremony', time: '12:00 PM' },
+				{ event: 'Lunch', time: '12:30 PM' },
+				{ event: 'Start working on your project!', time: '1:00 PM' },
+				{ event: 'Workshop 1', time: '2:00 PM' },
+				{ event: 'Activity 1', time: '4:00 PM' },
+				{ event: 'Workshop 2', time: '4:00 PM' },
+				{ event: 'Dinner', time: '6:00 PM' },
+				{ event: 'Lightning talks', time: '8:00 PM' },
+				{ event: 'Midnight surprise', time: '12:00 AM' }
 			]
 		},
 		{
-			title: 'Saturday, September 27th',
+			title: 'Sunday, September 28th',
 			items: [
 				{ event: 'Breakfast', time: '8:00 AM' },
-				{ event: 'Demos!', time: '9:00 AM' },
-				{ event: 'Closing ceremony', time: '11:00 AM' }
+				{ event: 'Demos!', time: '10:30 AM' },
+				{ event: 'Closing ceremony', time: '12:00 PM' }
 			]
 		}
 	];
@@ -969,7 +955,7 @@ Mumbai`.split('\n');
 				class="absolute bottom-0 left-0 w-full h-24 z-10 pointer-events-none bg-[url('/clouds-loop.png')] bg-repeat-x bg-bottom bg-contain"
 			></div>
 			<h2 class="text-5xl font-serif italic text-[#8B4513] mb-10 relative">
-				Dear Hackers, Musicians, and Artist,
+				Dear Hackers, Musicians, and Artists,
 				<img src="/underline.svg" alt="" class="absolute left-0 -bottom-3 w-64 h-auto opacity-70" />
 			</h2>
 
