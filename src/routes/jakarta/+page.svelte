@@ -14,6 +14,10 @@
 	const directionsURL = '';
 	const contactLink = 'jakarta@daydream.hackclub.com';
 
+	// Fillout Block Notice
+	// In Indonesia, Fillout forms (specifically Hack Club ones) are currently inaccessible because of government restrictions. As a workaround, we notice user to recommend using a VPN (We recommend Cloudflare Warp) to access the forms.
+	let hasClickedFilloutButton = false;
+
 	// Language support
 	let currentLanguage: 'id' | 'en' = 'id'; // Default to Indonesian
 	const languages: Record<'id' | 'en', Record<string, string>> = {
@@ -27,6 +31,10 @@
 			subtitle: 'Lomba Game Jam untuk siswa!',
 			organizedBy: 'Diselenggarakan oleh Remaja di',
 			getStickers: 'Dapatkan stiker gratis',
+			getStickersTroubleshootTitle: 'Kami sedang ada masalah disini.',
+			getStickersTroubleshootDescription:
+				'Saat ini, seluruh formulir Fillout (khusus Hack Club) tidak dapat diakses di Indonesia. Untuk sementara, kamu bisa memakai VPN (Direkomendasikan Cloudflare Warp) sebagai alternatif sampai masalah ini selesai. Tenang saja, stiker kamu akan tetap sampai kok! Silahkan klik tombol ini lagi jika kamu sudah mengerti.',
+			getStickersTroubleshootConfirm: 'Oke, mengerti',
 			dearHackers: 'Kepada Hacker, Musisi, dan Seniman,',
 			welcome:
 				'Selamat datang di petualangan terbaru Hack Club. Di Musim ini, kami mengundang Anda untuk bergabung dengan kami di Daydream, Game Jam terbesar di dunia yang berlangsung secara serentak di 100 kota.',
@@ -107,6 +115,10 @@
 			subtitle: 'Game jam for high schoolers',
 			organizedBy: 'Organized by Teenagers in',
 			getStickers: 'Get free stickers',
+			getStickersTroubleshootTitle: "We're having some issues here.",
+			getStickersTroubleshootDescription:
+				"Currently, all fillout forms (specifically Hack Club ones) are inaccessible in Indonesia. For now, you can use a VPN (We recommend Cloudflare Warp) as an alternative until this issue is resolved. Don't worry, your stickers will still arrive! Please click the button again if you understand.",
+			getStickersTroubleshootConfirm: 'Okay, got it',
 			dearHackers: 'Dear Hackers, Musicians, and Artists,',
 			welcome:
 				"Welcome to Hack Club's newest adventure. This fall we invite you to join us for Daydream, the world's biggest Game Jam happening simultaneously in 100 cities.",
@@ -236,6 +248,7 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import ParticipantSignUp from '$lib/components/ParticipantSignUp.svelte';
 	import { page } from '$app/stores';
+	import { toast, Toaster } from 'svelte-sonner';
 
 	/** @type {import('./$types').PageData} */
 	export let data;
@@ -251,7 +264,7 @@
 		const form = event.target as HTMLFormElement;
 		const emailInput = form.querySelector('input[name="email"]') as HTMLInputElement;
 		const email = emailInput.value;
-		
+
 		if (email) {
 			window.location.href = `https://daydreamjakarta.fillout.com/rsvp?email=${encodeURIComponent(email)}`;
 		}
@@ -971,6 +984,8 @@ Mumbai`.split('\n');
 	class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"
 ></div>
 
+<Toaster richColors />
+
 <div
 	class="flex flex-col items-center justify-center h-screen text-center bg-gradient-to-b from-[#CCF4FD] to-[#B8D9F8] bg-blend-overlay relative"
 >
@@ -1063,7 +1078,10 @@ Mumbai`.split('\n');
 
 		<div class="mt-8 flex flex-col items-center gap-3 z-5 max-md:scale-90">
 			<div class="relative rounded-full overflow-hidden" style="padding: 2px 2px 5px 2px;">
-				<form on:submit={handleFormSubmit} class="rounded-full bg-white border-2 border-dark font-sans p-2 flex flex-row items-center gap-2 shadow-[0_3px_0_0_theme(colors.dark)] focus-within:border-pink focus-within:shadow-[0_3px_0_0_#E472AB] has-[button:active]:border-dark has-[button:active]:shadow-[0_3px_0_0_theme(colors.dark)] has-[button:focus]:border-dark has-[button:focus]:shadow-[0_3px_0_0_theme(colors.dark)]">
+				<form
+					on:submit={handleFormSubmit}
+					class="rounded-full bg-white border-2 border-dark font-sans p-2 flex flex-row items-center gap-2 shadow-[0_3px_0_0_theme(colors.dark)] focus-within:border-pink focus-within:shadow-[0_3px_0_0_#E472AB] has-[button:active]:border-dark has-[button:active]:shadow-[0_3px_0_0_theme(colors.dark)] has-[button:focus]:border-dark has-[button:focus]:shadow-[0_3px_0_0_theme(colors.dark)]"
+				>
 					<input
 						type="email"
 						name="email"
@@ -1071,8 +1089,11 @@ Mumbai`.split('\n');
 						class="w-80 px-3 py-1 text-dark focus:outline-none flex-1"
 						required
 					/>
-					<button type="submit" class="bg-light h-full px-5 py-[0.45rem] rounded-full border-b-2 border-[#B3866A] cursor-pointer hover:border-b-4 hover:transform active:border-b-0 active:transform active:translate-y-0.5 focus:outline-none transition-all duration-100 flex-shrink-0">
-						<img src="submit.svg" alt="Go">
+					<button
+						type="submit"
+						class="bg-light h-full px-5 py-[0.45rem] rounded-full border-b-2 border-[#B3866A] cursor-pointer hover:border-b-4 hover:transform active:border-b-0 active:transform active:translate-y-0.5 focus:outline-none transition-all duration-100 flex-shrink-0"
+					>
+						<img src="submit.svg" alt="Go" />
 					</button>
 				</form>
 			</div>
@@ -1141,9 +1162,22 @@ Mumbai`.split('\n');
 	/>
 
 	<!-- Desktop stickers button (bottom left) -->
-	<a
-		href="https://forms.hackclub.com/daydream-stickers"
-		target="_blank"
+	<button
+		on:click={() => {
+			if (hasClickedFilloutButton) {
+				window.open('https://forms.hackclub.com/daydream-stickers', '_blank');
+			} else {
+				toast.warning(t.getStickersTroubleshootTitle, {
+					description: t.getStickersTroubleshootDescription,
+					duration: 30000,
+					closeButton: true,
+					class: 'min-w-lg',
+					position: 'top-left'
+				});
+
+				hasClickedFilloutButton = true;
+			}
+		}}
 		class="hidden md:block absolute bottom-16 left-16 z-50 w-max px-4 py-2 bg-pink border-b-2 border-b-pink-dark text-white rounded-full active:transform active:translate-y-0.5 transition-all duration-100 font-sans cursor-pointer overflow-visible hover:shadow-[0_2px_0_0_theme(colors.pink.dark)] hover:-translate-y-[2px] active:border-transparent active:shadow-none"
 	>
 		{t.getStickers}
@@ -1158,7 +1192,7 @@ Mumbai`.split('\n');
 			class="absolute bottom-2 right-3 translate-2/3 w-18 h-18 object-contain pointer-events-none"
 			style="transform: rotate(-15deg);"
 		/>
-	</a>
+	</button>
 </div>
 
 <div class="w-full relative flex items-start justify-center">
