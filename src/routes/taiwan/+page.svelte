@@ -2,7 +2,7 @@
 	// Configuration - Put your information here!
 	const eventName = "Taiwan";
 	const signupLink = "https://forms.hackclub.com/daydream-rsvp?event=recbXuFkkf752iPIq";
-	const eventLocation = "TCS（臺師大林口校區）";
+	const eventLocation = " TCS（臺師大林口校區） ";
 	const eventAddress = "";
 
 	// These two are optional
@@ -63,7 +63,6 @@
 	import { ScrollTrigger } from "gsap/ScrollTrigger";
 	import Ticker from "$lib/components/Ticker.svelte";
 	import Footer from "$lib/components/Footer.svelte";
-	import ParticipantSignUp from "$lib/components/ParticipantSignUp.svelte";
 	import { page } from '$app/stores';
 	
 	// derived selection for HackIt modal
@@ -420,6 +419,17 @@ Mumbai`.split("\n")
 
 	function closeHackItPopup() {
 		showHackItPopup = false;
+	}
+
+	// RSVP submit: open external signup with email param in a new tab
+	function handleRSVPSubmit(event: Event) {
+		event.preventDefault();
+		const form = event.target as HTMLFormElement;
+		const emailInput = form.querySelector('input[name="email"]') as HTMLInputElement | null;
+		const email = emailInput?.value.trim() ?? "";
+		if (!email) return;
+		const url = `http://signup.hackit.tw/events/daydream-taiwan?email=${encodeURIComponent(email)}`;
+		window.open(url, '_blank', 'noopener');
 	}
 
 
@@ -1024,7 +1034,40 @@ Mumbai`.split("\n")
 			</h4>
 		</div>
 		
-		<ParticipantSignUp {eventName} />
+		<div class="mt-8 flex flex-col items-center gap-3 z-5 max-md:scale-90">
+			<div class="relative rounded-full overflow-hidden" style="padding: 2px 2px 5px 2px;">
+				<form on:submit={handleRSVPSubmit} class="rounded-full bg-white border-2 border-dark font-sans p-2 flex flex-row items-center gap-2 shadow-[0_3px_0_0_theme(colors.dark)] focus-within:border-pink focus-within:shadow-[0_3px_0_0_#E472AB] has-[button:active]:border-dark has-[button:active]:shadow-[0_3px_0_0_theme(colors.dark)] has-[button:focus]:border-dark has-[button:focus]:shadow-[0_3px_0_0_theme(colors.dark)]">
+					<input
+						type="email"
+						name="email"
+						placeholder="Enter email to RSVP"
+						class="w-80 px-3 py-1 text-dark focus:outline-none flex-1"
+						required
+					/>
+					<button type="submit" class="bg-light h-full px-5 py-[0.45rem] rounded-full border-b-2 border-[#B3866A] cursor-pointer hover:border-b-4 hover:transform active:border-b-0 active:transform active:translate-y-0.5 focus:outline-none transition-all duration-100 flex-shrink-0">
+						<img src="submit.svg" alt="Go">
+					</button>
+				</form>
+			</div>
+			<a
+				href="https://forms.hackclub.com/daydream-stickers"
+				target="_blank"
+				class="w-max px-4 py-2 bg-pink border-b-2 border-b-pink-dark text-white rounded-full active:transform active:translate-y-0.5 transition-all duration-100 font-sans cursor-pointer mx-auto relative overflow-visible hover:shadow-[0_2px_0_0_theme(colors.pink.dark)] hover:-translate-y-[2px] active:border-transparent active:shadow-none active: mt-4 md:hidden"
+			>
+				Get free stickers
+				<img
+					src="button-clouds.svg" 
+					alt="" 
+					class="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto object-contain pointer-events-none"
+				>
+				<img
+					src="rock-sticker.png"
+					alt=""
+					class="absolute bottom-2 right-3 translate-2/3 w-18 h-18 object-contain pointer-events-none"
+					style="transform: rotate(-15deg);"
+				>
+			</a>
+		</div>
 		<div class="mt-4">
 			<a
 				href="https://go.hackit.tw/daydream-taiwan-guild"
