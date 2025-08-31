@@ -1046,15 +1046,15 @@ Mumbai`.split('\n');
 				{t.date}
 			</h2>
 			<img
-				src="daydream.png"
+				src="/jakarta/assets/daydream.png"
 				alt="Daydream"
 				class="h-40 mb-6 w-auto object-contain max-w-full px-4"
 			/>
 			<a
 				href="https://hackclub.com"
-				class="absolute top-0 -right-6 max-sm:right-0 max-sm:scale-80 animate-hover ![animation-delay:0.9s] ![--hover:-0.2rem]"
+				class="absolute top-8 left-40 max-sm:right-0 max-sm:scale-80 animate-hover ![animation-delay:0.9s] ![--hover:-0.2rem]"
 			>
-				<img src="flag-plane.png" alt="Hack Club" class="h-28" />
+				<img src="flag-plane.png" alt="Hack Club" class="h-20" />
 			</a>
 		</div>
 		<div class="relative inline-block px-4">
