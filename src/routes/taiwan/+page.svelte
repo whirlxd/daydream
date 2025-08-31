@@ -12,6 +12,7 @@
 	// External links for org intros
 	const hackItMoreLink = "https://www.hackit.tw";
 	const hackClubMoreLink = "https://hackclub.com";
+	const discordInviteLink = "https://go.hackit.tw/discord";
 	
 	// Sponsors Configuration
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
@@ -1040,7 +1041,7 @@ Mumbai`.split("\n")
 					<input
 						type="email"
 						name="email"
-						placeholder="Enter email to RSVP"
+						placeholder="輸入 Email 來報名活動！"
 						class="w-80 px-3 py-1 text-dark focus:outline-none flex-1"
 						required
 					/>
@@ -1068,7 +1069,7 @@ Mumbai`.split("\n")
 				>
 			</a>
 		</div>
-		<div class="mt-4">
+		<div class="mt-4 flex items-center justify-center gap-3 flex-wrap">
 			<a
 				href="https://go.hackit.tw/daydream-taiwan-guild"
 				target="_blank"
@@ -1078,6 +1079,16 @@ Mumbai`.split("\n")
 					active:translate-y-0 active:border-b-2 transition-all duration-150"
 			>
 				了解更多
+			</a>
+			<a
+				href={discordInviteLink}
+				target="_blank"
+				rel="noopener noreferrer"
+				class="inline-block px-6 py-3 max-sm:px-4 max-sm:py-2 max-sm:text-sm bg-[#D1E3EE] border-b-4 border-[#B8D3E0] text-[#061E2D] rounded-full 
+					font-sans font-medium tracking-wide max-sm:tracking-normal transform hover:-translate-y-1 hover:shadow-lg 
+					active:translate-y-0 active:border-b-2 transition-all duration-150"
+			>
+				加入 Discord 社群
 			</a>
 		</div>
 	</div>
