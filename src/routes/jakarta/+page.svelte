@@ -2169,14 +2169,16 @@ Mumbai`.split('\n');
 	</div>
 
 	<!-- FAQ Item 8 -->
-	<div class="relative transform mt-8 h-74 -rotate-1">
+	<div class="relative transform mt-8 md:h-74 -rotate-1 scale-100">
 		<img
 			src="window-1.png"
 			alt="window"
 			class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115"
 		/>
 		<div
-			class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18"
+			class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70
+				max-[900px]:mx-[10vw] max-sm:mx-0 max-sm:px-2 max-lg:px-6 max-xl:px-10
+				max-sm:top-8 max-sm:left-4 max-sm:right-4 max-sm:bottom-8"
 		>
 			<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">
 				{t.whatCanIMake}
