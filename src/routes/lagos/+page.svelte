@@ -35,7 +35,7 @@
 
 				{ event: "Doors open", time: "11:00 AM" },
 				{ event: "Welcome Speech (Organizer)", time: "11:30 AM" },
-				{ event: "Theme/Problem Statement Reveal + Rules", time: "11:45 PM" },
+				{ event: "Theme/Problem Statement Reveal + Rules", time: "11:45 AM" },
 				{ event: "Kickoff Speech (Guest/Judge/Partner) ", time: "12:15 PM" },
 				{ event: "Final Reg(Teams registered, get seated)", time: "12:30 PM" },
 				{ event: "Start working on your project!", time: "1:00 PM" },
