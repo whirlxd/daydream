@@ -18,21 +18,21 @@
 	let currentLanguage: 'id' | 'en' = 'id'; // Default to Indonesian
 	const languages: Record<'id' | 'en', Record<string, string>> = {
 		id: {
-			title: 'Daydream Jakarta - Game Jam untuk Siswa Menengah',
+			title: 'Daydream Jakarta - Game Jam untuk Siswa Remaja',
 			description:
-				'Bergabunglah dengan Daydream di Jakarta! Game jam yang dipimpin remaja di mana kamu akan membuat game luar biasa bersama siswa SMP/SMA lainnya. Makanan, workshop, dan hadiah termasuk!',
+				'Bergabunglah dengan Daydream di Jakarta! Game jam yang dipimpin remaja di mana kamu akan membuat game luar biasa bersama siswa remaja lainnya. Makanan, workshop, dan hadiah sudah termasuk!',
 			keywords:
 				'game jam, hackathon, coding remaja, Hack Club, pengembangan game, Jakarta, Daydream Jakarta',
 			date: '27 & 28 September 2025',
 			subtitle: 'Lomba Game Jam untuk siswa!',
 			organizedBy: 'Diselenggarakan oleh Remaja di',
 			getStickers: 'Dapatkan stiker gratis',
-			dearHackers: 'Kepada Hacker, Musisi, dan Artist,',
+			dearHackers: 'Kepada Hacker, Musisi, dan Seniman,',
 			welcome:
 				'Selamat datang di petualangan terbaru Hack Club. Di Musim ini, kami mengundang Anda untuk bergabung dengan kami di Daydream, Game Jam terbesar di dunia yang berlangsung secara serentak di 100 kota.',
 			hackClubWants: 'Hack Club ingin kamu membuat game di musim ini.',
 			notGameDev:
-				'Bukan game dev? Gapapa! - kami memiliki banyak workshop online dan offline untuk kamu membuat game pertama!',
+				'Bukan game dev? Tidak masalah! - kami memiliki banyak workshop untuk kamu membuat game pertama!',
 			invite:
 				'Di Musim gugur ini, kami mengundang kamu untuk belajar hal baru, membuat sesuatu yang benar-benar kamu banggakan, bertemu teman baru, dan pergi dalam petualangan luar biasa bersama.',
 			withLove: 'Dengan cinta,',
@@ -83,18 +83,18 @@
 			// Schedule translations
 			saturdayTitle: 'Sabtu, 27 September',
 			sundayTitle: 'Minggu, 28 September',
-			doorsOpen: 'Doors Open',
+			doorsOpen: 'Pintu Dibuka',
 			openingCeremony: 'Opening Ceremony',
-			lunch: 'Networking Buffet',
+			lunch: 'Makan Siang',
 			startWorking: 'Start working on your project!',
 			workshop1: 'Workshop 1',
-			activity1: 'Activity 1',
+			activity1: 'Aktivitas 1',
 			workshop2: 'Workshop 2',
-			dinner: 'Dinner',
-			lightningTalks: 'Lightning talks',
+			dinner: 'Makan Malam',
+			lightningTalks: 'Lightning Talks',
 			midnightSurprise: 'Midnight Surprise',
-			breakfast: 'Breakfast',
-			demos: 'Demos!',
+			breakfast: 'Sarapan',
+			demos: 'Demo!',
 			closingCeremony: 'Closing Ceremony'
 		},
 		en: {
@@ -245,6 +245,17 @@
 	$: pageTitle = t.title;
 	$: pageDescription = t.description;
 	$: pageKeywords = t.keywords;
+
+	function handleFormSubmit(event: Event) {
+		event.preventDefault();
+		const form = event.target as HTMLFormElement;
+		const emailInput = form.querySelector('input[name="email"]') as HTMLInputElement;
+		const email = emailInput.value;
+		
+		if (email) {
+			window.location.href = `https://daydreamjakarta.fillout.com/rsvp?email=${encodeURIComponent(email)}`;
+		}
+	}
 
 	// Cities where the game jam is happening
 	const cities = `Columbus
@@ -1050,7 +1061,22 @@ Mumbai`.split('\n');
 			</h4>
 		</div>
 
-		<ParticipantSignUp {signupLink} {eventName} />
+		<div class="mt-8 flex flex-col items-center gap-3 z-5 max-md:scale-90">
+			<div class="relative rounded-full overflow-hidden" style="padding: 2px 2px 5px 2px;">
+				<form on:submit={handleFormSubmit} class="rounded-full bg-white border-2 border-dark font-sans p-2 flex flex-row items-center gap-2 shadow-[0_3px_0_0_theme(colors.dark)] focus-within:border-pink focus-within:shadow-[0_3px_0_0_#E472AB] has-[button:active]:border-dark has-[button:active]:shadow-[0_3px_0_0_theme(colors.dark)] has-[button:focus]:border-dark has-[button:focus]:shadow-[0_3px_0_0_theme(colors.dark)]">
+					<input
+						type="email"
+						name="email"
+						placeholder="Enter email to sign up"
+						class="w-80 px-3 py-1 text-dark focus:outline-none flex-1"
+						required
+					/>
+					<button type="submit" class="bg-light h-full px-5 py-[0.45rem] rounded-full border-b-2 border-[#B3866A] cursor-pointer hover:border-b-4 hover:transform active:border-b-0 active:transform active:translate-y-0.5 focus:outline-none transition-all duration-100 flex-shrink-0">
+						<img src="submit.svg" alt="Go">
+					</button>
+				</form>
+			</div>
+		</div>
 	</div>
 
 	<!-- <img src="hot-air-balloon.png" alt="" class="absolute w-1/8 right-32 bottom-40 z-20"> -->
