@@ -38,7 +38,7 @@
 			withLove: 'Dengan cinta,',
 			fromHq: 'Augie dan Renran dari Hack Club HQ',
 			schedule: 'Jadwal',
-			sponsors: 'Sponsor',
+			sponsors: 'Sponsors',
 			communityPartners: 'Community Partners',
 			wantToSponsor: 'Ingin mensponsori Daydream Jakarta?',
 			getInTouch: 'Hubungi kami',
@@ -51,7 +51,7 @@
 			step5: '#5: Bagikan apa yang kamu buat ke dunia!',
 			findDaydream: 'Temukan Event Daydream Dekat kamu',
 			takingPlace: 'Daydream Jakarta berlangsung di',
-			whatWillYou: 'Apa yang akan Anda',
+			whatWillYou: 'Apa yang akan kamu',
 			dream: 'Impikan?',
 			anyGame:
 				'Anda dapat membuat game apa saja selama bisa dikirim ke itch.io! Semua game yang sudah dibuat harus dikirim dan tersedia online agar peserta lain dapat memainkannya. Kami hanya akan menerima link submission itch.io.',
@@ -1006,17 +1006,17 @@ Mumbai`.split('\n');
 	<!-- Language Switcher -->
 	<div class="absolute top-4 right-4 z-50">
 		<button
-			class="bg-black/20 hover:bg-black/40 text-white px-3 fixed flex justify-center top-4 right-4 items-center py-1 rounded-full text-xs transition-colors"
+			class="bg-black/20 hover:bg-black/40 text-white px-3 p-2 fixed flex justify-center top-4 right-4 items-center py-1 rounded-full text-xs transition-colors"
 			on:click={() => (currentLanguage = currentLanguage === 'id' ? 'en' : 'id')}
 		>
 			<img
-				src={currentLanguage === 'id'
+				src={currentLanguage === 'en'
 					? 'https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Indonesia.svg'
 					: 'https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg'}
-				alt={currentLanguage === 'id' ? 'Indonesia' : 'English'}
+				alt={currentLanguage === 'en' ? 'Indonesia' : 'English'}
 				class="inline-block w-8 h-5 mr-2 align-middle rounded-md"
 			/>
-			{currentLanguage === 'id' ? 'Indonesia' : 'English'}
+			{currentLanguage === 'en' ? 'Indonesia' : 'English'}
 		</button>
 	</div>
 	<div
@@ -1515,8 +1515,14 @@ Mumbai`.split('\n');
 	<div
 		class="relative w-10/12 h-auto object-contain cursor-text flex flex-row max-lg:flex-wrap md:translate-y-0 max-lg:translate-y-1/5 items-center justify-center align-middle max-w-5xl z-50"
 	>
-		<img src="gamejam-1-alt.png" alt={t.howToWin} class="flex-shrink min-w-0 object-contain" />
-		<img src="gamejam-2.png" alt={t.gameJam} class="flex-shrink min-w-0 object-contain" />
+		<img
+			src={currentLanguage === 'en'
+				? '/gamejam-1-alt.png'
+				: '/jakarta/indonesian_language/gamejam-1-alt.png'}
+			alt={t.howToWin}
+			class="flex-shrink min-w-0 object-contain"
+		/>
+		<img src="/gamejam-2.png" alt={t.gameJam} class="flex-shrink min-w-0 object-contain" />
 	</div>
 </div>
 
@@ -1909,12 +1915,14 @@ Mumbai`.split('\n');
 				></div>
 
 				<div class="space-y-8 max-sm:space-y-4 relative z-10">
-					<h2 class="text-5xl md:text-6xl lg:text-7xl font-pixel leading-tight">
+					<h2 class="text-3xl md:text-4xl lg:text-5xl font-pixel leading-tight">
 						{t.whatWillYou}
 						<img
-							src="/dream-pixel.png"
+							src={currentLanguage === 'en'
+								? '/dream-pixel.png'
+								: '/jakarta/indonesian_language/dream-pixel.png'}
 							alt={t.dream}
-							class="h-[0.75em] font-serif italic [image-rendering:pixelated] inline align-middle -translate-y-1.5"
+							class="h-[0.75em] font-serif italic [image-rendering:pixelated] inline align-bottom -translate-y-1.5"
 						/>
 					</h2>
 
