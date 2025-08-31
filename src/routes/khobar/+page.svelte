@@ -9,26 +9,20 @@
 	// Configuration - Put your information here!
 	const eventName = "Khobar"; // This should be the name of your event WITHOUT "Daydream" at the start
 	const eventLocation = "Khobar";
-	const eventAddress = "85WR+342, Prince Sultan Bin Fahd St, Qurtoba, Al Khobar 34234"; // Leave this empty if you don't want an address
+	const eventAddress = "New World International School, 85WR+342, Prince Sultan Bin Fahd St, Qurtoba, Al Khobar 34234"; // Leave this empty if you don't want an address
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recLiaBbWxhZuXXvi"
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = "https://www.google.com/maps/place/New+World+International+School/@26.3451266,50.187706,17z/data=!3m1!4b1!4m16!1m9!4m8!1m0!1m6!1m2!1s0x3e49e8acd2b0426b:0x641f1d5efa48daa!2s85WR%2B342,+Prince+Sultan+Bin+Fahd+St,+Qurtoba,+Al+Khobar+34234!2m2!1d50.1902169!2d26.3451017!3m5!1s0x3e49e8acd2b0426b:0x641f1d5efa48daa!8m2!3d26.3451266!4d50.1902809!16s%2Fg%2F1wz515pk?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D"
 	const contactLink = "daniyal:khobar@daydream.hackclub.com"
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
-	// const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
-	// const sponsors = [
-		{ image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
-		{ image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
-		{ image: "/example/logo3.png", name: "Sponsor 3", url: "https://example3.com" },
-		{ image: "/example/logo4.png", name: "Sponsor 4", url: "https://example4.com" },
-		{ image: "/example/logo5.png", name: "Sponsor 5", url: "https://example5.com" },
-		{ image: "/example/logo6.png", name: "Sponsor 6", url: "https://example6.com" },
-		{ image: "/example/logo7.png", name: "Sponsor 7", url: "https://example7.com" }
+	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
+	const sponsors = [
+		// { image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
-	// const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [
+	const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [
 		{
 			title: "Saturday, September 27th",
 			items: [
