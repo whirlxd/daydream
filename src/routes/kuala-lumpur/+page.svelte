@@ -31,7 +31,7 @@
 				{ event: "Opening ceremony", time: "9:30 AM" },
 				{ event: "Team making & starting projects!", time: "10:00 AM" },
 				{ event: "Jumpstart (Godot) Workshop", time: "10:30 AM" },
-				{ event: "Lunch,", time: "12:00 PM" },
+				{ event: "Lunch", time: "12:00 PM" },
 				{ event: "JAMS Dev Drafts", time: "3:00 PM" },
 				{ event: "Dinner", time: "6:00 PM" },
 				{ event: "Lightning talks & packing up", time: "6:45 PM" },
