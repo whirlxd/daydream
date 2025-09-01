@@ -26,12 +26,13 @@
 		{
 			title: "Saturday, September 27th",
 			items: [
-				{ event: "Doors open", time: "11:00 AM" },
+				{ event: "Doors open", time: "9:00 AM" },
+				{ event: "Introduction, Rules, Do's and Dont's", time: "10:00 AM" },
+				{ event: "Random Team Selection", time: "11:15 AM" },
+        { event: "Game Development Begins!", time: "12:00 PM" },
 				{ event: "Introduction To Game Development", time: "12:10 PM" },
         { event: "Lunch", time: "2:00 PM" },
-        { event: "Game Development Begins!", time: "2:45 PM" },
 				{ event: "2D Art/3D Modelling Workshops", time: "3:00 PM" },
-				{ event: "Godot Workshop", time: "4:30 PM" },
         { event: "Dinner", time: "7:30 PM" },
         { event: "SFX Workshop", time: "8:30 PM" },
         { event: "Theme And Game Music Workshop", time: "9:30 PM" },
@@ -44,7 +45,8 @@
 				{ event: "Breakfast", time: "7:00 AM" },
 				{ event: "Game Review Session", time: "9:00 AM" },
 				{ event: "Hour of Export", time: "11:00 AM" },
-        { event: "Ending Ceremony", time: "12:00 PM" }
+        { event: "Lunch", time: "12:15 PM" },
+        { event: "Prize Distribution, Closing Ceremony", time: "1:45 PM" }
 			]
 		}
 	];
