@@ -16,10 +16,10 @@
 	const contactLink = "mailto:austin@daydream.hackclub.com"
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
-	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
+	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
-		// { image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
+		{ image: "/flag-plane.png", name: "Hack Club", url: "https://hackclub.com" },
+		{ image: "/austin/futo.svg", name: "FUTO", url: "https://futo.org/" },
 		// { image: "/example/logo3.png", name: "Sponsor 3", url: "https://example3.com" },
 		// { image: "/example/logo4.png", name: "Sponsor 4", url: "https://example4.com" },
 		// { image: "/example/logo5.png", name: "Sponsor 5", url: "https://example5.com" },
