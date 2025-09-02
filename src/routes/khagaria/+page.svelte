@@ -18,7 +18,7 @@
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "/khagaria/yubico.png", name: "Yubico", url: "https://yubico.com" }
+		{ image: "/khagaria/yubico.svg", name: "Yubico", url: "https://yubico.com" }
 		// { image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
 		// { image: "/example/logo3.png", name: "Sponsor 3", url: "https://example3.com" },
 		// { image: "/example/logo4.png", name: "Sponsor 4", url: "https://example4.com" },
