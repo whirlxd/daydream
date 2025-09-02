@@ -36,7 +36,7 @@
 	import { ScrollTrigger } from "gsap/ScrollTrigger";
 	import Ticker from "$lib/components/Ticker.svelte";
 	import Footer from "$lib/components/Footer.svelte";
-	import ParticipantSignUp from "$lib/components/ParticipantSignUp.svelte";
+	import ParticipantSignUp from "./ParticipantSignUp.svelte";
 	import { page } from '$app/stores';
 	
 	
