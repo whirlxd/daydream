@@ -1,20 +1,15 @@
 <script lang="ts">
-	const eventName = "DayDream Penang";
+	const eventName = "Penang";
 	const eventLocation = "Penang";
-	const eventAddress = "";
-	const directionsURL = "https://www.google.com/maps/search/1600+pennsylvania+avenue+washington+dc/"
-	const contactLink = "mailto:example@daydream.hackclub.com"
+	const eventAddress = "Wisma Yeap Chor Ee, 37, Gat Lebuh China, Georgetown, 10200 George Town, Penang";
+	const directionsURL = "https://www.google.com/maps/place/PSC@Heritage+(Penang+Science+Cluster)/@5.4153623,100.3397381,17z/data=!3m1!4b1!4m6!3m5!1s0x304ac38e9e1ad7e9:0xdb5c3a2cdee5013c!8m2!3d5.415357!4d100.342313!16s%2Fg%2F11clvx6mkl?entry=ttu&g_ep=EgoyMDI1MDgwNi4wIKXMDSoASAFQAw%3D%3D"
+	const contactLink = "mailto:penang@daydream.hackclub.com"
 	
-	// Sponsors Configuration
-	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recv7MKnWKwmBZC48";
+	const sponsorsEnabled = true; 
 	const sponsors = [
-		{ image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
-		{ image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
-		{ image: "/example/logo3.png", name: "Sponsor 3", url: "https://example3.com" },
-		{ image: "/example/logo4.png", name: "Sponsor 4", url: "https://example4.com" },
-		{ image: "/example/logo5.png", name: "Sponsor 5", url: "https://example5.com" },
-		{ image: "/example/logo6.png", name: "Sponsor 6", url: "https://example6.com" },
-		{ image: "/example/logo7.png", name: "Sponsor 7", url: "https://example7.com" }
+		{ image: "https://storage.jukeboxprint.com/s/images/jukebox-logo.svg", name: "Jukebox", url: "https://www.jukeboxprint.com/custom-stickers" },
+		{ image: "/penang/cytron.png", name: "Cytron Technologies", url: "https://cytron.io" }
 	];
 	
 	const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [
@@ -22,15 +17,15 @@
 			title: "Saturday, September 27th",
 			items: [
 				{ event: "Doors open", time: "9:00 AM" },
-				{ event: "Opening ceremony", time: "9:15 AM" },
+				{ event: "Opening ceremony", time: "10:00 AM" },
 				{ event: "Workshop 1", time: "10:30 AM" },
+				{ event: "Project kickoff", time: "11:30 AM" },
+				{ event: "Workshop 2", time: "12:00 PM" },
 				{ event: "Lunch", time: "1:00 PM" },
-				{ event: "Start working on the project", time: "2:00 PM" },
-				{ event: "Workshop 2", time: "4:00 PM" },
-				{ event: "Workshop 3", time: "4:00 PM" },
-				{ event: "Dinner", time: "6:00 PM" },
-				{ event: "Ship the project", time: "8:00 PM" },
-				{ event: "Closing ceremony", time: "9:00 PM" }
+				{ event: "Workshop 3", time: "2:00 PM" },
+				{ event: "Final project push", time: "3:00 PM" },
+				{ event: "Ship the project", time: "4:30 PM" },
+				{ event: "Project demo & closing ceremony", time: "5:00 PM" }
 			]
 		}
 	];
@@ -46,13 +41,11 @@
 	/** @type {import('./$types').PageData} */
 	export let data;
 	
-	// Get current URL for dynamic metadata
 	$: currentUrl = `https://daydream.hackclub.com${$page.url.pathname}`;
-	$: pageTitle = `Daydream ${eventName} - ${eventLocation} Game Jam`;
+	$: pageTitle = `${eventName} - Game Jam in ${eventLocation}`;
 	$: pageDescription = `Join Daydream ${eventName} in ${eventLocation}! A teen-led game jam where you'll build amazing games with other high schoolers. Food, workshops, and prizes included!`;
 	$: pageKeywords = `game jam, hackathon, teen coding, Hack Club, game development, ${eventLocation}, ${eventName}`;
 
-	// Cities where the game jam is happening
 	const cities = `Columbus
 Lisbon 
 Boston
@@ -76,7 +69,8 @@ Dubai
 San Francisco
 Minneapolis
 Seattle
-Signapore
+Singapore
+Kuala Lumpur
 Sydney
 Mumbai`.split("\n")
 
@@ -820,9 +814,9 @@ Mumbai`.split("\n")
 			<h2
 			class="text-xl font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent absolute left-1/2 max-sm:translate-y-4 max-sm:mb-0 max-md:-mb-8 md:left-[calc(50%+4rem)] -translate-x-1/2 bottom-8 italic w-max md:text-lg max-sm:text-lg"
 			>
-				September 27th & 28th, 2025
+				September 27th 2025
 			</h2>
-			<img src="daydream.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4" />
+			<img src="./penang/daydream.svg" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4" />
 			<a href="https://hackclub.com" class="absolute top-0 -right-6 max-sm:right-0 max-sm:scale-80 animate-hover ![animation-delay:0.9s] ![--hover:-0.2rem]">
 				<img src="flag-plane.png" alt="Hack Club" class="h-28">
 			</a>
@@ -845,7 +839,7 @@ Mumbai`.split("\n")
 			</h4>
 		</div>
 		
-		<ParticipantSignUp />
+		<ParticipantSignUp {signupLink} {eventName} />
 	</div>
 
 	<!-- <img src="hot-air-balloon.png" alt="" class="absolute w-1/8 right-32 bottom-40 z-20"> -->
@@ -909,7 +903,7 @@ Mumbai`.split("\n")
 		<div class="relative z-20 px-20 pt-20 pb-52 rounded-lg mb-0 max-sm:px-18" style="background-image: url('/letter-top.png'), linear-gradient(to bottom, #FCEFC5 100px, transparent 100px), url('/letter-loop.png'); background-size: 100% auto, 100% auto, 100% auto; background-repeat: no-repeat, no-repeat, repeat-y; background-position: top, top, top; background-attachment: local, local, local;">
 			<div class="absolute bottom-0 left-0 w-full h-24 z-10 pointer-events-none bg-[url('/clouds-loop.png')] bg-repeat-x bg-bottom bg-contain"></div>
 			<h2 class="text-5xl font-serif italic text-[#8B4513] mb-10 relative">
-				Dear Hackers, Musicians, and Artist,
+				Dear Hackers, Musicians, and Artists,
 				<img src="/underline.svg" alt="" class="absolute left-0 -bottom-3 w-64 h-auto opacity-70">
 			</h2>
 			
@@ -1057,7 +1051,7 @@ Mumbai`.split("\n")
 						{:else}
 							<!-- Single row for 4 or fewer sponsors -->
 							<div class="flex justify-center">
-								<div class="grid gap-8 items-center justify-items-center max-w-4xl {sponsors.length === 1 ? 'grid-cols-1' : sponsors.length === 2 ? 'grid-cols-1 md:grid-cols-2' : sponsors.length === 3 ? 'grid-cols-2 md:grid-cols-3' : 'grid-cols-2 md:grid-cols-4'}">
+								<div class="grid gap-8 w-full items-center justify-items-center max-w-4xl {sponsors.length === 1 ? 'grid-cols-1' : sponsors.length === 2 ? 'grid-cols-1 md:grid-cols-2' : sponsors.length === 3 ? 'grid-cols-2 md:grid-cols-3' : 'grid-cols-2 md:grid-cols-4'}">
 									{#each sponsors as sponsor}
 										<a href={sponsor.url} class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors" target="_blank" rel="noopener noreferrer">
 											<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain">
@@ -1071,7 +1065,7 @@ Mumbai`.split("\n")
 					{#if contactLink}
 						<!-- Call to action for sponsors -->
 						<div class="mt-8 text-center">
-							<p class="text-lg text-[#335969]">Want to sponsor Daydream {eventName}? <a href={contactLink} class="underline hover:text-[#477783] transition-colors">Get in touch</a></p>
+							<p class="text-lg text-[#335969]"><a href="https://www.jukeboxprint.com/custom-stickers">Custom stickers</a> provided by Jukebox <br> Want to sponsor Daydream {eventName}? <a href={contactLink} class="underline hover:text-[#477783] transition-colors">Get in touch</a></p>
 						</div>
 					{/if}
 				</div>
@@ -1145,7 +1139,7 @@ Mumbai`.split("\n")
 			<div class="relative w-72 h-40 max-md:w-80 animate-hover ![--hover:-0.15rem] ![animation-delay:1.7s] z-20" data-point="1">
 				<img src="paper1.png" alt="" class="w-full h-full object-contain">
 				<div class="absolute inset-0 justify-center text-center p-6 text-xl font-serif max-md:text-lg text-[#8B4513] inline-block content-center">
-					<span class="font-sans text-[#E472AB] font-bold text-[1.3rem] mr-1">#1:</span> <a href="https://example.com" class="underline">Sign up</a> for Daydream {eventName}
+					<span class="font-sans text-[#E472AB] font-bold text-[1.3rem] mr-1">#1:</span> <a href={signupLink} class="underline">Sign up</a> for Daydream {eventName}
 				</div>
 			</div>
 		</div>
@@ -1490,7 +1484,7 @@ Mumbai`.split("\n")
 			<img src="window-1.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
 				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">What do I need?</h3>
-				<p class="text-sm">Your laptop, chargers, toiletries, sleeping bags, and an open mind!</p>
+				<p class="text-sm">Your laptop, chargers, and an open mind!</p>
 			</div>
 		</div>
 
@@ -1550,6 +1544,8 @@ Mumbai`.split("\n")
 			<a href="https://hackclub.com/clubs" class="underline text-gray-700 hover:text-gray-900 transition-colors ">Clubs</a>
 			<span class="text-gray-700 max-md:hidden">・</span>
 			<a href="https://hackclub.com/hackathons" class="underline text-gray-700 hover:text-gray-900 transition-colors ">Hackathons</a>
+			<span class="text-gray-700 max-md:hidden">・</span>
+			<a href="https://instagram.com/daydreampenang" class="underline text-gray-700 hover:text-gray-900 transition-colors ">Instagram</a>
 		</div>
 	</div>
 
