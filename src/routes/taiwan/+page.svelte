@@ -103,7 +103,7 @@ Dubai
 San Francisco
 Minneapolis
 Seattle
-Signapore
+Singapore
 Sydney
 Taiwan
 Mumbai`.split("\n")
