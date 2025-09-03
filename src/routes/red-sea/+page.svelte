@@ -219,7 +219,7 @@
 	import Ticker from "$lib/components/Ticker.svelte";
 	import Footer from "$lib/components/Footer.svelte";
 	import ParticipantSignUp from "$lib/components/ParticipantSignUp.svelte";
-	import EnhancedFeatures from "$lib/components/EnhancedFeatures.svelte";
+	import EnhancedFeatures from "$lib/components/RedSeaFeatures.svelte";
 	import { page } from '$app/stores';
 	
 	/** @type {import('./$types').PageData} */
