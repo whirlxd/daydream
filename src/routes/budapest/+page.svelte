@@ -16,16 +16,44 @@
 	const contactLink = "mailto:budapest@daydream.hackclub.com"
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
-	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
-	const sponsors = [
-		{ image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
-		{ image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
-		{ image: "/example/logo3.png", name: "Sponsor 3", url: "https://example3.com" },
-		{ image: "/example/logo4.png", name: "Sponsor 4", url: "https://example4.com" },
-		{ image: "/example/logo5.png", name: "Sponsor 5", url: "https://example5.com" },
-		{ image: "/example/logo6.png", name: "Sponsor 6", url: "https://example6.com" },
-		{ image: "/example/logo7.png", name: "Sponsor 7", url: "https://example7.com" }
-	];
+	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
+	
+	// Sponsor categories from lowest to highest tier
+	type Sponsor = { image: string; name: string; url: string };
+	type CategoryKey = 'supporters' | 'bronze' | 'silver' | 'gold';
+	type SponsorCategory = { title: string; sponsors: Sponsor[] };
+	const sponsorCategories: Record<CategoryKey, SponsorCategory> = {
+		supporters: {
+			title: "Supporters",
+			sponsors: [
+				{ image: "/budapest/aseprite.png", name: "Aseprite", url: "https://aseprite.org" },
+			]
+		},
+		bronze: {
+			title: "Bronze Sponsors", 
+			sponsors: [
+				// { image: "/example/logo3.png", name: "Silver Innovations", url: "#" },
+				// { image: "/example/logo4.png", name: "Tech Silver Ltd", url: "#" },
+				// { image: "/example/logo5.png", name: "Silver Systems", url: "#" },
+			]	
+		},
+		silver: {
+			title: "Silver Sponsors",
+			sponsors: [
+				// { image: "/example/logo6.png", name: "Gold Enterprise", url: "#" },
+				// { image: "/example/logo7.png", name: "Premium Gold Tech", url: "#" },
+			]
+		},
+		gold: {
+			title: "Gold Sponsors",
+			sponsors: [
+				// { image: "/example/logo1.png", name: "Platinum Global Corp", url: "#" },
+			]
+		}
+	};
+
+	// Render order from lowest to highest tier
+	const orderedCategoryKeys: CategoryKey[] = ["gold", "silver", "bronze", "supporters"];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
 	const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [
@@ -1014,7 +1042,7 @@ Mumbai`.split("\n")
 			<!-- Header Section -->
 			<div class="w-full bg-[url('/billboard-bg-texture.png')] bg-contain bg-repeat py-6 relative" style="border-bottom: 8px solid #B4B4C5;">
 				<h2 class="text-4xl font-serif text-[#F0F0FF] text-center">
-					Sponsors
+					Sponsors & Partners
 				</h2>
 				<!-- Brush texture overlay for header -->
 				<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
@@ -1027,45 +1055,24 @@ Mumbai`.split("\n")
 				
 				<!-- Sponsors Grid -->
 				<div class="relative z-10 min-h-40">
-					{#if sponsors.length > 0}
-						<!-- First row (up to 4 sponsors) -->
-						{#if sponsors.length > 4}
-							<div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center mb-8">
-								{#each sponsors.slice(0, 4) as sponsor}
-									<a href={sponsor.url} class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors" target="_blank" rel="noopener noreferrer">
-										<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain">
-									</a>
-								{/each}
-							</div>
-							
-							<!-- Second row (remaining sponsors, centered) -->
-							{#if sponsors.length > 4}
+					{#each orderedCategoryKeys as key}
+						{#if sponsorCategories[key] && sponsorCategories[key].sponsors && sponsorCategories[key].sponsors.length > 0}
+							<div class="mb-8">
+								<h3 class="text-2xl font-sans font-bold text-[#335969] text-center mb-4">{sponsorCategories[key].title}</h3>
 								<div class="flex justify-center">
-									<div class="grid grid-cols-2 md:grid-cols-3 gap-8 items-center justify-items-center max-w-2xl">
-										{#each sponsors.slice(4) as sponsor, index}
-											<a href={sponsor.url} 
-												class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors {sponsors.slice(4).length === 3 && index === 2 ? 'md:col-span-1 col-span-2 max-w-xs mx-auto' : ''}" 
-												target="_blank" rel="noopener noreferrer">
-												<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain">
-											</a>
-										{/each}
-									</div>
-								</div>
-							{/if}
-						{:else}
-							<!-- Single row for 4 or fewer sponsors -->
-							<div class="flex justify-center">
-								<div class="grid gap-8 items-center justify-items-center max-w-4xl {sponsors.length === 1 ? 'grid-cols-1' : sponsors.length === 2 ? 'grid-cols-1 md:grid-cols-2' : sponsors.length === 3 ? 'grid-cols-2 md:grid-cols-3' : 'grid-cols-2 md:grid-cols-4'}">
-									{#each sponsors as sponsor}
-										<a href={sponsor.url} class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors" target="_blank" rel="noopener noreferrer">
-											<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain">
-										</a>
-									{/each}
+									{#key sponsorCategories[key].sponsors.length}
+										<div class="grid gap-8 items-center justify-items-center max-w-4xl {sponsorCategories[key].sponsors.slice(0,4).length === 1 ? 'grid-cols-1' : sponsorCategories[key].sponsors.slice(0,4).length === 2 ? 'grid-cols-1 md:grid-cols-2' : sponsorCategories[key].sponsors.slice(0,4).length === 3 ? 'grid-cols-2 md:grid-cols-3' : 'grid-cols-2 md:grid-cols-4'}">
+											{#each sponsorCategories[key].sponsors.slice(0, 4) as sponsor}
+												<a href={sponsor.url} class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors" target="_blank" rel="noopener noreferrer">
+													<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain" />
+												</a>
+											{/each}
+										</div>
+									{/key}
 								</div>
 							</div>
 						{/if}
-					{/if}
-					
+					{/each}
 					{#if contactLink}
 						<!-- Call to action for sponsors -->
 						<div class="mt-8 text-center">
@@ -1466,15 +1473,6 @@ Mumbai`.split("\n")
 		</div>
 
 		<!-- FAQ Item 2 -->
-		<div class="relative transform rotate-1">
-			<img src="window-4.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
-			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">Can I organize a Daydream in my city?</h3>
-				<p class="text-sm">Definitely! Contact us via daydream@hackclub.com or join #daydream on slack.</p>
-			</div>
-		</div>
-
-		<!-- FAQ Item 3 -->
 		<div class="relative transform rotate-2">
 			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
@@ -1483,7 +1481,7 @@ Mumbai`.split("\n")
 			</div>
 		</div>
 
-		<!-- FAQ Item 4 -->
+		<!-- FAQ Item 3 -->
 		<div class="relative transform -rotate-1">
 			<img src="window-1.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
@@ -1492,12 +1490,21 @@ Mumbai`.split("\n")
 			</div>
 		</div>
 
+		<!-- FAQ Item 4 -->
+		<div class="relative transform rotate-1">
+			<img src="window-4.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
+			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
+				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-1 max-md:text-base">Do I need a team before I sign up?</h3>
+				<p class="text-sm">Not at all! In fact, most people come alone. We'll have dedicated time at the beginning of the event for you to meet other participants, share ideas, and form teams on the spot. It's a great way to make new friends!</p>
+			</div>
+		</div>
+
 		<!-- FAQ Item 5 -->
 		<div class="relative transform rotate-1">
 			<img src="window-4.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
 				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-1 max-md:text-base">What has Hack Club done before?</h3>
-				<p class="text-sm">Hack Club has run a hackathon in at GitHub HQ, a Game Jam in 50 cities, a hackathon on a train from Vermont to Los Angeles, and more!</p>
+				<p class="text-sm">Hack Club has run a hackathon in the GitHub HQ, a Game Jam in 50 cities, a hackathon on a train from Vermont to Los Angeles, and more!</p>
 			</div>
 		</div>
 
