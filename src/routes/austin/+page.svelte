@@ -13,12 +13,12 @@
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recit5nhOKNU5OWsV"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = "https://www.google.com/maps/dir//2410+San+Antonio+St,+Austin,+TX+78734/"
-	const contactLink = "mailto:austin@daydream.hackclub.com"
+	const contactLink = "/austin/sponsors"
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "/flag-plane.png", name: "Hack Club", url: "https://hackclub.com" },
+		//{ image: "/austin/hack-club.svg", name: "Hack Club", url: "https://hackclub.com" },
 		{ image: "/austin/futo.svg", name: "FUTO", url: "https://futo.org/" },
 		// { image: "/example/logo3.png", name: "Sponsor 3", url: "https://example3.com" },
 		// { image: "/example/logo4.png", name: "Sponsor 4", url: "https://example4.com" },
@@ -1568,4 +1568,3 @@ Mumbai`.split("\n")
 		</div>
 	</div>
 {/if}
-
