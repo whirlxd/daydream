@@ -1,7 +1,14 @@
 <script lang="ts">
 	import Tooltip from './../lib/components/Tooltip.svelte';
-	const signupLink = "https://forms.hackclub.com/daydream-sign-up";
+	import { page } from "$app/state";
 	
+	let signupLink;
+	if (page.url.searchParams.has("r")) {
+		signupLink = "https://forms.hackclub.com/daydream-sign-up?r=" + page.url.searchParams.get("r");
+	} else {
+		signupLink = "https://forms.hackclub.com/daydream-sign-up";
+	}
+
 	// unused
 	const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [];
 
