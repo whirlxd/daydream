@@ -27,11 +27,11 @@
 	
 	// Enhanced Sponsors Configuration
 	const sponsorsEnabled = true; // Hide sponsors for now but keep call to action
-	const sponsors = [
+			const sponsors = [
 		{ 
 			image: "/red-sea/jukebox.png", 
-			name: "Jukebox Prints", 
-			url: "http://jukeboxprint.com",
+			name: "Jukebox Print", 
+			url: "https://www.jukeboxprint.com/custom-stickers",
 			tier: "silver"
 		}
 	];
@@ -1351,12 +1351,15 @@ Red Sea`.split("\n")
 												{sponsor.tier?.toUpperCase()}
 											</span>
 										</div>
-										<a href={sponsor.url} target="_blank" rel="noopener noreferrer" class="block">
-											<div class="bg-white/50 rounded-lg p-4 h-24 flex items-center justify-center mb-3 hover:bg-white/70 transition-colors">
+										<div class="block">
+											<div class="bg-white/50 rounded-lg p-4 h-24 flex items-center justify-center mb-3">
 												<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain">
 											</div>
-											<h3 class="font-bold text-[#335969] text-lg">{sponsor.name}</h3>
-										</a>
+											<h3 class="font-bold text-[#335969] text-lg mb-2">{sponsor.name}</h3>
+											<p class="text-sm text-[#477783]">
+												Big shoutout to Jukebox for our <a href="https://www.jukeboxprint.com/custom-stickers" target="_blank" rel="noopener noreferrer" class="text-pink hover:text-pink-dark underline">custom stickers</a>!
+											</p>
+										</div>
 									</div>
 								</div>
 							{/each}
