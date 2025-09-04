@@ -198,7 +198,7 @@
 		{
 			image: '/jakarta/sponsors/twibbonize.png',
 			name: 'Twibbonize',
-			url: 'https://twibbonize.com'
+			url: 'https://twibbonize.com/'
 		},
 		{
 			image: 'https://storage.jukeboxprint.com/s/images/jukebox-meta-im.png',
@@ -272,7 +272,7 @@
 
 	// Cities where the game jam is happening
 	const cities = `Columbus
-Lisbon 
+Lisbon
 Boston
 Giza
 Vancouver
@@ -1484,6 +1484,13 @@ Mumbai`.split('\n');
 						<!-- Call to action for sponsors -->
 						<div class="mt-8 text-center">
 							<p class="text-lg text-[#335969]">
+								Thanks to Jukebox for the coolest
+								<a
+									href={`https://www.jukeboxprint.com/custom-stickers`}
+									class="underline hover:text-[#477783] transition-colors">custom stickers</a
+								>
+							</p>
+							<p class="text-lg text-[#335969]">
 								{t.wantToSponsor}
 								<a
 									href={`mailto:${contactLink}`}
@@ -1771,7 +1778,7 @@ Mumbai`.split('\n');
 					src={eventAddress ? '/event-map?location=' + encodeURIComponent(eventAddress) : '/map'}
 					class="w-full h-full border-0 bg-[#acd4e0]"
 					style="
-						mask-image: 
+						mask-image:
 							linear-gradient(white, white),
 							url('/clouds-loop-mask-2.png'),
 							url('/clouds-loop-mask-1.png'),
@@ -1781,7 +1788,7 @@ Mumbai`.split('\n');
 							url('/cloud-corner-2.png'),
 							url('/cloud-corner-3.png'),
 							url('/cloud-corner-4.png');
-						mask-position: 
+						mask-position:
 							center,
 							top left,
 							bottom left,
@@ -1791,7 +1798,7 @@ Mumbai`.split('\n');
 							top left,
 							top right,
 							bottom right;
-						mask-size: 
+						mask-size:
 							auto auto,
 							auto 72px,
 							auto 72px,
@@ -1801,7 +1808,7 @@ Mumbai`.split('\n');
 							100px 100px,
 							100px 100px,
 							100px 100px;
-						mask-repeat: 
+						mask-repeat:
 							no-repeat,
 							repeat-x,
 							repeat-x,
@@ -1811,7 +1818,7 @@ Mumbai`.split('\n');
 							no-repeat,
 							no-repeat,
 							no-repeat;
-						-webkit-mask-image: 
+						-webkit-mask-image:
 							linear-gradient(white, white),
 							url('/clouds-loop-mask-2.png'),
 							url('/clouds-loop-mask-1.png'),
@@ -1821,7 +1828,7 @@ Mumbai`.split('\n');
 							url('/cloud-corner-2.png'),
 							url('/cloud-corner-3.png'),
 							url('/cloud-corner-4.png');
-						-webkit-mask-position: 
+						-webkit-mask-position:
 							center,
 							top left,
 							bottom left,
@@ -1831,7 +1838,7 @@ Mumbai`.split('\n');
 							top left,
 							top right,
 							bottom right;
-						-webkit-mask-size: 
+						-webkit-mask-size:
 							auto auto,
 							auto 72px,
 							auto 72px,
@@ -1841,7 +1848,7 @@ Mumbai`.split('\n');
 							100px 100px,
 							100px 100px,
 							100px 100px;
-						-webkit-mask-repeat: 
+						-webkit-mask-repeat:
 							no-repeat,
 							repeat-x,
 							repeat-x,
@@ -1885,11 +1892,11 @@ Mumbai`.split('\n');
 			<div
 				class="bg-[#061E2D] text-[#D1E3EE] rounded-3xl py-18 md:py-16 px-10 md:px-18 relative overflow-visible"
 				style="
-			border-image: url('/macintosh.png') 128 91 464 91; 
-			border-image-slice: 128 91 464 91; 
-			border-image-width: clamp(64px, 8vw, 128px) clamp(45px, 6vw, 91px) clamp(232px, 29vw, 464px) clamp(45px, 6vw, 91px); 
-			border-image-outset: clamp(64px, 8vw, 128px) clamp(45px, 6vw, 91px) clamp(232px, 29vw, 464px) clamp(45px, 6vw, 91px); 
-			border-image-repeat: stretch; 
+			border-image: url('/macintosh.png') 128 91 464 91;
+			border-image-slice: 128 91 464 91;
+			border-image-width: clamp(64px, 8vw, 128px) clamp(45px, 6vw, 91px) clamp(232px, 29vw, 464px) clamp(45px, 6vw, 91px);
+			border-image-outset: clamp(64px, 8vw, 128px) clamp(45px, 6vw, 91px) clamp(232px, 29vw, 464px) clamp(45px, 6vw, 91px);
+			border-image-repeat: stretch;
 			border-style: solid;
 		"
 			>
