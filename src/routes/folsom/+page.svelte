@@ -9,8 +9,8 @@
 	// Configuration - Put your information here!
 	const eventName = "Folsom"; // This should be the name of your event WITHOUT "Daydream" at the start
 	const eventLocation = "Folsom";
-	const eventAddress = ""; // Leave this empty if you don't want an address
-	const signupLink = ""; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	const eventAddress = "theCoderSchool, 98 Clarksville Rd STE 160, Folsom, CA 95630"; // Leave this empty if you don't want an address
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recOxChAWEI1DiTaT"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = ""
 	const contactLink = "folsom@daydream.hackclub.com"
