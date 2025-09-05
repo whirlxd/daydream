@@ -34,7 +34,7 @@
 			items: [
 				{ event: "Doors open", time: "9:00 AM" },
 				{ event: "Opening ceremony", time: "11:00 AM" },
-				{ event: "Start working on your project!", time: "10:30 PM" },
+				{ event: "Start working on your project!", time: "10:30 AM" },
 				{ event: "Workshop 1", time: "11:00 AM" },
 				{ event: "Lunch", time: "1:00 PM" },
 				{ event: "Workshop 2", time: "3:30 PM" },
