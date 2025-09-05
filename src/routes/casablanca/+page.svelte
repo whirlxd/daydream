@@ -18,10 +18,10 @@
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "/casblanca/centrale.png", name: "Ecole Centrale de Casablanca", url: "https://centrale-casablanca.ma/" },
-		{ image: "/casblanca/robots&more_logo.png", name: "Robots&More", url: "https://www.robots-and-more.com/" },
-		{ image: "/casblanca/hackclub.png", name: "Hackclub", url: "https://hackclub.com/" },
-		{ image: "/casblanca/jukebox.png", name: "Jukebox Print", url: "https://www.jukeboxprint.com/" }
+		{ image: "/casablanca/centrale.png", name: "Ecole Centrale de Casablanca", url: "https://centrale-casablanca.ma/" },
+		{ image: "/casablanca/robots&more_logo.png", name: "Robots&More", url: "https://www.robots-and-more.com/" },
+		{ image: "/casablanca/hackclub.png", name: "Hackclub", url: "https://hackclub.com/" },
+		{ image: "/casablanca/jukebox.png", name: "Jukebox Print", url: "https://www.jukeboxprint.com/" }
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
