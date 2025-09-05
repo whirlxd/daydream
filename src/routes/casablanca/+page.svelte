@@ -8,23 +8,20 @@
 
 	// Configuration - Put your information here!
 	const eventName = "Example"; // This should be the name of your event WITHOUT "Daydream" at the start
-	const eventLocation = "Example City";
-	const eventAddress = "1600 Pennsylvania Avenue, Washington, DC 20500"; // Leave this empty if you don't want an address
-	const signupLink = "https://forms.hackclub.com/daydream-sign-up"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	const eventLocation = "Ecole Centrale Casablanca";
+	const eventAddress = "Ville Verte Côté Latéral Est à la forêt de Bouskoura, Bouskoura"; // Leave this empty if you don't want an address
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recdsr7S8zh4sF7kh"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
-	const directionsURL = "https://www.google.com/maps/search/1600+pennsylvania+avenue+washington+dc/"
-	const contactLink = "mailto:example@daydream.hackclub.com"
+	const directionsURL = "https://maps.app.goo.gl/NurAHWkfhq122m2XA";
+	const contactLink = "mailto:casablanca@daydream.hackclub.com";
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
-		{ image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
-		{ image: "/example/logo3.png", name: "Sponsor 3", url: "https://example3.com" },
-		{ image: "/example/logo4.png", name: "Sponsor 4", url: "https://example4.com" },
-		{ image: "/example/logo5.png", name: "Sponsor 5", url: "https://example5.com" },
-		{ image: "/example/logo6.png", name: "Sponsor 6", url: "https://example6.com" },
-		{ image: "/example/logo7.png", name: "Sponsor 7", url: "https://example7.com" }
+		{ image: "/static/centrale.png", name: "Ecole Centrale de Casablanca", url: "https://centrale-casablanca.ma/" },
+		{ image: "/static/robots&more_logo.png", name: "Robots&More", url: "https://www.robots-and-more.com/" },
+		{ image: "/static/hackclub.png", name: "Hackclub", url: "https://hackclub.com/" },
+		{ image: "/static/jukebox.png", name: "Jukebox Print", url: "https://www.jukeboxprint.com/" }
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
