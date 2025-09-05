@@ -327,7 +327,6 @@ Roblox`.split('\n');
 
 	<!-- Favicon -->
 	<link rel="icon" type="image/png" href="/favicon.png" />
-	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
 	<!-- Schema.org markup -->
 	<script type="application/ld+json">
