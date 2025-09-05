@@ -7,7 +7,7 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "casablanca"; // This should be the name of your event WITHOUT "Daydream" at the start
+	const eventName = "Casablanca"; // This should be the name of your event WITHOUT "Daydream" at the start
 	const eventLocation = "Ecole Centrale Casablanca";
 	const eventAddress = "Ville Verte Côté Latéral Est à la forêt de Bouskoura, Bouskoura"; // Leave this empty if you don't want an address
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recdsr7S8zh4sF7kh"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
