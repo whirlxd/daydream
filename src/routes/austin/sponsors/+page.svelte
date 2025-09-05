@@ -128,22 +128,22 @@
 
 				<p class="font-bold text-2xl">If you have any questions about sponsorships at all, please get in touch!</p>
 
-				<div class="flex flex-col md:flex-row md:items-end gap-10 pt-8">
-					<div>
-						<h3 class="text-3xl md:text-4xl font-pixel mb-4">Ready to support us?</h3>
-						<a 
-							class="bg-[#D1E3EE] text-[#061E2D] px-8 py-4 font-pixel text-xl md:text-2xl hover:bg-[#B8D3E0] cursor-pointer max-sm:w-full"
-							href="https://hcb.hackclub.com/donations/start/daydream-austin"
-						>
-						Donate
-						</a>
-						
-						<a 
-							class="bg-[#D1E3EE] text-[#061E2D] px-8 py-4 font-pixel text-xl md:text-2xl hover:bg-[#B8D3E0] cursor-pointer max-sm:w-full"
-							href="mailto:austin@daydream.hackclub.com"
-						>
-						Get in Touch
-						</a>
+				<div class="pt-8">
+					<h3 class="text-3xl md:text-4xl font-pixel mb-4">Ready to support us?</h3>
+					<div class="flex flex-col md:flex-row gap-2 items-start">
+  						<a 
+ 							class="bg-[#D1E3EE] text-[#061E2D] px-8 py-4 font-pixel text-xl md:text-2xl hover:bg-[#B8D3E0] cursor-pointer max-sm:w-full"
+ 							href="https://hcb.hackclub.com/donations/start/daydream-austin"
+  						>
+      						Donate
+  						</a>
+  						
+  						<a 
+ 							class="bg-[#D1E3EE] text-[#061E2D] px-8 py-4 font-pixel text-xl md:text-2xl hover:bg-[#B8D3E0] cursor-pointer max-sm:w-full"
+ 							href="mailto:austin@daydream.hackclub.com"
+  						>
+      						Get in Touch
+                        </a>
 					</div>
 				</div>
 			</div>
@@ -157,8 +157,8 @@
 </div>
 
 <!-- Schedule Container -->
-<div class="w-full bg-gradient-to-b from-[#FCEFC5] to-[#e99cce] py-16 px-8 flex justify-center">
-	<div class="relative max-w-screen-lg mx-3 w-full">
+<div class="w-full bg-gradient-to-b from-[#FCEFC5] to-[#e99cce] py-16 px-2 md:px-8 flex justify-center">
+	<div class="relative max-w-screen-lg w-full">
 		<!-- Billboard Container -->
 		<div class="relative bg-[#f0f9ff] border-[10px] border-b-[16px] border-[#888896] rounded-lg rounded-b-xl mx-auto z-40 h-screen flex flex-col">
 			<!-- Billboard Lights (top) -->
@@ -179,8 +179,8 @@
 			
 			<!-- Main Content Area -->
 			<iframe
-			    class="relative bg-gradient-to-b from-[#CCF4FD] to-[#AECDF6] px-8 pt-8 pb-16 grow w-full max-w-screen-lg min-h-96" title="Sponsor prospectus"
-			    src="https://drive.google.com/file/d/1OFEYeK-ZS_sRA966exhvP6S8DOVUYzZK/preview">
+			    class="relative bg-gradient-to-b from-[#CCF4FD] to-[#AECDF6] px-2 md:px-8 py-8 grow w-full max-w-screen-lg min-h-96" title="Sponsor prospectus"
+			    src="https://drive.google.com/file/d/1OFEYeK-ZS_sRA966exhvP6S8DOVUYzZK/preview" loading="lazy">
 			</iframe>
 			
 			<!-- Billboard Bars (bottom) -->
