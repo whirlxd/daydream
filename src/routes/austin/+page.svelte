@@ -10,16 +10,16 @@
 	const eventName = "Austin"; // This should be the name of your event WITHOUT "Daydream" at the start
 	const eventLocation = "Austin, Texas";
 	const eventAddress = "2410 San Antonio St Austin, TX 78734"; // Leave this empty if you don't want an address
-	const signupLink = "https://forms.hackclub.com/daydream-sign-up"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recit5nhOKNU5OWsV"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = "https://www.google.com/maps/dir//2410+San+Antonio+St,+Austin,+TX+78734/"
-	const contactLink = "mailto:austin@daydream.hackclub.com"
+	const contactLink = "/austin/sponsors"
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
-	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
+	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
-		// { image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
+		//{ image: "/austin/hack-club.svg", name: "Hack Club", url: "https://hackclub.com" },
+		{ image: "/austin/futo.svg", name: "FUTO", url: "https://futo.org/" },
 		// { image: "/example/logo3.png", name: "Sponsor 3", url: "https://example3.com" },
 		// { image: "/example/logo4.png", name: "Sponsor 4", url: "https://example4.com" },
 		// { image: "/example/logo5.png", name: "Sponsor 5", url: "https://example5.com" },
@@ -842,7 +842,7 @@ Mumbai`.split("\n")
 			</h4>
 		</div>
 		
-		<ParticipantSignUp {eventName} />
+		<ParticipantSignUp {signupLink} {eventName} />
 	</div>
 
 	<!-- <img src="hot-air-balloon.png" alt="" class="absolute w-1/8 right-32 bottom-40 z-20"> -->
@@ -1568,4 +1568,3 @@ Mumbai`.split("\n")
 		</div>
 	</div>
 {/if}
-

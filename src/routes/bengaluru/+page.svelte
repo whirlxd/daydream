@@ -8,11 +8,11 @@
 
 	// Configuration - Put your information here!
 	const eventName = "Bengaluru"; // This should be the name of your event WITHOUT "Daydream" at the start
-	const eventLocation = "Bengaluru";
-	const eventAddress = "Bengaluru"; // Leave this empty if you don't want an address
+	const eventLocation = "Benagluru";
+	const eventAddress = "Dayanand Sagar University Bengaluru"; // Leave this empty if you don't want an address
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recQJb8ANIempxRxc"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
-	const directionsURL = ""
+	const directionsURL = "https://maps.app.goo.gl/WTsjC83KM7vRA4Cc9"
 	const contactLink = "mailto:bengaluru@daydream.hackclub.com"
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
@@ -21,7 +21,7 @@
 		{ image: "/Bengaluru/xyz.png", name: ".xyz", url: "https://gen.xyz" },
 		{ image: "/Bengaluru/yubico.svg", name: "Yubico", url: "https://www.yubico.com" },
 		{ image: "/Bengaluru/cc.webp", name: "CodeCrafters", url: "https://codecrafters.io/" },
-		
+		{ image: "/Bengaluru/dsu.png", name: "Dayanand Sagar University", url: "https://www.dsu.edu.in/" },		
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
@@ -817,9 +817,9 @@ Mumbai`.split("\n")
 			>
 				September 27th & 28th, 2025
 			</h2>
-			<img src="daydream.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4" />
-			<a href="https://hackclub.com" class="absolute top-0 -right-6 max-sm:right-0 max-sm:scale-80 animate-hover ![animation-delay:0.9s] ![--hover:-0.2rem]">
-				<img src="flag-plane.png" alt="Hack Club" class="h-28">
+			<img src="/Bengaluru/daydreamblr.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4 pl-[150px]" />
+			<a href="https://hackclub.com" class="absolute top-[-30px] -right-6 max-sm:right-0 max-sm:scale-80 animate-hover ![animation-delay:0.9s] ![--hover:-0.2rem]">
+				<img src="flag-plane.png" alt="Hack Club" class="h-29">
 			</a>
 		</div>
 		<div class="relative inline-block px-4">
@@ -840,7 +840,7 @@ Mumbai`.split("\n")
 			</h4>
 		</div>
 		
-		<ParticipantSignUp {eventName} />
+		<ParticipantSignUp {signupLink} {eventName} />
 	</div>
 
 	<!-- <img src="hot-air-balloon.png" alt="" class="absolute w-1/8 right-32 bottom-40 z-20"> -->
@@ -904,7 +904,7 @@ Mumbai`.split("\n")
 		<div class="relative z-20 px-20 pt-20 pb-52 rounded-lg mb-0 max-sm:px-18" style="background-image: url('/letter-top.png'), linear-gradient(to bottom, #FCEFC5 100px, transparent 100px), url('/letter-loop.png'); background-size: 100% auto, 100% auto, 100% auto; background-repeat: no-repeat, no-repeat, repeat-y; background-position: top, top, top; background-attachment: local, local, local;">
 			<div class="absolute bottom-0 left-0 w-full h-24 z-10 pointer-events-none bg-[url('/clouds-loop.png')] bg-repeat-x bg-bottom bg-contain"></div>
 			<h2 class="text-5xl font-serif italic text-[#8B4513] mb-10 relative">
-				Dear Hackers, Musicians, and Artist,
+				Dear Hackers, Musicians, and Artists,
 				<img src="/underline.svg" alt="" class="absolute left-0 -bottom-3 w-64 h-auto opacity-70">
 			</h2>
 			
