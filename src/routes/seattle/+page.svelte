@@ -37,7 +37,7 @@
 				{ event: 'Workshop: How to make a Ren\'Py Visual Novel', location: 'Lorde', time: '10:30 AM' },
 				{ event: 'Required: Getting your project on Github!', location: 'Plato', time: '11:00 AM' },
 				{ event: 'Lunch', location: 'Cafe', time: '12:00 PM' },
-				{ event: 'Workshop: Get introduced to hardware! ', location: '', time: '03:00 PM' },
+				{ event: 'Workshop: Get introduced to hardware! ', location: 'Lorde', time: '03:00 PM' },
 				{ event: 'Dinner', location: 'Cafe', time: '06:00 PM' },
 				{ event: 'Show off your Project!', location: 'Lorde', time: '08:00 PM' },
 				{ event: 'Goodbye!', location: 'Plato', time: '08:50 PM' },
@@ -48,7 +48,7 @@
 			title: 'Sunday, September 28th',
 			items: [
 				{ event: 'Doors open', location: '', time: '09:00 AM' },
-				{ event: 'Welcome Back!', location: '', time: '09:30 AM' },
+				{ event: 'Welcome Back! Presentation', location: 'Plato', time: '09:30 AM' },
 				{ event: 'Lunch', location: 'Cafe', time: '12:00 PM' },
 				{ event: 'Workshop: How to ship a Godot Game', location: 'Plato', time: '04:40 PM' },
 				{ event: 'Workshop: How to ship a Ren\'Py Novel', location: 'Lorde', time: '04:40 PM' },
