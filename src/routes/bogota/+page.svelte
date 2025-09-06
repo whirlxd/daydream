@@ -7,13 +7,13 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Milwaukee"; // This should be the name of your event WITHOUT "Daydream" at the start
-	const eventLocation = "Milwaukee";
+	const eventName = "Bogotá"; // This should be the name of your event WITHOUT "Daydream" at the start
+	const eventLocation = "Bogotá";
 	const eventAddress = ""; // Leave this empty if you don't want an address
-	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recL3BvxoCPzbRIYR"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=rec2MH0ZD6NGdH9O8"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = ""
-	const contactLink = "mailto:daydreammilwaukee@gmail.com"
+	const contactLink = ""
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
@@ -27,41 +27,15 @@
 		{ image: "/example/logo7.png", name: "Sponsor 7", url: "https://example7.com" }
 	];
 	
-	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
 	const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [
-		{
-			title: "Saturday, September 27th",
-			items: [
-				{ event: "Soft Landing + Checkin", time: "8:30 AM" },
-				{ event: "Opening Words", time: "9:00 AM"},
-				{ event: "Start working on your project!", time: "9:30 AM" },
-				{ event: "Lunch and Social Time", time: "12:30 PM" },
-				{ event: "Dedicated Work Time", time: "1:00 PM" },
-				{ event: "Workshop? - TBD", time: "2:00 PM" },
-				{ event: "Workshop? - TBD", time: "4:00 PM" },
-				{ event: "Dinner", time: "7:30 PM" },
-				{ event: "Organizer Yap Session", time: "8:00 PM" },
-				{ event: "More Work Time", time: "8:15 PM" },
-				{ event: "GO TO SLEEP", time: "11:00 PM" }
-			]
-		},
-		{
-			title: "Sunday, September 28th",
-			items: [
-				{ event: "Wakeup Calls", time: "8:00 AM" },
-				{ event: "Breakfast", time: "8:30 AM" },
-				{ event: "Work Time", time: "9:00 AM" },
-				{ event: "Lunch", time: "12:30 PM" },
-				{ event: "Work Time!", time: "1 PM" },
-				{ event: "Workshop? - TBD", time: "2:00 PM" },
-				{ event: "Dinner", time: "7:00 PM" },
-				{ event: "Finishing Touches", time: "7:30 PM" },
-				{ event: "Demos", time: "8:00 PM" },
-				{ event: "Closing", time: "9:30 pm"},
-				{ event: "Pack up and go home!", time: "10:00 PM" }
-			]
-		}
-	];
+    {
+        title: "Sera determinado pronto",
+        items: [
+            { event: ":)", time: "" }
+        ]
+    }
+
+];
 
 	
 	import { onMount } from "svelte";
@@ -79,8 +53,8 @@
 	// Get current URL for dynamic metadata
 	$: currentUrl = `https://daydream.hackclub.com${$page.url.pathname}`;
 	$: pageTitle = `Daydream ${eventName} - ${eventLocation} Game Jam`;
-	$: pageDescription = `Join Daydream ${eventName} in ${eventLocation}! A student-led game jam where you'll build amazing games with other high schoolers. Food, workshops, and prizes included!`;
-	$: pageKeywords = `game jam, hackathon, student coding, teen coding, Hack Club, game development, ${eventLocation}, ${eventName}`;
+	$: pageDescription = `Join Daydream ${eventName} in ${eventLocation}! A teen-led game jam where you'll build amazing games with other high schoolers. Food, workshops, and prizes included!`;
+	$: pageKeywords = `game jam, hackathon, teen coding, Hack Club, game development, ${eventLocation}, ${eventName}`;
 
 	// Cities where the game jam is happening
 	const cities = `Columbus
@@ -106,7 +80,7 @@ Dubai
 San Francisco
 Minneapolis
 Seattle
-Signapore
+Singapore
 Sydney
 Mumbai`.split("\n")
 
@@ -827,7 +801,7 @@ Mumbai`.split("\n")
 			<h2
 			class="text-xl font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent absolute left-1/2 max-sm:translate-y-4 max-sm:mb-0 max-md:-mb-8 md:left-[calc(50%+4rem)] -translate-x-1/2 bottom-8 italic w-max md:text-lg max-sm:text-lg"
 			>
-				September 27th & 28th, 2025
+				27 y 28 de septiembre de 2025
 			</h2>
 			<img src="daydream.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4" />
 			<a href="https://hackclub.com" class="absolute top-0 -right-6 max-sm:right-0 max-sm:scale-80 animate-hover ![animation-delay:0.9s] ![--hover:-0.2rem]">
@@ -838,7 +812,7 @@ Mumbai`.split("\n")
 			<h3
 				class="text-3xl italic font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent w-max max-sm:text-2xl mx-auto"
 			>
-				Game jam for high schoolers
+				Game jam para estudiantes en bachillerato
 			</h3>
 			<img
 				src="underline.svg"
@@ -848,7 +822,7 @@ Mumbai`.split("\n")
 			<h4
 				class="text-2xl opacity-90 mt-2 font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent max-sm:text-xl"
 			>
-				Organized by Students in {@html eventLocation.replaceAll(" ", "&nbsp;")}
+				Organizada por jóvenes en {@html eventLocation.replaceAll(" ", "&nbsp;")}
 			</h4>
 		</div>
 		
@@ -892,7 +866,7 @@ Mumbai`.split("\n")
 		target="_blank"
 		class="hidden md:block absolute bottom-16 left-16 z-50 w-max px-4 py-2 bg-pink border-b-2 border-b-pink-dark text-white rounded-full active:transform active:translate-y-0.5 transition-all duration-100 font-sans cursor-pointer overflow-visible hover:shadow-[0_2px_0_0_theme(colors.pink.dark)] hover:-translate-y-[2px] active:border-transparent active:shadow-none"
 	>
-		Get free stickers
+		Consigue stickers gratis
 		<img
 			src="button-clouds.svg" 
 			alt="" 
@@ -916,22 +890,22 @@ Mumbai`.split("\n")
 		<div class="relative z-20 px-20 pt-20 pb-52 rounded-lg mb-0 max-sm:px-18" style="background-image: url('/letter-top.png'), linear-gradient(to bottom, #FCEFC5 100px, transparent 100px), url('/letter-loop.png'); background-size: 100% auto, 100% auto, 100% auto; background-repeat: no-repeat, no-repeat, repeat-y; background-position: top, top, top; background-attachment: local, local, local;">
 			<div class="absolute bottom-0 left-0 w-full h-24 z-10 pointer-events-none bg-[url('/clouds-loop.png')] bg-repeat-x bg-bottom bg-contain"></div>
 			<h2 class="text-5xl font-serif italic text-[#8B4513] mb-10 relative">
-				Dear Hackers, Musicians, and Artists,
+				Estimad@s hackers, músic@s y artistas:
 				<img src="/underline.svg" alt="" class="absolute left-0 -bottom-3 w-64 h-auto opacity-70">
 			</h2>
 			
 			<div class="text-[#8B4513] font-serif text-xl leading-relaxed space-y-8">
-				<p>Welcome to Hack Club's newest adventure. This fall we invite you to join us for Daydream, the world's biggest Game Jam happening simultaneously in 100 cities.</p>
+				<p>Bienvenid@s a la nueva aventura de Hack Club. Este otoño te invitamos a unirte a nosotros para Daydream, la Game Jam más grande del mundo que se lleva a cabo simultáneamente en 100 ciudades.</p>
 
-				<p class="font-bold text-2xl">Hack Club wants you to make a game this fall.</p>
+				<p class="font-bold text-2xl">Hack Club quiere que desarrolles un video juego este otoño.</p>
 
-				<p>Don't consider yourself a game dev? No problem - we have tons of online and in-person workshops for you to make your first game! </p>
+				<p>¿No te consideras un desarrollador de juegos? No hay problema, tenemos un montón de talleres para que hagas tu primer juego.</p>
 
-				<p>This fall, we invite you to learn something new, make something you're really proud of, meet new friends, and go on an incredible adventure together.</p>
+				<p>Este otoño, te invitamos a aprender algo nuevo, crear algo de lo que estés realmente orgulloso, conocer nuevos amigos y embarcarte juntos en una aventura increíble.</p>
 
-				<p class="mb-2">With love,</p>
+				<p class="mb-2">Con cariño,</p>
 
-				<p class="italic text-2xl opacity-85">Augie and Renran from Hack Club HQ</p>
+				<p class="italic text-2xl opacity-85">El equipo de Daydream Bogota</p>
 			</div>
 		</div>
 	</div>
@@ -1127,7 +1101,7 @@ Mumbai`.split("\n")
 	</div>
 	
 	<div class="relative w-10/12 h-auto object-contain cursor-text flex flex-row max-lg:flex-wrap md:translate-y-0 max-lg:translate-y-1/5 items-center justify-center align-middle max-w-5xl z-50">
-		<img src="gamejam-1-alt.png" alt="Here's How You Win a" class="flex-shrink min-w-0 object-contain">
+		<img src="gamejam-1-alt.png" alt="Así es como ganas una" class="flex-shrink min-w-0 object-contain">
 		<img src="gamejam-2.png" alt="Game Jam" class="flex-shrink min-w-0 object-contain">
 	</div>
 </div>
@@ -1152,7 +1126,7 @@ Mumbai`.split("\n")
 			<div class="relative w-72 h-40 max-md:w-80 animate-hover ![--hover:-0.15rem] ![animation-delay:1.7s] z-20" data-point="1">
 				<img src="paper1.png" alt="" class="w-full h-full object-contain">
 				<div class="absolute inset-0 justify-center text-center p-6 text-xl font-serif max-md:text-lg text-[#8B4513] inline-block content-center">
-					<span class="font-sans text-[#E472AB] font-bold text-[1.3rem] mr-1">#1:</span> <a href={signupLink} class="underline">Sign up</a> for Daydream {eventName}
+					<span class="font-sans text-[#E472AB] font-bold text-[1.3rem] mr-1">#1:</span> <a href={signupLink} class="underline">Registrate</a> a Daydream Bogota{eventName}
 				</div>
 			</div>
 		</div>
@@ -1166,7 +1140,7 @@ Mumbai`.split("\n")
 			<div class="relative w-72 h-40 max-md:w-80 animate-hover ![--hover:-0.15rem] ![animation-delay:0.3s] z-20" data-point="2">
 				<img src="paper2.png" alt="" class="w-full h-full object-contain">
 				<div class="absolute inset-0 justify-center text-center p-6 text-xl font-serif max-md:text-lg text-[#8B4513] inline-block content-center">
-					<span class="font-sans text-[#639DEB] font-bold text-[1.3rem] mr-1">#2:</span> Attend a workshop and learn about game development
+					<span class="font-sans text-[#639DEB] font-bold text-[1.3rem] mr-1">#2:</span> Asiste a un taller y aprende sobre desarrollo de videojuegos
 				</div>
 			</div>
 		</div>
@@ -1179,7 +1153,7 @@ Mumbai`.split("\n")
 			<div class="relative w-72 h-40 max-md:w-80 animate-hover ![--hover:-0.15rem] ![animation-delay:1.4s] z-20" data-point="3">
 				<img src="paper3.png" alt="" class="w-full h-full object-contain">
 				<div class="absolute inset-0 justify-center text-center p-6 text-xl font-serif max-md:text-lg text-[#8B4513] inline-block content-center">
-					<span class="font-sans text-[#AB68E2] font-bold text-[1.3rem] mr-1">#3:</span> Find a team of other teenagers at the event
+					<span class="font-sans text-[#AB68E2] font-bold text-[1.3rem] mr-1">#3:</span>  Encuentra un equipo con otres adolescentes en el evento
 				</div>
 			</div>
 		</div>
@@ -1192,7 +1166,7 @@ Mumbai`.split("\n")
 			<div class="relative w-72 h-40 max-md:w-80 animate-hover ![--hover:-0.15rem] ![animation-delay:2.3s] z-20" data-point="4">
 				<img src="paper4.png" alt="" class="w-full h-full object-contain">
 				<div class="absolute inset-0 justify-center text-center p-6 text-xl font-serif max-md:text-lg text-[#8B4513] inline-block content-center">
-					<span class="font-sans text-[#F2993E] font-bold text-[1.3rem] mr-1">#4:</span> Start building your game - <em>no experience needed</em>
+					<span class="font-sans text-[#F2993E] font-bold text-[1.3rem] mr-1">#4:</span> Comienza a crear tu juego - <em>no necesitas experiencia</em>
 				</div>
 			</div>
 		</div>
@@ -1203,7 +1177,7 @@ Mumbai`.split("\n")
 	<div class="flex flex-col items-center w-full basis-full translate-y-40 max-md:translate-y-12 z-20">
 		<div class="relative">
 			<div class="bg-[url('/card-final.png')] bg-contain bg-no-repeat bg-center text-2xl font-serif pt-24 px-8 w-128 h-96 text-center max-md:w-80 max-md:h-80 max-md:text-xl max-md:pt-16 animate-hover ![--hover:-0.15rem] ![animation-delay:1.9s]" data-point="5">
-				<span class="font-sans text-[#F2CC32] font-bold text-[1.5rem] mr-1">#5:</span> Share what you made with the world!
+				<span class="font-sans text-[#F2CC32] font-bold text-[1.5rem] mr-1">#5:</span>  ¡Comparte lo que hiciste con el mundo!
 			</div>
 		</div>
 	</div>
@@ -1391,44 +1365,45 @@ Mumbai`.split("\n")
 				
 				<div class="space-y-8 max-sm:space-y-4 relative z-10">
 					<h2 class="text-5xl md:text-6xl lg:text-7xl font-pixel leading-tight">
-						What will you <img src="/dream-pixel.png" alt="Dream?" class="h-[0.75em] font-serif italic [image-rendering:pixelated] inline align-middle -translate-y-1.5">
+					     ¿Qué vas a <img src="/dream-pixel.png" alt="Soñar?" class="h-[0.75em] font-serif italic [image-rendering:pixelated] inline align-middle -translate-y-1.5">
 					</h2>
 					
 					<p class="text-xl md:text-2xl opacity-90 font-pixel">
-						You can make any game you want as long as it can be deployed on itch.io! All games made must be deployed and available online for other participants to play and experience. We will only accept itch.io submission links.
+						¡Puedes crear cualquier juego que quieras siempre que se pueda subir a itch.io! Todos los juegos creados deben ser de código abierto y disponibles en línea para que otros participantes los jueguen y experimenten. Solo aceptaremos enlaces de envío de itch.io.
+					
 						<br>
 						<br>
-						Here are some cool projects from past hackathons to get you inspired:
+						Aquí hay algunos proyectos geniales de hackatones anteriores para inspirarte:
 					</p>
 					
 					<ul class="space-y-2 font-pixel text-xl md:text-2xl">
 						<li class="flex items-start">
 							<span class="mr-4">•</span>
-							<a href="https://bucketfish.itch.io/remedy-renemy" target="_blank" class="underline mr-2">Remedy Renemy</a>by Tongyu and Kai Ling
+							<a href="https://bucketfish.itch.io/remedy-renemy" target="_blank" class="underline mr-2">Remedy Renemy</a>por Tongyu and Kai Ling
 						</li>
 						<li class="flex items-start">
 							<span class="mr-4">•</span>
-							<a href="https://nanomars.itch.io/not-an-idle" target="_blank" class="underline mr-2">Not an Idle</a> by Armand
+							<a href="https://nanomars.itch.io/not-an-idle" target="_blank" class="underline mr-2">Not an Idle</a> por Armand
 						</li>
 						<li class="flex items-start">
 							<span class="mr-4">•</span>
-							<a href="https://juanes10201.itch.io/speedtickers" target="_blank" class="underline mr-2">SPEEDTICKERS</a> by Agustin
+							<a href="https://juanes10201.itch.io/speedtickers" target="_blank" class="underline mr-2">SPEEDTICKERS</a> por Agustin
 						</li>
 					</ul>
 					
 					<p class="text-xl md:text-2xl opacity-90 font-pixel leading-relaxed">
-						We'll have workshops and activities before Daydream to help you learn game development using Godot! 
+						¡Tendremos talleres y actividades durante Daydream para ayudarte con tu proyecto!
 					</p>
 					
 					<!-- Bottom section with input -->
 					<div class="flex flex-col md:flex-row md:items-end gap-10 pt-8">
 						<div>
-							<h3 class="text-3xl md:text-4xl font-pixel mb-4">Stuck?</h3>
+							<h3 class="text-3xl md:text-4xl font-pixel mb-4">¿Sin ideas?</h3>
 							<button 
 								class="bg-[#D1E3EE] text-[#061E2D] px-8 py-4 font-pixel text-xl md:text-2xl hover:bg-[#B8D3E0] cursor-pointer max-sm:w-full"
 								on:click={dreamIdea}
 							>
-								Dream an idea for me
+								Imagina una por mí
 							</button>
 						</div>
 						
@@ -1469,8 +1444,8 @@ Mumbai`.split("\n")
 		<div class="relative transform -rotate-2">
 			<img src="window-3.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">Who can participate in Daydream?</h3>
-				<p class="text-sm">All high-school & upper-middle-school aged students are welcome to come!</p>
+				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">¿Quién puede participar en Daydream?</h3>
+				<p class="text-sm">¡Cualquier estudiante en bachillerato con 18 años o menos!</p>
 		</div>
 		</div>
 
@@ -1478,8 +1453,8 @@ Mumbai`.split("\n")
 		<div class="relative transform rotate-1">
 			<img src="window-4.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">Can I organize a Daydream in my city?</h3>
-				<p class="text-sm">Definitely! Contact us via daydream@hackclub.com or join #daydream on slack.</p>
+				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">¿Puedo ayudar a organizar Daydream Valencia?</h3>
+				<p class="text-sm">¡Contáctanos a través de whastapp, al numero +57 3194565555, y es posible que trabajemos juntos :)</p>
 			</div>
 		</div>
 
@@ -1487,8 +1462,8 @@ Mumbai`.split("\n")
 		<div class="relative transform rotate-2">
 			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">All this, for free?</h3>
-				<p class="text-sm">Yep! Food, swag and good vibes are all included. Plus, if you're joining us from afar, we'll cover the cost of gas or a bus / train ticket.</p>
+				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">¿Todo esto, gratis?</h3>
+				<p class="text-sm">¡Sí! Nos encargamos de la comida, regalos y buenas vibras. Además, si vienes de lejos, podemos cubrir el costo de la gasolina o un billete de autobús/tren a través del <a target="_blank" href="https://gas.hackclub.com/">gas fund.</a></p>
 			</div>
 		</div>
 
@@ -1496,8 +1471,8 @@ Mumbai`.split("\n")
 		<div class="relative transform -rotate-1">
 			<img src="window-1.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">What do I need?</h3>
-				<p class="text-sm">Your laptop, chargers, toiletries, sleeping bags, and an open mind!</p>
+				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">¿Qué necesito?</h3>
+				<p class="text-sm">Tu ordenador/portátil, cargadores, una mente abierta y todo lo que creas necesario para desarrollar tu creatividad!</p>
 			</div>
 		</div>
 
@@ -1505,8 +1480,8 @@ Mumbai`.split("\n")
 		<div class="relative transform rotate-1">
 			<img src="window-4.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-1 max-md:text-base">What has Hack Club done before?</h3>
-				<p class="text-sm">Hack Club has run a hackathon in at GitHub HQ, a Game Jam in 50 cities, a hackathon on a train from Vermont to Los Angeles, and more!</p>
+				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-1 max-md:text-base">¿Qué ha hecho Hack Club antes?</h3>
+				<p class="text-sm">Hack Club ha organizado un hackathon en GitHub HQ, un Game Jam en 50 ciudades, y mucho mas! <a class="text-blue-500 hover:underline" href="https://www.uninorte.edu.co/web/grupo-prensa/w/estudiantes-de-colegios-pusieron-a-prueba-su-talento-en-el-hackathon-scrapyard-barranquilla" target="_blank">¡En Barranquilla,</a> organizaron un hackathon en la universidad del Norte en marzo!</p>
 			</div>
 		</div>
 
@@ -1514,8 +1489,8 @@ Mumbai`.split("\n")
 		<div class="relative transform rotate-1">
 			<img src="window-3.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">I'm not good at coding. Can I still participate?</h3>
-				<p class="text-sm">This game jam is for all skill levels! We'll have workshops and other events so join us and let's learn together.</p>
+				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">No soy bueno en programación. ¿Puedo participar?</h3>
+				<p class="text-sm">¡Este game jam es para todos los niveles de habilidad! Es un buen evento para aprender y mejorar tus habilidades.</p>
 			</div>
 		</div>
 
@@ -1523,8 +1498,8 @@ Mumbai`.split("\n")
 		<div class="relative transform -rotate-2">
 			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">What if my parents are concerned?</h3>
-				<p class="text-sm">We're here to help! You can see our parent guide here, or they can reach out to us at daydream@hackclub.com for questions.</p>
+				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">¿Qué pasa si mis padres están preocupados?</h3>
+				<p class="text-sm">¡Estamos aquí para ayudar! Puedes ver nuestra guía para padres, o pueden escribir al numero 3194565555</p>
 			</div>
 		</div>
 
@@ -1532,8 +1507,8 @@ Mumbai`.split("\n")
 		<div class="relative transform -rotate-1">
 			<img src="window-1.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">What can I make at Daydream?</h3>
-				<p class="text-sm">ANY type of game based on the theme! Platformer, visual novel, clicker game, etc. Be as creative as possible!</p>
+				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">¿Qué puedo hacer en Daydream?</h3>
+				<p class="text-sm">¡Cualquier tipo de juego! Plataformas, novela visual, juego de clics, etc. ¡Sé lo más creativ@ posible!</p>
 			</div>
 		</div>
 	</div>

@@ -13,18 +13,17 @@
 	const signupLink = 'https://forms.hackclub.com/daydream-sign-up?event=recK6TeqRiPWomO7z'; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = '';
-	const contactLink = 'hunterzhuang0@gmail.com';
+	const contactLink = 'mailto:hunterzhuang0@gmail.com';
 
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
-	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
+	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: '/example/logo1.png', name: 'Sponsor 1', url: 'https://example1.com' },
-		{ image: '/example/logo2.png', name: 'Sponsor 2', url: 'https://example2.com' },
-		{ image: '/example/logo3.png', name: 'Sponsor 3', url: 'https://example3.com' },
-		{ image: '/example/logo4.png', name: 'Sponsor 4', url: 'https://example4.com' },
-		{ image: '/example/logo5.png', name: 'Sponsor 5', url: 'https://example5.com' },
-		{ image: '/example/logo6.png', name: 'Sponsor 6', url: 'https://example6.com' },
-		{ image: '/example/logo7.png', name: 'Sponsor 7', url: 'https://example7.com' }
+		// {
+		// 	image: '/seattle/jukebox.svg',
+		// 	name: 'Jukebox',
+		// 	url: 'https://www.jukeboxprint.com/custom-stickers'
+		// }
+		// { image: '/example/logo2.png', name: 'Sponsor 2', url: 'https://example2.com' }
 	];
 
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
@@ -1111,6 +1110,19 @@ Mumbai`.split('\n');
 
 					<!-- Sponsors Grid -->
 					<div class="relative z-10 min-h-40">
+						<div
+							class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors gap-8"
+						>
+							<img
+								src="seattle/jukebox.svg"
+								alt="Jukebox"
+								class="max-w-full max-h-full object-contain"
+							/>
+							<p class="text-lg text-[#335969]">
+								<a href="https://www.jukebox.com" class="text-pink-600">Custom Stickers</a>
+								with love from Jukebox
+							</p>
+						</div>
 						{#if sponsors.length > 0}
 							<!-- First row (up to 4 sponsors) -->
 							{#if sponsors.length > 4}
