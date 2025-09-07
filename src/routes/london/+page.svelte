@@ -9,8 +9,8 @@
 	// Configuration - Put your information here!
 	const eventName = "London";
 	const eventLocation = "London";
-	const eventAddress = ""; // Leave this empty if you don't want an address
-	const signupLink = "https://forms.hackclub.com/daydream-sign-up"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	const eventAddress = "1 Sutherland St, Pimlico, London SW1V 4LD"; // Leave this empty if you don't want an address
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recnT3dNX6oOSR37K"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional
 	// const directionsURL = ""
 	// const contactLink = ""
@@ -25,20 +25,18 @@
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
 	const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [
 		{
-			title: "Saturday, September 27th",
+			title: "Sunday, September 28th",
 			items: [
-				{ event: "Doors open", time: "8:45" },
-				{ event: "Opening ceremony", time: "9:10" },
+				{ event: "Doors open", time: "9:00" },
+				{ event: "Opening ceremony", time: "9:30" },
 				{ event: "Get into teams, start working on your project!", time: "10:00" },
 				{ event: "Lunch", time: "13:00" },
 				{ event: "Continue working on projects", time: "14:00" },
-				{ event: "Workshop", time: "15:00" },
-				{ event: "More projects work :)", time: "16:00" },
-				{ event: "Dinner", time: "18:00" },
-				{ event: "Ship projects and vote", time: "19:00" },
-				{ event: "Closing Ceremony", time: "20:20" },
-				{ event: "Home!", time: "20:45" }
-				
+				{ event: "More projects work :)", time: "15:00" },
+				{ event: "Dinner", time: "17:00" },
+				{ event: "Ship projects and vote", time: "18:00" },
+				{ event: "Closing Ceremony", time: "18:30" },
+				{ event: "Home!", time: "19:00" }
 			]
 		},
 	];
