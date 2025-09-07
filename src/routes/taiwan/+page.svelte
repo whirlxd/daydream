@@ -1,8 +1,8 @@
 <script lang="ts">
 	// Configuration - Put your information here!
 	const eventName = "Taiwan";
-	const signupLink = "https://forms.hackclub.com/daydream-rsvp?event=recbXuFkkf752iPIq";
-	const eventLocation = " TCS（臺師大林口校區） ";
+	const signupLink = "http://signup.hackit.tw/events/daydream-taiwan";
+	const eventLocation = " TCS 探索未來國際教育機構（臺師大林口校區） ";
 	const eventAddress = "";
 
 	// These two are optional
@@ -1031,7 +1031,7 @@ Mumbai`.split("\n")
 				class="text-xl md:text-2xl opacity-90 mt-4 font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent max-sm:text-base tracking-wide leading-relaxed max-sm:leading-normal break-words whitespace-normal text-center"
 			>
 				青少年組織，為青少年舉辦的遊戲黑客松<br>
-				在{@html eventLocation.replaceAll(" ", "&nbsp;")}舉行
+				在{eventLocation}舉行
 			</h4>
 		</div>
 		
@@ -2031,7 +2031,7 @@ Mumbai`.split("\n")
 			<img src="window-4.png" alt="window" class="w-full h-full object-contain max-md:scale-110 max-xl:scale-110 max-lg:scale-115 max-sm:scale-130">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-4 max-lg:px-14 max-xl:px-18 max-sm:top-[18%] max-sm:bottom-[18%] max-sm:left-[14%] max-sm:right-[14%]">
                 <h3 class="text-lg md:text-xl font-serif font-bold mb-4 max-lg:mb-2 max-md:text-sm max-sm:text-xs max-sm:mb-2 leading-relaxed tracking-wide max-sm:tracking-normal">怎麼報名？</h3>
-                <p class="text-sm md:text-base max-sm:text-xs max-sm:leading-tight leading-relaxed tracking-wide max-sm:tracking-normal">報名尚未開放；先在上方留下 email RSVP，開放時第一時間通知。名額有限，先卡位！</p>
+                <p class="text-sm md:text-base max-sm:text-xs max-sm:leading-tight leading-relaxed tracking-wide max-sm:tracking-normal">在上方輸入 Email 後送出，或直接前往 <a href={signupLink} target="_blank" rel="noopener noreferrer" class="underline">報名表單</a>。</p>
 			</div>
 		</div>
 
