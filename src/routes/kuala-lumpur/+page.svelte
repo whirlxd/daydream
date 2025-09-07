@@ -33,7 +33,7 @@
 				{ event: "Jumpstart (Godot) Workshop", time: "10:30 AM" },
 				{ event: "Lunch", time: "12:00 PM" },
 				{ event: "Mini Activity", time: "2:00 PM" },
-				{ event: "JAMS Dev Drafts", time: "3:00 PM" },
+				{ event: "Art/Music Workshop", time: "3:00 PM" },
 				{ event: "Dinner", time: "6:00 PM" },
 				{ event: "Lightning talks & packing up", time: "6:45 PM" },
 				{ event: "Doors close", time: "7:00 PM" },
