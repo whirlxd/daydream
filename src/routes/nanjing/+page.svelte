@@ -59,7 +59,7 @@
 				},
 				item3: {
 					name: 'SPEEDTICKERS',
-					author: 'by Agustin'
+					author: 'by Agustin & Juan'
 				},
 				line3: 'We\'ll have workshops and activities before Daydream to help you learn game development using Godot!',
 				stuck: 'Stuck?',
@@ -159,7 +159,7 @@
 				},
 				item3: {
 					name: 'SPEEDTICKERS',
-					author: '作者：Agustin'
+					author: '作者：Agustin & Juan'
 				},
 				line3: '在Daydream之前，我们还会举办工作坊和活动，帮助你学习使用Godot进行游戏开发！',
 				stuck: '卡住了？',
@@ -1079,25 +1079,7 @@ Mumbai`.split("\n")
 	<img src="/clouds-top-left.png" alt="" class="absolute left-0 w-3/12 -bottom-12  translate-y-1/2 z-20 pointer-events-none">
 	
 
-	<!-- Desktop stickers button (bottom left) -->
-	 <a
-	 href="https://forms.hackclub.com/daydream-stickers"
-	 target="_blank"
-	 class="hidden md:block absolute bottom-16 left-16 z-50 w-max px-4 py-2 bg-pink border-b-2 border-b-pink-dark text-white rounded-full active:transform active:translate-y-0.5 transition-all duration-100 font-sans cursor-pointer overflow-visible hover:shadow-[0_2px_0_0_theme(colors.pink.dark)] hover:-translate-y-[2px] active:border-transparent active:shadow-none"
-	 >
-	 {l10n.stickers}
-	 <img
-	 src="button-clouds.svg" 
-	 alt="" 
-	 class="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto object-contain pointer-events-none"
-	 >
-	 <img
-	 src="rock-sticker.png"
-	 alt=""
-	 class="absolute bottom-2 right-3 translate-2/3 w-18 h-18 object-contain pointer-events-none"
-	 style="transform: rotate(-15deg);"
-	 >
-	 </a>
+	
 </div>
 
 <div class="w-full relative flex items-start justify-center">
