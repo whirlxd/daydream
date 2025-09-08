@@ -1064,11 +1064,11 @@ Mumbai`.split("\n")
 								<div class="grid gap-8 items-center justify-items-center max-w-4xl {sponsors.length === 1 ? 'grid-cols-1' : sponsors.length === 2 ? 'grid-cols-1 md:grid-cols-2' : sponsors.length === 3 ? 'grid-cols-2 md:grid-cols-3' : 'grid-cols-2 md:grid-cols-4'}">
 									{#each sponsors as sponsor}
 										{#if sponsor.name === "Jukebox"}
-											<div class="bg-white/20 rounded-lg p-1 w-full flex-col items-center justify-center hover:bg-white/40 transition-colors text-center">
+											<div class="bg-white/20 rounded-lg p-1 w-full flex flex-col items-center justify-center hover:bg-white/40 transition-colors text-center">
 												<p class="mb-4 text-black text-base">
 													Hey! So you want to know where we're getting our amazing <a href="https://www.jukeboxprint.com/custom-stickers">custom stickers</a> from? Jukebox, of course!
 												</p>
-												<img src={jukebox.png} alt={jukebox} class="max-w-full max-h-20 object-contain">
+												<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-20 object-contain mx-auto">
 											</div>
 										{:else}
 											<a href={sponsor.url} class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors" target="_blank" rel="noopener norefferer">
@@ -1493,7 +1493,7 @@ Mumbai`.split("\n")
 		<div class="relative transform rotate-2">
 			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">What do I need?<h3>
+				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">What do I need?</h3>
 				<p class="text-sm">Your laptop, chargers, toiletries, sleeping bags, and an open mind!</p>
 			</div>
 		</div>
