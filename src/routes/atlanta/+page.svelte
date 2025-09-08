@@ -66,7 +66,7 @@
         title: "Sunday, September 28th",
         items: [
             { event: "Breakfast", time: "8:00 AM" },
-			{ event: "Activity 2", time: "9:00 AM"}
+			{ event: "Activity 2", time: "9:00 AM"},
             { event: "Demos!", time: "10:30 AM" },
             { event: "Closing ceremony", time: "1:00 PM" }
         ]
