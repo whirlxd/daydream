@@ -7,16 +7,16 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Atlanta";
-	const eventLocation = "Atlanta";
+	const eventName = "Daydream Atlanta";
+	const eventLocation = "Georgia Tech";
 	const eventAddress = ""; // Leave this empty if you don't want an address
 	// These two are optional
 	const directionsURL = ""
-	const contactLink = "loganpeterson@hackclub.app"
+	const contactLink = "atlanta@daydream.hackclub.com"
 	
 	// Sponsors Configuration
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
-	const sponsorsEnabled = false; // false for now...
+	const sponsorsEnabled = false; // True
 	const sponsors = [
 		{ image: "jukebox.png", name: "Jukebox Prints!", url: "https://www.jukeboxprint.com/custom-stickers" },
 		{ image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
