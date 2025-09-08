@@ -1068,7 +1068,7 @@ Mumbai`.split("\n")
 												<p class="mb-4 text-black text-base">
 													Hey! So you want to know where we're getting our amazing <a href="https://www.jukeboxprint.com/custom-stickers">custom stickers</a> from? Jukebox, of course!
 												</p>
-												<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-20 object-contain">
+												<img src={jukebox.png} alt={jukebox} class="max-w-full max-h-20 object-contain">
 											</div>
 										{:else}
 											<a href={sponsor.url} class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors" target="_blank" rel="noopener norefferer">
