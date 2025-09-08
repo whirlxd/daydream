@@ -41,27 +41,27 @@
         </form>
         <a href="https://docs.google.com/document/d/1eeWHM0QUVtFiy8OYjy2ZnQ1dkuqsS8CXswqKXf9WnEs/edit?usp=sharing"
            target="_blank"
-           class="w-[420px] hidden md:block z-50 px-4 py-2 bg-[#FCF7C4] border-b-2 border-b-[#B3866A] text-[#B3866A] rounded-full active:transform active:translate-y-0.5 transition-all duration-100 font-sans cursor-pointer overflow-visible hover:shadow-[0_2px_0_0_#B3866A] hover:-translate-y-[2px] active:border-transparent active:shadow-none">Află
+           class="w-[420px] block z-50 px-4 py-2 bg-[#FCF7C4] border-b-2 border-b-[#B3866A] text-[#B3866A] rounded-full active:transform active:translate-y-0.5 transition-all duration-100 font-sans cursor-pointer overflow-visible hover:shadow-[0_2px_0_0_#B3866A] hover:-translate-y-[2px] active:border-transparent active:shadow-none">Află
             mai multe detalii
         </a>
 
     </div>
-    <a
-            href="https://forms.hackclub.com/daydream-stickers"
-            target="_blank"
-            class="w-max px-4 py-2 bg-pink border-b-2 border-b-pink-dark text-white rounded-full active:transform active:translate-y-0.5 transition-all duration-100 font-sans cursor-pointer mx-auto relative overflow-visible hover:shadow-[0_2px_0_0_theme(colors.pink.dark)] hover:-translate-y-[2px] active:border-transparent active:shadow-none active: mt-4 md:hidden"
-    >
-        Obține stickere gratuite
-        <img
-                src="button-clouds.svg"
-                alt=""
-                class="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto object-contain pointer-events-none"
-        >
-        <img
-                src="rock-sticker.png"
-                alt=""
-                class="absolute bottom-2 right-3 translate-2/3 w-18 h-18 object-contain pointer-events-none"
-                style="transform: rotate(-15deg);"
-        >
-    </a>
+<!--    <a-->
+    <!--            href="https://forms.hackclub.com/daydream-stickers"-->
+    <!--            target="_blank"-->
+    <!--            class="w-max px-4 py-2 bg-pink border-b-2 border-b-pink-dark text-white rounded-full active:transform active:translate-y-0.5 transition-all duration-100 font-sans cursor-pointer mx-auto relative overflow-visible hover:shadow-[0_2px_0_0_theme(colors.pink.dark)] hover:-translate-y-[2px] active:border-transparent active:shadow-none active: mt-4 md:hidden"-->
+    <!--    >-->
+    <!--        Obține stickere gratuite-->
+    <!--        <img-->
+    <!--                src="button-clouds.svg"-->
+    <!--                alt=""-->
+    <!--                class="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto object-contain pointer-events-none"-->
+    <!--        >-->
+    <!--        <img-->
+    <!--                src="rock-sticker.png"-->
+    <!--                alt=""-->
+    <!--                class="absolute bottom-2 right-3 translate-2/3 w-18 h-18 object-contain pointer-events-none"-->
+    <!--                style="transform: rotate(-15deg);"-->
+    <!--        >-->
+    <!--    </a>-->
 </div>
