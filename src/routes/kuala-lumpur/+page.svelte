@@ -12,7 +12,7 @@
 	const eventLocation = "Kuala Lumpur";
 	const eventAddress = ""; // Leave this empty if you don't want an address
 	// These two are optional
-	const contactLink = "kuala-lumpur@daydream.hackclub.com"
+	const contactLink = "mailto:kuala-lumpur@daydream.hackclub.com"
 	const directionsURL = "";
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recbJ3NcnXWY89RAe"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	
@@ -1493,7 +1493,7 @@ Mumbai`.split("\n")
 		<div class="relative transform rotate-2">
 			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">What do I need?h3>
+				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">What do I need?<h3>
 				<p class="text-sm">Your laptop, chargers, toiletries, sleeping bags, and an open mind!</p>
 			</div>
 		</div>
