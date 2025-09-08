@@ -18,7 +18,7 @@
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	const sponsorsEnabled = true;
 	const sponsors = [
-		{ image: "jukebox.png", name: 'Big shoutout to Jukebox for our <a href="https://www.jukeboxprint.com/custom-stickers"> custom stickers </a>!', url: "https://www.jukeboxprint.com/custom-stickers"},
+		{ image: "jukebox.svg", name: 'Big shoutout to Jukebox for our <a href="https://www.jukeboxprint.com/custom-stickers"> custom stickers </a>!', url: "https://www.jukeboxprint.com/custom-stickers"},
 		{ image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
 		{ image: "/example/logo3.png", name: "Sponsor 3", url: "https://example3.com" },
 		{ image: "/example/logo4.png", name: "Sponsor 4", url: "https://example4.com" },
@@ -51,24 +51,24 @@
     {
         title: "Saturday, September 27th",
         items: [
-            { event: "Doors open", time: "11:00 AM" },
-            { event: "Opening ceremony", time: "12:00 PM" },
-            { event: "Lunch", time: "12:30 PM" },
-            { event: "Start working on your project!", time: "1:00 PM" },
-            { event: "Workshop 1", time: "2:00 PM" },
-            { event: "Activity 1", time: "4:00 PM" },
-            { event: "Workshop 2", time: "4:00 PM" },
-            { event: "Dinner", time: "6:00 PM" },
-            { event: "Lightning talks", time: "8:00 PM" },
-            { event: "Midnight surprise", time: "12:00 AM" }
+            { event: "Doors open", time: "8:00 AM" },
+            { event: "Opening ceremony", time: "9:00 AM" },
+            { event: "Start Working on Your Project + Breakfast", time: "10:00 AM" },
+            { event: "Workshop 1", time: "10:30 AM" },
+            { event: "Activity 1", time: "12:00 PM" },
+            { event: "Progress Check", time: "4:00 PM" },
+            { event: "Workshop 2", time: "5:00 PM" },			
+            { event: "Start Wrapping Up", time: "7:00 PM" },
+            { event: "End of Day 1", time: "18:00 PM" }
         ]
     },
     {
         title: "Sunday, September 28th",
         items: [
             { event: "Breakfast", time: "8:00 AM" },
+			{ event: "Activity 2", time: "9:00 AM"}
             { event: "Demos!", time: "10:30 AM" },
-            { event: "Closing ceremony", time: "12:00 PM" }
+            { event: "Closing ceremony", time: "1:00 PM" }
         ]
     }
 ];
