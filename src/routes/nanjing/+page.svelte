@@ -59,7 +59,7 @@
 				},
 				item3: {
 					name: 'SPEEDTICKERS',
-					author: 'by Agustin'
+					author: 'by Agustin & Juan'
 				},
 				line3: 'We\'ll have workshops and activities before Daydream to help you learn game development using Godot!',
 				stuck: 'Stuck?',
@@ -159,7 +159,7 @@
 				},
 				item3: {
 					name: 'SPEEDTICKERS',
-					author: '作者：Agustin'
+					author: '作者：Agustin & Juan'
 				},
 				line3: '在Daydream之前，我们还会举办工作坊和活动，帮助你学习使用Godot进行游戏开发！',
 				stuck: '卡住了？',
