@@ -1179,7 +1179,22 @@ Mumbai`.split("\n")
 <div class="w-full bg-gradient-to-b from-[#FDC5D1] to-[#FAE3C9] items-center justify-center px-0 md:px-8 relative pt-36">
 	<div class="w-full max-w-5xl lg:max-w-6xl mx-auto px-2 md:px-8">
 		<div class="relative w-full min-w-72">
-			<img src="banner-city.png" alt="Find a Daydream Near You" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/3 md:-translate-y-[40%] h-48 w-auto z-100 scale-[1.15] md:scale-[1.65] saturate-70 brightness-110 object-contain px-4 pointer-events-none">
+			{#if eventAddress}
+				<h2 class="text-center font-sans text-4xl md:text-5xl font-extrabold pt-12 text-[#60574b] z-10000">
+					{#if directionsURL}
+						Daydream {eventName} is taking place at <a class="underline text-pink" href={directionsURL}>{eventAddress}</a>!
+					{:else}
+						Daydream {eventName} is taking place at <span class="underline">{eventAddress}</span>!
+					{/if}
+				</h2>
+			{/if}
+			<div style="height: 2rem;"></div>
+			<div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+				<iframe width="1000" height="500" style="border:0; display: block;" loading="lazy" allowfullscreen
+src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJNWsznDscdkgRcXyd1S2fVQs&key=AIzaSyA0cmOJ7NBQCvicdS1XNsBRIzTNjwJrA7I"></iframe>
+			</div>
+			<div style="height: 20rem;"></div>
+			<img src="banner-city.png" alt="Find a Daydream Near You" class="absolute left-1/2 -translate-x-1/2 -translate-y-1/3 md:-translate-y-[40%] h-48 w-auto z-100 scale-[1.15] md:scale-[1.65] saturate-70 brightness-110 object-contain px-4 pointer-events-none">
 			
 			<!-- Map container with cloudy edges -->
 			<div class="relative w-full h-156 overflow-hidden bg-transparent">
@@ -1275,15 +1290,7 @@ Mumbai`.split("\n")
 				</iframe>
 			</div>
 			
-			{#if eventAddress}
-				<p class="text-center font-sans text-2xl pt-12 max-sm:text-xl text-[#60574b] z-10000">
-					{#if directionsURL}
-						Daydream {eventName} is taking place at <a class="underline text-pink" href={directionsURL}>{eventAddress}</a>!
-					{:else}
-						Daydream {eventName} is taking place at <span class="underline">{eventAddress}</span>!
-					{/if}
-				</p>
-			{/if}
+			
 		</div>
 	</div>
 
