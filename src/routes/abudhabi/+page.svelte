@@ -8,7 +8,7 @@
 
 	// Configuration - Put your information here!
 	const eventName = "Abudhabi"
-	const eventLocation = "Abudhabi Island;
+	const eventLocation = "Abudhabi Island";
 	const eventAddress = ""
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=rec6me1FTewElRpBN"; // Get your custom sign up link from this page: https://forms.hackclub.com/daydream-sign-up?event=rec6me1FTewElRpBN
 	// These two are optional-- leave them empty if you don't have anything!
