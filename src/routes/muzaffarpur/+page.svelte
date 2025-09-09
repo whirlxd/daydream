@@ -7,10 +7,10 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Example"; // This should be the name of your event WITHOUT "Daydream" at the start
+	const eventName = "Muzaffarpur"; // This should be the name of your event WITHOUT "Daydream" at the start
 	const eventLocation = "Muzaffarpur";
 	const eventAddress = "DAV Public School, Bakhri, Muzaffarpur, Bihar"; // Leave this empty if you don't want an address
-	const signupLink = "https://forms.hackclub.com/daydream-sign-up"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recgPCNqvnBVae6iH"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = "26b77401f0ded1!8m2!3d26.1582425!4d85.4224565!16s%2Fg%2F1th1sgh1?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D/"
 	const contactLink = "mailto: galogin9162@gmail.com"
