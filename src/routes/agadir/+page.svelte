@@ -31,7 +31,7 @@
 				{ event: "Start working on your project!", time: "9:00 AM" },
 				{ event: "Workshop 1", time: "12:00 PM" },
 				{ event: "Lunch", time: "2:00 PM" },
-				{ event: "Workshop 2", time: "3:00 PM"}
+				{ event: "Workshop 2", time: "3:00 PM"},
 				{ event: "Workshop 3", time: "4:45 PM" },
 				{ event: "Doors closing", time: "7:00 PM" }
 			]
@@ -40,8 +40,9 @@
 			title: "Sunday, September 28th",
 			items: [
 				{ event: "Breakfast", time: "8:30 AM" },
-				{ event: "Demos!", time: "11:00 AM" },
-				{ event: "Closing ceremony", time: "12:30 PM" }
+				{ event: "Lunch", time: "1:00 PM"},
+				{ event: "Demos!", time: "4:00 MM" },
+				{ event: "Closing ceremony", time: "6:00 PM" }
 			]
 		}
 	];
