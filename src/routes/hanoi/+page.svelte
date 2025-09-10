@@ -18,7 +18,7 @@
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "/hanoi/jukebox.webp", name: "Jukebox", url: "https://www.jukeboxprint.com/custom-stickers", description1: "Thank you to Jukebox for providing us with ", description2: "custom stickers!", link: "https://www.jukeboxprint.com/custom-stickers"},
+		{ image: "/hanoi/jukebox.webp", name: "Jukebox", url: "https://www.jukeboxprint.com/custom-stickers"},
 		// { image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
 		// { image: "/example/logo3.png", name: "Sponsor 3", url: "https://example3.com" },
 		// { image: "/example/logo4.png", name: "Sponsor 4", url: "https://example4.com" },
@@ -1011,9 +1011,9 @@ Mumbai`.split("\n")
 								{#each sponsors.slice(0, 4) as sponsor}
 									<a href={sponsor.url} class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors" target="_blank" rel="noopener noreferrer">
 										<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain"></a>
-										<p>{sponsor.description1}<a href={sponsor.link} target="_blank">{sponsor.description2}</a></p>
-
 								{/each}
+
+								<p>Thank you to Jukebox for providing us with <a href="https://www.jukeboxprint.com/custom-stickers">custom stickers</a></p>
 							</div>
 							
 							<!-- Second row (remaining sponsors, centered) -->
