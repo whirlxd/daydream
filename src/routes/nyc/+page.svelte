@@ -19,6 +19,7 @@
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
 		{ image: "/nyc/medal.png", name: "Medal", url: "https://medal.tv" },
+		{ image: "/nyc/jukebox-logo.svg", name: "Jukebox", url: "https://jukeboxprint.com" },
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!

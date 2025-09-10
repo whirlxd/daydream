@@ -7,47 +7,61 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "London";
-	const eventLocation = "London";
-	const eventAddress = "1 Sutherland St, Pimlico, London SW1V 4LD"; // Leave this empty if you don't want an address
-	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recnT3dNX6oOSR37K"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
-	// These two are optional
+	const eventName = "Chitungwiza"; // This should be the name of your event WITHOUT "Daydream" at the start
+	const eventLocation = "Chitungwiza";
+	const eventAddress = ""; // Leave this empty if you don't want an address
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recMLlwG4xNrWCcfm"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = ""
-	// const contactLink = ""
+	const contactLink = "" // "mailto:example@daydream.hackclub.com"
 	
-	// Sponsors Configuration
+	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		// { image: "src/routes/cambridge/images/rpilogo.png", name: "The Raspberry Pi Foundation", url: "https://www.raspberrypi.org/" },
-		// { image: "https://assets.hackclub.com/icon-rounded.png", name: "Hack Club", url: "https://hackclub.com/" }
+		{ image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
+		{ image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
+		{ image: "/example/logo3.png", name: "Sponsor 3", url: "https://example3.com" },
+		{ image: "/example/logo4.png", name: "Sponsor 4", url: "https://example4.com" },
+		{ image: "/example/logo5.png", name: "Sponsor 5", url: "https://example5.com" },
+		{ image: "/example/logo6.png", name: "Sponsor 6", url: "https://example6.com" },
+		{ image: "/example/logo7.png", name: "Sponsor 7", url: "https://example7.com" }
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
 	const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [
 		{
-			title: "Sunday, September 28th",
+			title: "Saturday, September 27th",
 			items: [
-				{ event: "Doors open", time: "8.30" },
-				{ event: "Opening ceremony", time: "9:00" },
-				{ event: "Get into teams, start working on your project!", time: "10:00" },
-				{ event: "Lunch", time: "13:00" },
-				{ event: "Continue working on projects", time: "14:00" },
-				{ event: "More projects work :)", time: "15:00" },
-				{ event: "Ship projects and vote", time: "18:00" },
-				{ event: "Closing Ceremony", time: "18:30" },
-				{ event: "Home!", time: "19:00" }
+				{ event: "Doors open", time: "11:00 AM" },
+				{ event: "Opening ceremony", time: "12:00 PM" },
+				{ event: "Lunch", time: "12:30 PM" },
+				{ event: "Start working on your project!", time: "1:00 PM" },
+				{ event: "Workshop 1", time: "2:00 PM" },
+				{ event: "Activity 1", time: "4:00 PM" },
+				{ event: "Workshop 2", time: "4:00 PM" },
+				{ event: "Dinner", time: "6:00 PM" },
+				// { event: "Lightning talks", time: "8:00 PM" },
+				// { event: "Midnight surprise", time: "12:00 AM" }
 			]
 		},
+		{
+			title: "Sunday, September 28th",
+			items: [
+				{ event: "Breakfast", time: "8:00 AM" },
+				{ event: "Demos!", time: "10:30 AM" },
+				{ event: "Closing ceremony", time: "12:00 PM" }
+			]
+		}
 	];
 
 	
-	import { onMount } from "svelte";
-	import { gsap } from "gsap";
-	import { ScrollTrigger } from "gsap/ScrollTrigger";
-	import Ticker from "$lib/components/Ticker.svelte";
+	import { page } from '$app/stores';
 	import Footer from "$lib/components/Footer.svelte";
 	import ParticipantSignUp from "$lib/components/ParticipantSignUp.svelte";
-	import { page } from '$app/stores';
+	import Ticker from "$lib/components/Ticker.svelte";
+	import { gsap } from "gsap";
+	import { ScrollTrigger } from "gsap/ScrollTrigger";
+	import { onMount } from "svelte";
 	
 	
 	/** @type {import('./$types').PageData} */
@@ -56,7 +70,7 @@
 	// Get current URL for dynamic metadata
 	$: currentUrl = `https://daydream.hackclub.com${$page.url.pathname}`;
 	$: pageTitle = `Daydream ${eventName} - ${eventLocation} Game Jam`;
-	$: pageDescription = `Join Daydream ${eventName} in ${eventLocation}! A teen-led game jam where you'll build amazing games with other teenagers. Food, workshops, and prizes included!`;
+	$: pageDescription = `Join Daydream ${eventName} in ${eventLocation}! A teen-led game jam where you'll build amazing games with other high schoolers. Food, workshops, and prizes included!`;
 	$: pageKeywords = `game jam, hackathon, teen coding, Hack Club, game development, ${eventLocation}, ${eventName}`;
 
 	// Cities where the game jam is happening
@@ -804,7 +818,7 @@ Mumbai`.split("\n")
 			<h2
 			class="text-xl font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent absolute left-1/2 max-sm:translate-y-4 max-sm:mb-0 max-md:-mb-8 md:left-[calc(50%+4rem)] -translate-x-1/2 bottom-8 italic w-max md:text-lg max-sm:text-lg"
 			>
-				September 28th, 2025
+				September 27th & 28th, 2025
 			</h2>
 			<img src="daydream.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4" />
 			<a href="https://hackclub.com" class="absolute top-0 -right-6 max-sm:right-0 max-sm:scale-80 animate-hover ![animation-delay:0.9s] ![--hover:-0.2rem]">
@@ -815,7 +829,7 @@ Mumbai`.split("\n")
 			<h3
 				class="text-3xl italic font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent w-max max-sm:text-2xl mx-auto"
 			>
-				Game jam for secondary school students
+				Game jam for high schoolers
 			</h3>
 			<img
 				src="underline.svg"
@@ -863,7 +877,25 @@ Mumbai`.split("\n")
 	<img src="/clouds-top-left.png" alt="" class="absolute left-0 w-3/12 -bottom-12  translate-y-1/2 z-20 pointer-events-none">
 	
 
-	
+	<!-- Desktop stickers button (bottom left) -->
+	<a
+		href="https://forms.hackclub.com/daydream-stickers"
+		target="_blank"
+		class="hidden md:block absolute bottom-16 left-16 z-50 w-max px-4 py-2 bg-pink border-b-2 border-b-pink-dark text-white rounded-full active:transform active:translate-y-0.5 transition-all duration-100 font-sans cursor-pointer overflow-visible hover:shadow-[0_2px_0_0_theme(colors.pink.dark)] hover:-translate-y-[2px] active:border-transparent active:shadow-none"
+	>
+		Get free stickers
+		<img
+			src="button-clouds.svg" 
+			alt="" 
+			class="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto object-contain pointer-events-none"
+		>
+		<img
+			src="rock-sticker.png"
+			alt=""
+			class="absolute bottom-2 right-3 translate-2/3 w-18 h-18 object-contain pointer-events-none"
+			style="transform: rotate(-15deg);"
+		>
+	</a>
 </div>
 
 <div class="w-full relative flex items-start justify-center">
@@ -880,13 +912,13 @@ Mumbai`.split("\n")
 			</h2>
 			
 			<div class="text-[#8B4513] font-serif text-xl leading-relaxed space-y-8">
-				<p>Welcome to Hack Club's newest adventure. This autumn we invite you to join us for Daydream, the world's biggest Game Jam happening simultaneously in 100 cities.</p>
+				<p>Welcome to Hack Club's newest adventure. This fall we invite you to join us for Daydream, the world's biggest Game Jam happening simultaneously in 100 cities.</p>
 
-				<p class="font-bold text-2xl">Hack Club wants you to make a game this autumn.</p>
+				<p class="font-bold text-2xl">Hack Club wants you to make a game this fall.</p>
 
 				<p>Don't consider yourself a game dev? No problem - we have tons of online and in-person workshops for you to make your first game! </p>
 
-				<p>This autumn, we invite you to learn something new, make something you're really proud of, meet new friends, and go on an incredible adventure together.</p>
+				<p>This fall, we invite you to learn something new, make something you're really proud of, meet new friends, and go on an incredible adventure together.</p>
 
 				<p class="mb-2">With love,</p>
 
@@ -984,7 +1016,6 @@ Mumbai`.split("\n")
 				<h2 class="text-4xl font-serif text-[#F0F0FF] text-center">
 					Sponsors
 				</h2>
-				
 				<!-- Brush texture overlay for header -->
 				<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
 			</div>
@@ -993,9 +1024,7 @@ Mumbai`.split("\n")
 			<div class="relative bg-gradient-to-b from-[#CCF4FD] to-[#AECDF6] px-8 pt-8 pb-16">
 				<!-- Brush texture overlay for content -->
 				<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
-				<h2 class="text-4xl font-serif text-[#00000] text-center" style="padding:20px; font-size:extralarge">
-					Partner Sponsors
-				</h2>
+				
 				<!-- Sponsors Grid -->
 				<div class="relative z-10 min-h-40">
 					{#if sponsors.length > 0}
@@ -1179,22 +1208,7 @@ Mumbai`.split("\n")
 <div class="w-full bg-gradient-to-b from-[#FDC5D1] to-[#FAE3C9] items-center justify-center px-0 md:px-8 relative pt-36">
 	<div class="w-full max-w-5xl lg:max-w-6xl mx-auto px-2 md:px-8">
 		<div class="relative w-full min-w-72">
-			{#if eventAddress}
-				<h2 class="text-center font-sans text-4xl md:text-5xl font-extrabold pt-12 text-[#60574b] z-10000">
-					{#if directionsURL}
-						Daydream {eventName} is taking place at <a class="underline text-pink" href={directionsURL}>{eventAddress}</a>!
-					{:else}
-						Daydream {eventName} is taking place at <span class="underline">{eventAddress}</span>!
-					{/if}
-				</h2>
-			{/if}
-			<div style="height: 2rem;"></div>
-			<div style="display: flex; justify-content: center; align-items: center; width: 100%;">
-				<iframe width="1000" height="500" style="border:0; display: block;" loading="lazy" allowfullscreen
-src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJNWsznDscdkgRcXyd1S2fVQs&key=AIzaSyA0cmOJ7NBQCvicdS1XNsBRIzTNjwJrA7I"></iframe>
-			</div>
-			<div style="height: 20rem;"></div>
-			<img src="banner-city.png" alt="Find a Daydream Near You" class="absolute left-1/2 -translate-x-1/2 -translate-y-1/3 md:-translate-y-[40%] h-48 w-auto z-100 scale-[1.15] md:scale-[1.65] saturate-70 brightness-110 object-contain px-4 pointer-events-none">
+			<img src="banner-city.png" alt="Find a Daydream Near You" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/3 md:-translate-y-[40%] h-48 w-auto z-100 scale-[1.15] md:scale-[1.65] saturate-70 brightness-110 object-contain px-4 pointer-events-none">
 			
 			<!-- Map container with cloudy edges -->
 			<div class="relative w-full h-156 overflow-hidden bg-transparent">
@@ -1290,7 +1304,15 @@ src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJNWsznDscdkgRcXyd1
 				</iframe>
 			</div>
 			
-			
+			{#if eventAddress}
+				<p class="text-center font-sans text-2xl pt-12 max-sm:text-xl text-[#60574b] z-10000">
+					{#if directionsURL}
+						Daydream {eventName} is taking place at <a class="underline text-pink" href={directionsURL}>{eventAddress}</a>!
+					{:else}
+						Daydream {eventName} is taking place at <span class="underline">{eventAddress}</span>!
+					{/if}
+				</p>
+			{/if}
 		</div>
 	</div>
 
@@ -1381,7 +1403,7 @@ src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJNWsznDscdkgRcXyd1
 						</li>
 						<li class="flex items-start">
 							<span class="mr-4">•</span>
-							<a href="https://juanes10201.itch.io/speedtickers" target="_blank" class="underline mr-2">SPEEDTICKERS</a> by Agustin & Juan
+							<a href="https://juanes10201.itch.io/speedtickers" target="_blank" class="underline mr-2">SPEEDTICKERS</a> by Agustin
 						</li>
 					</ul>
 					
@@ -1439,7 +1461,7 @@ src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJNWsznDscdkgRcXyd1
 			<img src="window-3.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
 				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">Who can participate in Daydream?</h3>
-				<p class="text-sm">All secondary school & sixth form aged students are welcome to come!</p>
+				<p class="text-sm">All high-school & upper-middle-school aged students are welcome to come!</p>
 		</div>
 		</div>
 
@@ -1457,7 +1479,7 @@ src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJNWsznDscdkgRcXyd1
 			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
 				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">All this, for free?</h3>
-				<p class="text-sm">Yep! Food, swag and good vibes are all included.</p>
+				<p class="text-sm">Yep! Food, swag and good vibes are all included. Plus, if you're joining us from afar, we'll cover the cost of gas or a bus / train ticket.</p>
 			</div>
 		</div>
 
@@ -1466,7 +1488,7 @@ src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJNWsznDscdkgRcXyd1
 			<img src="window-1.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
 				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">What do I need?</h3>
-				<p class="text-sm">Your laptop, chargers, and an open mind!</p>
+				<p class="text-sm">Your laptop, chargers, toiletries, sleeping bags, and an open mind!</p>
 			</div>
 		</div>
 

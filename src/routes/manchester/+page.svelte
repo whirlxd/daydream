@@ -7,35 +7,36 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "London";
-	const eventLocation = "London";
-	const eventAddress = "1 Sutherland St, Pimlico, London SW1V 4LD"; // Leave this empty if you don't want an address
-	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recnT3dNX6oOSR37K"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	const eventName = "Manchester";
+	const eventLocation = "Manchester";
+	const eventAddress = "The Ada Foundation Manchester, M4 5AF"; // Leave this empty if you don't want an address
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional
 	const directionsURL = ""
-	// const contactLink = ""
+	const contactLink = ""
 	
 	// Sponsors Configuration
 	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		// { image: "src/routes/cambridge/images/rpilogo.png", name: "The Raspberry Pi Foundation", url: "https://www.raspberrypi.org/" },
-		// { image: "https://assets.hackclub.com/icon-rounded.png", name: "Hack Club", url: "https://hackclub.com/" }
-	];
+		];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
 	const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [
 		{
 			title: "Sunday, September 28th",
 			items: [
-				{ event: "Doors open", time: "8.30" },
-				{ event: "Opening ceremony", time: "9:00" },
+				{ event: "Doors open", time: "8:45" },
+				{ event: "Opening ceremony", time: "9:10" },
 				{ event: "Get into teams, start working on your project!", time: "10:00" },
 				{ event: "Lunch", time: "13:00" },
 				{ event: "Continue working on projects", time: "14:00" },
-				{ event: "More projects work :)", time: "15:00" },
-				{ event: "Ship projects and vote", time: "18:00" },
-				{ event: "Closing Ceremony", time: "18:30" },
-				{ event: "Home!", time: "19:00" }
+				{ event: "Workshop", time: "15:00" },
+				{ event: "More projects work :)", time: "16:00" },
+				{ event: "Dinner", time: "18:00" },
+				{ event: "Ship projects and vote", time: "19:00" },
+				{ event: "Closing Ceremony", time: "20:20" },
+				{ event: "Home!", time: "20:45" }
+				
 			]
 		},
 	];
@@ -1179,22 +1180,7 @@ Mumbai`.split("\n")
 <div class="w-full bg-gradient-to-b from-[#FDC5D1] to-[#FAE3C9] items-center justify-center px-0 md:px-8 relative pt-36">
 	<div class="w-full max-w-5xl lg:max-w-6xl mx-auto px-2 md:px-8">
 		<div class="relative w-full min-w-72">
-			{#if eventAddress}
-				<h2 class="text-center font-sans text-4xl md:text-5xl font-extrabold pt-12 text-[#60574b] z-10000">
-					{#if directionsURL}
-						Daydream {eventName} is taking place at <a class="underline text-pink" href={directionsURL}>{eventAddress}</a>!
-					{:else}
-						Daydream {eventName} is taking place at <span class="underline">{eventAddress}</span>!
-					{/if}
-				</h2>
-			{/if}
-			<div style="height: 2rem;"></div>
-			<div style="display: flex; justify-content: center; align-items: center; width: 100%;">
-				<iframe width="1000" height="500" style="border:0; display: block;" loading="lazy" allowfullscreen
-src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJNWsznDscdkgRcXyd1S2fVQs&key=AIzaSyA0cmOJ7NBQCvicdS1XNsBRIzTNjwJrA7I"></iframe>
-			</div>
-			<div style="height: 20rem;"></div>
-			<img src="banner-city.png" alt="Find a Daydream Near You" class="absolute left-1/2 -translate-x-1/2 -translate-y-1/3 md:-translate-y-[40%] h-48 w-auto z-100 scale-[1.15] md:scale-[1.65] saturate-70 brightness-110 object-contain px-4 pointer-events-none">
+			<img src="banner-city.png" alt="Find a Daydream Near You" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/3 md:-translate-y-[40%] h-48 w-auto z-100 scale-[1.15] md:scale-[1.65] saturate-70 brightness-110 object-contain px-4 pointer-events-none">
 			
 			<!-- Map container with cloudy edges -->
 			<div class="relative w-full h-156 overflow-hidden bg-transparent">
@@ -1290,7 +1276,15 @@ src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJNWsznDscdkgRcXyd1
 				</iframe>
 			</div>
 			
-			
+			{#if eventAddress}
+				<p class="text-center font-sans text-2xl pt-12 max-sm:text-xl text-[#60574b] z-10000">
+					{#if directionsURL}
+						Daydream {eventName} is taking place at <a class="underline text-pink" href={directionsURL}>{eventAddress}</a>!
+					{:else}
+						Daydream {eventName} is taking place at <span class="underline">{eventAddress}</span>!
+					{/if}
+				</p>
+			{/if}
 		</div>
 	</div>
 
