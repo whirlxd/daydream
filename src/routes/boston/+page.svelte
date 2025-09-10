@@ -30,28 +30,26 @@
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
 	const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [
 		{
-			title: "Saturday, September 27th",
+			title: "Saturday, September 27th (Subject to Change)",
 			items: [
-				{ event: "Doors open", time: "11:00 AM" },
-				{ event: "Opening ceremony", time: "12:00 PM" },
-				{ event: "Lunch", time: "12:30 PM" },
-				{ event: "Start working on your project!", time: "1:00 PM" },
-				{ event: "Workshop 1", time: "2:00 PM" },
-				{ event: "Activity 1", time: "4:00 PM" },
-				{ event: "Workshop 2", time: "4:00 PM" },
-				{ event: "Dinner", time: "6:00 PM" },
-				{ event: "Lightning talks", time: "8:00 PM" },
-				{ event: "Midnight surprise", time: "12:00 AM" }
+				{ event: "Doors open", time: "8:00 AM" },
+				{ event: "Opening ceremony", time: "8:30 AM" },
+				{ event: "Workshop 1 (TBD)", time: "9:15 AM" },
+				{ event: "Workshop 2 (TBD)", time: "10:30 AM" },
+				{ event: "Workshop 3 (TBD)", time: "11:45 AM" },
+				{ event: "Lunch + Lightning Talks", time: "1:00 PM" },
+				{ event: "Demos", time: "4:30 PM" },
+				{ event: "Closing Ceremony", time: "5:30 PM" }
 			]
 		},
-		{
-			title: "Sunday, September 28th",
-			items: [
-				{ event: "Breakfast", time: "8:00 AM" },
-				{ event: "Demos!", time: "10:30 AM" },
-				{ event: "Closing ceremony", time: "12:00 PM" }
-			]
-		}
+		// {
+		// 	title: "Sunday, September 28th",
+		// 	items: [
+		// 		{ event: "Breakfast", time: "8:00 AM" },
+		// 		{ event: "Demos!", time: "10:30 AM" },
+		// 		{ event: "Closing ceremony", time: "12:00 PM" }
+		// 	]
+		// }
 	];
 
 	
@@ -818,7 +816,7 @@ Mumbai`.split("\n")
 			<h2
 			class="text-xl font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent absolute left-1/2 max-sm:translate-y-4 max-sm:mb-0 max-md:-mb-8 md:left-[calc(50%+4rem)] -translate-x-1/2 bottom-8 italic w-max md:text-lg max-sm:text-lg"
 			>
-				September 27th & 28th, 2025
+				September 27th, 2025
 			</h2>
 			<img src="daydream.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4" />
 			<a href="https://hackclub.com" class="absolute top-0 -right-6 max-sm:right-0 max-sm:scale-80 animate-hover ![animation-delay:0.9s] ![--hover:-0.2rem]">
@@ -877,25 +875,7 @@ Mumbai`.split("\n")
 	<img src="/clouds-top-left.png" alt="" class="absolute left-0 w-3/12 -bottom-12  translate-y-1/2 z-20 pointer-events-none">
 	
 
-	<!-- Desktop stickers button (bottom left) -->
-	<a
-		href="https://forms.hackclub.com/daydream-stickers"
-		target="_blank"
-		class="hidden md:block absolute bottom-16 left-16 z-50 w-max px-4 py-2 bg-pink border-b-2 border-b-pink-dark text-white rounded-full active:transform active:translate-y-0.5 transition-all duration-100 font-sans cursor-pointer overflow-visible hover:shadow-[0_2px_0_0_theme(colors.pink.dark)] hover:-translate-y-[2px] active:border-transparent active:shadow-none"
-	>
-		Get free stickers
-		<img
-			src="button-clouds.svg" 
-			alt="" 
-			class="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto object-contain pointer-events-none"
-		>
-		<img
-			src="rock-sticker.png"
-			alt=""
-			class="absolute bottom-2 right-3 translate-2/3 w-18 h-18 object-contain pointer-events-none"
-			style="transform: rotate(-15deg);"
-		>
-	</a>
+	
 </div>
 
 <div class="w-full relative flex items-start justify-center">
@@ -1412,7 +1392,7 @@ Mumbai`.split("\n")
 						</li>
 						<li class="flex items-start">
 							<span class="mr-4">•</span>
-							<a href="https://juanes10201.itch.io/speedtickers" target="_blank" class="underline mr-2">SPEEDTICKERS</a> by Agustin
+							<a href="https://juanes10201.itch.io/speedtickers" target="_blank" class="underline mr-2">SPEEDTICKERS</a> by Agustin & Juan
 						</li>
 					</ul>
 					
