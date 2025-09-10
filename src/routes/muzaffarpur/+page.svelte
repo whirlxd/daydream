@@ -19,11 +19,15 @@
 const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 const sponsors = [
   { 
-    image: "/example/logo1.png", 
+    image: "<a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/YqzkyppT/jukebox-logo.png' border='0' alt='jukebox-logo'/></a>", 
     name: "Jukebox", 
     url: "https://www.jukeboxprint.com/custom-stickers" 
   }
 ];
+
+<p class="mt-6 text-center text-lg">
+Big shoutout to Jukebox for our <a href="https://www.jukeboxprint.com/custom-stickers">custom stickers</a>!
+</p>
 
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
 const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [
