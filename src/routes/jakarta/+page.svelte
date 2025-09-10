@@ -47,7 +47,7 @@
 			fromHq: 'Augie dan Renran dari Hack Club HQ',
 			schedule: 'Jadwal',
 			sponsors: 'Sponsors',
-			communityPartners: 'Community Partners',
+			communityPartners: 'Media Partners',
 			wantToSponsor: 'Ingin mensponsori Daydream Jakarta?',
 			getInTouch: 'Hubungi kami',
 			howToWin: 'Begini Cara Anda Menang',
@@ -131,7 +131,7 @@
 			fromHq: 'Augie and Renran from Hack Club HQ',
 			schedule: 'Schedule',
 			sponsors: 'Sponsors',
-			communityPartners: 'Community Partners',
+			communityPartners: 'Media Partners',
 			wantToSponsor: 'Want to sponsor Daydream Jakarta?',
 			getInTouch: 'Get in touch',
 			howToWin: "Here's How You Win a",
@@ -211,6 +211,11 @@
 			image: '/jakarta/partners/intergalactic-science-kingdom.png',
 			name: 'Intergalactic Science Kingdom',
 			url: 'https://discord.gg/fajrulfx'
+		},
+		{
+			image: '/jakarta/partners/web-programming-unpas.png',
+			name: 'Web Programming Unpas',
+			url: 'https://discord.gg/wpu'
 		}
 	];
 
