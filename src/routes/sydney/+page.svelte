@@ -23,6 +23,7 @@
 		{ image: "/sydney/oshw.png", name: "oshw", url: "https://oshwlab.com/" },
 		{ image: "/sydney/easyeda.png", name: "easyeda", url: "https://easyeda.com/" },
 		{ image: "/sydney/logo_horizontal_black_registered.png", name: "janestreet", url: "https://www.janestreet.com/" },
+		{ image: "/sydney/jukebox-logo.svg", name: "jukebox", url: "https://www.jukeboxprint.com/" },
 
 	];
 	
