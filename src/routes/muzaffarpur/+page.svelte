@@ -15,18 +15,23 @@
 	const directionsURL = "26b77401f0ded1!8m2!3d26.1582425!4d85.4224565!16s%2Fg%2F1th1sgh1?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D/"
 	const contactLink = "mailto: galogin9162@gmail.com"
 	
-	// Sponsors Configuration - disable this if you don't have any sponsors to display!
-	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
-	const sponsors = [
-		{ image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
-		{ image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
-		{ image: "/example/logo3.png", name: "Sponsor 3", url: "https://example3.com" },
-		{ image: "/example/logo4.png", name: "Sponsor 4", url: "https://example4.com" },
-		{ image: "/example/logo5.png", name: "Sponsor 5", url: "https://example5.com" },
-		{ image: "/example/logo6.png", name: "Sponsor 6", url: "https://example6.com" },
-		{ image: "/example/logo7.png", name: "Sponsor 7", url: "https://example7.com" }
-	];
-	
+// Sponsors Configuration - disable this if you don't have any sponsors to display!
+const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
+const sponsors = [
+  { 
+    image: "/example/logo1.png", 
+    name: "Jukebox", 
+    url: "https://www.jukeboxprint.com/custom-stickers" 
+  }
+];
+
+<p class="mt-6 text-center text-lg">
+  Big shoutout to Jukebox for our 
+  <a href="https://www.jukeboxprint.com/custom-stickers" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">
+    custom stickers
+  </a> 
+  at the Hackathon! 🎉
+</p>
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
 const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [
 	{
