@@ -7,11 +7,11 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Sydney";
+	const eventName = "Tyree Energy Technologies Building";
 	const eventLocation = "Sydney";
-	const eventAddress = "Sydney NSW 2000";
+	const eventAddress = "Kensington NSW 2033";
 	// These two are optional
-	const directionsURL = ""
+	const directionsURL = "https://maps.app.goo.gl/92axMdj2mN527YA88"
 	const contactLink = "mailto:sydney@daydream.hackclub.com"
 	
 	// Sponsors Configuration
@@ -22,6 +22,9 @@
 		{ image: "/sydney/jlcpcb.png", name: "jlcpcb", url: "https://jlcpcb.com/" },
 		{ image: "/sydney/oshw.png", name: "oshw", url: "https://oshwlab.com/" },
 		{ image: "/sydney/easyeda.png", name: "easyeda", url: "https://easyeda.com/" },
+		{ image: "/sydney/logo_horizontal_black_registered.png", name: "janestreet", url: "https://www.janestreet.com/" },
+		{ image: "/sydney/jukebox-logo.svg", name: "jukebox", url: "https://www.jukeboxprint.com/" },
+
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
@@ -29,24 +32,24 @@
 		{
 			title: "Saturday, September 27th",
 			items: [
-				{ event: "Doors open", time: "11:00 AM" },
-				{ event: "Opening ceremony", time: "12:00 PM" },
-				{ event: "Lunch", time: "12:30 PM" },
-				{ event: "Start working on your project!", time: "1:00 PM" },
+				{ event: "Doors open", time: "10:00 AM" },
+				{ event: "Opening ceremony", time: "11:00 AM" },
+				{ event: "Start working on your project!", time: "12:00 PM" },
+				{ event: "Lunch", time: "1:00 PM" },
 				{ event: "Workshop 1", time: "2:00 PM" },
 				{ event: "Activity 1", time: "4:00 PM" },
-				{ event: "Workshop 2", time: "4:00 PM" },
+				{ event: "Workshop 2", time: "5:00 PM" },
 				{ event: "Dinner", time: "6:00 PM" },
-				{ event: "Lightning talks", time: "8:00 PM" },
-				{ event: "Midnight surprise", time: "12:00 AM" }
+				{ event: "End of Day 1", time: "8:00 PM" },
 			]
 		},
 		{
 			title: "Sunday, September 28th",
 			items: [
 				{ event: "Breakfast", time: "8:00 AM" },
-				{ event: "Demos!", time: "10:30 AM" },
-				{ event: "Closing ceremony", time: "12:00 PM" }
+				{ event: "Activity 3", time: "10:30 AM" },
+				{ event: "Activity 4", time: "12:30 PM" },
+				{ event: "Closing ceremony", time: "3:00 PM" }
 			]
 		}
 	];
@@ -95,7 +98,7 @@ Dubai
 San Francisco
 Minneapolis
 Seattle
-Signapore
+Singapore
 Mumbai`.split("\n")
 
 	function createSmoothPath(points: Array<{ x: number; y: number }>) {
@@ -840,7 +843,7 @@ Mumbai`.split("\n")
 			</h4>
 		</div>
 		
-		<ParticipantSignUp {eventName} />
+		<ParticipantSignUp {signupLink} {eventName} />
 	</div>
 
 	<!-- <img src="hot-air-balloon.png" alt="" class="absolute w-1/8 right-32 bottom-40 z-20"> -->
@@ -874,25 +877,7 @@ Mumbai`.split("\n")
 	<img src="/clouds-top-left.png" alt="" class="absolute left-0 w-3/12 -bottom-12  translate-y-1/2 z-20 pointer-events-none">
 	
 
-	<!-- Desktop stickers button (bottom left) -->
-	<a
-		href="https://forms.hackclub.com/daydream-stickers"
-		target="_blank"
-		class="hidden md:block absolute bottom-16 left-16 z-50 w-max px-4 py-2 bg-pink border-b-2 border-b-pink-dark text-white rounded-full active:transform active:translate-y-0.5 transition-all duration-100 font-sans cursor-pointer overflow-visible hover:shadow-[0_2px_0_0_theme(colors.pink.dark)] hover:-translate-y-[2px] active:border-transparent active:shadow-none"
-	>
-		Get free stickers
-		<img
-			src="button-clouds.svg" 
-			alt="" 
-			class="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto object-contain pointer-events-none"
-		>
-		<img
-			src="rock-sticker.png"
-			alt=""
-			class="absolute bottom-2 right-3 translate-2/3 w-18 h-18 object-contain pointer-events-none"
-			style="transform: rotate(-15deg);"
-		>
-	</a>
+	
 </div>
 
 <div class="w-full relative flex items-start justify-center">
@@ -904,7 +889,7 @@ Mumbai`.split("\n")
 		<div class="relative z-20 px-20 pt-20 pb-52 rounded-lg mb-0 max-sm:px-18" style="background-image: url('/letter-top.png'), linear-gradient(to bottom, #FCEFC5 100px, transparent 100px), url('/letter-loop.png'); background-size: 100% auto, 100% auto, 100% auto; background-repeat: no-repeat, no-repeat, repeat-y; background-position: top, top, top; background-attachment: local, local, local;">
 			<div class="absolute bottom-0 left-0 w-full h-24 z-10 pointer-events-none bg-[url('/clouds-loop.png')] bg-repeat-x bg-bottom bg-contain"></div>
 			<h2 class="text-5xl font-serif italic text-[#8B4513] mb-10 relative">
-				Dear Hackers, Musicians, and Artist,
+				Dear Hackers, Musicians, and Artists,
 				<img src="/underline.svg" alt="" class="absolute left-0 -bottom-3 w-64 h-auto opacity-70">
 			</h2>
 			
@@ -1400,7 +1385,7 @@ Mumbai`.split("\n")
 						</li>
 						<li class="flex items-start">
 							<span class="mr-4">•</span>
-							<a href="https://juanes10201.itch.io/speedtickers" target="_blank" class="underline mr-2">SPEEDTICKERS</a> by Agustin
+							<a href="https://juanes10201.itch.io/speedtickers" target="_blank" class="underline mr-2">SPEEDTICKERS</a> by Agustin & Juan
 						</li>
 					</ul>
 					
@@ -1476,7 +1461,7 @@ Mumbai`.split("\n")
 			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
 				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">All this, for free?</h3>
-				<p class="text-sm">Yep! Food, swag and good vibes are all included.</p>
+				<p class="text-sm">Yep! Food, swag and cool custom stickers from Jukebox are all included.</p>
 			</div>
 		</div>
 

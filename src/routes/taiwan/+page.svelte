@@ -1,17 +1,18 @@
 <script lang="ts">
 	// Configuration - Put your information here!
 	const eventName = "Taiwan";
-	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recbXuFkkf752iPIq";
-	const eventLocation = "TBD";
+	const signupLink = "http://signup.hackit.tw/events/daydream-taiwan";
+	const eventLocation = " TCS 探索未來國際教育機構（臺師大林口校區） ";
 	const eventAddress = "";
 
 	// These two are optional
 	const directionsURL = ""
-	const contactLink = "mailto:business@hackit.tw"
+	const contactLink = "mailto:taiwan@daydream.hackclub.com"
 	
 	// External links for org intros
-	const hackItMoreLink = "https://hackit.tw";
+	const hackItMoreLink = "https://www.hackit.tw";
 	const hackClubMoreLink = "https://hackclub.com";
+	const discordInviteLink = "https://go.hackit.tw/discord";
 	
 	// Sponsors Configuration
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
@@ -22,7 +23,8 @@
 	// Partners Configuration
 	const partnersEnabled = true; // Set to false to hide the entire partners section
 	const partners: Array<{ name: string; url: string; image: string }> = [
-		// { name: "Partner Name", url: "https://partner.example", image: "/taiwan/partner-logo.png" }
+		{ name: "TCS 探索未來國際實驗教育機構", url: "https://www.tcs-experimental.tw/", image: "/taiwan/logos/New TCS Logo.png" },
+		{ name: "台灣微課程發展協會", url: "https://tmla.at.tw/", image: "/taiwan/logos/微課程logo.(外框).180.png" }
 	];
 
 	// Derived UI state for partners section
@@ -35,9 +37,9 @@
 			items: [
 				{ event: "開始報到", time: "09:30 ~ 10:00" },
 				{ event: "開幕式", time: "10:00 ~ 10:30" },
-				{ event: "組隊時間", time: "10:30 ~ 11:00" },
-				{ event: "入門工作彷", time: "11:00 ~ 11:30" },
-				{ event: "午餐時間", time: "11:30" },
+				{ event: "組隊時間", time: "10:30 ~ 11:20" },
+				{ event: "入門工作彷", time: "11:20 ~ 11:50" },
+				{ event: "午餐時間", time: "11:50" },
 				{ event: "導師諮詢", time: "12:30 ~ 18:00" },
 				{ event: "晚餐時間", time: "18:00" },
 				{ event: "宵夜/夜間活動", time: "21:30" }
@@ -49,9 +51,9 @@
 				{ event: "早餐時間", time: "07:30" },
 				{ event: "導師諮詢", time: "10:00 ~ 14:00" },
 				{ event: "午餐時間", time: "13:00" },
-				{ event: "展覽準備", time: "13:00 ~ 14:00" },
-				{ event: "展覽/票選時間", time: "14:00 ~ 17:00" },
-				{ event: "頒獎/閉幕時間", time: "17:00 ~ 17:45" }
+				{ event: "展覽準備", time: "13:00 ~ 13:45" },
+				{ event: "展覽/票選時間", time: "13:45 ~ 16:45" },
+				{ event: "頒獎/閉幕時間", time: "16:45 ~ 17:45" }
 			]
 		}
 	];
@@ -62,7 +64,6 @@
 	import { ScrollTrigger } from "gsap/ScrollTrigger";
 	import Ticker from "$lib/components/Ticker.svelte";
 	import Footer from "$lib/components/Footer.svelte";
-	import ParticipantSignUp from "$lib/components/ParticipantSignUp.svelte";
 	import { page } from '$app/stores';
 	
 	// derived selection for HackIt modal
@@ -75,8 +76,8 @@
 	// Get current URL for dynamic metadata
 	$: currentUrl = `https://daydream.hackclub.com${$page.url.pathname}`;
 	$: pageTitle = `Daydream ${eventName}`;
-	$: pageDescription = `加入由 Hack Club 舉辦的全球青少年黑客松 Daydream 活動！一場由青少年主導的遊戲黑客松，和其他高中生一起打造精彩遊戲。提供餐點、工作坊與獎品！`;
-	$: pageKeywords = `game jam, 遊戲創作, hackathon, 黑客松, 青少年程式, Hack Club, 遊戲開發, ${eventLocation}, ${eventName}`;
+	$: pageDescription = `加入由 Hack Club 舉辦的全球青少年黑客松 Daydream 活動！一場由青少年主導的遊戲黑客松，和其他青少年一起在 32 小時做出你人生的第一個遊戲。提供免費餐點、入門工作坊與獎品！`;
+	$: pageKeywords = `game jam, 遊戲創作, hackathon, 黑客松, 青少年程式, Hack Club, HackIt, 遊戲開發, ${eventLocation}, ${eventName}`;
 
 	// Cities where the game jam is happening
 	const cities = `Columbus
@@ -102,7 +103,7 @@ Dubai
 San Francisco
 Minneapolis
 Seattle
-Signapore
+Singapore
 Sydney
 Taiwan
 Mumbai`.split("\n")
@@ -419,6 +420,17 @@ Mumbai`.split("\n")
 
 	function closeHackItPopup() {
 		showHackItPopup = false;
+	}
+
+	// RSVP submit: open external signup with email param in a new tab
+	function handleRSVPSubmit(event: Event) {
+		event.preventDefault();
+		const form = event.target as HTMLFormElement;
+		const emailInput = form.querySelector('input[name="email"]') as HTMLInputElement | null;
+		const email = emailInput?.value.trim() ?? "";
+		if (!email) return;
+		const url = `http://signup.hackit.tw/events/daydream-taiwan?email=${encodeURIComponent(email)}`;
+		window.open(url, '_blank', 'noopener');
 	}
 
 
@@ -990,7 +1002,7 @@ Mumbai`.split("\n")
 	<div class="buildings-front-parallax absolute top-0 left-0 w-full h-full bg-[url(/buildings-front.png)] bg-no-repeat bg-contain pointer-events-none lg:-translate-y-15"></div>
 	<!-- brush texture clipped to front buildings -->
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat pointer-events-none opacity-100 lg:-translate-y-15 bg-center mix-blend-overlay" style="mask-image: url('/buildings-front.png'); mask-size: contain; mask-repeat: no-repeat; mask-position: center top; -webkit-mask-image: url('/buildings-front.png'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center top;"></div>
-	<div class="hero-ui-parallax flex flex-col items-center justify-center text-center relative z-5 -translate-y-2">
+	<div class="hero-ui-parallax flex flex-col items-center justify-center text-center relative z-30 -translate-y-2">
 		<div class="inline-block relative">
 			<div class="h-12"></div> 
 			<!-- space for the ship -->
@@ -1013,18 +1025,51 @@ Mumbai`.split("\n")
 			<img
 				src="underline.svg"
 				alt=""
-				class="absolute left-1/2 -translate-x-1/2 -mt-1 h-auto scale-115"
+				class="absolute left-1/2 -translate-x-1/2 -mt-1 h-auto scale-11	5"
 			/>
 			<h4
 				class="text-xl md:text-2xl opacity-90 mt-4 font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent max-sm:text-base tracking-wide leading-relaxed max-sm:leading-normal break-words whitespace-normal text-center"
 			>
 				青少年組織，為青少年舉辦的遊戲黑客松<br>
-				在{@html eventLocation.replaceAll(" ", "&nbsp;")}舉行
+				在{eventLocation}舉行
 			</h4>
 		</div>
 		
-		<ParticipantSignUp {eventName} />
-		<div class="mt-4">
+		<div class="mt-8 flex flex-col items-center gap-3 z-5 max-md:scale-90">
+			<div class="relative rounded-full overflow-hidden" style="padding: 2px 2px 5px 2px;">
+				<form on:submit={handleRSVPSubmit} class="rounded-full bg-white border-2 border-dark font-sans p-2 flex flex-row items-center gap-2 shadow-[0_3px_0_0_theme(colors.dark)] focus-within:border-pink focus-within:shadow-[0_3px_0_0_#E472AB] has-[button:active]:border-dark has-[button:active]:shadow-[0_3px_0_0_theme(colors.dark)] has-[button:focus]:border-dark has-[button:focus]:shadow-[0_3px_0_0_theme(colors.dark)]">
+					<input
+						type="email"
+						name="email"
+						placeholder="輸入 Email 來報名活動！"
+						class="w-80 px-3 py-1 text-dark focus:outline-none flex-1"
+						required
+					/>
+					<button type="submit" class="bg-light h-full px-5 py-[0.45rem] rounded-full border-b-2 border-[#B3866A] cursor-pointer hover:border-b-4 hover:transform active:border-b-0 active:transform active:translate-y-0.5 focus:outline-none transition-all duration-100 flex-shrink-0">
+						<img src="submit.svg" alt="Go">
+					</button>
+				</form>
+			</div>
+			<a
+				href="https://forms.hackclub.com/daydream-stickers"
+				target="_blank"
+				class="w-max px-4 py-2 bg-pink border-b-2 border-b-pink-dark text-white rounded-full active:transform active:translate-y-0.5 transition-all duration-100 font-sans cursor-pointer mx-auto relative overflow-visible hover:shadow-[0_2px_0_0_theme(colors.pink.dark)] hover:-translate-y-[2px] active:border-transparent active:shadow-none active: mt-4 md:hidden"
+			>
+				Get free stickers
+				<img
+					src="button-clouds.svg" 
+					alt="" 
+					class="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto object-contain pointer-events-none"
+				>
+				<img
+					src="rock-sticker.png"
+					alt=""
+					class="absolute bottom-2 right-3 translate-2/3 w-18 h-18 object-contain pointer-events-none"
+					style="transform: rotate(-15deg);"
+				>
+			</a>
+		</div>
+		<div class="mt-4 flex items-center justify-center gap-3 flex-wrap">
 			<a
 				href="https://go.hackit.tw/daydream-taiwan-guild"
 				target="_blank"
@@ -1034,6 +1079,16 @@ Mumbai`.split("\n")
 					active:translate-y-0 active:border-b-2 transition-all duration-150"
 			>
 				了解更多
+			</a>
+			<a
+				href={discordInviteLink}
+				target="_blank"
+				rel="noopener noreferrer"
+				class="inline-block px-6 py-3 max-sm:px-4 max-sm:py-2 max-sm:text-sm bg-[#D1E3EE] border-b-4 border-[#B8D3E0] text-[#061E2D] rounded-full 
+					font-sans font-medium tracking-wide max-sm:tracking-normal transform hover:-translate-y-1 hover:shadow-lg 
+					active:translate-y-0 active:border-b-2 transition-all duration-150"
+			>
+				加入 Discord 社群
 			</a>
 		</div>
 	</div>
@@ -1069,25 +1124,7 @@ Mumbai`.split("\n")
 	<img src="/clouds-top-left.png" alt="" class="absolute left-0 w-3/12 -bottom-12  translate-y-1/2 z-20 pointer-events-none">
 	
 
-	<!-- Desktop stickers button (bottom left) -->
-	<a
-		href="https://forms.hackclub.com/daydream-stickers"
-		target="_blank"
-		class="hidden md:block absolute bottom-16 left-16 z-50 w-max px-4 py-2 bg-pink border-b-2 border-b-pink-dark text-white rounded-full active:transform active:translate-y-0.5 transition-all duration-100 font-sans cursor-pointer overflow-visible hover:shadow-[0_2px_0_0_theme(colors.pink.dark)] hover:-translate-y-[2px] active:border-transparent active:shadow-none tracking-wide font-medium"
-	>
-		拿免費貼紙
-		<img
-			src="button-clouds.svg" 
-			alt="" 
-			class="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto object-contain pointer-events-none"
-		>
-		<img
-			src="rock-sticker.png"
-			alt=""
-			class="absolute bottom-2 right-3 translate-2/3 w-18 h-18 object-contain pointer-events-none"
-			style="transform: rotate(-15deg);"
-		>
-	</a>
+	
 </div>
 
 <div class="w-full relative flex items-start justify-center">
@@ -1314,23 +1351,24 @@ Mumbai`.split("\n")
         <!-- Section Header -->
         <div class="text-center {hasPartners ? 'mb-8 md:mb-10' : 'mb-4'}">
             <div class="relative inline-block px-2">
-                <h2 class="text-[2rem] md:text-4xl font-serif font-semibold bg-gradient-to-b from-[#8B4513] to-[#6E3D15] bg-clip-text text-transparent tracking-wide">
+                <h2 class="text-[2.25rem] md:text-5xl font-serif font-semibold bg-gradient-to-b from-[#8B4513] to-[#6E3D15] bg-clip-text text-transparent tracking-wide">
                     合作夥伴
                 </h2>
                 <img src="/underline.svg" alt="" class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-44 md:w-56 h-auto opacity-80" />
                 <p class="text-sm md:text-base font-serif text-[#705e4f] mt-6 opacity-85 tracking-wide leading-relaxed">
-                    和我們一起，讓 {eventName} 發生
+                    和我們一起，讓 Daydream {eventName} 發生
                 </p>
             </div>
         </div>
 
         {#if hasPartners}
             <!-- Partners Grid -->
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 justify-items-center">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-10 justify-items-center">
                 {#each partners as partner}
                     <a href={partner.url} target="_blank" rel="noopener noreferrer"
-                       class="group w-full h-16 sm:h-20 md:h-24 bg-white/70 hover:bg-white transition-colors rounded-xl border border-[#E8E1D0] flex items-center justify-center p-3 shadow-[0_1px_0_rgba(0,0,0,0.05)] hover:shadow-md">
-                        <img src={partner.image} alt={partner.name} class="max-h-full max-w-full object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-200 grayscale group-hover:grayscale-0" />
+                       class="group w-[min(22rem,90vw)] md:w-80 lg:w-96 h-56 md:h-64 lg:h-72 bg-white rounded-xl border border-[#E8E1D0] flex flex-col items-center justify-center p-6 shadow-sm hover:shadow-md transition-all duration-150 hover:-translate-y-0.5 text-center">
+                        <img src={partner.image} alt={partner.name} class="h-[72%] w-auto object-contain" />
+                        <span class="mt-3 text-sm md:text-base font-serif text-[#335969] opacity-90">{partner.name}</span>
                     </a>
                 {/each}
             </div>
@@ -1339,7 +1377,7 @@ Mumbai`.split("\n")
         {#if contactLink}
             <div class="{hasPartners ? 'mt-10' : 'mt-4'} text-center">
                 <p class="text-base md:text-lg text-[#335969]">
-                    想與 {eventName} 合作？
+                    想與 Daydream {eventName} 合作？
                     <a href={contactLink} class="underline hover:text-[#477783] transition-colors">來信洽談</a>
                 </p>
             </div>
@@ -1364,18 +1402,18 @@ Mumbai`.split("\n")
 		aria-label="HackIt Activities"
 		tabindex="-1"
 	>
-		<button
-			class="cursor-pointer absolute top-4 right-4 z-10 w-8 h-8 bg-[rgba(255,255,255,0.2)] hover:bg-opacity-30 rounded-full flex items-center justify-center text-white text-xl font-bold transition-colors duration-200"
-			on:click={closeHackItPopup}
-			aria-label="Close activities"
-		>
-			<span class="-translate-y-0.5">×</span>
-		</button>
 		<!-- svelte-ignore a11y_no_static_element_interactions -->
 		<div
-			class="relative w-[92vw] max-w-6xl max-h-[90vh] overflow-y-auto bg-[#FEFDF8] rounded-2xl border-4 border-[#E8E1D0] shadow-xl"
+			class="relative w-[92vw] max-w-6xl max-h-[90vh] overflow-y-auto overflow-x-hidden bg-[#FEFDF8] rounded-2xl border-4 border-[#E8E1D0] shadow-xl"
 			on:click|stopPropagation
 		>
+			<button
+				class="cursor-pointer absolute top-2 right-2 md:top-3 md:right-3 z-20 w-8 h-8 bg-white/80 md:bg-white/20 hover:bg-white/90 md:hover:bg-white/30 rounded-full flex items-center justify-center text-[#335969] md:text-white text-xl font-bold transition-colors duration-200"
+				on:click={closeHackItPopup}
+				aria-label="Close activities"
+			>
+				<span class="-translate-y-0.5">×</span>
+			</button>
 			<!-- Subtle paper texture overlay -->
 			<div class="absolute inset-0 bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat opacity-15 pointer-events-none"></div>
 			<!-- Header -->
@@ -1385,9 +1423,9 @@ Mumbai`.split("\n")
 			</div>
 
 			<!-- Content -->
-			<div class="grid grid-cols-1 lg:grid-cols-3 gap-0 relative">
+			<div class="grid grid-cols-1 lg:grid-cols-3 gap-0 relative overflow-x-hidden bg-[#F7F2E3]">
 				<!-- Activities list -->
-				<div class="lg:col-span-1 p-5 md:p-6 bg-white/60 border-r-2 border-[#E8E1D0] max-h-[70vh] overflow-y-auto">
+				<div class="lg:col-span-1 p-5 md:p-6 bg-white/60 border-r-2 border-[#E8E1D0]">
 					<ul class="space-y-3">
 						{#each hackItActivities as act}
 							<li>
@@ -1403,7 +1441,7 @@ Mumbai`.split("\n")
 				</div>
 
 				<!-- Video player + description -->
-				<div class="lg:col-span-2 p-4 md:p-6 bg-transparent">
+				<div class="lg:col-span-2 p-4 md:p-6 bg-[#F7F2E3]">
 					<div class="relative w-full aspect-video rounded-xl overflow-hidden border-2 border-[#E8E1D0] shadow-lg bg-black">
 						{#if selectedHackItVideoId}
 							<iframe
@@ -1568,7 +1606,7 @@ Mumbai`.split("\n")
 					{#if contactLink}
 						<!-- Call to action for sponsors -->
 						<div class="mt-8 text-center">
-							<p class="text-lg text-[#335969]">想贊助 {eventName}？<a href={contactLink} class="underline hover:text-[#477783] transition-colors">來信洽談</a></p>
+							<p class="text-lg text-[#335969]">想贊助 Daydream {eventName}？<a href={contactLink} class="underline hover:text-[#477783] transition-colors">來信洽談</a></p>
 						</div>
 					{/if}
 				</div>
@@ -1886,7 +1924,7 @@ Mumbai`.split("\n")
 				<div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-transparent bg-[length:100%_8px] bg-repeat-y pointer-events-none opacity-20"></div>
 				
 				<div class="space-y-8 max-sm:space-y-4 relative z-10">
-					<h2 class="text-4xl md:text-5xl lg:text-6xl max-sm:text-2xl font-pixel leading-tight tracking-wider max-sm:tracking-normal max-sm:leading-relaxed">
+					<h2 class="text-4xl md:text-5xl lg:text-6xl max-sm:text-2xl font-pixel leading-tight tracking-wider max-sm:tracking-normal max-sm:leading-relaxed md:whitespace-nowrap">
 						你想<img src="/taiwan/dream-pixel.png" alt="Dream" class="h-[0.75em] font-serif italic [image-rendering:pixelated] inline align-middle -translate-y-1.5 mx-[0.1em]">出什麼遊戲？
 					</h2>
 					
@@ -1908,7 +1946,7 @@ Mumbai`.split("\n")
 						</li>
 						<li class="flex items-start leading-loose max-sm:leading-relaxed">
 							<span class="mr-4">•</span>
-							<a href="https://juanes10201.itch.io/speedtickers" target="_blank" class="underline mr-2">SPEEDTICKERS</a> 由 Agustin 製作
+							<a href="https://juanes10201.itch.io/speedtickers" target="_blank" class="underline mr-2">SPEEDTICKERS</a> 由 Agustin & Juan 製作
 						</li>
 					</ul>
 					
@@ -1975,7 +2013,7 @@ Mumbai`.split("\n")
 			<img src="window-4.png" alt="window" class="w-full h-full object-contain max-md:scale-110 max-xl:scale-110 max-lg:scale-115 max-sm:scale-130">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-4 max-lg:px-14 max-xl:px-18 max-sm:top-[18%] max-sm:bottom-[18%] max-sm:left-[14%] max-sm:right-[14%]">
                 <h3 class="text-lg md:text-xl font-serif font-bold mb-4 max-lg:mb-2 max-md:text-sm max-sm:text-xs max-sm:mb-2 leading-relaxed tracking-wide max-sm:tracking-normal">怎麼報名？</h3>
-                <p class="text-sm md:text-base max-sm:text-xs max-sm:leading-tight leading-relaxed tracking-wide max-sm:tracking-normal">報名尚未開放；先在上方留下 email RSVP，開放時第一時間通知。名額有限，先卡位！</p>
+                <p class="text-sm md:text-base max-sm:text-xs max-sm:leading-tight leading-relaxed tracking-wide max-sm:tracking-normal">在上方輸入 Email 後送出，或直接前往 <a href={signupLink} target="_blank" rel="noopener noreferrer" class="underline">報名表單</a>。</p>
 			</div>
 		</div>
 
@@ -2020,7 +2058,7 @@ Mumbai`.split("\n")
 			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-110 max-xl:scale-110 max-lg:scale-115 max-sm:scale-130">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-4 max-lg:px-14 max-xl:px-18 max-sm:top-[18%] max-sm:bottom-[18%] max-sm:left-[14%] max-sm:right-[14%]">
                 <h3 class="text-lg md:text-xl font-serif font-bold mb-4 max-lg:mb-2 max-md:text-sm max-sm:text-xs max-sm:mb-2 leading-relaxed tracking-wide max-sm:tracking-normal">家長有疑慮怎麼辦？</h3>
-                <p class="text-sm md:text-base max-sm:text-xs max-sm:leading-tight leading-relaxed tracking-wide max-sm:tracking-normal">家長有問題？寫信到 <a class="underline" href="mailto:official@hackit.tw">official@hackit.tw</a>，我們很樂意說明。</p>
+                <p class="text-sm md:text-base max-sm:text-xs max-sm:leading-tight leading-relaxed tracking-wide max-sm:tracking-normal">家長有問題？寫信到 <a class="underline" href="mailto:taiwan@daydream.hackclub.com">taiwan@daydream.hackclub.com</a>，我們很樂意說明。</p>
 			</div>
 		</div>
 
@@ -2053,11 +2091,11 @@ Mumbai`.split("\n")
 	>
 		<!-- svelte-ignore a11y_no_static_element_interactions -->
 		<div
-			class="relative w-[92vw] max-w-6xl max-h-[90vh] overflow-y-auto bg-[#FEFDF8] rounded-2xl border-4 border-[#E8E1D0] shadow-xl"
+			class="relative w-[92vw] max-w-6xl max-h-[90vh] overflow-y-auto overflow-x-hidden bg-[#FEFDF8] rounded-2xl border-4 border-[#E8E1D0] shadow-xl"
 			on:click|stopPropagation
 		>
 			<button
-				class="cursor-pointer absolute top-2 right-2 md:-top-4 md:-right-4 z-20 w-8 h-8 bg-white/80 md:bg-white/20 hover:bg-white/90 md:hover:bg-white/30 rounded-full flex items-center justify-center text-[#335969] md:text-white text-xl font-bold transition-colors duration-200"
+				class="cursor-pointer absolute top-2 right-2 md:top-3 md:right-3 z-20 w-8 h-8 bg-white/80 md:bg-white/20 hover:bg-white/90 md:hover:bg-white/30 rounded-full flex items-center justify-center text-[#335969] md:text-white text-xl font-bold transition-colors duration-200"
 				on:click={closeActivitiesPopup}
 				aria-label="Close activities"
 			>
@@ -2072,9 +2110,9 @@ Mumbai`.split("\n")
 			</div>
 
 			<!-- Content -->
-			<div class="grid grid-cols-1 lg:grid-cols-3 gap-0 relative">
+			<div class="grid grid-cols-1 lg:grid-cols-3 gap-0 relative overflow-x-hidden bg-[#F7F2E3]">
 				<!-- Activities list -->
-				<div class="lg:col-span-1 p-5 md:p-6 bg-white/60 lg:border-r-2 border-b-2 lg:border-b-0 border-[#E8E1D0] max-h-[70vh] overflow-y-auto">
+				<div class="lg:col-span-1 p-5 md:p-6 bg-white/60 lg:border-r-2 border-b-2 lg:border-b-0 border-[#E8E1D0]">
 					<ul class="space-y-3">
 						{#each hackClubActivities as act, i}
 							<li>
@@ -2090,7 +2128,7 @@ Mumbai`.split("\n")
 				</div>
 
 				<!-- Video player -->
-				<div class="lg:col-span-2 p-4 md:p-6 bg-transparent">
+				<div class="lg:col-span-2 p-4 md:p-6 bg-[#F7F2E3]">
 					<div class="relative w-full aspect-video rounded-xl overflow-hidden border-2 border-[#E8E1D0] shadow-lg bg-black">
 						{#if selectedVideoId}
 							<iframe
