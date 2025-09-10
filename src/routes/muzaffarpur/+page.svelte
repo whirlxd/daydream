@@ -25,14 +25,6 @@ const sponsors = [
   }
 ];
 
-<p class="mt-6 text-center text-lg">
-  Big shoutout to Jukebox for our 
-  <a href="https://www.jukeboxprint.com/custom-stickers" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">
-    custom stickers
-  </a> 
-  at the Hackathon! 🎉
-</p>
-
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
 const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [
 	{
@@ -1018,6 +1010,20 @@ Mumbai`.split("\n")
 				<!-- Brush texture overlay for header -->
 				<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
 			</div>
+     </div>
+      <!-- ✅ Shoutout Text -->
+      <p class="mt-4 text-center text-lg">
+        Big shoutout to 
+        <a href="https://www.jukeboxprint.com/custom-stickers" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="text-blue-600 underline">
+          Jukebox
+        </a> 
+        for our custom stickers at the Hackathon! 🎉
+      </p>
+
+    </div>
 			
 			<!-- Main Content Area -->
 			<div class="relative bg-gradient-to-b from-[#CCF4FD] to-[#AECDF6] px-8 pt-8 pb-16">
