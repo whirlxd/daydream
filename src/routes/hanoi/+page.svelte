@@ -1046,12 +1046,9 @@ Mumbai`.split("\n")
 					{#if contactLink}
 						<!-- Call to action for sponsors -->
 						<div class="mt-8 text-center">
-							<p class="text-lg text-[#335969]">Want to sponsor Daydream {eventName}? <a href={contactLink} class="underline hover:text-[#477783] transition-colors">Get in touch</a></p>
+							<p class="text-lg text-[#335969]">Thank you to Jukebox for providing us with <a href="https://www.jukeboxprint.com/custom-stickers">custom stickers</a><br>Want to sponsor Daydream {eventName}? <a href={contactLink} class="underline hover:text-[#477783] transition-colors">Get in touch</a></p>
 						</div>
 					{/if}
-					<div class="mt-8 text-center">
-						<p>Thank you to Jukebox for providing us with <a href="https://www.jukeboxprint.com/custom-stickers">custom stickers</a></p>
-					</div>
 				</div>
 			</div>
 			
