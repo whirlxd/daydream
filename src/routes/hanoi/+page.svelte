@@ -1013,7 +1013,6 @@ Mumbai`.split("\n")
 										<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain"></a>
 								{/each}
 
-								<p>Thank you to Jukebox for providing us with <a href="https://www.jukeboxprint.com/custom-stickers">custom stickers</a></p>
 							</div>
 							
 							<!-- Second row (remaining sponsors, centered) -->
@@ -1050,6 +1049,9 @@ Mumbai`.split("\n")
 							<p class="text-lg text-[#335969]">Want to sponsor Daydream {eventName}? <a href={contactLink} class="underline hover:text-[#477783] transition-colors">Get in touch</a></p>
 						</div>
 					{/if}
+					<div class="mt-8 text-center">
+						<p>Thank you to Jukebox for providing us with <a href="https://www.jukeboxprint.com/custom-stickers">custom stickers</a></p>
+					</div>
 				</div>
 			</div>
 			
