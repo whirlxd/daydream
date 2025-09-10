@@ -12,21 +12,25 @@
 	const eventAddress = "DAV Public School, Bakhri, Muzaffarpur, Bihar"; // Leave this empty if you don't want an address
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recgPCNqvnBVae6iH"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
-	const directionsURL = "26b77401f0ded1!8m2!3d26.1582425!4d85.4224565!16s%2Fg%2F1th1sgh1?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D/"
+	const directionsURL = "https://maps.app.goo.gl/pVXPPdbrQkdzPtsC9"
 	const contactLink = "mailto:galogin9162@gmail.com"
 	
 // Sponsors Configuration - disable this if you don't have any sponsors to display!
-const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
+const sponsorsEnabled = true;
 const sponsors = [
   { 
-    image: "<a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/YqzkyppT/jukebox-logo.png' border='0' alt='jukebox-logo'/></a>", 
+    image: "https://i.postimg.cc/YqzkyppT/jukebox-logo.png", 
     name: "Jukebox", 
     url: "https://www.jukeboxprint.com/custom-stickers" 
   }
 ];
 
 <p class="mt-6 text-center text-lg">
-Big shoutout to Jukebox for our <a href="https://www.jukeboxprint.com/custom-stickers">custom stickers</a>!
+  Big shoutout to Jukebox for our 
+  <a href="https://www.jukeboxprint.com/custom-stickers" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">
+    custom stickers
+  </a> 
+  at the Hackathon! 🎉
 </p>
 
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
