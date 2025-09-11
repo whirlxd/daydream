@@ -8,9 +8,9 @@
 	// Configuration - Enhanced with more details
 	const eventName = "Red Sea";
 	const eventLocation = "Red Sea City";
-	const eventAddress = "South Valley University Hurghada Branch, Ras Ghareb - Hurghada Rd, Red Sea Governorate";
+	const eventAddress = "Sun Rise International School, Red Sea Governorate";
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recfLqydkliPcUYoe";
-	const directionsURL = "https://maps.app.goo.gl/frKTnS8kkmSts9sH6";
+	const directionsURL = "https://maps.app.goo.gl/S3k6yH2JQqCX5fgL6";
 	const contactLink = "mailto:redsea.stem.hackclub@gmail.com";
 	
 	// Event dates and times - 12-hour event
@@ -26,31 +26,13 @@
 	};
 	
 	// Enhanced Sponsors Configuration
-	const sponsorsEnabled = false; // Hide sponsors for now but keep call to action
-	const sponsors = [
+	const sponsorsEnabled = true; // Hide sponsors for now but keep call to action
+			const sponsors = [
 		{ 
-			image: "/example/logo1.png", 
-			name: "Tech Innovation Hub", 
-			url: "https://example1.com",
-			tier: "platinum"
-		},
-		{ 
-			image: "/example/logo2.png", 
-			name: "Digital Dreams Lab", 
-			url: "https://example2.com",
-			tier: "gold"
-		},
-		{ 
-			image: "/example/logo3.png", 
-			name: "Creative Coding Studio", 
-			url: "https://example3.com",
+			image: "/red-sea/jukebox.png", 
+			name: "Jukebox Print", 
+			url: "https://www.jukeboxprint.com/custom-stickers",
 			tier: "silver"
-		},
-		{ 
-			image: "/example/logo4.png", 
-			name: "Game Dev Academy", 
-			url: "https://example4.com",
-			tier: "bronze"
 		}
 	];
 	
@@ -968,9 +950,9 @@ Red Sea`.split("\n")
 			>
 				September 27th & 28th, 2025
 			</h2>
-			<img src="daydream.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4" />
+			<img src="/red-sea/daydream.png" alt="Daydream" class="h-64 mb-6 w-auto object-contain max-w-full px-4" />
 			<a href="https://hackclub.com" class="absolute top-0 -right-6 max-sm:right-0 max-sm:scale-80 animate-hover ![animation-delay:0.9s] ![--hover:-0.2rem]">
-				<img src="flag-plane.png" alt="Hack Club" class="h-28">
+				<img src="/flag-plane.png" alt="Hack Club" class="h-28">
 			</a>
 		</div>
 		<div class="relative inline-block px-4">
@@ -1082,25 +1064,7 @@ Red Sea`.split("\n")
 	<img src="/clouds-top-left.png" alt="" class="absolute left-0 w-3/12 -bottom-12  translate-y-1/2 z-10 pointer-events-none">
 	
 
-	<!-- Desktop stickers button (bottom left) -->
-	<a
-		href="https://forms.hackclub.com/daydream-stickers"
-		target="_blank"
-		class="hidden md:block absolute bottom-16 left-16 z-50 w-max px-4 py-2 bg-pink border-b-2 border-b-pink-dark text-white rounded-full active:transform active:translate-y-0.5 transition-all duration-100 font-sans cursor-pointer overflow-visible hover:shadow-[0_2px_0_0_theme(colors.pink.dark)] hover:-translate-y-[2px] active:border-transparent active:shadow-none"
-	>
-		Get free stickers
-		<img
-			src="button-clouds.svg" 
-			alt="" 
-			class="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto object-contain pointer-events-none"
-		>
-		<img
-			src="rock-sticker.png"
-			alt=""
-			class="absolute bottom-2 right-3 translate-2/3 w-18 h-18 object-contain pointer-events-none"
-			style="transform: rotate(-15deg);"
-		>
-	</a>
+	
 </div>
 
 <div class="w-full relative flex items-start justify-center">
@@ -1369,12 +1333,15 @@ Red Sea`.split("\n")
 												{sponsor.tier?.toUpperCase()}
 											</span>
 										</div>
-										<a href={sponsor.url} target="_blank" rel="noopener noreferrer" class="block">
-											<div class="bg-white/50 rounded-lg p-4 h-24 flex items-center justify-center mb-3 hover:bg-white/70 transition-colors">
+										<div class="block">
+											<div class="bg-white/50 rounded-lg p-4 h-24 flex items-center justify-center mb-3">
 												<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain">
 											</div>
-											<h3 class="font-bold text-[#335969] text-lg">{sponsor.name}</h3>
-										</a>
+											<h3 class="font-bold text-[#335969] text-lg mb-2">{sponsor.name}</h3>
+											<p class="text-sm text-[#477783]">
+												Big shoutout to Jukebox for our <a href="https://www.jukeboxprint.com/custom-stickers" target="_blank" rel="noopener noreferrer" class="text-pink hover:text-pink-dark underline">custom stickers</a>!
+											</p>
+										</div>
 									</div>
 								</div>
 							{/each}
@@ -1596,7 +1563,7 @@ Red Sea`.split("\n")
 			<!-- Map container with cloudy edges -->
 			<div class="relative w-full h-156 overflow-hidden bg-transparent">
 				<iframe 
-					src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14178.910464942159!2d33.6640017!3d27.321712!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1452650624737cf1%3A0xb515a00886782913!2sSouth%20Valley%20University%20Hurghada%20Branch!5e0!3m2!1sen!2seg!4v1756069424823!5m2!1sen!2seg"
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4393.223885058621!2d33.804376376122384!3d27.22416934663533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1452877818029b35%3A0xf3a85e8b5fa0ecd7!2sSunrise%20International%20School!5e1!3m2!1sen!2seg!4v1756900426781!5m2!1sen!2seg"
 					class="w-full h-full border-0 bg-[#acd4e0]"
 					style="
 						mask-image: 
@@ -1775,7 +1742,7 @@ Red Sea`.split("\n")
 						</li>
 						<li class="flex items-start">
 							<span class="mr-4">•</span>
-							<a href="https://juanes10201.itch.io/speedtickers" target="_blank" class="underline mr-2">SPEEDTICKERS</a> by Agustin
+							<a href="https://juanes10201.itch.io/speedtickers" target="_blank" class="underline mr-2">SPEEDTICKERS</a> by Agustin & Juan
 						</li>
 					</ul>
 					

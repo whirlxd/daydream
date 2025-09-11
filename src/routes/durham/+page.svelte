@@ -7,13 +7,13 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Milwaukee"; // This should be the name of your event WITHOUT "Daydream" at the start
-	const eventLocation = "Milwaukee";
-	const eventAddress = ""; // Leave this empty if you don't want an address
-	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recL3BvxoCPzbRIYR"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	const eventName = "Durham"; // This should be the name of your event WITHOUT "Daydream" at the start
+	const eventLocation = "Durham";
+	const eventAddress = "5310 S Alston Ave. STE 200, Durham, NC 27713"; // Leave this empty if you don't want an address
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recrZmrQnIisNpddB"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = ""
-	const contactLink = "mailto:daydreammilwaukee@gmail.com"
+	const contactLink = "mailto:durham@daydream.hackclub.com"
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
@@ -32,33 +32,24 @@
 		{
 			title: "Saturday, September 27th",
 			items: [
-				{ event: "Soft Landing + Checkin", time: "8:30 AM" },
-				{ event: "Opening Words", time: "9:00 AM"},
-				{ event: "Start working on your project!", time: "9:30 AM" },
-				{ event: "Lunch and Social Time", time: "12:30 PM" },
-				{ event: "Dedicated Work Time", time: "1:00 PM" },
-				{ event: "Workshop? - TBD", time: "2:00 PM" },
-				{ event: "Workshop? - TBD", time: "4:00 PM" },
-				{ event: "Dinner", time: "7:30 PM" },
-				{ event: "Organizer Yap Session", time: "8:00 PM" },
-				{ event: "More Work Time", time: "8:15 PM" },
-				{ event: "GO TO SLEEP", time: "11:00 PM" }
+				{ event: "Doors open, times are subject to change", time: "11:00 AM" },
+				{ event: "Opening ceremony", time: "12:00 PM" },
+				{ event: "Lunch", time: "12:30 PM" },
+				{ event: "Start working on your project!", time: "1:00 PM" },
+				{ event: "Workshop 1", time: "2:00 PM" },
+				{ event: "Activity 1", time: "4:00 PM" },
+				{ event: "Workshop 2", time: "4:00 PM" },
+				{ event: "Dinner", time: "6:00 PM" },
+				{ event: "Lightning talks", time: "8:00 PM" },
+				{ event: "Midnight surprise", time: "12:00 AM" }
 			]
 		},
 		{
 			title: "Sunday, September 28th",
 			items: [
-				{ event: "Wakeup Calls", time: "8:00 AM" },
-				{ event: "Breakfast", time: "8:30 AM" },
-				{ event: "Work Time", time: "9:00 AM" },
-				{ event: "Lunch", time: "12:30 PM" },
-				{ event: "Work Time!", time: "1 PM" },
-				{ event: "Workshop? - TBD", time: "2:00 PM" },
-				{ event: "Dinner", time: "7:00 PM" },
-				{ event: "Finishing Touches", time: "7:30 PM" },
-				{ event: "Demos", time: "8:00 PM" },
-				{ event: "Closing", time: "9:30 pm"},
-				{ event: "Pack up and go home!", time: "10:00 PM" }
+				{ event: "Breakfast", time: "8:00 AM" },
+				{ event: "Demos!", time: "10:30 AM" },
+				{ event: "Closing ceremony", time: "12:00 PM" }
 			]
 		}
 	];
@@ -79,8 +70,8 @@
 	// Get current URL for dynamic metadata
 	$: currentUrl = `https://daydream.hackclub.com${$page.url.pathname}`;
 	$: pageTitle = `Daydream ${eventName} - ${eventLocation} Game Jam`;
-	$: pageDescription = `Join Daydream ${eventName} in ${eventLocation}! A student-led game jam where you'll build amazing games with other high schoolers. Food, workshops, and prizes included!`;
-	$: pageKeywords = `game jam, hackathon, student coding, teen coding, Hack Club, game development, ${eventLocation}, ${eventName}`;
+	$: pageDescription = `Join Daydream ${eventName} in ${eventLocation}! A teen-led game jam where you'll build amazing games with other high schoolers. Food, workshops, and prizes included!`;
+	$: pageKeywords = `game jam, hackathon, teen coding, Hack Club, game development, ${eventLocation}, ${eventName}`;
 
 	// Cities where the game jam is happening
 	const cities = `Columbus
@@ -106,7 +97,7 @@ Dubai
 San Francisco
 Minneapolis
 Seattle
-Signapore
+Singapore
 Sydney
 Mumbai`.split("\n")
 
@@ -848,7 +839,7 @@ Mumbai`.split("\n")
 			<h4
 				class="text-2xl opacity-90 mt-2 font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent max-sm:text-xl"
 			>
-				Organized by Students in {@html eventLocation.replaceAll(" ", "&nbsp;")}
+				Organized by Teenagers in {@html eventLocation.replaceAll(" ", "&nbsp;")}
 			</h4>
 		</div>
 		
@@ -886,25 +877,7 @@ Mumbai`.split("\n")
 	<img src="/clouds-top-left.png" alt="" class="absolute left-0 w-3/12 -bottom-12  translate-y-1/2 z-20 pointer-events-none">
 	
 
-	<!-- Desktop stickers button (bottom left) -->
-	<a
-		href="https://forms.hackclub.com/daydream-stickers"
-		target="_blank"
-		class="hidden md:block absolute bottom-16 left-16 z-50 w-max px-4 py-2 bg-pink border-b-2 border-b-pink-dark text-white rounded-full active:transform active:translate-y-0.5 transition-all duration-100 font-sans cursor-pointer overflow-visible hover:shadow-[0_2px_0_0_theme(colors.pink.dark)] hover:-translate-y-[2px] active:border-transparent active:shadow-none"
-	>
-		Get free stickers
-		<img
-			src="button-clouds.svg" 
-			alt="" 
-			class="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto object-contain pointer-events-none"
-		>
-		<img
-			src="rock-sticker.png"
-			alt=""
-			class="absolute bottom-2 right-3 translate-2/3 w-18 h-18 object-contain pointer-events-none"
-			style="transform: rotate(-15deg);"
-		>
-	</a>
+	
 </div>
 
 <div class="w-full relative flex items-start justify-center">
@@ -1412,7 +1385,7 @@ Mumbai`.split("\n")
 						</li>
 						<li class="flex items-start">
 							<span class="mr-4">•</span>
-							<a href="https://juanes10201.itch.io/speedtickers" target="_blank" class="underline mr-2">SPEEDTICKERS</a> by Agustin
+							<a href="https://juanes10201.itch.io/speedtickers" target="_blank" class="underline mr-2">SPEEDTICKERS</a> by Agustin & Juan
 						</li>
 					</ul>
 					
