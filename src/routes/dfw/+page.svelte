@@ -22,7 +22,9 @@
 	const sponsors = [
 		{image: "https://storage.jukeboxprint.com/s/images/jukebox-meta-im.png", name: "Jukebox Print", url: "https://jukeboxprint.com/custom-stickers"},
 		{image: "https://dallasmakerspace.org/w/images/2/2c/PNG_Logo_Coral.png", name: "Dallas Makerspace", url: "https://dallasmakerspace.org/"},
-		{image: "https://drstich.com/wp-content/uploads/2018/11/logo-1.png", name: "Bailey Orthodontics", url: "https://drstich.com/"}
+		{image: "https://drstich.com/wp-content/uploads/2018/11/logo-1.png", name: "Bailey Orthodontics", url: "https://drstich.com/"},
+		{image: "https://circuits-diy.com/wp-content/uploads/2020/03/easyeda-logo.png", name: "Easy EDA", url: "https://easyeda.com/"},
+		{image: "https://www.robosource.net/img/robosourcenet-logo-1641673523.jpg", name: "RoboSource", url: "https://www.robosource.net/"}
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
