@@ -14,7 +14,7 @@
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recloAVLYDmvWuDio"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = "https://www.google.com/maps/search/1600+pennsylvania+avenue+washington+dc/"
-	const contactLink = "mailto:"
+	const contactLink = "mailto:pokhara@daydream.hackclub.com"
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
@@ -844,7 +844,7 @@ Mumbai`.split("\n")
 			</h4>
 		</div>
 		
-		<ParticipantSignUp {eventName} />
+		<ParticipantSignUp {signupLink} {eventName} />
 	</div>
 
 	<!-- <img src="hot-air-balloon.png" alt="" class="absolute w-1/8 right-32 bottom-40 z-20"> -->
@@ -878,25 +878,7 @@ Mumbai`.split("\n")
 	<img src="/clouds-top-left.png" alt="" class="absolute left-0 w-3/12 -bottom-12  translate-y-1/2 z-20 pointer-events-none">
 	
 
-	<!-- Desktop stickers button (bottom left) -->
-	<a
-		href="https://forms.hackclub.com/daydream-stickers"
-		target="_blank"
-		class="hidden md:block absolute bottom-16 left-16 z-50 w-max px-4 py-2 bg-pink border-b-2 border-b-pink-dark text-white rounded-full active:transform active:translate-y-0.5 transition-all duration-100 font-sans cursor-pointer overflow-visible hover:shadow-[0_2px_0_0_theme(colors.pink.dark)] hover:-translate-y-[2px] active:border-transparent active:shadow-none"
-	>
-		Get free stickers
-		<img
-			src="button-clouds.svg" 
-			alt="" 
-			class="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto object-contain pointer-events-none"
-		>
-		<img
-			src="rock-sticker.png"
-			alt=""
-			class="absolute bottom-2 right-3 translate-2/3 w-18 h-18 object-contain pointer-events-none"
-			style="transform: rotate(-15deg);"
-		>
-	</a>
+	
 </div>
 
 <div class="w-full relative flex items-start justify-center">
@@ -908,7 +890,7 @@ Mumbai`.split("\n")
 		<div class="relative z-20 px-20 pt-20 pb-52 rounded-lg mb-0 max-sm:px-18" style="background-image: url('/letter-top.png'), linear-gradient(to bottom, #FCEFC5 100px, transparent 100px), url('/letter-loop.png'); background-size: 100% auto, 100% auto, 100% auto; background-repeat: no-repeat, no-repeat, repeat-y; background-position: top, top, top; background-attachment: local, local, local;">
 			<div class="absolute bottom-0 left-0 w-full h-24 z-10 pointer-events-none bg-[url('/clouds-loop.png')] bg-repeat-x bg-bottom bg-contain"></div>
 			<h2 class="text-5xl font-serif italic text-[#8B4513] mb-10 relative">
-				Dear Hackers, Musicians, and Artist,
+				Dear Hackers, Musicians, and Artists,
 				<img src="/underline.svg" alt="" class="absolute left-0 -bottom-3 w-64 h-auto opacity-70">
 			</h2>
 			
@@ -1404,7 +1386,7 @@ Mumbai`.split("\n")
 						</li>
 						<li class="flex items-start">
 							<span class="mr-4">•</span>
-							<a href="https://juanes10201.itch.io/speedtickers" target="_blank" class="underline mr-2">SPEEDTICKERS</a> by Agustin
+							<a href="https://juanes10201.itch.io/speedtickers" target="_blank" class="underline mr-2">SPEEDTICKERS</a> by Agustin & Juan
 						</li>
 					</ul>
 					
