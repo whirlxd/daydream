@@ -7,11 +7,11 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Tyree Energy Technologies Building";
-	const eventLocation = "Sydney";
-	const eventAddress = "Kensington NSW 2033";
+	const eventName = "Sydney";
+	const eventLocation = "UNSW Tyree Energy Technologies Building";
+	const eventAddress = "Tyree Energy Technologies Building, Kensington NSW 2033";
 	// These two are optional
-	const directionsURL = "https://maps.app.goo.gl/92axMdj2mN527YA88"
+	const directionsURL = "https://www.google.com/maps/dir//Tyree+Energy+Technologies+Building,+Kensington+NSW+2033/@-33.9174825,151.2259502,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x6b12b10c04b1d1cf:0x5cc0081e85bdef38!2m2!1d151.2267283!2d-33.9177365?entry=ttu&g_ep=EgoyMDI1MDkwOC4wIKXMDSoASAFQAw%3D%3D"
 	const contactLink = "mailto:sydney@daydream.hackclub.com"
 	
 	// Sponsors Configuration
@@ -1461,7 +1461,7 @@ Mumbai`.split("\n")
 			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
 				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">All this, for free?</h3>
-				<p class="text-sm">Yep! Food, swag and cool custom stickers from Jukebox are all included.</p>
+				<p class="text-sm">Yep! Food, swag and cool <a href="https://www.jukeboxprint.com/custom-stickers">custom stickers</a> from Jukebox are all included.</p>
 			</div>
 		</div>
 
