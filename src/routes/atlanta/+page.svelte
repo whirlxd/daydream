@@ -18,13 +18,17 @@
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	const sponsorsEnabled = true;
 	const sponsors = [
-		{ image: "/atlanta/jukebox.svg", name: 'Big shoutout to Jukebox for our <a href="https://www.jukeboxprint.com/custom-stickers"> custom stickers </a>!', url: "https://www.jukeboxprint.com/custom-stickers"},
-		{ image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
-		{ image: "/example/logo3.png", name: "Sponsor 3", url: "https://example3.com" },
-		{ image: "/example/logo4.png", name: "Sponsor 4", url: "https://example4.com" },
-		{ image: "/example/logo5.png", name: "Sponsor 5", url: "https://example5.com" },
-		{ image: "/example/logo6.png", name: "Sponsor 6", url: "https://example6.com" },
-		{ image: "/example/logo7.png", name: "Sponsor 7", url: "https://example7.com" }
+		{ image: "/atlanta/jukebox.png", name: "Jukebox" , url: "https://www.jukeboxprint.com/custom-stickers", 
+		text: `<p class="text-lg text-[#335969] text-center">
+             Big shoutout to Jukebox for our
+             <a href="https://www.jukeboxprint.com/custom-stickers"
+                class="underline hover:text-[#477783] transition-colors">
+               custom stickers</a>!
+           </p>`		},
+		{ image: "/atlanta/CAH.png", name: "Cards Against Humanity", url: "https://www.cardsagainsthumanity.com/" },
+		{ image: "/atlanta/gtsbe.png", name: "National Society of Black Engineers at Georgia Tech", url: "https://www.gtsbe.org/", 
+		text: `<p class="text-lg text-[#335969] text-center">
+             Big shoutout to NSBE at GaTech for providing us the venue! </p>`}
 	];
 	
 	
