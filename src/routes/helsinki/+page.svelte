@@ -9,17 +9,18 @@
 	// Configuration - Put your information here!
 	const eventName = "Helsinki";
 	const eventLocation = "Helsinki";
-	const eventAddress = "Puumiehenkuja 5A, 02150, Espoo"; // Leave this empty if you don't want an address
+	const eventAddress = "" // "Puumiehenkuja 5A, 02150, Espoo"; // Leave this empty if you don't want an address
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recdfom5UbYh7cp59"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional
-	const directionsURL = "https://maps.app.goo.gl/HLrrBNuKbzZEfUUXA";
+	const directionsURL = "" // "https://maps.app.goo.gl/HLrrBNuKbzZEfUUXA";
 	const contactLink = "mailto:helsinki@daydream.hackclub.com"
 	
 	// Sponsors Configuration
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
 		{ image: "/helsinki/supercell.png", name: "Supercell", url: "https://supercell.com" },
-		{ image: "/helsinki/aaltoes.png", name: "Aaltoes", url: "https://aaltoes.com" }
+		{ image: "/helsinki/jukebox-logo.svg", name: "Jukebox", url: "https://www.jukeboxprint.com" }
+		// { image: "/helsinki/aaltoes.png", name: "Aaltoes", url: "https://aaltoes.com" }
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
@@ -840,6 +841,12 @@ Mumbai`.split("\n")
 		</div>
 		
 		<ParticipantSignUp {signupLink} {eventName} />
+		
+		<div class="mt-6 inline-block bg-white/20 px-4 py-3 rounded-lg shadow-sm backdrop-blur-sm text-center">
+			<p class="m-0 text-sm md:text-base text-[#335969]">
+				Big shoutout to Jukebox for our <a href="https://www.jukeboxprint.com/custom-stickers" class="font-bold underline ">custom stickers</a>!
+			</p>
+		</div>
 	</div>
 
 	<!-- <img src="hot-air-balloon.png" alt="" class="absolute w-1/8 right-32 bottom-40 z-20"> -->
