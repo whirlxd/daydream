@@ -20,7 +20,7 @@
 				{
 					title: "Saturday, September 27th",
 					items: [
-						{ event: "Doors open", time: "8:30 AM" },
+						{ event: "Doors open", time: "9:00 AM" },
 						{ event: "Opening ceremony", time: "9:30 AM" },
 						{ event: "Start working on your project!", time: "10:00 AM" },
 						{ event: "Workshop 1", time: "11:00 AM" },
@@ -120,7 +120,7 @@
 				{
 					title: "周六，2025年9月27日",
 					items: [
-						{ event: "入场", time: "上午8:30" },
+						{ event: "入场", time: "上午9:00" },
 						{ event: "开幕式", time: "上午9:30" },
 						{ event: "开始你的项目！", time: "上午10:00" },
 						{ event: "工作坊1", time: "上午11:00" },
@@ -241,9 +241,9 @@
 	
 	// Get current URL for dynamic metadata
 	$: currentUrl = `https://daydream.hackclub.com${$page.url.pathname}`;
-	$: pageTitle = `Daydream ${eventName} - ${eventLocation} Game Jam`;
-	$: pageDescription = `Join Daydream ${eventName} in ${eventLocation}! A teen-led game jam where you'll build amazing games with other high schoolers. Food, workshops, and prizes included!`;
-	$: pageKeywords = `game jam, hackathon, teen coding, Hack Club, game development, ${eventLocation}, ${eventName}`;
+	$: pageTitle = `Daydream Nanjing - Nanjing Game Jam`;
+	$: pageDescription = `Join Daydream Nanjing! A teen-led game jam where you'll build amazing games with other high schoolers. Food, workshops, and prizes included!`;
+	$: pageKeywords = `game jam, hackathon, teen coding, Hack Club, game development, Nanjing`;
 
 	// Cities where the game jam is happening
 	const cities = `Columbus
@@ -1241,7 +1241,11 @@ Mumbai`.split("\n")
 							</div>
 						{/if}
 					{/if}
-					
+
+					<div class="mt-8 text-center">
+						<p class="text-lg text-[#335969]">Big shoutout to Jukebox for our <a href="https://www.jukeboxprint.com/custom-stickers" class="underline hover:text-[#477783] transition-colors" target="_blank">custom stickers</a>!</p>
+					</div>
+
 					{#if contactLink}
 						<!-- Call to action for sponsors -->
 						<div class="mt-8 text-center">

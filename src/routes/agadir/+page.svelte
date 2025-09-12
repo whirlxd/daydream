@@ -9,22 +9,17 @@
 	// Configuration - Put your information here!
 	const eventName = "Agadir"; // This should be the name of your event WITHOUT "Daydream" at the start
 	const eventLocation = "Agadir";
-	const eventAddress = ""; // Leave this empty if you don't want an address
+	const eventAddress = "Technopark Souss-Massa, Agadir route nationale 1"; // Leave this empty if you don't want an address
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=reca3ZwZKw7sT7jQE"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = ""
-	const contactLink = ""
+	const contactLink = "mailto:agadir@daydream.hackclub.com"
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
-	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
+	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
-		{ image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
-		{ image: "/example/logo3.png", name: "Sponsor 3", url: "https://example3.com" },
-		{ image: "/example/logo4.png", name: "Sponsor 4", url: "https://example4.com" },
-		{ image: "/example/logo5.png", name: "Sponsor 5", url: "https://example5.com" },
-		{ image: "/example/logo6.png", name: "Sponsor 6", url: "https://example6.com" },
-		{ image: "/example/logo7.png", name: "Sponsor 7", url: "https://example7.com" }
+		{ image: "/agadir/technopark.jpg", name: "Technopark Souss-Massa", url: "https://www.technopark.ma/reseau/#technopark-agadir" },
+		{ image: "/agadir/flag-orpheus-left.png", name: "Hack Club", url: "https://hackclub.com" }
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
@@ -32,12 +27,12 @@
 		{
 			title: "Saturday, September 27th",
 			items: [
-				{ event: "Opening ceremony", time: "8:40 AM" },
+				{ event: "Opening ceremony", time: "8:30 AM" },
 				{ event: "Start working on your project!", time: "9:00 AM" },
 				{ event: "Workshop 1", time: "12:00 PM" },
-				{ event: "Lunch", time: "3:10 PM" },
-				{ event: "Workshop 2", time: "4:10 PM" },
-				{ event: "Dinner", time: "6:30 PM" },
+				{ event: "Lunch", time: "2:00 PM" },
+				{ event: "Workshop 2", time: "3:00 PM"},
+				{ event: "Workshop 3", time: "4:45 PM" },
 				{ event: "Doors closing", time: "7:00 PM" }
 			]
 		},
@@ -45,8 +40,9 @@
 			title: "Sunday, September 28th",
 			items: [
 				{ event: "Breakfast", time: "8:30 AM" },
-				{ event: "Demos!", time: "11:00 AM" },
-				{ event: "Closing ceremony", time: "12:30 PM" }
+				{ event: "Lunch", time: "1:00 PM"},
+				{ event: "Demos!", time: "4:00 MM" },
+				{ event: "Closing ceremony", time: "6:00 PM" }
 			]
 		}
 	];

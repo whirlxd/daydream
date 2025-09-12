@@ -9,22 +9,20 @@
 	// Configuration - Put your information here!
 	const eventName = "Toronto"; // This should be the name of your event WITHOUT "Daydream" at the start
 	const eventLocation = "Toronto";
-	const eventAddress = ""; // Leave this empty if you don't want an address
+	const eventAddress = "620 King St W, Toronto, ON M5V 2N2"; // Leave this empty if you don't want an address
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recgHojZfQ583LUC0"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = ""
-	const contactLink = "mailto:example@daydream.hackclub.com"
+	const contactLink = "mailto:toronto@daydream.hackclub.com"
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
-	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
+	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
-		{ image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
-		{ image: "/example/logo3.png", name: "Sponsor 3", url: "https://example3.com" },
-		{ image: "/example/logo4.png", name: "Sponsor 4", url: "https://example4.com" },
-		{ image: "/example/logo5.png", name: "Sponsor 5", url: "https://example5.com" },
-		{ image: "/example/logo6.png", name: "Sponsor 6", url: "https://example6.com" },
-		{ image: "/example/logo7.png", name: "Sponsor 7", url: "https://example7.com" }
+		{ image: "/toronto/jlcpcb.png", name: "JLCPCB", url: "https://jlcpcb.com/" },
+		{ image: "/toronto/easyeda.png", name: "EasyEDA", url: "https://easyeda.com/" },
+		{ image: "/toronto/oshwlab.png", name: "OSHWLab", url: "https://oshwlab.com" },
+		{ image: "/toronto/shopify.png", name: "Shopify", url: "https://www.shopify.com/ca" },
+		{ image: "/toronto/jukebox.png", name: "Jukebox", url: "https://www.jukeboxprint.com/" },
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
@@ -1054,7 +1052,10 @@ Mumbai`.split("\n")
 					{#if contactLink}
 						<!-- Call to action for sponsors -->
 						<div class="mt-8 text-center">
+							<p class="text-lg text-[#335969] mb-10">Thanks to Jukebox for the coolest <a href="https://www.jukeboxprint.com/custom-stickers" class="underline hover:text-[#477783] transition-colors">custom stickers</a></p>
+
 							<p class="text-lg text-[#335969]">Want to sponsor Daydream {eventName}? <a href={contactLink} class="underline hover:text-[#477783] transition-colors">Get in touch</a></p>
+
 						</div>
 					{/if}
 				</div>
@@ -1091,6 +1092,7 @@ Mumbai`.split("\n")
 		</div>
 	</div>
 </div>
+
 {/if}
 
 <!-- Gamejam Text Section -->
