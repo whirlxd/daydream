@@ -14,6 +14,7 @@
 		{ image: "/valencia/avast.png", name: "AVAST", url: "https://asociacion-avast.org/" },
 		{ image: "/valencia/jukebox.png", name: "Jukeboxprint", url: "https://jukeboxprint.com" },
 		{ image: "/valencia/nix.png", name: "Nix Media", url: "https://nixmedia.studio" },
+		{ image: "/valencia/auladeciencia.png", name: "Aula de Ciencia", url: "https://auladeciencia.es" }
 	];
 	
 	// Schedule Configuration
@@ -815,14 +816,14 @@ Mumbai`.split("\n")
 			>
 				27 y 28 de septiembre de 2025
 			</h2>
-			<img src="daydream.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4" />
-			<a href="https://hackclub.com" class="absolute top-0 -right-6 max-sm:right-0 max-sm:scale-80 animate-hover ![animation-delay:0.9s] ![--hover:-0.2rem]">
-				<img src="flag-plane.png" alt="Hack Club" class="h-28">
+			<img src="daydream.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-[90vw] sm:max-w-full px-2 sm:px-4" />
+			<a href="https://hackclub.com" class="absolute top-0 -right-6 max-sm:-right-2 max-sm:scale-90 animate-hover ![animation-delay:0.9s] ![--hover:-0.2rem]">
+				<img src="flag-plane.png" alt="Hack Club" class="h-28 max-sm:h-24">
 			</a>
 		</div>
-		<div class="relative inline-block px-4">
+		<div class="relative inline-block px-2 sm:px-4 max-w-[90vw]">
 			<h3
-				class="text-3xl italic font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent w-max max-sm:text-2xl mx-auto"
+				class="text-3xl italic font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent max-sm:text-xl mx-auto text-center"
 			>
 				Game jam para estudiantes de secundaria
 			</h3>
