@@ -2,9 +2,9 @@
 	// Configuration
 	const eventName = "Valencia";
 	const eventLocation = "Valencia";
-	const eventAddress = "";
+	const eventAddress = "Aula de Ciencia, C/ de Felipe Valls, 119, 46035 Valencia";
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recPq4lURkQWbmJFY&lang=es";
-	const directionsURL = ""
+	const directionsURL = "https://maps.app.goo.gl/2wrdnZJvA2Mx1oiC7";
 	const contactLink = "mailto:valencia@daydream.hackclub.com"
 	const sponsorLink = "https://hcb.hackclub.com/donations/start/daydream-valencia"
 	
@@ -916,6 +916,8 @@ Mumbai`.split("\n")
 
 				<p>Este otoño, te invitamos a aprender algo nuevo, crear algo de lo que estés realmente orgulloso, conocer nuevos amigos y embarcarte juntos en una aventura increíble.</p>
 
+				<p>Te esperamos el 27 y 28 de septiembre en <a href={directionsURL} target="_blank" rel="noopener noreferrer" class="underline">{@html eventAddress.replaceAll(" ", "&nbsp;")}</a>!</p>
+
 				<p class="mb-2">Con cariño,</p>
 
 				<p class="italic text-2xl opacity-85">El equipo de Daydream Valencia</p>
@@ -1306,16 +1308,6 @@ Mumbai`.split("\n")
 					title="Daydream Events Map">
 				</iframe>
 			</div>
-			
-			{#if eventAddress}
-				<p class="text-center font-sans text-2xl pt-12 max-sm:text-xl text-[#60574b] z-10000">
-					{#if directionsURL}
-						Daydream {eventName} tendrá lugar en <a class="underline text-pink" href={directionsURL}>{eventAddress}</a>!
-					{:else}
-						Daydream {eventName} tendrá lugar en <span class="underline">{eventAddress}</span>!
-					{/if}
-				</p>
-			{/if}
 		</div>
 	</div>
 
