@@ -39,23 +39,20 @@
 				{ event: "Continue working", time: "1:00 PM" },
                 { event: "Spikeball Competition", time: "2:00 PM" },
 				{ event: "Dinner", time: "6:00 PM" },
-				{ event: "Closing ceremony", time: "7:30 PM" },
-                { event: "Day 1 ends", time: "8:00 PM" }
+				{ event: "Closing ceremony", time: "6:30 PM" },
+                { event: "Day 1 ends", time: "7:00 PM" }
 			]
 		},
 		{
 			title: "Sunday, September 28th",
 			items: [
 				{ event: "Check in", time: "10:00 AM" },
-				{ event: "Opening ceremony 2", time: "9:30 AM" },
-				{ event: "Start working!", time: "9:45 AM" },
+				{ event: "Opening ceremony 2", time: "10:30 AM" },
+				{ event: "Start working!", time: "10:45 AM" },
 				{ event: "Lunch", time: "12:00 PM" },
 				{ event: "Continue working", time: "1:00 PM" },
-                { event: "Competition", time: "2:00 PM" },
-				{ event: "Special Dinner", time: "6:00 PM" },
-                { event: "Hacking ends", time: "6:45 PM" },
-				{ event: "Presentations and awards", time: "7:00 PM" },
-                { event: "Day 2 ends", time: "7:30 PM" }
+                { event: "Hacking ends", time: "3:30 PM" },
+                { event: "Day 2 ends", time: "4:30 PM" }
 			]
 		}
 	];
@@ -883,25 +880,7 @@ Mumbai`.split("\n")
 	<img src="/clouds-top-left.png" alt="" class="absolute left-0 w-3/12 -bottom-12  translate-y-1/2 z-20 pointer-events-none">
 	
 
-	<!-- Desktop stickers button (bottom left) -->
-	<a
-		href="https://forms.hackclub.com/daydream-stickers"
-		target="_blank"
-		class="hidden md:block absolute bottom-16 left-16 z-50 w-max px-4 py-2 bg-pink border-b-2 border-b-pink-dark text-white rounded-full active:transform active:translate-y-0.5 transition-all duration-100 font-sans cursor-pointer overflow-visible hover:shadow-[0_2px_0_0_theme(colors.pink.dark)] hover:-translate-y-[2px] active:border-transparent active:shadow-none"
-	>
-		Get free stickers
-		<img
-			src="button-clouds.svg" 
-			alt="" 
-			class="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto object-contain pointer-events-none"
-		>
-		<img
-			src="rock-sticker.png"
-			alt=""
-			class="absolute bottom-2 right-3 translate-2/3 w-18 h-18 object-contain pointer-events-none"
-			style="transform: rotate(-15deg);"
-		>
-	</a>
+	
 </div>
 
 <div class="w-full relative flex items-start justify-center">
@@ -1409,7 +1388,7 @@ Mumbai`.split("\n")
 						</li>
 						<li class="flex items-start">
 							<span class="mr-4">•</span>
-							<a href="https://juanes10201.itch.io/speedtickers" target="_blank" class="underline mr-2">SPEEDTICKERS</a> by Agustin
+							<a href="https://juanes10201.itch.io/speedtickers" target="_blank" class="underline mr-2">SPEEDTICKERS</a> by Agustin & Juan
 						</li>
 					</ul>
 					
