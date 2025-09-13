@@ -8,7 +8,7 @@
 
 	// Configuration - Put your information here!
 	const eventName = "Inland Empire"; // This should be the name of your event WITHOUT "Daydream" at the start
-	const eventLocation = "Eastvale";
+	const eventLocation = "Inland Empire";
 	const eventAddress = " "; // Leave this empty if you don't want an address
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recPckxtHXsk4b5vc"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
@@ -32,24 +32,29 @@
 		{
 			title: "Saturday, September 27th",
 			items: [
-				{ event: "Doors open", time: "11:00 AM" },
-				{ event: "Opening ceremony", time: "12:00 PM" },
-				{ event: "Lunch", time: "12:30 PM" },
-				{ event: "Start working on your project!", time: "1:00 PM" },
-				{ event: "Workshop 1", time: "2:00 PM" },
-				{ event: "Activity 1", time: "4:00 PM" },
-				{ event: "Workshop 2", time: "4:00 PM" },
-				{ event: "Dinner", time: "6:00 PM" },
-				{ event: "Lightning talks", time: "8:00 PM" },
-				{ event: "Midnight surprise", time: "12:00 AM" }
+	{ event: "Check-ins, form teams", time: "10:00 - 10:30 AM" },
+{ event: "Opening ceremony", time: "10:30 - 11:00 AM" },
+{ event: "Hacking starts!", time: "11:00 AM" },
+{ event: "Jumpstart Godot workshop", time: "11:05 - 12:05 PM" },
+{ event: "Lunch and karaoke", time: "12:15 - 12:45 PM" },
+{ event: "Lightning talks", time: "12:45 - 1:00 PM" },
+{ event: "Workshop TBD", time: "1:00 - 2:00 PM" },
+{ event: "Activity TBD", time: "4:00 PM" },
+{ event: "Cleanup", time: "5:30 PM" },
+{ event: "Participants dismissed", time: "6:00 PM" }
+
 			]
 		},
 		{
 			title: "Sunday, September 28th",
 			items: [
-				{ event: "Breakfast", time: "8:00 AM" },
-				{ event: "Demos!", time: "10:30 AM" },
-				{ event: "Closing ceremony", time: "12:00 PM" }
+{ event: "Check-ins", time: "10:00 - 10:30 AM" },
+{ event: "Workshop TBD", time: "11:00 - 12:00 PM" },
+{ event: "Lunch", time: "12:15 - 12:45 PM" },
+{ event: "Friendship bracelet making", time: "12:30 - 2:00 PM" },
+{ event: "Hacking ends", time: "4:00 PM" },
+{ event: "Confirm projects are shipped", time: "4:00 - 4:15 PM" },
+{ event: "Closing ceremony & prizes awarded!", time: "5:30 PM" }
 			]
 		}
 	];
@@ -820,7 +825,7 @@ Mumbai`.split("\n")
 			>
 				September 27th & 28th, 2025
 			</h2>
-			<img src="daydream.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4" />
+			<img src="inland-empire/daydream-ie.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4" />
 			<a href="https://hackclub.com" class="absolute top-0 -right-6 max-sm:right-0 max-sm:scale-80 animate-hover ![animation-delay:0.9s] ![--hover:-0.2rem]">
 				<img src="flag-plane.png" alt="Hack Club" class="h-28">
 			</a>
