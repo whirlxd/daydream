@@ -9,9 +9,9 @@
 	// Configuration - Put your information here!
 	const eventName = "Ottawa"; // The name of your event
 	const eventLocation = "Ottawa";
-	const eventAddress = "234 Laurier Avenue West Ottawa, ON K1P 1A1"; // Leave this empty if you don't want an address
+	const eventAddress = "151 O'Connor St, Ottawa, ON K2P 2L8"; // Leave this empty if you don't want an address
 	// These two are optional
-	const directionsURL = "https://maps.google.com/?q=234+Laurier+Ave+W,+Ottawa,+ON+K1P+1A1"; // Link to Google Maps or similar
+	const directionsURL = "https://www.google.com/maps/place/151+O'Connor+St,+Ottawa,+ON+K2P+2L8"; // Link to Google Maps or similar
 	const contactLink = "mailto:ottawa@daydream.hackclub.com"
 
 	// Sponsors Configuration
