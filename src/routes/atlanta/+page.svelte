@@ -7,7 +7,7 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Daydream Atlanta";
+	const eventName = "Atlanta";
 	const eventLocation = "Georgia Tech";
 	const eventAddress = ""; // Leave this empty if you don't want an address
 	// These two are optional
@@ -25,10 +25,8 @@
                 class="underline hover:text-[#477783] transition-colors">
                custom stickers</a>!
            </p>`		},
-		{ image: "/atlanta/CAH.png", name: "Cards Against Humanity", url: "https://www.cardsagainsthumanity.com/" },
-		{ image: "/atlanta/gtsbe.png", name: "National Society of Black Engineers at Georgia Tech", url: "https://www.gtsbe.org/", 
-		text: `<p class="text-lg text-[#335969] text-center">
-             Big shoutout to NSBE at GaTech for providing us the venue! </p>`}
+		{ image: "/atlanta/WCT.png", name: "We Create Tech", url: "https://www.wecreatetech.org/" },
+		{ image: "/atlanta/gtsbe.png", name: "National Society of Black Engineers at Georgia Tech", url: "https://www.gtsbe.org/"}
 	];
 	
 	
@@ -63,7 +61,7 @@
             { event: "Progress Check", time: "4:00 PM" },
             { event: "Workshop 2", time: "5:00 PM" },			
             { event: "Start Wrapping Up", time: "7:00 PM" },
-            { event: "End of Day 1", time: "18:00 PM" }
+            { event: "End of Day 1", time: "8:00 PM" }
         ]
     },
     {
