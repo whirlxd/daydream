@@ -9,9 +9,9 @@
 	// Configuration - Put your information here!
 	const eventName = "Delhi";
 	const eventLocation = "Delhi";
-	const eventAddress = "yet to be decided";
+	const eventAddress = "EMPI Business School, Chhatarpur, New Delhi";
 	// These two are optional
-	const directionsURL = ""
+	const directionsURL = "https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDkyBggCEEUYOzIHCAMQABiPAjIHCAQQABiPAjIHCAUQABiPAjIGCAYQLhhA0gEIMjE5MmowajmoAgCwAgE&um=1&ie=UTF-8&fb=1&gl=in&sa=X&geocode=Kc8nJWow4Aw5MT30ze_8afND&daddr=Near+CSKM+Public+School,+Satbari,+Chhatarpur,+New+Delhi,+Delhi+110068"
 	const contactLink = "mailto:delhi@daydream.hackclub.com"
 	
 	// Sponsors Configuration
@@ -29,8 +29,8 @@
 		{
 			title: "Saturday, September 27th",
 			items: [
-				{ event: "Doors open", time: "11:00 AM" },
-				{ event: "Opening ceremony", time: "12:00 PM" },
+				{ event: "Doors open", time: "9:00 AM" },
+				{ event: "Opening ceremony", time: "9:30 PM" },
 				{ event: "Lunch", time: "12:30 PM" },
 				{ event: "Start working on your project!", time: "1:00 PM" },
 				{ event: "Workshop 1", time: "3:00 PM" },
@@ -45,8 +45,10 @@
 			title: "Sunday, September 28th",
 			items: [
 				{ event: "Breakfast", time: "8:00 AM" },
-				{ event: "Demos!", time: "10:30 AM" },
-				{ event: "Closing ceremony", time: "12:00 PM" }
+				{ event: "Continue Working!", time: "8:30 AM" },
+				{ event: "Shipping Workshop!", time: "5:30 PM" },
+				{ event: "Demos", time: "7:30 PM" },
+				{ event: "Closing ceremony", time: "8:00 PM" }
 			]
 		}
 	];
@@ -1086,7 +1088,15 @@ Mumbai`.split("\n")
 	</div>
 </div>
 {/if}
-
+<p class="text-center text-lg text-[#335969] mb-4">
+				Big shoutout to Jukebox for our
+				<a
+					href="https://www.jukeboxprint.com/custom-stickers"
+					class="text-[#2563eb] font-semibold underline hover:text-[#1e40af] transition-colors"
+				>
+					custom stickers
+				</a>!
+			</p>
 <!-- Gamejam Text Section -->
 <div class="w-full bg-[#FCEFC5] flex justify-center py-16 relative overflow-hidden max-h-[400px]">
 	<!-- Cloud backdrop for gamejam text -->
