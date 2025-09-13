@@ -199,11 +199,6 @@
 			image: '/jakarta/sponsors/twibbonize.png',
 			name: 'Twibbonize',
 			url: 'https://twibbonize.com/'
-		},
-		{
-			image: 'https://storage.jukeboxprint.com/s/images/jukebox-meta-im.png',
-			name: 'Jukebox Print',
-			url: 'https://jukeboxprint.com/custom-stickers'
 		}
 	];
 	const communityPartners = [
@@ -1488,13 +1483,6 @@ Mumbai`.split('\n');
 					{#if contactLink}
 						<!-- Call to action for sponsors -->
 						<div class="mt-8 text-center">
-							<p class="text-lg text-[#335969]">
-								Thanks to Jukebox for the coolest
-								<a
-									href={`https://www.jukeboxprint.com/custom-stickers`}
-									class="underline hover:text-[#477783] transition-colors">custom stickers</a
-								>
-							</p>
 							<p class="text-lg text-[#335969]">
 								{t.wantToSponsor}
 								<a
