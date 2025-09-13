@@ -24,6 +24,7 @@
 		{image: "https://dallasmakerspace.org/w/images/2/2c/PNG_Logo_Coral.png", name: "Dallas Makerspace", url: "https://dallasmakerspace.org/"},
 		{image: "https://drstich.com/wp-content/uploads/2018/11/logo-1.png", name: "Bailey Orthodontics", url: "https://drstich.com/"},
 		{image: "https://circuits-diy.com/wp-content/uploads/2020/03/easyeda-logo.png", name: "Easy EDA", url: "https://easyeda.com/"},
+		{image: "https://th.bing.com/th/id/R.940a3b45e6807ed4d90d6e54e9d4b323?rik=DBnR%2bnYB6LzSdg&riu=http%3a%2f%2fwww.pfuntx.com%2fwp-content%2fuploads%2f2015%2f01%2fandys_frozen.jpg&ehk=BH3Lj7Cr2uMGi8%2bOhgoOhpQLsw86Ye3bgz02wCofovQ%3d&risl=&pid=ImgRaw&r=0", name: "Andy's Frozen Custard", url: "https://www.eatandys.com/"},
 		{image: "https://www.robosource.net/img/robosourcenet-logo-1641673523.jpg", name: "RoboSource", url: "https://www.robosource.net/"}
 	];
 	
