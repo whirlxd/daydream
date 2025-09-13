@@ -8,11 +8,11 @@
 
 	// Configuration - Put your information here!
 	const eventName = "Charlotte"; // This should be the name of your event WITHOUT "Daydream" at the start
-	const eventLocation = "Charlotte";
-	const eventAddress = "TBD"; // Leave this empty if you don't want an address
+	const eventLocation = "The Gravity Center";
+	const eventAddress = "153 S Oakland Ave, Rock Hill, SC 29730"; // Leave this empty if you don't want an address
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=rec1SyZV1FrigMBfG"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
-	const directionsURL = ""
+	const directionsURL = "https://www.google.com/maps/place/153+S+Oakland+Ave,+Rock+Hill,+SC"
 	const contactLink = "mailto:charlotte@daydream.hackclub.com"
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
@@ -874,8 +874,6 @@ Mumbai`.split("\n")
 	<img src="/clouds-top-middle.png" alt="" class="absolute left-5/12 -translate-x-1/2 w-7/12 -bottom-24 z-20 pointer-events-none">
 	<img src="/clouds-top-right.png" alt="" class="absolute right-0 w-1/2 -bottom-12 translate-y-1/2 z-20 pointer-events-none">
 	<img src="/clouds-top-left.png" alt="" class="absolute left-0 w-3/12 -bottom-12  translate-y-1/2 z-20 pointer-events-none">
-	
-
 	
 </div>
 

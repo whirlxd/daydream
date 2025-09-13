@@ -7,28 +7,43 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Atlanta";
-	const eventLocation = "Georgia Tech";
-	const eventAddress = ""; // Leave this empty if you don't want an address
+	const eventName = "Muzaffarpur";
+	const eventLocation = "Muzaffarpur";
+	const eventAddress = "DAV Public School, Bakhri, Muzaffarpur";
 	// These two are optional
-	const directionsURL = ""
-	const contactLink = "mailto:atlanta@daydream.hackclub.com"
+	const directionsURL = "https://maps.app.goo.gl/pVXPPdbrQkdzPtsC9"
+	const contactLink = "mailto:muzaffarpur@daydream.hackclub.com"
 	
 	// Sponsors Configuration
-	const signupLink = "https://forms.hackclub.com/daydream-sign-up"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
-	const sponsorsEnabled = true;
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recv184IchLIW0Y72"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "/atlanta/jukebox.png", name: "Jukebox" , url: "https://www.jukeboxprint.com/custom-stickers", 
-		text: `<p class="text-lg text-[#335969] text-center">
-             Big shoutout to Jukebox for our
-             <a href="https://www.jukeboxprint.com/custom-stickers"
-                class="underline hover:text-[#477783] transition-colors">
-               custom stickers</a>!
-           </p>`		},
-		{ image: "/atlanta/WCT.png", name: "We Create Tech", url: "https://www.wecreatetech.org/" },
-		{ image: "/atlanta/gtsbe.png", name: "National Society of Black Engineers at Georgia Tech", url: "https://www.gtsbe.org/"}
+		{ image: "/sydney/xyz.png", name: ".xyz", url: "https://gen.xyz" },
+		{ image: "/sydney/jlcpcb.png", name: "jlcpcb", url: "https://jlcpcb.com/" },
+		{ image: "/sydney/oshw.png", name: "oshw", url: "https://oshwlab.com/" },
+		{ image: "/sydney/easyeda.png", name: "easyeda", url: "https://easyeda.com/" },
 	];
 	
+	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
+const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [
+	{
+		title: "Saturday, September 27th",
+		items: [
+			{ event: "Doors open", time: "08:00 AM" },
+			{ event: "Opening ceremony", time: "09:00 AM" },
+			{ event: "Breakfast", time: "09:30 AM" },
+			{ event: "Start working on your project!", time: "11:00 AM" },
+			{ event: "Workshop 1", time: "12:00 PM" },
+			{ event: "Activity 1", time: "01:00 PM" },
+			{ event: "Workshop 2", time: "01:30 PM" },
+			{ event: "Lunch", time: "02:00 PM" },
+			{ event: "Lightning talks", time: "03:30 PM" },
+			{ event: "Snack", time: "05:30 PM" },
+			{ event: "Demos!", time: "06:40 PM" },
+			{ event: "Closing ceremony", time: "08:00 PM" }
+		]
+	}
+];
 	
 	import { onMount } from "svelte";
 	import { gsap } from "gsap";
@@ -46,36 +61,11 @@
 	$: currentUrl = `https://daydream.hackclub.com${$page.url.pathname}`;
 	$: pageTitle = `Daydream ${eventName} - ${eventLocation} Game Jam`;
 	$: pageDescription = `Join Daydream ${eventName} in ${eventLocation}! A teen-led game jam where you'll build amazing games with other high schoolers. Food, workshops, and prizes included!`;
-	$: pageKeywords = `game jam, hackathon, teen coding, Hack Club, game development, ${eventLocation}, ${eventName}`;
+	$: pageKeywords = `game jam, hackathon, teen coding, Hack Club, game development, ${eventLocation}, ${eventName}, competition, events, school holidays`;
 
-	// schedule not final
-	const scheduleData = [
-    {
-        title: "Saturday, September 27th",
-        items: [
-            { event: "Doors open", time: "8:00 AM" },
-            { event: "Opening ceremony", time: "9:00 AM" },
-            { event: "Start Working on Your Project + Breakfast", time: "10:00 AM" },
-            { event: "Workshop 1", time: "10:30 AM" },
-            { event: "Activity 1", time: "12:00 PM" },
-            { event: "Progress Check", time: "4:00 PM" },
-            { event: "Workshop 2", time: "5:00 PM" },			
-            { event: "Start Wrapping Up", time: "7:00 PM" },
-            { event: "End of Day 1", time: "8:00 PM" }
-        ]
-    },
-    {
-        title: "Sunday, September 28th",
-        items: [
-            { event: "Breakfast", time: "8:00 AM" },
-			{ event: "Activity 2", time: "9:00 AM"},
-            { event: "Demos!", time: "10:30 AM" },
-            { event: "Closing ceremony", time: "1:00 PM" }
-        ]
-    }
-];
 	// Cities where the game jam is happening
-	const cities = `Columbus
+	const cities = `Muzaffarpur
+Columbus
 Lisbon 
 Boston
 Giza
@@ -99,7 +89,6 @@ San Francisco
 Minneapolis
 Seattle
 Singapore
-Sydney
 Mumbai`.split("\n")
 
 	function createSmoothPath(points: Array<{ x: number; y: number }>) {
@@ -821,7 +810,7 @@ Mumbai`.split("\n")
 			>
 				September 27th & 28th, 2025
 			</h2>
-			<img src="atlanta/daydreamatl.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4" />
+			<img src="daydream.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4" />
 			<a href="https://hackclub.com" class="absolute top-0 -right-6 max-sm:right-0 max-sm:scale-80 animate-hover ![animation-delay:0.9s] ![--hover:-0.2rem]">
 				<img src="flag-plane.png" alt="Hack Club" class="h-28">
 			</a>
@@ -895,13 +884,13 @@ Mumbai`.split("\n")
 			</h2>
 			
 			<div class="text-[#8B4513] font-serif text-xl leading-relaxed space-y-8">
-				<p>Welcome to Hack Club's newest adventure. This fall we invite you to join us for Daydream, the world's biggest Game Jam happening simultaneously in 100 cities.</p>
+				<p>Welcome to Hack Club's newest adventure. This spring we invite you to join us for Daydream, the world's biggest Game Jam happening simultaneously in 100 cities.</p>
 
-				<p class="font-bold text-2xl">Hack Club wants you to make a game this fall.</p>
+				<p class="font-bold text-2xl">Hack Club wants you to make a game this spring.</p>
 
 				<p>Don't consider yourself a game dev? No problem - we have tons of online and in-person workshops for you to make your first game! </p>
 
-				<p>This fall, we invite you to learn something new, make something you're really proud of, meet new friends, and go on an incredible adventure together.</p>
+				<p>This spring, we invite you to learn something new, make something you're really proud of, meet new friends, and go on an incredible adventure together.</p>
 
 				<p class="mb-2">With love,</p>
 
@@ -1090,7 +1079,15 @@ Mumbai`.split("\n")
 	</div>
 </div>
 {/if}
-
+<p class="text-center text-lg text-[#335969] mb-4">
+				Big shoutout to Jukebox for our
+				<a
+					href="https://www.jukeboxprint.com/custom-stickers"
+					class="text-[#2563eb] font-semibold underline hover:text-[#1e40af] transition-colors"
+				>
+					custom stickers
+				</a>!
+			</p>
 <!-- Gamejam Text Section -->
 <div class="w-full bg-[#FCEFC5] flex justify-center py-16 relative overflow-hidden max-h-[400px]">
 	<!-- Cloud backdrop for gamejam text -->
@@ -1444,7 +1441,7 @@ Mumbai`.split("\n")
 			<img src="window-3.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
 				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">Who can participate in Daydream?</h3>
-				<p class="text-sm">All high-school & upper-middle-school aged students are welcome to come!</p>
+				<p class="text-sm">All high-school & upper-primary-school aged students are welcome to come!</p>
 		</div>
 		</div>
 
@@ -1462,7 +1459,7 @@ Mumbai`.split("\n")
 			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
 				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">All this, for free?</h3>
-				<p class="text-sm">Yep! Food, swag and good vibes are all included. Plus, if you're joining us from afar, we'll cover the cost of gas or a bus / train ticket.</p>
+				<p class="text-sm">Yep! Food, swag and good vibes are all included.</p>
 			</div>
 		</div>
 
@@ -1552,4 +1549,3 @@ Mumbai`.split("\n")
 		</div>
 	</div>
 {/if}
-
