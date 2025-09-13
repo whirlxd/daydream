@@ -19,7 +19,8 @@
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
 		{ image: "/khagaria/yubico.svg", name: "Yubico", url: "https://yubico.com" },
-		{ image: "https://storage.jukeboxprint.com/s/images/jukebox-logo.svg", name: "Jukebox", url: "https://www.jukeboxprint.com/custom-stickers" }
+		{ image: "https://storage.jukeboxprint.com/s/images/jukebox-logo.svg", name: "Jukebox", url: "https://www.jukeboxprint.com/custom-stickers" },
+		{ image: "/khagaria/xyz.png", name: ".xyz", url: "https://gen.xyz" }
 		// { image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
 		// { image: "/example/logo3.png", name: "Sponsor 3", url: "https://example3.com" },
 		// { image: "/example/logo4.png", name: "Sponsor 4", url: "https://example4.com" },
