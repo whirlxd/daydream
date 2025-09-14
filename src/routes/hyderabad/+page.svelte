@@ -38,8 +38,7 @@
 				{ event: "Lunch", time: "01:00-02:00"},
 				{ event: "Workshop 1", time: "02:00-03:00" },
 				{ event: "Hacking Session", time: "03:00-07:00" },
-				{ event: "Workshop 2", time: "07:00-08:00" }
-	,	
+				{ event: "Workshop 2", time: "07:00-08:00" },
 			]
 		},
 		{
