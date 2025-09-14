@@ -39,6 +39,21 @@
 		}
 	];
 
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
 	
 	import { onMount } from "svelte";
 	import { gsap } from "gsap";
