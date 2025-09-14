@@ -19,7 +19,7 @@
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
 		{ image: "https://www.charlotte.edu/wp-content/uploads/2024/12/cropped-All-in-C-1.png", name: "University of North Carolina Charlotte", url: "https://www.charlotte.edu/" },
-		{ image: "/charlotte/jukebox-logo.svg", name: "Jukebox Print", url: "https://www.jukeboxprint.com/custom-stickers" }
+		{ image: "/jukeboxcharlotte.png", name: "Jukebox Print", url: "https://www.jukeboxprint.com/custom-stickers" }
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
