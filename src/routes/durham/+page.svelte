@@ -62,6 +62,7 @@
 	import Footer from "$lib/components/Footer.svelte";
 	import ParticipantSignUp from "$lib/components/ParticipantSignUp.svelte";
 	import { page } from '$app/stores';
+	let cursorEl: HTMLDivElement | null = null; // bind target
 	
 	
 	/** @type {import('./$types').PageData} */
@@ -335,7 +336,10 @@ Mumbai`.split("\n")
 	let isRolling = false;
 	let ideaText = "";
 	let isTyping = false;
-	
+	// plane thingy
+	let cursorElement: HTMLDivElement | null = null;
+	let lastMousePos = { x: 0, y: 0 };
+	let currentMousePos = { x: 0, y: 0 };
 	// Generate ticker text from cities array (constant)
 	const tickerText = cities.join(" • ");
 
@@ -622,98 +626,132 @@ Mumbai`.split("\n")
 
 	onMount(() => {
 		console.log('User city:', data.userCity);
-		
-		// Register GSAP plugins
+
+		// GSAP
 		gsap.registerPlugin(ScrollTrigger);
-		
-		// Setup parallax for cloudy background
-		const cloudyBg = document.querySelector('.cloudy-bg-parallax');
+
+		// Helpers that narrow away nulls
+		const cloudyBg = document.querySelector<HTMLElement>('.cloudy-bg-parallax');
 		if (cloudyBg) {
 			gsap.to(cloudyBg, {
-				yPercent: 20,
-				ease: "none",
-				scrollTrigger: {
-					trigger: cloudyBg,
-					start: "bottom bottom",
-					end: "bottom top",
-					scrub: true
-				}
+			yPercent: 20,
+			ease: 'none',
+			scrollTrigger: {
+				trigger: cloudyBg,
+				start: 'bottom bottom',
+				end: 'bottom top',
+				scrub: true
+			}
 			});
 		}
-		
-		// Setup parallax for hero UI elements
-		const heroUI = document.querySelector('.hero-ui-parallax');
+
+		const heroUI = document.querySelector<HTMLElement>('.hero-ui-parallax');
 		if (heroUI) {
 			gsap.to(heroUI, {
-				yPercent: 8,
-				ease: "none",
-				scrollTrigger: {
-					trigger: heroUI,
-					start: "bottom bottom",
-					end: "bottom top",
-					scrub: true
-				}
+			yPercent: 8,
+			ease: 'none',
+			scrollTrigger: {
+				trigger: heroUI,
+				start: 'bottom bottom',
+				end: 'bottom top',
+				scrub: true
+			}
 			});
 		}
-		
-		// Setup parallax for back buildings (slower movement)
-		const backBuildings = document.querySelector('.buildings-back-parallax');
+
+		const backBuildings = document.querySelector<HTMLElement>('.buildings-back-parallax');
 		if (backBuildings) {
 			gsap.to(backBuildings, {
-				yPercent: 20,
-				ease: "none",
-				scrollTrigger: {
-					trigger: backBuildings,
-					start: "bottom bottom",
-					end: "bottom top",
-					scrub: true
-				}
+			yPercent: 20,
+			ease: 'none',
+			scrollTrigger: {
+				trigger: backBuildings,
+				start: 'bottom bottom',
+				end: 'bottom top',
+				scrub: true
+			}
 			});
 		}
-		
-		// Setup parallax for front buildings (faster movement)
-		const frontBuildings = document.querySelector('.buildings-front-parallax');
+
+		const frontBuildings = document.querySelector<HTMLElement>('.buildings-front-parallax');
 		if (frontBuildings) {
 			gsap.to(frontBuildings, {
-				yPercent: 10,
-				ease: "none",
-				scrollTrigger: {
-					trigger: frontBuildings,
-					start: "top top",
-					end: "bottom top",
-					scrub: true
-				}
+			yPercent: 10,
+			ease: 'none',
+			scrollTrigger: {
+				trigger: frontBuildings,
+				start: 'top top',
+				end: 'bottom top',
+				scrub: true
+			}
 			});
 		}
-		
-		// Initial path calculation
-		setTimeout(() => {
+
+		// Initial path calculation (store timeout id so we can clear it)
+		const pathTimeoutId = window.setTimeout(() => {
 			updatePath();
 			setupPlaneAnimation();
 		}, 100);
-		
-		// Update on resize
+
+		// Resize handling
 		const handleResize = () => {
 			updatePath();
 			ScrollTrigger.refresh();
 		};
-		window.addEventListener("resize", handleResize);
-		
-		// Handle tab visibility changes
-		document.addEventListener("visibilitychange", handleVisibilityChange);
-		
-		// Start particle animation
+		window.addEventListener('resize', handleResize);
+
+		// Tab visibility
+		document.addEventListener('visibilitychange', handleVisibilityChange);
+
+		// Particles
 		animateParticles();
-		
-		// Start particle spawning
-		const particleInterval = setInterval(createParticle, 250);
-		
-		// Cleanup
+		const particleInterval = window.setInterval(createParticle, 250);
+
+		// --- Cursor setup using an <img> ---
+		const cursorEl = document.createElement('img');
+		cursorEl.src = 'paper-airplane.png';       // place file in /static folder
+		cursorEl.alt = 'cursor airplane';
+		cursorEl.className = 'paper-airplane-cursor';
+
+		// basic inline styling so it behaves like a cursor
+		cursorEl.style.position = 'fixed';
+		cursorEl.style.pointerEvents = 'none';
+		cursorEl.style.width = '81px';   // tweak as needed
+		cursorEl.style.height = '81px';
+		cursorEl.style.zIndex = '9999';
+
+		document.body.appendChild(cursorEl);
+
+		function handleMouseMove(e: MouseEvent) {
+		// assumes lastMousePos/currentMousePos exist in outer scope
+		lastMousePos.x = currentMousePos.x;
+		lastMousePos.y = currentMousePos.y;
+		currentMousePos.x = e.clientX;
+		currentMousePos.y = e.clientY;
+
+		cursorEl.style.left = `${currentMousePos.x - 12}px`;
+		cursorEl.style.top  = `${currentMousePos.y - 12}px`;
+
+		const dx = currentMousePos.x - lastMousePos.x;
+		const dy = currentMousePos.y - lastMousePos.y;
+		if (dx !== 0 || dy !== 0) {
+			const angle = Math.atan2(dy, dx) * 180 / Math.PI;
+			cursorEl.style.transform = `rotate(${angle}deg)`;
+		}
+		}
+		document.addEventListener('mousemove', handleMouseMove);
+
+		// cleanup
 		return () => {
-			window.removeEventListener("resize", handleResize);
-			document.removeEventListener("visibilitychange", handleVisibilityChange);
-			clearInterval(particleInterval);
-			ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+		window.clearTimeout(pathTimeoutId);
+		window.removeEventListener('resize', handleResize);
+		document.removeEventListener('visibilitychange', handleVisibilityChange);
+		window.clearInterval(particleInterval);
+		document.removeEventListener('mousemove', handleMouseMove);
+		if (document.body.contains(cursorEl)) {
+			document.body.removeChild(cursorEl);
+		}
+		ScrollTrigger.getAll().forEach(t => t.kill());
 		};
 	});
 </script>
@@ -755,6 +793,21 @@ Mumbai`.split("\n")
 	.idea-output-box {
 		scrollbar-width: auto;
 		scrollbar-color: #d1e3ee transparent;
+	}
+	:global(body) {
+	background-color: #CCF4FD;
+	max-width: 100vw;
+	overflow-x: hidden;
+	cursor: none; /* Hide default cursor */
+	}
+
+	:global(.paper-airplane-cursor) {
+		position: fixed;
+		pointer-events: none;
+		z-index: 10000;
+		transition: transform 0.1s ease-out;
+		background: transparent;
+		background-size: contain;
 	}
 </style>
 
@@ -811,7 +864,7 @@ Mumbai`.split("\n")
 	<div class="buildings-front-parallax absolute top-0 left-0 w-full h-full bg-[url(/buildings-front.png)] bg-no-repeat bg-contain pointer-events-none lg:-translate-y-15"></div>
 	<!-- brush texture clipped to front buildings -->
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat pointer-events-none opacity-100 lg:-translate-y-15 bg-center mix-blend-overlay" style="mask-image: url('/buildings-front.png'); mask-size: contain; mask-repeat: no-repeat; mask-position: center top; -webkit-mask-image: url('/buildings-front.png'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center top;"></div>
-	<div class="hero-ui-parallax flex flex-col items-center justify-center text-center relative z-5 -translate-y-2">
+	<div class="hero-ui-parallax flex flex-col items-center justify-center text-center relative z-5 -translate-y-2 pt-8 md:pt-16 lg:pt-36">
 		<div class="inline-block relative">
 			<div class="h-12"></div> 
 			<!-- space for the ship -->
@@ -861,27 +914,36 @@ Mumbai`.split("\n")
 		{/each}
 	</div>
 
+		<!-- Venue -->
+	<section class="relative isolate z-[30] w-full py-16">
+		<div class="mx-auto max-w-3xl px-6">
+			<div class="rounded-2xl bg-[#fff6d6] ring-1 ring-[#8B4513]/15 shadow-[0_8px_30px_rgba(0,0,0,0.08)] p-8 md:p-12">
+			<h2 class="text-4xl font-serif text-[#8B4513] mb-4 text-center">Venue Location</h2>
 
+			<!-- force wrapping even if a parent has nowrap -->
+			<p class="text-xl text-[#5C4033] text-center whitespace-normal break-words">
+				📍 <span class="font-medium">5310 S Alston Ave. STE 200</span><br />
+				Durham, NC 27713
+			</p>
 
-	<img src="/clouds-top-middle-bg.svg" alt="" class="absolute left-5/12 -translate-x-1/2 w-7/12 -bottom-24">
-	<div class="absolute left-5/12 -translate-x-1/2 w-7/12 -bottom-24 bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none h-full" style="mask-image: url('/clouds-top-middle-bg.svg'); mask-size: contain; mask-repeat: no-repeat; mask-position: center; -webkit-mask-image: url('/clouds-top-middle-bg.svg'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center;"></div>
-	
-	<img src="/clouds-top-right-bg.svg" alt="" class="absolute right-0 w-1/2 -bottom-12 translate-y-1/2">
-	<div class="absolute right-0 w-1/2 -bottom-12 translate-y-1/2 bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none h-full" style="mask-image: url('/clouds-top-right-bg.svg'); mask-size: contain; mask-repeat: no-repeat; mask-position: center; -webkit-mask-image: url('/clouds-top-right-bg.svg'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center;"></div>
-	
-	<img src="/clouds-top-left-bg.svg" alt="" class="absolute left-0 w-3/12 -bottom-12  translate-y-1/2">
-	<div class="absolute left-0 w-3/12 -bottom-12 translate-y-1/2 bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none h-full" style="mask-image: url('/clouds-top-left-bg.svg'); mask-size: contain; mask-repeat: no-repeat; mask-position: center; -webkit-mask-image: url('/clouds-top-left-bg.svg'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center;"></div>
-	
-	<img src="/clouds-top-middle.png" alt="" class="absolute left-5/12 -translate-x-1/2 w-7/12 -bottom-24 z-20 pointer-events-none">
-	<img src="/clouds-top-right.png" alt="" class="absolute right-0 w-1/2 -bottom-12 translate-y-1/2 z-20 pointer-events-none">
-	<img src="/clouds-top-left.png" alt="" class="absolute left-0 w-3/12 -bottom-12  translate-y-1/2 z-20 pointer-events-none">
-	
+			<p class="text-[#5C4033] text-center mt-4">
+				Conveniently near RTP, with easy access to parking and public transit.
+			</p>
+			</div>
+		</div>
+	</section>
 
-	
+		<img src="/clouds-top-middle-bg.svg" alt="" class="absolute left-5/12 -translate-x-1/2 w-7/12 -bottom-24">
+		<img src="/clouds-top-right-bg.svg"  alt="" class="absolute right-0 w-1/2 -bottom-12 translate-y-1/2">
+		<img src="/clouds-top-left-bg.svg"   alt="" class="absolute left-0 w-3/12 -bottom-12 translate-y-1/2">
+
+		<img src="/clouds-top-middle.png" alt="" class="absolute left-5/12 -translate-x-1/2 w-7/12 -bottom-24 z-20 pointer-events-none">
+		<img src="/clouds-top-right.png"  alt="" class="absolute right-0 w-1/2 -bottom-12 translate-y-1/2 z-20 pointer-events-none">
+		<img src="/clouds-top-left.png"   alt="" class="absolute left-0 w-3/12 -bottom-12 translate-y-1/2 z-20 pointer-events-none">
 </div>
 
+<!--
 <div class="w-full relative flex items-start justify-center">
-	<!-- background -->
 	<div class="absolute top-0 left-0 w-full h-full -z-50 bg-[#FCEFC5]"></div>
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-30 pointer-events-none -z-40"></div>
 	
@@ -912,11 +974,9 @@ Mumbai`.split("\n")
 	<div class="w-full absolute z-30 max-h-64 bottom-0 max-2xl:translate-y-1/4 max-lg:translate-y-1/2 pointer-events-none">	
 		<img src="/cloud-cover-1.png" alt="" class="w-full h-full object-contain min-[2048px]:hidden">
 	</div>
-
 </div>
-
-<!-- Schedule Container -->
-<div class="w-full bg-[#FCEFC5] py-16 px-8 flex justify-center">
+-->
+<div class="w-full bg-[#FCEFC5] pt-8 md:pt-16 lg:pt-24 pb-16 px-8 flex justify-center">
 	<div class="relative max-w-4xl w-full">
 		<!-- Billboard Container -->
 		<div class="relative bg-[#f0f9ff] border-[10px] border-b-[16px] border-[#888896] rounded-lg rounded-b-xl mx-auto z-40">
