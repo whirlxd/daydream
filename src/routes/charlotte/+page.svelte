@@ -18,7 +18,7 @@
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "/https://www.charlotte.edu/wp-content/uploads/2024/12/cropped-All-in-C-1.png", name: "University of North Carolina Charlotte", url: "https://www.charlotte.edu/" },
+		{ image: "https://www.charlotte.edu/wp-content/uploads/2024/12/cropped-All-in-C-1.png", name: "University of North Carolina Charlotte", url: "https://www.charlotte.edu/" },
 		{ image: "/charlotte/jukebox-logo.svg", name: "Jukebox Print", url: "https://www.jukeboxprint.com/custom-stickers" }
 	];
 	
