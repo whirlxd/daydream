@@ -9,22 +9,16 @@
 	// Configuration - Put your information here!
 	const eventName = "Lagos"; // This should be the name of your event WITHOUT "Daydream" at the start
 	const eventLocation = "Lagos";
-	const eventAddress = "University of Lagos(UNILAG)"; // Leave this empty if you don't want an address
+	const eventAddress = "ALX Costain Hub(5th floor ITF House)"; // Leave this empty if you don't want an address
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
-	const directionsURL = ""
+	const directionsURL = "https://maps.app.goo.gl/KA2WQHQttrHph6NPA"
 	const contactLink = ""
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
-	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
+	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
-		{ image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
-		{ image: "/example/logo3.png", name: "Sponsor 3", url: "https://example3.com" },
-		{ image: "/example/logo4.png", name: "Sponsor 4", url: "https://example4.com" },
-		{ image: "/example/logo5.png", name: "Sponsor 5", url: "https://example5.com" },
-		{ image: "/example/logo6.png", name: "Sponsor 6", url: "https://example6.com" },
-		{ image: "/example/logo7.png", name: "Sponsor 7", url: "https://example7.com" }
+		{ image: "https://storage.jukeboxprint.com/s/images/jukebox-logo.svg", name: "Sponsor 1", url: "https://www.jukeboxprint.com/custom-stickers" },
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
@@ -33,27 +27,24 @@
 			title: "Friday, September 26th",
 			items: [
 
-				{ event: "Doors open", time: "11:00 AM" },
+				{ event: "Doors open + Check-In", time: "11:00 AM" },
 				{ event: "Welcome Speech (Organizer)", time: "11:30 AM" },
-				{ event: "Theme/Problem Statement Reveal + Rules", time: "11:45 AM" },
+				{ event: "Problem Statement Reveal + Ground Rules", time: "11:45 AM" },
 				{ event: "Kickoff Speech (Guest/Judge/Partner) ", time: "12:15 PM" },
-				{ event: "Final Reg(Teams registered, get seated)", time: "12:30 PM" },
+				{ event: "Sponsor Showcase / Presentations", time: "12:30 PM" },
 				{ event: "Start working on your project!", time: "1:00 PM" },
 				{ event: "Lunch", time: "2:00 PM" },
 				{ event: "Activity 1", time: "4:00 PM" },
 				{ event: "Workshop 1", time: "4:30 PM" },
-				{ event: "Dinner", time: "6:00 PM" },
-				{ event: "Lightning talks", time: "8:00 PM" },
-				{ event: "Midnight surprise", time: "12:00 AM" }
+				{ event: "Day 1 wrap-Up", time: "6:00 PM" }
 			]
 		},
 		{
 			title: "Saturday, September 27th",
 			items: [
-				{ event: "Breakfast", time: "8:00 AM" },
+				{ event: "Doors Reopen & Breakfast", time: "9:00 AM" },
 				{ event: "Demos!(5-7 mins)", time: "10:30 AM" },
-				{ event: "Judging and Deliberation", time: "12:30 PM" },
-				{ event: "Lunch", time: "12:30 PM" },
+				{ event: "Judging and Deliberation + lunch", time: "12:30 PM" },
 				{ event: "Awards & Closing Ceremony", time: "2:00 PM" },
 			]
 		}
