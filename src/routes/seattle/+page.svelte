@@ -13,43 +13,54 @@
 	const signupLink = 'https://forms.hackclub.com/daydream-sign-up?event=recK6TeqRiPWomO7z'; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = '';
-	const contactLink = 'hunterzhuang0@gmail.com';
+	const contactLink = 'mailto:hunterzhuang0@gmail.com';
 
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
-	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
+	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: '/example/logo1.png', name: 'Sponsor 1', url: 'https://example1.com' },
-		{ image: '/example/logo2.png', name: 'Sponsor 2', url: 'https://example2.com' },
-		{ image: '/example/logo3.png', name: 'Sponsor 3', url: 'https://example3.com' },
-		{ image: '/example/logo4.png', name: 'Sponsor 4', url: 'https://example4.com' },
-		{ image: '/example/logo5.png', name: 'Sponsor 5', url: 'https://example5.com' },
-		{ image: '/example/logo6.png', name: 'Sponsor 6', url: 'https://example6.com' },
-		{ image: '/example/logo7.png', name: 'Sponsor 7', url: 'https://example7.com' }
+		// {
+		// 	image: '/seattle/jukebox.svg',
+		// 	name: 'Jukebox',
+		// 	url: 'https://www.jukeboxprint.com/custom-stickers'
+		// }
+		// { image: '/example/logo2.png', name: 'Sponsor 2', url: 'https://example2.com' }
 	];
 
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
-	const scheduleData: { title: string; items: { event: string; time: string }[] }[] = [
+	const scheduleData: { title: string; items: { event: string; location : string; time: string }[] }[] = [
 		{
 			title: 'Saturday, September 27th',
 			items: [
-				{ event: 'Doors open', time: '11:00 AM' },
-				{ event: 'Opening ceremony', time: '12:00 PM' },
-				{ event: 'Lunch', time: '12:30 PM' },
-				{ event: 'Start working on your project!', time: '1:00 PM' },
-				{ event: 'Workshop 1', time: '2:00 PM' },
-				{ event: 'Activity 1', time: '4:00 PM' },
-				{ event: 'Workshop 2', time: '4:00 PM' },
-				{ event: 'Dinner', time: '6:00 PM' },
-				{ event: 'Lightning talks', time: '8:00 PM' },
-				{ event: 'Midnight surprise', time: '12:00 AM' }
+				{ event: 'Doors open', location: '', time: '09:00 AM' },
+				{ event: 'Opening ceremony', location: 'Plato', time: '09:30 AM' },
+				{ event: 'Workshop: How to make a Godot Platformer', location: 'Plato', time: '10:30 AM' },
+				{ event: 'Workshop: How to make a Ren\'Py Visual Novel', location: 'Lorde', time: '10:30 AM' },
+				{ event: 'Required: Getting your project on Github!', location: 'Plato', time: '11:30 AM' },
+				{ event: 'Lunch', location: 'Cafe', time: '12:00 PM' },
+				{ event: 'Workshop: Get introduced to hardware! ', location: 'Lorde', time: '03:00 PM' },
+				{ event: 'Dinner', location: 'Cafe', time: '06:00 PM' },
+				{ event: 'Show off your Project!', location: 'Lorde', time: '08:00 PM' },
+				{ event: 'Goodbye!', location: 'Plato', time: '08:50 PM' },
+				{ event: 'Doors Closed', location: '', time: '09:20 PM' },
 			]
 		},
 		{
 			title: 'Sunday, September 28th',
 			items: [
-				{ event: 'Breakfast', time: '8:00 AM' },
-				{ event: 'Demos!', time: '10:30 AM' },
-				{ event: 'Closing ceremony', time: '12:00 PM' }
+				{ event: 'Doors open', location: '', time: '09:00 AM' },
+				{ event: 'Welcome Back! Presentation', location: 'Plato', time: '09:30 AM' },
+				{ event: 'Lunch', location: 'Cafe', time: '12:00 PM' },
+				{ event: 'Workshop: How to ship a Godot Game', location: 'Plato', time: '04:10 PM' },
+				{ event: 'Workshop: How to ship a Ren\'Py Novel', location: 'Lorde', time: '04:10 PM' },
+				{ event: 'Workshop: How to ship a Unity Game', location: 'Lorde', time: '04:40 PM' },
+				{ event: 'Dinner', location: 'Cafe', time: '05:30 PM' },
+				{ event: 'SHIP YOUR GAME!', location: '', time: '06:00 PM' },
+				{ event: 'Required: How to vote on Podium', location: 'Plato', time: '06:30 PM' },
+				{ event: 'Merch Handout and Last Minute Voting', location: 'Plato', time: '07:35 PM' },
+				{ event: 'Voting Closes', location: '', time: '08:00 PM' },
+				{ event: 'Closing ceremony', location: 'Plato', time: '08:20 PM' },
+				{ event: 'Clean-up and Leave', location: '', time: '09:00 PM' },
+				{ event: 'Doors Closed', location: '', time: '09:20 PM' }
 			]
 		}
 	];
@@ -810,18 +821,18 @@ Mumbai`.split('\n');
 	></div>
 
 	<div
-		class="buildings-front-parallax absolute top-0 left-0 w-full h-full bg-[url(/buildings-front.png)] bg-no-repeat bg-contain pointer-events-none lg:-translate-y-15"
+		class="buildings-front-parallax absolute top-0 left-0 w-full h-full bg-[url(/seattle/banner.svg)] bg-no-repeat bg-contain pointer-events-none lg:-translate-y-28"
 	></div>
 	<!-- brush texture clipped to front buildings -->
 	<div
 		class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat pointer-events-none opacity-100 lg:-translate-y-15 bg-center mix-blend-overlay"
-		style="mask-image: url('/buildings-front.png'); mask-size: contain; mask-repeat: no-repeat; mask-position: center top; -webkit-mask-image: url('/buildings-front.png'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center top;"
+		style="mask-image: url('/seattle/banner.svg'); mask-size: contain; mask-repeat: no-repeat; mask-position: center top; -webkit-mask-image: url('/seattle/banner.svg'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center top;"
 	></div>
 	<div
-		class="hero-ui-parallax flex flex-col items-center justify-center text-center relative z-5 -translate-y-20"
+		class="hero-ui-parallax flex flex-col items-center justify-center text-center relative z-5 -translate-y-20 min-w-full"
 	>
 		<div class="inline-block relative">
-			<div class="h-24"></div>
+			<div class="h-36"></div>
 			<!-- space for the ship -->
 			<h2
 				class="text-xl font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent absolute left-1/2 max-sm:translate-y-4 max-sm:mb-0 max-md:-mb-8 md:left-[calc(50%+4rem)] -translate-x-1/2 bottom-8 italic w-max md:text-lg max-sm:text-lg"
@@ -829,15 +840,15 @@ Mumbai`.split('\n');
 				September 27th & 28th, 2025
 			</h2>
 			<img
-				src="seattle/daydream.svg"
+				src="/seattle/daydream.svg"
 				alt="Daydream"
-				class="mb-9 w-auto h-auto object-contain max-w-full px-4"
+				class="mb-9 w-auto h-48 object-contain max-w-full py-4"
 			/>
 			<a
 				href="https://hackclub.com"
-				class="absolute top-0 -right-3 max-sm:right-0 max-sm:scale-80 animate-hover ![animation-delay:0.9s] ![--hover:-0.2rem] p-4"
+				class="absolute top-8 -right-30 max-sm:right-0 max-sm:scale-80 animate-hover ![animation-delay:0.9s] ![--hover:-0.2rem] p-4"
 			>
-				<img src="flag-plane.png" alt="Hack Club" class="h-28" />
+				<img src="flag-plane.png" alt="Hack Club" class="h-32" />
 			</a>
 		</div>
 		<div class="relative inline-block px-4">
@@ -858,7 +869,7 @@ Mumbai`.split('\n');
 			</h4>
 		</div>
 
-		<ParticipantSignUp {eventName} />
+		<ParticipantSignUp {signupLink} {eventName} />
 	</div>
 
 	<!-- <img src="hot-air-balloon.png" alt="" class="absolute w-1/8 right-32 bottom-40 z-20"> -->
@@ -922,25 +933,7 @@ Mumbai`.split('\n');
 		class="absolute left-0 w-3/12 -bottom-12 translate-y-1/2 z-20 pointer-events-none"
 	/>
 
-	<!-- Desktop stickers button (bottom left) -->
-	<a
-		href="https://forms.hackclub.com/daydream-stickers"
-		target="_blank"
-		class="hidden md:block absolute bottom-16 left-16 z-50 w-max px-4 py-2 bg-pink border-b-2 border-b-pink-dark text-white rounded-full active:transform active:translate-y-0.5 transition-all duration-100 font-sans cursor-pointer overflow-visible hover:shadow-[0_2px_0_0_theme(colors.pink.dark)] hover:-translate-y-[2px] active:border-transparent active:shadow-none"
-	>
-		Get free stickers
-		<img
-			src="button-clouds.svg"
-			alt=""
-			class="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto object-contain pointer-events-none"
-		/>
-		<img
-			src="rock-sticker.png"
-			alt=""
-			class="absolute bottom-2 right-3 translate-2/3 w-18 h-18 object-contain pointer-events-none"
-			style="transform: rotate(-15deg);"
-		/>
-	</a>
+	
 </div>
 
 <div class="w-full relative flex items-start justify-center">
@@ -961,7 +954,7 @@ Mumbai`.split('\n');
 				class="absolute bottom-0 left-0 w-full h-24 z-10 pointer-events-none bg-[url('/clouds-loop.png')] bg-repeat-x bg-bottom bg-contain"
 			></div>
 			<h2 class="text-5xl font-serif italic text-[#8B4513] mb-10 relative">
-				Dear Hackers, Musicians, and Artist,
+				Dear Hackers, Musicians, and Artists,
 				<img src="/underline.svg" alt="" class="absolute left-0 -bottom-3 w-64 h-auto opacity-70" />
 			</h2>
 
@@ -1044,7 +1037,8 @@ Mumbai`.split('\n');
 								{#each day.items as item, index}
 									<div class="flex items-center justify-between py-2">
 										<span class="text-lg font-sans text-[#477783]">{item.event}</span>
-										<span class="text-lg font-sans text-[#477783]">{item.time}</span>
+										<span class="text-lg font-sans text-[#477783] ml-auto mr-4">{item.location}</span>
+										<span class="text-lg font-mono text-[#477783]">{item.time}</span>
 									</div>
 									{#if index < day.items.length - 1}
 										<div class="h-[2px] bg-white/30"></div>
@@ -1111,6 +1105,21 @@ Mumbai`.split('\n');
 
 					<!-- Sponsors Grid -->
 					<div class="relative z-10 min-h-40">
+						<div
+							class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors gap-8"
+						>
+							<img
+								src="seattle/jukebox.svg"
+								alt="Jukebox"
+								class="max-w-full max-h-full object-contain"
+							/>
+							<p class="text-lg text-[#335969]">
+								<a href="https://www.jukeboxprint.com/custom-stickers" class="text-pink-600"
+									>Custom Stickers</a
+								>
+								with love from Jukebox
+							</p>
+						</div>
 						{#if sponsors.length > 0}
 							<!-- First row (up to 4 sponsors) -->
 							{#if sponsors.length > 4}
@@ -1421,7 +1430,7 @@ Mumbai`.split('\n');
 				<div
 					class="absolute inset-0 justify-center text-center p-6 text-xl font-serif max-md:text-lg text-[#8B4513] inline-block content-center"
 				>
-					<span class="font-sans text-[#F2993E] font-bold text-[1.3rem] mr-1">#4:</span> Start
+					<span class="font-sans text-[#F2993E] font-bold text-[1.5rem] mr-1">#4:</span> Start
 					building your game - <em>no experience needed</em>
 				</div>
 			</div>
@@ -1697,7 +1706,7 @@ Mumbai`.split('\n');
 								href="https://juanes10201.itch.io/speedtickers"
 								target="_blank"
 								class="underline mr-2">SPEEDTICKERS</a
-							> by Agustin
+							> by Agustin & Juan
 						</li>
 					</ul>
 
