@@ -16,7 +16,7 @@
 	const contactLink = "mailto:warsaw@daydream.hackclub.com"
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
-	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
+	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
 	const sponsors = [
 		{ image: "https://hc-cdn.hel1.your-objectstorage.com/s/v3/da7248dae7a294719b33caf12c532988c3864d96_untitled233.png", name: "Sponsor 1", url: "https://www.jukeboxprint.com/custom-stickers" },
 
@@ -1272,7 +1272,6 @@ Mumbai`.split("\n")
 					title="Daydream Events Map">
 				</iframe>
 			</div>
-			
 			{#if eventAddress}
 				<p class="text-center font-sans text-2xl pt-12 max-sm:text-xl text-[#60574b] z-10000">
 					{#if directionsURL}
@@ -1282,6 +1281,7 @@ Mumbai`.split("\n")
 					{/if}
 				</p>
 			{/if}
+			<p>Thank you for the <a href="https://www.jukeboxprint.com/custom-stickers">Custom stickers</a> provided by Jukebox</p>
 		</div>
 	</div>
 
