@@ -9,7 +9,7 @@
 	// Configuration - Put your information here!
 	const eventName = "Hyderabad"; // This should be the name of your event WITHOUT "Daydream" at the start
 	const eventLocation = "Hyderabad, Telangana";
-	const eventAddress = ""; // Leave this empty if you don't want an address
+	const eventAddress = "IP HEIGHTS NETWORK SOLUTIONS PRIVATE LIMITED SUITE A, 3RD FLOOR, PLOT NO 29, ROAD NO 76 JUBILEE HILLS HYDERABAD TELANGANA 500 033"; // Leave this empty if you don't want an address
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=reccBt5x14OKtud8m"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = ""
@@ -37,9 +37,8 @@
 				{ event: "Hacking Begins", time: "10:00-01:00" },
 				{ event: "Lunch", time: "01:00-02:00"},
 				{ event: "Workshop 1", time: "02:00-03:00" },
-				{ event: "Hacking Session", time: "03:00-06:00" },
-				{ event: "Workshop 2", time: "06:00-07:00" },
-				{ event: "Dinner", time: "07:00-08:00" },	
+				{ event: "Hacking Session", time: "03:00-07:00" },
+				{ event: "Workshop 2", time: "07:00-08:00" },
 			]
 		},
 		{
@@ -52,7 +51,7 @@
 				{ event: "Project Submission", time: "04:00-05:00" },
 				{ event: "Judging & Networking", time: "05:00-06:30" },
 				{ event: "Closing Ceremony + Prizes", time: "06:30-07:30" },
-				{ event: "Dinner & Farewell", time: "07:30-08:00" },
+				{ event: "Farewell", time: "07:30-08:00" },
 			]
 		}
 	];

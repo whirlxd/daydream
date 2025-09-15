@@ -8,23 +8,18 @@
 
 	// Configuration - Put your information here!
 	const eventName = "Charlotte"; // This should be the name of your event WITHOUT "Daydream" at the start
-	const eventLocation = "Charlotte";
-	const eventAddress = "TBD"; // Leave this empty if you don't want an address
+	const eventLocation = "The Gravity Center";
+	const eventAddress = "153 S Oakland Ave, Rock Hill, SC 29730"; // Leave this empty if you don't want an address
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=rec1SyZV1FrigMBfG"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
-	const directionsURL = ""
+	const directionsURL = "https://www.google.com/maps/place/153+S+Oakland+Ave,+Rock+Hill,+SC"
 	const contactLink = "mailto:charlotte@daydream.hackclub.com"
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
-	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
+	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
-		{ image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
-		{ image: "/example/logo3.png", name: "Sponsor 3", url: "https://example3.com" },
-		{ image: "/example/logo4.png", name: "Sponsor 4", url: "https://example4.com" },
-		{ image: "/example/logo5.png", name: "Sponsor 5", url: "https://example5.com" },
-		{ image: "/example/logo6.png", name: "Sponsor 6", url: "https://example6.com" },
-		{ image: "/example/logo7.png", name: "Sponsor 7", url: "https://example7.com" }
+		{ image: "https://www.charlotte.edu/wp-content/uploads/2024/12/cropped-All-in-C-1.png", name: "University of North Carolina Charlotte", url: "https://www.charlotte.edu/" },
+		{ image: "https://storage.jukeboxprint.com/s/images/jukebox-meta-im.png", name: "Jukebox Print", url: "https://www.jukeboxprint.com/custom-stickers" }
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
@@ -874,8 +869,6 @@ Mumbai`.split("\n")
 	<img src="/clouds-top-middle.png" alt="" class="absolute left-5/12 -translate-x-1/2 w-7/12 -bottom-24 z-20 pointer-events-none">
 	<img src="/clouds-top-right.png" alt="" class="absolute right-0 w-1/2 -bottom-12 translate-y-1/2 z-20 pointer-events-none">
 	<img src="/clouds-top-left.png" alt="" class="absolute left-0 w-3/12 -bottom-12  translate-y-1/2 z-20 pointer-events-none">
-	
-
 	
 </div>
 

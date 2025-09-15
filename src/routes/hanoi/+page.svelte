@@ -16,15 +16,15 @@
 	const contactLink = "mailto:hanoi@daydream.hackclub.com"
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
-	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
+	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
-		{ image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
-		{ image: "/example/logo3.png", name: "Sponsor 3", url: "https://example3.com" },
-		{ image: "/example/logo4.png", name: "Sponsor 4", url: "https://example4.com" },
-		{ image: "/example/logo5.png", name: "Sponsor 5", url: "https://example5.com" },
-		{ image: "/example/logo6.png", name: "Sponsor 6", url: "https://example6.com" },
-		{ image: "/example/logo7.png", name: "Sponsor 7", url: "https://example7.com" }
+		{ image: "/hanoi/jukebox.webp", name: "Jukebox", url: "https://www.jukeboxprint.com/custom-stickers"},
+		// { image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
+		// { image: "/example/logo3.png", name: "Sponsor 3", url: "https://example3.com" },
+		// { image: "/example/logo4.png", name: "Sponsor 4", url: "https://example4.com" },
+		// { image: "/example/logo5.png", name: "Sponsor 5", url: "https://example5.com" },
+		// { image: "/example/logo6.png", name: "Sponsor 6", url: "https://example6.com" },
+		// { image: "/example/logo7.png", name: "Sponsor 7", url: "https://example7.com" }
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
@@ -1010,9 +1010,9 @@ Mumbai`.split("\n")
 							<div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center mb-8">
 								{#each sponsors.slice(0, 4) as sponsor}
 									<a href={sponsor.url} class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors" target="_blank" rel="noopener noreferrer">
-										<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain">
-									</a>
+										<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain"></a>
 								{/each}
+
 							</div>
 							
 							<!-- Second row (remaining sponsors, centered) -->
@@ -1042,11 +1042,11 @@ Mumbai`.split("\n")
 							</div>
 						{/if}
 					{/if}
-					
+
 					{#if contactLink}
 						<!-- Call to action for sponsors -->
 						<div class="mt-8 text-center">
-							<p class="text-lg text-[#335969]">Want to sponsor Daydream {eventName}? <a href={contactLink} class="underline hover:text-[#477783] transition-colors">Get in touch</a></p>
+							<p class="text-lg text-[#335969]">Big shoutout to Jukebox for our <a href="https://www.jukeboxprint.com/custom-stickers">custom stickers</a>! <br> Want to sponsor Daydream {eventName}? <a href={contactLink} class="underline hover:text-[#477783] transition-colors">Get in touch</a></p>
 						</div>
 					{/if}
 				</div>

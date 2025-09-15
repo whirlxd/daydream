@@ -292,7 +292,7 @@ Roblox`.split('\n');
 	<title>Daydream Silicon Valley - Game Jam Paradise | September 27-28, 2025</title>
 	<meta
 		name="description"
-		content="Join Silicon Valley's most innovative game jam! 48 hours of game creation magic with industry mentors, cutting-edge tools, and legendary rewards. Where game dev dreams become reality."
+		content="Join Silicon Valley's most innovative game jam! 24 hours of game creation magic with professionals, cutting-edge tools, and rewards. Where game dev dreams become reality."
 	/>
 	<meta
 		name="keywords"
@@ -311,7 +311,7 @@ Roblox`.split('\n');
 	<meta property="og:title" content="Daydream Silicon Valley - Game Jam Paradise" />
 	<meta
 		property="og:description"
-		content="Join Silicon Valley's most innovative game jam! 48 hours of game creation magic with industry mentors and legendary rewards."
+		content="Join Silicon Valley's most innovative game jam! 24 hours of game creation magic with professionals and rewards."
 	/>
 	<meta property="og:image" content="https://daydream.hackclub.com/banner.png" />
 
@@ -321,7 +321,7 @@ Roblox`.split('\n');
 	<meta property="twitter:title" content="Daydream Silicon Valley - Game Jam Paradise" />
 	<meta
 		property="twitter:description"
-		content="Join Silicon Valley's most innovative game jam! 48 hours of game creation magic with industry mentors and legendary rewards."
+		content="Join Silicon Valley's most innovative game jam! 24 hours of game creation magic with professionals and rewards."
 	/>
 	<meta property="twitter:image" content="https://daydream.hackclub.com/banner.png" />
 
@@ -334,7 +334,7 @@ Roblox`.split('\n');
 			"@context": "https://schema.org",
 			"@type": "Event",
 			"name": "Daydream Silicon Valley",
-			"description": "Silicon Valley's most innovative game jam featuring 48 hours of game creation magic",
+			"description": "Silicon Valley's most innovative game jam featuring 24 hours of game creation magic",
 			"startDate": "2025-09-27T18:00:00-07:00",
 			"endDate": "2025-09-28T18:00:00-07:00",
 			"location": {
@@ -494,7 +494,7 @@ Roblox`.split('\n');
 				Calling all coders, artists, musicians and gamers!
 			</h4>
 			<div class="text-sm sm:text-base md:text-lg font-semibold text-[#44DBC8] mt-2 opacity-90">
-				$35,000+ Prize Pool • Industry Mentors • Cutting-Edge Tech
+				$5,000+ Prize Pool • Industry Mentors • Cutting-Edge Tech
 			</div>
 		</div>
 
@@ -627,14 +627,14 @@ Roblox`.split('\n');
 				<div
 					class="text-lg sm:text-xl md:text-2xl font-bold text-[#44DBC8] mb-3 md:mb-4 opacity-90"
 				>
-					$35,000+ Prize Pool
+					$5,000+ Prize Pool
 				</div>
 				<p
 					class="text-base sm:text-lg md:text-xl text-[#487DAB] opacity-90 max-w-4xl mx-auto leading-relaxed px-4"
 				>
-					In the same valley where mobile gaming was revolutionized and VR was reborn. Where
-					billion-dollar game engines and platforms started as weekend hacks. Your breakthrough
-					awaits, backed by Silicon Valley's most generous prize pool.
+					In the same place where gaming and technology was revolutionized. Where
+					game engines and platforms started as weekend hacks. Your breakthrough
+					awaits, backed by our generous prize pool.
 				</p>
 			</div>
 		</div>
@@ -667,7 +667,7 @@ Roblox`.split('\n');
 				class="text-[#487DAB] font-serif text-base sm:text-lg md:text-xl leading-relaxed space-y-4 sm:space-y-5 md:space-y-6 max-w-4xl mx-auto"
 			>
 				<p class="text-lg sm:text-xl md:text-2xl font-bold text-[#44DBC8]">
-					Game jams are pure magic. ✨
+					Game jams are pure magic.
 				</p>
 
 				<p>
@@ -686,7 +686,7 @@ Roblox`.split('\n');
 				</p>
 
 				<p class="text-2xl font-bold text-center text-[#44DBC8]">
-					This is where games become reality. 🎮
+					This is where games become reality. 
 				</p>
 			</div>
 
@@ -713,7 +713,7 @@ Roblox`.split('\n');
 			<h2
 				class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif italic bg-gradient-to-r from-[#487DAB] via-[#5A8DBD] to-[#44DBC8] bg-clip-text text-transparent font-bold mb-6 md:mb-8"
 			>
-				A Dreamy Opportunity
+				An Optimistic Opportunity
 			</h2>
 			<p
 				class="text-lg sm:text-xl md:text-2xl text-[#8B4513] font-serif max-w-4xl mx-auto leading-relaxed mb-8 sm:mb-10 md:mb-12 px-4"
@@ -739,7 +739,7 @@ Roblox`.split('\n');
 				<div
 					class="bg-gradient-to-br from-[#F8FDFF] via-white to-[#F0F8FE] rounded-2xl md:rounded-3xl border-2 border-[#E8F4FD] p-6 sm:p-8 shadow-lg transition-all duration-300 hover:border-[#44DBC8]/50"
 				>
-					<div class="text-2xl sm:text-3xl font-bold text-[#44DBC8] mb-2">$35K+</div>
+					<div class="text-2xl sm:text-3xl font-bold text-[#44DBC8] mb-2">$5K+</div>
 					<p class="text-[#487DAB] text-sm sm:text-base">Prize pool awaiting dreamers</p>
 				</div>
 			</div>
@@ -792,9 +792,7 @@ Roblox`.split('\n');
 				What's the venue like?
 			</h3>
 			<p class="text-[#487DAB] leading-relaxed text-sm sm:text-base">
-				A stunning Silicon Valley workspace where innovation flows. Think Apple Park meets indie
-				game studio - premium hardware, inspiring design, and that legendary Silicon Valley energy
-				that breeds breakthrough ideas.
+				Exact location is yet to be released! Expect something fabulous likely in the south bay area. We'll email you with the location closer to the event.
 			</p>
 		</div>
 
@@ -804,8 +802,8 @@ Roblox`.split('\n');
 		>
 			<h3 class="text-lg sm:text-xl font-serif font-bold text-[#487DAB] mb-3">What's included?</h3>
 			<p class="text-[#487DAB] leading-relaxed text-sm sm:text-base">
-				Everything magical: gourmet Silicon Valley meals, premium hardware, mentorship from
-				Apple/Google engineers, exclusive swag, and 48 hours of pure innovation energy. Plus some
+				Everything magical: Tasty meals, premium hardware, mentorship from
+				engineers, exclusive swag, and 24 hours of pure innovation energy. Plus some
 				dreamy surprises we're still crafting...
 			</p>
 		</div>
@@ -818,9 +816,7 @@ Roblox`.split('\n');
 				Who are the mentors?
 			</h3>
 			<p class="text-[#487DAB] leading-relaxed text-sm sm:text-base">
-				Silicon Valley legends: Apple engineers who built gaming on iOS, Google developers behind
-				mobile gaming frameworks, Meta VR pioneers, and indie developers who turned garage projects
-				into hits. They're here to help your ideas come alive!
+				Exact details are yet to be released! They will be engineers from large tech companies and gaming companies. If you're intrested in mentoring, please email daydreamsanjose@gmail.com
 			</p>
 		</div>
 
@@ -833,8 +829,7 @@ Roblox`.split('\n');
 			</h3>
 			<p class="text-[#487DAB] leading-relaxed text-sm sm:text-base">
 				Because this is where iPhone gaming was born, where VR was reimagined, where Unity was
-				built, where the biggest gaming platforms started! Silicon Valley's innovation energy turns
-				"what if" into billion-dollar realities.
+				built, where the biggest gaming platforms started! The innovation here revolutionized gaming.
 			</p>
 		</div>
 
@@ -846,9 +841,7 @@ Roblox`.split('\n');
 				Any special rewards?
 			</h3>
 			<p class="text-[#487DAB] leading-relaxed text-sm sm:text-base">
-				Something magical is being crafted for the most innovative creators... Silicon Valley's
-				finest companies are quietly assembling something special. The details float in like morning
-				mist, soon to be revealed. ✨
+				Something magical is being crafted for the most innovative creators. We're quietly assembling something special. The details will come soon, soon to be revealed. 
 			</p>
 		</div>
 
@@ -874,8 +867,7 @@ Roblox`.split('\n');
 			</h3>
 			<p class="text-[#487DAB] leading-relaxed text-sm sm:text-base">
 				Just your laptop, creativity, and willingness to dream big! We'll provide everything else -
-				from premium hardware and software to unlimited snacks and the most inspiring workspace in
-				Silicon Valley.
+				from premium software to "unlimited" snacks. Also please bring a charger, sleeping bag,... etc(we'll email the full list)
 			</p>
 		</div>
 	</div>
@@ -900,13 +892,13 @@ Roblox`.split('\n');
 			<h2
 				class="text-3xl sm:text-4xl md:text-5xl font-serif italic bg-gradient-to-r from-[#487DAB] to-[#5A8DBD] bg-clip-text text-transparent mb-4 md:mb-6"
 			>
-				$35,000+ Prize Pool ✨
+				$5,000+ Prize Pool
 			</h2>
 			<p
 				class="text-base sm:text-lg text-[#487DAB]/80 font-serif max-w-2xl mx-auto leading-relaxed px-4"
 			>
 				Silicon Valley's most generous game jam rewards await the most innovative creators. Your
-				breakthrough game could earn you legendary prizes worthy of the valley...
+				breakthrough game could earn you legendary prizes.
 			</p>
 		</div>
 
@@ -914,7 +906,7 @@ Roblox`.split('\n');
 			<div
 				class="bg-white/60 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-[#E8F4FD] hover:bg-white/80 transition-all duration-300 transform hover:scale-105 floating-slow scroll-reveal"
 			>
-				<div class="text-2xl sm:text-3xl mb-2 sm:mb-3">✨</div>
+				<div class="text-2xl sm:text-3xl mb-2 sm:mb-3"></div>
 				<div class="text-[#487DAB] font-serif text-xs sm:text-sm opacity-80">
 					Grand creation awaits
 				</div>
@@ -922,7 +914,7 @@ Roblox`.split('\n');
 			<div
 				class="bg-white/60 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-[#E8F4FD] hover:bg-white/80 transition-all duration-300 transform hover:scale-105 floating-gentle scroll-reveal"
 			>
-				<div class="text-2xl sm:text-3xl mb-2 sm:mb-3">🌟</div>
+				<div class="text-2xl sm:text-3xl mb-2 sm:mb-3"></div>
 				<div class="text-[#487DAB] font-serif text-xs sm:text-sm opacity-80">
 					Innovation excellence
 				</div>
@@ -930,14 +922,14 @@ Roblox`.split('\n');
 			<div
 				class="bg-white/60 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-[#E8F4FD] hover:bg-white/80 transition-all duration-300 transform hover:scale-105 floating-medium scroll-reveal"
 			>
-				<div class="text-2xl sm:text-3xl mb-2 sm:mb-3">💎</div>
+				<div class="text-2xl sm:text-3xl mb-2 sm:mb-3"></div>
 				<div class="text-[#487DAB] font-serif text-xs sm:text-sm opacity-80">Creative mastery</div>
 			</div>
 		</div>
 
 		<div class="text-center">
 			<p class="text-xs sm:text-sm text-[#487DAB]/60 font-serif italic px-4">
-				🌙 Silicon Valley magic is being woven for the dreamers... details shimmer on the horizon 🌙
+			More info to come closer to the event
 			</p>
 		</div>
 	</div>
@@ -995,7 +987,7 @@ Roblox`.split('\n');
 				Want to craft something magical for the next generation of game creators?
 			</p>
 			<p class="text-lg sm:text-xl font-semibold text-white mb-6 sm:mb-8 px-4">
-				Help us power a $35,000+ prize pool and Silicon Valley's premier game jam ✨
+				Help us power a $5,000+ prize pool and Silicon Valley's premier game jam ✨
 			</p>
 			<a
 				href="mailto:sponsors@hackclub.com"
