@@ -1070,7 +1070,7 @@ Mumbai`.split("\n")
 				<!-- Brush texture overlay for content -->
 				<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
 				<h2 class="text-4xl font-serif text-[#00000] text-center" style="padding:20px; font-size:extralarge">
-					Partner Sponsors
+					Sponsors
 				</h2>
 				<!-- Sponsors Grid -->
 				<div class="relative z-10 min-h-40">
