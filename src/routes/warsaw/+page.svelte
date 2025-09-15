@@ -1272,7 +1272,6 @@ Mumbai`.split("\n")
 					title="Daydream Events Map">
 				</iframe>
 			</div>
-			
 			{#if eventAddress}
 				<p class="text-center font-sans text-2xl pt-12 max-sm:text-xl text-[#60574b] z-10000">
 					{#if directionsURL}
@@ -1282,6 +1281,7 @@ Mumbai`.split("\n")
 					{/if}
 				</p>
 			{/if}
+			<p>Thank you for the <a href="https://www.jukeboxprint.com/custom-stickers">Custom stickers</a> provided by Jukebox</p>
 		</div>
 	</div>
 
