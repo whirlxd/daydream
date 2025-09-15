@@ -21,17 +21,17 @@
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recbYBNEWgDH7grEM"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 
 	const sponsors = [
-		{ image: "/miami/Jukebox.png", name: "Jukebox", url: "https://www.jukeboxprint.com/custom-stickers",
-					text: `<p class="text-lg text-[#335969] text-center">
-		             Big shoutout to Jukebox for our
-		             <a href="https://www.jukeboxprint.com/custom-stickers"
-		                class="underline hover:text-[#477783] transition-colors">
-		               custom stickers</a>!
-		           </p>`		},
 		{ image: "/miami/GDG.png", name: "Google Developer Group @ FIU", url: "https://gdg.community.dev/gdg-on-campus-florida-international-university/" },
 		{ image: "/miami/CodeCrunch.png", name: "Code Crunch", url: "https://codecrunchglobal.vercel.app/home.html" },
 		{ image: "/miami/ColorStack.png", name: "ColorStack", url: "https://ba-00001.github.io/colorstackatfiu/" },
 		{ image: "/miami/CAHSI.png", name: "CAHSI @ FIU", url: "https://cahsiatfiu.vercel.app/" },
+		{ image: "/miami/Jukebox.png", name: "Jukebox", url: "https://www.jukeboxprint.com/custom-stickers",
+							text: `<p class="text-lg text-[#335969] text-center">
+				             Big shoutout to Jukebox for our
+				             <a href="https://www.jukeboxprint.com/custom-stickers"
+				                class="underline hover:text-[#477783] transition-colors">
+				               custom stickers</a>!
+				           </p>`		},
 		// { image: "/example/logo6.png", name: "Sponsor 6", url: "https://example6.com" },
 		// { image: "/example/logo7.png", name: "Sponsor 7", url: "https://example7.com" }
 	];
@@ -1064,6 +1064,12 @@ Mumbai`.split("\n")
 					{#if contactLink}
 						<!-- Call to action for sponsors -->
 						<div class="mt-8 text-center">
+							<p class="text-lg text-[#335969] text-center">
+								Big shoutout to Jukebox for our
+									<a href="https://www.jukeboxprint.com/custom-stickers"
+									class="underline hover:text-[#477783] transition-colors">
+									custom stickers</a>!
+							</p>
 							<p class="text-lg text-[#335969]">Want to sponsor Daydream {eventName}? <a href={contactLink} class="underline hover:text-[#477783] transition-colors">Get in touch</a></p>
 						</div>
 					{/if}
