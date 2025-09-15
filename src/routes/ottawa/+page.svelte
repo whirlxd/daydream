@@ -29,16 +29,30 @@
 		{
 			title: "Saturday, September 27th",
 			items: [
-				{event: "TBD"}
+				{event: 'Doors open', time: '1:00PM' },
+				{event: 'Opening ceremony', time: '2:00 PM'},
+				{event: 'Workshop #1', time: '3:30 PM' },
+				{event: 'Workshop #2', time: '5:00 PM' },
+				{event: 'Dinner', time: '7:30 PM' },
+				{event: 'Workshop #3', time: '8:30 PM' },
+				{event: 'Suprise event(s?)', time: '11:30 PM' }
 			]
 		},
 		{
 			title: "Sunday, September 28th",
 			items: [
-				{event: "TBD"}
+				{event: 'Breakfast', time: '6:00 AM' },
+				{event: 'Submissions Open', time: '10:00 AM' },
+				{event: 'Submissions Close', time: '11:30 AM' },
+				{event: 'Lunch', time: '12:00 PM' },
+				{event: 'Demos & Voting', time: '12:45 PM' },
+				{event: 'Scavenger Hunt', time: '1:45 PM' },
+				{event: 'Closing Ceremony', time: '2:00 PM' }
+
 			]
 		}
 	];
+
 
 	/* */
 	
