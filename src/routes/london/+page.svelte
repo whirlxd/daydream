@@ -13,14 +13,16 @@
 	const eventVenue = "Ada, the National College for Digital Skills";
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recnT3dNX6oOSR37K"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional
-	const directionsURL = ""
-	// const contactLink = ""
+	const directionsURL = "https://www.google.com/maps/search/ada+the+national+college+for+digital+skills+london";
+	const contactLink = "mailto:london@daydream.hackclub.com";
 	
 	// Sponsors Configuration
-	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
+	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		// { image: "src/routes/cambridge/images/rpilogo.png", name: "The Raspberry Pi Foundation", url: "https://www.raspberrypi.org/" },
-		// { image: "https://assets.hackclub.com/icon-rounded.png", name: "Hack Club", url: "https://hackclub.com/" }
+		{ image: "/uk/ada.svg", name: "Ada, the National College for Digital Skills", url: "https://www.ada.ac.uk/" },
+		{ image: "/uk/sparta-logo-dark.svg", name: "Sparta Global", url: "https://www.spartaglobal.com/" },
+		// { image: "/uk/red-hat.svg", name: "Red Hat", url: "https://www.redhat.com/en" },
+		{ image: "/uk/pcbway-logo.svg", name: "PCBWay", url: "https://www.pcbway.com/" },
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
@@ -985,11 +987,11 @@ Mumbai`.split("\n")
 				<h2 class="text-4xl font-serif text-[#F0F0FF] text-center">
 					Sponsors
 				</h2>
-				
+
 				<!-- Brush texture overlay for header -->
 				<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
 			</div>
-			
+
 			<!-- Main Content Area -->
 			<div class="relative bg-gradient-to-b from-[#CCF4FD] to-[#AECDF6] px-8 pt-8 pb-16">
 				<!-- Brush texture overlay for content -->
@@ -1000,48 +1002,23 @@ Mumbai`.split("\n")
 				<!-- Sponsors Grid -->
 				<div class="relative z-10 min-h-40">
 					{#if sponsors.length > 0}
-						<!-- First row (up to 4 sponsors) -->
-						{#if sponsors.length > 4}
-							<div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center mb-8">
-								{#each sponsors.slice(0, 4) as sponsor}
-									<a href={sponsor.url} class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors" target="_blank" rel="noopener noreferrer">
-										<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain">
-									</a>
-								{/each}
-							</div>
-							
-							<!-- Second row (remaining sponsors, centered) -->
-							{#if sponsors.length > 4}
-								<div class="flex justify-center">
-									<div class="grid grid-cols-2 md:grid-cols-3 gap-8 items-center justify-items-center max-w-2xl">
-										{#each sponsors.slice(4) as sponsor, index}
-											<a href={sponsor.url} 
-												class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors {sponsors.slice(4).length === 3 && index === 2 ? 'md:col-span-1 col-span-2 max-w-xs mx-auto' : ''}" 
-												target="_blank" rel="noopener noreferrer">
-												<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain">
-											</a>
-										{/each}
-									</div>
-								</div>
-							{/if}
-						{:else}
-							<!-- Single row for 4 or fewer sponsors -->
-							<div class="flex justify-center">
-								<div class="grid gap-8 items-center justify-items-center max-w-4xl {sponsors.length === 1 ? 'grid-cols-1' : sponsors.length === 2 ? 'grid-cols-1 md:grid-cols-2' : sponsors.length === 3 ? 'grid-cols-2 md:grid-cols-3' : 'grid-cols-2 md:grid-cols-4'}">
-									{#each sponsors as sponsor}
-										<a href={sponsor.url} class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors" target="_blank" rel="noopener noreferrer">
-											<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain">
-										</a>
-									{/each}
-								</div>
-							</div>
-						{/if}
+						<!-- Larger sponsor display -->
+						<div class="flex flex-wrap justify-center gap-10">
+							{#each sponsors as sponsor}
+								<a href={sponsor.url}
+								   class="bg-white/30 rounded-lg p-6 flex items-center justify-center hover:bg-white/50 transition-colors shadow-md transform hover:-translate-y-1 hover:shadow-lg transition-all duration-200"
+								   style="min-width: 240px; min-height: 120px; width: calc(33% - 20px);"
+								   target="_blank" rel="noopener noreferrer">
+									<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain" style="max-height: 80px;">
+								</a>
+							{/each}
+						</div>
 					{/if}
-					
+
 					{#if contactLink}
 						<!-- Call to action for sponsors -->
-						<div class="mt-8 text-center">
-							<p class="text-lg text-[#335969]">Want to sponsor Daydream {eventName}? <a href={contactLink} class="underline hover:text-[#477783] transition-colors">Get in touch</a></p>
+						<div class="mt-12 text-center">
+							<p class="text-xl text-[#335969] font-serif">Want to sponsor Daydream {eventName}? <a href={contactLink} class="underline hover:text-[#477783] transition-colors font-bold">Get in touch</a></p>
 						</div>
 					{/if}
 				</div>
@@ -1243,11 +1220,11 @@ Mumbai`.split("\n")
 			</div>
 			<div style="height: 20rem;"></div>
 			<img src="banner-city.png" alt="Find a Daydream Near You" class="absolute left-1/2 -translate-x-1/2 -translate-y-1/3 md:-translate-y-[40%] h-48 w-auto z-100 scale-[1.15] md:scale-[1.65] saturate-70 brightness-110 object-contain px-4 pointer-events-none">
-			
+
 			<!-- Map container with cloudy edges -->
 			<div class="relative w-full h-156 overflow-hidden bg-transparent">
-				<iframe 
-					src={eventAddress ? "/event-map?location=" + encodeURIComponent(eventAddress) : "/map"}
+				<iframe
+					src={eventAddress ? "/event-map?location={encodeURIComponent(eventAddress)}" : "/map"}
 					class="w-full h-full border-0 bg-[#acd4e0]"
 					style="
 						mask-image: 
