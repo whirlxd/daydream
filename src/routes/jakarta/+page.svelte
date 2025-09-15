@@ -209,8 +209,13 @@
 		},
 		{
 			image: '/jakarta/partners/web-programming-unpas.png',
-			name: 'Web Programming Unpas',
+			name: 'Web Programming UNPAS',
 			url: 'https://discord.gg/wpu'
+		},
+        {
+			image: '/jakarta/partners/logo%20info%20lomba%20IT.png',
+			name: 'Info Lomba IT',
+			url: 'https://www.infolombait.com/'
 		}
 	];
 
