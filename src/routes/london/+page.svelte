@@ -897,11 +897,84 @@ Mumbai`.split("\n")
 			</div>
 		</div>
 	</div>
-
-	<div class="w-full absolute z-30 max-h-64 bottom-0 max-2xl:translate-y-1/4 max-lg:translate-y-1/2 pointer-events-none">	
+	<div class="w-full absolute z-30 max-h-64 bottom-0 max-2xl:translate-y-1/4 max-lg:translate-y-1/2 pointer-events-none">
 		<img src="/cloud-cover-1.png" alt="" class="w-full h-full object-contain min-[2048px]:hidden">
 	</div>
+</div>
 
+<div class="w-full relative flex items-start justify-center">
+	<!-- background -->
+	<div class="absolute top-0 left-0 w-full h-full -z-50 bg-[#FCEFC5]"></div>
+	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-30 pointer-events-none -z-40"></div>
+
+	<div class="w-full max-w-4xl mx-auto px-8 pt-64 pb-8 z-10">
+		{#if eventAddress}
+			<h2 class="text-center font-sans text-4xl md:text-5xl font-extrabold text-[#60574b] z-10000 mb-6">
+				Daydream {eventName} is taking place at
+				<br>
+				{#if directionsURL}
+					<a class="underline text-pink" href={directionsURL}>{eventVenue}</a>!
+				{:else}
+					<span class="underline">{eventVenue}</span>!
+				{/if}
+			</h2>
+		{/if}
+
+		<div class="w-full mb-8">
+			<iframe width="100%"
+			        height="400"
+			        style="border:0; display: block; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"
+			        loading="lazy"
+			        allowfullscreen
+			        title="Venue Navigation"
+			        src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJNWsznDscdkgRcXyd1S2fVQs&key=AIzaSyA0cmOJ7NBQCvicdS1XNsBRIzTNjwJrA7I"></iframe>
+		</div>
+
+		<div class="bg-white/30 p-8 rounded-lg shadow-sm mb-36">
+			<h3 class="text-3xl font-serif text-[#60574b] mb-6 text-center">Getting here</h3>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<div class="bg-white/50 p-6 rounded-lg">
+					<div class="flex items-center mb-4">
+						<img src="/uk/city-solid-full.svg" alt="" class="w-10 h-10 mr-3">
+						<h4 class="text-xl font-bold text-[#60574b]">Venue Location</h4>
+					</div>
+					<p class="text-[#60574b] text-lg">
+						Ada, the National College for Digital Skills<br>
+						1 Sutherland St<br>
+						Pimlico<br>
+						London<br>
+						SW1V 4LD<br>
+						United Kingdom
+					</p>
+				</div>
+				<div class="bg-white/50 p-6 rounded-lg">
+					<div class="flex items-center mb-4">
+						<img src="/uk/train-solid-full.svg" alt="" class="w-10 h-10 mr-3">
+						<h4 class="text-xl font-bold text-[#60574b]">By Rail</h4>
+					</div>
+					<ul class="space-y-2 text-[#60574b]">
+						<li>The <span class="font-bold">nearest station</span> is <span class="font-bold"><img src="/uk/national-rail.svg" alt="" class="w-5 h-5 mr-1 inline-block"><img src="/uk/underground-roundel.svg" alt="" class="w-5 h-5 mr-1 inline-block">Victoria</span>, which is just an <span class="font-bold">8 minute walk</span> from the venue!</li>
+						<li><span class="font-bold"><img src="/uk/underground-roundel.svg" alt="" class="w-5 h-5 mr-1 inline-block">Pimlico</span> is also a <span class="font-bold">14 minute walk</span> from the venue!</li>
+					</ul>
+				</div>
+				<div class="bg-white/50 p-6 rounded-lg">
+					<div class="flex items-center mb-4">
+						<img src="/uk/car-solid-full.svg" alt="" class="w-10 h-10 mr-3">
+						<h4 class="text-xl font-bold text-[#60574b]">By Car</h4>
+					</div>
+					<ul class="space-y-2 text-[#60574b]">
+						<li><span class="font-bold">Parking:</span> There is <span class="font-bold">no parking</span> available at the venue</li>
+						<li>Nearby paid parking at <a class="underline text-pink" href="https://www.q-park.co.uk/en-gb/cities/london/pimlico">Q-Park Pimlico</a></li>
+						<li>Consider using public transport if possible due to congestion in central London</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="w-full absolute z-30 max-h-64 bottom-0 max-2xl:translate-y-1/4 max-lg:translate-y-1/2 pointer-events-none">
+		<img src="/cloud-cover-1.png" alt="" class="w-full h-full object-contain min-[2048px]:hidden">
+	</div>
 </div>
 
 <!-- Schedule Container -->
@@ -1157,68 +1230,6 @@ Mumbai`.split("\n")
 <div class="w-full bg-gradient-to-b from-[#FDC5D1] to-[#FAE3C9] items-center justify-center px-0 md:px-8 relative pt-36">
 	<div class="w-full max-w-5xl lg:max-w-6xl mx-auto px-2 md:px-8">
 		<div class="relative w-full min-w-72">
-			{#if eventAddress}
-				<h2 class="text-center font-sans text-4xl md:text-5xl font-extrabold pt-12 text-[#60574b] z-10000">
-					Daydream {eventName} is taking place at
-					<br>
-					{#if directionsURL}
-						<a class="underline text-pink" href={directionsURL}>{eventVenue}</a>!
-					{:else}
-						<span class="underline">{eventVenue}</span>!
-					{/if}
-				</h2>
-			{/if}
-			<div style="height: 2rem;"></div>
-			<div style="display: flex; justify-content: center; align-items: center; width: 100%;">
-				<iframe width="1000"
-				        height="500"
-				        style="border:0; display: block;"
-				        loading="lazy"
-				        allowfullscreen
-				        title="Venue Navigation"
-								src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJNWsznDscdkgRcXyd1S2fVQs&key=AIzaSyA0cmOJ7NBQCvicdS1XNsBRIzTNjwJrA7I"></iframe>
-			</div>
-			<div class="mt-12 mb-16 max-w-6xl mx-auto bg-white/30 p-8 rounded-lg">
-				<h3 class="text-3xl font-serif text-[#60574b] mb-6 text-center">Getting here</h3>
-				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-					<div class="bg-white/50 p-6 rounded-lg">
-						<div class="flex items-center mb-4">
-							<img src="/uk/city-solid-full.svg" alt="" class="w-10 h-10 mr-3">
-							<h4 class="text-xl font-bold text-[#60574b]">Venue Location</h4>
-						</div>
-						<p class="text-[#60574b] text-lg">
-							Ada, the National College for Digital Skills<br>
-							1 Sutherland St<br>
-							Pimlico<br>
-							London<br>
-							SW1V 4LD<br>
-							United Kingdom
-						</p>
-					</div>
-					<div class="bg-white/50 p-6 rounded-lg">
-						<div class="flex items-center mb-4">
-							<img src="/uk/train-solid-full.svg" alt="" class="w-10 h-10 mr-3">
-							<h4 class="text-xl font-bold text-[#60574b]">By Rail</h4>
-						</div>
-						<ul class="space-y-2 text-[#60574b]">
-							<li>The <span class="font-bold">nearest station</span> is <span class="font-bold"><img src="/uk/national-rail.svg" alt="" class="w-5 h-5 mr-1 inline-block"><img src="/uk/underground-roundel.svg" alt="" class="w-5 h-5 mr-1 inline-block">Victoria</span>, which is just an <span class="font-bold">8 minute walk</span> from the venue!</li>
-							<li><span class="font-bold"><img src="/uk/underground-roundel.svg" alt="" class="w-5 h-5 mr-1 inline-block">Pimlico</span> is also a <span class="font-bold">14 minute walk</span> from the venue!</li>
-						</ul>
-					</div>
-					<div class="bg-white/50 p-6 rounded-lg">
-						<div class="flex items-center mb-4">
-							<img src="/uk/car-solid-full.svg" alt="" class="w-10 h-10 mr-3">
-							<h4 class="text-xl font-bold text-[#60574b]">By Car</h4>
-						</div>
-						<ul class="space-y-2 text-[#60574b]">
-							<li><span class="font-bold">Parking:</span> There is <span class="font-bold">no parking</span> available at the venue</li>
-							<li>Nearby paid parking at <a class="underline text-pink" href="https://www.q-park.co.uk/en-gb/cities/london/pimlico">Q-Park Pimlico</a></li>
-							<li>Consider using public transport if possible due to congestion in central London</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div style="height: 20rem;"></div>
 			<img src="banner-city.png" alt="Find a Daydream Near You" class="absolute left-1/2 -translate-x-1/2 -translate-y-1/3 md:-translate-y-[40%] h-48 w-auto z-100 scale-[1.15] md:scale-[1.65] saturate-70 brightness-110 object-contain px-4 pointer-events-none">
 
 			<!-- Map container with cloudy edges -->
