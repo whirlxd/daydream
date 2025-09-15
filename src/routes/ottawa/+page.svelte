@@ -1848,10 +1848,21 @@ Mumbai`.split('\n');
 				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">
 					What if my parents are concerned?
 				</h3>
-				<p class="text-sm">
-					We're here to help! You can see our parent guide here, or they can reach out to us at
-					daydream@hackclub.com for questions.
-				</p>
+					<p class="text-sm">
+					We're here to help! You can see our 
+					<a href="https://docs.google.com/document/d/1iNKgannjVbTcwprU58rk22B-56DfJWedLtWohgVOov4/edit?usp=sharing" 
+						target="_blank" 
+						class="text-blue-600 underline hover:text-blue-800">
+						parent guide
+					</a>, 
+					or they can reach out to us at 
+					<a href="mailto:ottawa@daydream.hackclub.com" 
+						class="text-blue-600 underline hover:text-blue-800">
+						daydream@hackclub.com
+					</a> 
+					for questions.
+					</p>
+
 			</div>
 		</div>
 
