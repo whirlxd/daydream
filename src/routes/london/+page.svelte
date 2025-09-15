@@ -955,6 +955,7 @@ Mumbai`.split("\n")
 					<ul class="space-y-2 text-[#60574b]">
 						<li>The <span class="font-bold">nearest station</span> is <span class="font-bold"><img src="/uk/national-rail.svg" alt="" class="w-5 h-5 mr-1 inline-block"><img src="/uk/underground-roundel.svg" alt="" class="w-5 h-5 mr-1 inline-block">Victoria</span>, which is just an <span class="font-bold">8 minute walk</span> from the venue!</li>
 						<li><span class="font-bold"><img src="/uk/underground-roundel.svg" alt="" class="w-5 h-5 mr-1 inline-block">Pimlico</span> is also a <span class="font-bold">14 minute walk</span> from the venue!</li>
+					    <li>Westmoreland Terrace and Sutherland Row bus stops are also right outside the venue!</li>
 					</ul>
 				</div>
 				<div class="bg-white/50 p-6 rounded-lg">
@@ -963,9 +964,9 @@ Mumbai`.split("\n")
 						<h4 class="text-xl font-bold text-[#60574b]">By Car</h4>
 					</div>
 					<ul class="space-y-2 text-[#60574b]">
-						<li><span class="font-bold">Parking:</span> There is <span class="font-bold">no parking</span> available at the venue</li>
+						<li><span class="font-bold">Parking:</span> There is <span class="font-bold">no parking</span> and <span class="font-bold">very limited drop-off on surrounding streets</span> available at the venue.</li>
 						<li>Nearby paid parking at <a class="underline text-pink" href="https://www.q-park.co.uk/en-gb/cities/london/pimlico">Q-Park Pimlico</a></li>
-						<li>Consider using public transport if possible due to congestion in central London</li>
+						<li>Consider using public transport if possible due to congestion in central London.</li>
 					</ul>
 				</div>
 			</div>
@@ -1490,7 +1491,7 @@ Mumbai`.split("\n")
 			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
 				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">All this, for free?</h3>
-				<p class="text-sm">Yep! Food, swag and good vibes are all included.</p>
+				<p class="text-sm">Yep! Food, swag and good vibes are all included. <u><a href="https://www.jukeboxprint.com/custom-stickers">Custom stickers</a></u> provided by Jukebox!</p>
 			</div>
 		</div>
 
