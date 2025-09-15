@@ -7,28 +7,53 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = "Atlanta";
-	const eventLocation = "Georgia Tech";
-	const eventAddress = ""; // Leave this empty if you don't want an address
-	// These two are optional
-	const directionsURL = ""
-	const contactLink = "mailto:atlanta@daydream.hackclub.com"
+	const eventName = "Omaha"; // This should be the name of your event WITHOUT "Daydream" at the start
+	const eventLocation = "The Ashton";
+	const eventAddress = "1229 Millwork Ave, Omaha, NE 68102"; // Leave this empty if you don't want an address
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=rec1eIH42dH9DeOyu"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	// These two are optional-- leave them empty if you don't have anything!
+	const directionsURL = "https://www.google.com/maps/search/1600+pennsylvania+avenue+washington+dc/"
+	const contactLink = "mailto:omaha@daydream.hackclub.com"
 	
-	// Sponsors Configuration
-	const signupLink = "https://forms.hackclub.com/daydream-sign-up"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
-	const sponsorsEnabled = true;
+	// Sponsors Configuration - disable this if you don't have any sponsors to display!
+	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "/atlanta/jukebox.png", name: "Jukebox" , url: "https://www.jukeboxprint.com/custom-stickers", 
-		text: `<p class="text-lg text-[#335969] text-center">
-             Big shoutout to Jukebox for our
-             <a href="https://www.jukeboxprint.com/custom-stickers"
-                class="underline hover:text-[#477783] transition-colors">
-               custom stickers</a>!
-           </p>`		},
-		{ image: "/atlanta/WCT.png", name: "We Create Tech", url: "https://www.wecreatetech.org/" },
-		{ image: "/atlanta/gtsbe.png", name: "National Society of Black Engineers at Georgia Tech", url: "https://www.gtsbe.org/"}
+		{ image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjEVW37gVNR8AlpjmLu7fYlSRlEnmCeZk0pA&s", name: "JukeBox", url: "https://www.jukeboxprint.com/custom-stickers" },
 	];
 	
+	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
+	const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [
+		{
+			title: "Sunday, September 27th",
+			items: [
+				{ event: "Doors open", time: "8:30 AM" },
+				{ event: "Opening ceremony", time: "9:00 AM" },
+				{ event: "Start working on your project!", time: "9:30 AM" },
+				{ event: "Workshop #1", time: "10:30 AM" },
+				{ event: "Lunch", time: "12:30 PM" },
+				{ event: "Submission starts", time: "7:30 PM" },
+				{ event: "Voting", time: "8:00 PM" },
+				{ event: "Dinner & Awards", time: "8:30 PM" },
+				{ event: "The End", time: "9:00 PM" },
+			]
+		}
+	];
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
 	
 	import { onMount } from "svelte";
 	import { gsap } from "gsap";
@@ -48,32 +73,6 @@
 	$: pageDescription = `Join Daydream ${eventName} in ${eventLocation}! A teen-led game jam where you'll build amazing games with other high schoolers. Food, workshops, and prizes included!`;
 	$: pageKeywords = `game jam, hackathon, teen coding, Hack Club, game development, ${eventLocation}, ${eventName}`;
 
-	// schedule not final
-	const scheduleData = [
-    {
-        title: "Saturday, September 27th",
-        items: [
-            { event: "Doors open", time: "8:00 AM" },
-            { event: "Opening ceremony", time: "9:00 AM" },
-            { event: "Start Working on Your Project + Breakfast", time: "10:00 AM" },
-            { event: "Workshop 1", time: "10:30 AM" },
-            { event: "Activity 1", time: "12:00 PM" },
-            { event: "Progress Check", time: "4:00 PM" },
-            { event: "Workshop 2", time: "5:00 PM" },			
-            { event: "Start Wrapping Up", time: "7:00 PM" },
-            { event: "End of Day 1", time: "8:00 PM" }
-        ]
-    },
-    {
-        title: "Sunday, September 28th",
-        items: [
-            { event: "Breakfast", time: "8:00 AM" },
-			{ event: "Activity 2", time: "9:00 AM"},
-            { event: "Demos!", time: "10:30 AM" },
-            { event: "Closing ceremony", time: "1:00 PM" }
-        ]
-    }
-];
 	// Cities where the game jam is happening
 	const cities = `Columbus
 Lisbon 
@@ -821,7 +820,7 @@ Mumbai`.split("\n")
 			>
 				September 27th & 28th, 2025
 			</h2>
-			<img src="atlanta/daydreamatl.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4" />
+			<img src="daydream.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4" />
 			<a href="https://hackclub.com" class="absolute top-0 -right-6 max-sm:right-0 max-sm:scale-80 animate-hover ![animation-delay:0.9s] ![--hover:-0.2rem]">
 				<img src="flag-plane.png" alt="Hack Club" class="h-28">
 			</a>

@@ -19,7 +19,8 @@
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
 		{ image: "/khagaria/yubico.svg", name: "Yubico", url: "https://yubico.com" },
-		{ image: "https://storage.jukeboxprint.com/s/images/jukebox-logo.svg", name: "Jukebox", url: "https://www.jukeboxprint.com/custom-stickers" }
+		{ image: "https://storage.jukeboxprint.com/s/images/jukebox-logo.svg", name: "Jukebox", url: "https://www.jukeboxprint.com/custom-stickers" },
+		{ image: "/khagaria/xyz.png", name: ".xyz", url: "https://gen.xyz" }
 		// { image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
 		// { image: "/example/logo3.png", name: "Sponsor 3", url: "https://example3.com" },
 		// { image: "/example/logo4.png", name: "Sponsor 4", url: "https://example4.com" },
@@ -33,16 +34,16 @@
 		{
 			title: "Saturday, September 27th",
 			items: [
-				{ event: "Doors open", time: "11:00 AM" },
-				{ event: "Opening ceremony", time: "12:00 PM" },
+				{ event: "Doors open", time: "8:00 AM" },
+				{ event: "Opening ceremony", time: "9:00 AM" },
+				{ event: "Breakfast", time: "9:30 AM" },
+				{ event: "Start working on your project!", time: "10:00 AM" },
+				{ event: "Workshop 1", time: "11:00 AM" },
 				{ event: "Lunch", time: "12:30 PM" },
-				{ event: "Start working on your project!", time: "1:00 PM" },
-				{ event: "Workshop 1", time: "2:00 PM" },
-				{ event: "Activity 1", time: "4:00 PM" },
-				{ event: "Workshop 2", time: "4:00 PM" },
-				{ event: "Dinner", time: "6:00 PM" },
-				{ event: "Lightning talks", time: "8:00 PM" },
-				{ event: "Midnight surprise", time: "12:00 AM" }
+				{ event: "Activity 1", time: "2:00 PM" },
+				{ event: "Workshop 2", time: "3:00 PM" },
+				{ event: "Lightning talks", time: "4:30 PM" },
+				{ event: "Closing ceremony", time: "6:00 PM" }
 			]
 		},
 		{
@@ -1462,7 +1463,7 @@ Mumbai`.split("\n")
 			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
 				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">All this, for free?</h3>
-				<p class="text-sm">Yep! Food, swag and good vibes are all included. Plus, if you're joining us from afar, we'll cover the cost of gas or a bus / train ticket.</p>
+				<p class="text-sm">Yep! Food, swag and good vibes are all included.</p>
 			</div>
 		</div>
 
