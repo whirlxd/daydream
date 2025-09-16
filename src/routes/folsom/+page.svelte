@@ -16,7 +16,7 @@
 	const contactLink = "folsom@daydream.hackclub.com"
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
-	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
+	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
 	const sponsors = [
 		{ image: "theCoderSchool", name: "theCoderSchool", url: "https://corsproxy.io/?https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq_Gj6jIFlfA23flSbD4uzCAv98QGRmFNjkQ&s" },
 	];
