@@ -20,22 +20,25 @@
 				{
 					title: "Saturday, September 27th",
 					items: [
-						{ event: "Doors open", time: "8:30 AM" },
+						{ event: "Doors open", time: "9:00 AM" },
 						{ event: "Opening ceremony", time: "9:30 AM" },
 						{ event: "Start working on your project!", time: "10:00 AM" },
-						{ event: "Workshop 1", time: "11:00 AM" },
+						{ event: "Workshop 1: Godot Platformer", time: "10:00 AM" },
+						{ event: "Workshop 2 (TBA)", time: "11:00 AM" },
 						{ event: "Lunch", time: "12:30 PM" },
-						{ event: "Activity 1", time: "1:30 PM" },
-						{ event: "Workshop 2", time: "3:00 PM" },
+						{ event: "Activity 1 (TBA)", time: "2:30 PM" },
 						{ event: "Lightning talks", time: "5:00 PM" },
 						{ event: "Dinner", time: "6:00 PM" },
-						{ event: "Demos!", time: "7:00 PM" },
+						{ event: "Demos and voting!", time: "7:00 PM" },
 						{ event: "Closing ceremony", time: "8:30 PM" }
 					]
 				}
 			],
 			sponsors: 'Sponsors',
 			sponsorCTA: 'Want to sponsor Daydream Nanjing? ',
+			sponsorJukebox: 'Big shoutout to Jukebox for our ',
+			sponsorCustomStickers: 'custom stickers',
+			sponsorJukeboxPost: '！',
 			steps: [
 				'#1: Sign up for Daydream Nanjing',
 				'#2: Attend a workshop and learn about game development',
@@ -59,7 +62,7 @@
 				},
 				item3: {
 					name: 'SPEEDTICKERS',
-					author: 'by Agustin'
+					author: 'by Agustin & Juan'
 				},
 				line3: 'We\'ll have workshops and activities before Daydream to help you learn game development using Godot!',
 				stuck: 'Stuck?',
@@ -76,7 +79,7 @@
 				},
 				{
 					q: 'All this, for free?',
-					a: 'Yep! Food, swag and good vibes are all included. Plus, if you\'re joining us from afar, we\'ll cover the cost of gas or a bus / train ticket.'
+					a: 'Yep! Food, swag and good vibes are all included.'
 				},
 				{
 					q: 'What do I need?',
@@ -120,22 +123,25 @@
 				{
 					title: "周六，2025年9月27日",
 					items: [
-						{ event: "入场", time: "上午8:30" },
+						{ event: "入场", time: "上午9:00" },
 						{ event: "开幕式", time: "上午9:30" },
 						{ event: "开始你的项目！", time: "上午10:00" },
-						{ event: "工作坊1", time: "上午11:00" },
+						{ event: "工作坊1：Godot 平台动作游戏", time: "上午10:00" },
+						{ event: "工作坊2（待定）", time: "上午11:00" },
 						{ event: "午餐", time: "下午12:30" },
-						{ event: "活动1", time: "下午1:30" },
-						{ event: "工作坊2", time: "下午3:00" },
+						{ event: "活动1（待定）", time: "下午2:30" },
 						{ event: "闪电演讲", time: "下午5:00" },
 						{ event: "晚餐", time: "下午6:00" },
-						{ event: "演示！", time: "下午7:00" },
+						{ event: "展示与投票！", time: "下午7:00" },
 						{ event: "闭幕式", time: "下午8:30" }
 					]
 				}
 			],
 			sponsors: '赞助商',
 			sponsorCTA: '想赞助 Daydream 南京吗？',
+			sponsorJukebox: '感谢 Jukebox 为我们提供',
+			sponsorCustomStickers: '定制贴纸',
+			sponsorJukeboxPost: '！',
 			steps: [
 				'#1: 报名参加 Daydream 南京',
 				'#2: 参加工作坊，学习游戏开发',
@@ -159,7 +165,7 @@
 				},
 				item3: {
 					name: 'SPEEDTICKERS',
-					author: '作者：Agustin'
+					author: '作者：Agustin & Juan'
 				},
 				line3: '在Daydream之前，我们还会举办工作坊和活动，帮助你学习使用Godot进行游戏开发！',
 				stuck: '卡住了？',
@@ -176,7 +182,7 @@
 				},
 				{
 					q: '这些都是免费的吗？',
-					a: '是的！餐饮、赠品和欢乐氛围都包含在内。此外，如果你从远方前来，我们还会报销你的汽油费、公交车票或火车票。'
+					a: '是的！餐饮、赠品和欢乐氛围都包含在内。'
 				},
 				{
 					q: '我需要准备什么？',
@@ -241,9 +247,9 @@
 	
 	// Get current URL for dynamic metadata
 	$: currentUrl = `https://daydream.hackclub.com${$page.url.pathname}`;
-	$: pageTitle = `Daydream ${eventName} - ${eventLocation} Game Jam`;
-	$: pageDescription = `Join Daydream ${eventName} in ${eventLocation}! A teen-led game jam where you'll build amazing games with other high schoolers. Food, workshops, and prizes included!`;
-	$: pageKeywords = `game jam, hackathon, teen coding, Hack Club, game development, ${eventLocation}, ${eventName}`;
+	$: pageTitle = `Daydream Nanjing - Nanjing Game Jam`;
+	$: pageDescription = `Join Daydream Nanjing! A teen-led game jam where you'll build amazing games with other high schoolers. Food, workshops, and prizes included!`;
+	$: pageKeywords = `game jam, hackathon, teen coding, Hack Club, game development, Nanjing`;
 
 	// Cities where the game jam is happening
 	const cities = `Columbus
@@ -1045,7 +1051,7 @@ Mumbai`.split("\n")
 			 </h4>
 		</div>
 		
-		<ParticipantSignUp {eventName} />
+		<ParticipantSignUp {signupLink} {eventName} />
 	</div>
 
 	<!-- <img src="hot-air-balloon.png" alt="" class="absolute w-1/8 right-32 bottom-40 z-20"> -->
@@ -1079,25 +1085,7 @@ Mumbai`.split("\n")
 	<img src="/clouds-top-left.png" alt="" class="absolute left-0 w-3/12 -bottom-12  translate-y-1/2 z-20 pointer-events-none">
 	
 
-	<!-- Desktop stickers button (bottom left) -->
-	 <a
-	 href="https://forms.hackclub.com/daydream-stickers"
-	 target="_blank"
-	 class="hidden md:block absolute bottom-16 left-16 z-50 w-max px-4 py-2 bg-pink border-b-2 border-b-pink-dark text-white rounded-full active:transform active:translate-y-0.5 transition-all duration-100 font-sans cursor-pointer overflow-visible hover:shadow-[0_2px_0_0_theme(colors.pink.dark)] hover:-translate-y-[2px] active:border-transparent active:shadow-none"
-	 >
-	 {l10n.stickers}
-	 <img
-	 src="button-clouds.svg" 
-	 alt="" 
-	 class="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto object-contain pointer-events-none"
-	 >
-	 <img
-	 src="rock-sticker.png"
-	 alt=""
-	 class="absolute bottom-2 right-3 translate-2/3 w-18 h-18 object-contain pointer-events-none"
-	 style="transform: rotate(-15deg);"
-	 >
-	 </a>
+	
 </div>
 
 <div class="w-full relative flex items-start justify-center">
@@ -1259,7 +1247,11 @@ Mumbai`.split("\n")
 							</div>
 						{/if}
 					{/if}
-					
+
+					<div class="mt-8 text-center">
+						<p class="text-lg text-[#335969]">{l10n.sponsorJukebox}<a href="https://www.jukeboxprint.com/custom-stickers" class="underline hover:text-[#477783] transition-colors" target="_blank">{l10n.sponsorCustomStickers}</a>{l10n.sponsorJukeboxPost}</p>
+					</div>
+
 					{#if contactLink}
 						<!-- Call to action for sponsors -->
 						<div class="mt-8 text-center">
