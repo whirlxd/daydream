@@ -17,6 +17,7 @@
 		{ image: "/sao-paulo/gdgsp.png", name: "Google Developers Group Sao Paulo", url: "https://gdg.community.dev/gdg-sao-paulo/" },
 		{ image: "/sao-paulo/noic.webp", name: "NOIC", url: "https://noic.com.br/" },
 		{ image: "/sao-paulo/flg.png", name: "First Lego Girls", url: "https://www.instagram.com/firstlegogirls/" },
+		{ image: "/sao-paulo/lala.png", name: "LALA", url: "https://latinamericanleadershipacademy.org/" },
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
@@ -24,7 +25,7 @@
 		{
 			title: "Sábado, 27 de Setembro",
 			items: [
-				{ event: "Portas abertas", time: "9:00 AM" },
+				{ event: "Portas abertas", time: "8:00 AM" },
 				{ event: "Cerimonia de Abertura", time: "10:00 PM" },
                 { event: "Atividade de Abertura", time: "10:30 PM" },
                 { event: "Comece a trabalhar nos projetos!", time: "10:00 AM" },
