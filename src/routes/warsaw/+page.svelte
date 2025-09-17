@@ -1281,7 +1281,7 @@ Mumbai`.split("\n")
 					{/if}
 				</p>
 			{/if}
-			<p>Thank you for the <a href="https://www.jukeboxprint.com/custom-stickers">Custom stickers</a> provided by Jukebox</p>
+			<p class="text-center font-sans text-lg pt-2 max-sm:text-base text-[#60574b]">Thank you so much for the super cool <a href="https://www.jukeboxprint.com/custom-stickers">Custom stickers</a> provided by Jukebox</p>
 		</div>
 	</div>
 
