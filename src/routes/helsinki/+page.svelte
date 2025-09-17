@@ -9,18 +9,18 @@
 	// Configuration - Put your information here!
 	const eventName = "Helsinki";
 	const eventLocation = "Helsinki";
-	const eventAddress = "" // "Puumiehenkuja 5A, 02150, Espoo"; // Leave this empty if you don't want an address
+	const eventAddress = "Puumiehenkuja 5A, 02150, Espoo"; // Leave this empty if you don't want an address
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recdfom5UbYh7cp59"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional
-	const directionsURL = "" // "https://maps.app.goo.gl/HLrrBNuKbzZEfUUXA";
+	const directionsURL = "https://maps.app.goo.gl/HLrrBNuKbzZEfUUXA";
 	const contactLink = "mailto:helsinki@daydream.hackclub.com"
 	
 	// Sponsors Configuration
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
 		{ image: "/helsinki/supercell.png", name: "Supercell", url: "https://supercell.com" },
-		{ image: "/helsinki/jukebox-logo.svg", name: "Jukebox", url: "https://www.jukeboxprint.com" }
-		// { image: "/helsinki/aaltoes.png", name: "Aaltoes", url: "https://aaltoes.com" }
+		{ image: "/helsinki/jukebox-logo.svg", name: "Jukebox", url: "https://www.jukeboxprint.com" },
+		{ image: "/helsinki/aaltoes.png", name: "Aaltoes", url: "https://aaltoes.com" }
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
@@ -37,7 +37,7 @@
 				//{ event: "Workshop 2", time: "16:00" },
 				{ event: "Dinner", time: "18:00" },
 				//{ event: "Lightning talks", time: "20:00" },
-				{ event: "Midnight surprise", time: "00:00" }
+				// { event: "Midnight surprise", time: "00:00" }
 			]
 		},
 		{
