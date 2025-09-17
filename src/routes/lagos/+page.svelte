@@ -13,14 +13,14 @@
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = "https://maps.app.goo.gl/KA2WQHQttrHph6NPA"
-	const contactLink = ""
+	const contactLink = "mailto:lagos@daydream.hackclub.com"
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "https://hc-cdn.hel1.your-objectstorage.com/s/v3/da7248dae7a294719b33caf12c532988c3864d96_untitled233.png", name: "Sponsor 1", url: "https://www.jukeboxprint.com/custom-stickers" },
-		{ image: "https://hc-cdn.hel1.your-objectstorage.com/s/v3/1fd3e99bb9270714992fb4ebb69b69006fc267c7_profile_photo1_3x.png", name: "Sponsor 2", url: "https://www.webuildx.com" },
-		{ image: "https://hc-cdn.hel1.your-objectstorage.com/s/v3/223e41e2373711572ccbe420469f82e96ead08e4_img-20250914-wa0063.jpg", name: "Sponsor 3", url: "https://africacomicade.org" }
+		{ image: "https://hc-cdn.hel1.your-objectstorage.com/s/v3/9b94b04b365387aa2458cf2b929b8b82834b2a2d_screenshot_2025-09-14_221823-removebg-preview.png", name: "Jukebox", url: "https://www.jukeboxprint.com/custom-stickers" },
+		{ image: "https://hc-cdn.hel1.your-objectstorage.com/s/v3/c9cb975bd943abc8d3308de1909ba6acfcddad95_profile_photo1_3x-removebg-preview_2.png", name: "WebuildX", url: "https://www.webuildx.com" },
+		{ image: "https://hc-cdn.hel1.your-objectstorage.com/s/v3/fb5da75247f8e7b757f94f7f20ad52c22bbd3f6d_img-20250914-wa0063-removebg-preview__1_.png", name: "Africa comicade", url: "https://africacomicade.org" }
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
@@ -1064,6 +1064,7 @@ Lagos`.split("\n")
 					{#if contactLink}
 						<!-- Call to action for sponsors -->
 						<div class="mt-8 text-center">
+							<h3>Special thanks to Jukebox for sponsoring our Daydream NYC <a class="underline hover:text-[#477783] transition-colors" href="https://www.jukeboxprint.com/custom-stickers">custom stickers</a>!</h3>
 							<p class="text-lg text-[#335969]">Want to sponsor Daydream {eventName}? <a href={contactLink} class="underline hover:text-[#477783] transition-colors">Get in touch</a></p>
 						</div>
 					{/if}
