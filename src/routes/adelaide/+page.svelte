@@ -20,6 +20,7 @@
 	const sponsors = [
 		{ image: "/adelaide/janestreet.png", name: "Jane Street Capital", url: "https://www.janestreet.com/" },
 		{ image: "/adelaide/jukebox-logo.svg", name: "Jukebox", url: "https://www.jukeboxprint.com/" },
+		{ image: "/adelaide/securestate.png", name: "Secure State", url: "https://www.securestate.com.au/"},
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
@@ -27,22 +28,34 @@
 		{
 			title: "Saturday, September 27th",
 			items: [
-				{ event: "Doors open", time: "11:00 AM" },
-				{ event: "Opening ceremony", time: "12:00 PM" },
-				{ event: "Lunch", time: "12:30 PM" },
-				{ event: "Start working on your project!", time: "1:00 PM" },
-				{ event: "Workshop 1", time: "2:00 PM" },
-				{ event: "Activity 2", time: "3:50 PM" },
-				{ event: "Dinner", time: "6:00 PM" },
-				{ event: "Workshop 3", time: "7:00 PM" }
+				{ event: "Doors open", time: "10:00 AM" },
+				{ event: "Opening ceremony", time: "10:30 AM" },
+				{ event: "Form your teams and code away", time: "11:00 AM" },
+				{ event: "Jumpstart Workshop (Ran by @Olii-dev) Part A", time: "11:30 AM" },
+				{ event: "GitHub Workshop (Ran by @BennyGaming635)", time: "12:30 PM" },
+				{ event: "Lunch (BYO)", time: "1:00 PM" },
+				{ event: "Jumpstart Workshop (Part B) & Code away!", time: "2:00 PM" },
+				{ event: "GitHub Campus Expert AMA (TBD)", time: "3:30 PM" },
+				{ event: "Surprise Event (Look in #daydream-aus)", time: "4:00 PM" },
+				{ event: "Code away!", time: "4:30 PM" },
+				{ event: "Dinner", time: "5:00 PM" },
+				{ event: "Code away!", time: "5:30 PM" },
+				{ event: "Late night games", time: "9:30 PM" },
 			]
 		},
 		{
 			title: "Sunday, September 28th",
 			items: [
-				{ event: "Breakfast", time: "8:00 AM" },
-				{ event: "Demos!", time: "10:30 AM" },
-				{ event: "Closing ceremony", time: "12:00 PM" }
+				{ event: "Breakfast", time: "8:30 AM" },
+				{ event: "Code away!", time: "9:00 AM" },
+				{ event: "Check in", time: "10:30 AM" },
+				{ event: "Project Submission Masterclass", time: "12:00 PM" },
+				{ event: "Code away!", time: "12:30 PM" },
+				{ event: "Lunch time", time: "1:00 PM" },
+				{ event: "Start to submit and Surprise Game (Ran by @BennyGaming635)", time: "1:30 PM" },
+				{ event: "PROJECTS DUE!!", time: "2:00 PM" },
+				{ event: "Project Demos", time: "2:15 PM" },
+				{ event: "Closing Ceremony", time: "3:00 PM" },
 			]
 		}
 	];
