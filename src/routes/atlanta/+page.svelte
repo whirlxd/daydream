@@ -27,7 +27,7 @@
            </p>`		},
 		{ image: "/atlanta/WCT.png", name: "We Create Tech", url: "https://www.wecreatetech.org/" },
 		{ image: "/atlanta/gtsbe.png", name: "National Society of Black Engineers at Georgia Tech", url: "https://www.gtsbe.org/"},
-		{ image: "/atlanta/WIT.png", name: "\", url: "https://www.gtsbe.org/"}
+		{ image: "/atlanta/WIT.png", name: "Women In Tech", url: "https://mywit.org/programs/wit-campus/"}
 	];
 	
 	
