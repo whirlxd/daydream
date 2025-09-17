@@ -92,15 +92,43 @@
 	];
 
 	// Past events showcase data (placeholder images)
-	const pastEvents = [
-		{
-			image: "/example/1.png",
-			title: "Daydream NYC",
-			location: "New York, USA",
-			date: "2024",
-			description: currentLanguage === 'tr' ? 'Lise öğrencileri oyunlar geliştirdi, ödüller kazandı.' : 'High schoolers built games and won prizes.'
-		},
-	];
+const pastEvents = [
+  {
+    image: "https://hc-cdn.hel1.your-objectstorage.com/s/v3/4efe245862fb94abbb2a027df2c9f81fe77c482f_img_1964.jpg",
+    title: "Trail",
+    location: "Pacific Crest Trail, USA",
+    date: "2024 Summer",
+    description: "Katılımcıların kendi yaptıkları elektronik ekipmanlarla 7 gün boyunca Pasifik Crest Patikası'nda yürüdüğü, türünün ilk örneği bir 'hikeathon'."
+  },
+  {
+    image: "https://hc-cdn.hel1.your-objectstorage.com/s/v3/ed15ac9d35cf12684efa3bd85a48260d3c2155cc_250a3227.jpg",
+    title: "Blossom",
+    location: "Atlanta, GA, USA",
+    date: "2024 March",
+    description: "Atlanta'daki en büyük cinsiyet odaklı hackathon. Genç kadınların teknoloji alanında güçlenmesini hedefleyen bir etkinlik."
+  },
+  {
+    image: "https://hc-cdn.hel1.your-objectstorage.com/s/v3/0ef857a047cf4edc28b577a5cf9bc3d2ac40f471_19.jpg",
+    title: "Haunted House",
+    location: "Chicago, USA",
+    date: "2023 October",
+    description: "Cadılar Bayramı temalı bu hackathon'da katılımcılar, web teknolojilerini kullanarak 'en korkunç perili ev deneyimini' yaratmak için yarıştılar."
+  },
+  {
+    image: "https://hc-cdn.hel1.your-objectstorage.com/s/v3/51ccc1820af736eee57d6b988250cf7ae23166bf_image.png",
+    title: "Epoch",
+    location: "New Delhi, India",
+    date: "2023 New Year's",
+    description: "Hack Club'ın Amerika dışındaki ilk büyük etkinliği. Yeni yılı kod yazarak karşılamak için dünyanın dört bir yanından lise öğrencilerini bir araya getirdi."
+  },
+  {
+    image: "https://hc-cdn.hel1.your-objectstorage.com/s/v3/e2a7854396d35c1de7f1532f2798857dfbe730e8_image.png",
+    title: "Assemble",
+    location: "San Francisco, USA",
+    date: "2022 Summer",
+    description: "Pandemi sonrası düzenlenen ilk büyük lise hackathon'u. Öğrenciler Figma'nın genel merkezinde bir araya gelerek projeler geliştirdiler."
+  },
+];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
 	$: scheduleData = [
@@ -912,7 +940,7 @@ Ve şimdi İstanbul'da!`.split("\n")
 			<h4
 				class="text-2xl opacity-90 mt-2 font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent max-sm:text-xl"
 			>
-				{currentLanguage === 'tr' ? 'İstanbul\'da Gençler Tarafından Düzenleniyor' : 'Organized by Teenagers in ' + eventLocation}
+				{currentLanguage === 'tr' ? '27 Eylül\'de Tech İstanbul\'da!' : 'Organized by Teenagers in ' + eventLocation}
 			</h4>
 		</div>
 		
@@ -1193,7 +1221,7 @@ Ve şimdi İstanbul'da!`.split("\n")
 
 				<!-- Past Events Carousel -->
 				<div class="relative z-10 mt-8">
-					<PastEventsCarousel heading={currentLanguage === 'tr' ? 'Geçmiş Etkinlikler' : 'Past Events'} events={pastEvents} />
+					<PastEventsCarousel heading={currentLanguage === 'tr' ? `Hack Club'ın düzenlediği bazı etkinlikler` : 'Past Events'} events={pastEvents} />
 				</div>
 			</div>
 			
