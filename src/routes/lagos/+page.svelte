@@ -18,9 +18,10 @@
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "/lagos/webuildx.png", name: "webuildx", url: "https://www.webuildx.com" },
-		{ image: "/lagos/jukebox-logo.svg", name: "Jukebox", url: "https://jukeboxprint.com" },
-		{ image: "/lagos/africa_comicade.png", name: "Africa Comicade", url: "https://africacomicade.org" }
+		{ image: "/lagos/alx.png", name: "ALX", url: "https://www.alxafrica.com" },
+		{ image: "/lagos/jukebox-logo.png", name: "Jukebox", url: "https://www.jukeboxprint.com/custom-stickers" },
+		{ image: "https://hc-cdn.hel1.your-objectstorage.com/s/v3/c9cb975bd943abc8d3308de1909ba6acfcddad95_profile_photo1_3x-removebg-preview_2.png", name: "WebuildX", url: "https://www.webuildx.com" },
+		{ image: "https://hc-cdn.hel1.your-objectstorage.com/s/v3/fb5da75247f8e7b757f94f7f20ad52c22bbd3f6d_img-20250914-wa0063-removebg-preview__1_.png", name: "Africa comicade", url: "https://africacomicade.org" }
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
