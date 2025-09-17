@@ -18,8 +18,8 @@
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "technopark.png", name: "Technopark Souss-Massa", url: "https://www.technopark.ma/reseau/#technopark-agadir" },
-		{ image: "flag-orpheus-left.png", name: "Hack Club", url: "https://hackclub.com" }
+		{ image: "/agadir/technopark.jpg", name: "Technopark Souss-Massa", url: "https://www.technopark.ma/reseau/#technopark-agadir" },
+		{ image: "/agadir/flag-orpheus-left.png", name: "Hack Club", url: "https://hackclub.com" }
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!

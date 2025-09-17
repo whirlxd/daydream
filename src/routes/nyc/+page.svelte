@@ -19,6 +19,8 @@
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
 		{ image: "/nyc/medal.png", name: "Medal", url: "https://medal.tv" },
+		{ image: "/nyc/jukebox-logo.svg", name: "Jukebox", url: "https://jukeboxprint.com" },
+		{ image: "https://static.wixstatic.com/media/2d4ffd_deb3c3847e6649f5923c78a8dd21aa60~mv2.png/v1/crop/x_54,y_0,w_1392,h_1503/fill/w_556,h_596,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0Kc-k22A.png", name: "Makerspace NYC", url: "https://www.makerspace.nyc" },
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
@@ -1051,6 +1053,7 @@ Mumbai`.split("\n")
 					{#if contactLink}
 						<!-- Call to action for sponsors -->
 						<div class="mt-8 text-center">
+							<h3>Special thanks to Jukebox for sponsoring our Daydream NYC <a class="underline hover:text-[#477783] transition-colors" href="https://www.jukeboxprint.com/custom-stickers">custom stickers</a>!</h3>
 							<p class="text-lg text-[#335969]">Want to sponsor Daydream {eventName}? <a href={contactLink} class="underline hover:text-[#477783] transition-colors">Get in touch</a></p>
 						</div>
 					{/if}
@@ -1088,6 +1091,7 @@ Mumbai`.split("\n")
 		</div>
 	</div>
 </div>
+
 {/if}
 
 <!-- Gamejam Text Section -->
