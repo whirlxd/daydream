@@ -13,7 +13,7 @@
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = "https://maps.app.goo.gl/KA2WQHQttrHph6NPA"
-	const contactLink = ""
+	const contactLink = "mailto:lagos@daydream.hackclub.com"
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
@@ -1064,6 +1064,7 @@ Lagos`.split("\n")
 					{#if contactLink}
 						<!-- Call to action for sponsors -->
 						<div class="mt-8 text-center">
+							<h3>Special thanks to Jukebox for sponsoring our Daydream NYC <a class="underline hover:text-[#477783] transition-colors" href="https://www.jukeboxprint.com/custom-stickers">custom stickers</a>!</h3>
 							<p class="text-lg text-[#335969]">Want to sponsor Daydream {eventName}? <a href={contactLink} class="underline hover:text-[#477783] transition-colors">Get in touch</a></p>
 						</div>
 					{/if}
