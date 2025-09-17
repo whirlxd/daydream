@@ -30,7 +30,6 @@
 			schedule: {
 				title: "Program",
 				day1: "Cumartesi, 27 Eylül",
-				day2: "Pazar, 28 Eylül"
 			},
 			events: {
 				doorsOpen: "Kapılar açılıyor",
@@ -111,14 +110,6 @@
 				{ event: t.events.midnightSurprise, time: "00:00" }
 			]
 		},
-		{
-			title: t.schedule.day2,
-			items: [
-				{ event: t.events.breakfast, time: "08:00" },
-				{ event: t.events.demos, time: "10:30" },
-				{ event: t.events.closingCeremony, time: "12:00" }
-			]
-		}
 	];
 
 	
