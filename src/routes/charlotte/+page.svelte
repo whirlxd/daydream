@@ -25,7 +25,7 @@
              <a href="https://www.jukeboxprint.com/custom-stickers"
                 class="underline hover:text-[#477783] transition-colors">
                custom stickers</a>!
-           </p>`		};
+           </p>`		}
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
