@@ -25,7 +25,7 @@
                 class="underline hover:text-[#477783] transition-colors">
                custom stickers</a>!
            </p>`		},
-		{ image: "/charlotte/CCI.png", name: "UNCC College of Computing and Informatics", url: "https://cci.charlotte.edu/"}
+		{ image: "/charlotte/CCI.jpg", name: "UNCC College of Computing and Informatics", url: "https://cci.charlotte.edu/"}
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
