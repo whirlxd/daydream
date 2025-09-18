@@ -18,14 +18,14 @@
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "https://res.cloudinary.com/micronetonline/image/upload/c_crop,h_730,w_1336,x_0,y_0/v1630414468/tenants/4d389e81-e9d4-4644-838a-34fbcbc3a727/d9a9eb0a28144397abaeea80f3f8d70a/CCI-logo-C-Char-Entity-002.png", name: "University of North Carolina Charlotte Computing", url: "https://www.charlotte.edu/" },
-		{ image: "https://storage.jukeboxprint.com/s/images/jukebox-meta-im.png", name: "Jukebox Print", url: "https://www.jukeboxprint.com/custom-stickers",
+		{ image: "/charlotte/jukebox.png", name: "Jukebox" , url: "https://www.jukeboxprint.com/custom-stickers", 
 		text: `<p class="text-lg text-[#335969] text-center">
              Big shoutout to Jukebox for our
              <a href="https://www.jukeboxprint.com/custom-stickers"
                 class="underline hover:text-[#477783] transition-colors">
                custom stickers</a>!
-           </p>`		}
+           </p>`		},
+		{ image: "/charlotte/CCI.jpg", name: "UNCC College of Computing and Informatics", url: "https://cci.charlotte.edu/"}
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
