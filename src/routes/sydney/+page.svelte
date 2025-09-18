@@ -40,7 +40,7 @@
 				{ event: "Lunch", time: "1:00 PM" },
 				{ event: "Awesomesauce Activity", time: "3:00 PM" },
 				{ event: "Workshop 2", time: "4:00 PM" },
-				{ event: "End of Day 1", time: 6:00 PM" },
+				{ event: "End of Day 1", time: "6:00 PM" },
 			]
 		},
 		{
