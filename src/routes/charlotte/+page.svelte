@@ -18,14 +18,14 @@
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "https://res.cloudinary.com/micronetonline/image/upload/c_crop,h_730,w_1336,x_0,y_0/v1630414468/tenants/4d389e81-e9d4-4644-838a-34fbcbc3a727/d9a9eb0a28144397abaeea80f3f8d70a/CCI-logo-C-Char-Entity-002.png", name: "University of North Carolina Charlotte Computing", url: "https://www.charlotte.edu/" },
-		{ image: "https://storage.jukeboxprint.com/s/images/jukebox-meta-im.png", name: "Jukebox Print", url: "https://www.jukeboxprint.com/custom-stickers",
+		{ image: "/charlotte/jukebox.png", name: "Jukebox" , url: "https://www.jukeboxprint.com/custom-stickers", 
 		text: `<p class="text-lg text-[#335969] text-center">
              Big shoutout to Jukebox for our
              <a href="https://www.jukeboxprint.com/custom-stickers"
                 class="underline hover:text-[#477783] transition-colors">
                custom stickers</a>!
-           </p>`		}
+           </p>`		},
+		{ image: "/charlotte/CCI.png", name: "UNCC College of Computing and Informatics", url: "https://cci.charlotte.edu/"}
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
@@ -820,7 +820,7 @@ Mumbai`.split("\n")
 			>
 				September 27th & 28th, 2025
 			</h2>
-			<img src="daydream.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4" />
+			<img src="charlotte/DaydreamCharlotte.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4" />
 			<a href="https://hackclub.com" class="absolute top-0 -right-6 max-sm:right-0 max-sm:scale-80 animate-hover ![animation-delay:0.9s] ![--hover:-0.2rem]">
 				<img src="flag-plane.png" alt="Hack Club" class="h-28">
 			</a>
