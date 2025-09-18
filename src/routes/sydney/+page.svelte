@@ -52,7 +52,7 @@
 				{ event: "Activity 2", time: "12:30 PM" },
 				{ event: "Lunch", time: "1:00 PM" },
 				{ event: "Ships close and voting starts", time: "3:00 PM" },
-				{ event: "Closing ceremony", time: "5:00 PM" }
+				{ event: "Closing ceremony", time: "5:00 PM" },
 			]
 		}
 	];
