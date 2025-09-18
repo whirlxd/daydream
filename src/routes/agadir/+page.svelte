@@ -1005,7 +1005,7 @@ Mumbai`.split("\n")
 						<div class="grid gap-8 items-center justify-items-center max-w-4xl grid-cols-1">
 							<!-- Jukebox logo -->
 							<div class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center">
-								<img src="jukebox-logo.svg" alt="Jukebox" class="max-w-full max-h-full object-contain">
+								<img src="/agadir/jukebox-logo.svg" alt="Jukebox" class="max-w-full max-h-full object-contain">
 							</div>
 						</div>
 					</div>
