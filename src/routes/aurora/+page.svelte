@@ -16,9 +16,9 @@
 	const contactLink = "mailto:aurora@daydream.hackclub.com"
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
-	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
+	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{name: "Custom stickers provided by Jukebox", url: "https://www.jukeboxprint.com/custom-stickers" }
+		{name: "Custom stickers provided by Jukebox", url: "https://www.jukeboxprint.com/custom-stickers", image: "/nyc/jukebox-logo.svg" }
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
