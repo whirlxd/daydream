@@ -1005,7 +1005,7 @@ Mumbai`.split("\n")
 						<div class="grid gap-8 items-center justify-items-center max-w-4xl grid-cols-1">
 							<!-- Jukebox logo -->
 							<div class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center">
-								<img src="/images/jukebox-logo.png" alt="Jukebox" class="max-w-full max-h-full object-contain">
+								<img src="jukebox-logo.svg" alt="Jukebox" class="max-w-full max-h-full object-contain">
 							</div>
 						</div>
 					</div>
@@ -1013,10 +1013,10 @@ Mumbai`.split("\n")
 					<!-- Text with link -->
 					<div class="mt-8 text-center">
 						<p class="text-lg text-[#335969]">
-							Custom stickers provided by 
 							<a href="https://www.jukeboxprint.com/custom-stickers" target="_blank" rel="noopener noreferrer" class="underline hover:text-[#477783] transition-colors">
-								custom stickers
+								Custom stickers
 							</a>
+							provided by Jukebox
 						</p>
 					</div>
 				</div>
