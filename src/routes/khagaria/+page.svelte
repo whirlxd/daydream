@@ -9,10 +9,10 @@
 	// Configuration - Put your information here!
 	const eventName = "Khagaria"; // This should be the name of your event WITHOUT "Daydream" at the start
 	const eventLocation = "Khagaria";
-	const eventAddress = "Signature Cafe & Restaurant, Infront of DM office, Koshi College Rd, Khagaria, Bihar 851205"; // Leave this empty if you don't want an address
+	const eventAddress = "New Holy Ganges Public School, Khagaria, Bihar 851205"; // Leave this empty if you don't want an address
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recymsr7YilKc3ltK"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
-	const directionsURL = "https://maps.app.goo.gl/BdZaFKaXTBUKtxp76"
+	const directionsURL = "https://maps.app.goo.gl/9dF8VjudWfjHeUmH6"
 	const contactLink = "mailto:khagaria@daydream.hackclub.com"
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
