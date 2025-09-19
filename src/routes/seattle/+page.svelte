@@ -9,10 +9,10 @@
 	// Configuration - Put your information here!
 	const eventName = 'Seattle'; // This should be the name of your event WITHOUT "Daydream" at the start
 	const eventLocation = 'Seattle';
-	const eventAddress = ''; // Leave this empty if you don't want an address
+	const eventAddress = '9931 Willows Rd NE, Redmond, WA 98052'; // Leave this empty if you don't want an address
 	const signupLink = 'https://forms.hackclub.com/daydream-sign-up?event=recK6TeqRiPWomO7z'; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
-	const directionsURL = '';
+	const directionsURL = 'https://maps.app.goo.gl/b6mdsr7dox5kMBQF6'; 
 	const contactLink = 'mailto:hunterzhuang0@gmail.com';
 
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
@@ -34,13 +34,14 @@
 				{ event: 'Doors open', location: '', time: '09:00 AM' },
 				{ event: 'Opening ceremony', location: 'Plato', time: '09:30 AM' },
 				{ event: 'Workshop: How to make a Godot Platformer', location: 'Plato', time: '10:30 AM' },
-				{ event: 'Workshop: How to make a Ren\'Py Visual Novel', location: 'Lorde', time: '10:30 AM' },
+				{ event: 'Workshop: How to make a Ren\'Py Visual Novel', location: 'Al-Khwarizmi', time: '10:30 AM' },
 				{ event: 'Required: Getting your project on Github!', location: 'Plato', time: '11:30 AM' },
 				{ event: 'Lunch', location: 'Cafe', time: '12:00 PM' },
-				{ event: 'Workshop: Get introduced to hardware! ', location: 'Lorde', time: '03:00 PM' },
+				{ event: 'Workshop: How to Make Art and Music For Your Game', location: 'Plato', time: '10:30 AM' },
+				{ event: 'Workshop: Intro to PCB Design! ', location: 'Al-Khwarizmi', time: '03:00 PM' },
 				{ event: 'Dinner', location: 'Cafe', time: '06:00 PM' },
-				{ event: 'Show off your Project!', location: 'Lorde', time: '08:00 PM' },
-				{ event: 'Goodbye!', location: 'Plato', time: '08:50 PM' },
+				{ event: 'Show off your Project!', location: 'Al-Khwarizmi', time: '08:00 PM' },
+				{ event: 'Goodbye! (Presentation)', location: 'Plato', time: '08:50 PM' },
 				{ event: 'Doors Closed', location: '', time: '09:20 PM' },
 			]
 		},
@@ -51,8 +52,8 @@
 				{ event: 'Welcome Back! Presentation', location: 'Plato', time: '09:30 AM' },
 				{ event: 'Lunch', location: 'Cafe', time: '12:00 PM' },
 				{ event: 'Workshop: How to ship a Godot Game', location: 'Plato', time: '04:10 PM' },
-				{ event: 'Workshop: How to ship a Ren\'Py Novel', location: 'Lorde', time: '04:10 PM' },
-				{ event: 'Workshop: How to ship a Unity Game', location: 'Lorde', time: '04:40 PM' },
+				{ event: 'Workshop: How to ship a Ren\'Py Novel', location: 'Al-Khwarizmi', time: '04:10 PM' },
+				{ event: 'Workshop: How to ship a Unity Game', location: 'Plato', time: '04:40 PM' },
 				{ event: 'Dinner', location: 'Cafe', time: '05:30 PM' },
 				{ event: 'SHIP YOUR GAME!', location: '', time: '06:00 PM' },
 				{ event: 'Required: How to vote on Podium', location: 'Plato', time: '06:30 PM' },
