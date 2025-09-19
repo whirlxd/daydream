@@ -822,7 +822,7 @@ Mumbai`.split('\n');
 	></div>
 
 	<div
-		class="buildings-front-parallax absolute top-0 left-0 w-full h-full bg-[url(/seattle/banner.svg)] bg-no-repeat bg-contain pointer-events-none lg:-translate-y-28"
+		class="buildings-front-parallax absolute top-0 left-0 w-full h-full bg-[url(/seattle/banner.svg)] bg-no-repeat bg-contain pointer-events-none lg:-translate-y-32"
 	></div>
 	<!-- brush texture clipped to front buildings -->
 	<div
@@ -830,10 +830,10 @@ Mumbai`.split('\n');
 		style="mask-image: url('/seattle/banner.svg'); mask-size: contain; mask-repeat: no-repeat; mask-position: center top; -webkit-mask-image: url('/seattle/banner.svg'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center top;"
 	></div>
 	<div
-		class="hero-ui-parallax flex flex-col items-center justify-center text-center relative z-5 -translate-y-20 min-w-full"
+		class="hero-ui-parallax flex flex-col items-center justify-center text-center relative z-30 -translate-y-2"
 	>
 		<div class="inline-block relative">
-			<div class="h-36"></div>
+			<div class="h-12"></div>
 			<!-- space for the ship -->
 			<h2
 				class="text-xl font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent absolute left-1/2 max-sm:translate-y-4 max-sm:mb-0 max-md:-mb-8 md:left-[calc(50%+4rem)] -translate-x-1/2 bottom-8 italic w-max md:text-lg max-sm:text-lg"
@@ -843,13 +843,13 @@ Mumbai`.split('\n');
 			<img
 				src="/seattle/daydream.svg"
 				alt="Daydream"
-				class="mb-9 w-auto h-48 object-contain max-w-full py-4"
+				class="h-40 mt-100 mb-6 w-auto object-contain max-w-full px-4"
 			/>
 			<a
 				href="https://hackclub.com"
-				class="absolute top-8 -right-30 max-sm:right-0 max-sm:scale-80 animate-hover ![animation-delay:0.9s] ![--hover:-0.2rem] p-4"
+				class="absolute top-0 -right-6 max-sm:right-0 max-sm:scale-80 animate-hover ![animation-delay:0.9s] ![--hover:-0.2rem]"
 			>
-				<img src="flag-plane.png" alt="Hack Club" class="h-32" />
+				<img src="flag-plane.png" alt="Hack Club" class="h-28" />
 			</a>
 		</div>
 		<div class="relative inline-block px-4">
@@ -868,9 +868,44 @@ Mumbai`.split('\n');
 			>
 				Organized by Teenagers in {@html eventLocation.replaceAll(' ', '&nbsp;')}
 			</h4>
-		</div>
 
-		<ParticipantSignUp {signupLink} {eventName} />
+			<div class="mb-70">
+
+				<div class="mt-10 mb-15 relative z-30">
+					<ParticipantSignUp {signupLink} {eventName} />
+				</div>
+
+				{#if eventAddress}
+					<!-- Address Box - Prominent display -->
+					<div
+						class="mt-8 bg-white/80 backdrop-blur-sm border-4 border-[#487DAB] rounded-2xl px-8 py-6 max-w-2xl mx-4 shadow-lg relative z-30"
+					>
+						<div class="text-center">
+							<h3 class="text-2xl font-serif font-bold text-[#487DAB] mb-3 max-sm:text-xl">
+								Venue
+							</h3>
+							{#if directionsURL}
+								<a
+									href={directionsURL}
+									class="block text-xl font-sans text-[#60574b] hover:text-[#487DAB] transition-colors underline decoration-2 underline-offset-4 max-sm:text-lg"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									{eventAddress}
+								</a>
+							{:else}
+								<p class="text-xl font-sans text-[#60574b] max-sm:text-lg">
+									{eventAddress}
+								</p>
+							{/if}
+							{#if directionsURL}
+								<p class="text-sm text-[#60574b]/70 mt-2 font-sans">Click for directions⤴︎</p>
+							{/if}
+						</div>
+					</div>
+				{/if}
+			</div>
+		</div>
 	</div>
 
 	<!-- <img src="hot-air-balloon.png" alt="" class="absolute w-1/8 right-32 bottom-40 z-20"> -->
