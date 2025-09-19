@@ -18,7 +18,7 @@
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "/auckland/jukebox-logo.svg", name: "jukebox", url: "https://www.jukeboxprint.com/" },
+		{ image: "/auckland/jukebox-logo.svg", name: "jukebox", url: "javascript:void(0)" },
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
@@ -1027,9 +1027,9 @@ Mumbai`.split("\n")
 							<div class="flex justify-center">
 								<div class="grid gap-8 items-center justify-items-center max-w-4xl {sponsors.length === 1 ? 'grid-cols-1' : sponsors.length === 2 ? 'grid-cols-1 md:grid-cols-2' : sponsors.length === 3 ? 'grid-cols-2 md:grid-cols-3' : 'grid-cols-2 md:grid-cols-4'}">
 									{#each sponsors as sponsor}
-										<a href={sponsor.url} class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors" target="_blank" rel="noopener noreferrer">
-											<img src={sponsor.image} alt={sponsor.name} class="max-w-full max-h-full object-contain">
-										</a>
+									<a href={sponsor.url} class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors" target={sponsor.url.startsWith("javascript:") ? undefined : "_blank"} rel="noopener noreferrer">
+										<img src={sponsor.image} alt={sponsor.name} class="w-full max-h-full object-contain">
+									</a>
 									{/each}
 								</div>
 							</div>
@@ -1037,10 +1037,11 @@ Mumbai`.split("\n")
 					{/if}
 					
 					{#if contactLink}
+					<div class="mt-8 text-center">
+						<h3>Special thanks to Jukebox for sponsoring our Daydream Auckland <a class="underline hover:text-[#477783] transition-colors" href="https://www.jukeboxprint.com/custom-stickers" target="_blank">custom stickers</a>!</h3>
 						<!-- Call to action for sponsors -->
-						<div class="mt-8 text-center">
-							<p class="text-lg text-[#335969]">Want to sponsor Daydream {eventName}? <a href={contactLink} class="underline hover:text-[#477783] transition-colors">Get in touch</a></p>
-						</div>
+						<p class="text-lg text-[#335969]">Want to sponsor Daydream {eventName}? <a href={contactLink} class="underline hover:text-[#477783] transition-colors">Get in touch</a></p>
+					</div>
 					{/if}
 				</div>
 			</div>
