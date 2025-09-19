@@ -16,7 +16,7 @@
 	const contactLink = "mailto:daydreamsanjose@gmail.com"
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
-	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
+	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
 	const sponsors = [
 		{ image: "/sv/images/Framework_Computer_logo.svg", name: "Framework", url: "https://frame.work" },
 		{ image: "/sv/images/vercel-logotype-light.svg", name: "Vercel", url: "https://vercel.com" },
@@ -35,7 +35,7 @@
 				{ event: "Activity 1", time: "4:00 PM" },
 				{ event: "Workshop 2", time: "4:00 PM" },
 				{ event: "Dinner", time: "6:00 PM" },
-				{ event: "Go home :(", time: "7:30 PM" },
+				{ event: "Go home :(", time: "7:30 PM" }
 			]
 		},
 		{
