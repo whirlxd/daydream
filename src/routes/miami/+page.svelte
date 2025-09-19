@@ -32,7 +32,7 @@
 				                class="underline hover:text-[#477783] transition-colors">
 				               custom stickers</a>!
 				           </p>`		},
-		// { image: "/example/logo6.png", name: "Sponsor 6", url: "https://example6.com" },
+		{ image: "/miami/BigDuckGames.png", name: "Big Duck Games LLC", url: "https://www.bigduckgames.com/" },
 		// { image: "/example/logo7.png", name: "Sponsor 7", url: "https://example7.com" }
 	];
 	
