@@ -23,8 +23,8 @@
 		{ image: '/nyc/makerspace.png', name: 'Makerspace NYC', url: 'https://www.makerspace.nyc' },
 		{ image: '/nyc/gumbo.png', name: 'GUMBO Collective NYC', url: 'https://gumbonyc.org/' }
 	];
-	const specialThanks = {
-		kirk: {
+	const specialThanks = [
+		{
 			type: 'person',
 			image: '/nyc/kirk.jpg',
 			name: 'Kirk Musngi',
@@ -33,16 +33,16 @@
 			for: 'helping us get our venue!',
 			link: ''
 		},
-		jukebox: {
+		{
 			type: 'company',
 			image: '/nyc/jukebox-logo.svg',
 			name: 'Jukebox',
 			title: '',
-			affiliation: 'Jukebox',
-			for: 'sponsoring our event!',
+			affiliation: '',
+			for: 'sponsoring our Daydream NYC custom stickers!',
 			link: 'https://www.jukeboxprint.com/custom-stickers'
 		}
-	};
+	];
 
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
 	const scheduleData: { title: string; items: { event: string; time: string }[] }[] = [
@@ -1112,7 +1112,7 @@ Mumbai`.split('\n');
 					></div>
 
 					<!-- Sponsors Grid -->
-					<div class="relative z-10 min-h-40">
+								<div class="relative z-10 min-h-40">
 						{#if sponsors.length > 0}
 							<!-- First row (up to 4 sponsors) -->
 							{#if sponsors.length > 4}
@@ -1137,8 +1137,8 @@ Mumbai`.split('\n');
 
 								<!-- Second row (remaining sponsors, centered) -->
 								{#if sponsors.length > 4}
-									<div class="flex justify-center">
-										<div
+										<div class="flex justify-center">
+											<div
 											class="grid grid-cols-2 md:grid-cols-3 gap-8 items-center justify-items-center max-w-2xl"
 										>
 											{#each sponsors.slice(4) as sponsor, index}
@@ -1168,13 +1168,13 @@ Mumbai`.split('\n');
 									<div
 										class="grid gap-8 items-center justify-items-center max-w-4xl {sponsors.length ===
 										1
-											? 'grid-cols-1'
+													? 'grid-cols-1'
 											: sponsors.length === 2
-												? 'grid-cols-1 md:grid-cols-2'
+														? 'grid-cols-1 md:grid-cols-2'
 												: sponsors.length === 3
-													? 'grid-cols-2 md:grid-cols-3'
-													: 'grid-cols-2 md:grid-cols-4'}"
-									>
+															? 'grid-cols-2 md:grid-cols-3'
+															: 'grid-cols-2 md:grid-cols-4'}"
+											>
 										{#each sponsors as sponsor}
 											<a
 												href={sponsor.url}
@@ -1188,10 +1188,10 @@ Mumbai`.split('\n');
 													class="max-w-full max-h-full object-contain"
 												/>
 											</a>
-										{/each}
-									</div>
-								</div>
-							{/if}
+												{/each}
+											</div>
+										</div>
+									{/if}
 						{/if}
 
 						{#if contactLink}
@@ -1205,7 +1205,7 @@ Mumbai`.split('\n');
 								</p>
 							</div>
 						{/if}
-					</div>
+								</div>
 				</div>
 
 				<!-- Billboard Bars (bottom) -->
@@ -1271,99 +1271,103 @@ Mumbai`.split('\n');
 						class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"
 					></div>
 
-					<!-- Sponsors Grid -->
+					<!-- Special Thanks Grid -->
 					<div class="relative z-10 min-h-40">
-						{#if sponsors.length > 0}
+						{#if specialThanks.length > 0}
 							<!-- First row (up to 4 sponsors) -->
-							{#if sponsors.length > 4}
-								<div
-									class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center mb-8"
-								>
-									{#each sponsors.slice(0, 4) as sponsor}
-										<a
-											href={sponsor.url}
-											class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors"
-											target="_blank"
-											rel="noopener noreferrer"
-										>
+							{#if specialThanks.length > 4}
+								<div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center mb-8">
+									{#each specialThanks.slice(0, 4) as thanks}
+										<div class="bg-white/20 rounded-lg p-4 w-full h-28 flex items-center hover:bg-white/40 transition-colors">
 											<img
-												src={sponsor.image}
-												alt={sponsor.name}
-												class="max-w-full max-h-full object-contain"
+												src={thanks.image}
+												alt={thanks.name}
+												class={"max-w-[80px] max-h-full object-contain mr-4 " + (thanks.type === 'person' ? 'rounded-full' : 'rounded-none')}
 											/>
-										</a>
+											<div class="flex flex-col justify-center">
+												<div class="font-bold text-lg text-[#335969]">{thanks.name}</div>
+												{#if thanks.title}
+													<div class="text-sm text-[#477783]">{thanks.title}</div>
+												{/if}
+												{#if thanks.affiliation}
+													<div class="text-xs text-[#477783] italic">@ {thanks.affiliation}</div>
+												{/if}
+												{#if thanks.for}
+													<div class="text-xs text-[#335969]">for {thanks.for}</div>
+												{/if}
+												{#if thanks.link}
+													<a href={thanks.link} target="_blank" rel="noopener noreferrer" class="text-xs underline text-[#477783]">Learn more</a>
+												{/if}
+											</div>
+										</div>
 									{/each}
 								</div>
-
-								<!-- Second row (remaining sponsors, centered) -->
-								{#if sponsors.length > 4}
-									<div class="flex justify-center">
-										<div
-											class="grid grid-cols-2 md:grid-cols-3 gap-8 items-center justify-items-center max-w-2xl"
-										>
-											{#each sponsors.slice(4) as sponsor, index}
-												<a
-													href={sponsor.url}
-													class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors {sponsors.slice(
-														4
-													).length === 3 && index === 2
-														? 'md:col-span-1 col-span-2 max-w-xs mx-auto'
-														: ''}"
-													target="_blank"
-													rel="noopener noreferrer"
-												>
-													<img
-														src={sponsor.image}
-														alt={sponsor.name}
-														class="max-w-full max-h-full object-contain"
-													/>
-												</a>
-											{/each}
-										</div>
-									</div>
-								{/if}
-							{:else}
-								<!-- Single row for 4 or fewer sponsors -->
+								<!-- Second row (remaining special thanks, centered) -->
 								<div class="flex justify-center">
-									<div
-										class="grid gap-8 items-center justify-items-center max-w-4xl {sponsors.length ===
-										1
-											? 'grid-cols-1'
-											: sponsors.length === 2
-												? 'grid-cols-1 md:grid-cols-2'
-												: sponsors.length === 3
-													? 'grid-cols-2 md:grid-cols-3'
-													: 'grid-cols-2 md:grid-cols-4'}"
-									>
-										{#each sponsors as sponsor}
-											<a
-												href={sponsor.url}
-												class="bg-white/20 rounded-lg p-4 w-full h-28 flex items-center justify-center hover:bg-white/40 transition-colors"
-												target="_blank"
-												rel="noopener noreferrer"
-											>
+									<div class="grid grid-cols-2 md:grid-cols-3 gap-8 items-center justify-items-center max-w-2xl">
+										{#each specialThanks.slice(4) as thanks}
+											<div class="bg-white/20 rounded-lg p-4 w-full h-28 flex items-center hover:bg-white/40 transition-colors">
 												<img
-													src={sponsor.image}
-													alt={sponsor.name}
-													class="max-w-full max-h-full object-contain"
+													src={thanks.image}
+													alt={thanks.name}
+													class={"max-w-[80px] max-h-full object-contain mr-4 " + (thanks.type === 'person' ? 'rounded-full' : 'rounded-none')}
 												/>
-											</a>
+												<div class="flex flex-col justify-center">
+													<div class="font-bold text-lg text-[#335969]">{thanks.name}</div>
+													{#if thanks.title}
+														<div class="text-sm text-[#477783]">{thanks.title}</div>
+													{/if}
+													{#if thanks.affiliation}
+														<div class="text-xs text-[#477783] italic">@ {thanks.affiliation}</div>
+													{/if}
+													{#if thanks.for}
+														<div class="text-xs text-[#335969]">for {thanks.for}</div>
+													{/if}
+													{#if thanks.link}
+														<a href={thanks.link} target="_blank" rel="noopener noreferrer" class="text-xs underline text-[#477783]">Learn more</a>
+													{/if}
+												</div>
+											</div>
+										{/each}
+									</div>
+								</div>
+							{:else}
+								<!-- Single row for 4 or fewer special thanks -->
+								<div class="flex justify-center">
+									<div class="grid gap-8 items-center justify-items-center max-w-4xl {specialThanks.length === 1
+										? 'grid-cols-1'
+										: specialThanks.length === 2
+											? 'grid-cols-1 md:grid-cols-2'
+											: specialThanks.length === 3
+												? 'grid-cols-2 md:grid-cols-3'
+												: 'grid-cols-2 md:grid-cols-4'}">
+										{#each specialThanks as thanks}
+											<div class="bg-white/20 rounded-lg p-4 w-full h-28 flex items-center hover:bg-white/40 transition-colors">
+												<img
+													src={thanks.image}
+													alt={thanks.name}
+													class={"max-w-[80px] max-h-full object-contain mr-4 " + (thanks.type === 'person' ? 'rounded-full' : 'rounded-none')}
+												/>
+												<div class="flex flex-col justify-center">
+													<div class="font-bold text-lg text-[#335969]">{thanks.name}</div>
+													{#if thanks.title}
+														<div class="text-sm text-[#477783]">{thanks.title}</div>
+													{/if}
+													{#if thanks.affiliation}
+														<div class="text-xs text-[#477783] italic">@ {thanks.affiliation}</div>
+													{/if}
+													{#if thanks.for}
+														<div class="text-xs text-[#335969]">for {thanks.for}</div>
+													{/if}
+													{#if thanks.link}
+														<a href={thanks.link} target="_blank" rel="noopener noreferrer" class="text-xs underline text-[#477783]">Learn more</a>
+													{/if}
+												</div>
+											</div>
 										{/each}
 									</div>
 								</div>
 							{/if}
-						{/if}
-
-						{#if contactLink}
-							<!-- Call to action for sponsors -->
-							<div class="mt-8 text-center">
-								<p class="text-lg text-[#335969]">
-									Want to sponsor Daydream {eventName}?
-									<a href={contactLink} class="underline hover:text-[#477783] transition-colors"
-										>Get in touch</a
-									>!
-								</p>
-							</div>
 						{/if}
 					</div>
 				</div>
