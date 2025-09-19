@@ -13,7 +13,7 @@
 	const eventAddress = ""; // Leave this empty if you don't want an address
 	// These two are optional
 	const contactLink = "mailto:kuala-lumpur@daydream.hackclub.com"
-	const directionsURL = "";
+	const directionsURL = "https://maps.app.goo.gl/wgmTKLTfcgY5tZEQ7";
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recbJ3NcnXWY89RAe"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	
 	// Sponsors Configuration
