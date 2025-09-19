@@ -501,7 +501,7 @@ Roblox`.split('\n');
 		<div class="mt-8 sm:mt-12 flex flex-col items-center gap-6 sm:gap-8 z-5 animate-in-cta">
 			<!-- Primary CTA -->
 			<a
-			href="https://forms.hackclub.com/daydream-rsvp?event=recro0X4uHS1vxztZm"
+			href="https://forms.hackclub.com/daydream-rsvp?event=recro0X4uHS1vxztZ"
 			target="_blank"
 			rel="noopener noreferrer"
 			class="bg-gradient-to-r from-[#44DBC8] to-[#52E4D1] text-white text-base sm:text-lg md:text-xl font-bold py-3 sm:py-4 md:py-5 px-6 sm:px-8 md:px-12 rounded-full hover:shadow-2xl hover:scale-110 transition-all duration-300 border-b-4 border-[#3CC2AF] active:border-b-0 active:translate-y-1 hover:from-[#487DAB] hover:to-[#5A8DBD] focus:outline-none focus:ring-4 focus:ring-[#44DBC8]/50 hover:brightness-110 hover:rotate-1 hover:-translate-y-1"
