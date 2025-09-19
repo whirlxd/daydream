@@ -30,18 +30,21 @@
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
 	const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [
 		{
-			title: "Saturday, September 27th (Subject to Change)",
+			title: "Saturday, September 27th",
 			items: [
-				{ event: "Doors open", time: "8:00 AM" },
-				{ event: "Opening ceremony", time: "8:30 AM" },
-				{ event: "Workshop 1 (TBD)", time: "9:15 AM" },
-				{ event: "Workshop 2 (TBD)", time: "10:30 AM" },
-				{ event: "Workshop 3 (TBD)", time: "11:45 AM" },
-				{ event: "Lunch + Lightning Talks", time: "1:00 PM" },
-				{ event: "Demos", time: "4:30 PM" },
-				{ event: "Closing Ceremony", time: "5:30 PM" }
+				{ event: "Doors Open and Sign-In", time: "8:00 AM" },
+				{ event: "Opening Ceremony", time: "8:30 AM" },
+				{ event: "Jumpstart Workshop", time: "8:50 AM" },
+				{ event: "Workshop 2 (TBA)", time: "10:00 AM" },
+				{ event: "Workshop 3 (TBA)", time: "11:05 AM" },
+				{ event: "Lunch", time: "12:15 PM" },
+				{ event: "Quick-time Event", time: "2:15 PM" },
+				{ event: "Ship (Submission) Deadline", time: "4:45 PM" },
+				{ event: "Ship Showcase & Voting", time: "4:45 PM" },
+				{ event: "Closing Ceremony!", time: "5:30 PM" },
 			]
 		},
+
 		// {
 		// 	title: "Sunday, September 28th",
 		// 	items: [

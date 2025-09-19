@@ -1179,6 +1179,14 @@ Mumbai`.split('\n');
 								</p>
 							</div>
 						{/if}
+						<div class="mt-8 text-center">
+							<p class="text-lg text-[#335969]">
+								Big shoutout to Jukebox for our <a
+									href="https://www.jukeboxprint.com/custom-stickers"
+									class="underline hover:text-[#477783] transition-colors">custom stickers</a
+								>!
+							</p>
+						</div>
 					</div>
 				</div>
 

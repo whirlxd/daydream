@@ -663,7 +663,6 @@ Mumbai`.split('\n');
 			 class="absolute left-0 w-3/12 -bottom-12  translate-y-1/2 z-20 pointer-events-none">
 
 
-	
 </div>
 
 <Letter />

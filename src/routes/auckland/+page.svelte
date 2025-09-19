@@ -10,7 +10,7 @@
 	const eventName = "Auckland"; // This should be the name of your event WITHOUT "Daydream" at the start
 	const eventLocation = "Auckland City";
 	const eventAddress = "GRIDAkl 101 Pakenham Street West, Auckland Central, Auckland 1010"; // Leave this empty if you don't want an address
-	const signupLink = "https://forms.hackclub.com/daydream-rsvp"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	const signupLink = "https://daydream.hack.club/424"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = "https://maps.app.goo.gl/95N5DRUNNLNFm6RG6"
 	const contactLink = "mailto:auckland@daydream.hackclub.com"
@@ -18,40 +18,28 @@
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
-		{ image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
-		{ image: "/example/logo3.png", name: "Sponsor 3", url: "https://example3.com" },
-		{ image: "/example/logo4.png", name: "Sponsor 4", url: "https://example4.com" },
-		{ image: "/example/logo5.png", name: "Sponsor 5", url: "https://example5.com" },
-		{ image: "/example/logo6.png", name: "Sponsor 6", url: "https://example6.com" },
-		{ image: "/example/logo7.png", name: "Sponsor 7", url: "https://example7.com" }
+		{ image: "/example/logo1.png", name: "Sponsor 1", url: "https://jukeboxprint.com" },
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
 	const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [
 		{
-			title: "Saturday, September 27th TO BE CONFIRMED",
+			title: "Sunday, September 28th",
 			items: [
-				{ event: "Doors open", time: "11:00 AM" },
-				{ event: "Opening ceremony", time: "12:00 PM" },
+				{ event: "Doors open", time: "7:45 AM" },
+				{ event: "Opening ceremony", time: "8:15 AM" },
+				{ event: "Start working on your project!", time: "8:35 AM" },
+				{ event: "Workshop 1", time: "9:00 AM" },
+				{ event: "Activity 1", time: "12:00 PM" },
 				{ event: "Lunch", time: "12:30 PM" },
-				{ event: "Start working on your project!", time: "1:00 PM" },
-				{ event: "Workshop 1", time: "2:00 PM" },
-				{ event: "Activity 1", time: "4:00 PM" },
-				{ event: "Workshop 2", time: "4:00 PM" },
+				{ event: "Workshop 2", time: "1:00 PM" },
+				{ event: "Activity 2", time: "4:00 PM" },
 				{ event: "Dinner", time: "6:00 PM" },
-				{ event: "Lightning talks", time: "8:00 PM" },
-				{ event: "Midnight surprise", time: "12:00 AM" }
+				{ event: "Project submission", time: "7:00 PM" },
+				{ event: "Voting!", time: "7:25 PM" },
+				{ event: "Closing ceremony", time: "8:00 PM" },
 			]
 		},
-		{
-			title: "Sunday, September 28th TO BE CONFIRMED",
-			items: [
-				{ event: "Breakfast", time: "8:00 AM" },
-				{ event: "Demos!", time: "10:30 AM" },
-				{ event: "Closing ceremony", time: "12:00 PM" }
-			]
-		}
 	];
 
 	
