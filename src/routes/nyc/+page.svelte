@@ -1119,9 +1119,9 @@ Mumbai`.split("\n")
 				<!-- Special Thanks -->
 				<div class="relative z-10 min-h-40">
 					<div class="flex justify-center">
-						<div class="flex gap-6 items-center justify-items-center max-w-4xl bg-white/20 p-4 hover:bg-white/40 transition-colors rounded-xl">
-							<img src={specialThanks.kirk.image} alt={"Special Thanks to " + specialThanks.kirk.name} class="h-30 max-h-full object-contain rounded-full">
-							<div class="text-[#335969] font-serif text-lg leading-relaxed">
+						<div class="flex gap-6 items-center justify-items-center max-w-4xl bg-white/20 p-4 hover:bg-white/40 transition-colors rounded-xl flex-col sm:flex-row sm:gap-6">
+							<img src={specialThanks.kirk.image} alt={"Special Thanks to " + specialThanks.kirk.name} class="h-30 max-h-full object-contain rounded-full text-center sm:text-left">
+							<div class="text-[#335969] font-serif text-lg leading-relaxed text-center sm:text-left">
 								<p class="font-bold text-3xl">{specialThanks.kirk.name}</p>
 								<p class="font-semibold text-sm space-x-0 leading-tight">
 									{specialThanks.kirk.title}<br>
