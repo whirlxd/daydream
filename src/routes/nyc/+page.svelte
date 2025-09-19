@@ -21,6 +21,7 @@
 		{ image: "/nyc/medal.png", name: "Medal", url: "https://medal.tv" },
 		{ image: "/nyc/jukebox-logo.svg", name: "Jukebox", url: "https://jukeboxprint.com" },
 		{ image: "/nyc/makerspace.png", name: "Makerspace NYC", url: "https://www.makerspace.nyc" },
+		{ image: "/nyc/gumbo.png", name: "GUMBO Collective NYC", url: "https://gumbonyc.org/" },
 	];
 	const specialThanks = {
 		kirk : { image: "/nyc/kirk.jpg", name: "Kirk Musngi", title: "Senior Community Manager", affiliation: "Unity Technologies", for: "helping us get our venue!" },
