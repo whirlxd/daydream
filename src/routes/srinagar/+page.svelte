@@ -19,10 +19,20 @@
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
 		{
+			image: '/srinagar/almuqeet.svg',
+			name: 'Almuqeet Systems Pvt Ltd',
+			url: 'https://almuqeet.net/'
+		},
+		{
 			image:
 				'https://hc-cdn.hel1.your-objectstorage.com/s/v3/5c6f29f2226f6bb46c0085cf7c9c40eac35099bb_github_logo.png',
 			name: 'GitHub',
 			url: 'https://github.com'
+		},
+		{
+			image: 'srinagar/yubico.png',
+			name: 'Yubico',
+			url: 'http://yubico.com/'
 		}
 	];
 
