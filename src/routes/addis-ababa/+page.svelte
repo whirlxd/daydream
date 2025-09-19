@@ -913,6 +913,11 @@ Mumbai`.split('\n');
 			color: #1d4ed8; /* link color */
 			text-decoration: underline;
 		}
+
+		.jukebox-content {
+			display: flex;
+    		flex-direction: column;
+		}
 	</style>
 
 	<img
