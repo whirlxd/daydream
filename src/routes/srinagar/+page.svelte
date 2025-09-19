@@ -43,11 +43,10 @@
 			items: [
 				{ event: 'Doors open', time: '08:00 AM' },
 				{ event: 'Opening ceremony', time: '09:00 AM' },
-				{ event: 'Start working on your project!', time: '9:30 AM' },
-				{ event: 'Workshop 1', time: '10:00 AM' },
-				{ event: 'Workshop 2', time: '10:00 AM' },
+				{ event: 'Start working on your project!', time: '09:30 AM' },
+				{ event: 'Workshop', time: '10:00 AM' },
 				{ event: 'Lunch', time: '01:00 PM' },
-				{ event: 'Activity 1', time: '3:00 PM' },
+				{ event: 'Activity 1', time: '03:00 PM' },
 				{ event: 'Wrap up', time: '06:00 PM' }
 			]
 		},
@@ -55,7 +54,7 @@
 			title: 'Sunday, September 28th',
 			items: [
 				{ event: 'Doors open', time: '08:00 AM' },
-				{ event: 'Start working on your project!', time: '8:30 AM' },
+				{ event: 'Start working on your project!', time: '08:30 AM' },
 				{ event: 'Activity 1', time: '11:00 AM' },
 				{ event: 'Lunch', time: '01:00 PM' },
 				{ event: 'Hackathon Ends', time: '02:45 PM' },
