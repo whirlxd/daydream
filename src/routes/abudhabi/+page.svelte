@@ -8,12 +8,15 @@
 
 	// Configuration - Put your information here!
 	const eventName = "Abudhabi"
-	const eventLocation = "Abudhabi Island";
+	const eventLocation = "Abudhabi;
 	const eventAddress = ""
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=rec6me1FTewElRpBN"; // Get your custom sign up link from this page: https://forms.hackclub.com/daydream-sign-up?event=rec6me1FTewElRpBN
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = ""
 	const contactLink = "mailto:abu-dhabi@daydream.hackclub.com"
+	<a href="https://www.jukeboxprint.com/custom-stickers">Custom stickers</a> provided by Jukebox
+
+
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
@@ -32,24 +35,28 @@
 		{
 			title: "Saturday, September 27th",
 			items: [
-				{ event: "Doors open", time: "11:00 AM" },
-				{ event: "Opening ceremony", time: "12:00 PM" },
-				{ event: "Lunch", time: "12:30 PM" },
-				{ event: "Start working on your project!", time: "1:00 PM" },
-				{ event: "Workshop 1", time: "2:00 PM" },
+				{ event: "Regsitration & Doors open", time: "9:00 AM" },
+				{ event: "Opening ceremony & Team formation", time: "10:00 AM" },
+				{ event: "Workshop 1", time: "10:45 AM" },
+				{ event: "Start working on your project!", time: "11:00 AM" },
+				{ event: "Lunch", time: "12:00 PM" },
+				{ event: "Workshop 2", time: "12:30 PM" },
 				{ event: "Activity 1", time: "4:00 PM" },
-				{ event: "Workshop 2", time: "4:00 PM" },
 				{ event: "Dinner", time: "6:00 PM" },
-				{ event: "Lightning talks", time: "8:00 PM" },
-				{ event: "Midnight surprise", time: "12:00 AM" }
+				{ event: "Activity 2", time: "8:00 PM" },
+				{ event: "End of Day 1", time: "9:00 PM" }
 			]
 		},
 		{
 			title: "Sunday, September 28th",
 			items: [
-				{ event: "Breakfast", time: "8:00 AM" },
-				{ event: "Demos!", time: "10:30 AM" },
-				{ event: "Closing ceremony", time: "12:00 PM" }
+				{ event: "Doors Open", time: "11:00 AM" },
+				{ event: "Lunch", time: "12:00 PM" },
+				{ event: "Workshop 3", time: "1:00 PM" },
+				{ event: "Activity 3", time: "4:00 PM" },
+				{ event: "Ship closes and voting starts", time: "5:30 PM" },
+				{ event: "Dinner", time: "6:00 PM" },
+				{ event: "Closing ceremony", time: "7:30 PM" }
 			]
 		}
 	];
