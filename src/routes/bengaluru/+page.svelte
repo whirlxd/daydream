@@ -52,6 +52,7 @@
 	];
 
 	
+
 	import { onMount } from "svelte";
 	import { gsap } from "gsap";
 	import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -59,6 +60,8 @@
 	import Footer from "$lib/components/Footer.svelte";
 	import ParticipantSignUp from "$lib/components/ParticipantSignUp.svelte";
 	import { page } from '$app/stores';
+	import JukeboxBanner from '$lib/components/JukeboxBanner.svelte';
+	import { Sticker } from 'phosphor-svelte';
 	
 	
 	/** @type {import('./$types').PageData} */
@@ -790,6 +793,10 @@ Mumbai`.split("\n")
 </svelte:head>
 
 
+
+
+<JukeboxBanner />
+
 <div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
 
 <div class="flex flex-col items-center justify-center h-screen text-center bg-gradient-to-b from-[#CCF4FD] to-[#B8D9F8] bg-blend-overlay relative">
@@ -815,30 +822,31 @@ Mumbai`.split("\n")
 			<h2
 			class="text-xl font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent absolute left-1/2 max-sm:translate-y-4 max-sm:mb-0 max-md:-mb-8 md:left-[calc(50%+4rem)] -translate-x-1/2 bottom-8 italic w-max md:text-lg max-sm:text-lg"
 			>
-				September 27th & 28th, 2025
+				September 27th 2025
 			</h2>
 			<img src="/Bengaluru/daydreamblr.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4 pl-[150px]" />
 			<a href="https://hackclub.com" class="absolute top-[-30px] -right-6 max-sm:right-0 max-sm:scale-80 animate-hover ![animation-delay:0.9s] ![--hover:-0.2rem]">
 				<img src="flag-plane.png" alt="Hack Club" class="h-29">
 			</a>
 		</div>
-		<div class="relative inline-block px-4">
-			<h3
-				class="text-3xl italic font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent w-max max-sm:text-2xl mx-auto"
-			>
-				Game jam for high schoolers
-			</h3>
-			<img
-				src="underline.svg"
-				alt=""
-				class="absolute left-1/2 -translate-x-1/2 -mt-1 h-auto scale-115"
-			/>
-			<h4
-				class="text-2xl opacity-90 mt-2 font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent max-sm:text-xl"
-			>
-				Organized by Teenagers in {@html eventLocation.replaceAll(" ", "&nbsp;")}
-			</h4>
-		</div>
+
+		   <div class="relative inline-block px-4">
+			   <h3
+				   class="text-3xl italic font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent w-max max-sm:text-2xl mx-auto"
+			   >
+				   Game jam for high schoolers
+			   </h3>
+			   <img
+				   src="underline.svg"
+				   alt=""
+				   class="absolute left-1/2 -translate-x-1/2 -mt-1 h-auto scale-115"
+			   />
+			   <h4
+				   class="text-2xl opacity-90 mt-2 font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent max-sm:text-xl"
+			   >
+				   Organized by Teenagers in {@html eventLocation.replaceAll(" ", "&nbsp;")}
+			   </h4>
+		   </div>
 		
 		<ParticipantSignUp {signupLink} {eventName} />
 	</div>
@@ -874,25 +882,7 @@ Mumbai`.split("\n")
 	<img src="/clouds-top-left.png" alt="" class="absolute left-0 w-3/12 -bottom-12  translate-y-1/2 z-20 pointer-events-none">
 	
 
-	<!-- Desktop stickers button (bottom left) -->
-	<a
-		href="https://forms.hackclub.com/daydream-stickers"
-		target="_blank"
-		class="hidden md:block absolute bottom-16 left-16 z-50 w-max px-4 py-2 bg-pink border-b-2 border-b-pink-dark text-white rounded-full active:transform active:translate-y-0.5 transition-all duration-100 font-sans cursor-pointer overflow-visible hover:shadow-[0_2px_0_0_theme(colors.pink.dark)] hover:-translate-y-[2px] active:border-transparent active:shadow-none"
-	>
-		Get free stickers
-		<img
-			src="button-clouds.svg" 
-			alt="" 
-			class="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto object-contain pointer-events-none"
-		>
-		<img
-			src="rock-sticker.png"
-			alt=""
-			class="absolute bottom-2 right-3 translate-2/3 w-18 h-18 object-contain pointer-events-none"
-			style="transform: rotate(-15deg);"
-		>
-	</a>
+	
 </div>
 
 <div class="w-full relative flex items-start justify-center">
@@ -1400,7 +1390,7 @@ Mumbai`.split("\n")
 						</li>
 						<li class="flex items-start">
 							<span class="mr-4">•</span>
-							<a href="https://juanes10201.itch.io/speedtickers" target="_blank" class="underline mr-2">SPEEDTICKERS</a> by Agustin
+							<a href="https://juanes10201.itch.io/speedtickers" target="_blank" class="underline mr-2">SPEEDTICKERS</a> by Agustin & Juan
 						</li>
 					</ul>
 					
@@ -1566,4 +1556,3 @@ Mumbai`.split("\n")
 		</div>
 	</div>
 {/if}
-

@@ -922,7 +922,6 @@ Mumbai`.split("\n")
 	<img src="/clouds-top-left.png" alt="" class="absolute left-0 w-3/12 -bottom-12  translate-y-1/2 z-20 pointer-events-none">
 	
 
-
 </div>
 
 <div class="w-full relative flex items-start justify-center">
@@ -1438,7 +1437,7 @@ Este septiembre te invitamos a unirte a nosotros en Daydream, la game jam más g
 						</li>
 						<li class="flex items-start">
 							<span class="mr-4">•</span>
-							<a href="https://juanes10201.itch.io/speedtickers" target="_blank" class="underline mr-2">SPEEDTICKERS</a> por Agustin
+							<a href="https://juanes10201.itch.io/speedtickers" target="_blank" class="underline mr-2">SPEEDTICKERS</a> por Agustin & Juan
 						</li>
 					</ul>
 					
