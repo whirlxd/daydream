@@ -20,6 +20,7 @@
 	const sponsors = [
 		{ image: "/nyc/medal.png", name: "Medal", url: "https://medal.tv" },
 		{ image: "/nyc/jukebox-logo.svg", name: "Jukebox", url: "https://jukeboxprint.com" },
+		{ image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Cards_Against_Humanity_logo_2009.svg/500px-Cards_Against_Humanity_logo_2009.svg.png", name: "Cards Against Humanity", url: "https://www.cardsagainsthumanity.com/" },
 		{ image: "https://static.wixstatic.com/media/2d4ffd_deb3c3847e6649f5923c78a8dd21aa60~mv2.png/v1/crop/x_54,y_0,w_1392,h_1503/fill/w_556,h_596,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0Kc-k22A.png", name: "Makerspace NYC", url: "https://www.makerspace.nyc" },
 	];
 	
