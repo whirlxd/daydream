@@ -18,7 +18,7 @@
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{name: "Custom stickers provided by Jukebox", url: "https://www.jukeboxprint.com/custom-stickers", image: "https://github.com/Kaushalnar2688/daydream-aurora/blob/main/Screenshot%202025-09-18%203.52.06%20PM.png?raw=true" }
+		{ image: "/inland-empire/jukebox-logo.svg", name: "Sponsor 1", url: "https://www.jukeboxprint.com/custom-stickers" }
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
