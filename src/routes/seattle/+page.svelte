@@ -23,6 +23,17 @@
 		// 	name: 'Jukebox',
 		// 	url: 'https://www.jukeboxprint.com/custom-stickers'
 		// }
+		// {
+		// 	image: '/seattle/digipen.svg',
+		// 	name: 'DigiPen',
+		// 	url: 'https://www.digipen.edu/'
+		// }
+		// {
+		// 	image: '/seattle/easyeda.svg',
+		// image: '/seattle/jlcpcb.svg',
+		// 	name: 'EasyEDA + JLCPCP',
+		// 	url: 'https://jlcpcb.com/?from=VGEUSPCBA&utm_source=google&utm_medium=cpc&utm_campaign=22566519506&utm_content=752684430871&utm_term=b_turnkey%20pcb%20assembly&adgroupid=179674504077&utm_network=g_&gad_source=1&gad_campaignid=22566519506&gbraid=0AAAAA_qF0YNjuDGW9Wru1JdlwHvmAHVkS&gclid=Cj0KCQjw_rPGBhCbARIsABjq9cf4pHm-j07ITtee374Bc8yIc2z2vgl-AMo59qQQheZz_L4flJ6-EVMaAoA2EALw_wcB'
+		// }
 		// { image: '/example/logo2.png', name: 'Sponsor 2', url: 'https://example2.com' }
 	];
 
@@ -1141,21 +1152,64 @@ Mumbai`.split('\n');
 
 					<!-- Sponsors Grid -->
 					<div class="relative z-10 min-h-40">
-						<div
-							class="bg-white/20 rounded-lg p-4 w-full h-20 flex items-center justify-center hover:bg-white/40 transition-colors gap-8"
-						>
-							<img
-								src="seattle/jukebox.svg"
-								alt="Jukebox"
-								class="max-w-full max-h-full object-contain"
-							/>
-							<p class="text-lg text-[#335969]">
-								<a href="https://www.jukeboxprint.com/custom-stickers" class="text-pink-600"
-									>Custom Stickers</a
-								>
+						<!-- Jukebox -->
+							<div
+								class="bg-white/20 rounded-lg p-4 w-full flex items-center hover:bg-white/40 transition-colors gap-8"
+							>
+							<div class="flex items-center gap-4 w-40 justify-center">
+								<img src="seattle/jukebox.svg" alt="Jukebox" class="h-12 w-auto object-contain" />
+							</div>
+
+							<div class="flex-1">
+								<p class="text-lg text-[#335969]">
+								<a href="https://www.jukeboxprint.com/custom-stickers" class="text-pink-600">
+									Custom Stickers
+								</a>
 								with love from Jukebox
-							</p>
+								</p>
+							</div>
 						</div>
+
+						<!-- DigiPen -->
+						<div
+							class="bg-white/20 rounded-lg p-4 w-full flex items-center hover:bg-white/40 transition-colors gap-8"
+						>
+							<div class="flex items-center gap-4 w-40 justify-center">
+								<img src="seattle/digipen.svg" alt="DigiPen" class="h-12 w-auto object-contain" />
+							</div>
+
+							<div class="flex-1">
+								<p class="text-lg text-[#335969]">
+								<a href="https://www.digipen.edu/" class="text-red-600">
+									Venue
+								</a>
+								donated by the DigiPen Institute of Technology
+								</p>
+							</div>
+						</div>
+
+						<!-- EasyEDA + JLCPCB -->
+						<div
+							class="bg-white/20 rounded-lg p-4 w-full flex items-center hover:bg-white/40 transition-colors gap-8"
+						>
+							<div class="flex items-center gap-4 w-40 justify-center">
+								<img src="seattle/easyeda.svg" alt="EasyEDA" class="h-12 w-auto object-contain" />
+								<img src="seattle/jlcpcb.svg" alt="JLCPCB" class="h-12 w-auto object-contain" />
+							</div>
+
+							<div class="flex-1">
+								<p class="text-lg text-[#335969]">
+								<a
+									href="https://jlcpcb.com/?from=VGEUSPCBA"
+									class="text-blue-600"
+								>
+									Custom PCB Boards
+								</a>
+								created by EasyEDA + JLCPCB
+								</p>
+							</div>
+						</div>
+
 						{#if sponsors.length > 0}
 							<!-- First row (up to 4 sponsors) -->
 							{#if sponsors.length > 4}
