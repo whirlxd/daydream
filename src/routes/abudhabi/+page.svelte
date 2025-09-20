@@ -53,7 +53,7 @@
 				{ event: "Lunch", time: "12:00 PM" },
 				{ event: "Workshop 3", time: "1:00 PM" },
 				{ event: "Activity 3", time: "4:00 PM" },
-				{ event: "Ship closes and voting starts", time: "5:30 PM" },
+				{ event: "Shipping closes and voting starts", time: "5:30 PM" },
 				{ event: "Dinner", time: "6:00 PM" },
 				{ event: "Closing ceremony", time: "7:30 PM" }
 			]
