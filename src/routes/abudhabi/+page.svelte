@@ -14,7 +14,6 @@
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = ""
 	const contactLink = "mailto:abu-dhabi@daydream.hackclub.com"
-	<a href="https://www.jukeboxprint.com/custom-stickers">Custom stickers</a> provided by Jukebox
 
 
 	
