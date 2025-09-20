@@ -29,26 +29,16 @@
 		{
 			title: "Saturday, September 27th",
 			items: [
-				{ event: "Doors open", time: "11:00 AM" },
-				{ event: "Opening ceremony", time: "12:00 PM" },
-				{ event: "Lunch", time: "12:30 PM" },
-				{ event: "Start working on your project!", time: "1:00 PM" },
-				{ event: "Workshop 1", time: "2:00 PM" },
-				{ event: "Activity 1", time: "4:00 PM" },
-				{ event: "Workshop 2", time: "4:00 PM" },
-				{ event: "Dinner", time: "6:00 PM" },
-				{ event: "Lightning talks", time: "8:00 PM" },
-				{ event: "Midnight surprise", time: "12:00 AM" }
+			{ event: "Registration", time: "05:00 AM" },
+			{ event: "Hacking begins", time: "07:00 AM" },
+			{ event: "Lunch", time: "01:00 PM – 02:00 PM" },
+			{ event: "Submissions & Voting on Podium", time: "07:00 PM" },
+			{ event: "Awards & Closing Ceremony ", time: "08:00 PM " },
+			{ event: "Networking Dinner", time: "10:00 PM" },
+			{ event: "See ya next time", time: "10:30 PM" }
 			]
 		},
-		{
-			title: "Sunday, September 28th",
-			items: [
-				{ event: "Breakfast", time: "8:00 AM" },
-				{ event: "Demos!", time: "10:30 AM" },
-				{ event: "Closing ceremony", time: "12:00 PM" }
-			]
-		}
+		
 	];
 
 	
