@@ -9,7 +9,7 @@
 	// Configuration - Put your information here!
 	const eventName = "Miami";
 	const eventLocation = "Miami";
-	const eventAddress = "2750 NW 3rd Ave #24, Miami, FL 33127"; // Leave this empty if you don't want an address
+	const eventAddress = "2750 NW 3rd Ave #24, Miami, FL 33127";  // Leave this empty if you don't want an address
 	// These two are optional
 	const directionsURL = "https://www.google.com/maps?rlz=1C5OZZY_enUS1153US1153&um=1&ie=UTF-8&fb=1&gl=us&sa=X&geocode=Ke9sR6SzttmIMekps3_yAPDl&daddr=2750+NW+3rd+Ave+%2324,+Miami,+FL+33127"
 	const contactLink = "mailto:miami@daydream.hackclub.com"
@@ -41,26 +41,26 @@
 		{
 			title: "Saturday, September 27th",
 			items: [
-				{ event: "Doors open", time: "7:00 AM" },
-				{ event: "Opening ceremony", time: "8:00 AM" },
-				{ event: "Team Formation session", time: "8:30 AM" },
-				{ event: "Start working on your project!", time: "9:00 AM" },
+				{ event: "Check in", time: "8:30 AM" },
+				{ event: "Opening ceremony", time: "9:30 AM" },
+				{ event: "Team Formation session", time: "10:00 AM" },
+				{ event: "Godot Workshop", time: "11:00 PM" },
 				{ event: "Lunch", time: "12:30 PM" },
-				{ event: "Pygame Workshop", time: "3:00 PM" },
-				{ event: "Godot Workshop", time: "4:00 PM" },
+				{ event: "Visual Novel Workshop", time: "1:30 PM" },
+				{ event: "Start working on your project!", time: "2:30 PM" },
 				{ event: "Dinner", time: "5:00 PM" },
-				{ event: "Github Workshop", time: "6:00 PM" }
+				{ event: "Pygame Workshop", time: "5:30 PM" }
 			]
 		},
 		{
 			title: "Sunday, September 28th",
 			items: [
-				{ event: "Doors open", time: "7:00 AM" },
-				{ event: "Breakfast", time: "8:00 AM" },
-				{ event: "Wrap Up Projects!", time: "10:30 AM" },
-				{ event: "Lunch", time: "1:00 PM" },
-				{ event: "Demos!", time: "4:00 PM" },
-				{ event: "Closing ceremony", time: "6:30 PM" }
+				{ event: "Check in", time: "8:30 AM" },
+				{ event: "GitHub Workshop", time: "10:00 AM" },
+				{ event: "Lunch", time: "12:00 PM" },
+				{ event: "Wrap Up Projects!", time: "1:30 PM" },
+				{ event: "Demos", time: "2:00 PM" },
+				{ event: "Closing ceremony", time: "4:00 PM" }
 			]
 		}
 	];
