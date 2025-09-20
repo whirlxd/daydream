@@ -9,7 +9,7 @@
 	// Configuration - Put your information here!
 	const eventName = "Monterrey"; // This should be the name of your event WITHOUT "Daydream" at the start
 	const eventLocation = "Monterrey";
-	const eventAddress = "https://maps.app.goo.gl/UhRtr4zRQaWFfNQk8"; // Leave this empty if you don't want an address
+	const eventAddress = "PARQUE DE INVESTIGACION E INNOVACION TECNOLOGICA, ALIANZA SUR 303, 66628 Cdad. Apodaca, N.L."; // Leave this empty if you don't want an address
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recRX4BzRkxXfODPD"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = ""
