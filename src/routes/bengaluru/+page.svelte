@@ -52,6 +52,7 @@
 	];
 
 	
+
 	import { onMount } from "svelte";
 	import { gsap } from "gsap";
 	import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -59,6 +60,8 @@
 	import Footer from "$lib/components/Footer.svelte";
 	import ParticipantSignUp from "$lib/components/ParticipantSignUp.svelte";
 	import { page } from '$app/stores';
+	import JukeboxBanner from '$lib/components/JukeboxBanner.svelte';
+	import { Sticker } from 'phosphor-svelte';
 	
 	
 	/** @type {import('./$types').PageData} */
@@ -790,6 +793,10 @@ Mumbai`.split("\n")
 </svelte:head>
 
 
+
+
+<JukeboxBanner />
+
 <div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
 
 <div class="flex flex-col items-center justify-center h-screen text-center bg-gradient-to-b from-[#CCF4FD] to-[#B8D9F8] bg-blend-overlay relative">
@@ -826,8 +833,6 @@ Mumbai`.split("\n")
 			<h3
 				class="text-3xl italic font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent w-max max-sm:text-2xl mx-auto"
 			>
-				Big shoutout to Jukebox for our <a href="https://www.jukeboxprint.com/custom-stickers">custom stickers</a>
-
 				Game jam for high schoolers
 			</h3>
 			<img
@@ -1550,4 +1555,3 @@ Mumbai`.split("\n")
 		</div>
 	</div>
 {/if}
-
