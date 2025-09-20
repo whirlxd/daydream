@@ -9,9 +9,9 @@
 	// Configuration - Put your information here!
 	const eventName = "Miami";
 	const eventLocation = "Miami";
-	const eventAddress = "11200 SW 8th St, Miami, FL 33199"; // Leave this empty if you don't want an address
+	const eventAddress = "2750 NW 3rd Ave #24, Miami, FL 33127"; // Leave this empty if you don't want an address
 	// These two are optional
-	const directionsURL = "https://www.google.com/maps/dir//11200+SW+8th+St,+Miami,+FL+33199/@25.7562233,-80.4579416,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x88d9bf2e414fde0f:0xae469ac7fb6b92f0!2m2!1d-80.3755401!2d25.7562465?entry=ttu&g_ep=EgoyMDI1MDkwNy4wIKXMDSoASAFQAw%3D%3D"
+	const directionsURL = "https://www.google.com/maps?rlz=1C5OZZY_enUS1153US1153&um=1&ie=UTF-8&fb=1&gl=us&sa=X&geocode=Ke9sR6SzttmIMekps3_yAPDl&daddr=2750+NW+3rd+Ave+%2324,+Miami,+FL+33127"
 	const contactLink = "mailto:miami@daydream.hackclub.com"
 	
 	// Sponsors Configuration

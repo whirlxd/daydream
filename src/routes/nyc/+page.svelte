@@ -7,14 +7,14 @@
 	 */
 
 	// Configuration - Put your information here!
-	const eventName = 'NYC'; // This should be the name of your event WITHOUT "Daydream" at the start
-	const eventLocation = 'New York City';
-	const eventAddress = 'GUMBO NYC: 53 Bridge St Suite 301, Brooklyn, NY 11201'; // Leave this empty if you don't want an address
-	const signupLink = 'https://forms.hackclub.com/daydream-sign-up?event=recScab6KjhWs1rGe'; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	const eventName = "NYC"; // This should be the name of your event WITHOUT "Daydream" at the start
+	const eventLocation = "New York City";
+	const eventAddress = "Gumbo NYC @ 53 Bridge St. Suite 301"; // Leave this empty if you don't want an address
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recScab6KjhWs1rGe"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
-	const directionsURL = 'https://maps.app.goo.gl/YF3kBWQZmjNh8Hxw6';
-	const contactLink = 'mailto:nyc@daydream.hackclub.com';
-
+	const directionsURL = "https://www.google.com/maps/place/GUMBO/data=!4m7!3m6!1s0x89c25a32fb9aaaab:0x3d05061e9da872ce!8m2!3d40.7028059!4d-73.9843246!16s%2Fg%2F11h3df314h!19sChIJq6qa-zJawokRznKonR4GBT0?authuser=0&hl=en&rclk=1"
+	const contactLink = "mailto:nyc@daydream.hackclub.com"
+	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
