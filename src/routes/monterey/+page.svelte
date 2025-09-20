@@ -9,10 +9,10 @@
 	// Configuration - Put your information here!
 	const eventName = "Monterey";
 	const eventLocation = "Monterey";
-	const eventAddress = ""; // Leave this empty if you don't want an address
+	const eventAddress = "2795 Thomas Grade, Morgan Hill, California, 95037"; // Leave this empty if you don't want an address
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recRJjpziF5cMuByP"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional
-//	const directionsURL = "https://www.google.com/maps/search/1600+pennsylvania+avenue+washington+dc/"
+	const directionsURL = "https://www.google.com/maps/place/2795+Thomas+Grde,+Morgan+Hill,+CA+95037"
 	const contactLink = "mailto:monterey@daydream.hackclub.com"
 	
 	// Sponsors Configuration
@@ -27,24 +27,16 @@
 		{
 			title: "Saturday, September 27th",
 			items: [
-				{ event: "Doors open", time: "10:00 AM" },
-				{ event: "Opening ceremony", time: "12:00 PM" },
-				{ event: "Lunch", time: "12:30 PM" },
-				{ event: "Start working on your project!", time: "1:00 PM" },
-				{ event: "Jumpstart", time: "2:00 PM" },
-				{ event: "Activity 1", time: "4:00 PM" },
-				{ event: "Workshop 2", time: "4:00 PM" },
+				{ event: "Doors open", time: "9:00 AM" },
+				{ event: "Breakfast", time: "9:30 AM" },
+				{ event: "Opening ceremony", time: "10:00 AM" },
+				{ event: "Start working on your project!", time: "10:10 AM" },
+				{ event: "Jumpstart", time: "10:30 PM" },
+				{ event: "Lunch", time: "12:00 PM"},
+				{ event: "Storyboard", time: "1:00 PM" },
 				{ event: "Dinner", time: "6:00 PM" },
-				{ event: "Lightning talks", time: "9:00 PM" },
-				{ event: "Midnight surprise", time: "12:00 AM" }
-			]
-		},
-		{
-			title: "Sunday, September 28th",
-			items: [
-				{ event: "Breakfast", time: "8:00 AM" },
-				{ event: "Demos!", time: "10:30 AM" },
-				{ event: "Closing ceremony", time: "12:00 PM" }
+				{ event: "Closing ceremony", time: "10:00 PM" },
+				{ event: "Goodbye!", time: "10:30 PM" }
 			]
 		}
 	];
