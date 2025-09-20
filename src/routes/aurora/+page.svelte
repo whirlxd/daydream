@@ -18,7 +18,7 @@
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "blob:chrome-untrusted://media-app/4ef16899-2aa1-4fde-b0f0-074cade8f37a", name: "Sponsor 1", url: "https://www.jukeboxprint.com/custom-stickers" }
+		{ image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUi1-52DR-NsqaJDeV6Gj-_kkJBqjXOGheBpb_IAeLOufrbqF-X4cFZLrwBZ9gl7p3hg&usqp=CAU", name: "Sponsor 1", url: "https://www.jukeboxprint.com/custom-stickers" }
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
