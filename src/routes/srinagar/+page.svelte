@@ -9,11 +9,11 @@
 	// Configuration - Put your information here!
 	const eventName = 'Srinagar'; // This should be the name of your event WITHOUT "Daydream" at the start
 	const eventLocation = 'Srinagar';
-	const eventAddress = ''; // Leave this empty if you don't want an address
+	const eventAddress = `Sarovar Premiere, City Mall, Srinagar`;
 	const signupLink = 'https://forms.hackclub.com/daydream-sign-up?event=recpMytdpOvW33V3L'; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
-	const directionsURL = '';
-	const contactLink = '';
+	const directionsURL = 'https://maps.app.goo.gl/nXDZNPdpd7WRQDEz5';
+	const contactLink = 'mailto:srinagar@daydream.hackclub.com';
 
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
@@ -30,9 +30,19 @@
 			url: 'https://github.com'
 		},
 		{
+			image: 'srinagar/sarovar.png',
+			name: 'Sarovar Premiere, Srinagar',
+			url: 'https://www.sarovarhotels.com/sarovar-premiere-srinagar/'
+		},
+		{
 			image: 'srinagar/yubico.png',
 			name: 'Yubico',
 			url: 'http://yubico.com/'
+		},
+		{
+			image: 'srinagar/jukebox.png',
+			name: 'Jukebox',
+			url: 'https://jukeboxprint.com'
 		}
 	];
 
