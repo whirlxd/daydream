@@ -31,7 +31,7 @@
 		{
 			title: "Sunday, September 28th",
 			items: [
-				{ event: "Doors open", time: "8.40am" },
+				{ event: "Doors open", time: "8.45am" },
 				{ event: "Opening ceremony", time: "9.30am" },
 				{ event: "Get into teams, start working on your project!", time: "10.00am" },
 				{ event: "Workshops", time: "10.45am" },
