@@ -980,7 +980,10 @@ Mumbai`.split("\n")
 			<div class="relative bg-gradient-to-b from-[#CCF4FD] to-[#AECDF6] px-8 pt-8 pb-16">
 				<!-- Brush texture overlay for content -->
 				<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none"></div>
-				
+
+				<p class="text-center font-sans text-2xl pt-12 max-sm:text-xl text-[#60574b] z-10000">
+					<a class="underline text-pink" href="https://www.jukeboxprint.com/custom-stickers">Custom stickers</a> provided by Jukebox
+				</p>
 				<!-- Sponsors Grid -->
 				<div class="relative z-10 min-h-40">
 					{#if sponsors.length > 0}
