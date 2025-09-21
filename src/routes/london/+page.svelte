@@ -30,15 +30,18 @@
 		{
 			title: "Sunday, September 28th",
 			items: [
-				{ event: "Doors open", time: "8.30" },
-				{ event: "Opening ceremony", time: "9:00" },
-				{ event: "Get into teams, start working on your project!", time: "10:00" },
-				{ event: "Lunch", time: "13:00" },
-				{ event: "Continue working on projects", time: "14:00" },
-				{ event: "More projects work :)", time: "15:00" },
-				{ event: "Ship projects and vote", time: "18:00" },
-				{ event: "Closing Ceremony", time: "18:30" },
-				{ event: "Home!", time: "19:00" }
+				{ event: "Doors open", time: "8.40am" },
+				{ event: "Opening ceremony", time: "9.30am" },
+				{ event: "Get into teams, start working on your project!", time: "10.00am" },
+				{ event: "Workshops", time: "10.45am" },
+				{ event: "Lunch", time: "11.30am" },
+				{ event: "Continue working on projects", time: "12.15pm" },
+				{ event: "Lightning talks and AMAs", time: "13.00pm" },
+				{ event: "Dinner and afternoon snacktivities", time: "16.00pm" },
+				{ event: "Ship projects and submit to Podium!", time: "16.30pm" },
+				{ event: "Project demos and final submission", time: "17.15pm" },
+				{ event: "Closing ceremony", time: "18.30pm" },
+				{ event: "Home!", time: "19.15pm" }
 			]
 		},
 	];
