@@ -44,7 +44,7 @@
 				{ event: "Check in", time: "8:30 AM" },
 				{ event: "Opening ceremony", time: "9:30 AM" },
 				{ event: "Team Formation session", time: "10:00 AM" },
-				{ event: "Godot Workshop", time: "11:00 PM" },
+				{ event: "Godot Workshop", time: "11:00 AM" },
 				{ event: "Lunch", time: "12:30 PM" },
 				{ event: "Visual Novel Workshop", time: "1:30 PM" },
 				{ event: "Start working on your project!", time: "2:30 PM" },
