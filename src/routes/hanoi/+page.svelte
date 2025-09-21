@@ -12,15 +12,15 @@
 	const eventAddress = "178 Thái Hà, Trung Liệt, Đống Đa, Hanoi, Vietnam"; // Leave this empty if you don't want an address
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recZacyVminexDndA"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
-	const directionsURL = ""
+	const directionsURL = "https://www.google.com/maps/place/1+Ng%C3%B5+178+Th%C3%A1i+H%C3%A0,+Trung+Li%E1%BB%87t,+%C4%90%E1%BB%91ng+%C4%90a,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0135566,105.8148649,1071m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3135ab7cfc695c8d:0x2b1ce6b36e806541!8m2!3d21.0135567!4d105.8197304!16s%2Fg%2F11kkpd7b6m!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D"
 	const contactLink = "mailto:hanoi@daydream.hackclub.com"
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
 		{ image: "/hanoi/jukebox.webp", name: "Jukebox", url: "https://www.jukeboxprint.com/custom-stickers"},
-		// { image: "/example/logo2.png", name: "Sponsor 2", url: "https://example2.com" },
-		// { image: "/example/logo3.png", name: "Sponsor 3", url: "https://example3.com" },
+		{ image: "/hanoi/fptaptech.jpg", name: "FPT Aptech", url: "https://aptech.fpt.edu.vn/" },
+		{ image: "/hanoi/yubico.png", name: "Yubico", url: "https://yubico.com" },
 		// { image: "/example/logo4.png", name: "Sponsor 4", url: "https://example4.com" },
 		// { image: "/example/logo5.png", name: "Sponsor 5", url: "https://example5.com" },
 		// { image: "/example/logo6.png", name: "Sponsor 6", url: "https://example6.com" },
@@ -34,8 +34,8 @@
 			items: [
 				{ event: "Doors & Check-in open", time: "08:00" },
 				{ event: "Opening", time: "09:00" },
-				{ event: "Event starts", time: "09:30" },
-				{ event: "Workshop 1", time: "10:30" },
+				{ event: "Icebreaker and Event start", time: "09:45" },
+				{ event: "GitHub Keynote", time: "10:30" },
 			]
 		},
 		{
