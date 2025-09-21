@@ -18,7 +18,7 @@
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "/inland-empire/jukebox-logo.svg", name: "Sponsor 1", url: "https://www.jukeboxprint.com/custom-stickers" }
+		{ image: "/inland-empire/jukebox-logo.svg", name: "Sponsor 1", url: "https://www.jukeboxprint.com/custom-stickers" },
 		{ image: "/inland-empire/xyz-sponsor.png", name: "Sponsor 1", url: "https://gen.xyz/" }
 	];
 	
