@@ -982,7 +982,7 @@ Mumbai`.split("\n")
 
 <div class="w-full pb-24 max-md:pt bg-[#FCEFC5] relative flex flex-col items-center justify-center">
 	<img src="faq.png" alt="FAQ" class="mb-12 h-24 scale-175 max-md:scale-120 z-20">
-	<img src="/clouds-top-middle.png" alt="" class="absolute left-5/12 -translate-x-1/2 w-7/12 -bottom-48 z-20 pointer-events-none">
+	<img src="/clouds-top-middle.png" alt="" class="absolute left-5/12 -translate-x-1/2 w-7/12 -bottom-48 z-10 pointer-events-none">
 
 	<!-- FAQ Grid -->
 	<div class="grid grid-cols-2 gap-8 max-w-6xl px-8 z-10 max-[900px]:grid-cols-1 max-md:gap-16">
