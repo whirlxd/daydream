@@ -22,7 +22,7 @@
 		{ image: "/uk/ada.svg", name: "Ada, the National College for Digital Skills", url: "https://www.ada.ac.uk/" },
 		{ image: "/uk/sparta-logo-dark.svg", name: "Sparta Global", url: "https://www.spartaglobal.com/" },
 		// { image: "/uk/red-hat.svg", name: "Red Hat", url: "https://www.redhat.com/en" },
-		{ image: "/uk/pcbway-logo.svg", name: "PCBWay", url: "https://www.pcbway.com/" },
+		// { image: "/uk/pcbway-logo.svg", name: "PCBWay", url: "https://www.pcbway.com/" },
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
