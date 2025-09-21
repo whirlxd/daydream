@@ -19,6 +19,7 @@
 	// Sponsors Configuration
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
+		{ image: "/uk/youthacks.svg", name: "Youthacks", url: "https://youthacks.org/" },
 		{ image: "/uk/ada.svg", name: "Ada, the National College for Digital Skills", url: "https://www.ada.ac.uk/" },
 		{ image: "/uk/sparta-logo-dark.svg", name: "Sparta Global", url: "https://www.spartaglobal.com/" },
 		// { image: "/uk/red-hat.svg", name: "Red Hat", url: "https://www.redhat.com/en" },
