@@ -1028,6 +1028,8 @@ Mumbai`.split("\n")
 							</div>
 						</div>
 					{/each}
+
+					<p class="text-center mt-4 font-serif italic text-[#335969]">Subject to change on day</p>
 				</div>
 			</div>
 			
