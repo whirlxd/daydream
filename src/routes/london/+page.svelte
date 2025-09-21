@@ -910,7 +910,7 @@ Mumbai`.split("\n")
 	<div class="absolute top-0 left-0 w-full h-full -z-50 bg-[#FCEFC5]"></div>
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-30 pointer-events-none -z-40"></div>
 
-	<div class="w-full max-w-4xl mx-auto px-8 pt-64 pb-8 z-10">
+	<div class="w-full max-w-5xl mx-auto px-8 pt-64 pb-8 z-10">
 		{#if eventAddress}
 			<h2 class="text-center font-sans text-4xl md:text-5xl font-extrabold text-[#60574b] z-10000 mb-6">
 				Daydream {eventName} is taking place at
@@ -942,10 +942,9 @@ Mumbai`.split("\n")
 						<h4 class="text-xl font-bold text-[#60574b]">Venue Location</h4>
 					</div>
 					<p class="text-[#60574b] text-lg">
-						Ada, the National College for Digital Skills<br>
+						<span class="font-bold">Ada, the National College for Digital Skills</span><br>
 						1 Sutherland St<br>
-						Pimlico<br>
-						London<br>
+						Pimlico, London<br>
 						SW1V 4LD<br>
 						United Kingdom
 					</p>
@@ -956,9 +955,9 @@ Mumbai`.split("\n")
 						<h4 class="text-xl font-bold text-[#60574b]">By Rail</h4>
 					</div>
 					<ul class="space-y-2 text-[#60574b]">
-						<li>The <span class="font-bold">nearest station</span> is <span class="font-bold"><img src="/uk/national-rail.svg" alt="" class="w-5 h-5 mr-1 inline-block"><img src="/uk/underground-roundel.svg" alt="" class="w-5 h-5 mr-1 inline-block">Victoria</span>, which is just an <span class="font-bold">8 minute walk</span> from the venue!</li>
+						<li>The <span class="font-bold">nearest station</span> is <br><span class="font-bold"><img src="/uk/national-rail.svg" alt="" class="w-5 h-5 mr-1 inline-block"><img src="/uk/underground-roundel.svg" alt="" class="w-5 h-5 mr-1 inline-block">Victoria</span>, which is just an <span class="font-bold">8 minute walk</span> from the venue!</li>
 						<li><span class="font-bold"><img src="/uk/underground-roundel.svg" alt="" class="w-5 h-5 mr-1 inline-block">Pimlico</span> is also a <span class="font-bold">14 minute walk</span> from the venue!</li>
-					    <li>Westmoreland Terrace and Sutherland Row bus stops are also right outside the venue!</li>
+						<li>The <span class="font-bold">nearest bus stops</span> are <br><span class="font-bold"><img src="/uk/london-bus.svg" alt="" class="w-5 h-5 mr-1 inline-block">Westmoreland Terrace</span> and <br><span class="font-bold"><img src="/uk/london-bus.svg" alt="" class="w-5 h-5 mr-1 inline-block">Sutherland Row</span>, which are right outside the venue and both served by the <span class="font-bold">C10</span> service!</li>
 					</ul>
 				</div>
 				<div class="bg-white/50 p-6 rounded-lg">
