@@ -31,7 +31,7 @@
 				{ event: "Breakfast", time: "9:30 AM" },
 				{ event: "Opening ceremony", time: "10:00 AM" },
 				{ event: "Start working on your project!", time: "10:10 AM" },
-				{ event: "Jumpstart", time: "10:30 PM" },
+				{ event: "Jumpstart", time: "10:30 AM" },
 				{ event: "Lunch", time: "12:00 PM"},
 				{ event: "Storyboard", time: "1:00 PM" },
 				{ event: "Dinner", time: "6:00 PM" },
