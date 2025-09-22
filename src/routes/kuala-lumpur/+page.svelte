@@ -856,7 +856,7 @@ Mumbai`.split("\n")
     		{#if directionsURL}
       			Daydream {eventName} is taking place at <a class="underline text-pink" href={directionsURL}>{eventAddress}</a>!
     		{:else}
-      			Daydream {eventName} is taking place at <span class="underline">{eventAddress}</span>!
+      			Daydream KL is taking place at <span class="underline">{eventAddress}</span>!
     		{/if}
   		</p>
 	{/if}
