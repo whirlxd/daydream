@@ -1,6 +1,6 @@
 <script lang="ts">
-	const eventName = "Manila";
-	const eventLocation = "Manila";
+	const eventName = "Philippines";
+	const eventLocation = "Philippines";
 	const eventAddress = ""; // Leave this empty if you don't want an address
 	// These two are optional
 	const directionsURL = ""
