@@ -841,14 +841,14 @@ Mumbai`.split("\n")
 			<h6
 			class="text-lg opacity-90 mt-2 font-serif text-gray-700 max-sm:text-base"
 		>
-			Custom stickers provided by 
+			JukeBox provided
 			<a 
 				href="https://www.jukeboxprint.com/custom-stickers" 
 				target="_blank" 
 				rel="noopener noreferrer" 
 				class="text-blue-600 underline hover:text-blue-800"
 			>
-				JukeBox
+				Custom Stickers
 			</a>
 		</h6>
 		</div>
