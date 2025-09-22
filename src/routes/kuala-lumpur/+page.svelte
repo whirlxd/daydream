@@ -19,7 +19,7 @@
 	// Sponsors Configuration
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "/kuala-lumpur/jukebox.png", name: "Jukebox", url: "ttps://www.jukeboxprint.com/custom-stickers" },
+		{ image: "/kuala-lumpur/jukebox.png", name: "Jukebox", url: "https://www.jukeboxprint.com/custom-stickers" },
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
@@ -856,7 +856,7 @@ Mumbai`.split("\n")
     		{#if directionsURL}
       			Daydream {eventName} is taking place at <a class="underline text-pink" href={directionsURL}>{eventAddress}</a>!
     		{:else}
-      			Daydream KL is taking place at <span class="underline">{eventAddress}</span>!
+      			Daydream {eventName} is taking place at <span class="underline">{eventAddress}</span>!
     		{/if}
   		</p>
 	{/if}
@@ -951,7 +951,7 @@ Mumbai`.split("\n")
 					<p class="text-xl font-sans text-[#335969] mb-6">
 						Endless gratitude to Asia Pacific University of Innovation & Technology (APU), our amazing venue helping us make this dream a reality!
 					</p>
-					<img src="/apusponsor.png" alt="APU Venue" class="mx-auto max-h-40 object-contain">
+					<img src="/kuala-lumpur/apusponsor.png" alt="APU Venue" class="mx-auto max-h-40 object-contain">
 				</div>
 			</div>
 			
