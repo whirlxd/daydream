@@ -921,6 +921,37 @@ Mumbai`.split("\n")
 
 </div>
 
+<!-- APU Venue Billboard -->
+<div class="w-full bg-[#FCEFC5] pt-16 pb-6 px-8 flex justify-center">
+	<div class="relative max-w-4xl w-full">
+		<div class="relative bg-[#f0f9ff] border-[10px] border-b-[16px] border-[#888896] rounded-lg rounded-b-xl mx-auto z-40">
+			
+			<!-- Header Section -->
+			<div class="w-full bg-[url('/billboard-bg-texture.png')] bg-contain bg-repeat py-6 relative" style="border-bottom: 8px solid #B4B4C5;">
+				<h2 class="text-4xl font-serif text-[#F0F0FF] text-center">
+					Venue
+				</h2>
+				<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60"></div>
+			</div>
+			
+			<!-- Main Content -->
+			<div class="relative bg-gradient-to-b from-[#CCF4FD] to-[#AECDF6] px-8 pt-8 pb-16 text-center">
+				<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60"></div>
+				
+				<div class="relative z-10">
+					<p class="text-xl font-sans text-[#335969] mb-6">
+						Endless gratitude to Asia Pacific University of Innovation & Technology (APU), our amazing venue helping us make this dream a reality!
+					</p>
+					<img src="/apusponsor.png" alt="APU Venue" class="mx-auto max-h-40 object-contain">
+				</div>
+			</div>
+			
+			<!-- Billboard Bars -->
+			<div class="absolute bottom-0 -left-[5px] w-[calc(100%+10px)] h-6 bg-[url('/billboard-bars.png')] bg-repeat-x bg-contain bg-center border-[#9898a7] border-x-[6px]"></div>
+		</div>
+	</div>
+</div>
+
 <!-- Schedule Container -->
 <div class="w-full bg-[#FCEFC5] py-16 px-8 flex justify-center">
 	<div class="relative max-w-4xl w-full">
@@ -1467,7 +1498,7 @@ Mumbai`.split("\n")
 			<img src="window-4.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
 				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">All this, for free?</h3>
-				<p class="text-sm">Yep! Food, swag and good vibes are all included. Plus, if you're joining us from afar, we'll cover the cost of gas or a bus / train ticket</p>
+				<p class="text-sm">Yep! Food, swag and good vibes are all included! We'll even have mentors & students onsite to help you make a game you're proiud of!</p>
 			</div>
 		</div>
 
@@ -1476,7 +1507,7 @@ Mumbai`.split("\n")
 			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
 				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">What do I need?</h3>
-				<p class="text-sm">Your laptop, chargers, toiletries, sleeping bags, and an open mind!</p>
+				<p class="text-sm">Your laptop, chargers, toiletries, and an open mind!</p>
 			</div>
 		</div>
 
