@@ -12,7 +12,7 @@
 	const eventAddress = ""; // Leave this empty if you don't want an address
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=rec7aH0mYLpLLLlov"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
-	const directionsURL = "" // ex: https://www.google.com/maps/search/1600+pennsylvania+avenue+washington+dc/
+	const directionsURL = "https://maps.app.goo.gl/3cS5r8TQqyAbcBN9A" // ex: https://www.google.com/maps/search/1600+pennsylvania+avenue+washington+dc/
 	const contactLink = "mailto:alexandria@daydream.hackclub.com" // ex: mailto:example@daydream.hackclub.com
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
@@ -37,18 +37,6 @@
 				{ event: "Keep Working", time: "7:00 PM" },
                 { event: "Shipping Guide", time: "8:00 PM" },
 				{ event: "First Day Closing", time: "9:00 PM" }
-			]
-		},
-		{
-			title: "Sunday, September 28th",
-			items: [
-                { event: "Doors Open", time: "10:00 AM" },
-				{ event: "Workshop: Debugging & Polish", time: "10:30 AM" },
-                { event: "Brunch!", time: "11:30 AM" },
-				{ event: "Workshop: Publishing on itch.io", time: "12:30 PM" },
-                { event: "Submission Deadline", time: "3:00 PM" },
-                { event: "Playtesting Arcade", time: "3:30 PM" },
-				{ event: "Closing ceremony & Awards", time: "5:00 PM" }
 			]
 		}
 	];
