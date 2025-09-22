@@ -21,7 +21,6 @@
 		{ image: "/cambridge/rpilogo.png", name: "The Raspberry Pi Foundation", url: "https://www.raspberrypi.org/" },
 		{ image: "static/cambridge/youthacks-logo.svg", name: "Youthacks", url: "https://www.youthacks.org/" },
 		{ image: "https://assets.hackclub.com/icon-rounded.png", name: "Hack Club", url: "https://hackclub.com/" },
-		{ image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Arm_logo_2017.svg/1200px-Arm_logo_2017.svg.png", name: "ARM", url: "https://www.arm.com/" },
 		{ image: "https://images.squarespace-cdn.com/content/v1/58f9da0e9f7456dd4588cfe3/1596709094677-SE8RU9SV26CFM7OZPDBH/aromi-cucina-white.png?format=1500w", name: "Aromi", url: "https://www.aromi.co.uk/" }
 
 	];
