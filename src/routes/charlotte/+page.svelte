@@ -33,12 +33,13 @@
 		{
 			title: "Saturday, September 27th",
 			items: [
-				{ event: "Doors open", time: "2:00 PM" },
-				{ event: "Opening ceremony", time: "2:15 PM" },
+				{ event: "Doors open", time: "1:30 PM" },
+				{ event: "Event Starts", time: "2:00 PM" },
+				{ event: "Opening ceremony and decide theme", time: "2:15 PM" },
 				{ event: "Start working on your projects", time: "2:45 PM" },
-				{ event: "Group checkins", time: "4:00 PM" },
-				{ event: "Dinner", time: "6:00 PM" },
-				{ event: "Lightning talks", time: "8:00 PM" },
+				{ event: "Group checkins", time: "5:00 PM" },
+				{ event: "Dinner", time: "6:30 PM" },
+				{ event: "Lightning talks and Optional Presentations", time: "9:00 PM" },
 				{ event: "Midnight surprise", time: "12:00 AM" }
 			]
 		},
@@ -46,9 +47,10 @@
 			title: "Sunday, September 28th",
 			items: [
 				{ event: "Breakfast", time: "8:00 AM" },
-				{ event: "Presentations!", time: "11:30 AM" },
-				{ event: "Lunch", time: "12:30 PM" },
-				{ event: "Closing ceremony and awards", time: "2:00 PM" }
+				{ event: "Presentations!", time: "12:00 PM" },
+				{ event: "Lunch", time: "1:00 PM" },
+				{ event: "Closing ceremony and awards", time: "1:30 PM" }
+				{ event: "Event ends", time: "2:00 PM" },
 			]
 		}
 	];
