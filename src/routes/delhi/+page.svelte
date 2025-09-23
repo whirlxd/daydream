@@ -16,12 +16,10 @@
 	
 	// Sponsors Configuration
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=recv184IchLIW0Y72"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
-	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
+	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "/sydney/xyz.png", name: ".xyz", url: "https://gen.xyz" },
-		{ image: "/sydney/jlcpcb.png", name: "jlcpcb", url: "https://jlcpcb.com/" },
-		{ image: "/sydney/oshw.png", name: "oshw", url: "https://oshwlab.com/" },
-		{ image: "/sydney/easyeda.png", name: "easyeda", url: "https://easyeda.com/" },
+		{ image: "/delhi/scalerlogo.jpg", name: "Scaler School of Technology", url: "https://www.scaler.com/school-of-technology/" },
+		{ image: "/delhi/stackskb.jpg", name: "StacksKB", url: "https://stackskb.com/" },
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
@@ -1486,7 +1484,7 @@ Mumbai`.split("\n")
 			<img src="window-1.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24  opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
 				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">What do I need?</h3>
-				<p class="text-sm">Your laptop, chargers, toiletries, sleeping bags, and an open mind!</p>
+				<p class="text-sm">Your laptop, chargers, toiletries, and an open mind!</p>
 			</div>
 		</div>
 
