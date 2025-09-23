@@ -28,6 +28,7 @@
 		{ image: "/sydney/insertcoin.png", name: "Insert Coin", url: "https://www.insertcoinclothing.com/" },
 		{ image: "/sydney/fluffe.png", name: "Fluffe", url: "https://www.fluffe.com/" },
 		{ image: "/sydney/makersempire.png", name: "Maker's Empire", url: "https://www.makersempire.com/" },
+		{ image: "/sydney/epomaker.png", name: "Epomaker", url: "https://epomaker.com/" },
 
 	];
 	
