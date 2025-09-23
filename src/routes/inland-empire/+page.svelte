@@ -27,29 +27,16 @@
 		{
 			title: "Saturday, September 27th",
 			items: [
-	{ event: "Check-ins, form teams", time: "10:00 - 10:30 AM" },
-{ event: "Opening ceremony", time: "10:30 - 11:00 AM" },
-{ event: "Hacking starts!", time: "11:00 AM" },
-{ event: "Jumpstart Godot workshop", time: "11:05 - 12:05 PM" },
-{ event: "Lunch and karaoke", time: "12:15 - 12:45 PM" },
-{ event: "Lightning talks", time: "12:45 - 1:00 PM" },
-{ event: "Workshop TBD", time: "1:00 - 2:00 PM" },
-{ event: "Activity TBD", time: "4:00 PM" },
-{ event: "Cleanup", time: "5:30 PM" },
-{ event: "Participants dismissed", time: "6:00 PM" }
-
-			]
-		},
-		{
-			title: "Sunday, September 28th",
-			items: [
-{ event: "Check-ins", time: "10:00 - 10:30 AM" },
-{ event: "Workshop TBD", time: "11:00 - 12:00 PM" },
-{ event: "Lunch", time: "12:15 - 12:45 PM" },
-{ event: "Friendship bracelet making", time: "12:30 - 2:00 PM" },
-{ event: "Hacking ends", time: "4:00 PM" },
-{ event: "Confirm projects are shipped", time: "4:00 - 4:15 PM" },
-{ event: "Closing ceremony & prizes awarded!", time: "5:30 PM" }
+			  { event: "Check-in", time: "9:45 AM" },
+  { event: "Opening ceremony", time: "10:00 AM" },
+  { event: "Godot workshop (Jaden) + Ren’Py workshop (Kaylee)", time: "10:30 AM" },
+  { event: "Lunch served", time: "12:00 PM" },
+  { event: "Shipping + demos start", time: "2:00 PM" },
+  { event: "Voting opens", time: "2:45 PM" },
+  { event: "Voting closes", time: "3:00 PM" },
+  { event: "Closing ceremony", time: "3:15 PM" },
+  { event: "Clean up", time: "3:30 PM" },
+  { event: "Event cleared", time: "4:00 PM" }
 			]
 		}
 	];
