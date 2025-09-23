@@ -23,6 +23,7 @@
 		{ image: "/toronto/oshwlab.png", name: "OSHWLab", url: "https://oshwlab.com" },
 		{ image: "/toronto/shopify.png", name: "Shopify", url: "https://www.shopify.com/ca" },
 		{ image: "/toronto/jukebox.png", name: "Jukebox", url: "https://www.jukeboxprint.com/" },
+		{ image: "/toronto/tailed.png", name: "Jukebox", url: "https://tailed.ca/" },
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
