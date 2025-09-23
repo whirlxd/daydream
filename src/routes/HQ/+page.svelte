@@ -34,18 +34,15 @@
 				{ event: "Progress updates", time: "5:00 PM" },
 				{ event: "Folino's Pizza!", time: "6:00 PM" },
 				{ event: "share your learnings", time: "8:00 PM" },
-				{ event: "Midnight surprise", time: "12:00 AM" },
-				{ event: "breakfast", time: "9:30 AM" },
-				{ event: "showcase your game!", time: "10:00 AM" },
-				{ event: "get swag, doors close", time: "12:00 PM" }
+				{ event: "Midnight surprise", time: "12:00 AM" }
 			]
 		},
 		{
 			title: "Sunday, September 28th",
 			items: [
-				{ event: "Breakfast", time: "8:00 AM" },
-				{ event: "Demos!", time: "10:30 AM" },
-				{ event: "Closing ceremony + Swag", time: "12:00 PM" }
+				{ event: "breakfast", time: "9:30 AM" },
+				{ event: "showcase your game!", time: "10:00 AM" },
+				{ event: "get swag, doors close", time: "12:00 PM" }
 			]
 		}
 	];
