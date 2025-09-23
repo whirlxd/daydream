@@ -40,7 +40,7 @@
 				{ "event": "Isha Prayer (العشاء)", "time": "8:15 PM" },
 				{ "event": "Dinner", "time": "8:40 PM" },
 				{ "event": "Lightning talks", "time": "10:00 PM" },
-				{ "event": "Midnight surprise", "time": "11:00 AM" }
+				{ "event": "Midnight surprise", "time": "11:00 PM" }
 			]
 		},
 		{
@@ -59,7 +59,7 @@
 				{ "event": "Isha Prayer (العشاء)", "time": "8:15 PM" },
 				{ "event": "Dinner", "time": "8:40 PM" },
 				{ "event": "Lightning talks", "time": "10:00 PM" },
-				{ "event": "Midnight surprise", "time": "11:00 AM" }
+				{ "event": "Midnight surprise", "time": "11:00 PM" }
 			]
 		}
 	];
