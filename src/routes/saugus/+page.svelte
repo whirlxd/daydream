@@ -10,7 +10,7 @@
 	const eventName = "Saugus"; // This should be the name of your event WITHOUT "Daydream" at the start
 	const eventLocation = "Saugus";
 	const eventAddress = "97 Main St, Saugus, MA 01906"; // Leave this empty if you don't want an address
-	const signupLink = "https://forms.hackclub.com/daydream-sign-up"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
+	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=rec5eHo2AqBiK9XPa"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = "https://www.google.com/maps/search/Pioneer+Charter+School+of+Science+2/"
 	const contactLink = ""
@@ -24,16 +24,18 @@
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
 	const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [
 		{
-			title: "Saturday, September 27th",
+			title: "Sunday, September 28th",
 			items: [
-				{ event: "Doors open", time: "11:00 AM" },
-				{ event: "Opening ceremony", time: "12:00 PM" },
-				{ event: "Lunch", time: "12:30 PM" },
+				{ event: "Doors open", time: "8:00 AM" },
+				{ event: "Opening ceremony", time: "9:00 AM" },
 				{ event: "Start working on your project!", time: "1:00 PM" },
-				{ event: "Workshop 1", time: "2:00 PM" },
-				{ event: "Activity 1", time: "4:00 PM" },
+				{ event: "Workshop 1", time: "10:00 AM" }
+				{ event: "Lunch", time: "12:30 PM" },
+				{ event: "Late-start Introduction", time: "1:30 PM" },
 				{ event: "Workshop 2", time: "4:00 PM" },
-				{ event: "Dinner", time: "6:00 PM" },
+				{ event: "Dinner", time: "6:30 PM" },
+				{ event: "Voting", time: "7:00 PM" },
+				{ event: "Closing", time: "7:00 PM" },
 				{ event: "Dismissal", time: "8:00 PM" },
 			]
 		}
