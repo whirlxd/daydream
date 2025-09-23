@@ -36,7 +36,7 @@
 				{ event: "Sponsor Session", time: "3:00 PM" },
 				{ event: "Snacks", time: "4:00 PM" },
 				{ event: "Lightning talks", time: "5:00 PM" },
-				{ event: "Dinner", time: "6:30 PM" }
+				{ event: "Dinner", time: "6:30 PM" },
 				{ event: "Day 1 Closing: "7:45 PM" }
 			]
 		},
@@ -51,9 +51,9 @@
 				{ event: "Lunch", time: "1:00 PM" },
 				{ event: "Final Sprint", time: "3:00 PM" },
 				{ event: "Shipping Time", time: "5:45 PM" },
-				{ event: "Dinner", time: "6:00 PM" }
-				{ event: "Demos", time: "6:30 PM" }
-				{ event: "Closing Ceremony", time: "7:15 PM" }
+				{ event: "Dinner", time: "6:00 PM" },
+				{ event: "Demos", time: "6:30 PM" },
+				{ event: "Closing Ceremony", time: "7:15 PM" },
 				{ event: "Daydream Ends", time: "8:00 PM" }
 
 			]
