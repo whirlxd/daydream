@@ -16,10 +16,15 @@
 	const contactLink = ""
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
-	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
+	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "/example/logo1.png", name: "Sponsor 1", url: "https://example1.com" },
-	];
+		{ image: "/saugus/jukebox-logo.svg", name: "Jukebox", url: "https://www.jukeboxprint.com/custom-stickers",
+			text: `<p class="text-lg text-[#335969] text-center">
+             Thanks to Jukebox for our
+             <a href="https://www.jukeboxprint.com/custom-stickers"
+                class="underline hover:text-[#477783] transition-colors">
+               custom stickers</a>!
+           </p>`		},
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
 	const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [
@@ -828,6 +833,11 @@ Mumbai`.split("\n")
 			>
 				Organized by Teenagers in {@html eventLocation.replaceAll(" ", "&nbsp;")}
 			</h4>
+			<h5
+				class="text-xl opacity-90 mt-2 font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent max-sm:text-xl"
+			>
+				<a href="https://www.jukeboxprint.com/custom-stickers">Custom Stickers</a> provided by Jukebox!
+			</h5>
 		</div>
 		
 		<ParticipantSignUp {signupLink} {eventName} />
