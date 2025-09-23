@@ -18,7 +18,7 @@
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: "/charlotte/jukebox.png", name: "Jukebox" , url: "https://www.jukeboxprint.com/custom-stickers", 
+		{ image: "/charlotte/jukebox.png", name: "Jukebox", url: "https://www.jukeboxprint.com/custom-stickers", 
 		text: `<p class="text-lg text-[#335969] text-center">
              Big shoutout to Jukebox for our
              <a href="https://www.jukeboxprint.com/custom-stickers"
@@ -97,7 +97,6 @@ Visakhapatnam
 Dubai
 San Francisco
 Minneapolis
-Charlotte
 Seattle
 Singapore
 Sydney
@@ -878,6 +877,8 @@ Mumbai`.split("\n")
 	<img src="/clouds-top-right.png" alt="" class="absolute right-0 w-1/2 -bottom-12 translate-y-1/2 z-20 pointer-events-none">
 	<img src="/clouds-top-left.png" alt="" class="absolute left-0 w-3/12 -bottom-12  translate-y-1/2 z-20 pointer-events-none">
 	
+
+	
 </div>
 
 <div class="w-full relative flex items-start justify-center">
@@ -894,7 +895,7 @@ Mumbai`.split("\n")
 			</h2>
 			
 			<div class="text-[#8B4513] font-serif text-xl leading-relaxed space-y-8">
-				<p>Welcome to Hack Club's newest adventure. This fall we invite you to join us for Daydream, the world's biggest Game Jam happening simultaneously in 100 cities.</p>
+				<p>Welcome to Hack Club's newest adventure. On September 27-28, we invite you to join us for Daydream Charlotte, part of the world's biggest Game Jam happening simultaneously in 100 cities.</p>
 
 				<p class="font-bold text-2xl">Hack Club wants you to make a game this fall.</p>
 
@@ -902,9 +903,9 @@ Mumbai`.split("\n")
 
 				<p>This fall, we invite you to learn something new, make something you're really proud of, meet new friends, and go on an incredible adventure together.</p>
 
-				<p class="mb-2">With love,</p>
+				<p class="mb-2">Your Organizers,</p>
 
-				<p class="italic text-2xl opacity-85">Augie and Renran from Hack Club HQ</p>
+				<p class="italic text-2xl opacity-85">Anders Coltvet, Liam Newbill, Joseph DeLuca, and Caden Masek</p>
 			</div>
 		</div>
 	</div>
@@ -1048,12 +1049,16 @@ Mumbai`.split("\n")
 						{/if}
 					{/if}
 					
-					{#if contactLink}
-						<!-- Call to action for sponsors -->
-						<div class="mt-8 text-center">
-							<p class="text-lg text-[#335969]">Want to sponsor Daydream {eventName}? <a href={contactLink} class="underline hover:text-[#477783] transition-colors">Get in touch</a></p>
-						</div>
-					{/if}
+										{#if contactLink}
+												<!-- Jukebox shoutout -->
+												<div class="mt-8 text-center">
+													<span class="block mb-2 text-base text-[#335969]">Big shoutout to Jukebox for our
+														<a href="https://www.jukeboxprint.com/custom-stickers" class="underline hover:text-[#477783] transition-colors" target="_blank" rel="noopener noreferrer">
+															custom stickers</a>
+													</span>
+													<p class="text-lg text-[#335969]">Want to sponsor Daydream {eventName}? <a href={contactLink} class="underline hover:text-[#477783] transition-colors">Get in touch</a></p>
+												</div>
+										{/if}
 				</div>
 			</div>
 			
@@ -1551,4 +1556,3 @@ Mumbai`.split("\n")
 		</div>
 	</div>
 {/if}
-
