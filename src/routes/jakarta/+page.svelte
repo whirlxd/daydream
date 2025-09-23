@@ -154,7 +154,7 @@
 			dreamIdea: 'Dream an idea for me',
 			faq: 'FAQ',
 			whoCanParticipate: 'Who can participate in Daydream?',
-			allStudents: 'All high-school & upper-middle-school aged students are welcome to come!',
+			allStudents: 'All high-school & upper-middle-school aged students are welcome to come! <strong>You must be over 12 or under 19 to participate.</strong>',
 			forFree: 'All this, for free?',
 			yep: 'Yep! Food, swag and good vibes are all included.',
 			whatDoINeed: 'What do I need?',
