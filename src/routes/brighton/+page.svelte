@@ -18,6 +18,7 @@
 	// Sponsors Configuration
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
+		{ image: "/uk/youthacks.svg", name: "Youthacks", url: "https://youthacks.org/" },
 		// { image: "src/routes/cambridge/images/rpilogo.png", name: "The Raspberry Pi Foundation", url: "https://www.raspberrypi.org/" },
 		 { image: "https://assets.hackclub.com/icon-rounded.png", name: "Hack Club", url: "https://hackclub.com/" },
 		 { image: "https://www.brightonyouthcentre.org.uk/testsite/wp-content/uploads/sites/6/2018/03/website-banner-white-grey-short.jpg", name: "Brighton Youth Centre", url: "https://www.brightonyouthcentre.org.uk/"}
