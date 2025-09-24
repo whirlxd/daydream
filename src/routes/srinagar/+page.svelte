@@ -30,10 +30,16 @@
 			url: 'https://github.com'
 		},
 		{
+			image: 'srinagar/risingkashmir.png',
+			name: 'Rising Kashmir',
+			url: 'https://risingkashmir.com'
+		},
+		{
 			image: 'srinagar/sarovar.png',
 			name: 'Sarovar Premiere, Srinagar',
 			url: 'https://www.sarovarhotels.com/sarovar-premiere-srinagar/'
 		},
+
 		{
 			image: 'srinagar/yubico.png',
 			name: 'Yubico',
@@ -943,8 +949,6 @@ Mumbai`.split('\n');
 		alt=""
 		class="absolute left-0 w-3/12 -bottom-12 translate-y-1/2 z-20 pointer-events-none"
 	/>
-
-	
 </div>
 
 <div class="w-full relative flex items-start justify-center">
