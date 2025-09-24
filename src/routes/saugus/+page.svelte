@@ -34,7 +34,7 @@
 				{ event: "Doors open", time: "8:00 AM" },
 				{ event: "Opening ceremony", time: "9:00 AM" },
 				{ event: "Start working on your project!", time: "1:00 PM" },
-				{ event: "Workshop 1", time: "10:00 AM" }
+				{ event: "Workshop 1", time: "10:00 AM" },
 				{ event: "Lunch", time: "12:30 PM" },
 				{ event: "Late-start Introduction", time: "1:30 PM" },
 				{ event: "Workshop 2", time: "4:00 PM" },
