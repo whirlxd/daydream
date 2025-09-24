@@ -25,7 +25,7 @@
                 class="underline hover:text-[#477783] transition-colors">
                custom stickers</a>!
            </p>`		},
-	
+	];
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
 	const scheduleData: { title: string; items: { event: string; time: string; }[] }[] = [
 		{
