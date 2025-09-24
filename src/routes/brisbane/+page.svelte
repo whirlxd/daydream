@@ -531,7 +531,7 @@ Mumbai`.split("\n")
 		if (!particleContainer || !isTabVisible) return;
 		
 		// Find the visible button - mobile first, then desktop
-		const buttons = document.querySelectorAll('a[href="https://forms.hackclub.com/daydream-stickers"]');
+		const buttons = document.querySelectorAll('a[href="https://www.jukeboxprint.com/"]');
 		let button = null;
 		
 		for (const btn of buttons) {
@@ -873,11 +873,11 @@ Mumbai`.split("\n")
 
 	<!-- Desktop stickers button (bottom left) -->
 	<a
-		href="https://forms.hackclub.com/daydream-stickers"
+		href="https://www.jukeboxprint.com/"
 		target="_blank"
 		class="hidden md:block absolute bottom-16 left-16 z-50 w-max px-4 py-2 bg-pink border-b-2 border-b-pink-dark text-white rounded-full active:transform active:translate-y-0.5 transition-all duration-100 font-sans cursor-pointer overflow-visible hover:shadow-[0_2px_0_0_theme(colors.pink.dark)] hover:-translate-y-[2px] active:border-transparent active:shadow-none"
 	>
-		Get free stickers
+		Stickers provided by Jukebox
 		<img
 			src="button-clouds.svg" 
 			alt="" 
