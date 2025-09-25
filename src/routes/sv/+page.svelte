@@ -24,6 +24,17 @@
 			url: 'https://www.yriscience.com/'
 		},
 		{
+			image: '/sv/Framework_Computer_logo.svg',
+			name: 'Framework',
+			url: 'https://frame.work'
+		},
+		{ image: '/sv/vercel-logotype-light.svg', name: 'Vercel', url: 'https://vercel.com/home' },
+		{
+			image: '/sv/Playdate-logo.png',
+			name: 'Playdate',
+			url: 'https://play.date/'
+		},
+		{
 			image: '/sv/dyn-wli-logo-dark.svg',
 			name: 'WeLoveIndies',
 			url: 'https://www.weloveindies.com/en'
@@ -37,13 +48,7 @@
 			image: '/sv/exploding-kittens.png',
 			name: 'Exploding Kittens',
 			url: 'https://www.explodingkittens.com/'
-		},
-		{
-			image: '/sv/Framework_Computer_logo.svg',
-			name: 'Framework',
-			url: 'https://frame.work'
-		},
-		{ image: '/sv/vercel-logotype-light.svg', name: 'Vercel', url: 'https://vercel.com/home' }
+		}
 	];
 
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
@@ -1144,7 +1149,9 @@ Mumbai`.split('\n');
 								<!-- Second row (remaining sponsors, centered) -->
 								{#if sponsors.length > 4}
 									<div class="flex justify-center">
-										<div class="grid grid-cols-2 gap-8 items-center justify-items-center max-w-2xl">
+										<div
+											class="grid grid-cols-2 md:grid-cols-3 gap-8 items-center justify-items-center max-w-2xl"
+										>
 											{#each sponsors.slice(4) as sponsor, index}
 												<a
 													href={sponsor.url}
