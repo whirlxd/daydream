@@ -8,8 +8,8 @@
 
 	// Configuration - Put your information here!
 	const eventName = "Delhi";
-	const eventLocation = "Delhi";
-	const eventAddress = "To be announced soon";
+	const eventLocation = "IIT Delhi";
+	const eventAddress = "IIT Delhi";
 	// These two are optional
 	const directionsURL = ""
 	const contactLink = "mailto:delhi@daydream.hackclub.com"
