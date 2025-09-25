@@ -49,7 +49,7 @@
 				{ event: "Breakfast", time: "8:00 AM" },
 				{ event: "Presentations!", time: "12:00 PM" },
 				{ event: "Lunch", time: "1:00 PM" },
-				{ event: "Closing ceremony and awards", time: "1:30 PM" }
+				{ event: "Closing ceremony and awards", time: "1:30 PM" },
 				{ event: "Event ends", time: "2:00 PM" },
 			]
 		}
