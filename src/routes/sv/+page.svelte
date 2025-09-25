@@ -1783,7 +1783,7 @@ Mumbai`.split('\n');
 					Who can participate in Daydream?
 				</h3>
 				<p class="text-sm">
-					All high-school & upper-middle-school aged students are welcome to come! <strong
+					All teenagers are welcome to come! <strong
 						>You must be over 12 or under 19 to participate.</strong
 					>
 				</p>
@@ -1823,8 +1823,8 @@ Mumbai`.split('\n');
 					All this, for free?
 				</h3>
 				<p class="text-sm">
-					Yep! Food, swag and good vibes are all included. Plus, if you're joining us from afar,
-					we'll cover the cost of gas or a bus / train ticket.
+					Yep! Food, swag, prizes, and good vibes are all included. Plus, if you're traveling a long
+					distance, we'll cover the cost of gas or a bus/train ticket.
 				</p>
 			</div>
 		</div>
@@ -1861,7 +1861,8 @@ Mumbai`.split('\n');
 				</h3>
 				<p class="text-sm">
 					Hack Club has run a hackathon in at GitHub HQ, a Game Jam in 50 cities, a hackathon on a
-					train from Vermont to Los Angeles, and more!
+					train from Vermont to Los Angeles, and so many more! You can check them out on Hack Club's
+					YouTube channel.
 				</p>
 			</div>
 		</div>
@@ -1881,7 +1882,8 @@ Mumbai`.split('\n');
 				</h3>
 				<p class="text-sm">
 					This game jam is for all skill levels! We'll have workshops and other events so join us
-					and let's learn together.
+					and let's learn together. It could be your 1st time. Or your 2nd time. Or your 246th time.
+					It doesn't matter!
 				</p>
 			</div>
 		</div>
@@ -1900,8 +1902,7 @@ Mumbai`.split('\n');
 					What if my parents are concerned?
 				</h3>
 				<p class="text-sm">
-					We're here to help! You can see our parent guide here, or they can reach out to us at
-					daydream@hackclub.com for questions.
+					We're here to help! Reach out to us at daydream@hackclub.com for questions.
 				</p>
 			</div>
 		</div>
@@ -1921,7 +1922,7 @@ Mumbai`.split('\n');
 				</h3>
 				<p class="text-sm">
 					ANY type of game based on the theme! Platformer, visual novel, clicker game, etc. Be as
-					creative as possible!
+					creative as possible! Anything is possible!
 				</p>
 			</div>
 		</div>
