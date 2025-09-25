@@ -70,7 +70,7 @@
 		{
 			title: 'Sunday, September 28th',
 			items: [
-				{ event: 'Come back', time: '10:00 AM' },
+				{ event: 'Come back', time: '9:30 AM' },
 				{ event: 'Lunch', time: '12:30 PM' },
 				{ event: 'Activity 2', time: '2:00 PM' },
 				{ event: 'Demos!', time: '4:30 PM' },
