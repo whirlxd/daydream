@@ -18,7 +18,14 @@
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
 	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
 	const sponsors = [
-		{ image: 'https://lh3.googleusercontent.com/sitesv/AICyYda0YfGL-vMgrvM3l1KwALigZl8XcW_PFPDb4Ulfdt22u9aNX-8e4S00TWlstoGV4DzFbjvGc8ycSfLmz3zw0P51VH-m_W2or4ENCXAVvlBI8T210V2RBXn_YSXe6wWBGR7cpqyoiSu_XsGnVcEBkeivfmUbOvmc8fdhFGaY2mEOc1MBzLt5HCadNAujpx38aCLP7HNMkuyDryrreJgwY0rV3t6ftk8Jhnmeb2o=w1280', name: 'Bird2Branch', url: 'https://bird2branch.org/' },
+		{ image: "https://storage.jukeboxprint.com/s/images/jukebox-logo.svg", name: "Jukebox", url: "https://www.jukeboxprint.com/custom-stickers",
+							text: `<p class="text-lg text-[#335969] text-center">
+				             Big shoutout to Jukebox for our
+				             <a href="https://www.jukeboxprint.com/custom-stickers"
+				                class="underline hover:text-[#477783] transition-colors">
+				               custom stickers</a>!
+				           </p>`		},
+		{ image: 'https://avatars.githubusercontent.com/u/221655294?s=200&v=4', name: 'Bird2Branch', url: 'https://bird2branch.org/' },
 		{ image: 'https://hack.osu.edu/wp-content/uploads/2025/06/hack-2025-logo.png', name: 'Hack OHI/O', url: 'https://hack.osu.edu/' },
 		{ image: 'https://www.worthingtonenterprises.com/images/default-source/default-album/worthington-enterprises-logo-block.png?sfvrsn=ce80296d_1', name: 'Worthington Enterprises', url: 'https://www.worthingtonenterprises.com/' },
 	];
