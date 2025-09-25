@@ -9,7 +9,7 @@
 	// Configuration - Put your information here!
 	const eventName = 'Columbus'; // This should be the name of your event WITHOUT "Daydream" at the start
 	const eventLocation = 'Columbus';
-	const eventAddress = 'Meeting Room 4 at Columbus Metropolitan Library's Hilltop Branch 🗣 511 S Hague Ave, Columbus, OH 43204'; // Leave this empty if you don't want an address
+	const eventAddress = 'Meeting Room 4 at Columbus Metropolitan Library Hilltop Branch 🗣 511 S Hague Ave, Columbus, OH 43204'; // Leave this empty if you don't want an address
 	const signupLink = 'https://forms.hackclub.com/daydream-sign-up?event=recJBFfb0qMz4FKXS'; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
 	const directionsURL = 'https://www.google.com/maps/place/Columbus+Metropolitan+Library:+Hilltop+Branch/@39.9444865,-83.0761387,16z/data=!3m1!4b1!4m6!3m5!1s0x88388ffbf499762f:0xefa7d61b92c2ea2d!8m2!3d39.9444824!4d-83.0735638!16s%2Fg%2F1wzt30rt?entry=ttu&g_ep=EgoyMDI1MDkyMi4wIKXMDSoASAFQAw%3D%3D'
