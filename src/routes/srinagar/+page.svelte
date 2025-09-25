@@ -39,7 +39,11 @@
 			name: 'Sarovar Premiere, Srinagar',
 			url: 'https://www.sarovarhotels.com/sarovar-premiere-srinagar/'
 		},
-
+		{
+			image: 'srinagar/SNTPL.png',
+			name: 'SNTPL',
+			url: 'https://sntisp.com/'
+		},
 		{
 			image: 'srinagar/yubico.png',
 			name: 'Yubico',
