@@ -9,9 +9,9 @@
 	// Configuration - Put your information here!
 	const eventName = 'Jakarta';
 	const eventLocation = 'Jakarta';
-	const eventAddress = 'Jl. Raya Jatiwaringin No.18, RT.009/RW.005, Jaticempaka, Kec. Pd. Gede, Bekasi, Jawa Barat 17411'; // Leave this empty if you don't want an address
+	const eventAddress = 'Jl. Rawa Domba No.47A, RT.2/RW.16, Duren Sawit, Kec. Duren Sawit, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13440'; // Leave this empty if you don't want an address
 	// These two are optional
-	const directionsURL = 'https://maps.app.goo.gl/iYQcvTaYTyzh7N6n8';
+	const directionsURL = 'https://maps.app.goo.gl/SgC51SrSVBLPAojb9';
 	const contactLink = 'jakarta@daydream.hackclub.com';
 
 	// Fillout Block Notice
@@ -99,7 +99,7 @@
 			dinner: 'Makan malam',
 			codingEndsAndVoting: 'Coding berakhir dan voting!',
 			closingCeremony: 'Closing ceremony',
-			happening: "Berlangsung",
+			happening: "Akan Berlangsung",
 			clickForDirections: 'Klik untuk petunjuk arah'
 		},
 		en: {
@@ -191,11 +191,6 @@
 			image: '/jakarta/sponsors/twibbonize.png',
 			name: 'Twibbonize',
 			url: 'https://twibbonize.com/'
-		},
-		{
-			image: '/jakarta/sponsors/ojt-creative.png',
-			name: 'OJT Creative',
-			url: 'https://www.instagram.com/ojt_creative/'
 		}
 	];
 	const communityPartners = [
@@ -213,6 +208,11 @@
 			image: '/jakarta/partners/logo%20info%20lomba%20IT.png',
 			name: 'Info Lomba IT',
 			url: 'https://www.infolombait.com/'
+		},
+		{
+			image: '/jakarta/partners/ojt-creative.png',
+			name: 'OJT Creative',
+			url: 'https://www.instagram.com/ojt_creative/'
 		}
 	];
 
@@ -1096,7 +1096,7 @@ Mumbai`.split('\n');
 			>
 				<div class="text-center">
 					<h3 class="text-2xl font-serif font-bold text-[#487DAB] mb-3 max-sm:text-xl">
-						{t.happening} @ UBSI Jatiwaringin
+						{t.happening} @ SAJENAK
 					</h3>
 					{#if directionsURL}
 						<a
