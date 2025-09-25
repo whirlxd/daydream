@@ -100,7 +100,8 @@
 			codingEndsAndVoting: 'Coding berakhir dan voting!',
 			closingCeremony: 'Closing ceremony',
 			happening: "Akan Berlangsung",
-			clickForDirections: 'Klik untuk petunjuk arah'
+			clickForDirections: 'Klik untuk petunjuk arah',
+			startCoding: 'Mulai coding!'
 		},
 		en: {
 			title: 'Daydream Jakarta - Game Jam for High Schoolers',
@@ -178,7 +179,8 @@
 			codingEndsAndVoting: 'Coding ends and voting!',
 			closingCeremony: 'Closing ceremony',
 			happening: 'Happening',
-			clickForDirections: 'Click for directions'
+			clickForDirections: 'Click for directions',
+			startCoding: 'Start working on your project!'
 		}
 	};
 
@@ -223,6 +225,7 @@
 			items: [
 				{ event: t.doorsOpen, time: '7:00 AM' },
 				{ event: t.openingCeremony, time: '9:00 AM' },
+				{ event: t.startCoding, time: '10:00 AM' },
 				{ event: t.workshop1, time: '11:00 AM' },
 				{ event: t.lunch, time: '12:30 PM' },			
 				{ event: t.dinner, time: '5:30 PM' },
