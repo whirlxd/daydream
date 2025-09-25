@@ -43,7 +43,7 @@
 				{ event: 'Workshop 2', time: '01:15 PM' },
 				{ event: 'Wrap up game development', time: '02:30 PM' },
 				{ event: 'Voting', time: '03:30 PM' },
-				{ event: 'Closing ceremony', time: '04:00 PM' }
+				{ event: 'Closing ceremony', time: '04:00 PM' },
 				{ event: 'End of Daydream Columbus', time: '04:30 PM' }
 			]
 		}
