@@ -1,17 +1,7 @@
 import Airtable from 'airtable';
 import { json } from '@sveltejs/kit';
-
-// Make environment variables optional for community contributions
-let AIRTABLE_API_KEY, AIRTABLE_BASE_ID, AIRTABLE_RSVPS_TABLE;
-
-try {
-	const env = await import('$env/static/private');
-	AIRTABLE_API_KEY = env.AIRTABLE_API_KEY;
-	AIRTABLE_BASE_ID = env.AIRTABLE_BASE_ID;
-	AIRTABLE_RSVPS_TABLE = env.AIRTABLE_RSVPS_TABLE;
-} catch (error) {
-	console.warn('Environment variables not available, Airtable integration disabled');
-}
+// import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID, AIRTABLE_RSVPS_TABLE } from '$env/static/private';
+const { AIRTABLE_API_KEY, AIRTABLE_BASE_ID, AIRTABLE_RSVPS_TABLE } = process.env; 
 
 if (!AIRTABLE_API_KEY || !AIRTABLE_BASE_ID) {
 	console.warn('Airtable environment variables not configured, email saving will be skipped');

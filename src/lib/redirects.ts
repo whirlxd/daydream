@@ -3,4 +3,7 @@ export const redirects = {
     "dallas-fortworth": "dfw",
     "Delhi": "delhi",
     "Pokhara": "pokhara",
+    "Red Sea": "red-sea",
+    "manila": "philippines",
+    "Heist-Op-Den-Berg": "heist-op-den-berg",
 }

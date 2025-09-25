@@ -12,14 +12,13 @@
 	const eventAddress = ""; // Leave this empty if you don't want an address
 	const signupLink = "https://forms.hackclub.com/daydream-sign-up?event=rec7aH0mYLpLLLlov"; // Get your custom sign up link from this page: https://airtable.com/apppg7RHZv6feM66l/shr4kFqURo8fMIRie
 	// These two are optional-- leave them empty if you don't have anything!
-	const directionsURL = "" // ex: https://www.google.com/maps/search/1600+pennsylvania+avenue+washington+dc/
-	const contactLink = "" // ex: mailto:example@daydream.hackclub.com
+	const directionsURL = "https://maps.app.goo.gl/3cS5r8TQqyAbcBN9A" // ex: https://www.google.com/maps/search/1600+pennsylvania+avenue+washington+dc/
+	const contactLink = "mailto:alexandria@daydream.hackclub.com" // ex: mailto:example@daydream.hackclub.com
 	
 	// Sponsors Configuration - disable this if you don't have any sponsors to display!
-	const sponsorsEnabled = true; // Set to false to hide the entire sponsors section
+	const sponsorsEnabled = false; // Set to false to hide the entire sponsors section
 	const sponsors = [
 		{ image: "https://github.com/mahmoud-altahan/pics/blob/main/WhatsApp%20Image%202025-08-20%20at%2023.55.37_0991b03d.jpg?raw=true", name: "Revivals Egypt"}, // Add a url field if you have a link
-		{ image: "https://github.com/mahmoud-altahan/pics/blob/main/WhatsApp%20Image%202025-08-20%20at%2023.55.51_47cbbb67.jpg?raw=true", name: "Green Alexandria"}, // Add a url field if you have a link
 	];
 	
 	// Schedule Configuration - You don't need to use this exact schedule, this is just an example!
@@ -27,27 +26,17 @@
 		{
 			title: "Saturday, September 27th",
 			items: [
-				{ event: "Doors Open", time: "11:00 AM" },
-				{ event: "Opening ceremony", time: "12:00 PM" },
-				{ event: "Lunch", time: "12:30 PM" },
-				{ event: "Start Working on Your Project!", time: "1:00 PM" },
-				{ event: "Welcome to Godot (Basics Workshop)", time: "2:00 PM" },
-				{ event: "Creative Gamedev Pathways (Track A - with Mentor)", time: "4:00 PM" },
-				{ event: "Casual Games Workshop (Track B - Self-paced)", time: "4:00 PM" },
-				{ event: "Dinner", time: "6:00 PM" },
-				{ event: "Lightning talks", time: "8:00 PM" },
-                { event: "Shipping Guide", time: "8:30 PM" },
-				{ event: "Night Surprise", time: "9:00 PM" }
-			]
-		},
-		{
-			title: "Sunday, September 28th",
-			items: [
-                { event: "Doors Open", time: "11:00 AM" },
-				{ event: "Brunch", time: "11:30 AM" },
-                { event: "Continue Projects", time: "12:00 PM" },
-				{ event: "Demos!", time: "2:30 PM" },
-				{ event: "Closing ceremony", time: "3:30 PM" }
+				{ event: "Doors Open", time: "10:00 AM" },
+				{ event: "Opening ceremony", time: "11:00 AM" },
+				{ event: "Icebreaker & Team Formation", time: "11:30 AM" },
+				{ event: "Workshop: Welcome to Godot (optional for advanced)", time: "12:00 PM" },
+				{ event: "Workshop: How to Finish a Game in 1 Day", time: "1:30 PM" },
+				{ event: "Lunch break & Networking", time: "2:30 PM" },
+				{ event: "Work on your game!", time: "3:30 PM" },
+				{ event: "Mini Check-in", time: "6:30 PM" },
+				{ event: "Keep Working", time: "7:00 PM" },
+                { event: "Shipping Guide", time: "8:00 PM" },
+				{ event: "First Day Closing", time: "9:00 PM" }
 			]
 		}
 	];
@@ -841,7 +830,7 @@ Mumbai`.split("\n")
 			</h4>
 		</div>
 		
-		<ParticipantSignUp {eventName} />
+		<ParticipantSignUp {signupLink} {eventName} />
 	</div>
 
 	<!-- <img src="hot-air-balloon.png" alt="" class="absolute w-1/8 right-32 bottom-40 z-20"> -->
@@ -875,25 +864,7 @@ Mumbai`.split("\n")
 	<img src="/clouds-top-left.png" alt="" class="absolute left-0 w-3/12 -bottom-12  translate-y-1/2 z-20 pointer-events-none">
 	
 
-	<!-- Desktop stickers button (bottom left) -->
-	<a
-		href="https://forms.hackclub.com/daydream-stickers"
-		target="_blank"
-		class="hidden md:block absolute bottom-16 left-16 z-50 w-max px-4 py-2 bg-pink border-b-2 border-b-pink-dark text-white rounded-full active:transform active:translate-y-0.5 transition-all duration-100 font-sans cursor-pointer overflow-visible hover:shadow-[0_2px_0_0_theme(colors.pink.dark)] hover:-translate-y-[2px] active:border-transparent active:shadow-none"
-	>
-		Get free stickers
-		<img
-			src="button-clouds.svg" 
-			alt="" 
-			class="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto object-contain pointer-events-none"
-		>
-		<img
-			src="rock-sticker.png"
-			alt=""
-			class="absolute bottom-2 right-3 translate-2/3 w-18 h-18 object-contain pointer-events-none"
-			style="transform: rotate(-15deg);"
-		>
-	</a>
+	
 </div>
 
 <div class="w-full relative flex items-start justify-center">
@@ -905,7 +876,7 @@ Mumbai`.split("\n")
 		<div class="relative z-20 px-20 pt-20 pb-52 rounded-lg mb-0 max-sm:px-18" style="background-image: url('/letter-top.png'), linear-gradient(to bottom, #FCEFC5 100px, transparent 100px), url('/letter-loop.png'); background-size: 100% auto, 100% auto, 100% auto; background-repeat: no-repeat, no-repeat, repeat-y; background-position: top, top, top; background-attachment: local, local, local;">
 			<div class="absolute bottom-0 left-0 w-full h-24 z-10 pointer-events-none bg-[url('/clouds-loop.png')] bg-repeat-x bg-bottom bg-contain"></div>
 			<h2 class="text-5xl font-serif italic text-[#8B4513] mb-10 relative">
-				Dear Hackers, Musicians, and Artist,
+				Dear Hackers, Musicians, and Artists,
 				<img src="/underline.svg" alt="" class="absolute left-0 -bottom-3 w-64 h-auto opacity-70">
 			</h2>
 			
@@ -1401,7 +1372,7 @@ Mumbai`.split("\n")
 						</li>
 						<li class="flex items-start">
 							<span class="mr-4">•</span>
-							<a href="https://juanes10201.itch.io/speedtickers" target="_blank" class="underline mr-2">SPEEDTICKERS</a> by Agustin
+							<a href="https://juanes10201.itch.io/speedtickers" target="_blank" class="underline mr-2">SPEEDTICKERS</a> by Agustin & Juan
 						</li>
 					</ul>
 					
@@ -1459,7 +1430,7 @@ Mumbai`.split("\n")
 			<img src="window-3.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
 				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">Who can participate in Daydream?</h3>
-				<p class="text-sm">All high-school & upper-middle-school aged students are welcome to come!</p>
+				<p class="text-sm">All high-school & upper-middle-school aged students are welcome to come! <strong>You must be over 12 or under 19 to participate.</strong></p>
 		</div>
 		</div>
 
