@@ -27,18 +27,16 @@
 		{
 			title: "Saturday, September 27th",
 			items: [
-	{ event: "Check-in", time: "10:00 AM" },
-{ event: "Opening ceremony, form teams", time: "10:15 AM" },
-{ event: "Hacking starts!", time: "10:30 AM" },
-{ event: "Workshop 1", time: "10:45 AM" },
-{ event: "Workshop 2", time: "11:30 AM" },
-{ event: "Lunch served", time: "12:00 PM" },
-{ event: "Shipping + demos start", time: "2:00 PM" },
-{ event: "Voting closes", time: "3:00 PM" },
-{ event: "Closing ceremony", time: "3:15 PM" },
-{ event: "Clean up", time: "3:30 PM" },
-{ event: "Event cleared", time: "4:00 PM" }
-
+			  { event: "Check-in", time: "9:45 AM" },
+  { event: "Opening ceremony", time: "10:00 AM" },
+  { event: "Godot workshop (Jaden) + Ren’Py workshop (Kaylee)", time: "10:30 AM" },
+  { event: "Lunch served", time: "12:00 PM" },
+  { event: "Shipping + demos start", time: "2:00 PM" },
+  { event: "Voting opens", time: "2:45 PM" },
+  { event: "Voting closes", time: "3:00 PM" },
+  { event: "Closing ceremony", time: "3:15 PM" },
+  { event: "Clean up", time: "3:30 PM" },
+  { event: "Event cleared", time: "4:00 PM" }
 			]
 		}
 	];
