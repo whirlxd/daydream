@@ -37,7 +37,7 @@
 				{ event: "Snacks", time: "4:00 PM" },
 				{ event: "Lightning talks", time: "5:00 PM" },
 				{ event: "Dinner", time: "6:30 PM" },
-				{ event: "Day 1 Wrap-up": "7:45 PM" }
+				{ event: "Day 1 Wrap-up", time: "7:45 PM" }
 			]
 		},
 		{
